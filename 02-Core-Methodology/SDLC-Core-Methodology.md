@@ -1,11 +1,102 @@
-# SDLC 4.9.1 Core Methodology - Complete 10-Stage AI+Human Excellence Framework
+# SDLC 5.0.0 Core Methodology - Complete 10-Stage AI+Human Excellence Framework
 
-**Version**: 4.9.1
-**Date**: November 29, 2025
-**Status**: ACTIVE - COMPLETE 10-STAGE LIFECYCLE + CODE FILE NAMING
+**Version**: 5.0.0
+**Date**: December 5, 2025
+**Status**: ACTIVE - 10-STAGE LIFECYCLE + GOVERNANCE & COMPLIANCE + 4-TIER CLASSIFICATION
 **Authority**: Chairman + CEO + CPO + CTO Approved
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
-**Key Enhancement**: **Complete 10-Stage Lifecycle + Code File Naming Standards**
+**Key Enhancement**: **Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices**
+
+---
+
+## 🎯 What's New in SDLC 5.0.0 (December 5, 2025)
+
+### Governance & Compliance Standards (NEW)
+
+**SDLC 5.0.0** introduces comprehensive **Governance & Compliance standards** integrated into `02-Core-Methodology`:
+
+```yaml
+New Documents in Governance-Compliance/:
+  SDLC-Quality-Gates.md:
+    - Gate checklists: G0.1 → G3
+    - DORA metrics (Deployment Frequency, Lead Time, MTTR, CFR)
+    - Test coverage thresholds per tier
+    - Code quality metrics
+
+  SDLC-Security-Gates.md:
+    - SBOM (Software Bill of Materials)
+    - SAST/DAST scanning requirements
+    - OWASP ASVS Level 1-3
+    - Threat modeling (STRIDE)
+    - Dependency vulnerability scanning
+
+  SDLC-Observability-Checklist.md:
+    - Three Pillars: Metrics, Logs, Traces
+    - RED Method (Rate, Errors, Duration)
+    - Alerting strategy (Page, Ticket, Log)
+    - Dashboard requirements per tier
+    - Runbook templates
+
+  SDLC-Change-Management-Standard.md:
+    - Change types: Standard, Normal, Emergency
+    - CAB (Change Advisory Board) process
+    - Risk scoring matrix
+    - Rollback requirements
+    - Deployment strategies (Blue-Green, Canary)
+```
+
+**See**: [Governance-Compliance/](./Governance-Compliance/)
+
+### 4-Tier Classification System (NEW)
+
+| Tier | Team Size | Documentation Required | Quality Gates | Security |
+|------|-----------|----------------------|---------------|----------|
+| **LITE** | 1-2 | README + .env.example | Basic manual review | Basic .env |
+| **STANDARD** | 3-10 | + CLAUDE.md + /docs | + CI/CD + Linting | + Dependency scan |
+| **PROFESSIONAL** | 10-50 | + Full 10-stage + ADRs | + 80% coverage + DORA | + OWASP ASVS L1 |
+| **ENTERPRISE** | 50+ | + CTO/CPO Reports | + 95% coverage + CAB | + OWASP ASVS L2+ |
+
+### Industry Best Practices Integration (NEW)
+
+```yaml
+Standards Integrated:
+  CMMI v3.0:      Maturity level mapping (LITE=L1-2, ENTERPRISE=L4-5)
+  SAFe 6.0:       Lean Governance concept for Gate approval
+  DORA Metrics:   Deployment Frequency, Lead Time, MTTR, CFR
+  OWASP ASVS:     Application Security Verification Standard (Levels 1-3)
+  NIST SSDF:      Secure Software Development Framework
+  ISO/IEC 12207:  Process categories mapping
+  Team Topologies: Stream-aligned, Platform, Enabling, Complicated-Subsystem
+```
+
+### Team Collaboration Standards (NEW)
+
+**SDLC 5.0.0** introduces comprehensive **Team Collaboration standards** for multi-team coordination:
+
+```yaml
+New Documents in Documentation-Standards/Team-Collaboration/:
+  SDLC-Team-Communication-Protocol.md:
+    - Tiered communication requirements (LITE → ENTERPRISE)
+    - Response SLAs by tier (LITE: N/A, ENTERPRISE: P0 <15min)
+    - Channel naming conventions
+    - Meeting standards (Standup, Planning, Cross-team Sync)
+    - Remote/distributed team considerations
+
+  SDLC-Team-Collaboration-Protocol.md:
+    - Multi-team coordination (N teams, not just Remote vs Local)
+    - RACI matrix framework (Responsible, Accountable, Consulted, Informed)
+    - Handoff protocols (team-to-team transfers)
+    - Team structure templates (Team Topologies aligned)
+
+  SDLC-Escalation-Path-Standards.md:
+    - 4-level escalation framework
+    - Level 0: Self-Service (docs, wikis)
+    - Level 1: Team Lead/PM (<4h SLA)
+    - Level 2: Technical Lead (<4h SLA)
+    - Level 3: Executive (<8h SLA)
+```
+
+**See**: [Documentation-Standards/Team-Collaboration/](./Documentation-Standards/Team-Collaboration/)
 
 ---
 
@@ -13,16 +104,7 @@
 
 ### Code File Naming Standards Restored
 
-**SDLC 4.9.1** restores Code File Naming Standards from SDLC 4.3/4.4:
-
-```yaml
-Code File Naming Standards:
-  Python:     snake_case, max 50 chars (user_service.py)
-  TypeScript: camelCase, max 50 chars (arService.ts)
-  React:      PascalCase, max 50 chars (ARDashboard.tsx)
-```
-
-**See**: [08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md](../08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+**See**: [Documentation-Standards/SDLC-Code-File-Naming-Standards.md](./Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
 ---
 
@@ -48,6 +130,8 @@ SDLC 4.9 (November 13, 2025)
   ↓ 10-Stage Complete Lifecycle (WHY → GOVERN full journey)
 SDLC 4.9.1 (November 29, 2025)
   ↓ Code File Naming Standards Restored
+SDLC 5.0.0 (December 5, 2025)
+  ↓ Governance & Compliance + 4-Tier Classification + Industry Best Practices + Team Collaboration
 ```
 
 ### What SDLC 4.8 Gave Us (4 Core Stages - PRESERVED):
@@ -735,8 +819,8 @@ Layer 4 (Mental Model): "I don't trust the data anymore"
 **Key Components**:
 - **Interchangeable Roles**: Human OR AI can fill any position
 - **AI as Team Member**: Not tool, but active participant
-- **Coordination Protocols**: Daily standups include AI
-- **Scaling Patterns**: 1 to 100+ members (human or AI)
+- **Coordination Protocols**: Daily standups include AI (see [Team-Collaboration/](./Documentation-Standards/Team-Collaboration/) for tiered communication standards)
+- **Scaling Patterns**: 1 to 100+ members (human or AI) with tier-appropriate governance (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
 
 **AI Role Templates Available** (See `/06-Templates-Tools/2-Agent-Templates/`):
 - **Claude Code Roles**: Developer, Architect, QA, DevOps, Product Owner, Business Analyst, Conductor
@@ -1442,7 +1526,12 @@ SDLC 4.9 provides **complete lifecycle coverage** through 10 systematic stages. 
 
 **Purpose**: Ensure effective collaboration across development, product, operations, and business teams through clear communication and coordination.
 
-**New in SDLC 4.9**: Team collaboration framework for distributed teams, remote work, and cross-functional coordination.
+**New in SDLC 5.0**: Complete team collaboration framework with tiered communication standards, multi-team coordination protocols, and 4-level escalation paths. See [Documentation-Standards/Team-Collaboration/](./Documentation-Standards/Team-Collaboration/) for detailed standards.
+
+**Team Collaboration Standards** (v5.0.0):
+- **[SDLC-Team-Communication-Protocol.md](./Documentation-Standards/Team-Collaboration/SDLC-Team-Communication-Protocol.md)** - Tiered communication requirements (LITE → ENTERPRISE)
+- **[SDLC-Team-Collaboration-Protocol.md](./Documentation-Standards/Team-Collaboration/SDLC-Team-Collaboration-Protocol.md)** - Multi-team coordination, RACI matrices, handoff protocols
+- **[SDLC-Escalation-Path-Standards.md](./Documentation-Standards/Team-Collaboration/SDLC-Escalation-Path-Standards.md)** - 4-level escalation framework
 
 **Key Activities**:
 
@@ -1814,7 +1903,18 @@ SDLC 4.9 leverages AI tools across all 10 stages for maximum productivity:
 
 ### Version History
 
-**SDLC 4.9.0** (November 13, 2025) - CURRENT
+**SDLC 5.0.0** (December 5, 2025) - CURRENT
+- ✅ **Governance & Compliance Standards**: Quality Gates, Security Gates, Observability, Change Management
+- ✅ **4-Tier Classification System**: LITE (1-2), STANDARD (3-10), PROFESSIONAL (10-50), ENTERPRISE (50+)
+- ✅ **Industry Best Practices**: CMMI v3.0, SAFe 6.0, DORA Metrics, OWASP ASVS, NIST SSDF, ISO/IEC 12207
+- ✅ **Team Collaboration Framework**: Multi-team coordination, RACI, Handoff protocols, Escalation paths
+- ✅ **Documentation Standards Enhanced**: Consolidated into 02-Core-Methodology
+- ✅ **All Previous Versions Preserved**: 100% backward compatible with 4.9.1
+
+**SDLC 4.9.1** (November 29, 2025)
+- ✅ Code File Naming Standards Restored
+
+**SDLC 4.9.0** (November 13, 2025)
 - ✅ **10-Stage Complete Lifecycle**: WHY → GOVERN coverage
 - ✅ **BFlow Platform Validation**: 52-day journey, 827:1 ROI
 - ✅ **Perfect /docs Alignment**: 10 stages → 10 folders
@@ -1837,11 +1937,11 @@ SDLC 4.9 leverages AI tools across all 10 stages for maximum productivity:
 
 ---
 
-## Conclusion: Complete Lifecycle Excellence
+## Conclusion: Complete Lifecycle Excellence with Governance
 
-SDLC 4.9 represents the **culmination of 6 months of intensive development** (June - November 2025) and is **proven in production** through the BFlow Platform's 52-day journey.
+SDLC 5.0.0 represents the **culmination of 7 months of intensive development** (June - December 2025) and is **proven in production** through the BFlow Platform's 52-day journey plus comprehensive governance standards from industry best practices.
 
-**What Makes SDLC 4.9 Special**:
+**What Makes SDLC 5.0.0 Special**:
 
 1. **Complete Lifecycle Coverage** (10 Stages)
    - Not just development (BUILD)
@@ -1866,23 +1966,31 @@ SDLC 4.9 represents the **culmination of 6 months of intensive development** (Ju
    - Zero Mock Policy enforced
    - Code Review 3-tier framework active
 
-5. **Additive Enhancement** (Not Rebuild)
-   - 4 existing stages (WHY, WHAT, HOW, BUILD) enhanced
-   - 6 new stages added (TEST → GOVERN)
+5. **Governance & Compliance** (NEW in 5.0.0)
+   - 4-Tier Classification System (LITE → ENTERPRISE)
+   - Quality Gates with DORA metrics
+   - Security Gates with OWASP ASVS
+   - Observability checklist (Metrics, Logs, Traces)
+   - Change Management standards (Standard, Normal, Emergency)
+   - Industry Best Practices integration (CMMI, SAFe, NIST SSDF, ISO 12207)
+
+6. **Additive Enhancement** (Not Rebuild)
+   - All previous versions (4.9.1 and earlier) preserved
+   - New governance layer added on top
    - Zero breaking changes
-   - Smooth migration from 4.8
+   - Smooth migration from 4.9.1
 
-**Who Should Use SDLC 4.9**:
-- ✅ Solo developers (complete guidance, proven tools)
-- ✅ Startup teams (1-2 week implementation, 14,822% ROI)
-- ✅ Growth teams (scalable processes, enterprise patterns)
-- ✅ Enterprises (governance, compliance, audit trails)
+**Who Should Use SDLC 5.0.0 (by Tier)**:
+- ✅ **LITE** (1-2 people): Solo developers, side projects (README + .env.example)
+- ✅ **STANDARD** (3-10 people): Startup teams (+ CLAUDE.md + /docs)
+- ✅ **PROFESSIONAL** (10-50 people): Growth teams (+ Full 10-stage + ADRs + 80% coverage)
+- ✅ **ENTERPRISE** (50+ people): Large organizations (+ CTO Reports + 95% coverage + CAB)
 
-**When to Use SDLC 4.9**:
-- ✅ New projects (start with complete lifecycle)
-- ✅ Existing projects (migrate from 4.8, zero breaking changes)
-- ✅ Legacy systems (systematic modernization)
-- ✅ Crisis situations (48-hour resolution framework)
+**When to Use SDLC 5.0.0**:
+- ✅ New projects (start with appropriate tier)
+- ✅ Existing projects (migrate from 4.9.1, zero breaking changes)
+- ✅ Legacy systems (systematic modernization with governance)
+- ✅ Regulated industries (comprehensive compliance framework)
 
 **Expected Outcomes**:
 - 🎯 **10-50x Productivity**: Validated across BFlow, NQH-Bot, MTEP
@@ -1903,10 +2011,10 @@ SDLC 4.9 represents the **culmination of 6 months of intensive development** (Ju
 
 ---
 
-**Document Status**: ✅ COMPLETE  
-**Version**: 4.9.0  
-**Last Updated**: November 13, 2025  
-**Next Review**: December 13, 2025  
+**Document Status**: ✅ COMPLETE
+**Version**: 5.0.0
+**Last Updated**: December 5, 2025
+**Next Review**: January 5, 2026
 **Owner**: CPO Office (Chief Product Officer)
 
 **Related Documents**:
@@ -1918,9 +2026,9 @@ SDLC 4.9 represents the **culmination of 6 months of intensive development** (Ju
 
 ---
 
-***"From WHY to GOVERN: Complete lifecycle, proven in 52 days, 827:1 ROI."*** 🚀
+***"From WHY to GOVERN: Complete lifecycle with governance, proven in 52 days, 827:1 ROI."*** 🚀
 
 ***"Not theory. Not hope. Proven in production with real customers, real money, real results."*** ✅
 
-***"SDLC 4.9: The complete playbook for AI-powered, Vietnamese-compliant, production-ready software development."*** 🎯
+***"SDLC 5.0.0: The complete playbook for AI-powered, governance-first, production-ready software development."*** 🎯
 

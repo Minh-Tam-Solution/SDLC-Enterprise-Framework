@@ -2,9 +2,9 @@
 
 **Build the RIGHT thing, then build the thing RIGHT**
 
-**Version**: 4.9.0  
-**Last Updated**: November 13, 2025  
-**Status**: ACTIVE - Enhanced for 10-Stage Complete Lifecycle
+**Version**: 5.0.0
+**Last Updated**: December 5, 2025
+**Status**: ACTIVE - Enhanced for 10-Stage Complete Lifecycle + Governance & Compliance
 
 ---
 
@@ -1990,13 +1990,13 @@ Competitive Position:
 
 ---
 
-**Document**: SDLC-4.8-Design-Thinking-Principles
-**Version**: 1.0
-**Date**: November 7, 2025
+**Document**: SDLC-Design-Thinking-Principles
+**Version**: 5.0.0
+**Date**: December 5, 2025
 **Status**: ✅ APPROVED - Ready for Implementation
-**Related**: 4-Stage Framework, Iceberg Model, Quality Gates
-**Training**: SDLC-4.8-Design-Thinking-Training.md
-**Templates**: /06-Templates-Tools/Design-Thinking/
+**Related**: 10-Stage Framework, Iceberg Model, Quality Gates, Governance & Compliance
+**Training**: SDLC-Design-Thinking-Training.md
+**Templates**: /03-Templates-Tools/Design-Thinking/
 
 ---
 
@@ -2013,6 +2013,6 @@ Competitive Position:
 
 **"Ask the RIGHT questions in the RIGHT order. That's more valuable than having the RIGHT tools."**
 
-**SDLC 4.9 teaches: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you.**
+**SDLC 5.0.0 teaches: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.**
 
 🚀

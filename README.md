@@ -1,12 +1,64 @@
-# 🚀 SDLC 4.9.1 Universal Framework
-## Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence
+# 🚀 SDLC 5.0.0 Universal Framework
+## Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence + Governance & Compliance
 
-**Current Version**: 4.9.1 (Complete 10-Stage + Code File Naming Standards)
+**Current Version**: 5.0.0 (10-Stage + Governance & Compliance + 4-Tier Classification)
 **Status**: ACTIVE - PRODUCTION READY
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
-**Evolution**: SDLC 1.0 (Jun 2025) → 4.7 (Sep) → 4.8 (Nov 7) → 4.9 (Nov 13) → 4.9.1 (Nov 29, 2025)
-**Key Enhancement**: 10-Stage Complete Lifecycle + Code File Naming Standards Restored
+**Evolution**: SDLC 1.0 (Jun) → 4.9.1 (Nov 29) → **5.0.0 (Dec 5, 2025)**
+**Key Enhancement**: Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices
 **Proven On**: BFlow ($43M value, 827:1 ROI), NQH-Bot (₫15B+, 83% usage), MTEP (<30 min PaaS)
+
+---
+
+## 🎯 What's New in SDLC 5.0.0 (December 5, 2025)
+
+### Governance & Compliance Standards (NEW)
+
+**SDLC 5.0.0** introduces comprehensive **Governance & Compliance standards** integrated into `02-Core-Methodology`:
+
+```yaml
+New Documents in 02-Core-Methodology/Governance-Compliance/:
+  - SDLC-Quality-Gates.md       # G0.1→G3, DORA metrics, test coverage
+  - SDLC-Security-Gates.md      # SBOM, SAST/DAST, OWASP ASVS, threat modeling
+  - SDLC-Observability-Checklist.md   # Metrics, Logs, Traces (RED method)
+  - SDLC-Change-Management-Standard.md # Standard/Normal/Emergency, CAB process
+
+New Documents in 02-Core-Methodology/Documentation-Standards/:
+  - Team-Collaboration/         # RACI, Communication, Escalation
+```
+
+### 4-Tier Classification System (NEW)
+
+| Tier | Team Size | Documentation Required | Quality Gates |
+|------|-----------|----------------------|---------------|
+| **LITE** | 1-2 | README + .env.example | Basic manual |
+| **STANDARD** | 3-10 | + CLAUDE.md + /docs | + Security Gates |
+| **PROFESSIONAL** | 10-50 | + Full 10-stage + ADRs | + Observability + DORA |
+| **ENTERPRISE** | 50+ | + CTO/CPO Reports | + Full Compliance + Audit |
+
+### Industry Best Practices Integration (NEW)
+
+```yaml
+Standards Integrated:
+  - CMMI v3.0:    Maturity level mapping (LITE=L1-2, ENTERPRISE=L4-5)
+  - SAFe 6.0:     Lean Governance concept for Gate approval
+  - DORA Metrics: Deployment Frequency, Lead Time, MTTR, CFR
+  - OWASP ASVS:   Application Security Verification (Levels 1-3)
+  - NIST SSDF:    Secure Software Development Framework
+  - ISO/IEC 12207: Process categories mapping
+  - Team Topologies: Stream-aligned, Platform, Enabling, Complicated-Subsystem
+```
+
+### Folder Structure Optimization
+
+```yaml
+Changes:
+  - Documentation-Standards moved to 02-Core-Methodology/
+  - Governance-Compliance moved to 02-Core-Methodology/
+  - Folders renumbered: 03-Templates-Tools, 04-Case-Studies, etc.
+```
+
+**Documentation**: [02-Core-Methodology/Governance-Compliance/](./02-Core-Methodology/Governance-Compliance/)
 
 ---
 
@@ -14,25 +66,7 @@
 
 ### Code File Naming Standards Restored
 
-**SDLC 4.9.1** restores the **Code File Naming Standards** from SDLC 4.3/4.4 that were accidentally omitted in 4.9.0. This is a MINOR VERSION update focusing on code quality consistency.
-
-**What's New in 4.9.1**:
-```yaml
-Code File Naming Standards (Restored from 4.3/4.4):
-  Python Files:     snake_case, max 50 characters
-  TypeScript Files: camelCase, max 50 characters
-  React Components: PascalCase, max 50 characters
-  Alembic Migrations: {rev}_{desc}.py, max 60 characters
-  Django Migrations:  {number}_{desc}.py, max 50 characters
-
-Examples:
-  ✅ Python:     user_service.py, invoice_repository.py
-  ✅ TypeScript: arService.ts, paymentSlice.ts
-  ✅ React:      ARDashboard.tsx, InvoiceList.tsx
-  ❌ Wrong:      UserService.py, ar_dashboard.tsx
-```
-
-**Documentation Location**: [08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md](./08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+**Documentation**: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
 ---
 
@@ -362,35 +396,66 @@ ROI Comparison:
 
 ---
 
-## 📚 Documentation Structure (4.9 Updated)
+## 📚 Documentation Structure (5.0 Restructured)
+
+### Framework Organization (Dec 5, 2025)
+
+```
+SDLC-Enterprise-Framework/
+├── 📖 01-Overview/                     # Introduction & Executive Summary
+├── 📐 02-Core-Methodology/             # CORE CONTENT (Primary)
+│   ├── SDLC-Core-Methodology.md        # 10-stage methodology
+│   ├── SDLC-Design-Thinking-Principles.md
+│   ├── Documentation-Standards/        # Naming & Team Collaboration
+│   └── Governance-Compliance/          # Quality, Security, Observability
+├── 🛠️ 03-Templates-Tools/              # Templates & Automation
+├── 📚 04-Case-Studies/                 # Real-world Examples
+├── 📖 05-Implementation-Guides/        # Implementation + Deployment Guides
+├── 🎓 06-Training-Materials/           # Training Resources
+├── 🔄 07-Continuous-Improvement/       # Upgrade Guides (Optional)
+├── 📜 08-Version-History/              # Changelog
+└── 📁 99-Legacy/                       # Archive
+```
 
 ### Core Documentation
 
 **01-Overview/**
-- [`SDLC-Executive-Summary.md`](./01-Overview/SDLC-Executive-Summary.md) - Complete 4.9 overview (10 stages) ⭐⭐⭐⭐⭐
+- [`SDLC-Executive-Summary.md`](./01-Overview/SDLC-Executive-Summary.md) - Complete 5.0 overview (10 stages)
 
-**02-Core-Methodology/**
-- [`SDLC-Core-Methodology.md`](./02-Core-Methodology/SDLC-Core-Methodology.md) - Complete 10-stage framework ⭐⭐⭐⭐⭐ (to be updated)
-- [`SDLC-Design-Thinking-Principles.md`](./02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - Complete DT methodology ⭐⭐⭐⭐ (to be updated)
+**02-Core-Methodology/** (Primary - Start Here)
+- [`SDLC-Core-Methodology.md`](./02-Core-Methodology/SDLC-Core-Methodology.md) - Complete 10-stage framework
+- [`SDLC-Design-Thinking-Principles.md`](./02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - Design Thinking methodology
+- **Documentation-Standards/** - Naming conventions, Team Collaboration
+  - [`SDLC-Document-Naming-Standards.md`](./02-Core-Methodology/Documentation-Standards/SDLC-Document-Naming-Standards.md)
+  - [`SDLC-Code-File-Naming-Standards.md`](./02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+  - [`Team-Collaboration/`](./02-Core-Methodology/Documentation-Standards/Team-Collaboration/) - RACI, Communication, Escalation
+- **Governance-Compliance/** - Quality gates, Security, Observability
+  - [`SDLC-Quality-Gates.md`](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md) - DORA metrics, coverage thresholds
+  - [`SDLC-Security-Gates.md`](./02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md) - SBOM, SAST, OWASP ASVS
+  - [`SDLC-Observability-Checklist.md`](./02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md) - Metrics, Logs, Traces
+  - [`SDLC-Change-Management-Standard.md`](./02-Core-Methodology/Governance-Compliance/SDLC-Change-Management-Standard.md) - CAB process
 
-**03-Implementation-Guides/**
-- [`SDLC-Universal-Code-Review-Framework.md`](./03-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md) - 3-tier framework ⭐⭐⭐⭐ (to be updated)
-- [`SDLC-Subscription-Powered-Code-Review-Guide.md`](./03-Implementation-Guides/SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 guide (to be updated)
-- [`SDLC-CodeRabbit-Integration-Guide.md`](./03-Implementation-Guides/SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 enterprise (to be updated)
+**03-Templates-Tools/**
+- [`1-AI-Tools/`](./03-Templates-Tools/1-AI-Tools/) - PRIMARY: 96% time savings
+- [`2-Agent-Templates/`](./03-Templates-Tools/2-Agent-Templates/) - 17 AI agents configured
+- [`3-Manual-Templates/`](./03-Templates-Tools/3-Manual-Templates/) - Backup templates
+- [`4-Scripts/`](./03-Templates-Tools/4-Scripts/) - Validators + automation
+- [`5-Project-Templates/`](./03-Templates-Tools/5-Project-Templates/) - Planning Hierarchy, AI Onboarding
 
-**06-Templates-Tools/** (⭐ REORGANIZED NOV 7, 2025)
-- [`1-AI-Tools/`](./06-Templates-Tools/1-AI-Tools/) - PRIMARY: 96% time savings ⭐⭐⭐⭐⭐
-- [`2-Agent-Templates/`](./06-Templates-Tools/2-Agent-Templates/) - 17 AI agents configured ⭐⭐⭐⭐
-- [`3-Manual-Templates/`](./06-Templates-Tools/3-Manual-Templates/) - Backup templates ⭐⭐
-- [`4-Scripts/`](./06-Templates-Tools/4-Scripts/) - Validators + automation ⭐⭐⭐
+**04-Case-Studies/**
+- [`SDLC-Design-Thinking-Case-Study-NQH-Bot.md`](./04-Case-Studies/SDLC-Design-Thinking-Case-Study-NQH-Bot.md) - 540% ROI
+- **NEW**: `SDLC-BFlow-Platform-10-Stage-Journey.md` - 827:1 ROI, complete lifecycle
 
-**07-Case-Studies/**
-- [`SDLC-Design-Thinking-Case-Study-NQH-Bot.md`](./07-Case-Studies/SDLC-Design-Thinking-Case-Study-NQH-Bot.md) - 540% ROI ⭐⭐⭐⭐ (to be updated)
-- **NEW**: `SDLC-BFlow-Platform-10-Stage-Journey.md` - 827:1 ROI, complete lifecycle (to be created)
+**05-Implementation-Guides/**
+- [`SDLC-Universal-Code-Review-Framework.md`](./05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md) - 3-tier framework
+- [`SDLC-Subscription-Powered-Code-Review-Guide.md`](./05-Implementation-Guides/SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 guide
+- [`SDLC-CodeRabbit-Integration-Guide.md`](./05-Implementation-Guides/SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 enterprise
 
-**08-Documentation-Standards/**
-- [`SDLC-Document-Naming-Standards.md`](./08-Documentation-Standards/SDLC-Document-Naming-Standards.md) - Mandatory conventions ⭐⭐⭐⭐⭐
-- [`SDLC-Code-File-Naming-Standards.md`](./08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md) - Code file naming (NEW in 4.9.1) ⭐⭐⭐⭐⭐
+**07-Continuous-Improvement/**
+- [`SDLC-Continuous-Improvement-Guide.md`](./07-Continuous-Improvement/SDLC-Continuous-Improvement-Guide.md) - Retrospectives and upgrades
+
+**08-Version-History/**
+- [`SDLC-Version-History.md`](./08-Version-History/SDLC-Version-History.md) - Complete changelog
 
 **99-Legacy/**
 - [`SDLC-4.8-Archive/`](./99-Legacy/SDLC-4.8-Archive/) - Historical reference (SDLC 4.8 → 4.9 upgrade)
@@ -407,14 +472,14 @@ ROI Comparison:
 
 ### Path 2: Hands-On Pilot (3 hours)
 1. Download AI Tools or Manual Templates (5 min)
-   - **AI Tools** (PRIMARY): [1-AI-Tools/design-thinking/](./06-Templates-Tools/1-AI-Tools/design-thinking/) - 5 AI prompts (1 hour per feature)
-   - **Manual Templates** (BACKUP): [3-Manual-Templates/design-thinking/](./06-Templates-Tools/3-Manual-Templates/design-thinking/) - 9 templates (26 hours per feature)
+   - **AI Tools** (PRIMARY): [1-AI-Tools/design-thinking/](./03-Templates-Tools/1-AI-Tools/design-thinking/) - 5 AI prompts (1 hour per feature)
+   - **Manual Templates** (BACKUP): [3-Manual-Templates/design-thinking/](./03-Templates-Tools/3-Manual-Templates/design-thinking/) - 9 templates (26 hours per feature)
 2. Run 1 feature through 10-stage methodology (2 hours)
    - Stages 00-03: WHY → WHAT → HOW → BUILD (60 min)
    - Stage 04: TEST (30 min) - Create test plan
    - Stage 05: DEPLOY (15 min) - Create deployment checklist
    - Stage 06: OPERATE (15 min) - Setup monitoring
-3. Setup [Code Review Tier](./03-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md) (30 min)
+3. Setup [Code Review Tier](./05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md) (30 min)
 
 ### Path 3: Full Implementation (2-3 weeks)
 1. Week 1: Team training workshop (8 hours) - **10-stage framework**
@@ -489,10 +554,9 @@ AI+Human Metrics (Maintained):
 ## 🔗 Additional Resources
 
 ### Official Documentation
-- **SDLC 4.9 Upgrade Status**: [`SDLC-4.9-UPGRADE-STATUS.md`](./SDLC-4.9-UPGRADE-STATUS.md) - Migration tracking
+- **Version History**: [`08-Version-History/`](./08-Version-History/) - Complete changelog
+- **Continuous Improvement**: [`07-Continuous-Improvement/`](./07-Continuous-Improvement/) - Retrospectives
 - **SDLC 4.8 Archive**: [`99-Legacy/SDLC-4.8-Archive/`](./99-Legacy/SDLC-4.8-Archive/) - Historical reference
-- **Version History**: [`10-Version-History/`](./10-Version-History/) - Complete changelog
-- **Continuous Improvement**: [`09-Continuous-Improvement/`](./09-Continuous-Improvement/) - Retrospectives
 
 ### External Links
 - **Design Thinking**: [Stanford d.school](https://dschool.stanford.edu/)
@@ -509,7 +573,9 @@ AI+Human Metrics (Maintained):
 
 **SDLC 4.9** completes the **FULL CYCLE** - from WHY (strategic foundation) through GOVERN (executive oversight), covering the entire software development lifecycle with production excellence.
 
-**SDLC 4.9 = SDLC 4.8 (6 pillars + 4 stages) + Complete 10-Stage Lifecycle + Perfect /docs Alignment**
+**SDLC 5.0** adds **GOVERNANCE & COMPLIANCE** - 4-tier classification (LITE→ENTERPRISE), quality gates with DORA metrics, security gates with OWASP ASVS, observability checklist, change management, and industry best practices (CMMI, SAFe, NIST SSDF).
+
+**SDLC 5.0 = SDLC 4.9 + Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices**
 
 **Not a replacement. An evolution. From concept to production excellence.**
 
@@ -541,33 +607,35 @@ AI+Human Metrics (Maintained):
 
 **SDLC 4.9**: Everything in 4.8 + Complete 10-Stage Lifecycle + Perfect /docs Alignment + 99.9%+ uptime + 14,822% ROI + 827:1 proven
 
----
-
-***"The future isn't about humans OR AI. It's about humans AND AI building the RIGHT things with COMPLETE lifecycle excellence."***
-
-**SDLC 4.9 is the framework for that future.** 🚀
+**SDLC 5.0**: Everything in 4.9 + Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices (CMMI, SAFe, DORA, OWASP, NIST)
 
 ---
 
-**Current Version**: 4.9.1 (Complete 10-Stage + Code File Naming Standards)
+***"The future isn't about humans OR AI. It's about humans AND AI building the RIGHT things with COMPLETE lifecycle excellence AND governance compliance."***
+
+**SDLC 5.0 is the framework for that future.** 🚀
+
+---
+
+**Current Version**: 5.0.0 (10-Stage + Governance & Compliance + 4-Tier Classification)
 **Status**: ACTIVE - PRODUCTION READY
-**Evolution**: SDLC 1.0 (Jun 2025) → 4.7 (Sep) → 4.8 (Nov 7) → 4.9 (Nov 13) → 4.9.1 (Nov 29, 2025)
-**Last Updated**: November 29, 2025
+**Evolution**: SDLC 1.0 (Jun) → 4.9.1 (Nov 29) → **5.0.0 (Dec 5, 2025)**
+**Last Updated**: December 5, 2025
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **Framework Naming Compliance**: ✅ SDLC Document + Code File Naming Standards (Permanent, Feature-Based)
 
 ---
 
 **Start Here**:
-1. 📖 [SDLC Executive Summary](./01-Overview/SDLC-Executive-Summary.md) - Complete 10-stage overview
+1. 📖 [SDLC Executive Summary](./01-Overview/SDLC-Executive-Summary.md) - Complete 10-stage + Governance overview
 2. 🎯 [10-Stage Methodology](./02-Core-Methodology/SDLC-Core-Methodology.md) - WHY → GOVERN framework
-3. 🚀 [BFlow Case Study](#-proven-results-bflow-platform-10-stage-journey) - Real 52-day journey, 827:1 ROI
-4. 📋 [Document Naming Standards](./08-Documentation-Standards/SDLC-Document-Naming-Standards.md) - Mandatory conventions
-5. 📝 [Code File Naming Standards](./08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md) - Code file naming (NEW in 4.9.1)
-6. 🔄 [Upgrade Status](./SDLC-4.9-UPGRADE-STATUS.md) - Migration tracking (4.8 → 4.9.1)
+3. 📋 [Governance & Compliance](./02-Core-Methodology/Governance-Compliance/) - Quality gates, Security, Observability (NEW in 5.0)
+4. 📊 [Quality Gates](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md) - G0.1→G3, DORA metrics (NEW in 5.0)
+5. 🔒 [Security Gates](./02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md) - SBOM, OWASP ASVS (NEW in 5.0)
+6. 📝 [Documentation Standards](./02-Core-Methodology/Documentation-Standards/) - Naming conventions
 
 ---
 
-***"Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence"*** ⚔️  
-***"System Thinking + Design Thinking + AI + Complete Lifecycle = Sustainable Excellence"*** ✨  
+***"Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence + Governance & Compliance"*** ⚔️
+***"System Thinking + Design Thinking + AI + Complete Lifecycle + Governance = Sustainable Excellence"*** ✨
 ***"WHY → WHAT → HOW → BUILD → TEST → DEPLOY → OPERATE → INTEGRATE → COLLABORATE → GOVERN"*** 🎯

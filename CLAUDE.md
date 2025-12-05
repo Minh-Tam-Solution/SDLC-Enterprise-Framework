@@ -1,16 +1,19 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 4.9.1
+# CLAUDE.md - AI Assistant Guidelines for SDLC 5.0.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v4.9.1**) with complete 10-Stage lifecycle (WHY → GOVERN) and Code File Naming Standards. Built through 6 months of real platform development (June-November 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.0.0**) with complete 10-Stage lifecycle (WHY → GOVERN), Governance & Compliance standards, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
-**What's New in 4.9.1 (November 29, 2025)**:
-- ✅ **Code File Naming Standards** - Restored from SDLC 4.3/4.4
-  - Python: snake_case, max 50 chars
-  - TypeScript: camelCase, max 50 chars
-  - React: PascalCase, max 50 chars
+**What's New in 5.0.0 (December 5, 2025)**:
+- ✅ **Governance & Compliance Standards** - Quality Gates, Security Gates, Observability, Change Management
+- ✅ **4-Tier Classification** - LITE (1-2), STANDARD (3-10), PROFESSIONAL (10-50), ENTERPRISE (50+)
+- ✅ **Industry Best Practices** - CMMI v3.0, SAFe 6.0, DORA Metrics, OWASP ASVS, NIST SSDF
+- ✅ **Folder Restructure** - Documentation-Standards & Governance-Compliance moved to 02-Core-Methodology
+
+**What's in SDLC 4.9.1 (November 29, 2025)**:
+- ✅ **Code File Naming Standards** - Python: snake_case, TypeScript: camelCase, React: PascalCase
 
 **What's in SDLC 4.9 (November 13, 2025)**:
 - ✅ **Complete 10-Stage Lifecycle** - WHY → WHAT → HOW → BUILD → TEST → DEPLOY → OPERATE → INTEGRATE → COLLABORATE → GOVERN
@@ -94,10 +97,10 @@ Documentation Files:
 
 ## Repository Structure
 
-### Core Documentation Structure (SDLC 4.9.1)
+### Core Documentation Structure (SDLC 5.0.0)
 ```
-Sub-Repo/SDLC-Enterprise-Framework/
-├── README.md                      # Main framework documentation (4.9.1)
+SDLC-Orchestrator/SDLC-Enterprise-Framework/
+├── README.md                      # Main framework documentation (5.0.0)
 ├── CHANGELOG.md                   # Complete version history
 ├── CLAUDE.md                      # This file - AI assistant guidelines
 │
@@ -106,32 +109,36 @@ Sub-Repo/SDLC-Enterprise-Framework/
 │
 ├── 02-Core-Methodology/           # Core principles
 │   ├── SDLC-Core-Methodology.md   # Complete 10-stage framework
-│   └── SDLC-Design-Thinking-Principles.md
+│   ├── SDLC-Design-Thinking-Principles.md
+│   ├── Documentation-Standards/   # ⭐ MOVED HERE
+│   │   ├── SDLC-Document-Naming-Standards.md
+│   │   ├── SDLC-Code-File-Naming-Standards.md
+│   │   └── Team-Collaboration/
+│   └── Governance-Compliance/     # ⭐ NEW IN 5.0
+│       ├── SDLC-Quality-Gates.md
+│       ├── SDLC-Security-Gates.md
+│       ├── SDLC-Observability-Checklist.md
+│       └── SDLC-Change-Management-Standard.md
 │
-├── 03-Implementation-Guides/      # Practical guides
-│   ├── SDLC-Implementation-Guide.md
-│   ├── SDLC-Universal-Code-Review-Framework.md
-│   └── SDLC-Platform-Patterns.md
-│
-├── 04-Training-Materials/         # Training resources
-├── 05-Deployment-Toolkit/         # Deployment tools
-│
-├── 06-Templates-Tools/            # ⭐ REORGANIZED
+├── 03-Templates-Tools/            # ⭐ REORGANIZED
 │   ├── 1-AI-Tools/                # PRIMARY: 96% time savings
 │   ├── 2-Agent-Templates/         # 17 AI agents configured
 │   ├── 3-Manual-Templates/        # Backup templates
 │   └── 4-Scripts/                 # Validators + automation
 │
-├── 07-Case-Studies/               # Case studies
+├── 04-Case-Studies/               # Case studies
 │   ├── BFlow-52-Day-Journey-Case-Study.md  # 827:1 ROI
 │   └── SDLC-Design-Thinking-Case-Study-NQH-Bot.md
 │
-├── 08-Documentation-Standards/    # ⭐ UPDATED IN 4.9.1
-│   ├── SDLC-Document-Naming-Standards.md
-│   └── SDLC-Code-File-Naming-Standards.md  # NEW in 4.9.1
+├── 05-Implementation-Guides/      # Practical guides
+│   ├── SDLC-Implementation-Guide.md
+│   ├── SDLC-Universal-Code-Review-Framework.md
+│   └── SDLC-Platform-Patterns.md
 │
-├── 09-Continuous-Improvement/     # Improvement processes
-├── 10-Version-History/            # Version history
+├── 06-Training-Materials/         # Training resources
+├── 07-Deployment-Toolkit/         # Deployment tools
+├── 08-Continuous-Improvement/     # Improvement processes
+├── 09-Version-History/            # Version history
 │
 └── 99-Legacy/                     # Historical archive
     └── SDLC-4.9-Upgrade-Archive/  # 4.9 upgrade documents
@@ -196,9 +203,11 @@ SDLC 4.9 (November 13, 2025)
   ↓ 10-Stage Complete Lifecycle (WHY → GOVERN full journey)
 SDLC 4.9.1 (November 29, 2025)
   ↓ Code File Naming Standards Restored
+SDLC 5.0.0 (December 5, 2025)
+  ↓ Governance & Compliance + 4-Tier Classification + Industry Best Practices
 ```
 
-## Proven ROI (SDLC 4.9.1)
+## Proven ROI (SDLC 5.0.0)
 - **14,822% combined ROI** (2x improvement over 4.8)
 - **827:1 ROI** - BFlow 52-day journey
 - **96% time savings** with Design Thinking
@@ -212,19 +221,24 @@ SDLC 4.9.1 (November 29, 2025)
 **Essential Documentation**:
 - Main README: [README.md](README.md)
 - Core Methodology: [02-Core-Methodology/SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md)
-- Implementation Guide: [03-Implementation-Guides/SDLC-Implementation-Guide.md](03-Implementation-Guides/SDLC-Implementation-Guide.md)
-- Code File Naming: [08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md](08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+- Implementation Guide: [05-Implementation-Guides/SDLC-Implementation-Guide.md](05-Implementation-Guides/SDLC-Implementation-Guide.md)
+- Code File Naming: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+
+**NEW in 5.0**:
+- Quality Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
+- Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md)
+- Observability Checklist: [02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md](02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md)
 
 **NEW in 4.9.1**:
-- Code File Naming Standards: [08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md](08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+- Code File Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
 **NEW in 4.9**:
-- BFlow 52-Day Journey: [07-Case-Studies/BFlow-52-Day-Journey-Case-Study.md](07-Case-Studies/BFlow-52-Day-Journey-Case-Study.md)
+- BFlow 52-Day Journey: [04-Case-Studies/BFlow-52-Day-Journey-Case-Study.md](04-Case-Studies/BFlow-52-Day-Journey-Case-Study.md)
 
 ---
 
-The framework represents not theory but battle-tested patterns from 6 months of real platform development. With SDLC 4.9.1, we achieve excellence faster: **10-stage complete lifecycle, code file naming consistency, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 6 months of real platform development. With SDLC 5.0.0, we achieve excellence faster: **10-stage complete lifecycle, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: November 29, 2025
-**Framework Version**: SDLC 4.9.1
-**Status**: PRODUCTION READY - Complete 10-Stage Lifecycle + Code File Naming Standards
+**Last Updated**: December 5, 2025
+**Framework Version**: SDLC 5.0.0
+**Status**: PRODUCTION READY - Complete 10-Stage Lifecycle + Governance & Compliance + 4-Tier Classification
