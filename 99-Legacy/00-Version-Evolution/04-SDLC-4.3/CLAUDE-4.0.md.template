@@ -1,0 +1,340 @@
+# CLAUDE.md - AI Assistant Guidelines
+## SDLC 4.0 Scientific Organization Standard Compliant Project
+
+This file provides guidance to Claude Code (claude.ai/code) and other AI assistants when working with this codebase.
+
+## 🎯 Project Overview
+
+**Project Name**: [Your Project Name]  
+**SDLC Version**: 4.0  
+**Compliance Date**: September 3, 2025  
+**Type**: [Web Application/API/Mobile/etc.]  
+**Status**: [Development/Staging/Production]
+
+### Project Description
+[Brief description of what this project does, its purpose, and target users]
+
+### Key Context
+- **Architecture**: [Monolithic/Microservices/Serverless]
+- **Tech Stack**: [Languages, frameworks, databases]
+- **Team Size**: [Number of developers]
+- **Sprint Duration**: [1-4 weeks]
+- **Target Users**: [User demographics]
+
+## 🏗️ Project Structure
+
+```
+project-root/
+├── 00-Project-Foundation/     # Vision, charter, roadmap
+├── 01-Planning-Analysis/      # Requirements, user stories
+├── 02-Design-Architecture/    # System design, database
+├── 03-Development/           # Source code
+│   ├── backend/             # Backend services
+│   ├── frontend/            # Frontend application
+│   └── shared/              # Shared utilities
+├── 04-Testing-QA/           # Test plans, test cases
+├── 05-Deployment-Release/    # Deployment scripts
+├── 06-Operations/           # Monitoring, maintenance
+├── 07-Integration-APIs/     # API specifications
+├── 08-Security-Compliance/  # Security policies
+├── 09-Data-Management/      # Data models
+├── 10-AI-ML-Integration/    # AI/ML components
+├── 11-Cloud-Infrastructure/ # Cloud configs
+├── 12-Design-Control-Framework/ # Design-before-code enforcement
+├── 13-System-Thinking/      # Cross-module dependency mapping
+├── 14-Enterprise-Platform-Standards/ # Multi-entity support
+└── scripts/                 # Automation scripts
+```
+
+## 📐 Architecture Overview
+
+### System Architecture
+[Describe the high-level architecture]
+
+### Database Schema
+- **Primary Database**: [PostgreSQL/MySQL/MongoDB]
+- **Cache**: [Redis/Memcached]
+- **Queue**: [RabbitMQ/Kafka/SQS]
+
+### API Structure
+- **Type**: [REST/GraphQL/gRPC]
+- **Authentication**: [JWT/OAuth2/API Keys]
+- **Rate Limiting**: [Limits and quotas]
+
+## 💻 Development Guidelines
+
+### Code Standards (SDLC 3.7.3 Team Independence Edition Compliant)
+
+#### Required Documentation
+```javascript
+/**
+ * @claude-hints
+ * - Purpose: [Clear description of component purpose]
+ * - Related: [List of related files/components]
+ * - Patterns: [Design patterns used]
+ * - Context: [Business context]
+ * - Updates: [When this should be updated]
+ * - System Impact: [Cross-module dependencies and impact]
+ */
+
+/**
+ * @code-map
+ * - MainModule: [Primary functionality]
+ * - SubModule1: [Specific feature]
+ * - SubModule2: [Another feature]
+ * - Utils: [Helper functions]
+ * - CrossModuleDeps: [Dependencies on other modules]
+ * - SystemIntegration: [Integration points with other modules]
+ */
+```
+
+### Naming Conventions
+- **Python**: snake_case (models.py, views.py)
+- **JavaScript/TypeScript**: camelCase for files, PascalCase for components
+- **Documentation**: kebab-case (user-guide.md)
+- **Database**: snake_case for tables and columns
+
+### Testing Requirements
+- **Unit Tests**: Minimum 80% coverage
+- **Integration Tests**: All API endpoints
+- **Cross-Module Tests**: All module dependencies and integrations
+- **E2E Tests**: Critical user paths including cross-module workflows
+- **Performance Tests**: Load testing for APIs with <50ms response time target
+- **System Health Tests**: System-wide health validation including all modules
+- **Dependency Tests**: Cross-module dependency validation and communication
+
+### Git Workflow
+```bash
+# Branch naming
+feature/description
+bugfix/issue-number
+hotfix/critical-fix
+
+# Commit message format
+type(scope): description
+
+# Types: feat, fix, docs, style, refactor, test, chore
+```
+
+## 🚨 Critical Guidelines
+
+### DO's ✅
+1. **Follow SDLC 3.3.3 standards** - 85%+ compliance required
+2. **Write tests first** - TDD approach
+3. **Document all changes** - Update relevant docs
+4. **Use type hints** - For Python and TypeScript
+5. **Handle errors properly** - Never silent failures
+6. **Optimize for performance** - Consider scale from start
+7. **Security first** - Never hardcode secrets
+8. **Code reviews** - All PRs must be reviewed
+
+### DON'Ts ❌
+1. **Don't skip tests** - All code must be tested
+2. **Don't ignore linting** - Fix all warnings
+3. **Don't hardcode values** - Use config files
+4. **Don't commit secrets** - Use environment variables
+5. **Don't bypass CI/CD** - Always use pipeline
+6. **Don't ignore documentation** - Keep it updated
+7. **Don't overcomplicate** - KISS principle
+8. **Don't break backward compatibility** - Without versioning
+
+## 🔧 Technology-Specific Guidelines
+
+### Backend ([Language])
+[Specific guidelines for backend development]
+
+### Frontend ([Framework])
+[Specific guidelines for frontend development]
+
+### Database
+[Database-specific best practices]
+
+### API Development
+[API design and implementation guidelines]
+
+## 📊 Key Metrics
+
+### Performance Targets
+- **API Response Time**: <100ms (p95)
+- **Page Load Time**: <2s
+- **Database Query Time**: <50ms
+- **Build Time**: <5 minutes
+- **Deployment Time**: <10 minutes
+
+### Quality Metrics
+- **Code Coverage**: >80%
+- **Cyclomatic Complexity**: <10
+- **Technical Debt Ratio**: <5%
+- **Documentation Coverage**: 100%
+- **SDLC Compliance**: >85%
+
+## 🚀 Common Tasks
+
+### Adding a New Feature
+```bash
+# 1. Create feature branch
+git checkout -b feature/new-feature
+
+# 2. Write tests
+# 3. Implement feature
+# 4. Run tests
+npm test
+
+# 5. Check compliance
+python scripts/compliance/sdlc_scanner.py
+
+# 6. Create PR
+```
+
+### Fixing a Bug
+```bash
+# 1. Create bugfix branch
+git checkout -b bugfix/issue-123
+
+# 2. Write failing test
+# 3. Fix the bug
+# 4. Verify test passes
+# 5. Check no regression
+# 6. Create PR
+```
+
+### Deployment Process
+```bash
+# 1. Ensure all tests pass
+npm test
+
+# 2. Check SDLC compliance
+python scripts/compliance/sdlc_scanner.py
+
+# 3. Build application
+npm run build
+
+# 4. Deploy to staging
+./scripts/deploy.sh staging
+
+# 5. Run smoke tests
+npm run test:smoke
+
+# 6. Deploy to production
+./scripts/deploy.sh production
+```
+
+## 🐛 Debugging
+
+### Common Issues
+
+#### Issue: [Common Problem 1]
+**Symptoms**: [What user sees]
+**Cause**: [Root cause]
+**Solution**: [How to fix]
+
+#### Issue: [Common Problem 2]
+**Symptoms**: [What user sees]
+**Cause**: [Root cause]
+**Solution**: [How to fix]
+
+### Debug Commands
+```bash
+# View logs
+tail -f logs/application.log
+
+# Check service status
+systemctl status app-service
+
+# Database connection test
+python scripts/test_db_connection.py
+
+# API health check
+curl http://localhost:3000/health
+```
+
+## 📚 Important Documentation
+
+### Internal Docs
+- [Architecture Decision Records](02-Design-Architecture/ADR/)
+- [API Documentation](07-Integration-APIs/api-docs.md)
+- [Deployment Guide](05-Deployment-Release/deployment-guide.md)
+- [Runbook](06-Operations/runbook.md)
+
+### External Resources
+- [Framework Documentation]([URL])
+- [Library Documentation]([URL])
+- [Best Practices Guide]([URL])
+
+## 🔒 Security Considerations
+
+### Sensitive Information
+- **Never commit**: API keys, passwords, tokens
+- **Use**: Environment variables, secret management
+- **Rotate**: Credentials regularly
+- **Audit**: Access logs regularly
+
+### Security Checklist
+- [ ] Input validation implemented
+- [ ] SQL injection prevention
+- [ ] XSS protection enabled
+- [ ] CSRF tokens implemented
+- [ ] Rate limiting configured
+- [ ] HTTPS enforced
+- [ ] Security headers set
+- [ ] Dependencies updated
+
+## 🤝 Team Contacts
+
+### Core Team
+- **Tech Lead**: [Name] - [Contact]
+- **Product Owner**: [Name] - [Contact]
+- **DevOps**: [Name] - [Contact]
+- **QA Lead**: [Name] - [Contact]
+
+### Communication Channels
+- **Slack**: #bflow-project
+- **Email**: dev@mtsolution.com.vn
+- **Jira**: [Project board URL]
+- **Wiki**: docs.bflow.vn
+
+## 📈 Project Status
+
+### Current Sprint
+- **Sprint Number**: [X]
+- **Sprint Goal**: [Goal description]
+- **End Date**: [Date]
+
+### Recent Updates
+- [Date]: [Update description]
+- [Date]: [Update description]
+- [Date]: [Update description]
+
+### Upcoming Milestones
+- [Date]: [Milestone description]
+- [Date]: [Milestone description]
+
+## 💡 Tips for AI Assistants
+
+1. **Always check SDLC 3.4.0 compliance** before suggesting changes
+2. **Follow existing patterns** in the codebase
+3. **Update documentation** when making changes
+4. **Consider performance** implications with <50ms target
+5. **Think about security** for every change
+6. **Write tests** for new functionality including cross-module tests
+7. **Use meaningful** variable and function names
+8. **Keep it simple** - avoid over-engineering
+9. **Ask for clarification** when requirements are unclear
+10. **Validate assumptions** before implementation
+11. **Apply System Thinking** - consider cross-module impact
+12. **Validate dependencies** - check all module relationships
+13. **Test integrations** - ensure cross-module communication
+14. **Monitor system health** - maintain >95% health score
+
+## ⚠️ Important Notes
+
+[Any project-specific warnings, known issues, or special considerations]
+
+---
+
+**Last Updated**: [Date]  
+**SDLC Version**: 3.4.0  
+**Compliance Score**: [Last score]%  
+**Maintained By**: [Team name]
+
+*This project follows SDLC 3.4.0 standards with System Thinking. All contributions must maintain 85%+ compliance and consider cross-module impact.*

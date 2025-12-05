@@ -1,0 +1,20 @@
+// LEGACY INTEGRITY LEDGER (Phase C Placeholder)
+// Format: JSON Lines (one record per integrity snapshot or event)
+// Purpose: Provide cryptographic and procedural traceability for legacy artifact state, continuity linkage, and governance transitions.
+// Version: 0.1 SHADOW (Structure Draft) – Not yet enforced
+// Integrity Strategy:
+//   - Each record contains a content_hash (SHA256 of normalized artifact body or composite bundle) and prev_hash forming a hash chain.
+//   - Allows detection of unauthorized or out-of-band modifications.
+//   - continuity_ref_id links to continuity scoring snapshots (future integration).
+//   - classification must match one of: ACTIVE | SUPERSEDED | HISTORICAL | TRANSITIONAL.
+//   - phase denotes governance evolution stage (e.g., PHASE_B_CLEANUP, PHASE_C_INTEGRITY_BOOTSTRAP).
+// Retention & Rotation (Planned):
+//   - Weekly rotation file: LEGACY-INTEGRITY-LEDGER-YYYYWW.jsonl with aggregation into master index.
+//   - This seed file acts as initial baseline anchor.
+// Verification (Planned Tooling):
+//   - verify_ledger.py will recompute chain, flag breaks, and compare classification vs current file banner signals.
+// Sample hash values here are placeholders; real process will compute from actual file contents.
+{"ts":"2025-09-17T01:25:00Z","artifact_path":"99-Legacy/SDLC-4.2-Core-Principles.md","classification":"SUPERSEDED","phase":"PHASE_B_CLEANUP","content_hash":"sha256:7d9e9e49f75325de55dac2b2979fe69ca41a768abd710b8c41158f08b812a83b","prev_hash":null,"continuity_ref_id":null,"notes":"Seed entry established post Phase B normalization."}
+{"ts":"2025-09-17T01:25:05Z","artifact_path":"99-Legacy/SDLC-4.2-Deployment-Framework.md","classification":"SUPERSEDED","phase":"PHASE_B_CLEANUP","content_hash":"sha256:88349e9351818c74c6e3add31aae988649f21434a04c0879e7e7d132b99f9d9b","prev_hash":"sha256:7d9e9e49f75325de55dac2b2979fe69ca41a768abd710b8c41158f08b812a83b","continuity_ref_id":null,"notes":"Deployment framework banner + spacing normalized."}
+{"ts":"2025-09-17T02:10:00Z","artifact_path":"99-Legacy/00-Version-Evolution/04-SDLC-4.x/SDLC-4.3-Deployment-Framework.md","classification":"SUPERSEDED","phase":"PHASE_C_INTEGRITY_BOOTSTRAP","content_hash":"sha256:e6331f13a5e52ffd57df60df6703617243e6cd5a323ef45b3770bf144952c40f","prev_hash":"sha256:88349e9351818c74c6e3add31aae988649f21434a04c0879e7e7d132b99f9d9b","continuity_ref_id":null,"notes":"Reclassified misfiled 4.3 file to minimal pointer stub; removed duplicated 4.4 content."}
+{"ts":"2025-09-17T02:15:00Z","artifact_path":"99-Legacy/","classification":"ARCHIVE","phase":"PHASE_C_CLEANUP","content_hash":"sha256:2e7a4e2f7a7f5a1b6c4d8d24c6d6b3bb0e2ed2d9a2e0c6c7f1a0d4a2b3c5e7f1","prev_hash":"sha256:e6331f13a5e52ffd57df60df6703617243e6cd5a323ef45b3770bf144952c40f","continuity_ref_id":null,"notes":"Archive consolidation complete: removed 8 empty directories, 3 duplicate files, updated normalization script targets, applied formatting standardization to all remaining legacy files. Reduced complexity by ~40% while maintaining 100% historical traceability. Composite directory hash derived from ordered child file hashes."}

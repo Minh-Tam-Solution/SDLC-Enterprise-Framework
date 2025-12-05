@@ -1,0 +1,18 @@
+{
+  "_comment": "Design freshness index scaffold v0.1. Each entry tracks last review date for design IDs.",
+  "generated_at": "2025-09-13T00:00:00Z",
+  "designs": [
+    {
+      "design_id": "DES-AUTH-010",
+      "last_review_date": "2025-09-20",
+      "status": "validated",
+      "risk": "low"
+    },
+    {
+      "design_id": "DES-TEN-022",
+      "last_review_date": "2025-09-18",
+      "status": "pending",
+      "risk": "medium"
+    }
+  ]
+}

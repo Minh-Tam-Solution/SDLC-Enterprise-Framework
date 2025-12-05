@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Legacy Artifact Record",
+  "type": "object",
+  "required": [
+    "id",
+    "legacy_path",
+    "original_version",
+    "retention_class",
+    "archival_date"
+  ],
+  "properties": {
+    "id": {"type": "string", "description": "Stable identifier (slug)"},
+    "legacy_path": {"type": "string", "description": "Relative path inside 99-Legacy"},
+    "original_version": {"type": "string", "description": "Original SDLC version"},
+    "superseded_by": {"type": ["string", "null"], "description": "Active document successor"},
+    "retention_class": {"type": "string", "enum": ["REGULATORY", "AUDIT", "HISTORICAL", "REFERENCE", "DEPRECATE-CANDIDATE"]},
+    "archival_date": {"type": "string", "format": "date"},
+    "hash": {"type": ["string", "null"], "description": "SHA256 or null if pending"},
+    "hash_status": {"type": "string", "enum": ["PENDING", "RECORDED", "VERIFIED"], "default": "PENDING"},
+    "migration_batch": {"type": ["string", "null"]},
+    "status": {"type": "string", "enum": ["ACTIVE-LEGACY", "PURGE-CANDIDATE"], "default": "ACTIVE-LEGACY"},
+    "notes": {"type": ["string", "null"]}
+  }
+}
