@@ -1,9 +1,11 @@
 # SDLC Crisis Response Guide - 24-48 Hour Emergency Protocols
-**Version**: 4.9.0
-**Date**: November 13, 2025
+**Version**: 5.0.0
+**Date**: December 6, 2025
 **Status**: ACTIVE - BATTLE-TESTED EMERGENCY PROCEDURES
 **Authority**: CEO Crisis Management Proven
 **Foundation**: Real Crises, Real Solutions, Real Results
+**SDLC Stage**: Stage 06 (OPERATE) - Operations & Maintenance
+**SDLC Tier**: ALL TIERS (Mandatory)
 
 ---
 
@@ -494,7 +496,102 @@ Fix the cause, not just the symptom.
 
 ---
 
-**Document**: SDLC-4.8-Crisis-Response-Guide
+---
+
+## 🎯 SDLC 5.0.0 Integration
+
+### 10-Stage Lifecycle Mapping
+
+| Stage | Name | Crisis Response Focus | Response Timeline |
+|-------|------|----------------------|-------------------|
+| 00 | WHY? (Foundation) | Strategy misalignment | Days |
+| 01 | WHAT? (Planning) | Requirement gaps | Days |
+| 02 | HOW? (Design) | Architecture failures | Hours-Days |
+| 03 | BUILD (Development) | Code issues, mock contamination | Hours |
+| 04 | TEST (Quality) | Test failures, coverage gaps | Hours |
+| 05 | DEPLOY (Release) | Deployment failures | Minutes-Hours |
+| **06** | **OPERATE (Production)** | **THIS GUIDE - Production incidents** | **Minutes-48h** |
+| 07 | INTEGRATE (Systems) | Integration breakdowns | Hours |
+| 08 | COLLABORATE (Teams) | Communication failures | Hours-Days |
+| 09 | GOVERN (Compliance) | Compliance violations | Hours-Days |
+
+### 4-Tier Classification
+
+| SDLC Tier | Team Size | Crisis Response SLA | Escalation Path |
+|-----------|-----------|---------------------|-----------------|
+| **LITE** | 1-2 | 4 hours | Developer → External help |
+| **STANDARD** | 3-10 | 2 hours | Developer → Team Lead → CTO |
+| **PROFESSIONAL** | 10-50 | 1 hour | Developer → Team Lead → CTO → CEO |
+| **ENTERPRISE** | 50+ | 30 minutes | On-call → Incident Commander → C-suite |
+
+### Crisis Severity by Tier
+
+```yaml
+LITE Tier Crisis Response:
+  P1 (Critical): All hands, 4h SLA
+  P2 (High): Same day fix
+  P3 (Medium): Next sprint
+
+STANDARD Tier Crisis Response:
+  P1 (Critical): All hands, 2h SLA
+  P2 (High): 24h fix
+  P3 (Medium): Sprint planning
+
+PROFESSIONAL Tier Crisis Response:
+  P1 (Critical): Incident team, 1h SLA
+  P2 (High): 4h assessment, 24h fix
+  P3 (Medium): Backlog prioritization
+
+ENTERPRISE Tier Crisis Response:
+  P0 (Catastrophic): War room, 30min SLA
+  P1 (Critical): Incident team, 1h SLA
+  P2 (High): 2h assessment, 8h fix
+  P3 (Medium): Sprint planning
+```
+
+### Industry Standards Integration
+
+| Standard | Crisis Coverage | Implementation |
+|----------|-----------------|----------------|
+| **OWASP ASVS** | Security incident response | P0/P1 immediate |
+| **NIST SSDF** | Secure development recovery | Post-mortem required |
+| **DORA Metrics** | MTTR tracking | <1h target |
+| **ISO 12207** | Process recovery | Full documentation |
+
+---
+
+## 🔗 Related Documents
+
+### Core Framework
+- [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
+- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+
+### Implementation Guides
+- [SDLC-Compliance-Enforcement-Guide.md](SDLC-Compliance-Enforcement-Guide.md) - Prevention first
+- [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Early detection
+- [SDLC-Platform-Patterns.md](SDLC-Platform-Patterns.md) - Proven solutions
+
+### Templates & Tools
+- [03-Templates-Tools/1-AI-Tools/operations/](../../03-Templates-Tools/1-AI-Tools/operations/) - AI incident response
+- [03-Templates-Tools/4-Scripts/](../../03-Templates-Tools/4-Scripts/) - Recovery scripts
+
+---
+
+## 📋 Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 5.0.0 | Dec 6, 2025 | Complete 10-stage + 4-tier integration, SLA by tier |
+| 4.9.0 | Nov 13, 2025 | Added severity classification |
+| 4.8.0 | Oct 2025 | Initial battle-tested procedures from BFlow/NQH |
+
+---
+
+**Document**: SDLC-5.0.0-Crisis-Response-Guide
+**Version**: 5.0.0
+**Date**: December 6, 2025
+**SDLC Stage**: Stage 06 (OPERATE) - Operations & Maintenance
+**SDLC Tier**: ALL TIERS (Mandatory)
 **Status**: BATTLE-TESTED PROCEDURES
 **Foundation**: 4 Months, 3 Platforms, Multiple Crises
 **Promise**: 24-48 Hour Resolution Capability

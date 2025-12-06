@@ -1,7 +1,7 @@
 # ⚡ Tier 3: Automated Code Review
 ## CodeRabbit/Codium/SonarQube Integration
 
-**Version**: SDLC 4.9.1
+**Version**: SDLC 5.0.0
 **Cost**: $12-50/month (per user)
 **Time**: <2 minutes per PR (automated)
 **Savings**: 93%
@@ -27,18 +27,18 @@ reviews:
       - "WIP"
       - "DO NOT MERGE"
 
-# SDLC 4.9.1 Custom Rules
+# SDLC 5.0.0 Custom Rules
 custom_rules:
   - name: "Zero Mock Policy"
     pattern: "mock|stub|fake|dummy"
     severity: "critical"
-    message: "SDLC 4.9.1 Zero Mock Policy - Use real implementations"
+    message: "SDLC 5.0.0 Zero Mock Policy - Use real implementations"
 
   - name: "Performance Target"
     pattern: "response|latency"
     check: "<50ms"
     severity: "high"
-    message: "SDLC 4.9.1 requires <50ms response time"
+    message: "SDLC 5.0.0 requires <50ms response time"
 
   - name: "Test Coverage"
     check: "coverage"
@@ -51,7 +51,7 @@ custom_rules:
     severity: "medium"
     message: "Public APIs must be documented"
 
-  # SDLC 4.9.1: File Naming Standards (restored from 4.3/4.4)
+  # SDLC 5.0.0: File Naming Standards (restored from 4.3/4.4)
   - name: "Python File Naming"
     pattern: "*.py"
     check: "snake_case"

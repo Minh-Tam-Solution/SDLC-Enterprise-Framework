@@ -1,9 +1,13 @@
-# 🔍 SDLC 4.8 - Subscription-Powered Code Review Excellence
+# 🔍 SDLC 5.0.0 - Subscription-Powered Code Review Excellence
 
+**Version**: 5.0.0
+**Last Updated**: December 6, 2025
 **Purpose**: Maximize ROI from paid subscriptions (Cursor, Copilot, Claude Max) for world-class code review without API costs
 **Audience**: Development teams (5-20 developers) using subscription-based AI tools
 **Budget Model**: $0 API costs, fixed subscription fees ($49-$200/month per developer)
 **ROI Target**: 3.3x efficiency through systematic excellence
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**SDLC Tier**: STANDARD (3-10) / PROFESSIONAL (10-50)
 
 ---
 
@@ -38,7 +42,7 @@
 - Total Monthly: $735-$3,000 (vs $8,820 CodeRabbit for 15 devs)
 - Savings: $6,120/month ($73,440/year)
 
-**CRITICAL**: This guide focuses on Tier 2, but SDLC 4.8 is Universal Framework - all options documented equally.
+**CRITICAL**: This guide focuses on Tier 2, but SDLC 5.0.0 is Universal Framework - all options documented equally.
 
 ---
 
@@ -112,13 +116,13 @@ curl -fsSL https://download.cursor.sh | sh
 
 # 4. Configure custom rules (.cursorrules file in project root)
 cat > .cursorrules <<'EOF'
-# SDLC 4.8 Code Review Rules
+# SDLC 5.0.0 Code Review Rules
 
 ## Quality Standards
 - Zero mock/fake data (real DB operations only)
 - English-only code and comments
 - Vietnamese i18n strings in i18n files only
-- SDLC 4.7 file header standards
+- SDLC 5.0.0 file header standards
 - 80%+ test coverage for new code
 
 ## Vietnamese Business Logic
@@ -181,7 +185,7 @@ async function generateInvoice(orderId: string): Promise<Invoice> {
 
 ```
 Review this code for:
-1. SDLC 4.8 compliance (.cursorrules violations)
+1. SDLC 5.0.0 compliance (.cursorrules violations)
 2. Vietnamese business logic accuracy (VAT, date formats, BHXH)
 3. Security vulnerabilities (SQL injection, XSS, secrets)
 4. Performance issues (N+1 queries, large loops)
@@ -198,7 +202,7 @@ Provide specific line numbers and suggested fixes.
 ```markdown
 ## Code Review - generateInvoice.ts
 
-### SDLC 4.8 Compliance Issues:
+### SDLC 5.0.0 Compliance Issues:
 
 ❌ Line 12: Missing input validation
   Current: `const order = await getOrder(orderId);`
@@ -214,11 +218,11 @@ Provide specific line numbers and suggested fixes.
   Issue: Hardcoded magic number
   Fix: Use constant:
     ```typescript
-    const VAT_RATE = 0.10; // Vietnamese standard - SDLC 4.8
+    const VAT_RATE = 0.10; // Vietnamese standard - SDLC 5.0.0
     const vat = subtotal * VAT_RATE;
     ```
 
-⚠️ Line 35: Date format not Vietnamese standard
+⚠️ Line 35: Date format not Vietnamese standard (SDLC 5.0.0)
   Current: `new Date().toISOString()` (outputs YYYY-MM-DD)
   Fix: Use Vietnamese format (DD/MM/YYYY):
     ```typescript
@@ -269,9 +273,9 @@ npm run type-check || exit 1
 # 3. Run tests
 npm test -- --coverage --coverageThreshold='{"global":{"lines":80}}' || exit 1
 
-# 4. Check for mocks/fakes (SDLC 4.8 Zero Mock Policy)
+# 4. Check for mocks/fakes (SDLC 5.0.0 Zero Mock Policy)
 if grep -r --include="*.ts" --include="*.tsx" -E "(mock|fake|dummy)" ./src; then
-  echo "❌ Mock/fake data detected - SDLC 4.8 violation"
+  echo "❌ Mock/fake data detected - SDLC 5.0.0 violation"
   exit 1
 fi
 
@@ -329,7 +333,7 @@ Pre-Commit Performance:
   Total Time Saved: 16.2 hours (vs PR-level fixes)
 
 Top Issue Categories:
-  1. SDLC Violations (42 instances - English-only policy)
+  1. SDLC 5.0.0 Violations (42 instances - English-only policy)
   2. Vietnamese Logic Errors (31 instances - VAT, date formats)
   3. Security Vulnerabilities (23 instances - SQL injection)
   4. Test Coverage Gaps (48 instances - <80% coverage)
@@ -367,7 +371,7 @@ Human-AI collaborative review that catches 90-95% of issues before merge.
 3. Upload key files:
    - `.cursorrules` (review standards)
    - `CLAUDE.md` (project context)
-   - `SDLC-4.8-*.md` (standards documentation)
+   - `SDLC-5.0.0-*.md` (standards documentation)
    - Recent PR examples (good + bad)
 
 **Step 2: Create Review Prompt Template**
@@ -375,7 +379,7 @@ Human-AI collaborative review that catches 90-95% of issues before merge.
 Save as "PR Review Template" in Claude Project:
 
 ```markdown
-# SDLC 4.8 PR Review
+# SDLC 5.0.0 PR Review
 
 **PR Details**:
 - Title: [PR Title]
@@ -386,12 +390,12 @@ Save as "PR Review Template" in Claude Project:
 **Changes**:
 [Paste git diff or PR description]
 
-**Review Criteria** (SDLC 4.8):
+**Review Criteria** (SDLC 5.0.0):
 
 1. **Compliance**:
    - [ ] English-only code/comments (Vietnamese only in i18n)
    - [ ] Zero mock/fake data (real DB operations)
-   - [ ] SDLC 4.7 file headers present
+   - [ ] SDLC 5.0.0 file headers present
    - [ ] Test coverage ≥80%
 
 2. **Vietnamese Business Logic**:
@@ -479,7 +483,7 @@ Reviewer receives notification, opens PR in GitHub.
 **Step 3: Claude Max Output Example**
 
 ```markdown
-# SDLC 4.8 PR Review - PR #245
+# SDLC 5.0.0 PR Review - PR #245
 
 ## Summary
 Vietnamese invoice generation feature implemented with comprehensive test coverage (85%).
@@ -498,7 +502,7 @@ Overall code quality is good, but VAT calculation and date formatting need fixes
 const vat = Math.round(subtotal * 0.1);
 
 // Issue: Rounding before calculation causes ±₫1-5 errors per invoice
-// SDLC 4.8: Vietnamese VAT must be exact (no approximations)
+// SDLC 5.0.0: Vietnamese VAT must be exact (no approximations)
 
 // Fix:
 const VAT_RATE = 0.10; // Vietnamese standard VAT rate
@@ -598,7 +602,7 @@ for (const item of items) {
 - Missing test: Concurrent invoice generation (race conditions)
 
 **7. Function Too Long** (Line 156-289 - 134 lines)
-- `generateInvoice()` should be <50 lines per SDLC 4.8
+- `generateInvoice()` should be <50 lines per SDLC 5.0.0
 - Suggest: Extract `calculateLineTotals()`, `applyDiscounts()`, `calculateTax()`
 
 **8. Magic Numbers** (Lines 78, 92, 145)
@@ -612,7 +616,7 @@ if (total > DISCOUNT_THRESHOLD_VND) { /* apply discount */ }
 ```
 
 **9. Missing JSDoc Comments** (Line 45 - `generateInvoice()`)
-- Public API methods must have JSDoc (SDLC 4.8)
+- Public API methods must have JSDoc (SDLC 5.0.0)
 - Add: Purpose, parameters, return type, throws, example
 
 **10. No Rate Limiting** (Line 23 - invoiceController.ts)
@@ -1104,7 +1108,7 @@ Team: MTS Backend (15 developers)
 Month: November 2025
 
 Code Quality:
-  - SDLC Compliance: 89% (up from 78%)
+  - SDLC 5.0.0 Compliance: 89% (up from 78%)
   - Test Coverage Avg: 87% (up from 82%)
   - Security Issues: 3 (down from 18)
   - Performance Issues: 12 (down from 25)
@@ -1151,7 +1155,7 @@ ROI: 387%
 - [ ] **Cursor IDE installed** with Claude Sonnet 4.5 model
 - [ ] **GitHub Copilot enabled** in IDE
 - [ ] **Claude Max account** created and added to team project
-- [ ] **.cursorrules reviewed** (SDLC 4.8 standards)
+- [ ] **.cursorrules reviewed** (SDLC 5.0.0 standards)
 - [ ] **Pre-commit hooks tested** (intentionally introduce issue, verify block)
 - [ ] **Practice PR review** (use Claude to review sample PR)
 
@@ -1253,9 +1257,67 @@ ROI: 387%
 
 ---
 
-**Document**: SDLC-4.8-Subscription-Powered-Code-Review-Guide
-**Part of**: SDLC 4.8 Universal Framework
-**Tier**: Tier 2 (Subscription-Based)
-**Version**: 1.0
-**Last Updated**: November 13, 2025
+---
+
+## 🎯 SDLC 5.0.0 Integration
+
+### 10-Stage Lifecycle Mapping
+
+| Stage | Name | Subscription Tools Role | Primary Focus |
+|-------|------|------------------------|---------------|
+| 00 | WHY? (Foundation) | Requirements context in Claude Projects | Understanding user needs |
+| 01 | WHAT? (Planning) | User story references in PR templates | Feature scope |
+| 02 | HOW? (Design) | Architecture patterns in .cursorrules | Design compliance |
+| **03** | **BUILD (Development)** | **Primary focus: Pre-commit + PR review** | **Code quality** |
+| 04 | TEST (Quality) | Coverage checks in pre-commit hooks | Test automation |
+| 05 | DEPLOY (Release) | CI/CD pipeline integration | Release safety |
+| 06 | OPERATE (Production) | Post-merge pattern extraction | Continuous improvement |
+| 07 | INTEGRATE (Systems) | API contract validation | Integration testing |
+| 08 | COLLABORATE (Teams) | Shared Claude Projects, pattern library | Knowledge sharing |
+| 09 | GOVERN (Compliance) | SDLC compliance checklist in reviews | Audit readiness |
+
+### 4-Tier Classification
+
+| SDLC Tier | Team Size | Budget | Subscription Review Fit |
+|-----------|-----------|--------|------------------------|
+| LITE | 1-2 | <$50K | Use Tier 1 (Free/Manual) |
+| **STANDARD** | **3-10** | **$50-200K** | **Perfect fit - Best ROI** |
+| **PROFESSIONAL** | **10-50** | **$200K-1M** | **Excellent fit - Scale optimization** |
+| ENTERPRISE | 50+ | $1M+ | Consider Tier 3 (CodeRabbit) |
+
+### Industry Standards Integration
+
+| Standard | How Applied in Subscription Review |
+|----------|-----------------------------------|
+| OWASP ASVS | Security checklist in PR templates, Claude review prompts |
+| NIST SSDF | Secure coding patterns in .cursorrules |
+| DORA Metrics | Review time tracking, deployment frequency monitoring |
+| ISO 12207 | Process compliance in PR templates |
+
+---
+
+## 📚 Related Documents
+
+- [SDLC-Manual-Code-Review-Playbook.md](SDLC-Manual-Code-Review-Playbook.md) - Tier 1 (Free/Manual) reference
+- [SDLC-CodeRabbit-Integration-Guide.md](SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 (Enterprise) upgrade path
+- [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) - Overall SDLC 5.0.0 implementation
+- [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Pre-commit hook configuration
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 5.0.0 | Dec 6, 2025 | SDLC 5.0.0 upgrade: 10-stage mapping, 4-tier classification, industry standards |
+| 4.8.0 | Nov 13, 2025 | Initial release with 3-tier code review framework |
+
+---
+
+**Document**: SDLC-5.0.0-Subscription-Powered-Code-Review-Guide
+**Part of**: SDLC 5.0.0 Universal Framework
+**Tier**: Tier 2 (Subscription-Based) - STANDARD / PROFESSIONAL
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**Version**: 5.0.0
+**Last Updated**: December 6, 2025
 **License**: MTS Internal Use

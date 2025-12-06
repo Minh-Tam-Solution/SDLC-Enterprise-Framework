@@ -1,7 +1,7 @@
-# 🤖 Claude Code Agents - SDLC 4.9 Battle-Tested Automation
+# 🤖 Claude Code Agents - SDLC 5.0 Battle-Tested Automation
 ## How to Create .claude/agents for Your Project
 
-**Version**: 4.9.0
+**Version**: 5.0.0
 **Date**: November 13, 2025
 **Status**: ACTIVE - PROVEN AGENT PATTERNS
 **Foundation**: Used in BFlow, NQH-Bot, MTEP platforms

@@ -1,5 +1,5 @@
 # 📝 AI Release Notes Writer - Stage 05 (DEPLOY)
-**Version**: 4.9.0 | **Date**: November 13, 2025 | **Time Savings**: 95%  
+**Version**: 5.0.0 | **Date**: November 13, 2025 | **Time Savings**: 95%  
 
 ## AI Prompt
 Generate user-friendly release notes:

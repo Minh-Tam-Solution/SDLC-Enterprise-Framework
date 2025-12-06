@@ -549,7 +549,7 @@ Please help me:
 ---
 
 **Template**: Ideation-Brainstorming-Template
-**Part of**: SDLC 4.9 Design Thinking Framework
+**Part of**: SDLC 5.0 Design Thinking Framework
 **Phase**: IDEATE (Stage 02 - HOW?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

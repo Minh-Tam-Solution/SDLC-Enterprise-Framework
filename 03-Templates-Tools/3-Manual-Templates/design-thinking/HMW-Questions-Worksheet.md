@@ -535,7 +535,7 @@ Then cluster HMWs into themes and prioritize by impact × feasibility.
 ---
 
 **Template**: HMW-Questions-Worksheet
-**Part of**: SDLC 4.9 Design Thinking Framework
+**Part of**: SDLC 5.0 Design Thinking Framework
 **Phase**: DEFINE → IDEATE transition (Stage 01-02)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

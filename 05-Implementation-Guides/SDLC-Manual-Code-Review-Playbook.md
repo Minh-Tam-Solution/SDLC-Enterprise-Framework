@@ -1,10 +1,12 @@
 # SDLC Manual Code Review Playbook - Tier 1 Free/Manual Excellence
 
-**Version**: 4.9.0
-**Last Updated**: November 13, 2025
+**Version**: 5.0.0
+**Last Updated**: December 6, 2025
 **Status**: Production Ready
 **Audience**: Engineering Teams (1-5 developers, <20 PRs/month, $0 budget)
 **Tier**: 1 (Free/Manual with Maximum Discipline)
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**SDLC Tier**: LITE (1-2 people) / STANDARD (3-10 people)
 
 ---
 
@@ -21,6 +23,43 @@ This playbook provides **complete manual code review excellence at zero cost** t
 - ✅ Learning-focused environment
 
 **Philosophy**: **Discipline over dollars. Process over platforms. Excellence without expense.**
+
+---
+
+## 🎯 SDLC 5.0.0 Integration
+
+### 10-Stage Lifecycle Mapping
+
+| Stage | Name | Manual Code Review Role |
+|-------|------|------------------------|
+| 00 | WHY? (Foundation) | Validate requirements in PR description |
+| 01 | WHAT? (Planning) | Check user story references |
+| 02 | HOW? (Design) | Review architecture alignment |
+| **03** | **BUILD (Development)** | **Primary focus: Code quality** |
+| 04 | TEST (Quality) | Verify test coverage |
+| 05 | DEPLOY (Release) | Check deployment readiness |
+| 06 | OPERATE (Production) | Review operational concerns |
+| 07 | INTEGRATE (Systems) | Validate integration points |
+| 08 | COLLABORATE (Teams) | Document review findings |
+| 09 | GOVERN (Compliance) | Ensure standards compliance |
+
+### 4-Tier Classification
+
+| SDLC Tier | Team Size | Budget | Manual Review Fit |
+|-----------|-----------|--------|-------------------|
+| **LITE** | 1-2 | <$50K | **Perfect fit** - Maximum discipline |
+| **STANDARD** | 3-10 | $50-200K | **Good fit** - Consider Tier 2 at scale |
+| PROFESSIONAL | 10-50 | $200K-1M | Consider Tier 2/3 |
+| ENTERPRISE | 50+ | $1M+ | Consider Tier 3 |
+
+### Industry Standards Integration
+
+| Standard | Manual Review Coverage |
+|----------|----------------------|
+| **OWASP ASVS** | Security checklist verification |
+| **NIST SSDF** | Secure development practices |
+| **DORA Metrics** | Deployment frequency tracking |
+| **ISO 12207** | Process documentation |
 
 ---
 
@@ -92,7 +131,7 @@ pre-commit --version
 Create `.pre-commit-config.yaml` in repository root:
 
 ```yaml
-# .pre-commit-config.yaml - SDLC 4.8 Configuration
+# .pre-commit-config.yaml - SDLC 5.0.0 Configuration
 
 # Pre-commit framework version
 default_language_version:
@@ -199,20 +238,20 @@ repos:
           - --line-length=100
 
   # =========================================================================
-  # SDLC 4.8 CUSTOM CHECKS (Zero Mock Policy)
+  # SDLC 5.0.0 CUSTOM CHECKS (Zero Mock Policy)
   # =========================================================================
 
   - repo: local
     hooks:
       - id: zero-mock-policy
-        name: SDLC 4.8 - Zero Mock Policy Enforcement
+        name: SDLC 5.0.0 - Zero Mock Policy Enforcement
         entry: python scripts/check_zero_mock_policy.py
         language: system
         types: [python]
         pass_filenames: true
 
       - id: design-thinking-checkpoint
-        name: SDLC 4.8 - Design Thinking Validation
+        name: SDLC 5.0.0 - Design Thinking Validation
         entry: python scripts/check_design_thinking.py
         language: system
         types: [python]
@@ -225,7 +264,7 @@ Create `scripts/check_zero_mock_policy.py`:
 ```python
 #!/usr/bin/env python3
 """
-SDLC 4.8 Zero Mock Policy Enforcement
+SDLC 5.0.0 Zero Mock Policy Enforcement
 Prevents mock usage except for approved cases.
 """
 
@@ -291,7 +330,7 @@ def main():
             all_violations[filepath] = violations
 
     if all_violations:
-        print("❌ SDLC 4.8 ZERO MOCK POLICY VIOLATION DETECTED!\n")
+        print("❌ SDLC 5.0.0 ZERO MOCK POLICY VIOLATION DETECTED!\n")
         print("Mocks are ONLY allowed for:")
         print("  1. External APIs (requests, httpx)")
         print("  2. Time functions (datetime.now)")
@@ -471,10 +510,10 @@ If ANY failed:
 
 **Step 3: Code Review** (10-15 min)
 
-**Use the SDLC 4.8 Checklist**:
+**Use the SDLC 5.0.0 Checklist**:
 
 ```markdown
-## Design Thinking Validation (Pillar 0)
+## Design Thinking Validation (Stage 00-01: WHY/WHAT)
 - [ ] User need documented in PR description?
 - [ ] Problem statement clear (who/what/why)?
 - [ ] Solution justified (not over-engineered)?
@@ -502,7 +541,7 @@ If ANY failed:
 - [ ] Caching strategy appropriate?
 - [ ] Async/await used correctly (if applicable)?
 - [ ] Resource cleanup implemented (connections, files)?
-- [ ] Expected response time <100ms (SDLC 4.8 target)?
+- [ ] Expected response time <100ms (SDLC 5.0.0 target)?
 
 ## Vietnamese Market Compliance (if applicable)
 - [ ] VAT calculation correct (10%)?
@@ -533,7 +572,7 @@ If ANY failed:
 
 **Example Review Comment**:
 ```markdown
-## Code Review - SDLC 4.8 Checklist
+## Code Review - SDLC 5.0.0 Checklist
 
 ### ✅ Strengths
 - Clear code structure
@@ -646,7 +685,7 @@ Create `.github/PULL_REQUEST_TEMPLATE.md`:
 **After**: YY%
 **Files Changed**: Z files
 
-## SDLC 4.8 Compliance Checklist
+## SDLC 5.0.0 Compliance Checklist
 
 ### Design Thinking (Pillar 0)
 - [ ] User need documented above
@@ -810,7 +849,7 @@ except (KeyError, ValueError, InvalidOperation) as e:
 
 **2. Code Review Best Practices**
 ```markdown
-# Code Review Best Practices - SDLC 4.8
+# Code Review Best Practices - SDLC 5.0.0
 
 ## For Authors (Before Creating PR)
 1. Self-review your code first
@@ -822,7 +861,7 @@ except (KeyError, ValueError, InvalidOperation) as e:
 
 ## For Reviewers
 1. Review within 4 hours (team SLA)
-2. Use SDLC 4.8 checklist (in template)
+2. Use SDLC 5.0.0 checklist (in template)
 3. Be constructive, not critical
 4. Explain WHY, not just WHAT
 5. Approve fast if minor issues only
@@ -954,7 +993,7 @@ Stay on Tier 1 If:
   ✅ Learning-focused culture valued
 ```
 
-**Migration Guide**: See [SDLC-4.8-Universal-Code-Review-Framework.md](./SDLC-4.8-Universal-Code-Review-Framework.md) for detailed migration paths.
+**Migration Guide**: See [SDLC-Universal-Code-Review-Framework.md](./SDLC-Universal-Code-Review-Framework.md) for detailed migration paths.
 
 ---
 
@@ -1003,19 +1042,29 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**Document Version**: 4.9.0
-**Last Updated**: November 13, 2025
-**Next Review**: December 7, 2025
+**Document Version**: 5.0.0
+**Last Updated**: December 6, 2025
+**Next Review**: January 6, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 
 ---
 
-**Related Documents**:
-- [SDLC-4.8-Universal-Code-Review-Framework.md](./SDLC-4.8-Universal-Code-Review-Framework.md) - Complete tier comparison
-- [SDLC-4.8-Subscription-Powered-Code-Review-Guide.md](./SDLC-4.8-Subscription-Powered-Code-Review-Guide.md) - Tier 2 upgrade path
-- [SDLC-4.8-CodeRabbit-Integration-Guide.md](./SDLC-4.8-CodeRabbit-Integration-Guide.md) - Tier 3 enterprise option
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 5.0.0 | Dec 6, 2025 | SDLC 5.0.0 upgrade, 10-stage mapping, 4-tier classification |
+| 4.9.0 | Nov 13, 2025 | Initial production release |
 
 ---
 
-**🏆 SDLC 4.8 Code Review Excellence**
+**Related Documents**:
+- [SDLC-Universal-Code-Review-Framework.md](./SDLC-Universal-Code-Review-Framework.md) - Complete tier comparison
+- [SDLC-Subscription-Powered-Code-Review-Guide.md](./SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 upgrade path
+- [SDLC-CodeRabbit-Integration-Guide.md](./SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 enterprise option
+
+---
+
+**🏆 SDLC 5.0.0 Code Review Excellence**
 *Zero Cost - Maximum Discipline - Professional Quality*
+*Stage 03 (BUILD) - LITE/STANDARD Tiers*

@@ -42,7 +42,7 @@ Example: BFlow Phase 1 deployment
 ```yaml
 Week 1:
   - Crisis assessment if needed
-  - Team onboarding to SDLC 4.9
+  - Team onboarding to SDLC 5.0.0
   - Pattern implementation
 
 Week 2:
@@ -389,14 +389,14 @@ resource "aws_instance" "app" {
   instance_type = "t3.medium"
 
   tags = {
-    Name = "SDLC-4.8-App"
+    Name = "SDLC-5.0.0-App"
     Environment = "Production"
     ZeroMockPolicy = "Enforced"
   }
 
   user_data = <<-EOF
     #!/bin/bash
-    docker run -d -p 80:8000 myapp:4.9.0
+    docker run -d -p 80:8000 myapp:5.0.0
   EOF
 }
 ```
@@ -420,12 +420,106 @@ resource "aws_instance" "app" {
 
 ---
 
+## 🎯 SDLC 5.0.0 Integration
+
+### 10-Stage Lifecycle Mapping
+
+| Stage | Name | Deployment Guide Role | Key Activities |
+|-------|------|----------------------|----------------|
+| 00 | WHY? (Foundation) | N/A | Problem validation |
+| 01 | WHAT? (Planning) | Deployment planning | Resource estimation |
+| 02 | HOW? (Design) | Architecture for deployment | Infra design |
+| 03 | BUILD (Development) | Dev environment setup | Docker, CI/CD |
+| 04 | TEST (Quality) | Test environment deployment | Staging |
+| **05** | **DEPLOY (Release)** | **THIS GUIDE - Production** | **Go-live** |
+| 06 | OPERATE (Production) | Post-deployment | Monitoring |
+| 07 | INTEGRATE (Systems) | Integration deployment | API endpoints |
+| 08 | COLLABORATE (Teams) | Team coordination | Release notes |
+| 09 | GOVERN (Compliance) | Compliance validation | Audit |
+
+### 4-Tier Deployment Profiles
+
+| SDLC Tier | Team Size | Deployment Profile | Timeline |
+|-----------|-----------|-------------------|----------|
+| **LITE** | 1-2 | Solo + AI | 2 days |
+| **STANDARD** | 3-10 | Startup + AI | 1 week |
+| **PROFESSIONAL** | 10-50 | Growth + AI | 2 weeks |
+| **ENTERPRISE** | 50+ | Enterprise + AI Fleet | 6 weeks |
+
+### Deployment Complexity by Tier
+
+```yaml
+LITE Tier Deployment:
+  Infrastructure: Single cloud service
+  CI/CD: GitHub Actions basic
+  Monitoring: Basic observability
+  Rollback: Manual
+
+STANDARD Tier Deployment:
+  Infrastructure: Container orchestration
+  CI/CD: GitHub Actions + staging
+  Monitoring: Prometheus + Grafana
+  Rollback: Blue-green simple
+
+PROFESSIONAL Tier Deployment:
+  Infrastructure: Kubernetes cluster
+  CI/CD: Multi-environment pipeline
+  Monitoring: Full observability stack
+  Rollback: Blue-green + canary
+
+ENTERPRISE Tier Deployment:
+  Infrastructure: Multi-region K8s
+  CI/CD: GitOps + ArgoCD
+  Monitoring: Enterprise observability
+  Rollback: Progressive delivery
+```
+
+### Industry Standards Integration
+
+| Standard | Deployment Coverage | Implementation |
+|----------|---------------------|----------------|
+| **OWASP ASVS** | Security gates | Pre-deploy scan |
+| **NIST SSDF** | Secure deployment | SBOM generation |
+| **DORA Metrics** | Deployment frequency | CI/CD metrics |
+| **ISO 12207** | Release management | Documentation |
+
+---
+
+## 🔗 Related Documents
+
+### Core Framework
+- [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
+- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+
+### Implementation Guides
+- [SDLC-Platform-Patterns.md](SDLC-Platform-Patterns.md) - Platform patterns
+- [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) - When deployment fails
+- [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Pre-deployment validation
+
+### Templates & Tools
+- [03-Templates-Tools/1-AI-Tools/deployment/](../../03-Templates-Tools/1-AI-Tools/deployment/) - AI deployment prompts
+- [03-Templates-Tools/4-Scripts/](../../03-Templates-Tools/4-Scripts/) - Deployment scripts
+
+---
+
+## 📋 Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 5.0.0 | Dec 6, 2025 | Complete 10-stage + 4-tier integration, deployment profiles |
+| 4.9.0 | Nov 13, 2025 | Added tier-based deployment timelines |
+| 4.8.0 | Oct 2025 | Initial deployment patterns from BFlow/NQH/MTEP |
+
+---
+
 **Document**: SDLC-5.0.0-DEPLOYMENT-GUIDE
 **Version**: 5.0.0
+**Date**: December 6, 2025
+**SDLC Stage**: Stage 05 (DEPLOY) - Release & Deployment
+**SDLC Tier**: ALL TIERS (Scalable)
 **Status**: BATTLE-TESTED PATTERNS
 **Foundation**: Real deployments from 3 platforms
 **Promise**: Your deployment success in days, not months
-**Last Updated**: December 5, 2025
 
 ***"Deploy with confidence. We've done it before."*** 🚀
 

@@ -1,9 +1,11 @@
-# SDLC 4.8 Pre-Commit Hooks - Battle-Tested Protection
-**Version**: 4.9.0
-**Date**: November 13, 2025
+# SDLC 5.0.0 Pre-Commit Hooks - Battle-Tested Protection
+**Version**: 5.0.0
+**Date**: December 6, 2025
 **Status**: ACTIVE - INTEGRATED WITH UNIVERSAL CODE REVIEW FRAMEWORK
 **Foundation**: Lessons from 679 mock crisis and 3 platforms
 **Integration**: Works with all 3 Code Review Tiers (Free/Subscription/CodeRabbit)
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**SDLC Tier**: ALL TIERS (Mandatory)
 
 ---
 
@@ -18,7 +20,7 @@ Code Review Architecture:
     → Prevents issues BEFORE commit
     → Zero Mock Policy enforcement
     → Performance validation
-    → SDLC 4.8 compliance
+    → SDLC 5.0.0 compliance
 
   Layer 2: Code Review (Choose Your Tier)
     → Tier 1: Manual peer review + checklist
@@ -32,10 +34,10 @@ Code Review Architecture:
 ```
 
 **See Also**:
-- [Universal Code Review Framework](SDLC-4.8-Universal-Code-Review-Framework.md) - Complete 3-tier overview
-- [Manual Code Review Playbook](SDLC-4.8-Manual-Code-Review-Playbook.md) - Tier 1 guide
-- [Subscription Code Review Guide](SDLC-4.8-Subscription-Powered-Code-Review-Guide.md) - Tier 2 guide
-- [CodeRabbit Integration Guide](SDLC-4.8-CodeRabbit-Integration-Guide.md) - Tier 3 guide
+- [Universal Code Review Framework](SDLC-Universal-Code-Review-Framework.md) - Complete 3-tier overview
+- [Manual Code Review Playbook](SDLC-Manual-Code-Review-Playbook.md) - Tier 1 guide
+- [Subscription Code Review Guide](SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 guide
+- [CodeRabbit Integration Guide](SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 guide
 
 ---
 
@@ -100,8 +102,8 @@ repos:
 
       # Priority 3: SDLC Header Compliance
       - id: sdlc-header-check
-        name: SDLC 4.8 Header Validation
-        entry: python scripts/sdlc_header_check.py --version 4.8
+        name: SDLC 5.0.0 Header Validation
+        entry: python scripts/sdlc_header_check.py --version 5.0.0
         language: system
         files: \.(py|js|ts|tsx)$
         pass_filenames: true
@@ -304,7 +306,7 @@ class MockDetectionAgent:
 #!/bin/bash
 # metrics.sh - Track protection effectiveness
 
-echo "=== SDLC 4.8 Pre-Commit Protection Metrics ==="
+echo "=== SDLC 5.0.0 Pre-Commit Protection Metrics ==="
 echo
 echo "Last 7 Days:"
 echo "  Mocks Blocked: $(git log --since='1 week ago' | grep -c 'mock-detection')"
@@ -359,7 +361,77 @@ After Pre-Commit Hooks:
 
 ---
 
-**Document**: SDLC-4.8-PRE-COMMIT-HOOKS
+---
+
+## 🎯 SDLC 5.0.0 Integration
+
+### 10-Stage Lifecycle Mapping
+
+| Stage | Name | Pre-Commit Hooks Role | Enforcement Level |
+|-------|------|----------------------|-------------------|
+| 00 | WHY? (Foundation) | N/A | Documentation |
+| 01 | WHAT? (Planning) | N/A | Documentation |
+| 02 | HOW? (Design) | N/A | Documentation |
+| **03** | **BUILD (Development)** | **Primary enforcement layer** | **MANDATORY** |
+| 04 | TEST (Quality) | Test file validation | MANDATORY |
+| 05 | DEPLOY (Release) | Release validation | MANDATORY |
+| 06 | OPERATE (Production) | Config validation | RECOMMENDED |
+| 07 | INTEGRATE (Systems) | Contract validation | RECOMMENDED |
+| 08 | COLLABORATE (Teams) | Documentation checks | RECOMMENDED |
+| 09 | GOVERN (Compliance) | Full compliance validation | MANDATORY |
+
+### 4-Tier Classification
+
+| SDLC Tier | Team Size | Required Hooks | Optional Hooks |
+|-----------|-----------|----------------|----------------|
+| **LITE** | 1-2 | Mock Detection, Headers | Performance |
+| **STANDARD** | 3-10 | All 6 mandatory hooks | Custom rules |
+| **PROFESSIONAL** | 10-50 | All + Security scanning | Advanced patterns |
+| **ENTERPRISE** | 50+ | All + SBOM, License checks | Custom validators |
+
+### Industry Standards Integration
+
+| Standard | Pre-Commit Coverage | Implementation |
+|----------|---------------------|----------------|
+| **OWASP ASVS** | Secret detection, Input validation | Hook #7 (optional) |
+| **NIST SSDF** | Secure development checks | Hook #1-6 (mandatory) |
+| **DORA Metrics** | Commit frequency tracking | Metrics hook |
+| **ISO 12207** | Process validation | Quality gates hook |
+
+---
+
+## 🔗 Related Documents
+
+### Core Framework
+- [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
+- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+
+### Implementation Guides
+- [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) - Complete 3-tier review
+- [SDLC-Compliance-Enforcement-Guide.md](SDLC-Compliance-Enforcement-Guide.md) - Full compliance
+- [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) - When hooks fail
+
+### Templates & Tools
+- [03-Templates-Tools/4-Scripts/](../../03-Templates-Tools/4-Scripts/) - Validation scripts
+- [03-Templates-Tools/1-AI-Tools/governance/](../../03-Templates-Tools/1-AI-Tools/governance/) - AI compliance
+
+---
+
+## 📋 Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 5.0.0 | Dec 6, 2025 | Complete 10-stage + 4-tier integration, industry standards |
+| 4.9.0 | Nov 13, 2025 | Added tier-based hook requirements |
+| 4.8.0 | Oct 2025 | Initial battle-tested hooks from BFlow crisis |
+
+---
+
+**Document**: SDLC-5.0.0-PRE-COMMIT-HOOKS
+**Version**: 5.0.0
+**Date**: December 6, 2025
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**SDLC Tier**: ALL TIERS (Mandatory)
 **Status**: ENHANCED WITH BFLOW BATTLE-TESTED PATTERNS
 **Coverage**: 6 Mandatory Hooks, 20+ Detection Patterns
 **Achievement**: 679 → 0 mocks, proven protection

@@ -1,35 +1,68 @@
-# 📋 3-Manual-Templates - Backup When AI Unavailable
-## Traditional SDLC Templates (Use Only When Needed)
+# 📋 3-Manual-Templates - Traditional Process Templates
+## Backup Templates for SDLC 5.0.0 (Use When AI Unavailable)
 
+**Version**: 5.0.0
+**Date**: December 6, 2025
 **Priority**: ⭐⭐ (BACKUP)
-**Purpose**: Manual templates for when AI tools are unavailable
-**Status**: COMPLETE (9 templates ready)
+**Purpose**: Manual templates for when AI tools are unavailable or for training
+**Status**: COMPLETE (9 templates for Stage 00-01)
 **Recommendation**: Use [/1-AI-Tools/](../1-AI-Tools/) first (96% faster)
 
 ---
 
-## ⚠️ Important Notice
+## 🎯 SDLC 5.0.0 Integration
 
-**These are BACKUP templates.**
+### Stage Mapping
 
-### Use AI Tools First (96% Faster!)
-- **Primary Path**: [/1-AI-Tools/](../1-AI-Tools/) - 96% time savings proven
-- **This Directory**: Backup only (26 hours vs 1 hour with AI)
+Manual templates primarily cover **Stage 00-01** (Design Thinking / Foundation):
 
-### When to Use Manual Templates
+| Stage | Name | Manual Templates | AI Alternative |
+|-------|------|------------------|----------------|
+| 00 | WHY? (Foundation) | Empathy Map, User Journey, Problem Statement | `design-thinking/*.md` |
+| 01 | WHAT? (Planning) | POV Statement, HMW Questions, Ideation | `design-thinking/*.md` |
+| 02-09 | Other Stages | See AI Tools | [/1-AI-Tools/](../1-AI-Tools/) |
 
-✅ **USE manual templates when:**
-- ❌ AI tools unavailable (no internet, security restrictions)
-- 📚 Learning methodology for first time (educational)
-- 📋 Regulatory requirements (paper trail needed)
-- 🏢 Complex enterprise projects (need both AI + manual validation)
-- 👥 Group workshops (in-person facilitation)
+### 4-Tier Classification
 
-❌ **DON'T use manual templates if:**
-- ✅ AI tools available (96% faster with AI)
-- ✅ Production development (speed matters)
-- ✅ Solo or small team (AI more efficient)
-- ✅ Already familiar with methodology (AI accelerates)
+| Tier | Team Size | Manual Templates | Recommendation |
+|------|-----------|------------------|----------------|
+| **LITE** | 1-2 | Optional | Use AI tools only |
+| **STANDARD** | 3-10 | For training only | AI first, manual backup |
+| **PROFESSIONAL** | 10-50 | Hybrid approach | AI + manual validation |
+| **ENTERPRISE** | 50+ | Audit documentation | Full suite for compliance |
+
+---
+
+## ⚠️ When to Use Manual Templates
+
+### ✅ USE Manual Templates When:
+
+**Scenario 1: AI Unavailable**
+- No internet access
+- Security-restricted environment
+- Air-gapped systems
+
+**Scenario 2: Learning & Training (All Tiers)**
+- Teaching Design Thinking methodology
+- New team onboarding
+- Workshops and facilitation
+
+**Scenario 3: Regulatory Requirements (PROFESSIONAL/ENTERPRISE)**
+- Paper trail needed for audits
+- Compliance documentation required
+- SOC 2 / HIPAA evidence
+
+**Scenario 4: Critical Validation (ENTERPRISE)**
+- High-stakes decisions
+- Stakeholder presentations
+- Board-level documentation
+
+### ❌ DON'T Use Manual Templates When:
+
+- AI tools available (96% faster)
+- Speed is critical (sprints, deadlines)
+- Solo developer or small team
+- Already familiar with methodology
 
 ---
 
@@ -37,101 +70,83 @@
 
 ```
 3-Manual-Templates/
-├── README.md                        # This file (when to use manual)
-└── design-thinking/                 # 9 Stanford d.school templates
+├── README.md                        # This file
+└── design-thinking/                 # Stage 00-01: Stanford d.school templates
     ├── README.md                    # Comparison: Manual vs AI vs Hybrid
-    ├── Empathy-Map-Canvas-Template.md           # Phase 1: User research (8h)
-    ├── User-Journey-Map-Template.md             # Phase 1: Journey mapping (4h)
-    ├── Problem-Statement-Template.md            # Phase 2: Problem definition (2h)
-    ├── POV-Statement-Template.md                # Phase 2: Point of view (1h)
-    ├── HMW-Questions-Worksheet.md               # Phase 2: How Might We (1h)
-    ├── Ideation-Brainstorming-Template.md       # Phase 3: Solution generation (3h)
-    ├── Prototype-Test-Plan-Template.md          # Phase 4: Prototype planning (4h)
-    ├── User-Testing-Script-Template.md          # Phase 5: Testing protocol (3h)
-    └── Feedback-Analysis-Template.md            # Phase 5: Feedback synthesis (5h)
+    │
+    ├── Phase 1: Empathize (Stage 00)
+    │   ├── Empathy-Map-Canvas-Template.md     # 8 hours (AI: 20 min)
+    │   └── User-Journey-Map-Template.md       # 4 hours (AI: 20 min)
+    │
+    ├── Phase 2: Define (Stage 00-01)
+    │   ├── Problem-Statement-Template.md      # 2 hours (AI: 5 min)
+    │   ├── POV-Statement-Template.md          # 1 hour (AI: 5 min)
+    │   └── HMW-Questions-Worksheet.md         # 1 hour (AI: 5 min)
+    │
+    ├── Phase 3: Ideate (Stage 01)
+    │   └── Ideation-Brainstorming-Template.md # 3 hours (AI: 10 min)
+    │
+    ├── Phase 4: Prototype (Stage 01)
+    │   └── Prototype-Test-Plan-Template.md    # 4 hours (AI: 25 min)
+    │
+    └── Phase 5: Test (Stage 01)
+        ├── User-Testing-Script-Template.md    # 3 hours (AI: 25 min)
+        └── Feedback-Analysis-Template.md      # 5 hours (AI: 10 min)
 ```
 
 ---
 
-## ⏱️ Time Comparison
+## ⏱️ Time Comparison by Approach
 
 ### Manual Approach (This Directory)
+
 ```yaml
-Phase 1 - Empathize:
+Total Time: 26 hours per feature
+
+Stage 00 (WHY?):
   Empathy Map: 8 hours
   User Journey: 4 hours
-  Total: 12 hours
-
-Phase 2 - Define:
   Problem Statement: 2 hours
   POV Statement: 1 hour
   HMW Questions: 1 hour
-  Total: 4 hours
+  Subtotal: 16 hours
 
-Phase 3 - Ideate:
-  Brainstorming: 3 hours
-  Total: 3 hours
-
-Phase 4 - Prototype:
-  Test Plan: 4 hours
-  Total: 4 hours
-
-Phase 5 - Test:
+Stage 01 (WHAT?):
+  Ideation: 3 hours
+  Prototype Plan: 4 hours
   Testing Script: 3 hours
   Feedback Analysis: 5 hours
-  Total: 8 hours
-
-TOTAL MANUAL TIME: 26 hours per feature
+  Subtotal: 10 hours (overlap with 00)
 ```
 
-### AI-Accelerated Approach (Recommended)
+### AI Approach (Recommended)
+
 ```yaml
-Phase 1 - Empathize:
-  AI Prompt: 20 minutes
+Total Time: 1 hour per feature
 
-Phase 2 - Define:
-  AI Prompt: 5 minutes
-
-Phase 3 - Ideate:
-  AI Prompt: 10 minutes
-
-Phase 4 - Prototype:
-  AI Prompt: 25 minutes
-
-Phase 5 - Test:
-  AI Prompt: 25 minutes
-
-TOTAL AI TIME: 1 hour per feature
+Stage 00-01:
+  empathy-synthesis.md: 20 minutes
+  problem-statement.md: 5 minutes
+  ideation-facilitator.md: 10 minutes
+  prototype-validator.md: 25 minutes
 
 TIME SAVINGS: 96% (25 hours saved)
 ```
 
-### Hybrid Approach (Best Quality)
-```yaml
-Combine AI speed + manual depth:
+### Hybrid Approach (Best Quality for ENTERPRISE)
 
-Phase 1:
+```yaml
+Total Time: 3-4 hours per feature
+
+Stage 00:
   AI: Quick synthesis (20 min)
   Manual: Structured documentation (30 min)
 
-Phase 2:
-  AI: Generate statements (5 min)
-  Manual: Validate & refine (20 min)
-
-Phase 3:
-  AI: Generate ideas (10 min)
+Stage 01:
+  AI: Generate ideas (15 min)
   Manual: Team workshop (60 min)
-
-Phase 4:
   AI: Validate approach (25 min)
-  Manual: Detailed plan (45 min)
-
-Phase 5:
-  Manual: Run tests (2 hours)
-  AI: Analyze results (10 min)
-  Manual: Document findings (30 min)
-
-TOTAL HYBRID TIME: 3-4 hours per feature
+  Manual: Detailed documentation (60 min)
 
 TIME SAVINGS: 85-92% (22-23 hours saved)
 QUALITY: Highest (AI speed + human validation)
@@ -139,273 +154,415 @@ QUALITY: Highest (AI speed + human validation)
 
 ---
 
-## 📋 Design Thinking Templates
+## 📊 Usage by Tier
 
-### Phase 1: Empathize (12 hours manual)
+### LITE Tier (1-2 People)
 
-**1. Empathy Map Canvas Template (8 hours)**
-- Location: `design-thinking/Empathy-Map-Canvas-Template.md`
-- Purpose: Synthesize user research into 4 quadrants (Think, Feel, Say, Do)
-- When: After user interviews/observations
-- AI Alternative: [empathy-synthesis.md](../1-AI-Tools/design-thinking/empathy-synthesis.md) - 20 min
-
-**2. User Journey Map Template (4 hours)**
-- Location: `design-thinking/User-Journey-Map-Template.md`
-- Purpose: Map user touchpoints, pain points, opportunities
-- When: Understanding user experience end-to-end
-- AI Alternative: Included in empathy-synthesis.md - 20 min
-
-### Phase 2: Define (4 hours manual)
-
-**3. Problem Statement Template (2 hours)**
-- Location: `design-thinking/Problem-Statement-Template.md`
-- Purpose: Define problem with evidence
-- Format: [User] needs [need] because [insight]
-- AI Alternative: [problem-statement.md](../1-AI-Tools/design-thinking/problem-statement.md) - 5 min
-
-**4. POV Statement Template (1 hour)**
-- Location: `design-thinking/POV-Statement-Template.md`
-- Purpose: Frame problem from user perspective
-- When: Synthesizing user insights
-- AI Alternative: Included in problem-statement.md - 5 min
-
-**5. HMW Questions Worksheet (1 hour)**
-- Location: `design-thinking/HMW-Questions-Worksheet.md`
-- Purpose: Reframe problems as opportunities
-- Format: "How Might We...?" questions
-- AI Alternative: Auto-generated in problem-statement.md - 5 min
-
-### Phase 3: Ideate (3 hours manual)
-
-**6. Ideation Brainstorming Template (3 hours)**
-- Location: `design-thinking/Ideation-Brainstorming-Template.md`
-- Purpose: Generate 15+ solution ideas with SCAMPER method
-- When: After problem definition
-- AI Alternative: [ideation-facilitator.md](../1-AI-Tools/design-thinking/ideation-facilitator.md) - 10 min
-
-### Phase 4: Prototype (4 hours manual)
-
-**7. Prototype Test Plan Template (4 hours)**
-- Location: `design-thinking/Prototype-Test-Plan-Template.md`
-- Purpose: Plan prototype approach and validation
-- When: Before building prototype
-- AI Alternative: [prototype-validator.md](../1-AI-Tools/design-thinking/prototype-validator.md) - 25 min
-
-### Phase 5: Test (8 hours manual)
-
-**8. User Testing Script Template (3 hours)**
-- Location: `design-thinking/User-Testing-Script-Template.md`
-- Purpose: Structured testing protocol
-- When: Running user tests
-- AI Alternative: [user-testing-analyzer.md](../1-AI-Tools/design-thinking/user-testing-analyzer.md) - 25 min
-
-**9. Feedback Analysis Template (5 hours)**
-- Location: `design-thinking/Feedback-Analysis-Template.md`
-- Purpose: Synthesize testing feedback
-- When: After user testing
-- AI Alternative: Included in user-testing-analyzer.md - 25 min
-
----
-
-## 🎯 When to Use Each Approach
-
-### Scenario 1: Production Development (Use AI)
-```
-Context: Building new feature for production
-Timeline: 1 week sprint
-Team: 2-5 developers
-Decision: Use AI tools (1 hour per feature)
+```yaml
+Recommendation: Skip manual templates
+Use: AI tools only
 
 Why:
-✅ Speed critical for sprint delivery
-✅ 96% time savings proven
-✅ AI provides consistent quality
-✅ Small team benefits from automation
-✅ Can iterate 26x more features
+  - Limited time available
+  - No team for workshops
+  - Maximum productivity needed
+  - 96% time savings critical
+
+Time Investment: 0 hours on manual
+ROI: 26x faster with AI
 ```
 
-### Scenario 2: Learning Workshop (Use Manual)
-```
-Context: Teaching Design Thinking to team
-Timeline: 2-day workshop
-Team: 10-15 people
-Decision: Use manual templates (26 hours total)
+### STANDARD Tier (3-10 People)
 
-Why:
-✅ Educational purpose (learning methodology)
-✅ Group facilitation needed
-✅ Hands-on experience important
-✅ Paper trail for future reference
-✅ Team building through collaboration
-```
+```yaml
+Recommendation: Manual for training only
 
-### Scenario 3: Critical Feature (Use Hybrid)
-```
-Context: Complex enterprise feature
-Timeline: 2-week sprint
-Team: 5-10 people
-Decision: Use hybrid (3-4 hours per feature)
+When to Use Manual:
+  - Team onboarding (first 2 weeks)
+  - Methodology workshops
+  - New hire training
 
-Why:
-✅ Quality critical (financial/healthcare/etc.)
-✅ Need AI speed + human validation
-✅ Stakeholder presentation required
-✅ Regulatory documentation needed
-✅ Best of both worlds
+Production Use: AI tools
+Training Use: Manual templates
+
+Time Investment: 26 hours (one-time training)
+ROI: Understanding + 96% faster execution after
 ```
 
-### Scenario 4: Solo Developer (Use AI)
-```
-Context: Side project or startup
-Timeline: Weekend or evenings
-Team: 1 developer
-Decision: Use AI tools (1 hour per feature)
+### PROFESSIONAL Tier (10-50 People)
 
-Why:
-✅ Limited time available
-✅ No team for workshops
-✅ Fast iteration needed
-✅ Budget conscious (free AI tier)
-✅ Maximum productivity per hour
+```yaml
+Recommendation: Hybrid approach
+
+Use Manual For:
+  - Critical features (high stakes)
+  - Stakeholder presentations
+  - Compliance documentation
+  - Cross-team workshops
+
+Use AI For:
+  - Daily development
+  - Quick iterations
+  - Time-sensitive features
+
+Time Investment: 3-4 hours per feature (hybrid)
+ROI: 85% savings + high quality
+```
+
+### ENTERPRISE Tier (50+ People)
+
+```yaml
+Recommendation: Full suite
+
+Use Manual For:
+  - Audit documentation
+  - Regulatory compliance
+  - Board presentations
+  - Multi-team facilitation
+  - SOC 2 / HIPAA evidence
+
+Use AI For:
+  - First draft generation
+  - Quick iterations
+  - Individual work
+
+Time Investment: 3-4 hours (hybrid) or 26 hours (full manual)
+ROI: Compliance + quality assurance
 ```
 
 ---
 
-## 📊 ROI Analysis
+## 📋 Design Thinking Templates (Stage 00-01)
 
-### Manual Approach (This Directory)
+### Phase 1: Empathize (Stage 00 - WHY?)
+
+**1. Empathy Map Canvas Template**
 ```yaml
-Time per Feature: 26 hours
-Cost (at $50/hour): $1,300
-Output: 9 filled templates
-Quality: High (if experienced)
-Learning Curve: Steep (20+ hours to master)
-Best For: Workshops, teaching, regulatory needs
+File: design-thinking/Empathy-Map-Canvas-Template.md
+Purpose: Synthesize user research into 4 quadrants
+Time: 8 hours manual / 20 min AI
+When: After user interviews
+
+Sections:
+  - THINK & FEEL: User thoughts and emotions
+  - SEE: User environment and observations
+  - SAY & DO: User actions and statements
+  - HEAR: Influences and information sources
+  - PAINS: Frustrations and obstacles
+  - GAINS: Goals and motivations
+
+AI Alternative: 1-AI-Tools/design-thinking/empathy-synthesis.md
 ```
 
-### AI Approach (Recommended)
+**2. User Journey Map Template**
 ```yaml
-Time per Feature: 1 hour
-Cost: $50 (time) + $20 (AI tools) = $70
-Output: 5 AI reports
-Quality: High (consistent)
-Learning Curve: Gentle (2 hours to learn)
-Best For: Production, solo, small teams
+File: design-thinking/User-Journey-Map-Template.md
+Purpose: Map user touchpoints end-to-end
+Time: 4 hours manual / 20 min AI
+When: Understanding user experience
+
+Sections:
+  - User Persona Profile
+  - Journey Stages (Awareness → Retention)
+  - Touchpoints per stage
+  - Pain Points and Emotions
+  - Opportunities
+
+AI Alternative: Included in empathy-synthesis.md
+```
+
+### Phase 2: Define (Stage 00-01 Transition)
+
+**3. Problem Statement Template**
+```yaml
+File: design-thinking/Problem-Statement-Template.md
+Purpose: Define problem with evidence
+Time: 2 hours manual / 5 min AI
+Format: [User] needs [need] because [insight]
+
+Sections:
+  - User Profile Summary
+  - Key Needs (prioritized)
+  - Evidence-Based Insights
+  - Problem Statement Drafts
+  - Validation Criteria
+
+AI Alternative: 1-AI-Tools/design-thinking/problem-statement.md
+```
+
+**4. POV Statement Template**
+```yaml
+File: design-thinking/POV-Statement-Template.md
+Purpose: Frame problem from user perspective
+Time: 1 hour manual / 5 min AI
+
+Sections:
+  - User Definition
+  - Need Description
+  - Insight Synthesis
+  - POV Statement
+  - Challenge Identification
+
+AI Alternative: Included in problem-statement.md
+```
+
+**5. HMW Questions Worksheet**
+```yaml
+File: design-thinking/HMW-Questions-Worksheet.md
+Purpose: Reframe problems as opportunities
+Time: 1 hour manual / auto-generated with AI
+
+Format: "How Might We...?"
+Examples:
+  - HMW make [process] faster?
+  - HMW reduce [pain point]?
+  - HMW help users [goal]?
+
+AI Alternative: Auto-generated in problem-statement.md
+```
+
+### Phase 3: Ideate (Stage 01 - WHAT?)
+
+**6. Ideation Brainstorming Template**
+```yaml
+File: design-thinking/Ideation-Brainstorming-Template.md
+Purpose: Generate 15+ solution ideas
+Time: 3 hours manual / 10 min AI
+Method: SCAMPER + Six Thinking Hats
+
+Sections:
+  - SCAMPER Analysis
+  - Six Hats Perspectives
+  - Idea Generation (15+ ideas)
+  - Feasibility Scoring
+  - Top 3 Selection
+
+AI Alternative: 1-AI-Tools/design-thinking/ideation-facilitator.md
+```
+
+### Phase 4: Prototype (Stage 01)
+
+**7. Prototype Test Plan Template**
+```yaml
+File: design-thinking/Prototype-Test-Plan-Template.md
+Purpose: Plan prototype approach and validation
+Time: 4 hours manual / 25 min AI
+
+Sections:
+  - Solution Description
+  - Prototype Type (paper/digital/code)
+  - Success Criteria
+  - Test Scenarios
+  - Resource Requirements
+
+AI Alternative: 1-AI-Tools/design-thinking/prototype-validator.md
+```
+
+### Phase 5: Test (Stage 01)
+
+**8. User Testing Script Template**
+```yaml
+File: design-thinking/User-Testing-Script-Template.md
+Purpose: Structured testing protocol
+Time: 3 hours manual / 25 min AI
+
+Sections:
+  - Participant Profile
+  - Introduction Script
+  - Task Scenarios (5-7 tasks)
+  - Observation Checklist
+  - Post-Task Questions
+  - Wrap-Up Questions
+
+AI Alternative: 1-AI-Tools/design-thinking/user-testing-analyzer.md
+```
+
+**9. Feedback Analysis Template**
+```yaml
+File: design-thinking/Feedback-Analysis-Template.md
+Purpose: Synthesize testing feedback
+Time: 5 hours manual / 10 min AI
+
+Sections:
+  - Participant Summary
+  - Task Completion Rates
+  - Success/Failure Patterns
+  - User Quotes (verbatim)
+  - Iteration Priorities
+  - Recommendations
+
+AI Alternative: Included in user-testing-analyzer.md
+```
+
+---
+
+## 📊 ROI Analysis by Tier
+
+### LITE Tier (Skip Manual)
+
+```yaml
+Manual Cost: 26 hours × $50/hr = $1,300
+AI Cost: 1 hour × $50/hr + $20 tools = $70
+
 Savings: $1,230 per feature (95%)
-ROI: 1,757% annually
+Annual (10 features): $12,300 saved
+
+Recommendation: AI only (no manual)
 ```
 
-### Hybrid Approach (Best Quality)
+### STANDARD Tier (Training + AI)
+
 ```yaml
-Time per Feature: 3 hours
-Cost: $150 (time) + $20 (AI) = $170
-Output: 9 templates + 5 AI reports (complete)
-Quality: Highest (AI + human)
-Learning Curve: Moderate (5 hours)
-Best For: Critical features, enterprise, training
-Savings: $1,130 per feature (87%)
-ROI: 665% annually
+Training Investment: 26 hours × $50/hr = $1,300 (one-time)
+Production Cost: 1 hour × $50/hr + $20 = $70 per feature
+
+Year 1: $1,300 + (10 × $70) = $2,000
+Year 2+: 10 × $70 = $700
+
+vs Manual: 10 × $1,300 = $13,000/year
+Savings Year 1: $11,000 (85%)
+Savings Year 2+: $12,300 (95%)
+
+Recommendation: Train once, AI forever
 ```
 
-### Annual Impact (10 features/year)
-```yaml
-Manual: $13,000 total cost
-AI: $700 total cost (savings: $12,300)
-Hybrid: $1,700 total cost (savings: $11,300)
+### PROFESSIONAL Tier (Hybrid)
 
-Manual: 260 hours total time
-AI: 10 hours total time (250 hours saved)
-Hybrid: 30 hours total time (230 hours saved)
+```yaml
+Hybrid Cost: 3.5 hours × $50/hr + $20 = $195 per feature
+Annual (10 features): $1,950
+
+vs Manual: $13,000/year
+Savings: $11,050 (85%)
+
+Benefits:
+  - High quality documentation
+  - Stakeholder-ready output
+  - Compliance artifacts
+
+Recommendation: Hybrid for critical features
+```
+
+### ENTERPRISE Tier (Full Suite)
+
+```yaml
+Full Manual: For audits, $1,300/feature
+Hybrid: For production, $195/feature
+
+Annual Mix (5 audit + 5 production):
+  Audit: 5 × $1,300 = $6,500
+  Production: 5 × $195 = $975
+  Total: $7,475
+
+vs All Manual: $13,000
+Savings: $5,525 (42%)
+
+Benefits:
+  - Audit-ready documentation
+  - SOC 2 / HIPAA compliance
+  - Board presentation quality
+
+Recommendation: Full suite for compliance
 ```
 
 ---
 
 ## 🎓 Learning Path
 
-### First Time Using Design Thinking?
-1. **Week 1**: Read all 9 manual templates (4 hours)
-2. **Week 2**: Do first feature manually (26 hours)
-3. **Week 3**: Learn AI prompts (2 hours)
-4. **Week 4+**: Switch to AI or hybrid
-5. **Result**: Understand methodology + 96% faster execution
+### New to Design Thinking? (All Tiers)
+
+```yaml
+Week 1:
+  - Read all 9 manual templates (4 hours)
+  - Understand methodology structure
+
+Week 2:
+  - Do first feature manually (26 hours)
+  - Experience full process
+
+Week 3:
+  - Learn AI prompts (2 hours)
+  - Compare AI vs manual output
+
+Week 4+:
+  - Switch to AI or hybrid
+  - Use manual for training others
+
+Result: Methodology mastery + 96% faster execution
+```
 
 ### Already Know Design Thinking?
-1. **Skip manual templates** (you already know the methodology)
-2. **Go to AI tools**: [/1-AI-Tools/design-thinking/](../1-AI-Tools/design-thinking/)
-3. **Start using prompts**: 1 hour per feature immediately
-4. **Result**: 96% time savings from day 1
 
-### Teaching a Team?
-1. **Day 1**: Manual templates workshop (8 hours)
-2. **Day 2**: Practice with real feature (8 hours)
-3. **Week 2**: Introduce AI acceleration (2 hours)
-4. **Week 3**: Hybrid approach practice (4 hours)
-5. **Result**: Team knows methodology + productivity tools
+```yaml
+Day 1:
+  - Skip manual templates
+  - Go directly to: 1-AI-Tools/design-thinking/
+  - Start using AI prompts
+
+Result: 96% time savings from day 1
+```
+
+### Teaching a Team? (STANDARD+)
+
+```yaml
+Day 1 (8 hours):
+  - Manual templates workshop
+  - Hands-on practice
+
+Day 2 (8 hours):
+  - Real feature exercise
+  - Full manual process
+
+Week 2 (4 hours):
+  - Introduce AI acceleration
+  - Side-by-side comparison
+
+Week 3 (4 hours):
+  - Hybrid approach practice
+  - Team workflow setup
+
+Result: Team knows methodology + productivity tools
+```
 
 ---
 
 ## 🔗 Related Resources
 
 ### Primary (Use First)
+
 - **AI Tools**: [/1-AI-Tools/](../1-AI-Tools/) - 96% time savings
-- **Design Thinking AI**: [/1-AI-Tools/design-thinking/](../1-AI-Tools/design-thinking/) - 5 prompt guides
+- **Design Thinking AI**: [/1-AI-Tools/design-thinking/](../1-AI-Tools/design-thinking/)
 
-### Secondary (Use with AI)
-- **Agent Templates**: [/2-Agent-Templates/](../2-Agent-Templates/) - AI configurations
-- **Automation Scripts**: [/4-Scripts/](../4-Scripts/) - Validators and setup
+### Secondary
 
-### Documentation
-- **SDLC 4.9 Overview**: `/00-Overview/SDLC-4.8-Overview.md`
-- **Case Studies**: `/07-Case-Studies/` - Real-world examples
-- **Training Materials**: `/04-Training-Materials/` - Complete training
+- **Agent Templates**: [/2-Agent-Templates/](../2-Agent-Templates/)
+- **Scripts**: [/4-Scripts/](../4-Scripts/)
 
----
+### Reference
 
-## ✅ Recommendation Summary
-
-**For Solo Developers**:
-- ❌ Don't use manual templates (too slow)
-- ✅ Use AI tools (1 hour vs 26 hours)
-- **ROI**: 1,757% annually
-
-**For Small Teams (2-5)**:
-- ❌ Don't use manual templates (too slow)
-- ✅ Use AI tools (1 hour vs 26 hours)
-- **ROI**: 1,757% annually
-
-**For Growing Teams (6-15)**:
-- ⚠️ Use manual for training only
-- ✅ Use hybrid for production (3 hours vs 26 hours)
-- **ROI**: 665% annually
-
-**For Enterprise (16+)**:
-- ✅ Use hybrid or manual (quality + documentation)
-- ✅ AI for speed, manual for validation
-- **ROI**: 665% annually
+- **Core Methodology**: [/02-Core-Methodology/](../../02-Core-Methodology/)
+- **SDLC 5.0.0 Overview**: [/00-Overview/](../../00-Overview/)
 
 ---
 
-## 📞 Support
+## ✅ Quick Decision Guide
 
-### Questions About Manual Templates?
-1. **Check AI alternative first**: [/1-AI-Tools/](../1-AI-Tools/)
-2. **Read comparison guide**: `design-thinking/README.md`
-3. **Contact CPO**: taidt@mtsolution.com.vn
-
-### Questions About When to Use?
-- **Speed needed**: Use AI (96% faster)
-- **Learning needed**: Use manual (educational)
-- **Quality critical**: Use hybrid (best of both)
+| Situation | Use | Time |
+|-----------|-----|------|
+| Solo developer | AI only | 1 hour |
+| Small team (production) | AI only | 1 hour |
+| Team training | Manual | 26 hours |
+| Critical feature | Hybrid | 3-4 hours |
+| Audit documentation | Manual | 26 hours |
+| Regulatory compliance | Hybrid/Manual | 3-26 hours |
+| Stakeholder presentation | Hybrid | 3-4 hours |
 
 ---
 
-**Status**: BACKUP TEMPLATES - USE AI FIRST
-**Templates**: 9 complete Stanford d.school templates
-**Time**: 26 hours manual vs 1 hour AI vs 3 hours hybrid
-**Recommendation**: Use [/1-AI-Tools/](../1-AI-Tools/) for 96% time savings
+**Folder Status**: BACKUP - SDLC 5.0.0 Complete
+**Last Updated**: December 6, 2025
+**Owner**: CPO Office
 
-***"Manual templates teach, AI prompts accelerate, hybrid delivers both."*** 🎯
+***"Manual templates teach, AI accelerates, hybrid delivers both."*** 🎯
 
 ***"Use AI first, fall back to manual when needed."*** ⚡
-
-***"26 hours to 1 hour - choose your speed."*** 🚀

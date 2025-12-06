@@ -26,7 +26,7 @@ Convert Figma design to React TypeScript:
 Figma URL: [internal URL]
 Component: ProductCard
 Location: frontend/web/src/features/products/
-Requirements: SDLC 4.9, Vietnamese i18n, <50ms performance
+Requirements: SDLC 5.0, Vietnamese i18n, <50ms performance
 ```
 
 **Key Learning**: Universal prompts work better than platform-specific scripts

@@ -1,10 +1,12 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 4.9.0
-**Last Updated**: November 13, 2025
+**Version**: 5.0.0
+**Last Updated**: December 6, 2025
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
 **Tier**: 3 (Enterprise Automated Review)
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**SDLC Tier**: PROFESSIONAL (10-50) / ENTERPRISE (50+)
 
 ---
 
@@ -178,7 +180,7 @@ Expected Result:
 Create in repository root:
 
 ```yaml
-# .coderabbit.yaml - SDLC 4.8 Configuration
+# .coderabbit.yaml - SDLC 5.0.0 Configuration
 
 # ==============================================================================
 # REVIEW SETTINGS
@@ -205,7 +207,7 @@ reviews:
     - documentation
 
 # ==============================================================================
-# SDLC 4.8 CUSTOM RULES
+# SDLC 5.0.0 CUSTOM RULES
 # ==============================================================================
 
 rules:
@@ -342,7 +344,7 @@ rules:
       - Add indexes to frequently queried fields
       - Use db_index=True or Meta.indexes
 
-      Target: <50ms database query response time (SDLC 4.8)
+      Target: <50ms database query response time (SDLC 5.0.0)
     severity: info
     applies_to:
       - "**/models.py"
@@ -356,7 +358,7 @@ rules:
       - Iterator (.iterator() for large querysets)
       - Chunking (batch processing)
 
-      Target: Support 1000+ concurrent users (SDLC 4.8)
+      Target: Support 1000+ concurrent users (SDLC 5.0.0)
     severity: warning
     applies_to:
       - "**/*.py"
@@ -379,7 +381,7 @@ rules:
     message: |
       Code Quality: File exceeds 300 lines.
       Consider splitting into multiple modules for better maintainability.
-      Target: <300 lines per file (SDLC 4.8)
+      Target: <300 lines per file (SDLC 5.0.0)
     severity: info
     applies_to:
       - "**/*.py"
@@ -410,7 +412,7 @@ rules:
   - name: "Missing Tests for New Feature"
     message: |
       Testing Reminder: New code should include tests.
-      SDLC 4.8 Target: 80%+ test coverage
+      SDLC 5.0.0 Target: 80%+ test coverage
 
       Required:
       - Unit tests for business logic
@@ -425,7 +427,7 @@ rules:
   - name: "Mock Usage Detection"
     pattern: "\\bmock\\.|Mock\\(|patch\\("
     message: |
-      SDLC 4.8 Zero Mock Policy:
+      SDLC 5.0.0 Zero Mock Policy:
       Mocks are ONLY allowed for:
       1. External APIs (third-party services)
       2. Time-dependent functions (datetime.now)
@@ -561,10 +563,10 @@ advanced:
 # VERSION & METADATA
 # ==============================================================================
 
-version: "4.8.0"
-last_updated: "2025-11-07"
+version: "5.0.0"
+last_updated: "2025-12-06"
 owner: "CPO Office - taidt@mtsolution.com.vn"
-documentation: "docs/SDLC-4.8-CodeRabbit-Integration-Guide.md"
+documentation: "docs/SDLC-5.0.0-CodeRabbit-Integration-Guide.md"
 ```
 
 **Step 2.2: Test Custom Rules** (1 hour)
@@ -1110,23 +1112,74 @@ CodeRabbit Professional (Tier 3) is the **ultimate code review solution for ente
 
 **When NOT to Use**: <15 developers (Tier 2 more cost-effective), limited budget, simple projects
 
-For complete tier comparison, see [SDLC-4.8-Universal-Code-Review-Framework.md](./SDLC-4.8-Universal-Code-Review-Framework.md).
+For complete tier comparison, see the SDLC Implementation Guide.
 
 ---
 
-**Document Version**: 4.9.0
-**Last Updated**: November 13, 2025
-**Next Review**: December 7, 2025
+## 🎯 SDLC 5.0.0 Integration
+
+### 10-Stage Lifecycle Mapping
+
+| Stage | Name | CodeRabbit Role | Primary Focus |
+|-------|------|----------------|---------------|
+| 00 | WHY? (Foundation) | PR description validation | User need documentation |
+| 01 | WHAT? (Planning) | User story reference checks | Feature scope |
+| 02 | HOW? (Design) | Architecture pattern rules | Design compliance |
+| **03** | **BUILD (Development)** | **Primary focus: Automated PR review** | **Code quality** |
+| 04 | TEST (Quality) | Test coverage validation | Test automation |
+| 05 | DEPLOY (Release) | CI/CD integration | Release safety |
+| 06 | OPERATE (Production) | Analytics and insights | Continuous improvement |
+| 07 | INTEGRATE (Systems) | API contract rules | Integration testing |
+| 08 | COLLABORATE (Teams) | Team-level dashboards | Knowledge sharing |
+| 09 | GOVERN (Compliance) | Audit logs, compliance reports | Audit readiness |
+
+### 4-Tier Classification
+
+| SDLC Tier | Team Size | Budget | CodeRabbit Fit |
+|-----------|-----------|--------|----------------|
+| LITE | 1-2 | <$50K | Use Tier 1 (Free/Manual) |
+| STANDARD | 3-10 | $50-200K | Use Tier 2 (Subscription) |
+| **PROFESSIONAL** | **10-50** | **$200K-1M** | **Good fit - Consider for scale** |
+| **ENTERPRISE** | **50+** | **$1M+** | **Perfect fit - Maximum ROI** |
+
+### Industry Standards Integration
+
+| Standard | How Applied in CodeRabbit |
+|----------|--------------------------|
+| OWASP ASVS | Security vulnerability rules in .coderabbit.yaml |
+| NIST SSDF | Secure coding patterns, automated validation |
+| DORA Metrics | Review time tracking, deployment frequency |
+| ISO 12207 | Process compliance, audit trails |
+| CMMI v3.0 | Maturity assessment through analytics |
+
+---
+
+## 📚 Related Documents
+
+- [SDLC-Manual-Code-Review-Playbook.md](SDLC-Manual-Code-Review-Playbook.md) - Tier 1 (Free/Manual) baseline
+- [SDLC-Subscription-Powered-Code-Review-Guide.md](SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 alternative
+- [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) - Overall SDLC 5.0.0 implementation
+- [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Pre-commit hook configuration
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 5.0.0 | Dec 6, 2025 | SDLC 5.0.0 upgrade: 10-stage mapping, 4-tier classification, industry standards |
+| 4.9.0 | Nov 13, 2025 | Initial CodeRabbit integration guide |
+
+---
+
+**Document Version**: 5.0.0
+**Last Updated**: December 6, 2025
+**Next Review**: January 6, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
+**SDLC Stage**: Stage 03 (BUILD) - Development & Implementation
+**SDLC Tier**: PROFESSIONAL / ENTERPRISE
 
 ---
 
-**Related Documents**:
-- [SDLC-4.8-Universal-Code-Review-Framework.md](./SDLC-4.8-Universal-Code-Review-Framework.md) - Complete 3-tier comparison
-- [SDLC-4.8-Subscription-Powered-Code-Review-Guide.md](./SDLC-4.8-Subscription-Powered-Code-Review-Guide.md) - Tier 2 alternative
-- [SDLC-4.8-Core-Methodology.md](../02-Core-Methodology/SDLC-4.8-Core-Methodology.md) - Framework overview
-
----
-
-**🏆 SDLC 4.8 Code Review Excellence**
+**🏆 SDLC 5.0.0 Code Review Excellence**
 *Enterprise-Grade Automation - 15,000%+ ROI*

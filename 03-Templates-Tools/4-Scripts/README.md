@@ -26,7 +26,7 @@ Validation adapts based on project tier:
 | PROFESSIONAL | 10-50 | Full team collaboration |
 | ENTERPRISE | 50+ | All + SLA enforcement |
 
-### Code File Naming Standards (from 4.9.1)
+### Code File Naming Standards (from 5.0.0)
 - **Python**: `snake_case`, max 50 chars (e.g., `user_service.py`)
 - **TypeScript**: `camelCase`, max 50 chars (e.g., `userService.ts`)
 - **React**: `PascalCase`, max 50 chars (e.g., `UserDashboard.tsx`)
@@ -93,7 +93,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 **Design-to-Code** (5-10 min):
 ```bash
 # See: /ai-tools/design-to-code/universal-prompts.md
-"Convert [design tool] to [framework] with SDLC 4.9 compliance"
+"Convert [design tool] to [framework] with SDLC 5.0 compliance"
 ```
 
 **Design Thinking** (5 min per phase):
@@ -105,7 +105,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 **Code Review** (5-10 min):
 ```bash
 # See: /ai-tools/code-review/
-"Review [code] for SDLC 4.9 compliance"
+"Review [code] for SDLC 5.0 compliance"
 ```
 
 ---
@@ -126,13 +126,13 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
         # Others: Implement when demanded
 ```
 
-**Note**: SDLC 4.9.1 now includes Code File Naming Standards validation in `sdlc_validator.py`
+**Note**: SDLC 5.0.0 now includes Code File Naming Standards validation in `sdlc_validator.py`
 
 ---
 
 ## 🎯 Key Scripts Explained
 
-### SDLC 4.9.1 Complete Validator ✅
+### SDLC 5.0.0 Complete Validator ✅
 
 **Validates complete 10-stage lifecycle + 6-pillar architecture + code file naming**
 
@@ -161,7 +161,7 @@ python3 compliance/sdlc_validator.py /path/to/project
 - Pillar 4: Documentation Permanence standards
 - Pillar 5: Continuous Compliance monitoring
 
-## Code File Naming (NEW in 4.9.1):
+## Code File Naming (NEW in 5.0.0):
 - Python files: snake_case, max 50 chars
 - TypeScript files: camelCase, max 50 chars
 - React components: PascalCase, max 50 chars
@@ -172,7 +172,7 @@ python3 compliance/sdlc_validator.py /path/to/project
 ✅ Stage 04-09 (TEST→GOVERN): COMPLIANT
 ✅ Pillar 0-5 (All Pillars): COMPLIANT
 ✅ File Naming Standards: COMPLIANT
-🎉 SDLC 4.9.1 FULLY COMPLIANT (10 stages + 6 pillars + file naming)
+🎉 SDLC 5.0.0 FULLY COMPLIANT (10 stages + 6 pillars + file naming)
 ```
 
 ### Design Thinking Validator ✨ NEW
@@ -208,7 +208,7 @@ python3 scripts/compliance/design_thinking_validator.py /path/to/project
 python3 scripts/quick-start/solo_setup.py /path/to/project
 
 # What it does:
-1. Creates SDLC 4.9 complete 10-stage structure
+1. Creates SDLC 5.0 complete 10-stage structure
 2. Installs compliance validators (10-stage + 6-pillar)
 3. Sets up Design Thinking templates (5 phases)
 4. Configures Code Review Tier 1 (Manual)
@@ -228,7 +228,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 
 ### Modern Approach: AI Tools + Core Validators
 
-**Traditional MTS SDLC Framework** (Before 4.8):
+**Traditional MTS SDLC Framework** (Before 5.0):
 ```
 ❌ 31 custom scripts for every scenario
 ❌ High maintenance overhead
@@ -236,7 +236,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 ❌ Rigid, inflexible automation
 ```
 
-**SDLC 4.9 Approach**:
+**SDLC 5.0 Approach**:
 ```
 ✅ 3 core validators (Python scripts)
 ✅ 1 quick-start setup (Python script)
@@ -247,7 +247,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 
 ### Coverage Comparison
 
-| Need | Traditional | SDLC 4.9 | Result |
+| Need | Traditional | SDLC 5.0 | Result |
 |------|------------|----------|---------|
 | Validation | Python script | Python script | ✅ SAME |
 | Design Thinking | Python scripts (6) | AI prompts | ✅ BETTER |
@@ -354,7 +354,7 @@ python3 scripts/compliance/sdlc_validator.py .
 
 ### Scripts That Work
 
-1. **SDLC 4.9 Validator**: Enforces all 6 pillars across 3 platforms
+1. **SDLC 5.0 Validator**: Enforces all 6 pillars across 3 platforms
 2. **Design Thinking Validator**: Achieved 96% time savings on NQH-Bot
 3. **Solo Setup**: 2 days to 10x productivity proven
 
@@ -405,7 +405,7 @@ ROI:
 ### Alternative Resources
 - **Case Studies**: [/07-Case-Studies/](../../07-Case-Studies/)
 - **Implementation Guides**: [/03-Implementation-Guides/](../../03-Implementation-Guides/)
-- **Crisis Response**: [SDLC-4.8-Crisis-Response-Guide.md](../../03-Implementation-Guides/SDLC-4.8-Crisis-Response-Guide.md)
+- **Crisis Response**: [SDLC-5.0-Crisis-Response-Guide.md](../../03-Implementation-Guides/SDLC-5.0-Crisis-Response-Guide.md)
 
 ---
 
@@ -435,7 +435,7 @@ ROI:
 ### Script Requirements
 
 If creating a new script:
-- Must follow SDLC 4.9 template
+- Must follow SDLC 5.0 template
 - Must be universal (no platform-specific code)
 - Must have 80%+ test coverage
 - Must include complete documentation
@@ -483,7 +483,7 @@ If you need automation that doesn't exist:
 ### Daily Commands
 
 ```bash
-# Validate SDLC 4.9 compliance (10 stages + 6 pillars)
+# Validate SDLC 5.0 compliance (10 stages + 6 pillars)
 python3 scripts/compliance/sdlc_validator.py .
 
 # Validate Design Thinking (Pillar 0, 5 phases)

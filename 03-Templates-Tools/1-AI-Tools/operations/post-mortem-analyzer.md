@@ -1,5 +1,5 @@
 # 🔍 AI Post-Mortem Analyzer - Stage 06 (OPERATE)
-**Version**: 4.9.0 | **Date**: November 13, 2025 | **Time Savings**: 90%  
+**Version**: 5.0.0 | **Date**: November 13, 2025 | **Time Savings**: 90%  
 
 ## AI Prompt
 Generate blameless post-mortem from incident data:

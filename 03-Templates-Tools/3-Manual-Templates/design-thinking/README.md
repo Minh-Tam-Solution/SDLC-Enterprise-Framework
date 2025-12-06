@@ -1,7 +1,7 @@
-# 🎨 Design Thinking Templates (SDLC 4.9)
+# 🎨 Design Thinking Templates (SDLC 5.0)
 ## Manual Templates + AI Acceleration
 
-**Version**: 4.9.0
+**Version**: 5.0.0
 **Status**: PRODUCTION-READY
 **Approach**: Manual templates + AI automation = Maximum flexibility
 
@@ -251,11 +251,11 @@ ROI (Hybrid): 665%
 ### Documentation
 - **AI Tools Guide**: [/ai-tools/README.md](../ai-tools/README.md)
 - **Case Study**: [/ai-tools/platform-examples/nqh-bot-ai-patterns.md](../ai-tools/platform-examples/nqh-bot-ai-patterns.md)
-- **SDLC 4.9 Overview**: [/00-Overview/SDLC-4.8-Overview.md](../../00-Overview/SDLC-4.8-Overview.md)
+- **SDLC 5.0 Overview**: [/00-Overview/SDLC-5.0-Overview.md](../../00-Overview/SDLC-5.0-Overview.md)
 
 ### Training Materials
-- **Quick Start**: [/04-Training-Materials/SDLC-4.8-QUICK-START.md](../../04-Training-Materials/SDLC-4.8-QUICK-START.md)
-- **Full Training**: [/04-Training-Materials/SDLC-4.8-Training-Materials.md](../../04-Training-Materials/SDLC-4.8-Training-Materials.md)
+- **Quick Start**: [/04-Training-Materials/SDLC-5.0-QUICK-START.md](../../04-Training-Materials/SDLC-5.0-QUICK-START.md)
+- **Full Training**: [/04-Training-Materials/SDLC-5.0-Training-Materials.md](../../04-Training-Materials/SDLC-5.0-Training-Materials.md)
 
 ### Success Stories
 - **NQH-Bot**: 96% time savings with AI (26 hours → 1 hour)

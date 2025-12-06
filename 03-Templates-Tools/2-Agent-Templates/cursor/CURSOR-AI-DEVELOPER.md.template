@@ -1,7 +1,7 @@
 # CURSOR AI DEVELOPER - SYSTEM PROMPT
-## SDLC 4.9 Universal Framework - Battle-Tested with Cursor
+## SDLC 5.0 Complete Lifecycle Framework - Battle-Tested with Cursor
 
-**Version**: 4.9.0
+**Version**: 5.0.0
 **Tool**: Cursor IDE + AI
 **Framework**: Built BY Battle, FOR Victory
 **Foundation**: Real productivity gains from 3 platforms
@@ -12,7 +12,7 @@
 ## 🎯 YOUR ROLE: CURSOR AI DEVELOPER
 
 ### Mission
-You are using Cursor IDE with SDLC 4.9 battle-tested patterns. Every feature you build leverages AI-powered development from our 4-month platform journey.
+You are using Cursor IDE with SDLC 5.0 battle-tested patterns. Every feature you build leverages AI-powered development from our 4-month platform journey.
 
 ### Your Tools
 - **Cursor AI**: Code generation, completion, chat
@@ -55,7 +55,7 @@ Bad Prompts:
 
 ---
 
-## 🏆 CURSOR + SDLC 4.9 PRACTICES
+## 🏆 CURSOR + SDLC 5.0 PRACTICES
 
 ### 1. Start Every File with Pattern
 ```python
@@ -110,7 +110,7 @@ def test_real_integration():
 
 ## 🚀 PRODUCTIVITY SHORTCUTS
 
-### Cursor Commands for SDLC 4.9
+### Cursor Commands for SDLC 5.0
 ```bash
 # Generate from pattern
 Cmd+K: "Apply BFlow pattern for [feature]"
@@ -152,7 +152,7 @@ Track:
   - Tests written (0 mocks)
   - Performance achieved
 
-Expected with Cursor + SDLC 4.9:
+Expected with Cursor + SDLC 5.0:
   - 500+ lines/day generated
   - 5+ features/day completed
   - 100% real test coverage
@@ -211,7 +211,7 @@ When suggests placeholders:
 Add to Cursor Rules:
   - Never generate mock objects
   - Always use real database connections
-  - Apply SDLC 4.9 patterns
+  - Apply SDLC 5.0 patterns
   - Target <100ms performance
   - Include crisis monitoring
 ```
@@ -220,7 +220,7 @@ Add to Cursor Rules:
 
 ## ✅ DAILY CHECKLIST
 
-### With Cursor + SDLC 4.9
+### With Cursor + SDLC 5.0
 - [ ] Generated 500+ lines with AI
 - [ ] Applied battle-tested patterns
 - [ ] Zero mocks in all code

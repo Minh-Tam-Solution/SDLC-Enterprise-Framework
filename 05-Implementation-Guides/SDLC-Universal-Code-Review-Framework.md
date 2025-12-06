@@ -1,9 +1,11 @@
 # SDLC Universal Code Review Framework
 
-**Version**: 4.9.0
-**Last Updated**: November 13, 2025
-**Status**: Production Ready
-**Audience**: Engineering Teams (All Sizes)
+**Version**: 5.0.0
+**Last Updated**: December 6, 2025
+**Status**: PRODUCTION READY
+**Stage**: 03 (BUILD) - Code Review Excellence
+**Audience**: Engineering Teams (All Tiers - LITE to ENTERPRISE)
+**ROI**: 2,033% (Tier 2) to 14,340% (Tier 3) validated
 
 ---
 
@@ -12,6 +14,29 @@
 This framework provides **comprehensive code review guidance for ALL team contexts** - from solo developers to enterprise organizations. It documents three equally valid approaches (Tiers 1-3) without bias, enabling teams to choose based on their specific context, budget, and scale.
 
 **Universal Framework Principle**: We document ALL options objectively. Your choice depends on YOUR context, not our preference.
+
+### SDLC 5.0.0 Integration
+
+**Stage Mapping**: Code Review is a core component of **Stage 03 (BUILD)**
+
+```
+Stage 03: BUILD (Development)
+├── Code Generation (AI-assisted)
+├── Code Review (This Framework) ← YOU ARE HERE
+│   ├── Tier 1: Free/Manual
+│   ├── Tier 2: Subscription-Based AI
+│   └── Tier 3: CodeRabbit Professional
+└── Quality Gates (Pre-merge validation)
+```
+
+**4-Tier Classification Integration**:
+
+| Tier | Team Size | Recommended Code Review | Budget |
+|------|-----------|-------------------------|--------|
+| **LITE** | 1-2 | Tier 1 (Free/Manual) | $0/month |
+| **STANDARD** | 3-10 | Tier 2 (Subscription) | $50-100/dev/month |
+| **PROFESSIONAL** | 10-50 | Tier 2 or Tier 3 | $100-150/dev/month |
+| **ENTERPRISE** | 50+ | Tier 3 (CodeRabbit) | $12-15/seat/month |
 
 ---
 
@@ -23,10 +48,11 @@ This framework provides **comprehensive code review guidance for ALL team contex
 ✅ **Tier 2: Subscription-Based** - AI-powered review via subscriptions (5-20 developers)
 ✅ **Tier 3: CodeRabbit Professional** - Automated enterprise-grade review (15+ developers, 50+ PRs/month)
 
-### Who Should Use Which Tier
+### Who Should Use Which Tier (5.0.0 Classification)
 
 ```yaml
 Tier 1 (Free/Manual):
+  SDLC 5.0 Tier: LITE
   Team Size: 1-5 developers
   Budget: $0/month
   PR Volume: <20 PRs/month
@@ -35,6 +61,7 @@ Tier 1 (Free/Manual):
   Trade-off: Manual effort, slower reviews
 
 Tier 2 (Subscription-Based):
+  SDLC 5.0 Tier: STANDARD to PROFESSIONAL
   Team Size: 5-20 developers
   Budget: $50-100/dev/month (already paying for AI tools)
   PR Volume: 20-100 PRs/month
@@ -43,6 +70,7 @@ Tier 2 (Subscription-Based):
   Trade-off: Requires subscription management
 
 Tier 3 (CodeRabbit Professional):
+  SDLC 5.0 Tier: PROFESSIONAL to ENTERPRISE
   Team Size: 15-100+ developers
   Budget: $12-15/seat/month dedicated tool
   PR Volume: 100-1000+ PRs/month
@@ -55,7 +83,7 @@ Tier 3 (CodeRabbit Professional):
 
 ## 🏗️ Three-Tier Architecture
 
-### Tier 1: Free/Manual Code Review (Bootstrapped)
+### Tier 1: Free/Manual Code Review (LITE Tier)
 
 **Philosophy**: Maximize quality with zero budget through discipline and tooling.
 
@@ -65,7 +93,7 @@ Tier 3 (CodeRabbit Professional):
 ```yaml
 Linting:
   - ESLint (JavaScript/TypeScript)
-  - Pylint/Flake8 (Python)
+  - ruff (Python - faster than Pylint)
   - RuboCop (Ruby)
   - golangci-lint (Go)
 
@@ -92,7 +120,7 @@ Git Hooks:
   - lint-staged
 ```
 
-**Setup Example** (Python project):
+**Setup Example** (Python project - SDLC 5.0.0):
 ```yaml
 # .pre-commit-config.yaml
 repos:
@@ -110,11 +138,11 @@ repos:
       - id: black
         language_version: python3.11
 
-  - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
     hooks:
-      - id: flake8
-        args: [--max-line-length=100]
+      - id: ruff
+        args: [--fix]
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.7.0
@@ -129,7 +157,7 @@ repos:
 
 #### **Layer 2: Structured Peer Review**
 
-**GitHub PR Template** (Free):
+**GitHub PR Template** (SDLC 5.0.0 Standard):
 ```markdown
 ## Change Type
 - [ ] Bug fix (non-breaking change fixing an issue)
@@ -137,21 +165,26 @@ repos:
 - [ ] Breaking change (fix or feature causing existing functionality to break)
 - [ ] Documentation update
 
-## Description
-Brief description of what changed and why.
+## SDLC 5.0.0 Compliance
+
+### Stage 00-01 (Design Thinking)
+- [ ] User need documented (if user-facing change)
+- [ ] Problem statement clear
+
+### Stage 03 (BUILD)
+- [ ] Code follows project standards
+- [ ] Tests added/updated (80%+ coverage)
+- [ ] No security vulnerabilities introduced
+- [ ] Performance targets met (<50ms)
+
+### Stage 04 (TEST)
+- [ ] Unit tests pass
+- [ ] Integration tests pass
+- [ ] Manual testing completed
 
 ## Testing Performed
-- [ ] Unit tests added/updated (80%+ coverage)
-- [ ] Integration tests passed
-- [ ] Manual testing completed
-- [ ] Performance benchmarks validated
-
-## SDLC 4.8 Compliance
-- [ ] Design Thinking principles applied (if user-facing)
-- [ ] Code follows project standards
-- [ ] Documentation updated
-- [ ] No security vulnerabilities introduced
-- [ ] Performance targets met
+Coverage Before: ___%
+Coverage After: ___%
 
 ## Reviewer Checklist
 - [ ] Code is readable and maintainable
@@ -210,7 +243,7 @@ Metrics to Track:
   - Common issues found
   - Test coverage trends
   - Security vulnerabilities discovered
-  - Code quality scores
+  - Code quality scores (DORA: Change Failure Rate)
 
 Actions:
   - Update pre-commit hooks based on recurring issues
@@ -223,33 +256,36 @@ Actions:
 
 ---
 
-### **Tier 1 Complete Setup** (30 min):
+### **Tier 1 Complete ROI Analysis**:
 
-```bash
-# 1. Install pre-commit
-pip install pre-commit
+```yaml
+Team Size: 5 developers (LITE Tier)
+PR Volume: 20 PRs/month
 
-# 2. Create config file (see example above)
-nano .pre-commit-config.yaml
+Monthly Costs: $0
+  Tools: All free (pre-commit, ESLint, GitHub)
+  Infrastructure: $0 (GitHub already used)
 
-# 3. Install hooks
-pre-commit install
+One-Time Setup Costs:
+  Setup Time: 2 hours × $100/hr = $200
+  Team Training: 1 hour × 5 devs × $100/hr = $500
+  Total: $700
 
-# 4. Create PR template
-mkdir -p .github
-nano .github/PULL_REQUEST_TEMPLATE.md
+Annual Value Generated:
+  Bug Prevention: 10 bugs/month × $500/bug × 12 = $60,000
+  Code Quality: $1,500/month × 12 = $18,000
+  Security Prevention: $5,000/month × 12 = $60,000
+  Total: $138,000
 
-# 5. Configure CI/CD (GitHub Actions example)
-mkdir -p .github/workflows
-nano .github/workflows/ci.yml
+ROI: Infinite (no ongoing costs!)
+Net Benefit Year 1: $137,300
 ```
 
-**Total Investment**: $0/month + 30 min setup + 15-30 min per PR review
-**ROI**: Infinite (no cost) + quality assurance + team learning
+**Detailed Guide**: [SDLC-Manual-Code-Review-Playbook.md](./SDLC-Manual-Code-Review-Playbook.md)
 
 ---
 
-### Tier 2: Subscription-Based AI Code Review
+### Tier 2: Subscription-Based AI Code Review (STANDARD-PROFESSIONAL)
 
 **Philosophy**: Leverage existing AI subscriptions (zero new API costs) for intelligent, fast code review.
 
@@ -260,24 +296,24 @@ nano .github/workflows/ci.yml
 **Tool**: Cursor Pro ($20/dev/month)
 **Purpose**: Catch issues BEFORE commit via real-time AI analysis.
 
-**Setup** (.cursorrules file):
+**Setup** (.cursorrules file - SDLC 5.0.0):
 ```markdown
-# SDLC 4.8 Code Review Rules
+# SDLC 5.0.0 Code Review Rules
 
 ## Project Context
 - Framework: [Django/React/FastAPI]
-- Standards: SDLC 4.8 compliance required
+- Standards: SDLC 5.0.0 compliance required
 - Coverage Target: 80%+ test coverage
-- Performance: <100ms API response, <50ms DB queries
+- Performance: <50ms API response, <100ms p95
 
 ## Code Review Criteria
 
-### Design Thinking Alignment
+### Design Thinking Alignment (Stage 00-01)
 - User impact clearly documented
 - Problem statement validated
 - Solution justifies complexity
 
-### Code Quality
+### Code Quality (Stage 03)
 - Single Responsibility Principle
 - DRY (Don't Repeat Yourself)
 - SOLID principles applied
@@ -285,31 +321,25 @@ nano .github/workflows/ci.yml
 - Max function length: 50 lines
 - Max file length: 300 lines
 
-### Security
+### Security (OWASP ASVS)
 - No SQL injection vulnerabilities
 - No XSS vulnerabilities
 - No secrets in code
 - Input validation comprehensive
 - Authentication/authorization correct
 
-### Performance
+### Performance (DORA Metrics Target)
 - Database queries optimized (N+1 avoided)
 - Caching strategy appropriate
 - Async/await used correctly
 - Resource cleanup implemented
 
-### Testing
+### Testing (Stage 04)
 - Unit tests for business logic
 - Integration tests for workflows
 - Edge cases covered
 - Mocks used appropriately
 - Test names descriptive
-
-## Vietnamese Market Specifics
-- VAT calculation: 10% standard (validate)
-- Date format: DD/MM/YYYY
-- Currency: VND (no decimals)
-- BHXH rates: 17.5% employer, 8% employee
 
 ## Before Commit Checklist
 - [ ] Code follows project standards
@@ -317,7 +347,6 @@ nano .github/workflows/ci.yml
 - [ ] No security vulnerabilities
 - [ ] Performance benchmarks met
 - [ ] Documentation updated
-- [ ] Vietnamese compliance validated (if applicable)
 ```
 
 **Workflow**:
@@ -336,9 +365,9 @@ nano .github/workflows/ci.yml
 **Tool**: Claude Max ($20/month per reviewer)
 **Purpose**: Comprehensive PR analysis in 3-5 minutes.
 
-**Review Prompt Template**:
+**Review Prompt Template** (SDLC 5.0.0):
 ```markdown
-You are an expert code reviewer for a team using SDLC 4.8 framework. Review this pull request comprehensively.
+You are an expert code reviewer for a team using SDLC 5.0.0 framework. Review this pull request comprehensively.
 
 ## PR Context
 **Title**: [PR Title]
@@ -346,44 +375,39 @@ You are an expert code reviewer for a team using SDLC 4.8 framework. Review this
 **Files Changed**: [List files]
 **Lines Changed**: +XXX -YYY
 
-## Review Against SDLC 4.8 Standards
+## Review Against SDLC 5.0.0 Standards
 
-### 1. Design Thinking Alignment (if user-facing change)
+### 1. Design Thinking Alignment (Stage 00-01)
 - Does this solve the right problem?
 - Is user impact clearly articulated?
 - Are there simpler alternatives?
 
-### 2. Code Quality
+### 2. Code Quality (Stage 03)
 - Readability and maintainability
 - Adherence to SOLID principles
 - Code smells detected
 - Naming conventions followed
 - Function/file size appropriate
 
-### 3. Security
+### 3. Security (OWASP ASVS L2)
 - SQL injection vulnerabilities?
 - XSS vulnerabilities?
 - Authentication/authorization correct?
 - Secrets exposed?
 - Input validation comprehensive?
 
-### 4. Performance
+### 4. Performance (DORA Targets)
 - Database query optimization (N+1?)
 - Caching strategy appropriate?
 - Async/await used correctly?
 - Resource cleanup implemented?
 - Expected performance impact?
 
-### 5. Testing
+### 5. Testing (Stage 04)
 - Test coverage adequate (80%+ target)?
 - Edge cases covered?
 - Integration tests appropriate?
 - Test quality and clarity?
-
-### 6. Vietnamese Market Compliance (if applicable)
-- VAT calculations correct (10%)?
-- Date/number formatting correct?
-- BHXH rates accurate (17.5%/8%)?
 
 ## Provide Review Feedback
 
@@ -442,9 +466,9 @@ Analyze our team's PR reviews from the past month and identify:
    - Should we add pre-commit hooks?
    - Should we create reusable patterns?
 
-4. **Success Patterns**
-   - What code quality improvements have we seen?
-   - Which practices are working well?
+4. **DORA Metrics Impact**
+   - Change failure rate trend
+   - Lead time for changes
 
 5. **Action Items**
    - Concrete steps to reduce recurring issues
@@ -461,7 +485,8 @@ Context: [Paste summaries of 20-30 recent PR reviews]
 ### **Tier 2 Complete ROI Analysis**:
 
 ```yaml
-Team Size: 15 developers
+Team Size: 15 developers (STANDARD-PROFESSIONAL Tier)
+PR Volume: 80 PRs/month
 
 Monthly Costs:
   Cursor Pro: 15 × $20 = $300
@@ -488,18 +513,19 @@ Additional Benefits:
   - Higher code quality (fewer bugs in production)
   - Better team learning and knowledge sharing
   - Consistent review standards
+  - DORA metrics improvement
 ```
 
-**Detailed Guide**: See [SDLC-4.8-Subscription-Powered-Code-Review-Guide.md](./SDLC-4.8-Subscription-Powered-Code-Review-Guide.md) for complete implementation.
+**Detailed Guide**: [SDLC-Subscription-Powered-Code-Review-Guide.md](./SDLC-Subscription-Powered-Code-Review-Guide.md)
 
 ---
 
-### Tier 3: CodeRabbit Professional
+### Tier 3: CodeRabbit Professional (ENTERPRISE)
 
 **Philosophy**: Fully automated, enterprise-grade code review at scale.
 
 **Target Audience**:
-- Teams with 15-100+ developers
+- Teams with 15-100+ developers (PROFESSIONAL-ENTERPRISE Tier)
 - Organizations with 50-1000+ PRs/month
 - Multi-repository, multi-team environments
 - Enterprise quality and compliance requirements
@@ -513,35 +539,26 @@ CodeRabbit is an AI-powered code review platform that automatically reviews ever
 Automated Review:
   - Instant PR analysis (<2 min per PR)
   - Line-by-line intelligent comments
-  - Security vulnerability detection
+  - Security vulnerability detection (OWASP)
   - Performance optimization suggestions
   - Test coverage analysis
 
 Multi-Language Support:
-  - JavaScript/TypeScript
-  - Python
-  - Go
-  - Java
-  - C#/C++
-  - Rust
-  - Ruby
-  - PHP
+  - JavaScript/TypeScript, Python, Go
+  - Java, C#/C++, Rust, Ruby, PHP
 
 Integration:
-  - GitHub (native)
-  - GitLab
-  - Bitbucket
-  - Azure DevOps
+  - GitHub (native), GitLab, Bitbucket, Azure DevOps
 
 Customization:
-  - Custom review rules (like .cursorrules but enterprise-grade)
+  - Custom review rules (SDLC 5.0.0 standards)
   - Team-specific standards
   - Framework-specific patterns
   - Security policy enforcement
 
 Enterprise Features:
   - SSO/SAML integration
-  - Audit logs
+  - Audit logs (Stage 09: GOVERN compliance)
   - Compliance reporting
   - Multi-team management
   - Priority support
@@ -551,125 +568,9 @@ Enterprise Features:
 
 #### **Layer 1: Automated PR Analysis**
 
-**How It Works**:
-1. Developer creates PR
-2. CodeRabbit automatically triggered
-3. AI analyzes entire changeset (2-5 min)
-4. Posts detailed review comments on GitHub
-5. Responds to developer questions in real-time
-6. Re-reviews after changes pushed
-
-**Example Review Output**:
-```markdown
-## CodeRabbit Review - PR #123
-
-**Overall Assessment**: ⚠️ Needs Changes
-**Risk Level**: Medium
-**Estimated Review Time**: 12 minutes
-
-### Critical Issues (2)
-
-📍 **src/services/payment.py:45**
-```python
-# Current code
-total = subtotal + tax  # Potential precision issue
-```
-
-**Issue**: Using float arithmetic for currency calculations can cause precision errors.
-
-**Recommendation**:
-```python
-from decimal import Decimal
-total = Decimal(str(subtotal)) + Decimal(str(tax))
-```
-
-**Why**: Vietnamese VND calculations require exact precision. Float errors can compound in financial reports.
-
----
-
-📍 **src/api/orders.py:78**
-```python
-# Current code
-order = Order.objects.get(id=order_id)  # May raise exception
-```
-
-**Issue**: Unhandled exception if order doesn't exist.
-
-**Recommendation**:
-```python
-from django.shortcuts import get_object_or_404
-order = get_object_or_404(Order, id=order_id)
-```
-
-**Why**: Proper HTTP 404 response for missing resources.
-
----
-
-### Security Concerns (1)
-
-🔒 **src/api/auth.py:23**
-```python
-# Current code
-user = User.objects.filter(email=email, password=password).first()
-```
-
-**Issue**: Storing plain-text passwords is a critical security vulnerability.
-
-**Recommendation**: Use Django's built-in password hashing (`make_password`, `check_password`).
-
----
-
-### Performance Suggestions (3)
-
-⚡ **src/api/products.py:56**
-```python
-# Current code (N+1 query problem)
-for product in products:
-    category = product.category  # Database hit per product
-```
-
-**Recommendation**:
-```python
-products = Product.objects.select_related('category').all()
-```
-
-**Impact**: Reduces 100+ queries to 2 queries. Expected 80% faster response time.
-
----
-
-### Test Coverage
-
-📊 **Coverage**: 65% (Target: 80%)
-
-**Missing Tests**:
-- `services/payment.py`: Lines 45-67 (tax calculation)
-- `api/orders.py`: Lines 78-92 (order creation)
-
-**Recommendation**: Add unit tests for business-critical payment logic.
-
----
-
-### Code Quality
-
-✅ **Strengths**:
-- Clear variable naming
-- Good code structure
-- Follows project conventions
-
-⚠️ **Improvements**:
-- Function `process_order()` is 78 lines (target: <50)
-- Consider extracting `calculate_totals()` helper function
-```
-
-**Value**: Instant, comprehensive review for every PR (zero human effort until validation).
-
----
-
-#### **Layer 2: Custom Standards Enforcement**
-
-**Configuration Example** (CodeRabbit YAML):
+**Configuration** (SDLC 5.0.0 - .coderabbit.yaml):
 ```yaml
-# .coderabbit.yaml
+# .coderabbit.yaml - SDLC 5.0.0 Configuration
 
 # Review Settings
 reviews:
@@ -681,35 +582,26 @@ reviews:
   # Review Depth
   thoroughness: high
 
-  # Focus Areas
+  # Focus Areas (SDLC 5.0.0 aligned)
   focus:
-    - security
-    - performance
-    - testing
+    - security      # OWASP ASVS compliance
+    - performance   # DORA metrics targets
+    - testing       # Stage 04 compliance
     - maintainability
 
-# Custom Rules (SDLC 4.8 Standards)
+# Custom Rules (SDLC 5.0.0 Standards)
 rules:
-  # Design Thinking
+  # Design Thinking (Stage 00-01)
   - pattern: "TODO: validate user need"
-    message: "Design Thinking: Ensure user problem statement is documented in PR description"
+    message: "SDLC 5.0.0: Ensure user problem statement is documented"
     severity: warning
 
-  # Vietnamese Compliance
-  - pattern: "vat.*=.*0\\.1[^0]"
-    message: "Vietnamese VAT should be exactly 10% (0.10). Verify calculation."
-    severity: error
-
-  - pattern: "bhxh.*employer"
-    message: "BHXH employer rate must be 17.5%. Verify accuracy."
-    severity: error
-
-  # Performance
+  # Performance (DORA targets)
   - pattern: "for .* in .*:.*\\.objects\\.get"
     message: "N+1 query detected. Use select_related() or prefetch_related()."
     severity: warning
 
-  # Security
+  # Security (OWASP)
   - pattern: "eval\\(|exec\\("
     message: "Security: eval() and exec() are dangerous. Find safer alternative."
     severity: error
@@ -757,13 +649,13 @@ team:
     - "frontend/**/*.tsx"
 ```
 
-**Value**: Consistent, automated enforcement of team standards across all PRs.
+**Value**: Instant, comprehensive review for every PR (zero human effort until validation).
 
 ---
 
-#### **Layer 3: Analytics & Continuous Improvement**
+#### **Layer 2: Analytics & Continuous Improvement**
 
-**CodeRabbit Dashboard Metrics**:
+**CodeRabbit Dashboard Metrics** (DORA aligned):
 ```yaml
 Team Performance:
   - Average PR review time: 8 minutes (down from 45 min)
@@ -777,23 +669,17 @@ Code Quality Trends:
   - Security issues: 8/week → 1/week
   - Average function length: 67 lines → 42 lines
 
+DORA Metrics Impact:
+  - Lead time for changes: ↓40%
+  - Change failure rate: ↓60%
+  - Deployment frequency: ↑200%
+  - MTTR: ↓50%
+
 Developer Insights:
   - Top contributors: [ranked by quality, not just volume]
   - Common mistakes per developer (for mentorship)
   - Learning progress over time
-
-Process Efficiency:
-  - Review bottlenecks identified
-  - Optimal PR sizes (for fastest review)
-  - Best times to submit PRs (for fastest merge)
 ```
-
-**Monthly Improvement Workflow**:
-1. Review CodeRabbit analytics dashboard
-2. Identify top 5 recurring issues
-3. Update `.coderabbit.yaml` rules to catch them automatically
-4. Schedule team training on new patterns
-5. Track reduction in those issues next month
 
 **Value**: Data-driven continuous improvement at scale.
 
@@ -802,7 +688,7 @@ Process Efficiency:
 ### **Tier 3 Complete ROI Analysis**:
 
 ```yaml
-Team Size: 50 developers
+Team Size: 50 developers (ENTERPRISE Tier)
 PR Volume: 200 PRs/month
 
 Monthly Costs:
@@ -838,18 +724,19 @@ Additional Benefits:
   - Scalable to 100+ developers with no linear cost increase
   - 24/7 review availability (no waiting for human reviewers)
   - Consistent quality across all teams and repositories
-  - Audit trail for compliance
+  - Audit trail for compliance (Stage 09: GOVERN)
   - Onboarding acceleration (new devs get instant feedback)
 ```
 
-**Detailed Guide**: See [SDLC-4.8-CodeRabbit-Integration-Guide.md](./SDLC-4.8-CodeRabbit-Integration-Guide.md) (coming next) for complete setup and best practices.
+**Detailed Guide**: [SDLC-CodeRabbit-Integration-Guide.md](./SDLC-CodeRabbit-Integration-Guide.md)
 
 ---
 
-## 📊 Tier Comparison Matrix
+## 📊 Tier Comparison Matrix (SDLC 5.0.0)
 
 | Criteria | Tier 1: Free/Manual | Tier 2: Subscription | Tier 3: CodeRabbit |
 |----------|---------------------|----------------------|--------------------|
+| **SDLC 5.0 Tier** | LITE | STANDARD-PROFESSIONAL | PROFESSIONAL-ENTERPRISE |
 | **Team Size** | 1-5 devs | 5-20 devs | 15-100+ devs |
 | **Monthly Cost** | $0 | $50-100/dev | $12-15/seat |
 | **Setup Time** | 30 min | 2 hours | 4-8 hours |
@@ -858,8 +745,7 @@ Additional Benefits:
 | **Human Effort** | High (30 min/PR) | Low (5 min validation) | Minimal (spot check) |
 | **Consistency** | Variable (depends on reviewer) | High (AI + human) | Very High (AI rules) |
 | **Scalability** | Poor (linear effort increase) | Good (AI scales well) | Excellent (no limit) |
-| **Learning Curve** | Low (familiar tools) | Medium (new workflows) | Medium-High (config) |
-| **Customization** | High (full control) | Medium (rules + prompts) | Very High (YAML config) |
+| **DORA Impact** | Moderate | High | Very High |
 | **ROI** | Infinite (no cost) | 2,033% | 14,340% |
 | **Best For** | Bootstrapped startups | Growing product teams | Scale-ups, enterprises |
 
@@ -869,7 +755,7 @@ Additional Benefits:
 
 ### From Tier 1 → Tier 2
 
-**When to Migrate**:
+**When to Migrate** (LITE → STANDARD):
 - Team grows beyond 5 developers
 - PR volume exceeds 20/month
 - Review bottlenecks slow down delivery
@@ -902,11 +788,11 @@ Additional Benefits:
 
 ### From Tier 2 → Tier 3
 
-**When to Migrate**:
+**When to Migrate** (STANDARD → PROFESSIONAL/ENTERPRISE):
 - Team grows beyond 15 developers
 - PR volume exceeds 100/month
 - Multi-team or multi-repository environment
-- Need compliance audit trails
+- Need compliance audit trails (Stage 09: GOVERN)
 - Human review still bottleneck despite AI assistance
 
 **Migration Steps** (8 hours):
@@ -939,96 +825,29 @@ Additional Benefits:
 
 ---
 
-### From Tier 3 → Tier 2 (Downgrade Scenario)
+## 🎯 Decision Framework (SDLC 5.0.0)
 
-**When to Downgrade**:
-- Team shrinks below 15 developers
-- PR volume drops below 50/month
-- Budget constraints require cost reduction
-- CodeRabbit overkill for current needs
-
-**Migration Steps** (2 hours):
-1. Export CodeRabbit configuration
-2. Convert `.coderabbit.yaml` rules to .cursorrules (Cursor) and review templates (Claude)
-3. Train team on manual AI-assisted workflow
-4. Cancel CodeRabbit subscription (retain access for 30 days)
-
-**Expected Impact**: +20 min per PR review time, but significant cost savings.
-
----
-
-## 🎯 Decision Framework
-
-### Step 1: Assess Your Context
+### Step 1: Determine Your SDLC 5.0 Tier
 
 ```yaml
-Questions to Answer:
+LITE (1-2 people, <$50K budget):
+  → Code Review: Tier 1 (Free/Manual)
+  → Rationale: Zero cost, sufficient for small team
 
-1. Team Size:
-   - How many active developers?
-   - Expected growth in next 6 months?
+STANDARD (3-10 people, $50-200K budget):
+  → Code Review: Tier 2 (Subscription)
+  → Rationale: AI assistance, already paying for tools
 
-2. PR Volume:
-   - PRs per week currently?
-   - Expected growth?
+PROFESSIONAL (10-50 people, $200K-1M budget):
+  → Code Review: Tier 2 or Tier 3
+  → Decision Factor: PR volume (>100/month → Tier 3)
 
-3. Budget:
-   - Current tool budget?
-   - Willingness to invest in code review?
-
-4. Current Pain Points:
-   - Review bottlenecks?
-   - Quality issues in production?
-   - Inconsistent review standards?
-
-5. Organization Maturity:
-   - Startup/scale-up/enterprise?
-   - Compliance requirements?
-   - Multi-team coordination needed?
+ENTERPRISE (50+ people, $1M+ budget):
+  → Code Review: Tier 3 (CodeRabbit)
+  → Rationale: Scale, compliance, audit trails
 ```
 
----
-
-### Step 2: Calculate ROI for Each Tier
-
-Use this formula:
-
-```
-Monthly Review Hours = PRs/month × Avg Review Time
-Monthly Cost = (Review Hours × Developer Hourly Rate) + Tool Costs
-
-Tier 1 ROI = (Monthly Cost without tools) / $0 = Infinite
-Tier 2 ROI = (Time Saved × $100/hr - Subscription Cost) / Subscription Cost
-Tier 3 ROI = (Time Saved × $100/hr + Bugs Prevented - CodeRabbit Cost) / CodeRabbit Cost
-```
-
-**Example** (15 developers, 80 PRs/month):
-
-```yaml
-Tier 1:
-  Review Time: 80 PRs × 30 min = 40 hours/month
-  Cost: $0
-  Effort: 40 hours of senior dev time
-
-Tier 2:
-  Review Time: 80 PRs × 5 min = 6.7 hours/month
-  Cost: 15 devs × $50 = $750/month
-  Time Saved: 33.3 hours × $100 = $3,330
-  ROI: ($3,330 - $750) / $750 = 344%
-
-Tier 3:
-  Review Time: 80 PRs × 2 min = 2.7 hours/month (validation only)
-  Cost: 15 devs × $15 = $225/month
-  Time Saved: 37.3 hours × $100 = $3,730
-  Bugs Prevented: ~15/month × $500 = $7,500
-  ROI: ($3,730 + $7,500 - $225) / $225 = 4,891%
-```
-
-In this example, **Tier 3 has highest absolute ROI** despite higher cost.
-
----
-
-### Step 3: Make Decision
+### Step 2: Validate with Decision Matrix
 
 ```yaml
 Choose Tier 1 if:
@@ -1036,21 +855,22 @@ Choose Tier 1 if:
   ✅ Budget = $0
   ✅ Willing to invest manual effort
   ✅ Strong review discipline exists
+  ✅ SDLC 5.0 Tier: LITE
 
 Choose Tier 2 if:
   ✅ Team 5-20 developers
   ✅ Already have AI tool subscriptions
   ✅ Want high ROI with minimal new costs
   ✅ Need fast implementation (hours, not days)
-  ✅ MTS/NQH current choice
+  ✅ SDLC 5.0 Tier: STANDARD to PROFESSIONAL
 
 Choose Tier 3 if:
   ✅ Team ≥15 developers
   ✅ PR volume ≥50/month
   ✅ Budget available for dedicated tool
-  ✅ Need compliance/audit trails
+  ✅ Need compliance/audit trails (Stage 09)
   ✅ Multi-team environment
-  ✅ Want maximum automation
+  ✅ SDLC 5.0 Tier: PROFESSIONAL to ENTERPRISE
 ```
 
 ---
@@ -1058,38 +878,39 @@ Choose Tier 3 if:
 ## 📚 Implementation Resources
 
 ### For Tier 1 (Free/Manual):
-- **Guide**: [SDLC-4.8-Manual-Code-Review-Playbook.md](./SDLC-4.8-Manual-Code-Review-Playbook.md) (coming next)
-- **Templates**: [../06-Templates-Tools/Code-Review/](../06-Templates-Tools/Code-Review/)
+- **Guide**: [SDLC-Manual-Code-Review-Playbook.md](./SDLC-Manual-Code-Review-Playbook.md)
+- **Templates**: [../03-Templates-Tools/1-AI-Tools/code-review/](../03-Templates-Tools/1-AI-Tools/code-review/)
 - **Setup Time**: 30 minutes
 
 ### For Tier 2 (Subscription):
-- **Guide**: [SDLC-4.8-Subscription-Powered-Code-Review-Guide.md](./SDLC-4.8-Subscription-Powered-Code-Review-Guide.md) ✅ Complete
+- **Guide**: [SDLC-Subscription-Powered-Code-Review-Guide.md](./SDLC-Subscription-Powered-Code-Review-Guide.md)
 - **Templates**: Claude review prompts, .cursorrules examples
 - **Setup Time**: 2 hours
 
 ### For Tier 3 (CodeRabbit):
-- **Guide**: [SDLC-4.8-CodeRabbit-Integration-Guide.md](./SDLC-4.8-CodeRabbit-Integration-Guide.md) (coming next)
+- **Guide**: [SDLC-CodeRabbit-Integration-Guide.md](./SDLC-CodeRabbit-Integration-Guide.md)
 - **Official Docs**: https://docs.coderabbit.ai
 - **Setup Time**: 8 hours (including pilot)
 
 ---
 
-## ✅ Success Metrics
+## ✅ Success Metrics (SDLC 5.0.0 Aligned)
 
 Track these KPIs regardless of tier chosen:
 
 ```yaml
-Code Quality Metrics:
+Code Quality Metrics (Stage 03-04):
   - Bugs found in production (target: ↓50% year-over-year)
   - Test coverage (target: ≥80%)
   - Code review comments per PR (target: 3-5)
   - Security vulnerabilities detected (track trend)
 
-Process Efficiency:
+Process Efficiency (DORA Metrics):
   - Average PR review time (track per tier)
   - Time from PR creation to merge (target: <24 hours)
   - PR rework cycles (target: ≤1 cycle)
-  - Review bottlenecks (identify and eliminate)
+  - Lead time for changes (track improvement)
+  - Change failure rate (target: <15%)
 
 Team Health:
   - Developer satisfaction with review process (survey quarterly)
@@ -1108,33 +929,35 @@ Business Impact:
 
 **Universal Framework Principle Recap**:
 
-This framework provides **three equally valid approaches** to code review excellence:
+This framework provides **three equally valid approaches** to code review excellence, aligned with SDLC 5.0.0 4-Tier Classification:
 
-- **Tier 1** maximizes quality with zero budget (discipline + free tools)
-- **Tier 2** optimizes for ROI using existing AI subscriptions (2,033% ROI for MTS/NQH)
-- **Tier 3** scales to enterprise with full automation (14,340% ROI at scale)
+- **Tier 1** maximizes quality with zero budget (discipline + free tools) → **LITE Tier**
+- **Tier 2** optimizes for ROI using existing AI subscriptions (2,033% ROI) → **STANDARD-PROFESSIONAL Tier**
+- **Tier 3** scales to enterprise with full automation (14,340% ROI) → **PROFESSIONAL-ENTERPRISE Tier**
 
-**Your choice depends on YOUR context** - team size, budget, PR volume, and organizational maturity. There is no "best" tier universally, only the best tier **for your specific situation**.
-
----
-
-**Key Takeaway**: **Excellent code review is achievable at ANY budget**. Choose the tier that fits your context, implement it thoroughly, and continuously improve based on metrics.
+**Your choice depends on YOUR context** - team size, budget, PR volume, and organizational tier. There is no "best" tier universally, only the best tier **for your specific situation**.
 
 ---
 
-**Document Version**: 4.9.0
-**Last Updated**: November 13, 2025
-**Next Review**: December 7, 2025
+**Key Takeaway**: **Excellent code review is achievable at ANY budget**. Choose the tier that fits your SDLC 5.0 classification, implement it thoroughly, and continuously improve based on DORA metrics.
+
+---
+
+**Document Version**: 5.0.0
+**Last Updated**: December 6, 2025
+**Next Review**: January 6, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 
 ---
 
 **Related Documents**:
-- [SDLC-4.8-Core-Methodology.md](../02-Core-Methodology/SDLC-4.8-Core-Methodology.md)
-- [SDLC-4.8-Subscription-Powered-Code-Review-Guide.md](./SDLC-4.8-Subscription-Powered-Code-Review-Guide.md)
-- [SDLC-4.8-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-4.8-Design-Thinking-Principles.md)
+- [SDLC-Implementation-Guide.md](./SDLC-Implementation-Guide.md) - Complete implementation guide
+- [SDLC-Manual-Code-Review-Playbook.md](./SDLC-Manual-Code-Review-Playbook.md) - Tier 1 detailed guide
+- [SDLC-Subscription-Powered-Code-Review-Guide.md](./SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 detailed guide
+- [SDLC-CodeRabbit-Integration-Guide.md](./SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 detailed guide
 
 ---
 
-**🏆 SDLC 4.8 Universal Framework**
-*Excellence at Every Scale - From Bootstrapped to Enterprise*
+**🏆 SDLC 5.0.0 Universal Code Review Framework**
+*Excellence at Every Scale - From LITE to ENTERPRISE*
+*Stage 03: BUILD - Code Review Excellence*

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 =========================================================================
-SDLC 4.9.1 Solo Developer Quick Setup
+SDLC 5.0.0 Solo Developer Quick Setup
 Get to 10x productivity with Complete 10-Stage Lifecycle + AI in 2 days
 
-Version: 4.9.1
+Version: 5.0.1
 Date: November 29, 2025
 Status: ACTIVE - PRODUCTION READY
 Profile: Solo Developer (1 developer + AI)
@@ -12,7 +12,7 @@ Timeline: 2 days to 10x productivity
 Target: Individual developers building startups or side projects
 
 WHAT THIS SCRIPT DOES:
-1. Sets up SDLC 4.9.1 complete 10-stage framework for solo development
+1. Sets up SDLC 5.0.0 complete 10-stage framework for solo development
 2. Configures Design Thinking lightweight workflow
 3. Sets up Code Review Tier 1 (Manual checklist)
 4. Installs essential compliance validators (including file naming)
@@ -62,7 +62,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class SoloSetup:
-    """SDLC 4.9.1 setup for solo developers"""
+    """SDLC 5.0.0 setup for solo developers"""
 
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
@@ -84,7 +84,7 @@ class SoloSetup:
 
     def run(self):
         """Execute complete solo setup"""
-        logger.info("🚀 SDLC 4.9.1 SOLO DEVELOPER SETUP")
+        logger.info("🚀 SDLC 5.0.0 SOLO DEVELOPER SETUP")
         logger.info("=" * 60)
         logger.info("Profile: Solo Developer (1 dev + AI)")
         logger.info("Timeline: 2 days to 10x productivity")
@@ -96,7 +96,7 @@ class SoloSetup:
             # Step 1: Create directory structure
             self._create_directory_structure()
 
-            # Step 2: Install SDLC 4.8 validators
+            # Step 2: Install SDLC 5.0 validators
             self._install_validators()
 
             # Step 3: Setup Design Thinking lightweight workflow
@@ -122,8 +122,8 @@ class SoloSetup:
             sys.exit(1)
 
     def _create_directory_structure(self):
-        """Create SDLC 4.8 directory structure for solo projects"""
-        logger.info("📁 Step 1: Creating SDLC 4.8 Directory Structure")
+        """Create SDLC 5.0 directory structure for solo projects"""
+        logger.info("📁 Step 1: Creating SDLC 5.0 Directory Structure")
         logger.info("-" * 60)
 
         directories = [
@@ -146,8 +146,8 @@ class SoloSetup:
         logger.info("")
 
     def _install_validators(self):
-        """Install SDLC 4.8 compliance validators"""
-        logger.info("🔍 Step 2: Installing SDLC 4.8 Validators")
+        """Install SDLC 5.0 compliance validators"""
+        logger.info("🔍 Step 2: Installing SDLC 5.0 Validators")
         logger.info("-" * 60)
 
         validators = [
@@ -156,7 +156,7 @@ class SoloSetup:
             'sdlc_scanner.py'
         ]
 
-        logger.info("✅ SDLC 4.8 validators available:")
+        logger.info("✅ SDLC 5.0 validators available:")
         for validator in validators:
             logger.info(f"   • {validator}")
 
@@ -262,7 +262,7 @@ class SoloSetup:
     def _display_success_message(self):
         """Display success message with next steps"""
         logger.info("=" * 60)
-        logger.info("🎉 SDLC 4.8 SOLO SETUP COMPLETE!")
+        logger.info("🎉 SDLC 5.0 SOLO SETUP COMPLETE!")
         logger.info("=" * 60)
         logger.info("")
         logger.info("✅ What's Ready:")
@@ -271,7 +271,7 @@ class SoloSetup:
         logger.info("   • Code Review Tier 1 checklist (FREE)")
         logger.info("   • AI development environment")
         logger.info("   • Performance targets (<50ms)")
-        logger.info("   • SDLC 4.8 validators installed")
+        logger.info("   • SDLC 5.0 validators installed")
         logger.info("")
         logger.info("🚀 Next Steps (2-Day Timeline):")
         logger.info("")
@@ -301,7 +301,7 @@ class SoloSetup:
         logger.info("   • Upgrade to Tier 3 Code Review when budget allows")
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 4.8 Docs: /00-Overview/")
+        logger.info("   • SDLC 5.0 Docs: /00-Overview/")
         logger.info("   • AI Tools: /06-Templates-Tools/ai-tools/")
         logger.info("   • Case Studies: /07-Case-Studies/")
         logger.info("   • Support: taidt@mtsolution.com.vn")
@@ -459,11 +459,11 @@ Validate:
 """
 
     def _create_code_review_checklist(self) -> str:
-        return """# Code Review Checklist - SDLC 4.8 (Tier 1)
+        return """# Code Review Checklist - SDLC 5.0 (Tier 1)
 
 ## Before Commit - Check ALL Items
 
-### SDLC 4.8 Compliance
+### SDLC 5.0 Compliance
 - [ ] Zero Mock Policy: No mock/stub/fake/dummy code
 - [ ] Design Thinking: Feature has DT documentation
 - [ ] Performance: <50ms API response target
@@ -506,7 +506,7 @@ Validate:
 
 ## Run Before Commit
 ```bash
-# SDLC 4.8 validator
+# SDLC 5.0 validator
 python3 path/to/sdlc_4_8_validator.py .
 
 # Tests
@@ -529,7 +529,7 @@ Component: [Name]
 Location: [path]
 
 Requirements:
-✅ SDLC 4.8 compliant
+✅ SDLC 5.0 compliant
 ✅ English-only comments
 ✅ Test suite (80%+ coverage)
 ✅ Performance <50ms
@@ -542,7 +542,7 @@ Goal: [what trying to achieve]
 
 Generate actionable output for [Phase]""",
 
-            'code_review': """Review this code for SDLC 4.8:
+            'code_review': """Review this code for SDLC 5.0:
 [paste code]
 
 Check:
@@ -556,7 +556,7 @@ Check:
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        logger.info("SDLC 4.8 Solo Developer Setup")
+        logger.info("SDLC 5.0 Solo Developer Setup")
         logger.info("=" * 60)
         logger.info("")
         logger.info("Usage: python solo_setup_4_8.py <project_path>")
