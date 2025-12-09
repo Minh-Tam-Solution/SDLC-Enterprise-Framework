@@ -1,0 +1,297 @@
+# BriefingScript (BRS) Template
+# SASE Artifact for SE 3.0 SDLC Integration
+# Reference: arXiv:2509.06216v2 - Software Agentic Software Engineering
+#
+# Purpose: Human-crafted problem description and constraints for AI agents
+# Author: SE4H (Software Engineering for Humans - Agent Coach)
+# Consumer: SE4A (Software Engineering for Agents - Agent Executor)
+#
+# Version: 1.0.0
+# Framework: SDLC 5.1.0
+# Created: December 2025
+
+---
+# METADATA SECTION
+metadata:
+  artifact_type: "BriefingScript"
+  artifact_id: "BRS-YYYY-NNN"  # e.g., BRS-2026-001
+  version: "1.0.0"
+  created_date: "YYYY-MM-DD"
+  updated_date: "YYYY-MM-DD"
+  status: "DRAFT | REVIEW | APPROVED | ARCHIVED"
+
+  # Traceability
+  project_id: "PRJ-XXX"
+  sdlc_stage: "00-10"  # Which SDLC stage this BRS belongs to
+  gate_id: "G0.1 | G0.2 | G1 | G2 | G3 | G4"
+
+  # Ownership
+  author:
+    name: "PM/PO Name"
+    role: "SE4H"
+    email: "pm@company.com"
+  reviewers:
+    - name: "Tech Lead"
+      role: "SE4H"
+      approved: false
+    - name: "Architect"
+      role: "SE4H"
+      approved: false
+
+---
+# PROBLEM DEFINITION (MANDATORY)
+# SE4H articulates the problem clearly for SE4A to understand
+problem:
+  # One-line summary of what needs to be solved
+  title: "Brief title describing the problem"
+
+  # Detailed problem statement (2-5 sentences)
+  description: |
+    Describe the problem in detail. Include:
+    - Current situation (what's happening now)
+    - Pain points (why this is a problem)
+    - Impact (business/user consequences if not solved)
+
+  # Who is affected by this problem?
+  stakeholders:
+    - role: "End User"
+      impact: "HIGH | MEDIUM | LOW"
+      description: "How this affects them"
+    - role: "Development Team"
+      impact: "HIGH | MEDIUM | LOW"
+      description: "How this affects them"
+
+  # Evidence of the problem (links to data, screenshots, logs)
+  evidence:
+    - type: "User Feedback"
+      source: "Zendesk Ticket #12345"
+      description: "Users report slow loading"
+    - type: "Metrics"
+      source: "Grafana Dashboard"
+      description: "p95 latency > 500ms"
+
+---
+# SUCCESS CRITERIA (MANDATORY)
+# Clear, measurable outcomes that SE4A must achieve
+success_criteria:
+  # Functional requirements (what it must do)
+  functional:
+    - id: "F1"
+      description: "System must do X"
+      verification: "How to verify this is done"
+      priority: "MUST | SHOULD | COULD"
+    - id: "F2"
+      description: "System must do Y"
+      verification: "How to verify this is done"
+      priority: "MUST | SHOULD | COULD"
+
+  # Non-functional requirements (how well it must do it)
+  non_functional:
+    - id: "NF1"
+      category: "Performance"
+      description: "Response time < 100ms (p95)"
+      measurement: "Prometheus metrics"
+      priority: "MUST | SHOULD | COULD"
+    - id: "NF2"
+      category: "Security"
+      description: "OWASP Top 10 compliance"
+      measurement: "Semgrep scan"
+      priority: "MUST | SHOULD | COULD"
+
+  # Definition of Done (when is this complete?)
+  definition_of_done:
+    - "All MUST requirements met"
+    - "All tests passing (unit + integration)"
+    - "Code review approved by 2+ reviewers"
+    - "Documentation updated"
+    - "No P0/P1 bugs"
+
+---
+# CONSTRAINTS (MANDATORY)
+# Boundaries and limitations that SE4A must respect
+constraints:
+  # Technical constraints
+  technical:
+    - id: "TC1"
+      type: "Technology"
+      description: "Must use Python 3.11+ and FastAPI"
+      rationale: "Existing tech stack"
+    - id: "TC2"
+      type: "Architecture"
+      description: "Must follow 4-layer architecture"
+      rationale: "ADR-001 compliance"
+    - id: "TC3"
+      type: "Integration"
+      description: "AGPL components via network-only access"
+      rationale: "Legal requirement (AGPL containment)"
+
+  # Business constraints
+  business:
+    - id: "BC1"
+      type: "Timeline"
+      description: "Must complete within Sprint 35"
+      rationale: "Product roadmap commitment"
+    - id: "BC2"
+      type: "Budget"
+      description: "No additional infrastructure cost"
+      rationale: "Q1 budget frozen"
+
+  # Compliance constraints
+  compliance:
+    - id: "CC1"
+      type: "Security"
+      description: "OWASP ASVS Level 2 required"
+      rationale: "Security baseline requirement"
+    - id: "CC2"
+      type: "Privacy"
+      description: "No PII logged"
+      rationale: "GDPR compliance"
+
+---
+# CONTEXT (RECOMMENDED)
+# Background information to help SE4A understand the domain
+context:
+  # Related documents
+  related_documents:
+    - type: "ADR"
+      id: "ADR-007"
+      title: "AI Context Engine - Ollama Integration"
+      relevance: "Defines AI provider fallback pattern"
+    - type: "API Spec"
+      id: "openapi.yml"
+      title: "OpenAPI 3.0 Specification"
+      relevance: "Existing API contracts"
+
+  # Existing codebase context
+  codebase:
+    repository: "SDLC-Orchestrator"
+    relevant_paths:
+      - path: "backend/app/services/"
+        description: "Service layer implementations"
+      - path: "backend/app/api/v1/"
+        description: "API endpoint definitions"
+    existing_patterns:
+      - pattern: "Service-Repository pattern"
+        example: "user_service.py"
+      - pattern: "Dependency Injection"
+        example: "Using FastAPI Depends()"
+
+  # Domain knowledge
+  domain:
+    glossary:
+      - term: "Gate"
+        definition: "Quality checkpoint in SDLC process"
+      - term: "Evidence"
+        definition: "Artifact proving gate requirement completion"
+    assumptions:
+      - "Users have basic Git knowledge"
+      - "Development environment is Docker-based"
+
+---
+# SCOPE (MANDATORY)
+# Explicit boundaries of what is included/excluded
+scope:
+  # What IS included in this work
+  in_scope:
+    - "Backend API implementation"
+    - "Database schema changes"
+    - "Unit and integration tests"
+    - "API documentation"
+
+  # What is explicitly NOT included
+  out_of_scope:
+    - "Frontend UI changes (separate BRS)"
+    - "Performance optimization (Phase 2)"
+    - "Multi-tenant support (Q3 2026)"
+
+  # Dependencies on other work
+  dependencies:
+    - id: "DEP1"
+      type: "Blocking"
+      description: "Database migration must complete first"
+      owner: "DevOps Team"
+      status: "IN_PROGRESS"
+    - id: "DEP2"
+      type: "Non-blocking"
+      description: "Design mockups preferred but not required"
+      owner: "Design Team"
+      status: "NOT_STARTED"
+
+---
+# ACCEPTANCE TESTING (RECOMMENDED)
+# How SE4H will verify SE4A's work
+acceptance:
+  # Test scenarios
+  test_scenarios:
+    - id: "TS1"
+      name: "Happy path - successful creation"
+      given: "Valid input data"
+      when: "API called with correct parameters"
+      then: "Returns 201 with created resource"
+    - id: "TS2"
+      name: "Error handling - invalid input"
+      given: "Invalid input data"
+      when: "API called with malformed JSON"
+      then: "Returns 400 with error details"
+
+  # Reviewer checklist
+  reviewer_checklist:
+    - "Code follows project style guide"
+    - "All edge cases handled"
+    - "Error messages are user-friendly"
+    - "No hardcoded secrets"
+    - "Logging is appropriate (not excessive)"
+
+---
+# AGENT INSTRUCTIONS (OPTIONAL)
+# Specific guidance for AI agents executing this BRS
+agent_instructions:
+  # Preferred approach
+  approach: |
+    1. Start by reading existing service implementations
+    2. Follow established patterns (Service-Repository)
+    3. Write tests before implementation (TDD)
+    4. Create small, focused commits
+
+  # Things to avoid
+  avoid:
+    - "Do not modify existing API contracts"
+    - "Do not add new dependencies without discussion"
+    - "Do not skip error handling"
+
+  # Quality gates before submission
+  pre_submission_checklist:
+    - "Run `pytest` - all tests pass"
+    - "Run `ruff check` - no linting errors"
+    - "Run `mypy` - no type errors"
+    - "Review own code for obvious issues"
+
+---
+# REVISION HISTORY
+revision_history:
+  - version: "1.0.0"
+    date: "YYYY-MM-DD"
+    author: "Author Name"
+    changes: "Initial version"
+
+---
+# TEMPLATE USAGE NOTES
+#
+# 1. MANDATORY sections must be completed before submission
+# 2. RECOMMENDED sections improve agent effectiveness
+# 3. OPTIONAL sections provide additional guidance
+#
+# Status Flow:
+#   DRAFT → REVIEW → APPROVED → (execution) → ARCHIVED
+#
+# SE4H Responsibility:
+#   - Write clear, unambiguous requirements
+#   - Provide sufficient context
+#   - Define measurable success criteria
+#
+# SE4A Expectation:
+#   - Follow constraints exactly
+#   - Ask for clarification via CRP if unclear
+#   - Produce MRP when complete
+#
+# Reference: SDLC-Agentic-Core-Principles.md

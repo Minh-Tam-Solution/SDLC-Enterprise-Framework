@@ -1,0 +1,549 @@
+# LoopScript (LPS) Template
+# SASE Artifact for SE 3.0 SDLC Integration
+# Reference: arXiv:2509.06216v2 - Software Agentic Software Engineering
+#
+# Purpose: AI-generated execution plan with iterative refinement steps
+# Author: SE4A (Software Engineering for Agents - Agent Executor)
+# Consumer: SE4A (self-execution) + SE4H (monitoring/approval)
+#
+# Version: 1.0.0
+# Framework: SDLC 5.1.0
+# Created: December 2025
+
+---
+# METADATA SECTION
+metadata:
+  artifact_type: "LoopScript"
+  artifact_id: "LPS-YYYY-NNN"  # e.g., LPS-2026-001
+  version: "1.0.0"
+  created_date: "YYYY-MM-DD"
+  updated_date: "YYYY-MM-DD"
+  status: "GENERATED | EXECUTING | PAUSED | COMPLETED | FAILED"
+
+  # Traceability
+  source_brs: "BRS-YYYY-NNN"  # Parent BriefingScript
+  project_id: "PRJ-XXX"
+  sdlc_stage: "00-10"
+
+  # Execution context
+  agent:
+    provider: "ollama | claude | gpt-4 | gemini"
+    model: "qwen2.5:14b | claude-3-opus | gpt-4o"
+    session_id: "SESSION-XXXXX"
+
+  # Timing
+  estimated_duration: "2h 30m"
+  actual_duration: "0h 0m"  # Updated during execution
+  started_at: null
+  completed_at: null
+
+---
+# EXECUTION PLAN
+# Step-by-step plan generated from BRS analysis
+execution_plan:
+  # High-level phases
+  phases:
+    - id: "PHASE-1"
+      name: "Analysis & Design"
+      description: "Understand requirements and design solution"
+      estimated_duration: "30m"
+      steps:
+        - "STEP-1.1"
+        - "STEP-1.2"
+        - "STEP-1.3"
+
+    - id: "PHASE-2"
+      name: "Implementation"
+      description: "Write code following established patterns"
+      estimated_duration: "1h 30m"
+      steps:
+        - "STEP-2.1"
+        - "STEP-2.2"
+        - "STEP-2.3"
+        - "STEP-2.4"
+
+    - id: "PHASE-3"
+      name: "Testing & Verification"
+      description: "Validate implementation against success criteria"
+      estimated_duration: "30m"
+      steps:
+        - "STEP-3.1"
+        - "STEP-3.2"
+        - "STEP-3.3"
+
+---
+# DETAILED STEPS
+# Each step with clear inputs, actions, and outputs
+steps:
+  # PHASE 1: Analysis & Design
+  - id: "STEP-1.1"
+    phase: "PHASE-1"
+    name: "Read and analyze BRS requirements"
+    description: |
+      Parse the BriefingScript to extract:
+      - Functional requirements
+      - Non-functional requirements
+      - Constraints and boundaries
+
+    inputs:
+      - type: "artifact"
+        ref: "BRS-YYYY-NNN"
+        description: "Source BriefingScript"
+
+    actions:
+      - "Parse problem definition"
+      - "Extract success criteria"
+      - "Identify constraints"
+      - "Note out-of-scope items"
+
+    outputs:
+      - type: "analysis"
+        description: "Requirements analysis summary"
+
+    validation:
+      - check: "All MUST requirements identified"
+        status: "PENDING"
+      - check: "Constraints documented"
+        status: "PENDING"
+
+    status: "PENDING | IN_PROGRESS | COMPLETED | FAILED | SKIPPED"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-1.2"
+    phase: "PHASE-1"
+    name: "Review existing codebase"
+    description: |
+      Understand current implementation patterns and identify
+      relevant files to modify or reference.
+
+    inputs:
+      - type: "codebase"
+        ref: "backend/app/services/"
+        description: "Service layer implementations"
+
+    actions:
+      - "Identify existing patterns"
+      - "Find related services"
+      - "Note dependencies"
+      - "Check for reusable code"
+
+    outputs:
+      - type: "analysis"
+        description: "Codebase context summary"
+
+    validation:
+      - check: "Relevant files identified"
+        status: "PENDING"
+      - check: "Patterns documented"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-1.3"
+    phase: "PHASE-1"
+    name: "Design solution approach"
+    description: |
+      Create high-level design based on requirements and
+      existing patterns.
+
+    inputs:
+      - type: "analysis"
+        ref: "STEP-1.1"
+        description: "Requirements analysis"
+      - type: "analysis"
+        ref: "STEP-1.2"
+        description: "Codebase context"
+
+    actions:
+      - "Define service interface"
+      - "Plan database changes"
+      - "Design API endpoints"
+      - "Identify test scenarios"
+
+    outputs:
+      - type: "design"
+        description: "Solution design document"
+
+    validation:
+      - check: "Design follows ADR patterns"
+        status: "PENDING"
+      - check: "All requirements addressed"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  # PHASE 2: Implementation
+  - id: "STEP-2.1"
+    phase: "PHASE-2"
+    name: "Create database migrations"
+    description: |
+      Add necessary database schema changes using Alembic.
+
+    inputs:
+      - type: "design"
+        ref: "STEP-1.3"
+        description: "Database schema design"
+
+    actions:
+      - "Create Alembic migration file"
+      - "Define table/column changes"
+      - "Add indexes if needed"
+      - "Test migration locally"
+
+    outputs:
+      - type: "code"
+        path: "backend/alembic/versions/xxx_description.py"
+        description: "Database migration"
+
+    validation:
+      - check: "Migration runs without errors"
+        status: "PENDING"
+      - check: "Rollback works correctly"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-2.2"
+    phase: "PHASE-2"
+    name: "Implement service layer"
+    description: |
+      Create or modify service classes following existing patterns.
+
+    inputs:
+      - type: "design"
+        ref: "STEP-1.3"
+        description: "Service interface design"
+
+    actions:
+      - "Create service class"
+      - "Implement business logic"
+      - "Add error handling"
+      - "Add logging"
+
+    outputs:
+      - type: "code"
+        path: "backend/app/services/new_service.py"
+        description: "Service implementation"
+
+    validation:
+      - check: "Follows Service-Repository pattern"
+        status: "PENDING"
+      - check: "Type hints complete"
+        status: "PENDING"
+      - check: "Docstrings complete"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-2.3"
+    phase: "PHASE-2"
+    name: "Implement API endpoints"
+    description: |
+      Create FastAPI endpoints exposing the service functionality.
+
+    inputs:
+      - type: "code"
+        ref: "STEP-2.2"
+        description: "Service implementation"
+
+    actions:
+      - "Create router file"
+      - "Define endpoint handlers"
+      - "Add request/response models"
+      - "Add dependency injection"
+
+    outputs:
+      - type: "code"
+        path: "backend/app/api/v1/new_endpoint.py"
+        description: "API endpoint implementation"
+
+    validation:
+      - check: "Matches OpenAPI spec"
+        status: "PENDING"
+      - check: "Authentication added"
+        status: "PENDING"
+      - check: "Error responses defined"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-2.4"
+    phase: "PHASE-2"
+    name: "Write unit tests"
+    description: |
+      Create unit tests for service layer with 95%+ coverage.
+
+    inputs:
+      - type: "code"
+        ref: "STEP-2.2"
+        description: "Service to test"
+
+    actions:
+      - "Create test file"
+      - "Write happy path tests"
+      - "Write error case tests"
+      - "Write edge case tests"
+
+    outputs:
+      - type: "code"
+        path: "backend/tests/test_new_service.py"
+        description: "Unit test file"
+
+    validation:
+      - check: "Coverage > 95%"
+        status: "PENDING"
+      - check: "All tests pass"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  # PHASE 3: Testing & Verification
+  - id: "STEP-3.1"
+    phase: "PHASE-3"
+    name: "Run full test suite"
+    description: |
+      Execute all tests to ensure no regressions.
+
+    inputs:
+      - type: "codebase"
+        ref: "backend/"
+        description: "Full backend codebase"
+
+    actions:
+      - "Run pytest"
+      - "Check coverage report"
+      - "Fix any failures"
+
+    outputs:
+      - type: "report"
+        description: "Test execution report"
+
+    validation:
+      - check: "All tests pass"
+        status: "PENDING"
+      - check: "No coverage regression"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-3.2"
+    phase: "PHASE-3"
+    name: "Run linting and type checks"
+    description: |
+      Ensure code quality with ruff and mypy.
+
+    inputs:
+      - type: "code"
+        ref: "STEP-2.2"
+        description: "New code files"
+
+    actions:
+      - "Run ruff check"
+      - "Run ruff format"
+      - "Run mypy"
+      - "Fix any issues"
+
+    outputs:
+      - type: "report"
+        description: "Linting report"
+
+    validation:
+      - check: "No ruff errors"
+        status: "PENDING"
+      - check: "No mypy errors"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+  - id: "STEP-3.3"
+    phase: "PHASE-3"
+    name: "Verify against BRS success criteria"
+    description: |
+      Final verification that all requirements are met.
+
+    inputs:
+      - type: "artifact"
+        ref: "BRS-YYYY-NNN"
+        description: "Original requirements"
+      - type: "code"
+        ref: "STEP-2.*"
+        description: "Implementation"
+
+    actions:
+      - "Check each MUST requirement"
+      - "Verify non-functional requirements"
+      - "Document any deviations"
+
+    outputs:
+      - type: "verification"
+        description: "Requirements verification matrix"
+
+    validation:
+      - check: "All MUST requirements met"
+        status: "PENDING"
+      - check: "Performance targets met"
+        status: "PENDING"
+
+    status: "PENDING"
+    started_at: null
+    completed_at: null
+    notes: ""
+
+---
+# ITERATION TRACKING
+# Record of loops/iterations during execution
+iterations:
+  current_iteration: 1
+  max_iterations: 5  # Prevent infinite loops
+
+  history:
+    - iteration: 1
+      started_at: null
+      ended_at: null
+      trigger: "Initial execution"
+      changes_made: []
+      outcome: "PENDING"
+
+---
+# CHECKPOINT MARKERS
+# Points where SE4H approval may be needed
+checkpoints:
+  - id: "CP-1"
+    name: "Design Review"
+    after_step: "STEP-1.3"
+    requires_approval: true
+    approved: false
+    approved_by: null
+    approved_at: null
+    notes: "SE4H to review design before implementation"
+
+  - id: "CP-2"
+    name: "Implementation Complete"
+    after_step: "STEP-2.4"
+    requires_approval: false  # Auto-proceed if tests pass
+    approved: false
+    approved_by: null
+    approved_at: null
+    notes: "Automatic if all validations pass"
+
+  - id: "CP-3"
+    name: "Final Verification"
+    after_step: "STEP-3.3"
+    requires_approval: true
+    approved: false
+    approved_by: null
+    approved_at: null
+    notes: "SE4H final sign-off before MRP generation"
+
+---
+# ERROR HANDLING
+# What to do when things go wrong
+error_handling:
+  # On step failure
+  on_step_failure:
+    action: "PAUSE | RETRY | CRP"
+    max_retries: 3
+    retry_delay: "30s"
+    escalation: "Generate CRP for SE4H guidance"
+
+  # On validation failure
+  on_validation_failure:
+    action: "RETRY_STEP | ROLLBACK | CRP"
+    max_retries: 2
+    escalation: "Generate CRP with specific question"
+
+  # On timeout
+  on_timeout:
+    threshold: "4h"  # 2x estimated duration
+    action: "PAUSE"
+    escalation: "Notify SE4H of extended execution"
+
+---
+# EXECUTION LOG
+# Real-time log of actions taken
+execution_log:
+  - timestamp: "YYYY-MM-DDTHH:MM:SSZ"
+    step_id: "STEP-1.1"
+    action: "Started step execution"
+    details: ""
+
+  # Log entries added during execution...
+
+---
+# OUTPUT ARTIFACTS
+# Files/artifacts produced during execution
+output_artifacts:
+  - type: "code"
+    path: "backend/app/services/new_service.py"
+    created_at: null
+    sha256: null  # For evidence vault
+
+  - type: "code"
+    path: "backend/tests/test_new_service.py"
+    created_at: null
+    sha256: null
+
+  - type: "migration"
+    path: "backend/alembic/versions/xxx.py"
+    created_at: null
+    sha256: null
+
+---
+# MRP GENERATION TRIGGER
+# Conditions for generating Merge-Readiness Pack
+mrp_trigger:
+  conditions:
+    - "All steps COMPLETED"
+    - "All validations PASSED"
+    - "CP-3 approved by SE4H"
+
+  auto_generate: true
+  mrp_template: "05-MRP-Template.md"
+
+---
+# TEMPLATE USAGE NOTES
+#
+# LoopScript Lifecycle:
+#   1. SE4A generates LPS from BRS analysis
+#   2. SE4A executes steps sequentially
+#   3. Checkpoints pause for SE4H approval (if required)
+#   4. Iterations occur if validation fails
+#   5. Upon completion, MRP is generated
+#
+# Iteration Triggers:
+#   - Validation failure
+#   - SE4H feedback requiring changes
+#   - New requirements discovered
+#
+# Status Transitions:
+#   GENERATED → EXECUTING → PAUSED → EXECUTING → COMPLETED
+#                    ↓                    ↓
+#                  FAILED              FAILED
+#
+# Reference: SDLC-Agentic-Core-Principles.md
