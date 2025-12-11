@@ -209,20 +209,20 @@
 
 ### 📁 Required Project `/docs` Structure by Tier
 
-Every SDLC 5.1 project **MUST** have the correct folder structure for its tier:
+Every SDLC 5.1 project **MUST** have the correct folder structure using **shortened folder names**:
 
 | Folder | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
 |--------|:----:|:--------:|:------------:|:----------:|
-| `docs/00-Project-Foundation/` | ✅ Required | ✅ Required | ✅ Required | ✅ Required |
-| `docs/01-Planning-Analysis/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/02-Architecture-Design/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/03-Development/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/04-Quality-Assurance/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/05-Deployment/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/06-Operations/` | ❌ | ❌ | ✅ Required | ✅ Required |
-| `docs/07-Integration/` | ❌ | ❌ | ✅ Required | ✅ Required |
-| `docs/08-Team-Management/` | ❌ | ❌ | ❌ | ✅ Required |
-| `docs/09-Executive-Reports/` | ❌ | ❌ | ❌ | ✅ Required |
+| `docs/00-foundation/` | ✅ Required | ✅ Required | ✅ Required | ✅ Required |
+| `docs/01-planning/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/02-design/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/03-build/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/04-test/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/05-deploy/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/06-operate/` | ❌ | ❌ | ✅ Required | ✅ Required |
+| `docs/07-integrate/` | ❌ | ❌ | ✅ Required | ✅ Required |
+| `docs/08-collaborate/` | ❌ | ❌ | ❌ | ✅ Required |
+| `docs/09-govern/` | ❌ | ❌ | ❌ | ✅ Required |
 | `CLAUDE.md` | ❌ | ✅ Required | ✅ Required | ✅ Required |
 | `.sdlc/config.json` | ❌ | ✅ Required | ✅ Required | ✅ Required |
 
@@ -230,18 +230,30 @@ Every SDLC 5.1 project **MUST** have the correct folder structure for its tier:
 
 ```bash
 # LITE (1-2 people)
-mkdir -p docs/00-Project-Foundation
+mkdir -p docs/00-foundation
 
 # STANDARD (3-10 people)
-mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design/ADRs,03-Development,04-Quality-Assurance,05-Deployment}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy}
+mkdir -p docs/02-design/ADRs
 mkdir -p .sdlc
 
 # PROFESSIONAL (10-50 people)
-mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design/ADRs,03-Development/sprint-logs,04-Quality-Assurance/test-cases,05-Deployment/release-notes,06-Operations/runbooks,07-Integration/api-contracts}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate}
+mkdir -p docs/02-design/ADRs
+mkdir -p docs/06-operate/runbooks
 mkdir -p .sdlc/checklists
 
 # ENTERPRISE (50+ people)
-mkdir -p docs/{00-Project-Foundation/user-research,01-Planning-Analysis,02-Architecture-Design/ADRs,03-Development/sprint-logs,04-Quality-Assurance/{test-cases,qa-reports},05-Deployment/release-notes,06-Operations/{runbooks,incident-reports},07-Integration/{api-contracts,third-party},08-Team-Management/{meeting-notes,03-SDLC-Compliance},09-Executive-Reports/{compliance,metrics,audit-logs}}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate,08-collaborate,09-govern}
+mkdir -p docs/00-foundation/user-research
+mkdir -p docs/02-design/ADRs
+mkdir -p docs/03-build/sprint-logs
+mkdir -p docs/04-test/{test-cases,qa-reports}
+mkdir -p docs/05-deploy/release-notes
+mkdir -p docs/06-operate/{runbooks,incident-reports}
+mkdir -p docs/07-integrate/{api-contracts,third-party}
+mkdir -p docs/08-collaborate/meeting-notes
+mkdir -p docs/09-govern/{compliance,metrics,audit-logs}
 mkdir -p .sdlc/checklists
 ```
 

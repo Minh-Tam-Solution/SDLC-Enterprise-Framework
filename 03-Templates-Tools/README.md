@@ -47,18 +47,18 @@ SASE-Artifacts/:
 
 All templates and tools are mapped to the complete 10-stage lifecycle:
 
-| Stage | Name | Folder(s) | AI Tools | Key Deliverables |
-|-------|------|-----------|----------|------------------|
-| **00** | WHY? (Foundation) | 00-Project-Foundation | `design-thinking/` | Problem validation, user research |
-| **01** | WHAT? (Planning) | 01-Planning-Analysis | `design-thinking/` | Requirements, roadmap |
-| **02** | HOW? (Design) | 02-Architecture-Design | `design-to-code/` | Architecture, components |
-| **03** | BUILD (Development) | 03-Development | `code-review/` | Production code |
-| **04** | TEST (Quality) | 04-Quality-Assurance | `testing/` | Test suites, UAT |
-| **05** | DEPLOY (Release) | 05-Deployment | `deployment/` | Release artifacts |
-| **06** | OPERATE (Production) | 06-Operations | `operations/` | Monitoring, incidents |
-| **07** | INTEGRATE (Systems) | 07-Integration | `integration/` | API contracts |
-| **08** | COLLABORATE (Teams) | 08-Team-Management | `collaboration/` | Protocols, RACI |
-| **09** | GOVERN (Compliance) | 09-Executive-Reports | `governance/` | Audit reports |
+| Stage | Name | /docs Folder | AI Tools | Key Deliverables |
+|-------|------|--------------|----------|------------------|
+| **00** | WHY? (Foundation) | `00-foundation/` | `design-thinking/` | Problem validation, user research |
+| **01** | WHAT? (Planning) | `01-planning/` | `design-thinking/` | Requirements, roadmap |
+| **02** | HOW? (Design) | `02-design/` | `design-to-code/` | Architecture, components |
+| **03** | BUILD (Development) | `03-build/` | `code-review/` | Production code |
+| **04** | TEST (Quality) | `04-test/` | `testing/` | Test suites, UAT |
+| **05** | DEPLOY (Release) | `05-deploy/` | `deployment/` | Release artifacts |
+| **06** | OPERATE (Production) | `06-operate/` | `operations/` | Monitoring, incidents |
+| **07** | INTEGRATE (Systems) | `07-integrate/` | `integration/` | API contracts |
+| **08** | COLLABORATE (Teams) | `08-collaborate/` | `collaboration/` | Protocols, RACI |
+| **09** | GOVERN (Compliance) | `09-govern/` | `governance/` | Audit reports |
 
 ### 4-Tier Classification
 

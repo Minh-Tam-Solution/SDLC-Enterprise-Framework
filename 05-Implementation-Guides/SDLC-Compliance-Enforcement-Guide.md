@@ -43,15 +43,15 @@ FORBIDDEN:
   ❌ Sprint folders at root
 ```
 
-### Document Placement Rules
+### Document Placement Rules (SDLC 5.0+ Shortened Names)
 ```yaml
 Correct Placement:
-  Sprint Documents: /docs/08-Team-Management/04-Sprint-Management/
-  Technical Designs: /docs/02-Design-Architecture/[subfolder]/
-  Test Reports: /tests/[type]/reports/
-  Phase Planning: /docs/01-Planning-Analysis/08-Implementation-Planning/
-  API Documentation: /docs/07-Integration-APIs/
-  Team Guidelines: /docs/08-Team-Management/
+  Sprint Documents: /docs/08-collaborate/sprint-logs/
+  Technical Designs: /docs/02-design/[subfolder]/
+  Test Reports: /docs/04-test/qa-reports/
+  Phase Planning: /docs/01-planning/project-planning/
+  API Documentation: /docs/07-integrate/api-contracts/
+  Team Guidelines: /docs/08-collaborate/
 
 Common Violations:
   ❌ SPRINT-X.md at project root
@@ -70,7 +70,7 @@ FORBIDDEN in filenames:
   Sprint References:
     ❌ SPRINT-7-API-Design.md
     ❌ SPRINT-X-Planning.md
-    Exception: ONLY in /docs/08-Team-Management/04-Sprint-Management/
+    Exception: ONLY in /docs/08-collaborate/sprint-logs/
 
   Day References:
     ❌ DAY-1-Progress.md

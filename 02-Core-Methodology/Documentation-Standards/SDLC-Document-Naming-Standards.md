@@ -87,7 +87,7 @@ Incorrect Examples:
 ```
 
 ### 2. Technical Documentation
-**Location**: `/docs/03-Development-Implementation/[category]/`
+**Location**: `/docs/03-build/[category]/`
 
 ```yaml
 Correct Naming Pattern:
@@ -108,7 +108,7 @@ Incorrect Examples:
 ```
 
 ### 3. API Documentation
-**Location**: `/docs/07-Integration-APIs/`
+**Location**: `/docs/07-integrate/api-contracts/`
 
 ```yaml
 Correct Naming Pattern:
@@ -128,7 +128,7 @@ Incorrect Examples:
 ```
 
 ### 4. Sprint Documents (EXCEPTION)
-**Location**: `/docs/08-Team-Management/04-Sprint-Management/`
+**Location**: `/docs/08-collaborate/sprint-logs/`
 
 ```yaml
 ONLY HERE can sprint references be used:
@@ -232,17 +232,22 @@ Version/Status goes INSIDE document:
 
 ## 🗂️ Folder Naming Standards
 
-### Stage Folders (Level 1)
+### Stage Folders (Level 1) - SDLC 5.0+ Shortened Names
 ```yaml
-Pattern: NN-Descriptive-Name/
+Pattern: NN-shortname/
 
 Examples:
-  00-Project-Foundation/
-  01-Planning-Analysis/
-  02-Design-Architecture/
-  03-Development-Implementation/
-  08-Team-Management/
-  99-Legacy/
+  00-foundation/
+  01-planning/
+  02-design/
+  03-build/
+  04-test/
+  05-deploy/
+  06-operate/
+  07-integrate/
+  08-collaborate/
+  09-govern/
+  99-legacy/
 ```
 
 ### Subdirectories (Level 2+)

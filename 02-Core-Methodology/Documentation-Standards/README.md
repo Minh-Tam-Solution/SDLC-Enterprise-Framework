@@ -342,17 +342,17 @@ Archive Location: 99-Legacy/SDLC-4.9.1-Archive/
 
 ## 🔗 Related Documentation
 
-### Stage Documentation
-- `/00-Foundation/` - WHY stage (problem validation)
-- `/01-Planning/` - WHAT stage (requirements)
-- `/02-Architecture/` - HOW stage (design)
-- `/03-Development/` - BUILD stage (implementation)
-- `/04-Testing/` - TEST stage (quality)
-- `/05-Deployment/` - DEPLOY stage (delivery)
-- `/06-Operations/` - OPERATE stage (production)
-- `/07-Integration/` - INTEGRATE stage (microservices)
-- `/08-Team-Management/` - **COLLABORATE stage (documentation)** ⬅ YOU ARE HERE
-- `/09-Governance/` - GOVERN stage (compliance)
+### Stage Documentation (Shortened Names - SDLC 5.0+)
+- `/00-foundation/` - WHY stage (problem validation)
+- `/01-planning/` - WHAT stage (requirements)
+- `/02-design/` - HOW stage (design)
+- `/03-build/` - BUILD stage (implementation)
+- `/04-test/` - TEST stage (quality)
+- `/05-deploy/` - DEPLOY stage (delivery)
+- `/06-operate/` - OPERATE stage (production)
+- `/07-integrate/` - INTEGRATE stage (microservices)
+- `/08-collaborate/` - **COLLABORATE stage (documentation)** ⬅ YOU ARE HERE
+- `/09-govern/` - GOVERN stage (compliance)
 
 ### Framework Documentation
 - `/01-Overview/SDLC-Executive-Summary.md` - Framework overview
@@ -382,8 +382,8 @@ Archive Location: 99-Legacy/SDLC-4.9.1-Archive/
 **Q: Why can't I put version in filename?**
 A: Version in filename = obsolescence. When you upgrade to 5.1, `SDLC-5.0-Guide.md` becomes outdated. Better: `SDLC-Guide.md` with version 5.1 inside.
 
-**Q: What about sprint-specific documents?**  
-A: Exception: `/08-Team-Management/04-Sprint-Management/` allows sprint numbers (temporal context needed). Everywhere else: feature-based naming.
+**Q: What about sprint-specific documents?**
+A: Exception: `/08-collaborate/sprint-logs/` allows sprint numbers (temporal context needed). Everywhere else: feature-based naming.
 
 **Q: How do I handle multiple versions?**  
 A: Keep ONE current version (e.g., `Deployment-Guide.md`). Archive old versions to `99-Legacy/` with archival header.

@@ -190,59 +190,61 @@ This became the catalyst for **SDLC 4.9 enhancement** - expanding from 4 stages 
 
 ### Perfect Alignment: Business Questions → SDLC Stages → Documentation Structure
 
+**NOTE**: SDLC 5.0+ uses **shortened folder names** for `/docs` structure.
+
 ```yaml
 ┌────────────────────────────────────────────────────────────────────────┐
-│ Business Question → SDLC Stage → /docs Structure (BFlow Example)      │
+│ Business Question → SDLC Stage → /docs Structure (Shortened Names)    │
 ├────────────────────────────────────────────────────────────────────────┤
-│ 1. WHY?          → Stage 00: Foundation      → 00-Project-Foundation/  │
-│    Tại sao làm?     Why, Vision, Strategy      - 01-Vision/           │
-│                                                 - 02-Strategy/          │
-│                                                 - 03-Roadmap/           │
+│ 1. WHY?          → Stage 00: Foundation      → 00-foundation/          │
+│    Tại sao làm?     Why, Vision, Strategy      - vision/              │
+│                                                 - strategy/            │
+│                                                 - roadmap/             │
 │                                                                         │
-│ 2. WHAT?         → Stage 01: Planning        → 01-Planning-Analysis/   │
-│    Làm cái gì?      Requirements, Analysis      - 01-Business-Case/    │
-│                                                 - 02-Requirements/      │
-│                                                 - 06-Project-Planning/  │
+│ 2. WHAT?         → Stage 01: Planning        → 01-planning/            │
+│    Làm cái gì?      Requirements, Analysis      - business-case/       │
+│                                                 - requirements/         │
+│                                                 - project-planning/     │
 │                                                                         │
-│ 3. HOW?          → Stage 02: Design          → 02-Architecture-Design/ │
-│    Làm thế nào?     Architecture, Design        - 01-System-Arch/      │
-│                                                 - 02-Technical-Design/  │
-│                                                 - 03-API-Design/        │
+│ 3. HOW?          → Stage 02: Design          → 02-design/              │
+│    Làm thế nào?     Architecture, Design        - system-architecture/ │
+│                                                 - technical-design/     │
+│                                                 - ADRs/                 │
 │                                                                         │
-│ 4. BUILD         → Stage 03: Development     → 03-Development/         │
-│    Xây dựng         Code, Implementation        - 01-Backend/          │
-│                                                 - 02-Frontend/          │
-│                                                 - 03-Integration/       │
+│ 4. BUILD         → Stage 03: Development     → 03-build/               │
+│    Xây dựng         Code, Implementation        - backend/             │
+│                                                 - frontend/             │
+│                                                 - sprint-logs/          │
 │                                                                         │
-│ 5. TEST          → Stage 04: Quality         → 04-Quality-Assurance/   │
-│    Kiểm thử         QA, Validation              - 01-Test-Strategy/    │
-│                                                 - 02-Test-Cases/        │
-│                                                 - 03-Test-Reports/      │
+│ 5. TEST          → Stage 04: Quality         → 04-test/                │
+│    Kiểm thử         QA, Validation              - test-strategy/       │
+│                                                 - test-cases/           │
+│                                                 - qa-reports/           │
 │                                                                         │
-│ 6. DEPLOY        → Stage 05: Deployment      → 05-Deployment/          │
-│    Triển khai       Go-Live, Release            - 01-Deployment-Plan/  │
-│                                                 - 02-Release-Notes/     │
-│                                                 - 03-Rollback-Plans/    │
+│ 6. DEPLOY        → Stage 05: Deployment      → 05-deploy/              │
+│    Triển khai       Go-Live, Release            - deployment-plans/    │
+│                                                 - release-notes/        │
+│                                                 - rollback-procedures/  │
 │                                                                         │
-│ 7. OPERATE       → Stage 06: Operations      → 06-Operations/          │
-│    Vận hành         Maintain, Support           - 01-Monitoring/        │
-│                                                 - 02-Maintenance/       │
-│                                                 - 03-Support/           │
+│ 7. OPERATE       → Stage 06: Operations      → 06-operate/             │
+│    Vận hành         Maintain, Support           - runbooks/             │
+│                                                 - monitoring/           │
+│                                                 - incident-reports/     │
 │                                                                         │
-│ 8. INTEGRATE     → Stage 07: Integration     → 07-Integration/         │
-│    Tích hợp         APIs, Systems               - 01-API-Docs/         │
-│                                                 - 02-3rd-Party/         │
-│                                                 - 03-Data-Flow/         │
+│ 8. INTEGRATE     → Stage 07: Integration     → 07-integrate/           │
+│    Tích hợp         APIs, Systems               - api-contracts/       │
+│                                                 - third-party/          │
+│                                                 - integration-guides/   │
 │                                                                         │
-│ 9. COLLABORATE   → Stage 08: Team Mgmt       → 08-Team-Management/     │
-│    Cộng tác         Team, Sprint, Coordination  - 01-Team-Structure/   │
-│                                                 - 02-Roles-Responsibilities/│
-│                                                 - 04-Sprint-Management/ │
+│ 9. COLLABORATE   → Stage 08: Team Mgmt       → 08-collaborate/         │
+│    Cộng tác         Team, Sprint, Coordination  - team-protocols/      │
+│                                                 - meeting-notes/        │
+│                                                 - onboarding/           │
 │                                                                         │
-│ 10. GOVERN       → Stage 09: Governance      → 09-Executive-Reports/   │
-│     Quản trị        Reports, Compliance         - 01-Status-Reports/   │
-│                                                 - 02-Risk-Management/   │
-│                                                 - 03-Compliance/        │
+│ 10. GOVERN       → Stage 09: Governance      → 09-govern/              │
+│     Quản trị        Reports, Compliance         - compliance/          │
+│                                                 - metrics/              │
+│                                                 - audit-logs/           │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -307,7 +309,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Root cause analysis (5 Whys to get to core issues)
    - Systemic pattern identification
 
-**BFlow Example**: `/docs/00-Project-Foundation/`
+**Example**: `/docs/00-foundation/`
 - Vision: BFlow 2.0 Pure V9.0 (conversation-first microservices)
 - Problem: Vietnamese SMEs need affordable, compliant ERP
 - Value: $4.7M disaster prevention + market advantage
@@ -347,7 +349,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Timeline and milestones
    - Risk assessment (initial)
 
-**BFlow Example**: `/docs/01-Planning-Analysis/`
+**Example**: `/docs/01-planning/`
 - Requirements: 15 P0 Methods (BHXH, VAT, FIFO, PIT)
 - Plan: Sprint 27-32 (6 sprints to production)
 - Value: $3.8M feature parity (9.3% → 37%)
@@ -387,7 +389,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - UI/UX design (wireframes, mockups, prototypes)
    - Performance design (caching, CDN, optimization)
 
-**BFlow Example**: `/docs/02-Architecture-Design/`
+**Example**: `/docs/02-design/`
 - Architecture: 8 Microservices (OAuth2 + 7 business services)
 - Design: Multi-tenant RLS, PostgreSQL, Redis cache
 - Value: Methods 16-19 stable (72-hour monitoring A+ 98.5%)
@@ -436,7 +438,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Code review (peer review, AI-assisted)
    - CI/CD pipeline (automated testing, deployment)
 
-**BFlow Example**: `/docs/03-Development/`
+**Example**: `/docs/03-build/`
 - Implementation: OAuth2 Provider (265K req/s capacity)
 - Stack: FastAPI + Django + PostgreSQL + Redis + Kafka
 - Value: $6.23M (infrastructure + OAuth2 A+ 103%)
@@ -491,7 +493,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - System Thinking: Root cause analysis for failures
    - Design Thinking: User feedback integration
 
-**BFlow Example**: `/docs/04-Quality-Assurance/`
+**Example**: `/docs/04-test/`
 - Tests: 639 automated tests (209 AI + 430 Django)
 - Coverage: 95%+ model, 90%+ API
 - UAT: 3 pilot customers, 15 scenarios, 8.5+/10 satisfaction
@@ -556,7 +558,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Canary deployment (1% traffic first)
    - Emergency rollback ready (<5 min execution)
 
-**BFlow Example**: `/docs/05-Deployment/`
+**Example**: `/docs/05-deploy/`
 - Plan: December 19-20, 2025 soft launch
 - Strategy: Graduated rollout (3 pilot customers)
 - Execution:
@@ -666,7 +668,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
      * Root cause (5 Whys)
      * Prevention plan (update runbooks)
 
-**BFlow Example**: `/docs/06-Operations/`
+**Example**: `/docs/06-operate/`
 - Monitoring: Grafana dashboards (10+ panels)
 - Uptime: 99.9%+ target
 - API Performance: <50ms p50, <100ms p95
@@ -746,7 +748,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - File-based integration (CSV, Excel imports)
    - Scheduled batch jobs (nightly sync)
 
-**BFlow Example**: `/docs/07-Integration/`
+**Example**: `/docs/07-integrate/`
 - OAuth2: 265,000 req/s capacity ✅
 - Token introspection: 8ms avg (12,500 req/s) ✅
 - Token revocation: 12ms avg (8,333 req/s) ✅
@@ -856,7 +858,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Integration checkpoints (weekly)
    - Go-live coordination (war room 24/7)
 
-**BFlow Example**: `/docs/08-Team-Management/`
+**Example**: `/docs/08-collaborate/`
 - Team: Remote (6) + Local (5) unified execution
 - Communication: Daily standup 100% attendance
 - Sprint Velocity: A+ ratings both teams (Remote 103%, Local 100%)
@@ -966,7 +968,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Go/No-Go Decision:
      * Tech Leads + PM → CTO → CEO (formal review meeting)
 
-**BFlow Example**: `/docs/09-Executive-Reports/`
+**Example**: `/docs/09-govern/`
 - ROI: 827:1 (82,700% return Sprint 26-33)
 - Budget: $52K spent, $43.03M value delivered
 - Compliance: 100% Vietnamese regulations
@@ -1056,61 +1058,61 @@ Detailed Flow:
 
 ```yaml
 00. FOUNDATION (WHY?) - Sprint 26 (Nov 1-3):
-   Document: /docs/00-Project-Foundation/03-Roadmap/PLATFORM-ROADMAP.md
+   Document: /docs/00-foundation/roadmap/PLATFORM-ROADMAP.md
    Deliverable: BFlow 2.0 Pure V9.0 Strategic Roadmap
    Value: $4.7M (disaster prevention + market advantage)
    Design Thinking: EMPATHIZE (CEO vision → user pain validation)
 
 01. PLANNING (WHAT?) - Sprint 27 (Nov 3-16):
-   Document: /docs/01-Planning-Analysis/06-Project-Planning/PROJECT-IMPLEMENTATION-PLAN.md
+   Document: /docs/01-planning/project-planning/PROJECT-IMPLEMENTATION-PLAN.md
    Deliverable: 15 P0 Methods Implementation Plan
    Value: $3.8M (feature parity 9.3% → 37%)
    Design Thinking: DEFINE + IDEATE (100+ solution ideas → Top 3 concepts)
 
 02. DESIGN (HOW?) - Sprint 28 (Nov 4-16):
-   Document: /docs/02-Architecture-Design/01-System-Architecture/MICROSERVICES-ARCHITECTURE.md
+   Document: /docs/02-design/system-architecture/MICROSERVICES-ARCHITECTURE.md
    Deliverable: 8 Microservices Architecture (OAuth2 + 7 business services)
    Value: Methods 16-19 stable (72-hour monitoring A+ 98.5%)
    Design Thinking: IDEATE complete (technical approach finalized)
 
 03. DEVELOPMENT (BUILD) - Sprint 29-30 (Nov 6-17):
-   Document: /docs/03-Development/01-Backend/OAUTH2-IMPLEMENTATION.md
+   Document: /docs/03-build/backend/OAUTH2-IMPLEMENTATION.md
    Deliverable: OAuth2 Provider + 6 Microservices operational
    Value: $6.23M (infrastructure + OAuth2 A+ 103%)
    Design Thinking: PROTOTYPE (code prototype, working features)
 
 04. TESTING (TEST) - Sprint 31-32 (Nov 10 - Dec 12):
-   Document: /docs/04-Quality-Assurance/03-Test-Reports/SPRINT-31-TEST-RESULTS.md
+   Document: /docs/04-test/qa-reports/SPRINT-31-TEST-RESULTS.md
    Deliverable: 639 tests (209 AI + 430 Django), 95%+ coverage
    Value: $17.42M (GAP-001/002 + Agent Gateway Wave 0-1)
    Design Thinking: TEST (5-8 user validation, iterate based on feedback)
 
 05. DEPLOYMENT (DEPLOY) - Dec 13-20:
-   Document: /docs/05-Deployment/01-Deployment-Plan/SPRINT-32-FINAL-GOLIVE-PLAN.md
+   Document: /docs/05-deploy/deployment-plans/SPRINT-32-FINAL-GOLIVE-PLAN.md
    Deliverable: December 19-20 Soft Launch (3 pilot customers live)
    Value: $18,880 investment, 99.5% → 100% confidence
    Success: NQH (Dec 19 9AM), Galaxy (Dec 20 9AM), CMCSISG (Dec 20 1PM)
 
 06. OPERATIONS (OPERATE) - Sprint 33+ (Dec 16-29, ongoing):
-   Document: /docs/06-Operations/01-Monitoring/GRAFANA-DASHBOARDS.md
+   Document: /docs/06-operate/monitoring/GRAFANA-DASHBOARDS.md
    Deliverable: 24/7 war room, 99.9%+ uptime, <50ms API response
    Value: $4.65M (stabilization + Agent Gateway Wave 3)
    Metrics: 8.5+/10 customer satisfaction, zero P0 incidents
 
 07. INTEGRATION (INTEGRATE) - Sprint 31 (OAuth2 focus):
-   Document: /docs/07-Integration/01-API-Documentation/OAUTH2-API-REFERENCE.md
+   Document: /docs/07-integrate/api-contracts/OAUTH2-API-REFERENCE.md
    Deliverable: 450+ API endpoints, OAuth2 265K req/s capacity
    Value: Token introspection 8ms, revocation 12ms, rate limiting <2ms
    Achievement: Multi-tenant isolation 100% (zero cross-tenant leaks)
 
 08. COLLABORATION (COLLABORATE) - Sprint 31-32 (dual team):
-   Document: /docs/08-Team-Management/04-Sprint-Management/SPRINT-31-32-COORDINATION.md
+   Document: /docs/08-collaborate/sprint-management/SPRINT-31-32-COORDINATION.md
    Deliverable: Remote Team (6) + Local Team (5) unified execution
    Value: A+ ratings both teams (Remote 103%, Local 100%)
    Success: Daily standup 100% attendance, sprint goals 100% achieved
 
 09. GOVERNANCE (GOVERN) - Sprint 32 (go-live gate):
-   Document: /docs/09-Executive-Reports/DECEMBER-PRODUCTION-READINESS-99.5-PERCENT.md
+   Document: /docs/09-govern/DECEMBER-PRODUCTION-READINESS-99.5-PERCENT.md
    Deliverable: Risk assessment (85% → 90% confidence), CEO authorization
    Value: $43.03M total platform value (Sprint 26-33)
    Compliance: Vietnamese regulations 100% (BHXH, VAT, FIFO, PIT)

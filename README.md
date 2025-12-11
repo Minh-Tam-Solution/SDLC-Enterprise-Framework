@@ -241,18 +241,18 @@ SDLC 4.9.1 (November 29, 2025)
 
 ```yaml
 ┌─────────────────────────────────────────────────────────────────┐
-│ Question → Stage → /docs Folder (BFlow Example)                │
+│ Question → Stage → /docs Folder (Shortened Names - SDLC 5.0+)  │
 ├─────────────────────────────────────────────────────────────────┤
-│ WHY?        → Stage 00: Foundation    → 00-Project-Foundation/  │
-│ WHAT?       → Stage 01: Planning      → 01-Planning-Analysis/   │
-│ HOW?        → Stage 02: Design        → 02-Architecture-Design/ │
-│ BUILD       → Stage 03: Development   → 03-Development/         │
-│ TEST        → Stage 04: Quality       → 04-Quality-Assurance/   │
-│ DEPLOY      → Stage 05: Deployment    → 05-Deployment/          │
-│ OPERATE     → Stage 06: Operations    → 06-Operations/          │
-│ INTEGRATE   → Stage 07: Integration   → 07-Integration/         │
-│ COLLABORATE → Stage 08: Team Mgmt     → 08-Team-Management/     │
-│ GOVERN      → Stage 09: Governance    → 09-Executive-Reports/   │
+│ WHY?        → Stage 00: Foundation    → 00-foundation/          │
+│ WHAT?       → Stage 01: Planning      → 01-planning/            │
+│ HOW?        → Stage 02: Design        → 02-design/              │
+│ BUILD       → Stage 03: Development   → 03-build/               │
+│ TEST        → Stage 04: Quality       → 04-test/                │
+│ DEPLOY      → Stage 05: Deployment    → 05-deploy/              │
+│ OPERATE     → Stage 06: Operations    → 06-operate/             │
+│ INTEGRATE   → Stage 07: Integration   → 07-integrate/           │
+│ COLLABORATE → Stage 08: Team Mgmt     → 08-collaborate/         │
+│ GOVERN      → Stage 09: Governance    → 09-govern/              │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

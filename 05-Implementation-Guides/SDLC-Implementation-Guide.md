@@ -339,57 +339,57 @@ Stage 09: GOVERN - Compliance, audits, governance
 
 ### Standard `/docs` Structure (10-Stage Aligned)
 
-Every SDLC 5.1 compliant project **MUST** have this documentation structure:
+Every SDLC 5.1 compliant project **MUST** have this documentation structure using **shortened folder names**:
 
 ```
 your-project/
 ├── docs/                              # 📚 SDLC Documentation Root
-│   ├── 00-Project-Foundation/         # Stage 00: WHY?
+│   ├── 00-foundation/                 # Stage 00: WHY?
 │   │   ├── problem-statement.md       # Design Thinking output
 │   │   ├── business-case.md           # ROI justification
 │   │   └── user-research/             # Empathy maps, personas
 │   │
-│   ├── 01-Planning-Analysis/          # Stage 01: WHAT?
+│   ├── 01-planning/                   # Stage 01: WHAT?
 │   │   ├── requirements.md            # Functional requirements
 │   │   ├── user-stories.md            # User stories/epics
 │   │   └── roadmap.md                 # Product roadmap
 │   │
-│   ├── 02-Architecture-Design/        # Stage 02: HOW?
+│   ├── 02-design/                     # Stage 02: HOW?
 │   │   ├── architecture.md            # System architecture
 │   │   ├── ADRs/                      # Architecture Decision Records
 │   │   └── api-design.md              # API specifications
 │   │
-│   ├── 03-Development/                # Stage 03: BUILD
+│   ├── 03-build/                      # Stage 03: BUILD
 │   │   ├── coding-standards.md        # Team conventions
 │   │   ├── setup-guide.md             # Dev environment setup
 │   │   └── sprint-logs/               # Sprint documentation
 │   │
-│   ├── 04-Quality-Assurance/          # Stage 04: TEST
+│   ├── 04-test/                       # Stage 04: TEST
 │   │   ├── test-strategy.md           # Testing approach
 │   │   ├── test-cases/                # Test case documentation
 │   │   └── qa-reports/                # QA findings
 │   │
-│   ├── 05-Deployment/                 # Stage 05: DEPLOY
+│   ├── 05-deploy/                     # Stage 05: DEPLOY
 │   │   ├── deployment-guide.md        # How to deploy
 │   │   ├── release-notes/             # Version release notes
 │   │   └── rollback-procedures.md     # Rollback steps
 │   │
-│   ├── 06-Operations/                 # Stage 06: OPERATE
+│   ├── 06-operate/                    # Stage 06: OPERATE
 │   │   ├── runbooks/                  # Operational procedures
 │   │   ├── monitoring.md              # Monitoring setup
 │   │   └── incident-reports/          # Post-mortems
 │   │
-│   ├── 07-Integration/                # Stage 07: INTEGRATE
+│   ├── 07-integrate/                  # Stage 07: INTEGRATE
 │   │   ├── api-contracts/             # External API docs
 │   │   ├── integration-guides/        # How to integrate
 │   │   └── third-party/               # Vendor integrations
 │   │
-│   ├── 08-Team-Management/            # Stage 08: COLLABORATE
+│   ├── 08-collaborate/                # Stage 08: COLLABORATE
 │   │   ├── team-protocols.md          # Team agreements
 │   │   ├── meeting-notes/             # Meeting records
 │   │   └── onboarding.md              # New member guide
 │   │
-│   └── 09-Executive-Reports/          # Stage 09: GOVERN
+│   └── 09-govern/                     # Stage 09: GOVERN
 │       ├── compliance/                # Compliance evidence
 │       ├── metrics/                   # KPI dashboards
 │       └── audit-logs/                # Audit trail
@@ -403,11 +403,28 @@ your-project/
 └── README.md                          # 📖 Project Overview
 ```
 
+### Folder Naming Convention
+
+**SDLC 5.0+ uses shortened folder names** (not long descriptive names):
+
+| Stage | Folder Name | NOT |
+|-------|-------------|-----|
+| 00 WHY | `00-foundation` | ~~00-Project-Foundation~~ |
+| 01 WHAT | `01-planning` | ~~01-Planning-Analysis~~ |
+| 02 HOW | `02-design` | ~~02-Architecture-Design~~ |
+| 03 BUILD | `03-build` | ~~03-Development~~ |
+| 04 TEST | `04-test` | ~~04-Quality-Assurance~~ |
+| 05 DEPLOY | `05-deploy` | ~~05-Deployment~~ |
+| 06 OPERATE | `06-operate` | ~~06-Operations~~ |
+| 07 INTEGRATE | `07-integrate` | ~~07-Integration~~ |
+| 08 COLLABORATE | `08-collaborate` | ~~08-Team-Management~~ |
+| 09 GOVERN | `09-govern` | ~~09-Executive-Reports~~ |
+
 ### Minimum Structure by Tier
 
 | Tier | Required Folders | Optional |
 |------|-----------------|----------|
-| **LITE** | `docs/00-Project-Foundation/`, `README.md` | All others |
+| **LITE** | `docs/00-foundation/`, `README.md` | All others |
 | **STANDARD** | `docs/00-05/`, `CLAUDE.md`, `.sdlc/` | `docs/06-09/` |
 | **PROFESSIONAL** | `docs/00-07/`, full `.sdlc/` | `docs/08-09/` |
 | **ENTERPRISE** | **ALL folders** (00-09) | None - all required |
@@ -416,21 +433,36 @@ your-project/
 
 **LITE (1 command):**
 ```bash
-mkdir -p docs/00-Project-Foundation && echo "# Problem Statement" > docs/00-Project-Foundation/problem-statement.md
+mkdir -p docs/00-foundation && echo "# Problem Statement" > docs/00-foundation/problem-statement.md
 ```
 
 **STANDARD (copy-paste):**
 ```bash
-mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design,03-Development,04-Quality-Assurance,05-Deployment}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy}
+mkdir -p docs/02-design/ADRs
 mkdir -p .sdlc/checklists
 ```
 
-**PROFESSIONAL/ENTERPRISE (copy-paste):**
+**PROFESSIONAL (copy-paste):**
 ```bash
-mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design,03-Development,04-Quality-Assurance,05-Deployment,06-Operations,07-Integration,08-Team-Management,09-Executive-Reports}
-mkdir -p docs/02-Architecture-Design/ADRs
-mkdir -p docs/06-Operations/runbooks
-mkdir -p docs/09-Executive-Reports/{compliance,metrics,audit-logs}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate}
+mkdir -p docs/02-design/ADRs
+mkdir -p docs/06-operate/runbooks
+mkdir -p .sdlc/checklists
+```
+
+**ENTERPRISE (copy-paste):**
+```bash
+mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate,08-collaborate,09-govern}
+mkdir -p docs/00-foundation/user-research
+mkdir -p docs/02-design/ADRs
+mkdir -p docs/03-build/sprint-logs
+mkdir -p docs/04-test/{test-cases,qa-reports}
+mkdir -p docs/05-deploy/release-notes
+mkdir -p docs/06-operate/{runbooks,incident-reports}
+mkdir -p docs/07-integrate/{api-contracts,third-party}
+mkdir -p docs/08-collaborate/meeting-notes
+mkdir -p docs/09-govern/{compliance,metrics,audit-logs}
 mkdir -p .sdlc/checklists
 ```
 
@@ -442,7 +474,7 @@ mkdir -p .sdlc/checklists
 | **TypeScript** | `camelCase` | 50 chars | `userService.ts` |
 | **React** | `PascalCase` | 50 chars | `UserDashboard.tsx` |
 | **Markdown** | `kebab-case` | 60 chars | `deployment-guide.md` |
-| **Folders** | `kebab-case` or `PascalCase` | 30 chars | `sprint-logs/` |
+| **Folders** | `kebab-case` | 30 chars | `sprint-logs/` |
 
 ### Validation
 
