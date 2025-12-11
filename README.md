@@ -1,13 +1,86 @@
-# 🚀 SDLC 5.0.0 Universal Framework
-## Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence + Governance & Compliance
+# 🚀 SDLC 5.1.0 Universal Framework
+## Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence + SASE (SE 3.0) Integration
 
-**Current Version**: 5.0.0 (10-Stage + Governance & Compliance + 4-Tier Classification)
+**Current Version**: 5.1.0 (10-Stage + Governance & Compliance + SASE/SE 3.0 + Agentic Maturity)
 **Status**: ACTIVE - PRODUCTION READY
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
-**Evolution**: SDLC 1.0 (Jun) → 4.9.1 (Nov 29) → **5.0.0 (Dec 6, 2025)**
-**Key Enhancement**: Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices
+**Evolution**: SDLC 1.0 (Jun) → 4.9.1 (Nov 29) → 5.0.0 (Dec 6) → **5.1.0 (Dec 11, 2025)**
+**Key Enhancement**: SASE Framework Integration + Agentic Maturity Model + 6 SASE Artifact Templates
 **Proven On**: BFlow ($43M value, 827:1 ROI), NQH-Bot (₫15B+, 83% usage), MTEP (<30 min PaaS)
 **ROI**: 14,822% combined (validated across 3 platforms)
+
+---
+
+## 🎯 What's New in SDLC 5.1.0 (December 11, 2025)
+
+### SASE (Software Agentic Software Engineering) Integration
+
+**SDLC 5.1.0** introduces comprehensive **SE 3.0 SASE Framework** integration based on arXiv:2509.06216v2:
+
+```yaml
+New Documents in 02-Core-Methodology/:
+  - SDLC-Agentic-Core-Principles.md    # SE4H/SE4A distinction, 7 Agentic Principles
+
+New Documents in 07-Continuous-Improvement/:
+  - SDLC-Agentic-Maturity-Model.md     # 4-Level progression (L0→L3)
+
+New Templates in 03-Templates-Tools/SASE-Artifacts/:
+  - 01-BriefingScript-Template.yaml    # Human → Agent task specification
+  - 02-LoopScript-Template.yaml        # Agent execution plan
+  - 03-MentorScript-Template.md        # Coding standards for agents
+  - 04-CRP-Template.md                 # Consultation Request Protocol
+  - 05-MRP-Template.md                 # Merge-Readiness Pack (5-point evidence)
+  - 06-VCR-Template.md                 # Version Controlled Resolution
+```
+
+### SE4H vs SE4A Distinction (NEW)
+
+| Aspect | SE4H (Agent Coach) | SE4A (Agent Executor) |
+|--------|-------------------|----------------------|
+| **Role** | Guide & supervise agents | Implement human intent |
+| **Primary Skills** | Intent specification, validation | Code generation, consistency |
+| **Responsibilities** | Define requirements, approve | Execute tasks, provide evidence |
+| **Artifacts Created** | BRS, MTS, VCR | LPS, CRP, MRP |
+| **Decision Authority** | FINAL (veto power) | NONE (propose only) |
+
+### Agentic Maturity Model (NEW)
+
+| Level | Name | Key Characteristic | Artifacts Used |
+|-------|------|-------------------|----------------|
+| **0** | Tool-Assisted | AI as autocomplete | None (ad-hoc prompts) |
+| **1** | Agent-Assisted | Structured handoff | BRS, MRP, VCR (3 core) |
+| **2** | Structured Agentic | Full SASE workflow | All 6 artifacts + ACE/AEE |
+| **3** | Lifecycle Agentic | Proactive agents | Full + Memory + Proactive |
+
+### The 7 Agentic Principles (NEW)
+
+1. **Brief-First** - BriefingScript before any agent work
+2. **Evidence-Based MRP** - 5-point evidence for every merge
+3. **Human Accountability** - Human responsible for shipped code
+4. **Consultation Protocol** - CRP when agent is uncertain
+5. **Mentorship-as-Code** - Standards in machine-readable MentorScript
+6. **Dual Workbenches** - ACE for humans, AEE for agents
+7. **Gradual Autonomy** - Trust earned from L0→L3
+
+### SASE Disciplines × SDLC 5.0.0 Stages
+
+```yaml
+Stage 00 (Foundation): No SASE (human-only)
+Stage 01 (Planning):   BriefingEng (create BRS)
+Stage 02 (Design):     ALE + ATIE (LPS, MTS design)
+Stage 03 (Integration): ATLE (build ACE/AEE)
+Stage 04 (Build):      ALE + ATME (execute LPS, generate MRP)
+Stage 05 (Test):       ATME (validation, coverage)
+Stage 06 (Deploy):     ATME + AGE (deployment verification)
+Stage 07 (Operate):    ATME + ATIE (monitoring, CRP)
+Stage 08 (Collaborate): ATIE + AGE (code review, explanation)
+Stage 09 (Govern):     AGE (policy, audit, compliance)
+```
+
+**Documentation**:
+- [SDLC-Agentic-Core-Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
+- [SDLC-Agentic-Maturity-Model](./07-Continuous-Improvement/SDLC-Agentic-Maturity-Model.md)
+- [SASE-Artifacts](./03-Templates-Tools/SASE-Artifacts/)
 
 ---
 
@@ -635,7 +708,9 @@ AI+Human Metrics (Maintained):
 
 **SDLC 5.0 = SDLC 4.9 + Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices**
 
-**Not a replacement. An evolution. From concept to production excellence.**
+**SDLC 5.1 = SDLC 5.0 + SASE Framework (SE 3.0) + Agentic Maturity Model + 6 SASE Artifact Templates**
+
+**Not a replacement. An evolution. From concept to AI+Human agentic excellence.**
 
 ---
 
@@ -667,18 +742,20 @@ AI+Human Metrics (Maintained):
 
 **SDLC 5.0**: Everything in 4.9 + Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices (CMMI, SAFe, DORA, OWASP, NIST)
 
+**SDLC 5.1**: Everything in 5.0 + SASE Framework (SE 3.0) + Agentic Maturity Model (L0→L3) + 6 SASE Artifact Templates + SE4H/SE4A Distinction
+
 ---
 
 ***"The future isn't about humans OR AI. It's about humans AND AI building the RIGHT things with COMPLETE lifecycle excellence AND governance compliance."***
 
-**SDLC 5.0 is the framework for that future.** 🚀
+**SDLC 5.1 is the framework for that future - where humans and AI agents collaborate as SE4H (Agent Coaches) and SE4A (Agent Executors).** 🚀
 
 ---
 
-**Current Version**: 5.0.0 (10-Stage + Governance & Compliance + 4-Tier Classification)
+**Current Version**: 5.1.0 (10-Stage + Governance & Compliance + SASE/SE 3.0 + Agentic Maturity)
 **Status**: ACTIVE - PRODUCTION READY
-**Evolution**: SDLC 1.0 (Jun) → 4.9.1 (Nov 29) → **5.0.0 (Dec 6, 2025)**
-**Last Updated**: December 6, 2025
+**Evolution**: SDLC 1.0 (Jun) → 4.9.1 (Nov 29) → 5.0.0 (Dec 6) → **5.1.0 (Dec 11, 2025)**
+**Last Updated**: December 11, 2025
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **Framework Naming Compliance**: ✅ SDLC Document + Code File Naming Standards (Permanent, Feature-Based)
 
@@ -687,13 +764,15 @@ AI+Human Metrics (Maintained):
 **Start Here**:
 1. 📖 [SDLC Executive Summary](./01-Overview/SDLC-Executive-Summary.md) - Complete 10-stage + Governance overview
 2. 🎯 [10-Stage Methodology](./02-Core-Methodology/SDLC-Core-Methodology.md) - WHY → GOVERN framework
-3. 📋 [Governance & Compliance](./02-Core-Methodology/Governance-Compliance/) - Quality gates, Security, Observability (NEW in 5.0)
-4. 📊 [Quality Gates](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md) - G0.1→G3, DORA metrics (NEW in 5.0)
-5. 🔒 [Security Gates](./02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md) - SBOM, OWASP ASVS (NEW in 5.0)
-6. 📝 [Documentation Standards](./02-Core-Methodology/Documentation-Standards/) - Naming conventions
+3. 🤖 [SASE Core Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - SE4H/SE4A, 7 Agentic Principles (NEW in 5.1)
+4. 📈 [Agentic Maturity Model](./07-Continuous-Improvement/SDLC-Agentic-Maturity-Model.md) - L0→L3 progression (NEW in 5.1)
+5. 📦 [SASE Artifact Templates](./03-Templates-Tools/SASE-Artifacts/) - BRS, LPS, MTS, CRP, MRP, VCR (NEW in 5.1)
+6. 📋 [Governance & Compliance](./02-Core-Methodology/Governance-Compliance/) - Quality gates, Security, Observability
+7. 📝 [Documentation Standards](./02-Core-Methodology/Documentation-Standards/) - Naming conventions
 
 ---
 
-***"Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence + Governance & Compliance"*** ⚔️
-***"System Thinking + Design Thinking + AI + Complete Lifecycle + Governance = Sustainable Excellence"*** ✨
+***"Built BY Battle, FOR Victory - Complete 10-Stage AI+Human Excellence + SASE/SE 3.0 Integration"*** ⚔️
+***"SE4H (Agent Coach) + SE4A (Agent Executor) + 6 SASE Artifacts = Agentic Excellence"*** ✨
 ***"WHY → WHAT → HOW → BUILD → TEST → DEPLOY → OPERATE → INTEGRATE → COLLABORATE → GOVERN"*** 🎯
+***"Brief-First → Evidence-Based → Human Accountability → Gradual Autonomy"*** 🤖
