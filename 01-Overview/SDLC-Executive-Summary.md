@@ -211,27 +211,27 @@ This became the catalyst for **SDLC 4.9 enhancement** - expanding from 4 stages 
 │                                                 - technical-design/     │
 │                                                 - ADRs/                 │
 │                                                                         │
-│ 4. BUILD         → Stage 03: Development     → 03-build/               │
+│ 4. BUILD         → Stage 04: Development     → 04-build/               │
 │    Xây dựng         Code, Implementation        - backend/             │
 │                                                 - frontend/             │
 │                                                 - sprint-logs/          │
 │                                                                         │
-│ 5. TEST          → Stage 04: Quality         → 04-test/                │
+│ 5. TEST          → Stage 05: Quality         → 05-test/                │
 │    Kiểm thử         QA, Validation              - test-strategy/       │
 │                                                 - test-cases/           │
 │                                                 - qa-reports/           │
 │                                                                         │
-│ 6. DEPLOY        → Stage 05: Deployment      → 05-deploy/              │
+│ 6. DEPLOY        → Stage 06: Deployment      → 06-deploy/              │
 │    Triển khai       Go-Live, Release            - deployment-plans/    │
 │                                                 - release-notes/        │
 │                                                 - rollback-procedures/  │
 │                                                                         │
-│ 7. OPERATE       → Stage 06: Operations      → 06-operate/             │
+│ 7. OPERATE       → Stage 07: Operations      → 07-operate/             │
 │    Vận hành         Maintain, Support           - runbooks/             │
 │                                                 - monitoring/           │
 │                                                 - incident-reports/     │
 │                                                                         │
-│ 8. INTEGRATE     → Stage 07: Integration     → 07-integrate/           │
+│ 8. INTEGRATE     → Stage 03: Integration     → 03-integrate/           │
 │    Tích hợp         APIs, Systems               - api-contracts/       │
 │                                                 - third-party/          │
 │                                                 - integration-guides/   │
@@ -410,7 +410,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
 
 ---
 
-#### **Stage 03: DEVELOPMENT (BUILD)** ✅ *Enhanced Detail*
+#### **Stage 04: DEVELOPMENT (BUILD)** ✅ *Enhanced Detail*
 
 **Purpose**: Implementation with AI+Human orchestration
 
@@ -438,7 +438,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Code review (peer review, AI-assisted)
    - CI/CD pipeline (automated testing, deployment)
 
-**Example**: `/docs/03-build/`
+**Example**: `/docs/04-build/`
 - Implementation: OAuth2 Provider (265K req/s capacity)
 - Stack: FastAPI + Django + PostgreSQL + Redis + Kafka
 - Value: $6.23M (infrastructure + OAuth2 A+ 103%)
@@ -463,7 +463,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
 
 ### STAGES 04-06: Quality & Deployment (NEW - Enhanced Focus)
 
-#### **Stage 04: TESTING (TEST)** 🆕 *New Comprehensive Detail*
+#### **Stage 05: TESTING (TEST)** 🆕 *New Comprehensive Detail*
 
 **Purpose**: Comprehensive quality validation before deployment
 
@@ -493,7 +493,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - System Thinking: Root cause analysis for failures
    - Design Thinking: User feedback integration
 
-**Example**: `/docs/04-test/`
+**Example**: `/docs/05-test/`
 - Tests: 639 automated tests (209 AI + 430 Django)
 - Coverage: 95%+ model, 90%+ API
 - UAT: 3 pilot customers, 15 scenarios, 8.5+/10 satisfaction
@@ -526,7 +526,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
 
 ---
 
-#### **Stage 05: DEPLOYMENT (DEPLOY)** 🆕 *New Comprehensive Detail*
+#### **Stage 06: DEPLOYMENT (DEPLOY)** 🆕 *New Comprehensive Detail*
 
 **Purpose**: Production go-live execution with zero downtime
 
@@ -558,7 +558,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Canary deployment (1% traffic first)
    - Emergency rollback ready (<5 min execution)
 
-**Example**: `/docs/05-deploy/`
+**Example**: `/docs/06-deploy/`
 - Plan: December 19-20, 2025 soft launch
 - Strategy: Graduated rollout (3 pilot customers)
 - Execution:
@@ -600,7 +600,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
 
 ---
 
-#### **Stage 06: OPERATIONS (OPERATE)** 🆕 *New Comprehensive Detail*
+#### **Stage 07: OPERATIONS (OPERATE)** 🆕 *New Comprehensive Detail*
 
 **Purpose**: Sustain production excellence with continuous improvement
 
@@ -668,7 +668,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
      * Root cause (5 Whys)
      * Prevention plan (update runbooks)
 
-**Example**: `/docs/06-operate/`
+**Example**: `/docs/07-operate/`
 - Monitoring: Grafana dashboards (10+ panels)
 - Uptime: 99.9%+ target
 - API Performance: <50ms p50, <100ms p95
@@ -708,7 +708,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
 
 ### STAGES 07-09: Integration & Collaboration (NEW - Cross-Cutting Concerns)
 
-#### **Stage 07: INTEGRATION (INTEGRATE)** 🆕 *New Critical Focus*
+#### **Stage 03: INTEGRATION (INTEGRATE)** 🆕 *New Critical Focus*
 
 **Purpose**: Seamless system and service integration
 
@@ -748,7 +748,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - File-based integration (CSV, Excel imports)
    - Scheduled batch jobs (nightly sync)
 
-**Example**: `/docs/07-integrate/`
+**Example**: `/docs/03-integrate/`
 - OAuth2: 265,000 req/s capacity ✅
 - Token introspection: 8ms avg (12,500 req/s) ✅
 - Token revocation: 12ms avg (8,333 req/s) ✅
@@ -1023,13 +1023,13 @@ Detailed Flow:
      ↓ Design Thinking: IDEATE (start)
 02. HOW?        (Design)
      ↓ Design Thinking: IDEATE (complete)
-03. BUILD       (Development)
+04. BUILD       (Development)
      ↓ Design Thinking: PROTOTYPE + TEST
-04. TEST        (Quality Assurance)
+05. TEST        (Quality Assurance)
      ↓ Validate: Unit + Integration + UAT
-05. DEPLOY      (Go-Live)
+06. DEPLOY      (Go-Live)
      ↓ Blue-green deployment, War room
-06. OPERATE     (Production)
+07. OPERATE     (Production)
      ↓ Monitor, Maintain, Support
      │
      ├→ 07. INTEGRATE  (APIs, Events, Data)
@@ -1076,31 +1076,31 @@ Detailed Flow:
    Design Thinking: IDEATE complete (technical approach finalized)
 
 03. DEVELOPMENT (BUILD) - Sprint 29-30 (Nov 6-17):
-   Document: /docs/03-build/backend/OAUTH2-IMPLEMENTATION.md
+   Document: /docs/04-build/backend/OAUTH2-IMPLEMENTATION.md
    Deliverable: OAuth2 Provider + 6 Microservices operational
    Value: $6.23M (infrastructure + OAuth2 A+ 103%)
    Design Thinking: PROTOTYPE (code prototype, working features)
 
-04. TESTING (TEST) - Sprint 31-32 (Nov 10 - Dec 12):
-   Document: /docs/04-test/qa-reports/SPRINT-31-TEST-RESULTS.md
+05. TESTING (TEST) - Sprint 31-32 (Nov 10 - Dec 12):
+   Document: /docs/05-test/qa-reports/SPRINT-31-TEST-RESULTS.md
    Deliverable: 639 tests (209 AI + 430 Django), 95%+ coverage
    Value: $17.42M (GAP-001/002 + Agent Gateway Wave 0-1)
    Design Thinking: TEST (5-8 user validation, iterate based on feedback)
 
-05. DEPLOYMENT (DEPLOY) - Dec 13-20:
-   Document: /docs/05-deploy/deployment-plans/SPRINT-32-FINAL-GOLIVE-PLAN.md
+06. DEPLOYMENT (DEPLOY) - Dec 13-20:
+   Document: /docs/06-deploy/deployment-plans/SPRINT-32-FINAL-GOLIVE-PLAN.md
    Deliverable: December 19-20 Soft Launch (3 pilot customers live)
    Value: $18,880 investment, 99.5% → 100% confidence
    Success: NQH (Dec 19 9AM), Galaxy (Dec 20 9AM), CMCSISG (Dec 20 1PM)
 
 06. OPERATIONS (OPERATE) - Sprint 33+ (Dec 16-29, ongoing):
-   Document: /docs/06-operate/monitoring/GRAFANA-DASHBOARDS.md
+   Document: /docs/07-operate/monitoring/GRAFANA-DASHBOARDS.md
    Deliverable: 24/7 war room, 99.9%+ uptime, <50ms API response
    Value: $4.65M (stabilization + Agent Gateway Wave 3)
    Metrics: 8.5+/10 customer satisfaction, zero P0 incidents
 
 07. INTEGRATION (INTEGRATE) - Sprint 31 (OAuth2 focus):
-   Document: /docs/07-integrate/api-contracts/OAUTH2-API-REFERENCE.md
+   Document: /docs/03-integrate/api-contracts/OAUTH2-API-REFERENCE.md
    Deliverable: 450+ API endpoints, OAuth2 265K req/s capacity
    Value: Token introspection 8ms, revocation 12ms, rate limiting <2ms
    Achievement: Multi-tenant isolation 100% (zero cross-tenant leaks)
@@ -1251,10 +1251,10 @@ Year 1 Net Benefit: $1,334,000
 ### What's NEW in SDLC 4.9
 
 **10-Stage Complete Lifecycle** (60% of new content):
-- ✅ Stage 04: TEST - Comprehensive quality validation
-- ✅ Stage 05: DEPLOY - Production go-live execution
-- ✅ Stage 06: OPERATE - Sustain production excellence
-- ✅ Stage 07: INTEGRATE - Seamless system integration
+- ✅ Stage 05: TEST - Comprehensive quality validation
+- ✅ Stage 06: DEPLOY - Production go-live execution
+- ✅ Stage 07: OPERATE - Sustain production excellence
+- ✅ Stage 03: INTEGRATE - Seamless system integration
 - ✅ Stage 08: COLLABORATE - Effective team coordination
 - ✅ Stage 09: GOVERN - Strategic oversight and compliance
 

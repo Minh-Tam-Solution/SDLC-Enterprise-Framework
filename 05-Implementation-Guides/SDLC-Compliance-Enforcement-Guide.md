@@ -48,9 +48,9 @@ FORBIDDEN:
 Correct Placement:
   Sprint Documents: /docs/08-collaborate/sprint-logs/
   Technical Designs: /docs/02-design/[subfolder]/
-  Test Reports: /docs/04-test/qa-reports/
+  Test Reports: /docs/05-test/qa-reports/
   Phase Planning: /docs/01-planning/project-planning/
-  API Documentation: /docs/07-integrate/api-contracts/
+  API Documentation: /docs/03-integrate/api-contracts/
   Team Guidelines: /docs/08-collaborate/
 
 Common Violations:
@@ -197,7 +197,7 @@ Version: [Platform] 2.0
 Date: [current_date]
 Author: [team_member]
 SDLC: 5.0.0 Complete Lifecycle Compliant
-SDLC Stage: Stage 03 (BUILD)
+SDLC Stage: Stage 04 (BUILD)
 SDLC Tier: [LITE|STANDARD|PROFESSIONAL|ENTERPRISE]
 Zero Mock: Verified ✓
 """
@@ -211,7 +211,7 @@ Zero Mock: Verified ✓
  * Date: [current_date]
  * Author: [team_member]
  * SDLC: 5.0.0 Complete Lifecycle Compliant
- * SDLC Stage: Stage 03 (BUILD)
+ * SDLC Stage: Stage 04 (BUILD)
  * SDLC Tier: [LITE|STANDARD|PROFESSIONAL|ENTERPRISE]
  * Zero Mock: Verified ✓
  */

@@ -242,13 +242,13 @@ Combined:
 - **Stage 00 (WHY)**: Foundation - Problem validation, user research
 - **Stage 01 (WHAT)**: Planning - Requirements, acceptance criteria
 - **Stage 02 (HOW)**: Design - Architecture, ADRs, design decisions
-- **Stage 03 (BUILD)**: Development - Implementation, AI orchestration
+- **Stage 04 (BUILD)**: Development - Implementation, AI orchestration
 
 **NEW Stages (4.9)**:
-- **Stage 04 (TEST)**: Quality Assurance - Test generation, UAT, performance
-- **Stage 05 (DEPLOY)**: Deployment - Zero downtime, automated rollback
-- **Stage 06 (OPERATE)**: Operations - Monitoring, incident response, SLOs
-- **Stage 07 (INTEGRATE)**: Integration - API contracts, microservices
+- **Stage 05 (TEST)**: Quality Assurance - Test generation, UAT, performance
+- **Stage 06 (DEPLOY)**: Deployment - Zero downtime, automated rollback
+- **Stage 07 (OPERATE)**: Operations - Monitoring, incident response, SLOs
+- **Stage 03 (INTEGRATE)**: Integration - API contracts, microservices
 - **Stage 08 (COLLABORATE)**: Team Management - Documentation, meetings
 - **Stage 09 (GOVERN)**: Governance - Compliance, audit, regulations
 
@@ -270,22 +270,22 @@ Combined:
 
 #### 3. 30+ AI Tools (15 NEW for Stages 04-09)
 
-**Stage 04 (TEST)** - 3 tools:
+**Stage 05 (TEST)** - 3 tools:
 - test-case-generator.md (90% time savings, 150+ cases)
 - uat-script-creator.md (85% savings, 94% satisfaction)
 - performance-test-analyzer.md (80% savings, P95 <45ms)
 
-**Stage 05 (DEPLOY)** - 3 tools:
+**Stage 06 (DEPLOY)** - 3 tools:
 - deployment-checklist-generator.md (85% savings, zero downtime)
 - rollback-plan-creator.md (90% savings, <3 min rollback)
 - release-notes-writer.md (95% savings)
 
-**Stage 06 (OPERATE)** - 3 tools:
+**Stage 07 (OPERATE)** - 3 tools:
 - incident-response-guide.md (80% savings, <2hr resolution)
 - monitoring-setup-helper.md (85% savings, 99.95% uptime)
 - post-mortem-analyzer.md (90% savings, blameless culture)
 
-**Stage 07 (INTEGRATE)** - 2 tools:
+**Stage 03 (INTEGRATE)** - 2 tools:
 - api-contract-designer.md (85% savings, 120+ contracts)
 - integration-test-generator.md (90% savings, 98% pass rate)
 
@@ -303,11 +303,11 @@ Combined:
 - `/00-Foundation/` → Stage 00 (WHY)
 - `/01-Planning/` → Stage 01 (WHAT)
 - `/02-Architecture/` → Stage 02 (HOW)
-- `/03-Development/` → Stage 03 (BUILD)
-- `/04-Testing/` → Stage 04 (TEST)
-- `/05-Deployment/` → Stage 05 (DEPLOY)
-- `/06-Operations/` → Stage 06 (OPERATE)
-- `/07-Integration/` → Stage 07 (INTEGRATE)
+- `/03-Development/` → Stage 04 (BUILD)
+- `/04-Testing/` → Stage 05 (TEST)
+- `/05-Deployment/` → Stage 06 (DEPLOY)
+- `/06-Operations/` → Stage 07 (OPERATE)
+- `/07-Integration/` → Stage 03 (INTEGRATE)
 - `/08-Team-Management/` → Stage 08 (COLLABORATE)
 - `/09-Governance/` → Stage 09 (GOVERN)
 
@@ -361,10 +361,10 @@ Improvement: 2x ROI increase (7,322% → 14,822%)
 - Improvement: 10x fewer incidents
 
 **Complete Lifecycle Value**:
-- **Stage 04 (TEST)**: $50K+ bugs prevented, 94% UAT satisfaction
-- **Stage 05 (DEPLOY)**: 10x faster iteration, zero downtime
-- **Stage 06 (OPERATE)**: 99.95% uptime, <2hr incident resolution
-- **Stage 07 (INTEGRATE)**: 120+ API contracts, 2 weeks saved per developer
+- **Stage 05 (TEST)**: $50K+ bugs prevented, 94% UAT satisfaction
+- **Stage 06 (DEPLOY)**: 10x faster iteration, zero downtime
+- **Stage 07 (OPERATE)**: 99.95% uptime, <2hr incident resolution
+- **Stage 03 (INTEGRATE)**: 120+ API contracts, 2 weeks saved per developer
 - **Stage 08 (COLLABORATE)**: 150+ pages docs, 10+ hours/week saved
 - **Stage 09 (GOVERN)**: $100K+ compliance violations prevented
 

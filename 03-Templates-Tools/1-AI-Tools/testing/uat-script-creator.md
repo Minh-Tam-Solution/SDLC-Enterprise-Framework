@@ -1,4 +1,4 @@
-# 👥 AI UAT Script Creator - Stage 04 (TEST)
+# 👥 AI UAT Script Creator - Stage 05 (TEST)
 ## User Acceptance Testing Script Generator
 
 **Version**: 5.0.0  
@@ -64,7 +64,7 @@ Generate a UAT script with:
    - Would you use this? (Yes/No/Maybe)
 
 Format: Ready-to-use script for facilitator
-Target: 80%+ user satisfaction for Stage 05 (DEPLOY) approval
+Target: 80%+ user satisfaction for Stage 06 (DEPLOY) approval
 ```
 
 ---

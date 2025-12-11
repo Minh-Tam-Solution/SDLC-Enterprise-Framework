@@ -13,7 +13,7 @@ Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained D
 - Stage 00 (WHY): Project Foundation
 - Stage 01 (WHAT): Planning & Analysis
 - Stage 02 (HOW): Design & Architecture
-- Stage 03 (BUILD): Development & Implementation
+- Stage 04 (BUILD): Development & Implementation
 - Stage 04 (TEST): Testing & Quality
 - Stage 05 (DEPLOY): Deployment & Release
 - Stage 06 (OPERATE): Operations Management

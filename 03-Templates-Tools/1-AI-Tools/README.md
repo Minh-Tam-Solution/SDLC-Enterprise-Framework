@@ -100,27 +100,27 @@ AI tools scale with your team size:
 ├── design-to-code/              # Stage 02 (HOW?)
 │   └── universal-prompts.md     # Design-to-code automation
 │
-├── code-review/                 # Stage 03 (BUILD)
+├── code-review/                 # Stage 04 (BUILD)
 │   ├── tier-1-manual-prompts.md # Manual + AI assistance
 │   ├── tier-2-ai-powered.md     # Full AI review
 │   └── tier-3-automation.md     # Automated review setup
 │
-├── testing/                     # Stage 04 (TEST)
+├── testing/                     # Stage 05 (TEST)
 │   ├── test-case-generator.md   # Functional/integration tests
 │   ├── uat-script-creator.md    # User acceptance testing
 │   └── performance-test-analyzer.md # Load/stress testing
 │
-├── deployment/                  # Stage 05 (DEPLOY)
+├── deployment/                  # Stage 06 (DEPLOY)
 │   ├── deployment-checklist-generator.md # Pre/post deploy checks
 │   ├── rollback-plan-creator.md # Rollback procedures
 │   └── release-notes-writer.md  # Release documentation
 │
-├── operations/                  # Stage 06 (OPERATE)
+├── operations/                  # Stage 07 (OPERATE)
 │   ├── monitoring-setup-helper.md # Dashboards, alerts, SLOs
 │   ├── incident-response-guide.md # Incident handling
 │   └── post-mortem-analyzer.md  # Blameless post-mortems
 │
-├── integration/                 # Stage 07 (INTEGRATE)
+├── integration/                 # Stage 03 (INTEGRATE)
 │   ├── api-contract-designer.md # OpenAPI, GraphQL specs
 │   └── integration-test-generator.md # Contract testing
 │
@@ -275,7 +275,7 @@ AI Prompt Pattern:
 
 ---
 
-### Stage 03: Development (BUILD)
+### Stage 04: Development (BUILD)
 
 **Purpose**: Ensure code quality before merge
 
@@ -299,7 +299,7 @@ Score: X/100 with specific fixes"
 
 ---
 
-### Stage 04: Quality (TEST)
+### Stage 05: Quality (TEST)
 
 **Purpose**: Comprehensive testing automation
 
@@ -361,7 +361,7 @@ AI Prompt Pattern:
 
 ---
 
-### Stage 07: Integration (INTEGRATE)
+### Stage 03: Integration (INTEGRATE)
 
 **Purpose**: Seamless system connections
 

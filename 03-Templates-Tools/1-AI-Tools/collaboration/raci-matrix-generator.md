@@ -167,7 +167,7 @@ Output Format:
   | Security Baseline | C | I | A | C | C | R |
   | **G2 Sign-off** | A | C | R | I | I | C |
 
-  ## Stage 03: Development (BUILD)
+  ## Stage 04: Development (BUILD)
 
   | Deliverable | PO | PM | TL | Dev | QA | Ops |
   |-------------|----|----|----|----|----|----|
@@ -183,7 +183,7 @@ Output Format:
   | Test Execution | I | I | I | C | A, R | I |
   | Bug Fixes | I | C | A | R | C | I |
 
-  ## Stage 05: Deployment (DEPLOY)
+  ## Stage 06: Deployment (DEPLOY)
 
   | Deliverable | PO | PM | TL | Dev | QA | Ops |
   |-------------|----|----|----|----|----|----|
@@ -191,7 +191,7 @@ Output Format:
   | Release Notes | C | A, R | C | C | I | I |
   | **G3 Sign-off** | A | R | C | I | C | C |
 
-  ## Stage 06: Operations (OPERATE)
+  ## Stage 07: Operations (OPERATE)
 
   | Deliverable | PO | PM | TL | Dev | QA | Ops |
   |-------------|----|----|----|----|----|----|

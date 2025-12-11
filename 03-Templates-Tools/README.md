@@ -52,11 +52,11 @@ All templates and tools are mapped to the complete 10-stage lifecycle:
 | **00** | WHY? (Foundation) | `00-foundation/` | `design-thinking/` | Problem validation, user research |
 | **01** | WHAT? (Planning) | `01-planning/` | `design-thinking/` | Requirements, roadmap |
 | **02** | HOW? (Design) | `02-design/` | `design-to-code/` | Architecture, components |
-| **03** | BUILD (Development) | `03-build/` | `code-review/` | Production code |
-| **04** | TEST (Quality) | `04-test/` | `testing/` | Test suites, UAT |
-| **05** | DEPLOY (Release) | `05-deploy/` | `deployment/` | Release artifacts |
-| **06** | OPERATE (Production) | `06-operate/` | `operations/` | Monitoring, incidents |
-| **07** | INTEGRATE (Systems) | `07-integrate/` | `integration/` | API contracts |
+| **03** | BUILD (Development) | `04-build/` | `code-review/` | Production code |
+| **04** | TEST (Quality) | `05-test/` | `testing/` | Test suites, UAT |
+| **05** | DEPLOY (Release) | `06-deploy/` | `deployment/` | Release artifacts |
+| **06** | OPERATE (Production) | `07-operate/` | `operations/` | Monitoring, incidents |
+| **07** | INTEGRATE (Systems) | `03-integrate/` | `integration/` | API contracts |
 | **08** | COLLABORATE (Teams) | `08-collaborate/` | `collaboration/` | Protocols, RACI |
 | **09** | GOVERN (Compliance) | `09-govern/` | `governance/` | Audit reports |
 

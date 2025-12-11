@@ -68,7 +68,7 @@ Output Format:
   ### Critical (Must Fix)
   | File/Folder | Rule | Issue | Fix |
   |-------------|------|-------|-----|
-  | docs/04-testing | Missing | Stage folder not found | Create 04-Testing-Quality/ |
+  | docs/05-testing | Missing | Stage folder not found | Create 04-Testing-Quality/ |
   | user_guide.md | Naming | Should be kebab-case | Rename to user-guide.md |
 
   ### Warnings (Should Fix)

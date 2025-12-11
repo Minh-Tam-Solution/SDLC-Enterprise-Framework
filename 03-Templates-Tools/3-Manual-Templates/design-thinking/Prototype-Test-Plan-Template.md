@@ -1,7 +1,7 @@
 # 🛠️ Prototype & Test Plan Template
 
 **Purpose**: Build minimum testable version to validate assumptions quickly
-**When to Use**: PROTOTYPE → TEST phases (SDLC Stage 03 - BUILD)
+**When to Use**: PROTOTYPE → TEST phases (SDLC Stage 04 - BUILD)
 **Time Required**: 1-4 weeks (depending on fidelity)
 **Participants**: Designer, developer, product manager
 
@@ -649,7 +649,7 @@ Please help me:
 
 **Template**: Prototype-Test-Plan-Template
 **Part of**: SDLC 5.0 Design Thinking Framework
-**Phase**: PROTOTYPE → TEST (Stage 03 - BUILD)
+**Phase**: PROTOTYPE → TEST (Stage 04 - BUILD)
 **Version**: 1.0
 **Last Updated**: November 13, 2025
 **License**: MTS Internal Use

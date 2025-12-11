@@ -166,11 +166,11 @@ python3 compliance/sdlc_validator.py /path/to/project
 - Stage 00 (WHY): Problem validation, user research
 - Stage 01 (WHAT): Requirements, acceptance criteria
 - Stage 02 (HOW): Architecture, design decisions
-- Stage 03 (BUILD): Implementation, code quality
-- Stage 04 (TEST): Test coverage, UAT completion
-- Stage 05 (DEPLOY): Deployment readiness, rollback plan
-- Stage 06 (OPERATE): Monitoring, incident response
-- Stage 07 (INTEGRATE): API contracts, integration tests
+- Stage 04 (BUILD): Implementation, code quality
+- Stage 05 (TEST): Test coverage, UAT completion
+- Stage 06 (DEPLOY): Deployment readiness, rollback plan
+- Stage 07 (OPERATE): Monitoring, incident response
+- Stage 03 (INTEGRATE): API contracts, integration tests
 - Stage 08 (COLLABORATE): Documentation, team alignment
 - Stage 09 (GOVERN): Compliance, audit trail
 

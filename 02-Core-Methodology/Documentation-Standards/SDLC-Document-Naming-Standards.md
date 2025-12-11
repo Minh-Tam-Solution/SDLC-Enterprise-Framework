@@ -87,7 +87,7 @@ Incorrect Examples:
 ```
 
 ### 2. Technical Documentation
-**Location**: `/docs/03-build/[category]/`
+**Location**: `/docs/04-build/[category]/`
 
 ```yaml
 Correct Naming Pattern:
@@ -108,7 +108,7 @@ Incorrect Examples:
 ```
 
 ### 3. API Documentation
-**Location**: `/docs/07-integrate/api-contracts/`
+**Location**: `/docs/03-integrate/api-contracts/`
 
 ```yaml
 Correct Naming Pattern:
@@ -232,22 +232,23 @@ Version/Status goes INSIDE document:
 
 ## 🗂️ Folder Naming Standards
 
-### Stage Folders (Level 1) - SDLC 5.0+ Shortened Names
+### Stage Folders (Level 1) - SDLC 5.1.0 Shortened Names
 ```yaml
 Pattern: NN-shortname/
 
 Examples:
-  00-foundation/
-  01-planning/
-  02-design/
-  03-build/
-  04-test/
-  05-deploy/
-  06-operate/
-  07-integrate/
-  08-collaborate/
-  09-govern/
-  99-legacy/
+  00-foundation/    # WHY - Design Thinking + Business Case
+  01-planning/      # WHAT - Requirements + User Stories
+  02-design/        # HOW - Architecture + ADRs
+  03-integrate/     # INTEGRATE - API Contracts + Third-party
+  04-build/         # BUILD - Development + Sprint Plans
+  05-test/          # TEST - QA + Test Reports
+  06-deploy/        # DEPLOY - Release + Deployment Guides
+  07-operate/       # OPERATE - Runbooks + Monitoring
+  08-collaborate/   # COLLABORATE - Team + Training
+  09-govern/        # GOVERN - Compliance + Executive Reports
+  10-archive/       # ARCHIVE - Legacy + Deprecated (project-level)
+  99-legacy/        # Stage-level legacy (inside each stage folder)
 ```
 
 ### Subdirectories (Level 2+)

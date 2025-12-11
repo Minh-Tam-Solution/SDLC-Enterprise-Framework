@@ -36,11 +36,11 @@ Business Question → SDLC Stage → /docs Folder (Shortened Names - SDLC 5.0+)
 WHY?        → Stage 00: Foundation    → 00-foundation/
 WHAT?       → Stage 01: Planning      → 01-planning/
 HOW?        → Stage 02: Design        → 02-design/
-BUILD       → Stage 03: Development   → 03-build/
-TEST        → Stage 04: Quality       → 04-test/
-DEPLOY      → Stage 05: Deployment    → 05-deploy/
-OPERATE     → Stage 06: Operations    → 06-operate/
-INTEGRATE   → Stage 07: Integration   → 07-integrate/
+BUILD       → Stage 04: Development   → 04-build/
+TEST        → Stage 05: Quality       → 05-test/
+DEPLOY      → Stage 06: Deployment    → 06-deploy/
+OPERATE     → Stage 07: Operations    → 07-operate/
+INTEGRATE   → Stage 03: Integration   → 03-integrate/
 COLLABORATE → Stage 08: Team Mgmt     → 08-collaborate/
 GOVERN      → Stage 09: Governance    → 09-govern/
 ```

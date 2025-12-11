@@ -346,11 +346,11 @@ Archive Location: 99-Legacy/SDLC-4.9.1-Archive/
 - `/00-foundation/` - WHY stage (problem validation)
 - `/01-planning/` - WHAT stage (requirements)
 - `/02-design/` - HOW stage (design)
-- `/03-build/` - BUILD stage (implementation)
-- `/04-test/` - TEST stage (quality)
-- `/05-deploy/` - DEPLOY stage (delivery)
-- `/06-operate/` - OPERATE stage (production)
-- `/07-integrate/` - INTEGRATE stage (microservices)
+- `/03-integrate/` - INTEGRATE stage (microservices)
+- `/04-build/` - BUILD stage (implementation)
+- `/05-test/` - TEST stage (quality)
+- `/06-deploy/` - DEPLOY stage (delivery)
+- `/07-operate/` - OPERATE stage (production)
 - `/08-collaborate/` - **COLLABORATE stage (documentation)** ⬅ YOU ARE HERE
 - `/09-govern/` - GOVERN stage (compliance)
 

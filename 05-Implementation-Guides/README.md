@@ -141,8 +141,8 @@
 
 **Use When**: Setting up development environment
 
-**Audience**: All developers  
-**Relates to**: BUILD stage (Stage 03)
+**Audience**: All developers
+**Relates to**: BUILD stage (Stage 04)
 
 ---
 
@@ -216,13 +216,14 @@ Every SDLC 5.1 project **MUST** have the correct folder structure using **shorte
 | `docs/00-foundation/` | ✅ Required | ✅ Required | ✅ Required | ✅ Required |
 | `docs/01-planning/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
 | `docs/02-design/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/03-build/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/04-test/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/05-deploy/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
-| `docs/06-operate/` | ❌ | ❌ | ✅ Required | ✅ Required |
-| `docs/07-integrate/` | ❌ | ❌ | ✅ Required | ✅ Required |
+| `docs/03-integrate/` | ❌ | ❌ | ✅ Required | ✅ Required |
+| `docs/04-build/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/05-test/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/06-deploy/` | ❌ | ✅ Required | ✅ Required | ✅ Required |
+| `docs/07-operate/` | ❌ | ❌ | ✅ Required | ✅ Required |
 | `docs/08-collaborate/` | ❌ | ❌ | ❌ | ✅ Required |
 | `docs/09-govern/` | ❌ | ❌ | ❌ | ✅ Required |
+| `docs/10-archive/` | ❌ | ❌ | ❌ | Optional |
 | `CLAUDE.md` | ❌ | ✅ Required | ✅ Required | ✅ Required |
 | `.sdlc/config.json` | ❌ | ✅ Required | ✅ Required | ✅ Required |
 
@@ -233,25 +234,26 @@ Every SDLC 5.1 project **MUST** have the correct folder structure using **shorte
 mkdir -p docs/00-foundation
 
 # STANDARD (3-10 people)
-mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy}
+mkdir -p docs/{00-foundation,01-planning,02-design,04-build,05-test,06-deploy}
 mkdir -p docs/02-design/ADRs
 mkdir -p .sdlc
 
 # PROFESSIONAL (10-50 people)
-mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy,07-operate}
 mkdir -p docs/02-design/ADRs
-mkdir -p docs/06-operate/runbooks
+mkdir -p docs/03-integrate/{api-contracts,third-party}
+mkdir -p docs/07-operate/runbooks
 mkdir -p .sdlc/checklists
 
 # ENTERPRISE (50+ people)
-mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate,08-collaborate,09-govern}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy,07-operate,08-collaborate,09-govern,10-archive}
 mkdir -p docs/00-foundation/user-research
 mkdir -p docs/02-design/ADRs
-mkdir -p docs/03-build/sprint-logs
-mkdir -p docs/04-test/{test-cases,qa-reports}
-mkdir -p docs/05-deploy/release-notes
-mkdir -p docs/06-operate/{runbooks,incident-reports}
-mkdir -p docs/07-integrate/{api-contracts,third-party}
+mkdir -p docs/03-integrate/{api-contracts,third-party}
+mkdir -p docs/04-build/sprint-logs
+mkdir -p docs/05-test/{test-cases,qa-reports}
+mkdir -p docs/06-deploy/release-notes
+mkdir -p docs/07-operate/{runbooks,incident-reports}
 mkdir -p docs/08-collaborate/meeting-notes
 mkdir -p docs/09-govern/{compliance,metrics,audit-logs}
 mkdir -p .sdlc/checklists
@@ -378,24 +380,25 @@ Result: Enterprise-grade SDLC deployment
 ## 🔗 10-Stage Lifecycle Mapping
 
 ### Discovery & Planning (Stages 00-02)
-- **WHY**: Design Thinking templates (in `/03-Templates-Tools/`)
-- **WHAT**: Design Thinking principles (in `/02-Core-Methodology/`)
-- **HOW**: Architecture patterns (in `SDLC-Platform-Patterns.md`)
+- **00 FOUNDATION**: Design Thinking templates (in `/03-Templates-Tools/`)
+- **01 PLANNING**: Requirements & planning (in `/02-Core-Methodology/`)
+- **02 DESIGN**: Architecture patterns (in `SDLC-Platform-Patterns.md`)
 
-### Development & Quality (Stages 03-04)
-- **BUILD**: Pre-commit hooks (`SDLC-PRE-COMMIT-HOOKS.md`)
-- **TEST**: Code review framework (Tier 1/2/3)
+### Integration & Development (Stages 03-05)
+- **03 INTEGRATE**: API contracts, third-party integrations
+- **04 BUILD**: Pre-commit hooks (`SDLC-PRE-COMMIT-HOOKS.md`)
+- **05 TEST**: Code review framework (Tier 1/2/3)
 
-### Deployment & Operations (Stages 05-06)
-- **DEPLOY**: Implementation Guide deployment procedures
-- **OPERATE**: Crisis Response Guide (`SDLC-Crisis-Response-Guide.md`)
+### Deployment & Operations (Stages 06-07)
+- **06 DEPLOY**: Implementation Guide deployment procedures
+- **07 OPERATE**: Crisis Response Guide (`SDLC-Crisis-Response-Guide.md`)
 
-### Integration & Collaboration (Stages 07-08)
-- **INTEGRATE**: Platform Patterns hybrid architecture
-- **COLLABORATE**: Code Review collaboration workflows
+### Collaboration & Governance (Stages 08-09)
+- **08 COLLABORATE**: Code Review collaboration workflows
+- **09 GOVERN**: Compliance Enforcement Guide
 
-### Governance (Stage 09)
-- **GOVERN**: Compliance Enforcement Guide
+### Archive (Stage 10)
+- **10 ARCHIVE**: Legacy documents, deprecated features
 
 ---
 

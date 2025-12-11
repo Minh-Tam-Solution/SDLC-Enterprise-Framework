@@ -420,29 +420,29 @@ Django Migrations:
 - **Stage 00 (WHY)**: Foundation - Problem validation, user research ✅ Enhanced
 - **Stage 01 (WHAT)**: Planning - Requirements, acceptance criteria ✅ Enhanced
 - **Stage 02 (HOW)**: Design - Architecture, ADRs, design decisions ✅ Enhanced
-- **Stage 03 (BUILD)**: Development - Implementation, AI orchestration ✅ Enhanced
+- **Stage 04 (BUILD)**: Development - Implementation, AI orchestration ✅ Enhanced
 
 **NEW Stages (4.9)**:
 
-- **Stage 04 (TEST)**: Quality Assurance ⭐ NEW
+- **Stage 05 (TEST)**: Quality Assurance ⭐ NEW
 - Test case generation (AI-powered)
 - UAT script creation (94% satisfaction achieved)
 - Performance analysis (P95 <45ms)
 - 150+ test cases generated in 45 minutes
 
-- **Stage 05 (DEPLOY)**: Deployment ⭐ NEW
+- **Stage 06 (DEPLOY)**: Deployment ⭐ NEW
 - Zero-downtime deployment checklists
 - Automated rollback (<3 min proven)
 - Release notes generation
 - 10+ successful deployments (BFlow)
 
-- **Stage 06 (OPERATE)**: Operations ⭐ NEW
+- **Stage 07 (OPERATE)**: Operations ⭐ NEW
 - Incident response (<2hr resolution)
 - Monitoring setup (99.95% uptime)
 - Post-mortem analysis (blameless)
 - 2 P2 incidents resolved <2 hours (BFlow)
 
-- **Stage 07 (INTEGRATE)**: Integration ⭐ NEW
+- **Stage 03 (INTEGRATE)**: Integration ⭐ NEW
 - API contract design (120+ contracts)
 - Integration test generation (98% pass rate)
 - Microservices orchestration
@@ -490,25 +490,25 @@ Django Migrations:
 
 **Complete lifecycle tool coverage** achieved:
 
-**Stage 04 (TEST)** - 3 tools:
+**Stage 05 (TEST)** - 3 tools:
 
 - `test-case-generator.md` - 90% time savings
 - `uat-script-creator.md` - 85% savings, 94% satisfaction
 - `performance-test-analyzer.md` - 80% savings
 
-**Stage 05 (DEPLOY)** - 3 tools:
+**Stage 06 (DEPLOY)** - 3 tools:
 
 - `deployment-checklist-generator.md` - Zero downtime proven
 - `rollback-plan-creator.md` - <3 min rollback
 - `release-notes-writer.md` - 95% time savings
 
-**Stage 06 (OPERATE)** - 3 tools:
+**Stage 07 (OPERATE)** - 3 tools:
 
 - `incident-response-guide.md` - <2hr resolution
 - `monitoring-setup-helper.md` - 99.95% uptime
 - `post-mortem-analyzer.md` - Blameless culture
 
-**Stage 07 (INTEGRATE)** - 2 tools:
+**Stage 03 (INTEGRATE)** - 2 tools:
 
 - `api-contract-designer.md` - 120+ contracts
 - `integration-test-generator.md` - 98% pass rate
@@ -545,11 +545,11 @@ Django Migrations:
 /00-Foundation/        → Stage 00 (WHY)
 /01-Planning/          → Stage 01 (WHAT)
 /02-Architecture/      → Stage 02 (HOW)
-/03-Development/       → Stage 03 (BUILD)
-/04-Testing/           → Stage 04 (TEST)      ⭐ NEW
-/05-Deployment/        → Stage 05 (DEPLOY)    ⭐ NEW
-/06-Operations/        → Stage 06 (OPERATE)   ⭐ NEW
-/07-Integration/       → Stage 07 (INTEGRATE) ⭐ NEW
+/03-Development/       → Stage 04 (BUILD)
+/04-Testing/           → Stage 05 (TEST)      ⭐ NEW
+/05-Deployment/        → Stage 06 (DEPLOY)    ⭐ NEW
+/06-Operations/        → Stage 07 (OPERATE)   ⭐ NEW
+/07-Integration/       → Stage 03 (INTEGRATE) ⭐ NEW
 /08-Team-Management/   → Stage 08 (COLLABORATE) ⭐ NEW
 /09-Governance/        → Stage 09 (GOVERN)    ⭐ NEW
 
@@ -612,10 +612,10 @@ Improvement: 2x ROI increase (7,322% → 14,822%)
 
 **Value from 6 NEW Stages**:
 
-- Stage 04 (TEST): $50K+ bugs prevented
-- Stage 05 (DEPLOY): 10x faster iteration
-- Stage 06 (OPERATE): 99.95% uptime
-- Stage 07 (INTEGRATE): 2 weeks saved per developer
+- Stage 05 (TEST): $50K+ bugs prevented
+- Stage 06 (DEPLOY): 10x faster iteration
+- Stage 07 (OPERATE): 99.95% uptime
+- Stage 03 (INTEGRATE): 2 weeks saved per developer
 - Stage 08 (COLLABORATE): 10+ hours/week saved
 - Stage 09 (GOVERN): $100K+ compliance violations prevented
 

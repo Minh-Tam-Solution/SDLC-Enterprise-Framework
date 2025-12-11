@@ -50,10 +50,10 @@ User empathy → Define real problem → Prototype → Test → Iterate → Ship
 **SDLC 4.9**: Design Thinking extends across **all 10 stages** (WHY → GOVERN)
 
 **New Stage Coverage**:
-- **Stage 04 (TEST)**: User acceptance testing, usability validation
-- **Stage 05 (DEPLOY)**: Canary deployments, gradual user rollout
-- **Stage 06 (OPERATE)**: User behavior monitoring, continuous feedback
-- **Stage 07 (INTEGRATE)**: User-centered integration design
+- **Stage 05 (TEST)**: User acceptance testing, usability validation
+- **Stage 06 (DEPLOY)**: Canary deployments, gradual user rollout
+- **Stage 07 (OPERATE)**: User behavior monitoring, continuous feedback
+- **Stage 03 (INTEGRATE)**: User-centered integration design
 - **Stage 08 (COLLABORATE)**: Cross-team empathy, stakeholder alignment
 - **Stage 09 (GOVERN)**: User data governance, privacy-first compliance
 
@@ -112,7 +112,7 @@ User empathy → Define real problem → Prototype → Test → Iterate → Ship
 - **Stage 09 (GOVERN)**: Governance - User data compliance, privacy policies
 
 **Supporting Stages**:
-- **Stage 06 (OPERATE)**: Monitor user behavior, gather usage data
+- **Stage 07 (OPERATE)**: Monitor user behavior, gather usage data
 - **Stage 08 (COLLABORATE)**: Cross-team empathy (dev, product, business)
 
 **System Thinking Integration**:
@@ -390,8 +390,8 @@ Rejected examples:
 - **Stage 02 (HOW)**: Solution architecture ideation, design patterns
 
 **Supporting Stages**:
-- **Stage 03 (BUILD)**: Technical implementation approaches
-- **Stage 07 (INTEGRATE)**: Integration pattern ideation
+- **Stage 04 (BUILD)**: Technical implementation approaches
+- **Stage 03 (INTEGRATE)**: Integration pattern ideation
 - **Stage 08 (COLLABORATE)**: Collaborative brainstorming sessions
 
 **System Thinking Integration**:
@@ -560,12 +560,12 @@ User Benefit:
 
 **Primary Stages**:
 - **Stage 02 (HOW)**: High-fidelity UI/UX design, architecture prototypes
-- **Stage 03 (BUILD)**: MVP implementation, working prototype
+- **Stage 04 (BUILD)**: MVP implementation, working prototype
 
 **Supporting Stages**:
-- **Stage 04 (TEST)**: Prototype testing (usability, performance)
-- **Stage 05 (DEPLOY)**: Deploy prototype to staging for user testing
-- **Stage 07 (INTEGRATE)**: Prototype integration points with existing systems
+- **Stage 05 (TEST)**: Prototype testing (usability, performance)
+- **Stage 06 (DEPLOY)**: Deploy prototype to staging for user testing
+- **Stage 03 (INTEGRATE)**: Prototype integration points with existing systems
 
 **System Thinking Integration**:
 - **Iceberg Layer 1**: Events (tangible prototype)
@@ -761,13 +761,13 @@ Limitation: Less control over code quality
 ### Mapping to SDLC 4.9 (10-Stage Lifecycle)
 
 **Primary Stages**:
-- **Stage 03 (BUILD)**: Continuous user testing during development
-- **Stage 04 (TEST)**: Comprehensive UAT (User Acceptance Testing)
+- **Stage 04 (BUILD)**: Continuous user testing during development
+- **Stage 05 (TEST)**: Comprehensive UAT (User Acceptance Testing)
 - **Stage 00 (WHY)**: Loop back to validate assumptions, success metrics
 
 **Supporting Stages**:
-- **Stage 05 (DEPLOY)**: Canary deployments for gradual user testing
-- **Stage 06 (OPERATE)**: Monitor user behavior post-launch, gather analytics
+- **Stage 06 (DEPLOY)**: Canary deployments for gradual user testing
+- **Stage 07 (OPERATE)**: Monitor user behavior post-launch, gather analytics
 - **Stage 08 (COLLABORATE)**: Cross-team feedback loops (dev, product, users)
 
 **System Thinking Integration**:
@@ -1054,11 +1054,11 @@ Design Thinking Phase      SDLC 4.9 Stage            Deliverable
                           First half                 Top 3 Concepts
                           (Before locking in)        Quick Sketches
 
-4. PROTOTYPE 🛠️       →   Stage 03 (BUILD)     →   Minimum Testable
+4. PROTOTYPE 🛠️       →   Stage 04 (BUILD)     →   Minimum Testable
                           First iteration            Working Prototype
                           (MVP focus)                Test Plan
 
-5. TEST 🧪            →   Stage 03 (BUILD)     →   User Feedback
+5. TEST 🧪            →   Stage 04 (BUILD)     →   User Feedback
                           Test & Learn loop          Iteration Plan
                           (Continuous)               Ship Decision
 

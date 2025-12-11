@@ -17,10 +17,10 @@ This framework provides **comprehensive code review guidance for ALL team contex
 
 ### SDLC 5.0.0 Integration
 
-**Stage Mapping**: Code Review is a core component of **Stage 03 (BUILD)**
+**Stage Mapping**: Code Review is a core component of **Stage 04 (BUILD)**
 
 ```
-Stage 03: BUILD (Development)
+Stage 04: BUILD (Development)
 ├── Code Generation (AI-assisted)
 ├── Code Review (This Framework) ← YOU ARE HERE
 │   ├── Tier 1: Free/Manual
@@ -171,13 +171,13 @@ repos:
 - [ ] User need documented (if user-facing change)
 - [ ] Problem statement clear
 
-### Stage 03 (BUILD)
+### Stage 04 (BUILD)
 - [ ] Code follows project standards
 - [ ] Tests added/updated (80%+ coverage)
 - [ ] No security vulnerabilities introduced
 - [ ] Performance targets met (<50ms)
 
-### Stage 04 (TEST)
+### Stage 05 (TEST)
 - [ ] Unit tests pass
 - [ ] Integration tests pass
 - [ ] Manual testing completed
@@ -960,4 +960,4 @@ This framework provides **three equally valid approaches** to code review excell
 
 **🏆 SDLC 5.0.0 Universal Code Review Framework**
 *Excellence at Every Scale - From LITE to ENTERPRISE*
-*Stage 03: BUILD - Code Review Excellence*
+*Stage 04: BUILD - Code Review Excellence*

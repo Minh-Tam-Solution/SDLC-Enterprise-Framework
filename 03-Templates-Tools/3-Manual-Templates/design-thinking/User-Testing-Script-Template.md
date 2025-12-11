@@ -1,7 +1,7 @@
 # 🎭 User Testing Script Template
 
 **Purpose**: Standardized script for conducting user testing sessions
-**When to Use**: TEST phase (SDLC Stage 03 - BUILD)
+**When to Use**: TEST phase (SDLC Stage 04 - BUILD)
 **Time Required**: 45-60 minutes per session
 **Participants**: Facilitator + Note-Taker + 1 User
 
@@ -711,7 +711,7 @@ Please help me:
 
 **Template**: User-Testing-Script-Template
 **Part of**: SDLC 5.0 Design Thinking Framework
-**Phase**: TEST (Stage 03 - BUILD)
+**Phase**: TEST (Stage 04 - BUILD)
 **Version**: 1.0
 **Last Updated**: November 13, 2025
 **License**: MTS Internal Use

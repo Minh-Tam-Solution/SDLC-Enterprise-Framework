@@ -88,7 +88,7 @@ Required agents scale with team size:
 │   └── CLAUDE-CODE-QA-ENGINEER.md.template          # Stage 04: Testing
 │
 ├── cursor/                          # 2 agents for Cursor
-│   ├── CURSOR-AI-DEVELOPER.md.template              # Stage 03: Development
+│   ├── CURSOR-AI-DEVELOPER.md.template              # Stage 04: Development
 │   └── CURSOR-CPO-SYSTEM-PROMPT.md.template         # Stage 08-09: Product
 │
 ├── copilot/                         # 2 agents for GitHub Copilot
@@ -133,9 +133,9 @@ Result: 2x productivity
 Required:
   Stage 00-01 (WHY?/WHAT?):
     - CLAUDE-CODE-PRODUCT-OWNER.md.template
-  Stage 03 (BUILD):
+  Stage 04 (BUILD):
     - CLAUDE-CODE-DEVELOPER.md.template
-  Stage 04 (TEST):
+  Stage 05 (TEST):
     - CLAUDE-CODE-QA-ENGINEER.md.template
 
 Recommended:
@@ -230,7 +230,7 @@ Result: 20x+ organizational efficiency
 
 ---
 
-### Stage 03: BUILD (Development)
+### Stage 04: BUILD (Development)
 
 **Primary**: Developer
 **Purpose**: Implement features with quality
@@ -248,7 +248,7 @@ Result: 20x+ organizational efficiency
 
 ---
 
-### Stage 04: TEST (Quality)
+### Stage 05: TEST (Quality)
 
 **Primary**: QA Engineer
 **Purpose**: Comprehensive testing
@@ -284,7 +284,7 @@ Result: 20x+ organizational efficiency
 
 ---
 
-### Stage 07: INTEGRATE (Systems)
+### Stage 03: INTEGRATE (Systems)
 
 **Primary**: Architect, Developer
 **Purpose**: System integrations

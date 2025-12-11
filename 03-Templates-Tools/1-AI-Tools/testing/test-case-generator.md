@@ -1,4 +1,4 @@
-# 🧪 AI Test Case Generator - Stage 04 (TEST)
+# 🧪 AI Test Case Generator - Stage 05 (TEST)
 ## Automated Test Case Generation for Quality Assurance
 
 **Version**: 5.0.0  
@@ -31,7 +31,7 @@ Tech Stack: [Backend/Frontend technologies]
 
 ### AI Prompt
 ```
-You are an expert QA engineer for SDLC 5.0 Stage 04 (TEST). Generate comprehensive test cases for the following feature:
+You are an expert QA engineer for SDLC 5.0 Stage 05 (TEST). Generate comprehensive test cases for the following feature:
 
 **Feature**: [Feature name]
 **Functionality**: [Brief description]
@@ -119,7 +119,7 @@ Tech Stack: Python/Django backend, React frontend, PostgreSQL database
 
 ## 🎯 Quality Gates (SDLC 5.0 Stage 04)
 
-Before moving to Stage 05 (DEPLOY), ensure:
+Before moving to Stage 06 (DEPLOY), ensure:
 
 - ✅ 95%+ test cases passed
 - ✅ Zero critical bugs
@@ -153,15 +153,15 @@ Before moving to Stage 05 (DEPLOY), ensure:
 
 ## 🔗 Related Tools
 
-**Stage 03 (BUILD)**:
+**Stage 04 (BUILD)**:
 - Pre-commit hooks ensure tests run before commit
 - CI/CD pipeline runs full test suite
 
-**Stage 05 (DEPLOY)**:
+**Stage 06 (DEPLOY)**:
 - Only deploy if all tests pass
 - Smoke tests run post-deployment
 
-**Stage 06 (OPERATE)**:
+**Stage 07 (OPERATE)**:
 - Production incidents inform new test cases
 - Regression tests prevent repeat issues
 
@@ -193,7 +193,7 @@ Before moving to Stage 05 (DEPLOY), ensure:
 - Bugs Found: 23 bugs (18 fixed, 5 minor deferred)
 - UAT Satisfaction: 94% (10 pilot users)
 
-**Result**: Ready for Stage 05 (DEPLOY) ✅
+**Result**: Ready for Stage 06 (DEPLOY) ✅
 
 ---
 
@@ -216,7 +216,7 @@ tests/
 
 ---
 
-**Next Stage**: [Stage 05 (DEPLOY) - Deployment Tools](../deployment/)
+**Next Stage**: [Stage 06 (DEPLOY) - Deployment Tools](../deployment/)
 
 **Documentation**: [SDLC-Core-Methodology.md - Stage 04](../../../02-Core-Methodology/SDLC-Core-Methodology.md)
 

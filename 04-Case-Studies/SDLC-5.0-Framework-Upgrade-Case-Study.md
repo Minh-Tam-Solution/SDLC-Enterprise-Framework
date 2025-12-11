@@ -83,11 +83,11 @@ Complete 10-Stage Lifecycle:
   - Stage 00 (WHY): Problem validation, user research
   - Stage 01 (WHAT): Requirements, acceptance criteria
   - Stage 02 (HOW): Architecture, ADRs, design decisions
-  - Stage 03 (BUILD): Development, AI orchestration
-  - Stage 04 (TEST): Quality assurance, UAT, performance
-  - Stage 05 (DEPLOY): Zero downtime, automated rollback
-  - Stage 06 (OPERATE): Monitoring, incident response, SLOs
-  - Stage 07 (INTEGRATE): API contracts, microservices
+  - Stage 04 (BUILD): Development, AI orchestration
+  - Stage 05 (TEST): Quality assurance, UAT, performance
+  - Stage 06 (DEPLOY): Zero downtime, automated rollback
+  - Stage 07 (OPERATE): Monitoring, incident response, SLOs
+  - Stage 03 (INTEGRATE): API contracts, microservices
   - Stage 08 (COLLABORATE): Team coordination, documentation
   - Stage 09 (GOVERN): Compliance, audit, regulations
 

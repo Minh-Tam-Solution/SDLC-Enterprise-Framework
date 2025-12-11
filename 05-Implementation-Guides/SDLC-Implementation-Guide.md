@@ -277,11 +277,11 @@ Focus: Complete rollout
 Stage 00: WHY? - Problem validation, business case
 Stage 01: WHAT? - Requirements, roadmap, planning
 Stage 02: HOW? - Architecture, ADRs, design
-Stage 03: BUILD - Development, code review
-Stage 04: TEST - QA, UAT, security testing
-Stage 05: DEPLOY - Release, zero-downtime
-Stage 06: OPERATE - Monitoring, incidents, SLOs
-Stage 07: INTEGRATE - APIs, external services
+Stage 04: BUILD - Development, code review
+Stage 05: TEST - QA, UAT, security testing
+Stage 06: DEPLOY - Release, zero-downtime
+Stage 07: OPERATE - Monitoring, incidents, SLOs
+Stage 03: INTEGRATE - APIs, external services
 Stage 08: COLLABORATE - Teams, communication
 Stage 09: GOVERN - Compliance, audits, governance
 ```
@@ -359,30 +359,30 @@ your-project/
 │   │   ├── ADRs/                      # Architecture Decision Records
 │   │   └── api-design.md              # API specifications
 │   │
-│   ├── 03-build/                      # Stage 03: BUILD
+│   ├── 03-integrate/                  # Stage 03: INTEGRATE
+│   │   ├── api-contracts/             # External API docs
+│   │   ├── integration-guides/        # How to integrate
+│   │   └── third-party/               # Vendor integrations
+│   │
+│   ├── 04-build/                      # Stage 04: BUILD
 │   │   ├── coding-standards.md        # Team conventions
 │   │   ├── setup-guide.md             # Dev environment setup
 │   │   └── sprint-logs/               # Sprint documentation
 │   │
-│   ├── 04-test/                       # Stage 04: TEST
+│   ├── 05-test/                       # Stage 05: TEST
 │   │   ├── test-strategy.md           # Testing approach
 │   │   ├── test-cases/                # Test case documentation
 │   │   └── qa-reports/                # QA findings
 │   │
-│   ├── 05-deploy/                     # Stage 05: DEPLOY
+│   ├── 06-deploy/                     # Stage 06: DEPLOY
 │   │   ├── deployment-guide.md        # How to deploy
 │   │   ├── release-notes/             # Version release notes
 │   │   └── rollback-procedures.md     # Rollback steps
 │   │
-│   ├── 06-operate/                    # Stage 06: OPERATE
+│   ├── 07-operate/                    # Stage 07: OPERATE
 │   │   ├── runbooks/                  # Operational procedures
 │   │   ├── monitoring.md              # Monitoring setup
 │   │   └── incident-reports/          # Post-mortems
-│   │
-│   ├── 07-integrate/                  # Stage 07: INTEGRATE
-│   │   ├── api-contracts/             # External API docs
-│   │   ├── integration-guides/        # How to integrate
-│   │   └── third-party/               # Vendor integrations
 │   │
 │   ├── 08-collaborate/                # Stage 08: COLLABORATE
 │   │   ├── team-protocols.md          # Team agreements
@@ -417,11 +417,11 @@ your-project/
 | 00 WHY | `00-foundation` | ~~00-Project-Foundation~~ |
 | 01 WHAT | `01-planning` | ~~01-Planning-Analysis~~ |
 | 02 HOW | `02-design` | ~~02-Architecture-Design~~ |
-| 03 BUILD | `03-build` | ~~03-Development~~ |
-| 04 TEST | `04-test` | ~~04-Quality-Assurance~~ |
-| 05 DEPLOY | `05-deploy` | ~~05-Deployment~~ |
-| 06 OPERATE | `06-operate` | ~~06-Operations~~ |
-| 07 INTEGRATE | `07-integrate` | ~~07-Integration~~ |
+| 03 INTEGRATE | `03-integrate` | ~~03-Integration~~ |
+| 04 BUILD | `04-build` | ~~04-Development~~ |
+| 05 TEST | `05-test` | ~~05-Quality-Assurance~~ |
+| 06 DEPLOY | `06-deploy` | ~~06-Deployment~~ |
+| 07 OPERATE | `07-operate` | ~~07-Operations~~ |
 | 08 COLLABORATE | `08-collaborate` | ~~08-Team-Management~~ |
 | 09 GOVERN | `09-govern` | ~~09-Executive-Reports~~ |
 | 10 ARCHIVE | `10-archive` | Project-level archive (optional) |
@@ -472,29 +472,30 @@ mkdir -p docs/00-foundation && echo "# Problem Statement" > docs/00-foundation/p
 
 **STANDARD (copy-paste):**
 ```bash
-mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy}
 mkdir -p docs/02-design/ADRs
 mkdir -p .sdlc/checklists
 ```
 
 **PROFESSIONAL (copy-paste):**
 ```bash
-mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy,07-operate}
 mkdir -p docs/02-design/ADRs
-mkdir -p docs/06-operate/runbooks
+mkdir -p docs/03-integrate/{api-contracts,third-party}
+mkdir -p docs/07-operate/runbooks
 mkdir -p .sdlc/checklists
 ```
 
 **ENTERPRISE (copy-paste):**
 ```bash
-mkdir -p docs/{00-foundation,01-planning,02-design,03-build,04-test,05-deploy,06-operate,07-integrate,08-collaborate,09-govern}
+mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy,07-operate,08-collaborate,09-govern}
 mkdir -p docs/00-foundation/user-research
 mkdir -p docs/02-design/ADRs
-mkdir -p docs/03-build/sprint-logs
-mkdir -p docs/04-test/{test-cases,qa-reports}
-mkdir -p docs/05-deploy/release-notes
-mkdir -p docs/06-operate/{runbooks,incident-reports}
-mkdir -p docs/07-integrate/{api-contracts,third-party}
+mkdir -p docs/03-integrate/{api-contracts,third-party}
+mkdir -p docs/04-build/sprint-logs
+mkdir -p docs/05-test/{test-cases,qa-reports}
+mkdir -p docs/06-deploy/release-notes
+mkdir -p docs/07-operate/{runbooks,incident-reports}
 mkdir -p docs/08-collaborate/meeting-notes
 mkdir -p docs/09-govern/{compliance,metrics,audit-logs}
 mkdir -p .sdlc/checklists

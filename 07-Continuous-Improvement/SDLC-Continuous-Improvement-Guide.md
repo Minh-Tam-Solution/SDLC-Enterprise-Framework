@@ -977,10 +977,10 @@ Strategic Transformation:
   To: 6-pillar, 10-stage complete lifecycle (WHY → GOVERN)
 
   Added:
-    - Stage 04 (TEST): Quality assurance framework
-    - Stage 05 (DEPLOY): Deployment excellence
-    - Stage 06 (OPERATE): Operations & monitoring
-    - Stage 07 (INTEGRATE): Integration patterns
+    - Stage 05 (TEST): Quality assurance framework
+    - Stage 06 (DEPLOY): Deployment excellence
+    - Stage 07 (OPERATE): Operations & monitoring
+    - Stage 03 (INTEGRATE): Integration patterns
     - Stage 08 (COLLABORATE): Team coordination
     - Stage 09 (GOVERN): Governance & compliance
 
