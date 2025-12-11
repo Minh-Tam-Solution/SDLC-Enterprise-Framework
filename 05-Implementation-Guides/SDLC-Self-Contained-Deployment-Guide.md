@@ -38,6 +38,153 @@ docs/08-Team-Management/03-SDLC-Compliance/
 
 ---
 
+## 📁 Project Folder Structure by Tier (PREREQUISITE)
+
+Before deploying SDLC Compliance folder, ensure your project has the correct `/docs` structure for your tier.
+
+### LITE Tier (1-2 people)
+
+```
+your-project/
+├── docs/
+│   └── 00-Project-Foundation/         # Stage 00: WHY? (REQUIRED)
+│       └── problem-statement.md       # Design Thinking output
+├── src/
+├── tests/
+└── README.md                          # Project overview (REQUIRED)
+```
+
+**Setup command**:
+```bash
+mkdir -p docs/00-Project-Foundation
+```
+
+### STANDARD Tier (3-10 people)
+
+```
+your-project/
+├── docs/
+│   ├── 00-Project-Foundation/         # Stage 00: WHY?
+│   ├── 01-Planning-Analysis/          # Stage 01: WHAT?
+│   ├── 02-Architecture-Design/        # Stage 02: HOW?
+│   │   └── ADRs/                      # Architecture Decision Records
+│   ├── 03-Development/                # Stage 03: BUILD
+│   ├── 04-Quality-Assurance/          # Stage 04: TEST
+│   └── 05-Deployment/                 # Stage 05: DEPLOY
+├── src/
+├── tests/
+├── .sdlc/                             # SDLC configuration
+│   └── config.json
+├── CLAUDE.md                          # AI agent context (REQUIRED)
+└── README.md
+```
+
+**Setup command**:
+```bash
+mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design/ADRs,03-Development,04-Quality-Assurance,05-Deployment}
+mkdir -p .sdlc
+```
+
+### PROFESSIONAL Tier (10-50 people)
+
+```
+your-project/
+├── docs/
+│   ├── 00-Project-Foundation/         # Stage 00: WHY?
+│   ├── 01-Planning-Analysis/          # Stage 01: WHAT?
+│   ├── 02-Architecture-Design/        # Stage 02: HOW?
+│   │   └── ADRs/
+│   ├── 03-Development/                # Stage 03: BUILD
+│   │   └── sprint-logs/
+│   ├── 04-Quality-Assurance/          # Stage 04: TEST
+│   │   └── test-cases/
+│   ├── 05-Deployment/                 # Stage 05: DEPLOY
+│   │   └── release-notes/
+│   ├── 06-Operations/                 # Stage 06: OPERATE
+│   │   └── runbooks/
+│   └── 07-Integration/                # Stage 07: INTEGRATE
+│       └── api-contracts/
+├── src/
+├── tests/
+├── .sdlc/
+│   ├── config.json
+│   └── checklists/
+├── CLAUDE.md
+└── README.md
+```
+
+**Setup command**:
+```bash
+mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design/ADRs,03-Development/sprint-logs,04-Quality-Assurance/test-cases,05-Deployment/release-notes,06-Operations/runbooks,07-Integration/api-contracts}
+mkdir -p .sdlc/checklists
+```
+
+### ENTERPRISE Tier (50+ people)
+
+```
+your-project/
+├── docs/
+│   ├── 00-Project-Foundation/         # Stage 00: WHY?
+│   │   └── user-research/
+│   ├── 01-Planning-Analysis/          # Stage 01: WHAT?
+│   ├── 02-Architecture-Design/        # Stage 02: HOW?
+│   │   └── ADRs/
+│   ├── 03-Development/                # Stage 03: BUILD
+│   │   └── sprint-logs/
+│   ├── 04-Quality-Assurance/          # Stage 04: TEST
+│   │   ├── test-cases/
+│   │   └── qa-reports/
+│   ├── 05-Deployment/                 # Stage 05: DEPLOY
+│   │   └── release-notes/
+│   ├── 06-Operations/                 # Stage 06: OPERATE
+│   │   ├── runbooks/
+│   │   └── incident-reports/
+│   ├── 07-Integration/                # Stage 07: INTEGRATE
+│   │   ├── api-contracts/
+│   │   └── third-party/
+│   ├── 08-Team-Management/            # Stage 08: COLLABORATE
+│   │   ├── meeting-notes/
+│   │   └── 03-SDLC-Compliance/        # ← SDLC Self-Contained (this guide)
+│   └── 09-Executive-Reports/          # Stage 09: GOVERN (ALL REQUIRED)
+│       ├── compliance/
+│       ├── metrics/
+│       └── audit-logs/
+├── src/
+├── tests/
+├── .sdlc/
+│   ├── config.json
+│   └── checklists/
+├── CLAUDE.md
+└── README.md
+```
+
+**Setup command**:
+```bash
+mkdir -p docs/{00-Project-Foundation/user-research,01-Planning-Analysis,02-Architecture-Design/ADRs,03-Development/sprint-logs,04-Quality-Assurance/{test-cases,qa-reports},05-Deployment/release-notes,06-Operations/{runbooks,incident-reports},07-Integration/{api-contracts,third-party},08-Team-Management/{meeting-notes,03-SDLC-Compliance},09-Executive-Reports/{compliance,metrics,audit-logs}}
+mkdir -p .sdlc/checklists
+```
+
+### Tier Comparison Table
+
+| Folder | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
+|--------|:----:|:--------:|:------------:|:----------:|
+| `00-Project-Foundation/` | ✅ | ✅ | ✅ | ✅ |
+| `01-Planning-Analysis/` | ❌ | ✅ | ✅ | ✅ |
+| `02-Architecture-Design/` | ❌ | ✅ | ✅ | ✅ |
+| `03-Development/` | ❌ | ✅ | ✅ | ✅ |
+| `04-Quality-Assurance/` | ❌ | ✅ | ✅ | ✅ |
+| `05-Deployment/` | ❌ | ✅ | ✅ | ✅ |
+| `06-Operations/` | ❌ | ❌ | ✅ | ✅ |
+| `07-Integration/` | ❌ | ❌ | ✅ | ✅ |
+| `08-Team-Management/` | ❌ | ❌ | ❌ | ✅ |
+| `09-Executive-Reports/` | ❌ | ❌ | ❌ | ✅ |
+| `CLAUDE.md` | ❌ | ✅ | ✅ | ✅ |
+| `.sdlc/` | ❌ | ✅ | ✅ | ✅ |
+
+> **Note**: The SDLC Self-Contained Compliance folder (`03-SDLC-Compliance/`) is placed in `08-Team-Management/` for ENTERPRISE tier. For smaller tiers, adapt location appropriately (e.g., root `docs/` for STANDARD).
+
+---
+
 ## 🏗️ Deployment Phases
 
 ### Phase 1: Foundation (Week 1)

@@ -335,6 +335,124 @@ Stage 09: GOVERN - Compliance, audits, governance
 
 ---
 
+## 📁 Project Folder Structure (MANDATORY)
+
+### Standard `/docs` Structure (10-Stage Aligned)
+
+Every SDLC 5.1 compliant project **MUST** have this documentation structure:
+
+```
+your-project/
+├── docs/                              # 📚 SDLC Documentation Root
+│   ├── 00-Project-Foundation/         # Stage 00: WHY?
+│   │   ├── problem-statement.md       # Design Thinking output
+│   │   ├── business-case.md           # ROI justification
+│   │   └── user-research/             # Empathy maps, personas
+│   │
+│   ├── 01-Planning-Analysis/          # Stage 01: WHAT?
+│   │   ├── requirements.md            # Functional requirements
+│   │   ├── user-stories.md            # User stories/epics
+│   │   └── roadmap.md                 # Product roadmap
+│   │
+│   ├── 02-Architecture-Design/        # Stage 02: HOW?
+│   │   ├── architecture.md            # System architecture
+│   │   ├── ADRs/                      # Architecture Decision Records
+│   │   └── api-design.md              # API specifications
+│   │
+│   ├── 03-Development/                # Stage 03: BUILD
+│   │   ├── coding-standards.md        # Team conventions
+│   │   ├── setup-guide.md             # Dev environment setup
+│   │   └── sprint-logs/               # Sprint documentation
+│   │
+│   ├── 04-Quality-Assurance/          # Stage 04: TEST
+│   │   ├── test-strategy.md           # Testing approach
+│   │   ├── test-cases/                # Test case documentation
+│   │   └── qa-reports/                # QA findings
+│   │
+│   ├── 05-Deployment/                 # Stage 05: DEPLOY
+│   │   ├── deployment-guide.md        # How to deploy
+│   │   ├── release-notes/             # Version release notes
+│   │   └── rollback-procedures.md     # Rollback steps
+│   │
+│   ├── 06-Operations/                 # Stage 06: OPERATE
+│   │   ├── runbooks/                  # Operational procedures
+│   │   ├── monitoring.md              # Monitoring setup
+│   │   └── incident-reports/          # Post-mortems
+│   │
+│   ├── 07-Integration/                # Stage 07: INTEGRATE
+│   │   ├── api-contracts/             # External API docs
+│   │   ├── integration-guides/        # How to integrate
+│   │   └── third-party/               # Vendor integrations
+│   │
+│   ├── 08-Team-Management/            # Stage 08: COLLABORATE
+│   │   ├── team-protocols.md          # Team agreements
+│   │   ├── meeting-notes/             # Meeting records
+│   │   └── onboarding.md              # New member guide
+│   │
+│   └── 09-Executive-Reports/          # Stage 09: GOVERN
+│       ├── compliance/                # Compliance evidence
+│       ├── metrics/                   # KPI dashboards
+│       └── audit-logs/                # Audit trail
+│
+├── src/                               # 💻 Source Code
+├── tests/                             # 🧪 Test Files
+├── .sdlc/                             # ⚙️ SDLC Configuration
+│   ├── config.json                    # Project tier & settings
+│   └── checklists/                    # Review checklists
+├── CLAUDE.md                          # 🤖 AI Agent Context (STANDARD+)
+└── README.md                          # 📖 Project Overview
+```
+
+### Minimum Structure by Tier
+
+| Tier | Required Folders | Optional |
+|------|-----------------|----------|
+| **LITE** | `docs/00-Project-Foundation/`, `README.md` | All others |
+| **STANDARD** | `docs/00-05/`, `CLAUDE.md`, `.sdlc/` | `docs/06-09/` |
+| **PROFESSIONAL** | `docs/00-07/`, full `.sdlc/` | `docs/08-09/` |
+| **ENTERPRISE** | **ALL folders** (00-09) | None - all required |
+
+### Quick Setup Commands
+
+**LITE (1 command):**
+```bash
+mkdir -p docs/00-Project-Foundation && echo "# Problem Statement" > docs/00-Project-Foundation/problem-statement.md
+```
+
+**STANDARD (copy-paste):**
+```bash
+mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design,03-Development,04-Quality-Assurance,05-Deployment}
+mkdir -p .sdlc/checklists
+```
+
+**PROFESSIONAL/ENTERPRISE (copy-paste):**
+```bash
+mkdir -p docs/{00-Project-Foundation,01-Planning-Analysis,02-Architecture-Design,03-Development,04-Quality-Assurance,05-Deployment,06-Operations,07-Integration,08-Team-Management,09-Executive-Reports}
+mkdir -p docs/02-Architecture-Design/ADRs
+mkdir -p docs/06-Operations/runbooks
+mkdir -p docs/09-Executive-Reports/{compliance,metrics,audit-logs}
+mkdir -p .sdlc/checklists
+```
+
+### File Naming Standards
+
+| Language | Convention | Max Length | Example |
+|----------|------------|------------|---------|
+| **Python** | `snake_case` | 50 chars | `user_service.py` |
+| **TypeScript** | `camelCase` | 50 chars | `userService.ts` |
+| **React** | `PascalCase` | 50 chars | `UserDashboard.tsx` |
+| **Markdown** | `kebab-case` | 60 chars | `deployment-guide.md` |
+| **Folders** | `kebab-case` or `PascalCase` | 30 chars | `sprint-logs/` |
+
+### Validation
+
+Run this to check your structure:
+```bash
+python3 path/to/sdlc_validator.py /your/project
+```
+
+---
+
 ## 🤖 SASE Quick Reference (AI Teams)
 
 ### The 6 Artifacts
