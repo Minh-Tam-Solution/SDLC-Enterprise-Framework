@@ -1,13 +1,13 @@
-# SDLC 5.0.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
+# SDLC 5.1.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.0
+**Date**: December 11, 2025
 **Time Required**: 2 days solo, 1 week for teams
 **Result**: 10x-50x productivity + 3x feature adoption + 14,822% ROI
 
-**What's New in 5.0.0**: Governance & Compliance + 4-Tier Classification + Industry Best Practices
+**What's New in 5.1.0**: Governance & Compliance + 4-Tier Classification + SASE (Software Agentic Software Engineering)
 
-**SDLC 5.0.0 Features**:
+**SDLC 5.1.0 Features**:
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
 - ✅ 6 Pillars: Design Thinking + 5 core pillars
 - ✅ 4-Tier Classification: LITE, STANDARD, PROFESSIONAL, ENTERPRISE
@@ -65,11 +65,11 @@ git init
 mkdir -p .sdlc
 
 # Option 1: Use AI tools (PRIMARY - 1 hour per feature)
-# See: ../03-Templates-Tools/1-AI-Tools/design-thinking/
+# See: ../03-Templates-Tools/AI-Tools/design-thinking/
 # Copy AI prompts for 5-phase methodology
 
 # Option 2: Manual templates (BACKUP - 26 hours per feature)
-# See: ../03-Templates-Tools/3-Manual-Templates/design-thinking/
+# See: ../03-Templates-Tools/Manual-Templates/design-thinking/
 # Copy 9 Stanford d.school templates if AI unavailable
 
 # Setup pre-commit hooks (Tier 1 code review base)
@@ -578,11 +578,12 @@ Continuous Improvement:
 2. **[Core Methodology](../02-Core-Methodology/SDLC-Core-Methodology.md)** - Complete 10-stage guide
 3. **[Design Thinking Principles](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md)** - Complete 5-phase guide
 4. **[Code File Naming Standards](../02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)** - File naming conventions
-5. **[1-AI-Tools (PRIMARY)](../03-Templates-Tools/1-AI-Tools/)** - Design Thinking, design-to-code, code review (96% time savings)
-6. **[2-Agent-Templates](../03-Templates-Tools/2-Agent-Templates/)** - Configure Claude Code, Cursor, Copilot, etc.
-7. **[3-Manual-Templates (BACKUP)](../03-Templates-Tools/3-Manual-Templates/)** - Traditional templates when AI unavailable
-8. **[4-Scripts](../03-Templates-Tools/4-Scripts/)** - Validators and automation
-9. **[Training Materials](./SDLC-Training-Materials.md)** - 8-hour comprehensive training
+5. **[AI-Tools (PRIMARY)](../03-Templates-Tools/AI-Tools/)** - Design Thinking, design-to-code, code review (96% time savings)
+6. **[Agent-Templates](../03-Templates-Tools/Agent-Templates/)** - Configure Claude Code, Cursor, Copilot, etc.
+7. **[Manual-Templates (BACKUP)](../03-Templates-Tools/Manual-Templates/)** - Traditional templates when AI unavailable
+8. **[Scripts](../03-Templates-Tools/Scripts/)** - Validators and automation
+9. **[SASE-Artifacts](../03-Templates-Tools/SASE-Artifacts/)** - Software Agentic Software Engineering templates
+10. **[Training Materials](./SDLC-Training-Materials.md)** - 8-hour comprehensive training
 
 ### Code Review Tier Guides
 - **Tier 1**: [Manual Code Review Playbook](../05-Implementation-Guides/SDLC-Manual-Code-Review-Playbook.md)
@@ -653,12 +654,12 @@ You can confidently:
 
 ---
 
-**Document Version**: 5.0.0
-**Last Updated**: December 5, 2025
+**Document Version**: 5.1.0
+**Last Updated**: December 11, 2025
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**What's New**: Governance & Compliance + 4-Tier Classification + Team Collaboration Standards
+**What's New**: Governance & Compliance + 4-Tier Classification + SASE Integration + Shortened Folder Names
 
 ---
 
-**🏆 SDLC 5.0.0 Quick Start**
-*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with Complete Lifecycle + Governance*
+**🏆 SDLC 5.1.0 Quick Start**
+*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with Complete Lifecycle + Governance + SASE*

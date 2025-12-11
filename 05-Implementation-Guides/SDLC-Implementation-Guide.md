@@ -389,10 +389,15 @@ your-project/
 │   │   ├── meeting-notes/             # Meeting records
 │   │   └── onboarding.md              # New member guide
 │   │
-│   └── 09-govern/                     # Stage 09: GOVERN
-│       ├── compliance/                # Compliance evidence
-│       ├── metrics/                   # KPI dashboards
-│       └── audit-logs/                # Audit trail
+│   ├── 09-govern/                     # Stage 09: GOVERN
+│   │   ├── compliance/                # Compliance evidence
+│   │   ├── metrics/                   # KPI dashboards
+│   │   └── audit-logs/                # Audit trail
+│   │
+│   └── 10-archive/                    # 📦 Project Archive (Optional)
+│       ├── deprecated-features/       # Old features removed from codebase
+│       ├── old-integrations/          # Deprecated integrations
+│       └── historical-docs/           # Documents not belonging to any stage
 │
 ├── src/                               # 💻 Source Code
 ├── tests/                             # 🧪 Test Files
@@ -419,6 +424,35 @@ your-project/
 | 07 INTEGRATE | `07-integrate` | ~~07-Integration~~ |
 | 08 COLLABORATE | `08-collaborate` | ~~08-Team-Management~~ |
 | 09 GOVERN | `09-govern` | ~~09-Executive-Reports~~ |
+| 10 ARCHIVE | `10-archive` | Project-level archive (optional) |
+
+### Archive Strategy (Important!)
+
+**Two types of archives exist:**
+
+| Archive Type | Location | Purpose |
+|--------------|----------|---------|
+| **Project Archive** | `docs/10-archive/` | Old documents that don't belong to any stage (deprecated features, historical docs) |
+| **Stage-Level Legacy** | `docs/XX-stage/99-legacy/` | Old documents **within a specific stage** (e.g., old design decisions in `02-design/99-legacy/`) |
+
+**Example:**
+```
+docs/
+├── 02-design/
+│   ├── current-architecture.md      # Active document
+│   └── 99-legacy/                    # OLD design docs
+│       └── v1-architecture.md        # Previous version
+├── 09-govern/
+│   └── 99-legacy/                    # OLD governance docs
+│       └── old-compliance-report.md
+└── 10-archive/                       # Project-level archive
+    ├── deprecated-feature-x/         # Feature removed from codebase
+    └── old-vendor-integration/       # Vendor no longer used
+```
+
+**Rule of thumb:**
+- If the old doc relates to a specific stage → `XX-stage/99-legacy/`
+- If the old doc doesn't fit any stage → `docs/10-archive/`
 
 ### Minimum Structure by Tier
 

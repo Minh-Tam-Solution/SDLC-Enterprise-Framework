@@ -1,16 +1,18 @@
-# SDLC 5.0.0 Training Materials - Complete Learning Package
+# SDLC 5.1.0 Training Materials - Complete Learning Package
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.0
+**Date**: December 11, 2025
 **Audience**: All team members (developers, designers, product managers, QA)
 **Duration**: 8 hours total (can be split across multiple sessions)
 **Prerequisites**: Basic SDLC 4.9 knowledge (or 2-hour SDLC fundamentals course)
 
 ---
 
-## 🆕 What's New in SDLC 5.0.0 (December 5, 2025)
+## 🆕 What's New in SDLC 5.1.0 (December 11, 2025)
 
-**Governance & Compliance Standards**: SDLC 5.0.0 introduces comprehensive Governance & Compliance with 4-Tier Classification (LITE → ENTERPRISE), Quality Gates, Security Gates, Observability, and Team Collaboration Standards.
+**SASE Integration & Shortened Folder Names**: SDLC 5.1.0 introduces Software Agentic Software Engineering (SASE) with 6 artifact templates. Also updates folder naming convention to use shortened names (e.g., `00-foundation` instead of `00-Project-Foundation`).
+
+**Governance & Compliance Standards**: Comprehensive Governance & Compliance with 4-Tier Classification (LITE → ENTERPRISE), Quality Gates, Security Gates, Observability, and Team Collaboration Standards.
 
 Key naming conventions:
 - **Python**: `snake_case` (max 50 chars) - e.g., `user_service.py`
@@ -30,11 +32,12 @@ By completing this training, participants will be able to:
 1. ✅ **Explain** what Design Thinking is and why it matters (reduce 70% feature waste)
 2. ✅ **Apply** all 5 Design Thinking phases to real projects (Empathize → Test)
 3. ✅ **Use** 9 practical templates without assistance (15-30 min per template)
-4. ✅ **Map** Design Thinking to SDLC 5.0.0 10-Stage Framework (WHY → GOVERN)
+4. ✅ **Map** Design Thinking to SDLC 5.1.0 10-Stage Framework (WHY → GOVERN)
 5. ✅ **Validate** assumptions with real users before building (5-8 user tests)
-6. ✅ **Integrate** SDLC 5.0.0 into daily workflow (80%+ compliance within 2 weeks)
+6. ✅ **Integrate** SDLC 5.1.0 into daily workflow (80%+ compliance within 2 weeks)
 7. ✅ **Apply** code quality standards including file naming conventions
 8. ✅ **Understand** 4-Tier Classification and select appropriate tier for projects
+9. ✅ **Use** SASE artifacts for AI-human collaboration (6 templates)
 
 ### Training Structure
 
@@ -855,7 +858,7 @@ Vietnamese Authenticity:
   VND: No decimals, proper formatting
 ```
 
-**Reference**: `08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md`
+**Reference**: `02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md`
 
 ---
 
@@ -1287,12 +1290,13 @@ Day 11: CPO 1-on-1
 ### Post-Training
 
 **Template Library**:
-- Location: `/06-Templates-Tools/Design-Thinking/`
+- Location: `/03-Templates-Tools/`
+- Subfolders: AI-Tools, Agent-Templates, Manual-Templates, Scripts, SASE-Artifacts
 - Always accessible
 - Updated based on team feedback
 
 **Case Study Library**:
-- Location: `/07-Case-Studies/`
+- Location: `/04-Case-Studies/`
 - NQH-Bot (completed)
 - BFlow, MTEP (coming soon)
 - Add your own pilot projects
@@ -1304,12 +1308,12 @@ Day 11: CPO 1-on-1
 
 ---
 
-**Document**: SDLC-4.9.1-Training-Materials
+**Document**: SDLC-5.1.0-Training-Materials
 **Purpose**: Complete learning package for team adoption
 **Audience**: All team members (developers, designers, PM, QA)
 **Duration**: 8 hours core + ongoing practice
-**Certification**: SDLC 4.9.1 Certified Practitioner
-**Version**: 2.0
-**Date**: November 29, 2025
+**Certification**: SDLC 5.1.0 Certified Practitioner
+**Version**: 3.0
+**Date**: December 11, 2025
 **License**: MTS Internal Use
-**What's New**: Code File Naming Standards restored, 10-Stage Lifecycle integration
+**What's New**: SASE Integration, Shortened Folder Names, 4-Tier Classification
