@@ -20,8 +20,6 @@
 ```yaml
 New Documents in 02-Core-Methodology/:
   - SDLC-Agentic-Core-Principles.md    # SE4H/SE4A distinction, 7 Agentic Principles
-
-New Documents in 07-Continuous-Improvement/:
   - SDLC-Agentic-Maturity-Model.md     # 4-Level progression (L0→L3)
 
 New Templates in 03-Templates-Tools/SASE-Artifacts/:
@@ -79,7 +77,7 @@ Stage 09 (Govern):     AGE (policy, audit, compliance)
 
 **Documentation**:
 - [SDLC-Agentic-Core-Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
-- [SDLC-Agentic-Maturity-Model](./07-Continuous-Improvement/SDLC-Agentic-Maturity-Model.md)
+- [SDLC-Agentic-Maturity-Model](./02-Core-Methodology/SDLC-Agentic-Maturity-Model.md)
 - [SASE-Artifacts](./03-Templates-Tools/SASE-Artifacts/)
 
 ---
@@ -765,7 +763,7 @@ AI+Human Metrics (Maintained):
 1. 📖 [SDLC Executive Summary](./01-Overview/SDLC-Executive-Summary.md) - Complete 10-stage + Governance overview
 2. 🎯 [10-Stage Methodology](./02-Core-Methodology/SDLC-Core-Methodology.md) - WHY → GOVERN framework
 3. 🤖 [SASE Core Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - SE4H/SE4A, 7 Agentic Principles (NEW in 5.1)
-4. 📈 [Agentic Maturity Model](./07-Continuous-Improvement/SDLC-Agentic-Maturity-Model.md) - L0→L3 progression (NEW in 5.1)
+4. 📈 [Agentic Maturity Model](./02-Core-Methodology/SDLC-Agentic-Maturity-Model.md) - L0→L3 progression (NEW in 5.1)
 5. 📦 [SASE Artifact Templates](./03-Templates-Tools/SASE-Artifacts/) - BRS, LPS, MTS, CRP, MRP, VCR (NEW in 5.1)
 6. 📋 [Governance & Compliance](./02-Core-Methodology/Governance-Compliance/) - Quality gates, Security, Observability
 7. 📝 [Documentation Standards](./02-Core-Methodology/Documentation-Standards/) - Naming conventions

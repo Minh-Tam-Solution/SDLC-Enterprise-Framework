@@ -16,20 +16,17 @@
 **SDLC 5.1.0** introduces comprehensive **Software Agentic Software Engineering (SASE)** based on arXiv:2509.06216v2:
 
 ```yaml
-New Core Documents:
-  02-Core-Methodology/
-    - SDLC-Agentic-Core-Principles.md    # SE4H/SE4A distinction, 7 Agentic Principles
+New Core Documents in 02-Core-Methodology/:
+  - SDLC-Agentic-Core-Principles.md    # SE4H/SE4A distinction, 7 Agentic Principles
+  - SDLC-Agentic-Maturity-Model.md     # 4-Level progression (L0→L3)
 
-  07-Continuous-Improvement/
-    - SDLC-Agentic-Maturity-Model.md     # 4-Level progression (L0→L3)
-
-  03-Templates-Tools/SASE-Artifacts/:
-    - 01-BriefingScript-Template.yaml    # Human → Agent task specification
-    - 02-LoopScript-Template.yaml        # Agent execution plan
-    - 03-MentorScript-Template.md        # Coding standards for agents
-    - 04-CRP-Template.md                 # Consultation Request Protocol
-    - 05-MRP-Template.md                 # Merge-Readiness Pack (5-point evidence)
-    - 06-VCR-Template.md                 # Version Controlled Resolution
+New Templates in 03-Templates-Tools/SASE-Artifacts/:
+  - 01-BriefingScript-Template.yaml    # Human → Agent task specification
+  - 02-LoopScript-Template.yaml        # Agent execution plan
+  - 03-MentorScript-Template.md        # Coding standards for agents
+  - 04-CRP-Template.md                 # Consultation Request Protocol
+  - 05-MRP-Template.md                 # Merge-Readiness Pack (5-point evidence)
+  - 06-VCR-Template.md                 # Version Controlled Resolution
 ```
 
 ### SE4H vs SE4A: The Core Distinction

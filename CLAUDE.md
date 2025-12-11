@@ -1,16 +1,22 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 5.0.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.0.0**) with complete 10-Stage lifecycle (WHY → GOVERN), Governance & Compliance standards, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.0**) with complete 10-Stage lifecycle (WHY → GOVERN), SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
-**What's New in 5.0.0 (December 5, 2025)**:
+**What's New in 5.1.0 (December 11, 2025)**:
+- ✅ **SASE Framework Integration** - SE 3.0 (arXiv:2509.06216v2), 6 SASE Artifact Templates
+- ✅ **SE4H vs SE4A Distinction** - Agent Coach (Human) vs Agent Executor (AI) roles
+- ✅ **Agentic Maturity Model** - 4 Levels (L0 Tool-Assisted → L3 Lifecycle Agentic)
+- ✅ **7 Agentic Principles** - Brief-First, Evidence-Based MRP, Human Accountability, etc.
+- ✅ **ACE/AEE Architecture** - Agent Command Environment + Agent Execution Environment
+
+**What's in 5.0.0 (December 5, 2025)**:
 - ✅ **Governance & Compliance Standards** - Quality Gates, Security Gates, Observability, Change Management
 - ✅ **4-Tier Classification** - LITE (1-2), STANDARD (3-10), PROFESSIONAL (10-50), ENTERPRISE (50+)
 - ✅ **Industry Best Practices** - CMMI v3.0, SAFe 6.0, DORA Metrics, OWASP ASVS, NIST SSDF
-- ✅ **Folder Restructure** - Documentation-Standards & Governance-Compliance moved to 02-Core-Methodology
 
 **What's in SDLC 4.9.1 (November 29, 2025)**:
 - ✅ **Code File Naming Standards** - Python: snake_case, TypeScript: camelCase, React: PascalCase
