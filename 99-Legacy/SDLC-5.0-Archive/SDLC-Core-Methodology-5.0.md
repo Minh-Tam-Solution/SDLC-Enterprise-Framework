@@ -1,81 +1,11 @@
-# SDLC 5.1.0 Core Methodology - Complete 10-Stage AI+Human Excellence Framework + SASE Integration
+# SDLC 5.0.0 Core Methodology - Complete 10-Stage AI+Human Excellence Framework
 
-**Version**: 5.1.0
-**Date**: December 11, 2025
-**Status**: ACTIVE - 10-STAGE LIFECYCLE + SASE/SE 3.0 + AGENTIC MATURITY MODEL
+**Version**: 5.0.0
+**Date**: December 5, 2025
+**Status**: ACTIVE - 10-STAGE LIFECYCLE + GOVERNANCE & COMPLIANCE + 4-TIER CLASSIFICATION
 **Authority**: Chairman + CEO + CPO + CTO Approved
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
-**Key Enhancement**: **SASE Framework (SE 3.0) + Agentic Maturity Model + 6 SASE Artifact Templates**
-
----
-
-## 🎯 What's New in SDLC 5.1.0 (December 11, 2025)
-
-### SASE Framework Integration (SE 3.0)
-
-**SDLC 5.1.0** introduces comprehensive **Software Agentic Software Engineering (SASE)** based on arXiv:2509.06216v2:
-
-```yaml
-New Core Documents:
-  02-Core-Methodology/
-    - SDLC-Agentic-Core-Principles.md    # SE4H/SE4A distinction, 7 Agentic Principles
-
-  07-Continuous-Improvement/
-    - SDLC-Agentic-Maturity-Model.md     # 4-Level progression (L0→L3)
-
-  03-Templates-Tools/SASE-Artifacts/:
-    - 01-BriefingScript-Template.yaml    # Human → Agent task specification
-    - 02-LoopScript-Template.yaml        # Agent execution plan
-    - 03-MentorScript-Template.md        # Coding standards for agents
-    - 04-CRP-Template.md                 # Consultation Request Protocol
-    - 05-MRP-Template.md                 # Merge-Readiness Pack (5-point evidence)
-    - 06-VCR-Template.md                 # Version Controlled Resolution
-```
-
-### SE4H vs SE4A: The Core Distinction
-
-| Aspect | SE4H (Agent Coach) | SE4A (Agent Executor) |
-|--------|-------------------|----------------------|
-| **Role** | Guide & supervise AI agents | Implement human-specified intent |
-| **Primary Skills** | Intent specification, quality validation | Code generation, pattern consistency |
-| **Artifacts Created** | BRS, MTS, VCR | LPS, CRP, MRP |
-| **Decision Authority** | FINAL (veto power) | NONE (propose only) |
-
-### Agentic Maturity Model (4 Levels)
-
-| Level | Name | Key Characteristic | Artifacts Used |
-|-------|------|-------------------|----------------|
-| **0** | Tool-Assisted | AI as autocomplete | None (ad-hoc prompts) |
-| **1** | Agent-Assisted | Structured handoff | BRS, MRP, VCR (3 core) |
-| **2** | Structured Agentic | Full SASE workflow | All 6 artifacts + ACE/AEE |
-| **3** | Lifecycle Agentic | Proactive agents | Full + Memory + Proactive |
-
-### The 7 Agentic Principles
-
-1. **Brief-First** - BriefingScript before any agent work
-2. **Evidence-Based MRP** - 5-point evidence for every merge
-3. **Human Accountability** - Human responsible for shipped code
-4. **Consultation Protocol** - CRP when agent is uncertain
-5. **Mentorship-as-Code** - Standards in machine-readable MentorScript
-6. **Dual Workbenches** - ACE for humans, AEE for agents
-7. **Gradual Autonomy** - Trust earned from L0→L3
-
-### SASE × SDLC Stage Integration
-
-| Stage | SASE Discipline | Primary Activity |
-|-------|-----------------|------------------|
-| 00 Foundation | None | Human-only strategic work |
-| 01 Planning | BriefingEng | Create BRS for features |
-| 02 Design | ALE + ATIE | Design LPS, MTS |
-| 03 Development | ATLE | Build ACE/AEE |
-| 04 Quality | ALE + ATME | Execute LPS, generate MRP |
-| 05 Deployment | ATME | Validation, coverage |
-| 06 Operations | ATME + AGE | Monitoring, verification |
-| 07 Integration | ATME + ATIE | CRP generation |
-| 08 Team Mgmt | ATIE + AGE | Code review |
-| 09 Governance | AGE | Policy, audit |
-
-**See**: [SDLC-Agentic-Core-Principles](./SDLC-Agentic-Core-Principles.md)
+**Key Enhancement**: **Governance & Compliance Standards + 4-Tier Classification + Industry Best Practices**
 
 ---
 
