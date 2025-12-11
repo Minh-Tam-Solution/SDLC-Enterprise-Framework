@@ -1,32 +1,45 @@
-# 🛠️ SDLC 5.0.0 Framework Scripts & Automation Tools
+# 🛠️ SDLC 5.1.0 Framework Scripts & Automation Tools
 ## Battle-Tested Automation from Real Platform Experience
 
-**Version**: 5.0.0 - Complete 10-Stage Lifecycle + Team Collaboration Standards
+**Version**: 5.1.0 - Complete 10-Stage Lifecycle + SASE/SE 3.0 Integration
 **Status**: ACTIVE - CORE SCRIPTS OPERATIONAL
-**Date**: December 5, 2025
-**Foundation**: Tools proven on BFlow, NQH-Bot, MTEP (3 platforms)
+**Date**: December 11, 2025
+**Foundation**: Tools proven on BFlow, NQH-Bot, MTEP, SDLC Orchestrator (4 platforms)
 **Philosophy**: Build when needed + AI tools for flexibility
 
 ---
 
-## 🆕 What's New in SDLC 5.0.0
+## 🆕 What's New in SDLC 5.1.0
 
-### Team Collaboration Standards Validation (NEW)
-`sdlc_validator.py` now validates Team Collaboration documents:
-- **SDLC-Team-Communication-Protocol.md** - Tiered communication requirements
-- **SDLC-Team-Collaboration-Protocol.md** - RACI matrices, handoff protocols
-- **SDLC-Escalation-Path-Standards.md** - 4-level escalation framework
+### SASE Framework Validation (NEW in 5.1.0)
+`sdlc_validator.py` now validates SASE (Software Agentic Software Engineering) artifacts:
+- **BRS** (BriefingScript) - Human creates task specification
+- **LPS** (LoopScript) - Agent creates execution plan
+- **MTS** (MentorScript) - Human creates coding standards
+- **CRP** (Consultation Request) - Agent requests help when uncertain
+- **MRP** (Merge-Readiness Pack) - Agent creates 5-point evidence
+- **VCR** (Version Controlled Resolution) - Human approves work
 
-### 4-Tier Classification Support (NEW)
+**Workflow**: `BRS → LPS → [work] → CRP (if stuck) → MRP → VCR`
+
+### Agentic Maturity Model Detection (NEW)
+| Level | Name | Description |
+|-------|------|-------------|
+| L0 | Tool-Assisted | Ad-hoc AI usage (ChatGPT/Copilot) |
+| L1 | Agent-Assisted | Basic SASE artifacts |
+| L2 | Structured Agentic | Full 6-artifact workflow |
+| L3 | Lifecycle Agentic | Proactive AI agents |
+
+### 4-Tier Classification Support
 Validation adapts based on project tier:
-| Tier | Team Size | Team Collaboration Required |
-|------|-----------|---------------------------|
+| Tier | Team Size | SASE Required |
+|------|-----------|---------------|
 | LITE | 1-2 | Optional |
-| STANDARD | 3-10 | Basic communication protocol |
-| PROFESSIONAL | 10-50 | Full team collaboration |
-| ENTERPRISE | 50+ | All + SLA enforcement |
+| STANDARD | 3-10 | BRS + MRP recommended |
+| PROFESSIONAL | 10-50 | Full SASE workflow |
+| ENTERPRISE | 50+ | All + audit compliance |
 
-### Code File Naming Standards (from 5.0.0)
+### Code File Naming Standards
 - **Python**: `snake_case`, max 50 chars (e.g., `user_service.py`)
 - **TypeScript**: `camelCase`, max 50 chars (e.g., `userService.ts`)
 - **React**: `PascalCase`, max 50 chars (e.g., `UserDashboard.tsx`)
@@ -35,18 +48,19 @@ See `compliance/sdlc_validator.py` for complete validation.
 
 ---
 
-## 🎯 What's Operational in SDLC 5.0.0
+## 🎯 What's Operational in SDLC 5.1.0
 
 ### ✅ Core Compliance Validators (READY)
 ```bash
 compliance/
-├── sdlc_validator.py                 # ⭐ PRIMARY: Complete 10-stage + 6-pillar + Team Collaboration validation
+├── sdlc_validator.py                 # ⭐ PRIMARY: Complete 10-stage + 6-pillar + SASE validation
 ├── design_thinking_validator.py      # ✨ Pillar 0 validation (5 DT phases)
 └── sdlc_scanner.py                   # Backward compatibility wrapper
 ```
 
-**SDLC 5.0.0 Enhancement**: `sdlc_validator.py` now includes:
-- Team Collaboration Standards validation (Pillar 2)
+**SDLC 5.1.0 Enhancement**: `sdlc_validator.py` now includes:
+- SASE Framework validation (6 artifacts: BRS, LPS, MTS, CRP, MRP, VCR)
+- Agentic Maturity Model detection (L0 → L3)
 - 4-Tier Classification awareness
 - Code File Naming validation (Python, TypeScript, React)
 
@@ -75,7 +89,7 @@ ai-tools/                              # Universal AI integration patterns
 ### Essential Commands (Use These Daily)
 
 ```bash
-# 1. SDLC 5.0.0 Complete 10-Stage + Team Collaboration Validation
+# 1. SDLC 5.1.0 Complete 10-Stage + SASE Framework Validation
 python3 scripts/compliance/sdlc_validator.py .
 
 # 2. Design Thinking Compliance (Pillar 0)
@@ -93,7 +107,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 **Design-to-Code** (5-10 min):
 ```bash
 # See: /ai-tools/design-to-code/universal-prompts.md
-"Convert [design tool] to [framework] with SDLC 5.0 compliance"
+"Convert [design tool] to [framework] with SDLC 5.1 compliance"
 ```
 
 **Design Thinking** (5 min per phase):
@@ -105,7 +119,14 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 **Code Review** (5-10 min):
 ```bash
 # See: /ai-tools/code-review/
-"Review [code] for SDLC 5.0 compliance"
+"Review [code] for SDLC 5.1 compliance"
+```
+
+**SASE Artifacts** (NEW in 5.1.0):
+```bash
+# See: /SASE-Artifacts/
+"Create BRS for [task] with [context]"
+"Generate MRP evidence for [PR]"
 ```
 
 ---
@@ -117,7 +138,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 ├── README.md                         # This file
 │
 ├── compliance/                       # ✅ OPERATIONAL
-│   ├── sdlc_validator.py            # Complete 10-stage + 6-pillar + file naming validation
+│   ├── sdlc_validator.py            # Complete 10-stage + 6-pillar + SASE validation
 │   ├── design_thinking_validator.py  # Pillar 0 validation (5 DT phases)
 │   └── sdlc_scanner.py              # Backward compatibility
 │
@@ -126,15 +147,15 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
         # Others: Implement when demanded
 ```
 
-**Note**: SDLC 5.0.0 now includes Code File Naming Standards validation in `sdlc_validator.py`
+**Note**: SDLC 5.1.0 now includes SASE Framework + Code File Naming Standards validation in `sdlc_validator.py`
 
 ---
 
 ## 🎯 Key Scripts Explained
 
-### SDLC 5.0.0 Complete Validator ✅
+### SDLC 5.1.0 Complete Validator ✅
 
-**Validates complete 10-stage lifecycle + 6-pillar architecture + code file naming**
+**Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework**
 
 ```bash
 # Usage
@@ -156,12 +177,20 @@ python3 compliance/sdlc_validator.py /path/to/project
 ## 6-Pillar Architecture:
 - Pillar 0: Design Thinking methodology applied
 - Pillar 1: Zero Mock Policy compliance
-- Pillar 2: AI+Human Orchestration patterns
+- Pillar 2: AI+Human Orchestration + SASE Framework (NEW)
 - Pillar 3: Quality Governance with Code Review
 - Pillar 4: Documentation Permanence standards
 - Pillar 5: Continuous Compliance monitoring
 
-## Code File Naming (NEW in 5.0.0):
+## SASE Framework (NEW in 5.1.0):
+- BRS (BriefingScript): Task specification
+- LPS (LoopScript): Execution plan
+- MTS (MentorScript): Coding standards
+- CRP (Consultation Request): When uncertain
+- MRP (Merge-Readiness Pack): 5-point evidence
+- VCR (Version Controlled Resolution): Approval record
+
+## Code File Naming:
 - Python files: snake_case, max 50 chars
 - TypeScript files: camelCase, max 50 chars
 - React components: PascalCase, max 50 chars
@@ -171,8 +200,9 @@ python3 compliance/sdlc_validator.py /path/to/project
 ✅ Stage 00-03 (WHY→BUILD): COMPLIANT
 ✅ Stage 04-09 (TEST→GOVERN): COMPLIANT
 ✅ Pillar 0-5 (All Pillars): COMPLIANT
+✅ SASE Artifacts: DETECTED (SE 3.0)
 ✅ File Naming Standards: COMPLIANT
-🎉 SDLC 5.0.0 FULLY COMPLIANT (10 stages + 6 pillars + file naming)
+🎉 SDLC 5.1.0 FULLY COMPLIANT (10 stages + 6 pillars + SASE)
 ```
 
 ### Design Thinking Validator ✨ NEW
@@ -208,18 +238,20 @@ python3 scripts/compliance/design_thinking_validator.py /path/to/project
 python3 scripts/quick-start/solo_setup.py /path/to/project
 
 # What it does:
-1. Creates SDLC 5.0 complete 10-stage structure
-2. Installs compliance validators (10-stage + 6-pillar)
+1. Creates SDLC 5.1 complete 10-stage structure
+2. Installs compliance validators (10-stage + 6-pillar + SASE)
 3. Sets up Design Thinking templates (5 phases)
-4. Configures Code Review Tier 1 (Manual)
-5. Creates AI development environment
-6. Sets performance targets (<50ms API, <2s page)
-7. Initializes documentation structure
-8. Sets up monitoring and governance templates
+4. Creates SASE Artifacts templates (BRS, LPS, MRP, VCR)
+5. Configures Code Review Tier 1 (Manual)
+6. Creates AI development environment
+7. Sets performance targets (<50ms API, <2s page)
+8. Initializes documentation structure
+9. Sets up monitoring and governance templates
 
 # Timeline: 2 days to 10x productivity
 # Cost: $0-50/month (free tier focus)
 # Stages Covered: All 10 stages (WHY → GOVERN)
+# SASE Level: L1 (Agent-Assisted) ready
 ```
 
 ---

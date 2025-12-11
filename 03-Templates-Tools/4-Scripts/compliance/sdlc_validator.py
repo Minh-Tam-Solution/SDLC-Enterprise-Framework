@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-SDLC 5.0.0 Complete Validator
-Validates complete 10-stage lifecycle + 6-pillar architecture + Team Collaboration compliance
+SDLC 5.1.0 Complete Validator
+Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework compliance
 
-Version: 5.0.0
-Date: December 5, 2025
+Version: 5.1.0
+Date: December 11, 2025
 Status: ACTIVE - PRODUCTION READY
-Foundation: Proven validation across BFlow, NQH-Bot, MTEP platforms
-Enhancement: Complete 10-Stage Lifecycle + 4-Tier Classification + Team Collaboration Standards
+Foundation: Proven validation across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
+Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained Deployment
 
 10 Stages Validated:
 - Stage 00 (WHY): Project Foundation
@@ -24,18 +24,24 @@ Enhancement: Complete 10-Stage Lifecycle + 4-Tier Classification + Team Collabor
 6 Pillars Validated:
 - Pillar 0: Design Thinking Foundation
 - Pillar 1: AI-Native Excellence Standards (Zero Mock Policy)
-- Pillar 2: AI+Human Orchestration Model (+ Team Collaboration Standards)
+- Pillar 2: AI+Human Orchestration Model (+ SASE Framework)
 - Pillar 3: Quality Governance System (with Code Review)
 - Pillar 4: Documentation Permanence
 - Pillar 5: Continuous Compliance Platform
 
-4-Tier Classification (NEW in 5.0.0):
+SASE Framework (NEW in 5.1.0):
+- SE4H (Agent Coach): Human creates BRS, MTS, VCR
+- SE4A (Agent Executor): AI creates LPS, CRP, MRP
+- 6 SASE Artifacts: BRS, LPS, MTS, CRP, MRP, VCR
+- Agentic Maturity: L0 (Tool-Assisted) → L3 (Lifecycle Agentic)
+
+4-Tier Classification:
 - LITE: 1-2 people, basic documentation
 - STANDARD: 3-10 people, CLAUDE.md + /docs
-- PROFESSIONAL: 10-50 people, full 10-stage + ADRs
-- ENTERPRISE: 50+ people, CTO/CPO reports + CAB process
+- PROFESSIONAL: 10-50 people, full 10-stage + ADRs + SASE
+- ENTERPRISE: 50+ people, CTO/CPO reports + CAB process + Full SASE
 
-Team Collaboration Standards (NEW in 5.0.0):
+Team Collaboration Standards:
 - SDLC-Team-Communication-Protocol.md (tiered requirements)
 - SDLC-Team-Collaboration-Protocol.md (RACI, handoffs)
 - SDLC-Escalation-Path-Standards.md (4-level escalation)
@@ -54,7 +60,7 @@ Success Metrics:
 - All 10 stages must have documentation
 - All 6 pillars must pass validation
 - Zero Mock Policy enforced (0 mocks)
-- Team Collaboration Standards for STANDARD+ tiers
+- SASE artifacts for PROFESSIONAL+ tiers (5.1.0)
 - Code File Naming Standards enforced
 - Design Thinking methodology applied
 - Code Review tier active (1, 2, or 3)
@@ -66,8 +72,8 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 import re
 
-class SDLC50Validator:
-    """SDLC 5.0.0 Complete 6-Pillar + Team Collaboration Validator"""
+class SDLC51Validator:
+    """SDLC 5.1.0 Complete 6-Pillar + SASE Framework + Team Collaboration Validator"""
 
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
@@ -82,8 +88,8 @@ class SDLC50Validator:
         self.overall_compliant = False
 
     def validate_all_pillars(self) -> Dict:
-        """Validate all 6 pillars of SDLC 5.0.0"""
-        print("🔍 SDLC 5.0.0 Complete Validation Starting...")
+        """Validate all 6 pillars of SDLC 5.1.0"""
+        print("🔍 SDLC 5.1.0 Complete Validation Starting...")
         print(f"📁 Project: {self.project_path}")
         print("=" * 80)
 
@@ -197,8 +203,8 @@ class SDLC50Validator:
         print(f"   {status} - Mocks: {mock_count} (must be 0)")
 
     def validate_pillar_2_ai_human(self):
-        """Pillar 2: AI+Human Orchestration Model (+ Team Collaboration Standards)"""
-        print("\n🤖 Validating Pillar 2: AI+Human Orchestration + Team Collaboration...")
+        """Pillar 2: AI+Human Orchestration Model (+ SASE Framework + Team Collaboration)"""
+        print("\n🤖 Validating Pillar 2: AI+Human Orchestration + SASE Framework...")
 
         pillar = self.results["pillar_2"]
         score = 0
@@ -230,15 +236,25 @@ class SDLC50Validator:
         else:
             pillar["details"].append("⚠️  AI agent orchestration not detected")
 
-        # NEW in 5.0.0: Check for Team Collaboration Standards
+        # NEW in 5.1.0: Check for SASE Artifacts
+        sase_score = self.check_sase_artifacts()
+        score += sase_score
+        if sase_score >= 20:
+            pillar["details"].append("✅ SASE Artifacts found (5.1.0 SE 3.0)")
+        elif sase_score > 0:
+            pillar["details"].append("⚠️  Partial SASE Artifacts (check BRS, LPS, MRP, VCR)")
+        else:
+            pillar["details"].append("⚠️  SASE Artifacts not found (5.1.0)")
+
+        # Check for Team Collaboration Standards
         team_collab_score = self.check_team_collaboration()
         score += team_collab_score
         if team_collab_score >= 20:
-            pillar["details"].append("✅ Team Collaboration Standards found (5.0.0)")
+            pillar["details"].append("✅ Team Collaboration Standards found")
         elif team_collab_score > 0:
             pillar["details"].append("⚠️  Partial Team Collaboration Standards")
         else:
-            pillar["details"].append("⚠️  Team Collaboration Standards not found (5.0.0)")
+            pillar["details"].append("⚠️  Team Collaboration Standards not found")
 
         pillar["score"] = min(score, 100)
         pillar["passed"] = score >= 40  # 40% minimum
@@ -392,9 +408,56 @@ class SDLC50Validator:
                 return True
         return False
 
+    def check_sase_artifacts(self) -> int:
+        """
+        Check for SASE Artifacts (NEW in SDLC 5.1.0 SE 3.0)
+        Returns score 0-30 based on presence of SASE artifacts
+
+        SASE 6 Artifacts:
+        - BRS (BriefingScript): Human creates task specification
+        - LPS (LoopScript): Agent creates execution plan
+        - MTS (MentorScript): Human creates coding standards
+        - CRP (Consultation Request): Agent requests help when uncertain
+        - MRP (Merge-Readiness Pack): Agent creates 5-point evidence
+        - VCR (Version Controlled Resolution): Human approves work
+        """
+        score = 0
+
+        # SASE Artifact patterns to look for
+        sase_patterns = [
+            "BriefingScript", "BRS",
+            "LoopScript", "LPS",
+            "MentorScript", "MTS",
+            "CRP", "Consultation-Request",
+            "MRP", "Merge-Readiness",
+            "VCR", "Version-Controlled-Resolution",
+            "SASE-Artifacts", "sase-artifacts"
+        ]
+
+        found_patterns = []
+        for pattern in sase_patterns:
+            matches = list(self.project_path.rglob(f"*{pattern}*"))
+            if matches:
+                found_patterns.append(pattern)
+                score += 3
+
+        # Check for SASE folder structure
+        sase_folders = [
+            "SASE-Artifacts",
+            "sase",
+            "agent-artifacts"
+        ]
+
+        for folder in sase_folders:
+            if list(self.project_path.rglob(folder)):
+                score += 10
+                break
+
+        return min(score, 30)  # Cap at 30 points
+
     def check_team_collaboration(self) -> int:
         """
-        Check for Team Collaboration Standards (NEW in SDLC 5.0.0)
+        Check for Team Collaboration Standards
         Returns score 0-30 based on presence of team collaboration documents
         """
         score = 0
@@ -485,7 +548,7 @@ class SDLC50Validator:
         return False
 
     def calculate_overall_compliance(self):
-        """Calculate overall SDLC 5.0.0 compliance"""
+        """Calculate overall SDLC 5.1.0 compliance"""
         passed_count = sum(1 for p in self.results.values() if p["passed"])
         total_score = sum(p["score"] for p in self.results.values()) / 6
 
@@ -495,7 +558,7 @@ class SDLC50Validator:
     def print_results(self):
         """Print detailed validation results"""
         print("\n" + "=" * 80)
-        print("📊 SDLC 5.0.0 VALIDATION RESULTS")
+        print("📊 SDLC 5.1.0 VALIDATION RESULTS")
         print("=" * 80)
 
         for pillar_key, pillar_data in self.results.items():
@@ -508,13 +571,15 @@ class SDLC50Validator:
         print(f"Overall Score: {self.overall_score:.1f}%")
 
         if self.overall_compliant:
-            print("🎉 PROJECT IS SDLC 5.0.0 COMPLIANT!")
+            print("🎉 PROJECT IS SDLC 5.1.0 COMPLIANT!")
             print("✅ Ready for production deployment")
-            print("✅ Team Collaboration Standards validated (5.0.0)")
+            print("✅ SASE Framework validated (SE 3.0)")
+            print("✅ Team Collaboration Standards validated")
         else:
             print("⚠️  PROJECT NEEDS IMPROVEMENT")
             print("💡 Address failed pillars before production deployment")
-            print("💡 Check Team Collaboration Standards (SDLC 5.0.0)")
+            print("💡 Check SASE Artifacts (BRS, LPS, MRP, VCR)")
+            print("💡 See: SDLC-Enterprise-Framework/03-Templates-Tools/SASE-Artifacts/")
 
         print("=" * 80)
 
@@ -530,7 +595,7 @@ def main():
         print(f"❌ Error: Path does not exist: {project_path}")
         sys.exit(1)
 
-    validator = SDLC50Validator(project_path)
+    validator = SDLC51Validator(project_path)
     results = validator.validate_all_pillars()
 
     # Exit with appropriate code

@@ -10,6 +10,21 @@
 
 ---
 
+## 🗺️ Quick Navigation
+
+| I want to... | Go to |
+|--------------|-------|
+| **Start SDLC from scratch** | [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) |
+| **Deploy to a team folder** | [SDLC-Self-Contained-Deployment-Guide.md](SDLC-Self-Contained-Deployment-Guide.md) |
+| **Choose code review tier** | [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) |
+| **Setup pre-commit hooks** | [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) |
+| **Handle production crisis** | [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) |
+| **Validate SDLC compliance** | [Automation Scripts](#-automation-scripts) |
+| **Work with AI agents (SASE)** | [SASE Artifacts Templates](#-sase-artifacts-se-30) |
+| **Use AI prompts** | [AI Tools & Prompts](#-ai-tools--prompts) |
+
+---
+
 ## 📚 Guides in This Folder
 
 ### 🎯 Core Implementation
@@ -455,18 +470,180 @@ Result: Enterprise-grade SDLC deployment
 
 ---
 
-## 🔗 Related Resources
+## 🔗 Complete SDLC Resource Map
 
-### Core Framework
-- [02-Core-Methodology/](../02-Core-Methodology/) - 10-stage lifecycle theory
-- [00-Overview/](../00-Overview/) - SDLC 5.0.0 overview
+### 📖 Core Framework Documentation
 
-### Templates & Tools
-- [03-Templates-Tools/](../03-Templates-Tools/) - AI prompts, agent templates
-- [03-Templates-Tools/4-Scripts/](../03-Templates-Tools/4-Scripts/) - Automation scripts
+| Folder | Purpose | Key Files |
+|--------|---------|-----------|
+| [01-Overview/](../01-Overview/) | SDLC 5.1.0 executive summary | [SDLC-Executive-Summary.md](../01-Overview/SDLC-Executive-Summary.md) |
+| [02-Core-Methodology/](../02-Core-Methodology/) | 10-stage lifecycle + SASE theory | [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md), [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md), [SDLC-Agentic-Maturity-Model.md](../02-Core-Methodology/SDLC-Agentic-Maturity-Model.md) |
+| [04-Case-Studies/](../04-Case-Studies/) | Battle-tested patterns | BFlow, NQH-Bot, MTEP success stories |
 
-### Case Studies
-- [07-Case-Studies/](../07-Case-Studies/) - BFlow, NQH-Bot, MTEP success stories
+---
+
+### 🤖 SASE Artifacts (SE 3.0)
+
+**Location**: [03-Templates-Tools/SASE-Artifacts/](../03-Templates-Tools/SASE-Artifacts/)
+
+| Artifact | Created By | Purpose | Template |
+|----------|------------|---------|----------|
+| **BRS** (BriefingScript) | Human (SE4H) | Task specification | [01-BriefingScript-Template.yaml](../03-Templates-Tools/SASE-Artifacts/01-BriefingScript-Template.yaml) |
+| **LPS** (LoopScript) | Agent (SE4A) | Execution plan | [02-LoopScript-Template.yaml](../03-Templates-Tools/SASE-Artifacts/02-LoopScript-Template.yaml) |
+| **MTS** (MentorScript) | Human (SE4H) | Coding standards | [03-MentorScript-Template.md](../03-Templates-Tools/SASE-Artifacts/03-MentorScript-Template.md) |
+| **CRP** (Consultation Request) | Agent (SE4A) | When uncertain | [04-CRP-Template.md](../03-Templates-Tools/SASE-Artifacts/04-CRP-Template.md) |
+| **MRP** (Merge-Readiness Pack) | Agent (SE4A) | 5-point evidence | [05-MRP-Template.md](../03-Templates-Tools/SASE-Artifacts/05-MRP-Template.md) |
+| **VCR** (Version Controlled Resolution) | Human (SE4H) | Approval record | [06-VCR-Template.md](../03-Templates-Tools/SASE-Artifacts/06-VCR-Template.md) |
+
+**Workflow**: `BRS → LPS → [work] → CRP (if stuck) → MRP → VCR`
+
+---
+
+### 🛠️ AI Tools & Prompts
+
+**Location**: [03-Templates-Tools/1-AI-Tools/](../03-Templates-Tools/1-AI-Tools/)
+
+#### Design Thinking Prompts
+| Tool | Purpose |
+|------|---------|
+| [problem-statement.md](../03-Templates-Tools/1-AI-Tools/design-thinking/problem-statement.md) | Generate problem statements |
+| [empathy-synthesis.md](../03-Templates-Tools/1-AI-Tools/design-thinking/empathy-synthesis.md) | Synthesize user research |
+| [ideation-facilitator.md](../03-Templates-Tools/1-AI-Tools/design-thinking/ideation-facilitator.md) | Facilitate ideation sessions |
+| [prototype-validator.md](../03-Templates-Tools/1-AI-Tools/design-thinking/prototype-validator.md) | Validate prototypes |
+| [user-testing-analyzer.md](../03-Templates-Tools/1-AI-Tools/design-thinking/user-testing-analyzer.md) | Analyze user testing results |
+
+#### Code Review Prompts
+| Tool | Purpose |
+|------|---------|
+| [tier-1-manual-prompts.md](../03-Templates-Tools/1-AI-Tools/code-review/tier-1-manual-prompts.md) | Manual review checklists |
+| [tier-2-ai-powered.md](../03-Templates-Tools/1-AI-Tools/code-review/tier-2-ai-powered.md) | AI-powered review prompts |
+| [tier-3-automation.md](../03-Templates-Tools/1-AI-Tools/code-review/tier-3-automation.md) | CodeRabbit integration |
+
+#### Testing Prompts
+| Tool | Purpose |
+|------|---------|
+| [test-case-generator.md](../03-Templates-Tools/1-AI-Tools/testing/test-case-generator.md) | Generate test cases |
+| [performance-test-analyzer.md](../03-Templates-Tools/1-AI-Tools/testing/performance-test-analyzer.md) | Analyze performance tests |
+| [uat-script-creator.md](../03-Templates-Tools/1-AI-Tools/testing/uat-script-creator.md) | Create UAT scripts |
+
+#### Deployment Prompts
+| Tool | Purpose |
+|------|---------|
+| [deployment-checklist-generator.md](../03-Templates-Tools/1-AI-Tools/deployment/deployment-checklist-generator.md) | Generate deployment checklists |
+| [rollback-plan-creator.md](../03-Templates-Tools/1-AI-Tools/deployment/rollback-plan-creator.md) | Create rollback plans |
+| [release-notes-writer.md](../03-Templates-Tools/1-AI-Tools/deployment/release-notes-writer.md) | Write release notes |
+
+#### Operations Prompts
+| Tool | Purpose |
+|------|---------|
+| [incident-response-guide.md](../03-Templates-Tools/1-AI-Tools/operations/incident-response-guide.md) | Incident response procedures |
+| [monitoring-setup-helper.md](../03-Templates-Tools/1-AI-Tools/operations/monitoring-setup-helper.md) | Setup monitoring |
+| [post-mortem-analyzer.md](../03-Templates-Tools/1-AI-Tools/operations/post-mortem-analyzer.md) | Analyze post-mortems |
+
+#### Governance Prompts
+| Tool | Purpose |
+|------|---------|
+| [compliance-checker.md](../03-Templates-Tools/1-AI-Tools/governance/compliance-checker.md) | Check compliance |
+| [audit-report-generator.md](../03-Templates-Tools/1-AI-Tools/governance/audit-report-generator.md) | Generate audit reports |
+
+#### Integration Prompts
+| Tool | Purpose |
+|------|---------|
+| [api-contract-designer.md](../03-Templates-Tools/1-AI-Tools/integration/api-contract-designer.md) | Design API contracts |
+| [integration-test-generator.md](../03-Templates-Tools/1-AI-Tools/integration/integration-test-generator.md) | Generate integration tests |
+
+#### Collaboration Prompts
+| Tool | Purpose |
+|------|---------|
+| [meeting-summarizer.md](../03-Templates-Tools/1-AI-Tools/collaboration/meeting-summarizer.md) | Summarize meetings |
+| [raci-matrix-generator.md](../03-Templates-Tools/1-AI-Tools/collaboration/raci-matrix-generator.md) | Generate RACI matrices |
+| [team-protocol-generator.md](../03-Templates-Tools/1-AI-Tools/collaboration/team-protocol-generator.md) | Generate team protocols |
+| [documentation-writer.md](../03-Templates-Tools/1-AI-Tools/collaboration/documentation-writer.md) | Write documentation |
+
+#### Platform Examples
+| Tool | Purpose |
+|------|---------|
+| [bflow-ai-patterns.md](../03-Templates-Tools/1-AI-Tools/platform-examples/bflow-ai-patterns.md) | BFlow AI patterns |
+| [nqh-bot-ai-patterns.md](../03-Templates-Tools/1-AI-Tools/platform-examples/nqh-bot-ai-patterns.md) | NQH-Bot AI patterns |
+
+---
+
+### 🤖 Agent Templates
+
+**Location**: [03-Templates-Tools/2-Agent-Templates/](../03-Templates-Tools/2-Agent-Templates/)
+
+| Template | Purpose |
+|----------|---------|
+| [CLAUDE-CODE-AGENTS-GUIDE.md](../03-Templates-Tools/2-Agent-Templates/claude-code/CLAUDE-CODE-AGENTS-GUIDE.md) | Claude Code agent configuration |
+| [AI-TOOLS-COORDINATION-BEST-PRACTICES.md](../03-Templates-Tools/2-Agent-Templates/universal/AI-TOOLS-COORDINATION-BEST-PRACTICES.md) | Best practices for AI tool coordination |
+
+---
+
+### 📝 Manual Templates
+
+**Location**: [03-Templates-Tools/3-Manual-Templates/](../03-Templates-Tools/3-Manual-Templates/)
+
+#### Design Thinking Templates
+| Template | Purpose |
+|----------|---------|
+| [Empathy-Map-Canvas-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/Empathy-Map-Canvas-Template.md) | Empathy map canvas |
+| [User-Journey-Map-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/User-Journey-Map-Template.md) | User journey mapping |
+| [POV-Statement-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/POV-Statement-Template.md) | Point of View statements |
+| [HMW-Questions-Worksheet.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/HMW-Questions-Worksheet.md) | How Might We questions |
+| [Ideation-Brainstorming-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/Ideation-Brainstorming-Template.md) | Brainstorming sessions |
+| [Prototype-Test-Plan-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/Prototype-Test-Plan-Template.md) | Prototype test planning |
+| [User-Testing-Script-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/User-Testing-Script-Template.md) | User testing scripts |
+| [Feedback-Analysis-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/Feedback-Analysis-Template.md) | Feedback analysis |
+| [Problem-Statement-Template.md](../03-Templates-Tools/3-Manual-Templates/design-thinking/Problem-Statement-Template.md) | Problem statement definition |
+
+---
+
+### ⚡ Automation Scripts
+
+**Location**: [03-Templates-Tools/4-Scripts/](../03-Templates-Tools/4-Scripts/)
+
+#### Compliance Scripts
+| Script | Purpose | Usage |
+|--------|---------|-------|
+| [sdlc_validator.py](../03-Templates-Tools/4-Scripts/compliance/sdlc_validator.py) | Validate SDLC 5.1 folder structure | `python sdlc_validator.py /path/to/project` |
+| [sdlc_scanner.py](../03-Templates-Tools/4-Scripts/compliance/sdlc_scanner.py) | Scan project for SDLC compliance | `python sdlc_scanner.py /path/to/project` |
+| [design_thinking_validator.py](../03-Templates-Tools/4-Scripts/compliance/design_thinking_validator.py) | Validate Design Thinking artifacts | `python design_thinking_validator.py /path/to/docs` |
+
+#### Quick Start Scripts
+| Script | Purpose | Usage |
+|--------|---------|-------|
+| [solo_setup.py](../03-Templates-Tools/4-Scripts/quick-start/solo_setup.py) | Setup SDLC for solo developer | `python solo_setup.py --tier LITE` |
+
+---
+
+### 📁 Project Templates
+
+**Location**: [03-Templates-Tools/5-Project-Templates/](../03-Templates-Tools/5-Project-Templates/)
+
+| Template | Purpose |
+|----------|---------|
+| [AI-ONBOARDING-TEMPLATE.md](../03-Templates-Tools/5-Project-Templates/AI-ONBOARDING-TEMPLATE.md) | AI agent onboarding (CLAUDE.md) |
+| [PLANNING-HIERARCHY-TEMPLATE/](../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/) | 4-level planning templates |
+
+#### Planning Hierarchy Templates
+| Template | Level | Purpose |
+|----------|-------|---------|
+| [ROADMAP-TEMPLATE.md](../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/ROADMAP-TEMPLATE.md) | L1 | 12-month vision |
+| [PHASE-TEMPLATE.md](../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/PHASE-TEMPLATE.md) | L2 | 4-8 week themes |
+| [SPRINT-TEMPLATE.md](../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) | L3 | 5-10 day commitments |
+| [BACKLOG-TEMPLATE.md](../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/BACKLOG-TEMPLATE.md) | L4 | Individual tasks |
+
+---
+
+### 📊 Case Studies
+
+**Location**: [04-Case-Studies/](../04-Case-Studies/)
+
+| Case Study | Platform | Key Learnings |
+|------------|----------|---------------|
+| BFlow | Multi-tenant SaaS | 14,822% ROI, crisis recovery |
+| NQH-Bot | AI chatbot | Zero Mock Policy origin |
+| MTEP | Education platform | <30 min TTFV |
 
 ---
 
@@ -474,16 +651,17 @@ Result: Enterprise-grade SDLC deployment
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.1.0 | Dec 11, 2025 | Added comprehensive resource map, SASE artifacts links, all scripts/tools |
 | 5.0.0 | Dec 6, 2025 | Complete 10-stage + 4-tier integration across all guides |
 | 4.9.0 | Nov 13, 2025 | Initial 10-stage lifecycle coverage |
 | 4.8.0 | Oct 2025 | Battle-tested patterns from BFlow crisis |
 
 ---
 
-**Folder Purpose**: Practical implementation guides for SDLC 5.0.0 framework
-**Version**: 5.0.0
-**Last Updated**: December 6, 2025
-**Status**: PRODUCTION READY (all 10 guides upgraded to SDLC 5.0.0)
+**Folder Purpose**: Practical implementation guides for SDLC 5.1.0 framework + SASE/SE 3.0
+**Version**: 5.1.0
+**Last Updated**: December 11, 2025
+**Status**: PRODUCTION READY (all guides upgraded to SDLC 5.1.0 + SASE)
 **SDLC Stage**: Stage 05 (IMPLEMENTATION)
 **SDLC Tier**: ALL TIERS (Scalable)
 **Next Update**: As new patterns emerge from production
@@ -492,5 +670,5 @@ Result: Enterprise-grade SDLC deployment
 
 ***"Choose the tier that fits YOUR context. All paths lead to quality."*** 🎯
 
-***"From zero to production in 1-2 weeks. Proven across 3 platforms."*** 🚀
+***"From zero to production in 1 day (LITE) to 4 weeks (ENTERPRISE)."*** 🚀
 
