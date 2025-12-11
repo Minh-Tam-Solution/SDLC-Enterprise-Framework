@@ -1,12 +1,41 @@
 # 🤖 2-Agent-Templates - AI Assistant Configurations
-## Pre-Configured Agents for SDLC 5.0.0 Complete Lifecycle
+## Pre-Configured Agents for SDLC 5.1.0 Complete Lifecycle + SASE Roles
 
-**Version**: 5.0.0
-**Date**: December 6, 2025
+**Version**: 5.1.0
+**Date**: December 11, 2025
 **Priority**: ⭐⭐⭐⭐ (HIGH)
-**Purpose**: Ready-to-use AI agent configurations mapped to 10-stage lifecycle
-**Status**: PRODUCTION-READY
-**Coverage**: 5 AI platforms × 17 specialized agents
+**Purpose**: Ready-to-use AI agent configurations mapped to 10-stage lifecycle + SE4H/SE4A roles
+**Status**: PRODUCTION-READY + SASE/SE 3.0 INTEGRATION
+**Coverage**: 5 AI platforms × 17 specialized agents + SASE role mapping
+
+---
+
+## 🆕 What's New in SDLC 5.1.0 (December 11, 2025)
+
+### SE4H vs SE4A Role Mapping
+
+**SDLC 5.1.0** maps all agent templates to **SASE roles**:
+
+| Agent Template | SASE Role | Primary Artifacts |
+|---------------|-----------|-------------------|
+| **Product Owner** | SE4H (Agent Coach) | BRS, VCR |
+| **Business Analyst** | SE4H (Agent Coach) | BRS, MTS |
+| **Architect** | SE4H (Agent Coach) | MTS, VCR |
+| **Developer** | SE4A (Agent Executor) | LPS, MRP |
+| **QA Engineer** | SE4A (Agent Executor) | MRP, CRP |
+| **DevOps Engineer** | SE4A (Agent Executor) | LPS, MRP |
+| **CTO/CPO** | SE4H (Agent Coach) | BRS, VCR (approvals) |
+
+### Agentic Maturity × Agent Templates
+
+| Level | How to Use Agent Templates |
+|-------|---------------------------|
+| **L0** Tool-Assisted | Use templates as-is (no SASE artifacts) |
+| **L1** Agent-Assisted | Templates + BRS input + MRP output |
+| **L2** Structured Agentic | Templates + Full SASE workflow |
+| **L3** Lifecycle Agentic | Templates with proactive suggestions |
+
+**→ See also: [../SASE-Artifacts/](../SASE-Artifacts/) for SASE templates**
 
 ---
 

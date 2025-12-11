@@ -1,11 +1,42 @@
-# 🤖 AI Tools for SDLC 5.0.0
-## Stage-Aligned AI Automation for Complete Lifecycle
+# 🤖 AI Tools for SDLC 5.1.0
+## Stage-Aligned AI Automation for Complete Lifecycle + SASE Integration
 
-**Version**: 5.0.0
-**Date**: December 6, 2025
-**Status**: ACTIVE - Production Standards
-**Scope**: AI tools mapped to all 10 SDLC stages + 4-Tier Classification
+**Version**: 5.1.0
+**Date**: December 11, 2025
+**Status**: ACTIVE - Production Standards + SASE/SE 3.0
+**Scope**: AI tools mapped to all 10 SDLC stages + 4-Tier Classification + Agentic Maturity
 **Foundation**: Proven across 3 platforms (BFlow, NQH-Bot, MTEP)
+
+---
+
+## 🆕 What's New in SDLC 5.1.0 (December 11, 2025)
+
+### SASE Integration for AI Tools
+
+**SDLC 5.1.0** integrates **SE 3.0 SASE principles** into AI tool usage:
+
+```yaml
+SE4H (Human) Role with AI Tools:
+  - Create BriefingScript before delegating to AI
+  - Review AI outputs with MRP evidence
+  - Approve changes with VCR
+
+SE4A (AI Agent) Role:
+  - Execute tasks based on BriefingScript
+  - Generate code following MentorScript standards
+  - Provide MRP evidence for review
+```
+
+### Agentic Maturity × AI Tools
+
+| Level | How to Use AI Tools |
+|-------|---------------------|
+| **L0** Tool-Assisted | Use AI Tools directly (ad-hoc prompts) |
+| **L1** Agent-Assisted | Create BRS → Use AI Tools → Generate MRP |
+| **L2** Structured Agentic | Full SASE workflow with all 6 artifacts |
+| **L3** Lifecycle Agentic | AI proactively suggests improvements |
+
+**→ See also: [../SASE-Artifacts/](../SASE-Artifacts/) for templates**
 
 ---
 

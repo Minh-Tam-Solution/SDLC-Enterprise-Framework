@@ -1,18 +1,47 @@
-# 🛠️ SDLC 5.0.0 Templates & Tools
-## Complete 10-Stage Productivity Suite - AI Tools + Agent Templates + Manual Backup + Automation
+# 🛠️ SDLC 5.1.0 Templates & Tools
+## Complete 10-Stage Productivity Suite + SASE Artifact Templates
 
-**Version**: 5.0.0
-**Date**: December 6, 2025
+**Version**: 5.1.0
+**Date**: December 11, 2025
 **Stage**: 03 - TEMPLATES & TOOLS
-**Status**: PRODUCTION-READY - COMPLETE 10-STAGE LIFECYCLE COVERAGE
+**Status**: PRODUCTION-READY - COMPLETE 10-STAGE + SASE/SE 3.0 INTEGRATION
 **Authority**: CTO + CPO Office
-**Organization**: Numbered directories (1-5) indicate priority and usage order
+**Organization**: Numbered directories (1-5) indicate priority and usage order + SASE-Artifacts
 **ROI**: 14,822% combined (BFlow Platform validated, 52-day journey)
 **Proven**: BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
 
 ---
 
-## 🎯 SDLC 5.0.0 Complete Lifecycle
+## 🆕 What's New in SDLC 5.1.0 (December 11, 2025)
+
+### SASE Artifact Templates (NEW)
+
+**SDLC 5.1.0** adds **6 SASE artifact templates** for structured human-agent collaboration:
+
+```yaml
+SASE-Artifacts/:
+  01-BriefingScript-Template.yaml    # Human → Agent task specification (SE4H creates)
+  02-LoopScript-Template.yaml        # Agent execution plan with iterations (SE4A creates)
+  03-MentorScript-Template.md        # Coding standards for agents (SE4H creates)
+  04-CRP-Template.md                 # Consultation Request Protocol (SE4A creates)
+  05-MRP-Template.md                 # Merge-Readiness Pack - 5-point evidence (SE4A creates)
+  06-VCR-Template.md                 # Version Controlled Resolution (SE4H approves)
+```
+
+### Agentic Maturity Level Integration
+
+| Level | Artifacts Required | Templates to Use |
+|-------|-------------------|------------------|
+| **L0** Tool-Assisted | None | Use AI Tools (1-AI-Tools/) |
+| **L1** Agent-Assisted | BRS, MRP, VCR | SASE-Artifacts/ (3 core) |
+| **L2** Structured Agentic | All 6 artifacts | SASE-Artifacts/ (all) |
+| **L3** Lifecycle Agentic | All + Memory | SASE-Artifacts/ + custom |
+
+**→ [NEW: SASE-Artifacts/](SASE-Artifacts/)**
+
+---
+
+## 🎯 SDLC 5.1.0 Complete Lifecycle
 
 ### 10-Stage Lifecycle Coverage
 
