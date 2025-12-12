@@ -1,25 +1,30 @@
 #!/usr/bin/env python3
 """
-SDLC 5.1.0 Complete Validator
+SDLC 5.1.1 Complete Validator
 Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework compliance
 
-Version: 5.1.0
-Date: December 11, 2025
+Version: 5.1.1
+Date: December 12, 2025
 Status: ACTIVE - PRODUCTION READY
 Foundation: Proven validation across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
 Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained Deployment
 
-10 Stages Validated:
-- Stage 00 (WHY): Project Foundation
-- Stage 01 (WHAT): Planning & Analysis
-- Stage 02 (HOW): Design & Architecture
+10 Stages Validated (00-09):
+- Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
+- Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
+- Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
+- Stage 03 (INTEGRATE): API Contracts & Third-party Setup
 - Stage 04 (BUILD): Development & Implementation
-- Stage 04 (TEST): Testing & Quality
-- Stage 05 (DEPLOY): Deployment & Release
-- Stage 06 (OPERATE): Operations Management
-- Stage 07 (INTEGRATE): Integration & APIs
-- Stage 08 (COLLABORATE): Team Coordination & Communication
-- Stage 09 (GOVERN): Governance & Compliance
+- Stage 05 (TEST): Quality Assurance & Validation
+- Stage 06 (DEPLOY): Release & Deployment
+- Stage 07 (OPERATE): Production Operations & Monitoring
+- Stage 08 (COLLABORATE): Team Coordination & Knowledge
+- Stage 09 (GOVERN): Compliance & Strategic Oversight
+
+Legacy/Archive Structure (SDLC 5.1.1):
+- 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
+- 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
+- Content in legacy/archive folders is never validated or upgraded
 
 6 Pillars Validated:
 - Pillar 0: Design Thinking Foundation
@@ -73,7 +78,19 @@ from typing import Dict, List, Tuple
 import re
 
 class SDLC51Validator:
-    """SDLC 5.1.0 Complete 6-Pillar + SASE Framework + Team Collaboration Validator"""
+    """SDLC 5.1.1 Complete 6-Pillar + SASE Framework + Team Collaboration Validator
+
+    Legacy/Archive Handling:
+    - Skips 10-archive folder at docs root (not a stage)
+    - Skips 99-legacy folders within stages (00-09) and backend/frontend/tools
+    - Content in legacy/archive is never validated or upgraded
+    """
+
+    # Legacy/Archive folder patterns to skip during validation
+    LEGACY_ARCHIVE_PATTERNS = [
+        "99-legacy", "99-Legacy",  # In stages, backend, frontend, tools
+        "10-archive", "10-Archive",  # At docs root only (not a stage)
+    ]
 
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
@@ -87,9 +104,37 @@ class SDLC51Validator:
         }
         self.overall_compliant = False
 
+    def _is_legacy_or_archive(self, path: Path) -> bool:
+        """Check if path is in a legacy or archive folder.
+
+        Args:
+            path: Path to check
+
+        Returns:
+            True if path should be skipped (in legacy/archive)
+        """
+        path_str = str(path)
+        for pattern in self.LEGACY_ARCHIVE_PATTERNS:
+            if f"/{pattern}/" in path_str or path_str.endswith(f"/{pattern}"):
+                return True
+        return False
+
+    def _rglob_skip_legacy(self, pattern: str):
+        """Glob with legacy/archive folders skipped.
+
+        Args:
+            pattern: Glob pattern to match
+
+        Yields:
+            Paths matching pattern, excluding legacy/archive folders
+        """
+        for path in self.project_path.rglob(pattern):
+            if not self._is_legacy_or_archive(path):
+                yield path
+
     def validate_all_pillars(self) -> Dict:
-        """Validate all 6 pillars of SDLC 5.1.0"""
-        print("🔍 SDLC 5.1.0 Complete Validation Starting...")
+        """Validate all 6 pillars of SDLC 5.1.1"""
+        print("🔍 SDLC 5.1.1 Complete Validation Starting...")
         print(f"📁 Project: {self.project_path}")
         print("=" * 80)
 
@@ -127,7 +172,7 @@ class SDLC51Validator:
 
         found_files = []
         for pattern in design_thinking_files:
-            matches = list(self.project_path.rglob(f"*{pattern}*"))
+            matches = list(self._rglob_skip_legacy(f"*{pattern}*"))
             if matches:
                 found_files.extend(matches)
                 score += 20
@@ -178,7 +223,7 @@ class SDLC51Validator:
         mock_count = 0
         mock_files = []
 
-        for file_path in self.project_path.rglob("*.py"):
+        for file_path in self._rglob_skip_legacy("*.py"):
             try:
                 content = file_path.read_text(encoding='utf-8')
                 for pattern in mock_patterns:
@@ -387,7 +432,7 @@ class SDLC51Validator:
         phases = ["empathize", "define", "ideate", "prototype", "test"]
         found = 0
         for phase in phases:
-            if list(self.project_path.rglob(f"*{phase}*")):
+            if list(self._rglob_skip_legacy(f"*{phase}*")):
                 found += 1
         return found >= 3  # At least 3 phases documented
 
@@ -395,7 +440,7 @@ class SDLC51Validator:
         """Check for user validation evidence"""
         validation_terms = ["user-testing", "user-validation", "user-feedback"]
         for term in validation_terms:
-            if list(self.project_path.rglob(f"*{term}*")):
+            if list(self._rglob_skip_legacy(f"*{term}*")):
                 return True
         return False
 
@@ -404,7 +449,7 @@ class SDLC51Validator:
         # Look for agent configuration or orchestration files
         agent_patterns = ["agent", "orchestration", "ai-workflow"]
         for pattern in agent_patterns:
-            if list(self.project_path.rglob(f"*{pattern}*")):
+            if list(self._rglob_skip_legacy(f"*{pattern}*")):
                 return True
         return False
 
@@ -436,7 +481,7 @@ class SDLC51Validator:
 
         found_patterns = []
         for pattern in sase_patterns:
-            matches = list(self.project_path.rglob(f"*{pattern}*"))
+            matches = list(self._rglob_skip_legacy(f"*{pattern}*"))
             if matches:
                 found_patterns.append(pattern)
                 score += 3
@@ -449,7 +494,7 @@ class SDLC51Validator:
         ]
 
         for folder in sase_folders:
-            if list(self.project_path.rglob(folder)):
+            if list(self._rglob_skip_legacy(folder)):
                 score += 10
                 break
 
@@ -475,12 +520,12 @@ class SDLC51Validator:
 
         found_patterns = []
         for pattern in team_collab_patterns:
-            matches = list(self.project_path.rglob(f"*{pattern}*"))
+            matches = list(self._rglob_skip_legacy(f"*{pattern}*"))
             if matches:
                 found_patterns.append(pattern)
                 score += 5
 
-        # Check for specific SDLC 5.0.0 documents
+        # Check for specific SDLC 5.1.1 documents
         specific_docs = [
             "SDLC-Team-Communication-Protocol.md",
             "SDLC-Team-Collaboration-Protocol.md",
@@ -488,7 +533,7 @@ class SDLC51Validator:
         ]
 
         for doc in specific_docs:
-            if list(self.project_path.rglob(doc)):
+            if list(self._rglob_skip_legacy(doc)):
                 score += 10
 
         return min(score, 30)  # Cap at 30 points
@@ -518,17 +563,17 @@ class SDLC51Validator:
         return False
 
     def check_temporal_naming(self) -> List[Path]:
-        """Check for temporal references in filenames"""
+        """Check for temporal references in filenames (excluding legacy/archive)"""
         bad_patterns = ["SPRINT-", "DAY-", "PHASE-", "TEMP-", "DRAFT-"]
         bad_files = []
         for pattern in bad_patterns:
-            bad_files.extend(list(self.project_path.rglob(f"*{pattern}*")))
+            bad_files.extend(list(self._rglob_skip_legacy(f"*{pattern}*")))
         return bad_files
 
     def check_version_headers(self) -> bool:
-        """Check for version headers in files"""
+        """Check for version headers in files (excluding legacy/archive)"""
         # Sample a few files
-        sample_files = list(self.project_path.rglob("*.md"))[:5]
+        sample_files = list(self._rglob_skip_legacy("*.md"))[:5]
         headers_found = 0
         for file_path in sample_files:
             try:
@@ -540,15 +585,15 @@ class SDLC51Validator:
         return headers_found >= 2
 
     def check_monitoring(self) -> bool:
-        """Check for monitoring configuration"""
+        """Check for monitoring configuration (excluding legacy/archive)"""
         monitoring_files = ["prometheus", "grafana", "monitoring", "observability"]
         for mon_file in monitoring_files:
-            if list(self.project_path.rglob(f"*{mon_file}*")):
+            if list(self._rglob_skip_legacy(f"*{mon_file}*")):
                 return True
         return False
 
     def calculate_overall_compliance(self):
-        """Calculate overall SDLC 5.1.0 compliance"""
+        """Calculate overall SDLC 5.1.1 compliance"""
         passed_count = sum(1 for p in self.results.values() if p["passed"])
         total_score = sum(p["score"] for p in self.results.values()) / 6
 
@@ -558,7 +603,7 @@ class SDLC51Validator:
     def print_results(self):
         """Print detailed validation results"""
         print("\n" + "=" * 80)
-        print("📊 SDLC 5.1.0 VALIDATION RESULTS")
+        print("📊 SDLC 5.1.1 VALIDATION RESULTS")
         print("=" * 80)
 
         for pillar_key, pillar_data in self.results.items():
@@ -571,15 +616,17 @@ class SDLC51Validator:
         print(f"Overall Score: {self.overall_score:.1f}%")
 
         if self.overall_compliant:
-            print("🎉 PROJECT IS SDLC 5.1.0 COMPLIANT!")
+            print("🎉 PROJECT IS SDLC 5.1.1 COMPLIANT!")
             print("✅ Ready for production deployment")
             print("✅ SASE Framework validated (SE 3.0)")
             print("✅ Team Collaboration Standards validated")
+            print("✅ Legacy/Archive folders excluded from validation")
         else:
             print("⚠️  PROJECT NEEDS IMPROVEMENT")
             print("💡 Address failed pillars before production deployment")
             print("💡 Check SASE Artifacts (BRS, LPS, MRP, VCR)")
             print("💡 See: SDLC-Enterprise-Framework/03-Templates-Tools/SASE-Artifacts/")
+            print("💡 Note: Legacy/Archive folders (99-legacy, 10-archive) are excluded")
 
         print("=" * 80)
 

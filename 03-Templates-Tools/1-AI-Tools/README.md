@@ -1,10 +1,10 @@
-# 🤖 AI Tools for SDLC 5.1.0
+# 🤖 AI Tools for SDLC 5.1.1
 ## Stage-Aligned AI Automation for Complete Lifecycle + SASE Integration
 
-**Version**: 5.1.0
-**Date**: December 11, 2025
+**Version**: 5.1.1
+**Date**: December 12, 2025
 **Status**: ACTIVE - Production Standards + SASE/SE 3.0
-**Scope**: AI tools mapped to all 10 SDLC stages + 4-Tier Classification + Agentic Maturity
+**Scope**: AI tools mapped to all 10 SDLC stages (00-09) + 4-Tier Classification + Agentic Maturity
 **Foundation**: Proven across 3 platforms (BFlow, NQH-Bot, MTEP)
 
 ---
@@ -42,22 +42,22 @@ SE4A (AI Agent) Role:
 
 ## 🎯 What's New in SDLC 5.0.0
 
-### 10-Stage Lifecycle Coverage
+### 10-Stage Lifecycle Coverage (SDLC 5.1.1)
 
-SDLC 5.0.0 expands from 8 to **10 stages**. AI tools now cover the complete lifecycle:
+SDLC 5.1.1 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
 
 | Stage | Name | AI Tools Folder | Key Automation |
 |-------|------|-----------------|----------------|
-| 00 | WHY? (Foundation) | `design-thinking/` | User research, problem definition |
-| 01 | WHAT? (Planning) | `design-thinking/` | Ideation, requirements synthesis |
-| 02 | HOW? (Design) | `design-to-code/` | Architecture, component design |
-| 03 | BUILD (Development) | `code-review/` | Code generation, review automation |
-| 04 | TEST (Quality) | `testing/` | Test cases, UAT scripts, performance |
-| 05 | DEPLOY (Release) | `deployment/` | Checklists, rollback plans, release notes |
-| 06 | OPERATE (Production) | `operations/` | Monitoring, incident response, post-mortems |
-| 07 | INTEGRATE (Systems) | `integration/` | API contracts, integration tests |
-| 08 | COLLABORATE (Teams) | `collaboration/` | Protocols, RACI, documentation |
-| 09 | GOVERN (Compliance) | `governance/` | Compliance checks, audit reports |
+| 00 | FOUNDATION (WHY?) | `design-thinking/` | User research, problem definition |
+| 01 | PLANNING (WHAT?) | `design-thinking/` | Ideation, requirements synthesis |
+| 02 | DESIGN (HOW?) | `design-to-code/` | Architecture, component design |
+| 03 | INTEGRATE | `integration/` | API contracts, integration tests |
+| 04 | BUILD | `code-review/` | Code generation, review automation |
+| 05 | TEST | `testing/` | Test cases, UAT scripts, performance |
+| 06 | DEPLOY | `deployment/` | Checklists, rollback plans, release notes |
+| 07 | OPERATE | `operations/` | Monitoring, incident response, post-mortems |
+| 08 | COLLABORATE | `collaboration/` | Protocols, RACI, documentation |
+| 09 | GOVERN | `governance/` | Compliance checks, audit reports |
 
 ### 4-Tier Classification
 
@@ -84,21 +84,25 @@ AI tools scale with your team size:
 
 ---
 
-## 📂 Folder Structure (10-Stage Aligned)
+## 📂 Folder Structure (10-Stage Aligned - SDLC 5.1.1)
 
 ```
 1-AI-Tools/
 ├── README.md                    # This file
 │
-├── design-thinking/             # Stage 00-01 (WHY? → WHAT?)
+├── design-thinking/             # Stage 00-01 (FOUNDATION → PLANNING)
 │   ├── empathy-synthesis.md     # User research synthesis
 │   ├── problem-statement.md     # Problem definition generator
 │   ├── ideation-facilitator.md  # Solution brainstorming
 │   ├── prototype-validator.md   # Rapid prototype validation
 │   └── user-testing-analyzer.md # User testing analysis
 │
-├── design-to-code/              # Stage 02 (HOW?)
+├── design-to-code/              # Stage 02 (DESIGN)
 │   └── universal-prompts.md     # Design-to-code automation
+│
+├── integration/                 # Stage 03 (INTEGRATE)
+│   ├── api-contract-designer.md # OpenAPI, GraphQL specs
+│   └── integration-test-generator.md # Contract testing
 │
 ├── code-review/                 # Stage 04 (BUILD)
 │   ├── tier-1-manual-prompts.md # Manual + AI assistance
@@ -119,10 +123,6 @@ AI tools scale with your team size:
 │   ├── monitoring-setup-helper.md # Dashboards, alerts, SLOs
 │   ├── incident-response-guide.md # Incident handling
 │   └── post-mortem-analyzer.md  # Blameless post-mortems
-│
-├── integration/                 # Stage 03 (INTEGRATE)
-│   ├── api-contract-designer.md # OpenAPI, GraphQL specs
-│   └── integration-test-generator.md # Contract testing
 │
 ├── collaboration/               # Stage 08 (COLLABORATE)
 │   ├── README.md                # Collaboration tools overview
@@ -477,8 +477,10 @@ Output: Score + violations + auto-fix commands"
 
 ---
 
-**Folder Status**: ACTIVE - SDLC 5.0.0 Complete
-**Last Updated**: December 6, 2025
+**Folder Status**: ACTIVE - SDLC 5.1.1 Complete
+**Last Updated**: December 12, 2025
 **Owner**: CPO Office
 
 ***"AI automation for every stage of the lifecycle."*** 🚀
+
+**Legacy/Archive Policy**: Content in 99-legacy and 10-archive folders is never validated or upgraded.

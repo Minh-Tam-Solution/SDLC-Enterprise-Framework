@@ -1,10 +1,10 @@
 # 🤖 2-Agent-Templates - AI Assistant Configurations
-## Pre-Configured Agents for SDLC 5.1.0 Complete Lifecycle + SASE Roles
+## Pre-Configured Agents for SDLC 5.1.1 Complete Lifecycle + SASE Roles
 
-**Version**: 5.1.0
-**Date**: December 11, 2025
+**Version**: 5.1.1
+**Date**: December 12, 2025
 **Priority**: ⭐⭐⭐⭐ (HIGH)
-**Purpose**: Ready-to-use AI agent configurations mapped to 10-stage lifecycle + SE4H/SE4A roles
+**Purpose**: Ready-to-use AI agent configurations mapped to 10-stage lifecycle (00-09) + SE4H/SE4A roles
 **Status**: PRODUCTION-READY + SASE/SE 3.0 INTEGRATION
 **Coverage**: 5 AI platforms × 17 specialized agents + SASE role mapping
 
@@ -41,22 +41,22 @@
 
 ## 🎯 What's New in SDLC 5.0.0
 
-### 10-Stage Agent Mapping
+### 10-Stage Agent Mapping (SDLC 5.1.1)
 
-Agents are now mapped to the complete 10-stage lifecycle:
+Agents are now mapped to the complete 10-stage lifecycle (00-09):
 
 | Stage | Name | Primary Agents | Secondary Agents |
 |-------|------|----------------|------------------|
-| 00 | WHY? (Foundation) | Business Analyst, Product Owner | CEO, CPO |
-| 01 | WHAT? (Planning) | Product Owner, Business Analyst | Architect |
-| 02 | HOW? (Design) | Architect | CTO, Developer |
-| 03 | BUILD (Development) | Developer | QA, Architect |
-| 04 | TEST (Quality) | QA Engineer | Developer |
-| 05 | DEPLOY (Release) | DevOps Engineer | Developer, QA |
-| 06 | OPERATE (Production) | DevOps Engineer | Developer |
-| 07 | INTEGRATE (Systems) | Architect, Developer | DevOps |
-| 08 | COLLABORATE (Teams) | CPO, Product Owner | All roles |
-| 09 | GOVERN (Compliance) | CTO, CPO | CEO |
+| 00 | FOUNDATION (WHY?) | Business Analyst, Product Owner | CEO, CPO |
+| 01 | PLANNING (WHAT?) | Product Owner, Business Analyst | Architect |
+| 02 | DESIGN (HOW?) | Architect | CTO, Developer |
+| 03 | INTEGRATE | Architect, Developer | DevOps |
+| 04 | BUILD | Developer | QA, Architect |
+| 05 | TEST | QA Engineer | Developer |
+| 06 | DEPLOY | DevOps Engineer | Developer, QA |
+| 07 | OPERATE | DevOps Engineer | Developer |
+| 08 | COLLABORATE | CPO, Product Owner | All roles |
+| 09 | GOVERN | CTO, CPO | CEO |
 
 ### 4-Tier Classification
 
@@ -517,10 +517,12 @@ Sprint: CPO + CEO (strategic validation)
 
 ---
 
-**Folder Status**: ACTIVE - SDLC 5.0.0 Complete
-**Last Updated**: December 6, 2025
+**Folder Status**: ACTIVE - SDLC 5.1.1 Complete
+**Last Updated**: December 12, 2025
 **Owner**: CPO Office
 
 ***"Right agent, right stage, right results."*** 🎯
 
 ***"From LITE to ENTERPRISE - agents that scale."*** 🚀
+
+**Legacy/Archive Policy**: Content in 99-legacy and 10-archive folders is never validated or upgraded.
