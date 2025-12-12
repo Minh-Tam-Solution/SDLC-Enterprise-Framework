@@ -1,7 +1,7 @@
 # SDLC 5.1 Self-Contained Deployment Guide
 
-**Version**: 5.1.0  
-**Date**: December 11, 2025  
+**Version**: 5.1.1
+**Date**: December 12, 2025  
 **Status**: ACTIVE - CEO Requirement  
 **Authority**: CEO + CTO Office  
 **Purpose**: Enable any team member (AI or Human) to understand SDLC compliance from one folder
@@ -202,7 +202,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Step 2: Add Project Header**
 ```markdown
 ---
-**SDLC Version**: 5.1.0
+**SDLC Version**: 5.1.1
 **Project**: [Your Project Name]
 **Team Tier**: PROFESSIONAL | STANDARD | LITE | ENTERPRISE
 **Adapted**: [Date]

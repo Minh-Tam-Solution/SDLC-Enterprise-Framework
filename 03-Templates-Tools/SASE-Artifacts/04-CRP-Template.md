@@ -8,7 +8,7 @@
 **Consumer:** SE4H (Software Engineering for Humans - Agent Coach)
 
 **Version:** 1.0.0
-**Framework:** SDLC 5.1.0
+**Framework:** SDLC 5.1.1
 **Created:** December 2025
 
 ---

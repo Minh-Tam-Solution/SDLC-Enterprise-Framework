@@ -1,10 +1,15 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.1
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.0**) with complete 10-Stage lifecycle (WHY → GOVERN), SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.1**) with complete 10-Stage lifecycle (WHY → GOVERN), SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+
+**What's New in 5.1.1 (December 12, 2025)**:
+- ✅ **Legacy/Archive Folder Skip** - Validators skip 99-legacy and 10-archive folders
+- ✅ **Stage Consistency** - INTEGRATE is Stage 03, all 10 stages: 00-09
+- ✅ **Version Consistency** - Framework-wide 5.1.1 alignment
 
 **What's New in 5.1.0 (December 11, 2025)**:
 - ✅ **SASE Framework Integration** - SE 3.0 (arXiv:2509.06216v2), 6 SASE Artifact Templates

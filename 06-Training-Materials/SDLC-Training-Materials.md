@@ -1,7 +1,7 @@
-# SDLC 5.1.0 Training Materials - Complete Learning Package
+# SDLC 5.1.1 Training Materials - Complete Learning Package
 
-**Version**: 5.1.0
-**Date**: December 11, 2025
+**Version**: 5.1.1
+**Date**: December 12, 2025
 **Audience**: All team members (developers, designers, product managers, QA)
 **Duration**: 8 hours total (can be split across multiple sessions)
 **Prerequisites**: Basic SDLC 4.9 knowledge (or 2-hour SDLC fundamentals course)

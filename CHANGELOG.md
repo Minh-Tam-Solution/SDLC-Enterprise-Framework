@@ -2,9 +2,48 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 5.1.0 Enterprise Framework - WHY → GOVERN + SASE/SE 3.0 Integration
+**Framework**: SDLC 5.1.1 Enterprise Framework - WHY → GOVERN + SASE/SE 3.0 Integration
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: December 11, 2025 (SDLC 5.1.0 SASE Integration)
+**Last Updated**: December 12, 2025 (SDLC 5.1.1 Legacy/Archive + Stage Consistency)
+
+---
+
+## 🔧 Version 5.1.1 - December 12, 2025 (PATCH RELEASE)
+
+**Release Date**: December 12, 2025
+**Type**: PATCH RELEASE - Consistency & Legacy/Archive Support
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No - Maintenance update
+**Supersedes**: SDLC 5.1.0 SASE Integration
+**Achievement**: Complete version consistency across all framework documents
+
+### 🎯 Key Enhancement: Legacy/Archive Folder Skip & Stage Consistency
+
+**THE CHANGE**: Ensure all scripts, templates, and documents have consistent version numbering (5.1.1) and proper legacy/archive folder handling.
+
+**What's New in 5.1.1**:
+
+1. **Legacy/Archive Folder Skip**
+   - All validators now skip `99-legacy` and `10-archive` folders
+   - Consistent patterns across `sdlc_validator.py`, `design_thinking_validator.py`
+   - Content in legacy/archive folders is never validated or upgraded
+
+2. **Correct Stage Numbering**
+   - INTEGRATE is Stage 03 (not Stage 07)
+   - All 10 stages: 00-09 (FOUNDATION → GOVERN)
+   - Updated all README files and templates
+
+3. **Version Consistency**
+   - All documents updated to 5.1.1
+   - Consistent date: December 12, 2025
+   - Framework-wide alignment
+
+**Files Updated**:
+- Root README.md, CHANGELOG.md
+- 01-Overview/SDLC-Executive-Summary.md
+- 02-Core-Methodology/* (Core Methodology, Agentic Principles, Maturity Model, etc.)
+- 03-Templates-Tools/* (Scripts, SASE Artifacts, AI Tools, Agent Templates)
+- 05-Implementation-Guides/* (All implementation guides)
 
 ---
 

@@ -1,4 +1,4 @@
-# SDLC 5.1.0 Core Methodology
+# SDLC 5.1.1 Core Methodology
 
 **Version**: 5.1.1
 **Date**: December 12, 2025
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-SDLC 5.1.0 is a **10-Stage AI+Human Excellence Framework** integrating:
+SDLC 5.1.1 is a **10-Stage AI+Human Excellence Framework** integrating:
 - **10 Lifecycle Stages** (00-09): Foundation → Govern
 - **4-Tier Classification**: LITE → ENTERPRISE (team size-based)
 - **SASE Integration** (SE 3.0): Software Agentic Software Engineering
@@ -23,7 +23,7 @@ SDLC 5.1.0 is a **10-Stage AI+Human Excellence Framework** integrating:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.1.0 - 10 STAGES                              │
+│                    SDLC 5.1.1 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -487,6 +487,7 @@ Standards Mapped:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
 | 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
 | 5.0.0 | Dec 5, 2025 | 4-Tier Classification, Governance standards |
 | 4.9.0 | Nov 13, 2025 | 10-Stage lifecycle, complete documentation |
@@ -494,6 +495,6 @@ Standards Mapped:
 
 ---
 
-**Last Updated**: December 11, 2025
+**Last Updated**: December 12, 2025
 **Maintained By**: Framework Team
 **Authority**: CTO Approved

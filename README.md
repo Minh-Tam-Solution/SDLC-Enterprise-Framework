@@ -1,6 +1,6 @@
-# SDLC 5.1.0 Universal Framework
+# SDLC 5.1.1 Universal Framework
 
-**Version**: 5.1.0 | **Status**: ACTIVE | **Date**: December 11, 2025
+**Version**: 5.1.1 | **Status**: ACTIVE | **Date**: December 12, 2025
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 5.1.0 is a **10-Stage AI+Human Excellence Framework** with:
+SDLC 5.1.1 is a **10-Stage AI+Human Excellence Framework** with:
 - **10 Lifecycle Stages** (00-09): Foundation → Govern
 - **4-Tier Classification**: LITE → ENTERPRISE
 - **SASE Integration** (SE 3.0): Software Agentic Software Engineering
@@ -165,6 +165,7 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
+| 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
 | 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
 | 5.0.0 | Dec 5, 2025 | 4-Tier Classification, Governance standards |
 | 4.9.0 | Nov 13, 2025 | 10-Stage lifecycle |
