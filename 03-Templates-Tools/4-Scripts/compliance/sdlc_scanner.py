@@ -4,15 +4,32 @@ logger = logging.getLogger(__name__)
 
 """
 =========================================================================
-SDLC 5.1.0 Universal Framework Scanner
+SDLC 5.1.1 Universal Framework Scanner
 Lightweight wrapper for backward compatibility with enhanced validation
 
-Version: 5.1.0
-Date: December 11, 2025
+Version: 5.1.1
+Date: December 12, 2025
 Status: ACTIVE - PRODUCTION READY
 Authority: CPO Office + CTO Implementation
-Framework: SDLC 5.1.0 Complete Lifecycle + SASE/SE 3.0 Integration
+Framework: SDLC 5.1.1 Complete Lifecycle (10 Stages: 00-09) + SASE/SE 3.0 Integration
 Foundation: Battle-tested across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
+
+10 STAGES (SDLC 5.1.1):
+- Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
+- Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
+- Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
+- Stage 03 (INTEGRATE): API Contracts & Third-party Setup
+- Stage 04 (BUILD): Development & Implementation
+- Stage 05 (TEST): Quality Assurance & Validation
+- Stage 06 (DEPLOY): Release & Deployment
+- Stage 07 (OPERATE): Production Operations & Monitoring
+- Stage 08 (COLLABORATE): Team Coordination & Knowledge
+- Stage 09 (GOVERN): Compliance & Strategic Oversight
+
+Legacy/Archive Structure:
+- 10-archive: ONLY at docs root (not a stage)
+- 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
+- Content in legacy/archive folders is never validated or upgraded
 
 ENHANCED FEATURES (5.1.0):
 - SASE Framework validation (6 artifacts: BRS, LPS, MTS, CRP, MRP, VCR)
@@ -39,10 +56,11 @@ while leveraging the SDLC 5.1 Validator for actual validation logic.
 For new implementations, use sdlc_validator.py directly.
 
 EVOLUTION HISTORY:
-- 5.1: SASE Framework + SE 3.0 Integration
-- 5.0: Zero Mock Policy + Complete Lifecycle (10 Stages)
-- 5.0: 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
-- 5.0: Battle-tested patterns from BFlow, NQH-Bot, MTEP
+- 5.1.1: Correct stage numbering + Legacy/Archive folder skip
+- 5.1.0: SASE Framework + SE 3.0 Integration
+- 5.0.0: Zero Mock Policy + Complete Lifecycle (10 Stages)
+- 5.0.0: 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
+- 5.0.0: Battle-tested patterns from BFlow, NQH-Bot, MTEP
 """
 
 import os
@@ -55,7 +73,7 @@ from datetime import datetime
 
 def run_universal_validator(project_path: str, project_scale: Optional[str] = None) -> Dict[str, Any]:
     """
-    Run SDLC 5.1 Universal Validator and return results in legacy format
+    Run SDLC 5.1.1 Universal Validator and return results in legacy format
 
     Args:
         project_path: Path to project directory
@@ -117,7 +135,7 @@ def run_universal_validator(project_path: str, project_scale: Optional[str] = No
             "scan_result": {
                 "project_path": project_path,
                 "scan_timestamp": datetime.now().isoformat(),
-                "sdlc_version": "5.1.0",
+                "sdlc_version": "5.1.1",
                 "framework_scale": project_scale_detected,
                 "facade_violations_count": facade_violations,
                 "authenticity_score": authenticity_score,
@@ -131,7 +149,7 @@ def run_universal_validator(project_path: str, project_scale: Optional[str] = No
         
     except Exception as e:
         return {
-            "error": f"Failed to run SDLC 5.1 Universal Validator: {str(e)}",
+            "error": f"Failed to run SDLC 5.1.1 Universal Validator: {str(e)}",
             "scan_result": None
         }
 
@@ -140,7 +158,7 @@ def main():
 
     # Parse command line arguments
     if len(sys.argv) < 2:
-        logger.info("SDLC 5.1.0 Universal Scanner - SASE Framework + Code Review Excellence")
+        logger.info("SDLC 5.1.1 Universal Scanner - SASE Framework + Code Review Excellence")
         logger.info("======================================================================")
         logger.info()
         logger.info("Usage: python sdlc_scanner.py <project_path> [project_scale]")
@@ -176,7 +194,7 @@ def main():
         logger.info(f"Error: Project path '{project_path}' does not exist")
         sys.exit(1)
     
-    logger.info("SDLC 5.1.0 Universal Scanner")
+    logger.info("SDLC 5.1.1 Universal Scanner")
     logger.info("============================")
     logger.info(f"Scanning project: {project_path}")
     if project_scale:

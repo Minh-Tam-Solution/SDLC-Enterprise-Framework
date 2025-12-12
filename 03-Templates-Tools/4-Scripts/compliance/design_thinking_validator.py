@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
 """
 =========================================================================
-SDLC 5.0 Design Thinking Validator
+SDLC 5.1.1 Design Thinking Validator
 Validates Design Thinking 5-phase methodology compliance (Pillar 0)
 
-Version: 5.0.0
-Date: November 7, 2025
+Version: 5.1.1
+Date: December 12, 2025
 Status: ACTIVE - PRODUCTION READY
 Authority: CPO Office + Design Thinking Excellence
 Foundation: Battle-tested on NQH-Bot (96% time savings proven)
+
+Legacy/Archive Structure (SDLC 5.1.1):
+- 10-archive: ONLY at docs root (not a stage)
+- 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
+- Content in legacy/archive folders is never validated
 
 VALIDATION PHASES:
 Phase 1: Empathize - User research and empathy mapping
@@ -51,7 +56,7 @@ logger = logging.getLogger(__name__)
 
 class DesignThinkingValidator:
     """
-    Validates Design Thinking methodology compliance in projects
+    Validates Design Thinking methodology compliance in projects (SDLC 5.1.1)
 
     Checks for evidence of Stanford d.school 5-phase approach:
     1. Empathize (user research)
@@ -59,7 +64,17 @@ class DesignThinkingValidator:
     3. Ideate (solution generation)
     4. Prototype (rapid validation)
     5. Test (user testing)
+
+    Legacy/Archive Handling:
+    - Skips 10-archive folder at docs root (not a stage)
+    - Skips 99-legacy folders within stages (00-09) and backend/frontend/tools
     """
+
+    # Legacy/Archive folder patterns to skip during validation
+    LEGACY_ARCHIVE_PATTERNS = [
+        "99-legacy", "99-Legacy",
+        "10-archive", "10-Archive",
+    ]
 
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
@@ -131,14 +146,22 @@ class DesignThinkingValidator:
             'requirements'
         ]
 
+    def _is_legacy_or_archive(self, path: Path) -> bool:
+        """Check if path is in a legacy or archive folder."""
+        path_str = str(path)
+        for pattern in self.LEGACY_ARCHIVE_PATTERNS:
+            if f"/{pattern}/" in path_str or path_str.endswith(f"/{pattern}"):
+                return True
+        return False
+
     def validate(self) -> Dict[str, Any]:
         """
-        Run complete Design Thinking validation
+        Run complete Design Thinking validation (SDLC 5.1.1)
 
         Returns:
             Dict with validation results for all 5 phases
         """
-        logger.info("🎨 SDLC 5.0 Design Thinking Validator")
+        logger.info("🎨 SDLC 5.1.1 Design Thinking Validator")
         logger.info("=" * 60)
         logger.info(f"Project: {self.project_path}")
         logger.info(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -282,6 +305,7 @@ class DesignThinkingValidator:
     def _search_for_patterns(self, phase: str) -> List[str]:
         """
         Search project for evidence of specific Design Thinking phase
+        (Excludes legacy/archive folders per SDLC 5.1.1)
 
         Args:
             phase: Phase name (empathize, define, ideate, prototype, test)
@@ -298,8 +322,12 @@ class DesignThinkingValidator:
             if not doc_path.exists():
                 continue
 
-            # Search markdown files
+            # Search markdown files (skip legacy/archive folders)
             for md_file in doc_path.rglob('*.md'):
+                # Skip legacy/archive folders
+                if self._is_legacy_or_archive(md_file):
+                    continue
+
                 try:
                     content = md_file.read_text(encoding='utf-8', errors='ignore')
                     content_lower = content.lower()
@@ -379,15 +407,16 @@ class DesignThinkingValidator:
 
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 5.0 Design Thinking Guide: /00-Overview/SDLC-5.0-Overview.md")
-        logger.info("   • AI Tools: /06-Templates-Tools/ai-tools/design-thinking/")
+        logger.info("   • SDLC 5.1.1 Design Thinking Guide: /00-foundation/")
+        logger.info("   • AI Tools: /03-Templates-Tools/1-AI-Tools/design-thinking/")
         logger.info("   • Case Study: NQH-Bot 96% time savings")
+        logger.info("   • Note: Legacy/Archive folders (99-legacy, 10-archive) excluded")
         logger.info("")
 
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        logger.info("SDLC 5.0 Design Thinking Validator")
+        logger.info("SDLC 5.1.1 Design Thinking Validator")
         logger.info("=" * 60)
         logger.info("")
         logger.info("Usage: python design_thinking_validator.py <project_path>")

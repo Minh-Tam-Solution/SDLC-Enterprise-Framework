@@ -1,11 +1,18 @@
-# 🛠️ SDLC 5.1.0 Framework Scripts & Automation Tools
+# 🛠️ SDLC 5.1.1 Framework Scripts & Automation Tools
 ## Battle-Tested Automation from Real Platform Experience
 
-**Version**: 5.1.0 - Complete 10-Stage Lifecycle + SASE/SE 3.0 Integration
+**Version**: 5.1.1 - Complete 10-Stage Lifecycle (00-09) + SASE/SE 3.0 Integration
 **Status**: ACTIVE - CORE SCRIPTS OPERATIONAL
-**Date**: December 11, 2025
+**Date**: December 12, 2025
 **Foundation**: Tools proven on BFlow, NQH-Bot, MTEP, SDLC Orchestrator (4 platforms)
 **Philosophy**: Build when needed + AI tools for flexibility
+
+**10 Stages (SDLC 5.1.1)**:
+- 00 FOUNDATION (WHY?) → 01 PLANNING (WHAT?) → 02 DESIGN (HOW?)
+- 03 INTEGRATE → 04 BUILD → 05 TEST → 06 DEPLOY
+- 07 OPERATE → 08 COLLABORATE → 09 GOVERN
+
+**Legacy/Archive Policy**: Content in 99-legacy and 10-archive folders is never validated.
 
 ---
 
@@ -153,7 +160,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 
 ## 🎯 Key Scripts Explained
 
-### SDLC 5.1.0 Complete Validator ✅
+### SDLC 5.1.1 Complete Validator ✅
 
 **Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework**
 
@@ -162,15 +169,15 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 python3 compliance/sdlc_validator.py /path/to/project
 
 # What it checks:
-## 10-Stage Lifecycle:
-- Stage 00 (WHY): Problem validation, user research
-- Stage 01 (WHAT): Requirements, acceptance criteria
-- Stage 02 (HOW): Architecture, design decisions
+## 10-Stage Lifecycle (SDLC 5.1.1):
+- Stage 00 (FOUNDATION/WHY): Problem validation, user research
+- Stage 01 (PLANNING/WHAT): Requirements, acceptance criteria
+- Stage 02 (DESIGN/HOW): Architecture, design decisions
+- Stage 03 (INTEGRATE): API contracts, third-party setup
 - Stage 04 (BUILD): Implementation, code quality
 - Stage 05 (TEST): Test coverage, UAT completion
 - Stage 06 (DEPLOY): Deployment readiness, rollback plan
 - Stage 07 (OPERATE): Monitoring, incident response
-- Stage 03 (INTEGRATE): API contracts, integration tests
 - Stage 08 (COLLABORATE): Documentation, team alignment
 - Stage 09 (GOVERN): Compliance, audit trail
 
@@ -197,12 +204,12 @@ python3 compliance/sdlc_validator.py /path/to/project
 - Alembic migrations: {rev}_{desc}.py, max 60 chars
 
 # Output example:
-✅ Stage 00-03 (WHY→BUILD): COMPLIANT
-✅ Stage 04-09 (TEST→GOVERN): COMPLIANT
+✅ Stage 00-09 (FOUNDATION→GOVERN): COMPLIANT
 ✅ Pillar 0-5 (All Pillars): COMPLIANT
 ✅ SASE Artifacts: DETECTED (SE 3.0)
 ✅ File Naming Standards: COMPLIANT
-🎉 SDLC 5.1.0 FULLY COMPLIANT (10 stages + 6 pillars + SASE)
+✅ Legacy/Archive folders excluded from validation
+🎉 SDLC 5.1.1 FULLY COMPLIANT (10 stages + 6 pillars + SASE)
 ```
 
 ### Design Thinking Validator ✨ NEW
@@ -238,7 +245,7 @@ python3 scripts/compliance/design_thinking_validator.py /path/to/project
 python3 scripts/quick-start/solo_setup.py /path/to/project
 
 # What it does:
-1. Creates SDLC 5.1 complete 10-stage structure
+1. Creates SDLC 5.1.1 complete 10-stage structure (00-09)
 2. Installs compliance validators (10-stage + 6-pillar + SASE)
 3. Sets up Design Thinking templates (5 phases)
 4. Creates SASE Artifacts templates (BRS, LPS, MRP, VCR)
