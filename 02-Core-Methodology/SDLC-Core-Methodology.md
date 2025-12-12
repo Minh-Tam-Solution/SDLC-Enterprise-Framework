@@ -1,7 +1,7 @@
 # SDLC 5.1.0 Core Methodology
 
-**Version**: 5.1.0
-**Date**: December 11, 2025
+**Version**: 5.1.1
+**Date**: December 12, 2025
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
@@ -90,17 +90,41 @@ docs/
 ```
 docs/
 ├── 00-foundation/
+│   └── 99-legacy/     # Stage-level legacy
 ├── 01-planning/
+│   └── 99-legacy/
 ├── 02-design/
+│   └── 99-legacy/
 ├── 03-integrate/
+│   └── 99-legacy/
 ├── 04-build/
+│   └── 99-legacy/
 ├── 05-test/
+│   └── 99-legacy/
 ├── 06-deploy/
+│   └── 99-legacy/
 ├── 07-operate/
+│   └── 99-legacy/
 ├── 08-collaborate/
+│   └── 99-legacy/
 ├── 09-govern/
-└── 10-archive/        # Project-level archive
+│   └── 99-legacy/
+└── 10-archive/        # Project-level archive (NOT a stage)
+
+backend/
+└── 99-legacy/         # Legacy in backend
+
+frontend/
+└── 99-legacy/         # Legacy in frontend
+
+tools/
+└── 99-legacy/         # Legacy in tools
 ```
+
+**Legacy/Archive Rules**:
+- **10-archive**: ONLY at docs root (not a stage, holds unsorted legacy docs)
+- **99-legacy**: within EACH stage (00-09) AND in backend, frontend, tools
+- Content in legacy/archive folders is never validated or upgraded
 
 ---
 

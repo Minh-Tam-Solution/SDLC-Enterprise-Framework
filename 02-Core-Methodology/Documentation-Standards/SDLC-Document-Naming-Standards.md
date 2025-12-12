@@ -1,6 +1,6 @@
 # SDLC Document Naming Standards - Universal Framework
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.0
+**Date**: December 12, 2025
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
 **Component**: Document Governance Framework (DGF)
@@ -232,11 +232,13 @@ Version/Status goes INSIDE document:
 
 ## 🗂️ Folder Naming Standards
 
-### Stage Folders (Level 1) - SDLC 5.1.0 Shortened Names
+### Stage Folders (Level 1) - SDLC 5.1.0
+
+**10 Stages (00-09)** - exactly 10 stages, no stage 10:
 ```yaml
 Pattern: NN-shortname/
 
-Examples:
+Stages:
   00-foundation/    # WHY - Design Thinking + Business Case
   01-planning/      # WHAT - Requirements + User Stories
   02-design/        # HOW - Architecture + ADRs
@@ -247,8 +249,35 @@ Examples:
   07-operate/       # OPERATE - Runbooks + Monitoring
   08-collaborate/   # COLLABORATE - Team + Training
   09-govern/        # GOVERN - Compliance + Executive Reports
-  10-archive/       # ARCHIVE - Legacy + Deprecated (project-level)
-  99-legacy/        # Stage-level legacy (inside each stage folder)
+```
+
+### Legacy/Archive Folders - SDLC 5.1.0
+
+```yaml
+Structure:
+  docs/
+  ├── 00-foundation/
+  │   └── 99-legacy/     # Legacy docs for this stage
+  ├── 01-planning/
+  │   └── 99-legacy/
+  ├── ... (each stage 00-09 has its own 99-legacy/)
+  ├── 09-govern/
+  │   └── 99-legacy/
+  └── 10-archive/        # Project-level archive (NOT a stage)
+
+  backend/
+  └── 99-legacy/         # Legacy code/docs in backend
+
+  frontend/
+  └── 99-legacy/         # Legacy code/docs in frontend
+
+  tools/
+  └── 99-legacy/         # Legacy code/docs in tools
+
+Rules:
+  - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
+  - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
+  - Never validate/upgrade content in legacy/archive folders
 ```
 
 ### Subdirectories (Level 2+)
@@ -407,10 +436,10 @@ Phase-1-Sprint-5-Day-2-Work.md
 ---
 
 **Document**: SDLC-Document-Naming-Standards
-**Framework**: SDLC 5.0 Universal Excellence
+**Framework**: SDLC 5.1.0 Universal Excellence
 **Component**: Document Governance Framework (DGF)
 **Enforcement**: MANDATORY
 **Review**: Continuous
-**Last Updated**: December 5, 2025
+**Last Updated**: December 12, 2025
 
 *"Permanent names for permanent value"* 📂

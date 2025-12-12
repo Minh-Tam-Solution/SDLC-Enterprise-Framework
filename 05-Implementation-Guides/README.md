@@ -68,8 +68,19 @@ mkdir -p docs/{00-foundation,01-planning,02-design,04-build,05-test,06-deploy}
 # PROFESSIONAL (10-50 people)
 mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy,07-operate}
 
-# ENTERPRISE (50+ people)
+# ENTERPRISE (50+ people) - includes 10-archive and 99-legacy structure
 mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate,04-build,05-test,06-deploy,07-operate,08-collaborate,09-govern}
+mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
+# 99-legacy folders created as needed within each stage
+```
+
+### Legacy/Archive Structure (SDLC 5.1.1)
+
+```yaml
+Rules:
+  - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
+  - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
+  - Content in legacy/archive folders is never validated or upgraded
 ```
 
 ---
