@@ -1,7 +1,7 @@
 # SDLC Security Gates
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + Security Lead

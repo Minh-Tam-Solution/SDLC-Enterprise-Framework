@@ -1,10 +1,11 @@
 # Planning Hierarchy Templates
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 00 - FOUNDATION
 **Status**: ACTIVE - Production Templates
 **Authority**: CPO Office
+**Framework**: SDLC 5.1.2 (Documentation vs Code Separation)
 
 ---
 
@@ -88,11 +89,12 @@ ENTERPRISE (50+ people, $1M+):
 
 ### Step 2: Copy Templates
 ```bash
-# For PROFESSIONAL+ tier
-cp ROADMAP-TEMPLATE.md /your-project/docs/00-Project-Foundation/04-Roadmap/
-cp PHASE-TEMPLATE.md /your-project/docs/03-Development-Implementation/02-Sprint-Plans/
-cp SPRINT-TEMPLATE.md /your-project/docs/03-Development-Implementation/02-Sprint-Plans/
-cp BACKLOG-TEMPLATE.md /your-project/docs/03-Development-Implementation/
+# For PROFESSIONAL+ tier (SDLC 5.1.2 folder structure)
+# Note: Only /docs folders are stage-mapped, code folders are organizational units
+cp ROADMAP-TEMPLATE.md /your-project/docs/00-foundation/
+cp PHASE-TEMPLATE.md /your-project/docs/04-build/02-Sprint-Plans/
+cp SPRINT-TEMPLATE.md /your-project/docs/04-build/02-Sprint-Plans/
+cp BACKLOG-TEMPLATE.md /your-project/docs/04-build/
 ```
 
 ### Step 3: Customize
@@ -126,5 +128,5 @@ Example:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY template adoption for PROFESSIONAL+ tier
-**Last Updated**: December 5, 2025
+**Last Updated**: December 24, 2025
 **Owner**: CPO Office

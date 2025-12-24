@@ -1,7 +1,7 @@
 # SDLC Code File Naming Standards - Universal Framework
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
 **Component**: Document Governance Framework (DGF)
@@ -11,7 +11,7 @@
 
 ## 1. Overview
 
-This document defines code file naming standards for all SDLC 5.0 projects. These standards were originally restored from SDLC 4.3/4.4, enhanced for SDLC 4.9.1, and now upgraded for SDLC 5.0.0 compliance with Governance & Compliance Integration.
+This document defines code file naming standards for all SDLC 5.1.2 projects. These standards were originally restored from SDLC 4.3/4.4, enhanced for SDLC 4.9.1, upgraded for SDLC 5.0.0, and now aligned with SDLC 5.1.2 Complete Lifecycle with SASE Integration.
 
 **CPO Gap Analysis Reference**: CPO-CODE-FILE-NAMING-STANDARDS-GAP-ANALYSIS-NOV29-2025.md
 

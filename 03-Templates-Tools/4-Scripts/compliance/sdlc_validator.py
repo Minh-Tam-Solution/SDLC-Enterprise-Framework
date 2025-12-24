@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """
-SDLC 5.1.1 Complete Validator
+SDLC 5.1.2 Complete Validator
 Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework compliance
 
-Version: 5.1.1
-Date: December 12, 2025
+Version: 5.1.2
+Date: December 24, 2025
 Status: ACTIVE - PRODUCTION READY
 Foundation: Proven validation across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
-Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained Deployment
+Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained Deployment + Project Structure Standard
 
-10 Stages Validated (00-09):
+DOCUMENTATION vs CODE SEPARATION (SDLC 5.1.2):
+- Stage mapping applies ONLY to /docs folders (stages 00-09)
+- Code folders (backend/, frontend/, tools/, tests/) are NOT stage-mapped
+- Code folders are validated for PRESENCE, not stage compliance
+- See: SDLC-Project-Structure-Standard.md
+
+10 Stages Validated (00-09) - /docs ONLY:
 - Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
 - Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
 - Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
@@ -21,7 +27,11 @@ Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained D
 - Stage 08 (COLLABORATE): Team Coordination & Knowledge
 - Stage 09 (GOVERN): Compliance & Strategic Oversight
 
-Legacy/Archive Structure (SDLC 5.1.1):
+Project Structure Validation (NOT stage-mapped):
+- Code folders: backend/, frontend/, tools/, tests/
+- Required files by tier: README.md, CLAUDE.md, .env.example, etc.
+
+Legacy/Archive Structure (SDLC 5.1.1+):
 - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated or upgraded

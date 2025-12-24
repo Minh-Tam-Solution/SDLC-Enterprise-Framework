@@ -1,7 +1,7 @@
 # 🔍 Tier 1: Manual Code Review with AI Assistance
 ## FREE - AI-Assisted Human Review
 
-**Version**: SDLC 5.0.0
+**Version**: SDLC 5.1.2
 **Cost**: $0 (Free tier AI tools)
 **Time**: 10 minutes per PR (vs 30 min manual)
 **Savings**: 67%
@@ -19,7 +19,7 @@ Pre-review this code before human review:
 Framework/Language: [React/Django/etc.]
 Context: [what this code does]
 
-Check against SDLC 5.0.0:
+Check against SDLC 5.1.2:
 ✅ Pillar 0: Design Thinking evidence
 ✅ Pillar 1: Zero Mock Policy (no mock/stub/fake)
 ✅ Pillar 2: AI+Human patterns

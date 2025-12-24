@@ -1,7 +1,7 @@
 # 📚 AI Documentation Writer - Stage 08 (COLLABORATE)
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 08 - COLLABORATE (Team Management & Documentation)
 **Time Savings**: 90%
 **Authority**: CPO Office
@@ -20,7 +20,7 @@ Generate **production-ready documentation** from code, specifications, and team 
 
 ```yaml
 System Prompt:
-  You are an ADR writer following SDLC 5.0.0 standards.
+  You are an ADR writer following SDLC 5.1.2 standards.
   Generate ADRs with: Title, Status, Context, Decision, Consequences.
   Use the format in 02-Design-Architecture/03-ADRs/.
 

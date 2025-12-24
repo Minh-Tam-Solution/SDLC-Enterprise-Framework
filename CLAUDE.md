@@ -1,10 +1,17 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.1
+# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.2
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.1**) with complete 10-Stage lifecycle (WHY → GOVERN), SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.2**) with complete 10-Stage lifecycle (WHY → GOVERN), SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+
+**What's New in 5.1.2 (December 24, 2025)**:
+- ✅ **Project Structure Standard** - Clear separation between documentation stage mapping and code folder organization
+- ✅ **Documentation-Only Stage Mapping** - Only `/docs` folders are mapped to SDLC stages (00-09)
+- ✅ **Code Folders Are NOT Stage-Mapped** - `backend/`, `frontend/`, `tools/`, `tests/` are organizational units, not lifecycle stages
+- ✅ **Archive Clarification** - `10-archive/` is a project-level archive folder, NOT a numbered stage
+- ✅ **Tier Matrix** - Clear requirements by LITE/STANDARD/PROFESSIONAL/ENTERPRISE
 
 **What's New in 5.1.1 (December 12, 2025)**:
 - ✅ **Legacy/Archive Folder Skip** - Validators skip 99-legacy and 10-archive folders
@@ -34,21 +41,38 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 
 ## Key Framework Concepts
 
-### The Complete 10-Stage Lifecycle (NEW in 4.9)
+### The Complete 10-Stage Lifecycle (Documentation Only - SDLC 5.1.2)
+
+**IMPORTANT**: Stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, etc.) are NOT stage-mapped.
 
 ```yaml
-Business Question → SDLC Stage → /docs Folder (Shortened Names - SDLC 5.0+)
-WHY?        → Stage 00: Foundation    → 00-foundation/
-WHAT?       → Stage 01: Planning      → 01-planning/
-HOW?        → Stage 02: Design        → 02-design/
-BUILD       → Stage 04: Development   → 04-build/
-TEST        → Stage 05: Quality       → 05-test/
-DEPLOY      → Stage 06: Deployment    → 06-deploy/
-OPERATE     → Stage 07: Operations    → 07-operate/
-INTEGRATE   → Stage 03: Integration   → 03-integrate/
-COLLABORATE → Stage 08: Team Mgmt     → 08-collaborate/
-GOVERN      → Stage 09: Governance    → 09-govern/
+Business Question → SDLC Stage → /docs Folder (5.1.2)
+WHY?        → Stage 00: Foundation    → docs/00-foundation/
+WHAT?       → Stage 01: Planning      → docs/01-planning/
+HOW?        → Stage 02: Design        → docs/02-design/
+INTEGRATE   → Stage 03: Integration   → docs/03-integrate/
+BUILD       → Stage 04: Development   → docs/04-build/
+TEST        → Stage 05: Quality       → docs/05-test/
+DEPLOY      → Stage 06: Deployment    → docs/06-deploy/
+OPERATE     → Stage 07: Operations    → docs/07-operate/
+COLLABORATE → Stage 08: Team Mgmt     → docs/08-collaborate/
+GOVERN      → Stage 09: Governance    → docs/09-govern/
+ARCHIVE     → (Not a stage)           → docs/10-archive/  # Project-level archive
 ```
+
+### Code Folder Organization (NOT Stage-Mapped)
+
+```yaml
+Code folders are organizational units, NOT lifecycle stages:
+  backend/       # Server-side code (Python, Go, Java, etc.)
+  frontend/      # Client-side code (React, Vue, Angular, etc.)
+  tools/         # Utility scripts, CLI tools
+  tests/         # Test suites (unit, integration, e2e)
+  mobile/        # Mobile app code (optional)
+  infra/         # Infrastructure as Code (optional)
+```
+
+See [SDLC-Project-Structure-Standard.md](02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md) for complete specification.
 
 ### Code File Naming Standards (NEW in 4.9.1)
 
@@ -158,18 +182,20 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ## Development Workflow
 
 ### When Working with Framework Documentation
-1. **Check current version**: Framework is at **SDLC 4.9.1** (November 29, 2025)
+1. **Check current version**: Framework is at **SDLC 5.1.2** (December 24, 2025)
 2. **Apply 10-stage lifecycle**: WHY → GOVERN complete coverage
-3. **Use English only**: All technical content must be in English
-4. **Follow code file naming**: Python snake_case, TypeScript camelCase, React PascalCase
-5. **Maintain version consistency**: Update to 4.9.1 across related documents
+3. **Stage mapping for docs only**: Only `/docs` folders are stage-mapped
+4. **Use English only**: All technical content must be in English
+5. **Follow code file naming**: Python snake_case, TypeScript camelCase, React PascalCase
+6. **Maintain version consistency**: Update to 5.1.2 across related documents
 
 ### When Updating Framework Content
 1. **Review CHANGELOG.md**: Check version history
 2. **Check 02-Core-Methodology/**: Core principles and 10-stage framework
-3. **Update consistently**: Version 4.9.1, dates November 29, 2025
+3. **Update consistently**: Version 5.1.2, dates December 24, 2025
 4. **Preserve legacy**: Use 99-Legacy/ for superseded content
 5. **Apply code file naming**: All new files must follow naming standards
+6. **Respect documentation vs code separation**: Stage mapping only for `/docs`
 
 ### When Creating New Content
 1. **Start with Design Thinking**: Apply 5-phase methodology before coding
@@ -235,6 +261,9 @@ SDLC 5.0.0 (December 5, 2025)
 - Implementation Guide: [05-Implementation-Guides/SDLC-Implementation-Guide.md](05-Implementation-Guides/SDLC-Implementation-Guide.md)
 - Code File Naming: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
+**NEW in 5.1.2**:
+- Project Structure Standard: [02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md](02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md)
+
 **NEW in 5.0**:
 - Quality Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
 - Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md)
@@ -248,8 +277,8 @@ SDLC 5.0.0 (December 5, 2025)
 
 ---
 
-The framework represents not theory but battle-tested patterns from 6 months of real platform development. With SDLC 5.0.0, we achieve excellence faster: **10-stage complete lifecycle, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 6 months of real platform development. With SDLC 5.1.2, we achieve excellence faster: **10-stage complete lifecycle, clear documentation vs code separation, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: December 5, 2025
-**Framework Version**: SDLC 5.0.0
-**Status**: PRODUCTION READY - Complete 10-Stage Lifecycle + Governance & Compliance + 4-Tier Classification
+**Last Updated**: December 24, 2025
+**Framework Version**: SDLC 5.1.2
+**Status**: PRODUCTION READY - Complete 10-Stage Lifecycle + Project Structure Standard + Governance & Compliance + 4-Tier Classification

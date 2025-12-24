@@ -1,7 +1,7 @@
 # ✅ AI Compliance Checker - Stage 09 (GOVERN)
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 09 - GOVERN (Governance & Compliance)
 **Time Savings**: 95%
 **Authority**: CTO Office
@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Automated **compliance checking** for SDLC 5.0.0 projects covering regulatory, security, process, and team collaboration standards. Supports real-time detection with <5 min violation alerts.
+Automated **compliance checking** for SDLC 5.1.2 projects covering regulatory, security, process, and team collaboration standards. Supports real-time detection with <5 min violation alerts.
 
 ---
 
@@ -20,7 +20,7 @@ Automated **compliance checking** for SDLC 5.0.0 projects covering regulatory, s
 
 ```yaml
 System Prompt:
-  You are checking SDLC 5.0.0 process compliance.
+  You are checking SDLC 5.1.2 process compliance.
   Validate: 10-stage structure, 6 pillars, gate evidence, documentation standards.
   Apply tier-appropriate requirements.
   Reference: SDLC-Core-Methodology.md and sdlc_validator.py

@@ -1,7 +1,7 @@
-# SDLC 5.1.1 Core Methodology
+# SDLC 5.1.2 Core Methodology
 
-**Version**: 5.1.1
-**Date**: December 12, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-SDLC 5.1.1 is a **10-Stage AI+Human Excellence Framework** integrating:
+SDLC 5.1.2 is a **10-Stage AI+Human Excellence Framework** integrating:
 - **10 Lifecycle Stages** (00-09): Foundation → Govern
 - **4-Tier Classification**: LITE → ENTERPRISE (team size-based)
 - **SASE Integration** (SE 3.0): Software Agentic Software Engineering
@@ -23,7 +23,7 @@ SDLC 5.1.1 is a **10-Stage AI+Human Excellence Framework** integrating:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.1.1 - 10 STAGES                              │
+│                    SDLC 5.1.2 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -38,20 +38,49 @@ SDLC 5.1.1 is a **10-Stage AI+Human Excellence Framework** integrating:
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Stage → Folder Mapping
+### Stage → Folder Mapping (Documentation Only)
+
+**IMPORTANT (SDLC 5.1.2)**: Stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units that exist independently of lifecycle stages.
 
 | Stage | Name | Folder | Core Question |
 |-------|------|--------|---------------|
-| 00 | FOUNDATION | `00-foundation/` | WHY are we building this? |
-| 01 | PLANNING | `01-planning/` | WHAT are we building? |
-| 02 | DESIGN | `02-design/` | HOW will we build it? |
-| 03 | INTEGRATE | `03-integrate/` | How does it connect? |
-| 04 | BUILD | `04-build/` | Are we building it right? |
-| 05 | TEST | `05-test/` | Does it work correctly? |
-| 06 | DEPLOY | `06-deploy/` | How do we ship safely? |
-| 07 | OPERATE | `07-operate/` | Is it running reliably? |
-| 08 | COLLABORATE | `08-collaborate/` | Is the team effective? |
-| 09 | GOVERN | `09-govern/` | Are we compliant & accountable? |
+| 00 | FOUNDATION | `docs/00-foundation/` | WHY are we building this? |
+| 01 | PLANNING | `docs/01-planning/` | WHAT are we building? |
+| 02 | DESIGN | `docs/02-design/` | HOW will we build it? |
+| 03 | INTEGRATE | `docs/03-integrate/` | How does it connect? |
+| 04 | BUILD | `docs/04-build/` | Are we building it right? |
+| 05 | TEST | `docs/05-test/` | Does it work correctly? |
+| 06 | DEPLOY | `docs/06-deploy/` | How do we ship safely? |
+| 07 | OPERATE | `docs/07-operate/` | Is it running reliably? |
+| 08 | COLLABORATE | `docs/08-collaborate/` | Is the team effective? |
+| 09 | GOVERN | `docs/09-govern/` | Are we compliant & accountable? |
+| - | ARCHIVE | `docs/10-archive/` | Project-level archive (NOT a stage) |
+
+---
+
+## Documentation vs Code Separation (5.1.2)
+
+### Core Principle
+
+SDLC 5.1.2 clearly separates:
+
+| Concept | Location | Stage Mapping | Validation |
+|---------|----------|---------------|------------|
+| **Documentation** | `/docs/*` | YES (stages 00-09) | Stage compliance |
+| **Code Organization** | `backend/`, `frontend/`, etc. | NO | Presence validation |
+| **Configuration** | Root files (README.md, etc.) | NO | Presence validation |
+
+### Why Code Folders Are NOT Stage-Mapped
+
+Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units, not lifecycle stages:
+
+1. **Code development happens across ALL stages** - A bug fix in Stage 07 (OPERATE) still modifies code in `backend/`
+2. **Technology-agnostic** - Whether you use Python, Go, or Node.js, the folder names don't change
+3. **Parallel work** - While Stage 04 (BUILD) is primary for coding, developers work on code during Stage 05 (TEST) fixes, Stage 06 (DEPLOY) patches, etc.
+
+### Project Structure Standard
+
+See [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) for complete specification.
 
 ---
 
@@ -474,6 +503,7 @@ Standards Mapped:
 - [SDLC-Observability-Checklist.md](./Governance-Compliance/SDLC-Observability-Checklist.md)
 
 **Documentation Standards**:
+- [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) - **NEW (5.1.2)** Project structure & stage mapping rules
 - [SDLC-Document-Naming-Standards.md](./Documentation-Standards/SDLC-Document-Naming-Standards.md)
 - [SDLC-Team-Communication-Protocol.md](./Documentation-Standards/Team-Collaboration/SDLC-Team-Communication-Protocol.md)
 
@@ -487,6 +517,7 @@ Standards Mapped:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.1.2 | Dec 24, 2025 | Documentation vs Code separation, Stage mapping only for /docs |
 | 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
 | 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
 | 5.0.0 | Dec 5, 2025 | 4-Tier Classification, Governance standards |
@@ -495,6 +526,6 @@ Standards Mapped:
 
 ---
 
-**Last Updated**: December 12, 2025
+**Last Updated**: December 24, 2025
 **Maintained By**: Framework Team
 **Authority**: CTO Approved

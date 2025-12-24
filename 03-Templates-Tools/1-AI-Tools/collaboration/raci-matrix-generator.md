@@ -1,7 +1,7 @@
 # 📊 AI RACI Matrix Generator - Stage 08 (COLLABORATE)
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 08 - COLLABORATE (Team Management & Documentation)
 **Time Savings**: 85%
 **Authority**: CPO Office
@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Generate **RACI matrices** for multi-team projects following SDLC 5.0.0 standards. Ensures clear accountability with exactly ONE Accountable (A) per deliverable.
+Generate **RACI matrices** for multi-team projects following SDLC 5.1.2 standards. Ensures clear accountability with exactly ONE Accountable (A) per deliverable.
 
 ---
 
@@ -25,7 +25,7 @@ Generate **RACI matrices** for multi-team projects following SDLC 5.0.0 standard
 | **C** | Consulted | Provides input before decision | Multiple allowed |
 | **I** | Informed | Notified after decision | Multiple allowed |
 
-### RACI Rules (SDLC 5.0.0)
+### RACI Rules (SDLC 5.1.2)
 
 1. **One A per deliverable**: Every row must have exactly one Accountable
 2. **At least one R**: Someone must do the work
@@ -41,7 +41,7 @@ Generate **RACI matrices** for multi-team projects following SDLC 5.0.0 standard
 
 ```yaml
 System Prompt:
-  You are generating RACI matrices following SDLC 5.0.0 standards.
+  You are generating RACI matrices following SDLC 5.1.2 standards.
   CRITICAL: Every row must have exactly ONE 'A' (Accountable).
   Multiple 'R' allowed but keep it focused.
   Minimize 'C' to avoid decision paralysis.

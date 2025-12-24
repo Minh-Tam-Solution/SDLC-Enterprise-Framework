@@ -1,10 +1,11 @@
 # Roadmap Template
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 00 - FOUNDATION
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
+**Framework**: SDLC 5.1.2
 
 ---
 
@@ -90,7 +91,7 @@ This template provides a standard structure for 12-month product roadmaps. Use t
 | Phase 3 | [Name] | [X weeks] | Q2 | [Status] |
 | Phase 4 | [Name] | [X weeks] | Q3 | [Status] |
 
-→ See [Phase Plans](../03-Development-Implementation/02-Sprint-Plans/) for details
+→ See [Phase Plans](../04-build/02-Sprint-Plans/) for details (SDLC 5.1.2 folder structure)
 
 ---
 
@@ -183,5 +184,5 @@ Before finalizing Roadmap, verify:
 
 **Template Status**: ACTIVE
 **Compliance**: RECOMMENDED for PROFESSIONAL+ tier projects
-**Last Updated**: December 5, 2025
+**Last Updated**: December 24, 2025
 **Owner**: CPO Office

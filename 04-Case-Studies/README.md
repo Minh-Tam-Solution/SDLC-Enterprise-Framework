@@ -1,17 +1,17 @@
 # 📚 SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Latest**: SDLC 5.0.0 Framework Upgrade - Enterprise Scale + Industry Best Practices
+**Latest**: SDLC 5.1.2 Framework - Complete Lifecycle + SASE Integration
 
 ---
 
 ## 🎯 What You'll Find Here
 
-This directory contains **real case studies** from three production platforms that shaped SDLC 5.0.0, plus **historical case studies** documenting framework evolution from 4.2 to 5.0.
+This directory contains **real case studies** from three production platforms that shaped SDLC 5.1.2, plus **historical case studies** documenting framework evolution from 4.2 to 5.0.
 
 ---
 

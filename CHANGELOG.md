@@ -2,9 +2,54 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 5.1.1 Enterprise Framework - WHY → GOVERN + SASE/SE 3.0 Integration
+**Framework**: SDLC 5.1.2 Enterprise Framework - WHY → GOVERN + SASE/SE 3.0 Integration
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: December 12, 2025 (SDLC 5.1.1 Legacy/Archive + Stage Consistency)
+**Last Updated**: December 24, 2025 (SDLC 5.1.2 Project Structure Standard)
+
+---
+
+## 🔧 Version 5.1.2 - December 24, 2025 (PATCH RELEASE)
+
+**Release Date**: December 24, 2025
+**Type**: PATCH RELEASE - Project Structure Standard
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No - Additive enhancement
+**Supersedes**: SDLC 5.1.1 Legacy/Archive + Stage Consistency
+**Achievement**: Clear separation between documentation stage mapping and project structure validation
+
+### 🎯 Key Enhancement: Project Structure Standard
+
+**THE CHANGE**: Introduced `SDLC-Project-Structure-Standard.md` to clarify:
+- **Documentation folders** (`/docs`) are stage-mapped to SDLC stages 00-09
+- **Code folders** (`backend/`, `frontend/`, `tools/`, `tests/`) are NOT stage-mapped
+- **Project structure validation** is separate from stage mapping
+
+**What's New in 5.1.2**:
+
+1. **Documentation Stage Mapping Rules**
+   - Only `/docs` subfolders map to SDLC stages (00-09)
+   - Stage 10-archive is archive folder, NOT a numbered stage
+   - Clear naming: `docs/{XX}-{stage-name}/` (e.g., `docs/00-foundation/`)
+
+2. **Project Structure Validation Rules**
+   - Code folders (backend, frontend, tools, tests) validated for presence
+   - Required files by tier: README.md, CLAUDE.md, .env.example, etc.
+   - Legacy folders (`99-legacy/`) requirements for PROFESSIONAL+ tiers
+
+3. **Tier Matrix Enhancement**
+   - Clear tier-specific requirements for both docs and root structure
+   - LITE → ENTERPRISE with specific folder/file requirements
+   - Validation output format standardized
+
+**Files Added**:
+- `02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md` (NEW)
+
+**Files Updated**:
+- Root README.md (version bump to 5.1.2)
+- CLAUDE.md (version bump, added 5.1.2 section, updated stage mapping guidance)
+- 01-Overview/SDLC-Executive-Summary.md (version bump)
+- 02-Core-Methodology/SDLC-Core-Methodology.md (version bump, added Documentation vs Code Separation section)
+- CHANGELOG.md (this file)
 
 ---
 

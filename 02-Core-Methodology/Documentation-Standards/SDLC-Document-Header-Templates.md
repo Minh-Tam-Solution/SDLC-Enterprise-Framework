@@ -1,8 +1,8 @@
 # 📋 SDLC Document Header Templates
 ## Universal Header Standards for Active and Archived Documents
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Status**: ACTIVE - UNIVERSAL DOCUMENTATION STANDARD
 **Scope**: All SDLC framework documents (active and archived)
 **Authority**: CEO + CPO + CTO Documentation Standards
@@ -11,7 +11,7 @@
 
 ## 🎯 Purpose
 
-This document provides **standardized header templates** for both **active documents** and **archived documents** in the SDLC 5.0 framework, ensuring:
+This document provides **standardized header templates** for both **active documents** and **archived documents** in the SDLC 5.1.2 framework, ensuring:
 - Clear version identification
 - Proper status indication
 - Authority and approval tracking
@@ -23,19 +23,19 @@ This document provides **standardized header templates** for both **active docum
 ## 📄 Template 1: Active Document Header
 
 ### When to Use
-Apply this header to **all active SDLC 5.0 documents** that are currently in use and maintained.
+Apply this header to **all active SDLC 5.1.2 documents** that are currently in use and maintained.
 
 ### Template
 ```markdown
 # [Document Title]
 ## [Subtitle - Purpose]
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Status**: ACTIVE - [Specific Status]
 **Authority**: [Who Approved]
 **Foundation**: [What This Builds On]
-**Enhancement**: [What's New in 5.0 - Optional]
+**Enhancement**: [What's New in 5.1.2 - Optional]
 
 ---
 

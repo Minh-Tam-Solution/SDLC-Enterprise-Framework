@@ -1,10 +1,11 @@
 # Sprint Template
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
-**Stage**: 03 - DEVELOPMENT
+**Version**: 5.1.2
+**Date**: December 24, 2025
+**Stage**: 04 - BUILD
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
+**Framework**: SDLC 5.1.2
 
 ---
 
@@ -228,5 +229,5 @@ Before starting a Sprint, verify:
 
 **Template Status**: ACTIVE
 **Compliance**: RECOMMENDED for STANDARD+ tier projects
-**Last Updated**: December 5, 2025
+**Last Updated**: December 24, 2025
 **Owner**: CPO Office

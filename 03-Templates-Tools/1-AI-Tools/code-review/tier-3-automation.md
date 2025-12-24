@@ -1,7 +1,7 @@
 # ⚡ Tier 3: Automated Code Review
 ## CodeRabbit/Codium/SonarQube Integration
 
-**Version**: SDLC 5.0.0
+**Version**: SDLC 5.1.2
 **Cost**: $12-50/month (per user)
 **Time**: <2 minutes per PR (automated)
 **Savings**: 93%
@@ -27,7 +27,7 @@ reviews:
       - "WIP"
       - "DO NOT MERGE"
 
-# SDLC 5.0.0 Custom Rules
+# SDLC 5.1.2 Custom Rules
 custom_rules:
   - name: "Zero Mock Policy"
     pattern: "mock|stub|fake|dummy"

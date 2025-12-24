@@ -1,10 +1,11 @@
 # Project Templates
 
-**Version**: 5.0.0
-**Date**: December 5, 2025
+**Version**: 5.1.2
+**Date**: December 24, 2025
 **Stage**: 06 - TEMPLATES & TOOLS
 **Status**: ACTIVE - Production Templates
 **Authority**: CTO + CPO Office
+**Framework**: SDLC 5.1.2 (Documentation vs Code Separation)
 
 ---
 
@@ -154,6 +155,6 @@ Before using templates, verify:
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 5.0 projects
-**Last Updated**: December 5, 2025
+**Compliance**: Templates RECOMMENDED for all SDLC 5.1.2 projects
+**Last Updated**: December 24, 2025
 **Owner**: CTO + CPO Office

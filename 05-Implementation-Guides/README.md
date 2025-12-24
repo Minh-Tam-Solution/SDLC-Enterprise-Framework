@@ -1,8 +1,8 @@
-# SDLC 5.1.1 Implementation Guides
+# SDLC 5.1.2 Implementation Guides
 
-**Version**: 5.1.1 | **Status**: PRODUCTION READY | **Date**: December 12, 2025
+**Version**: 5.1.2 | **Status**: PRODUCTION READY | **Date**: December 24, 2025
 
-Practical how-to guides for implementing SDLC 5.1.1 framework + SASE artifacts.
+Practical how-to guides for implementing SDLC 5.1.2 framework + SASE artifacts.
 
 ---
 

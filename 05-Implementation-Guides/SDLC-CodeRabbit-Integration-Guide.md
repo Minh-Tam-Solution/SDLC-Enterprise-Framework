@@ -1,7 +1,7 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 5.0.0
-**Last Updated**: December 6, 2025
+**Version**: 5.1.2
+**Last Updated**: December 24, 2025
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
 **Tier**: 3 (Enterprise Automated Review)
