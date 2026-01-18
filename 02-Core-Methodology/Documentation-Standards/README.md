@@ -1,520 +1,390 @@
-# 📝 SDLC Documentation Standards - Stage 08 (COLLABORATE)
+# 📝 SDLC Documentation Standards - Pillar 6: Documentation Permanence
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
-**Stage**: 08 - COLLABORATE (Team Management & Documentation)
-**Status**: ACTIVE - Production Standards
+**Version**: 5.1.3  
+**Date**: January 18, 2026  
+**Status**: ACTIVE - Production Standards  
 **Authority**: CPO Office  
+**Pillar**: 6 of 7 - Documentation Permanence  
 
 ---
 
 ## 🎯 Purpose
 
-This folder contains the **mandatory documentation standards** for all SDLC 5.1.2 projects. These standards ensure:
+This folder contains the **mandatory documentation standards** for all SDLC 5.1.3 projects. As **Pillar 6** of the 7-Pillar Architecture, Documentation Permanence ensures:
+
 - **Permanence**: Documentation doesn't become obsolete
 - **Discoverability**: Easy to find what you need
-- **Maintainability**: Clear structure for updates
-- **Collaboration**: Team alignment through consistent standards
+- **Sprint Governance Compliance**: Sprint documentation aligned with Pillar 2
+- **AI-Parseability**: Structured formats for AI agents
+- **SSOT Validation**: Single Source of Truth enforcement
 
-**Aligned with**: Stage 08 (COLLABORATE) - Maintaining team velocity through documentation excellence
+### Why Documentation is a Core Pillar
+
+| Without Pillar 6 | With Pillar 6 |
+|------------------|---------------|
+| Context loss over time | Knowledge preserved permanently |
+| Sprint docs scattered | Sprint docs in `04-build/02-Sprint-Plans/` |
+| Version confusion | Version-free naming, version inside |
+| AI cannot parse | AI-parseable Markdown/YAML |
+| 27-day doc lag | 24h documentation requirement |
 
 ---
 
-## 📚 Documents in This Folder
+## 📚 Pillar 6 × Sprint Governance (Pillar 2) Integration
+
+### Sprint Documentation Requirements by Tier
+
+| Document | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
+|----------|------|----------|--------------|------------|
+| `SPRINT-XX.md` | ✅ Required | ✅ Required | ✅ Required | ✅ Required |
+| `CURRENT-SPRINT.md` | Optional | ✅ Required | ✅ Required | ✅ Required |
+| `SPRINT-INDEX.md` | Optional | Optional | ✅ Required | ✅ Required |
+| `ROADMAP.md` | Optional | Recommended | ✅ Required | ✅ Required |
+| `ROADMAP-CHANGE-LOG.md` | N/A | Optional | ✅ Required | ✅ Required |
+
+### Sprint Documentation Location
+
+```
+docs/04-build/
+├── 01-ADRs/                    # Architecture Decision Records
+└── 02-Sprint-Plans/            # ⭐ SPRINT GOVERNANCE DOCUMENTS
+    ├── CURRENT-SPRINT.md       # Points to active sprint
+    ├── SPRINT-INDEX.md         # All sprints index
+    ├── SPRINT-001-*.md         # Individual sprint plans
+    ├── SPRINT-002-*.md
+    └── ...
+```
+
+### 24-Hour Documentation Rule (Pillar 2 → Pillar 6)
+
+From **10 Golden Rules** (Rule #3):
+> Documentation Within 24 Business Hours
+
+| Gate | Documentation Required | Deadline |
+|------|------------------------|----------|
+| G-Sprint | SPRINT-XX.md created | Before sprint starts |
+| G-Sprint-Close | CURRENT-SPRINT.md updated | 24h after sprint ends |
+| G-Sprint-Close | SPRINT-INDEX.md updated | 24h after sprint ends |
+
+---
+
+## 📁 Documents in This Folder
 
 ### 1. SDLC-Document-Naming-Standards.md ⭐ MANDATORY
-**Purpose**: Defines how to name all documentation files
 
-**Key Rules**:
-- ✅ **Version-free naming**: `SDLC-Document-Standards.md` (NOT `SDLC-4.9-Document-Standards.md`)
+**Purpose**: Version-free, feature-based naming for all documentation
+
+**Sprint Documentation Naming**:
+```yaml
+Allowed (Exception for Sprint Docs):
+  ✅ SPRINT-001-PLANNING-HIERARCHY.md  # Sprint number allowed in sprint plans
+  ✅ SPRINT-002-UI-DASHBOARD.md
+  ✅ CURRENT-SPRINT.md
+  ✅ SPRINT-INDEX.md
+
+Still Forbidden:
+  ❌ SPRINT-001-v2-FINAL.md            # Version in filename
+  ❌ SPRINT-001-2026-01-18.md          # Date in filename
+  ❌ SPRINT-001-John-Review.md         # Person name in filename
+```
+
+**General Rules**:
+- ✅ **Version-free naming**: `SDLC-Core-Methodology.md` (NOT `SDLC-5.1.3-Core.md`)
 - ✅ **Feature-based**: `Deployment-Guide.md` (NOT `Nov-13-Deploy.md`)
 - ✅ **Kebab-case**: `SDLC-Core-Methodology.md` (NOT `sdlc_core_methodology.md`)
-- ✅ **Descriptive**: Clear, self-explanatory names
-- ❌ **No temporal refs**: No dates, sprint numbers, versions in filename
+- ❌ **No temporal refs**: No dates, versions in general filenames
 
-**Why**: Version in filename = obsolescence. Feature-based = permanence.
-
-**Use When**:
-- Creating any new document
-- Renaming existing documents
-- Planning documentation structure
-- Training team on standards
-
-**Lines**: 408 lines comprehensive guide  
+**Lines**: 445 lines comprehensive guide  
 **Compliance**: MANDATORY for all projects
 
 ---
 
-### 2. SDLC-Document-Header-Templates.md
-**Purpose**: Standard headers for all SDLC documents
+### 2. SDLC-Project-Structure-Standard.md ⭐ MANDATORY
 
-**Provides Templates For**:
-- Core methodology documents
-- Implementation guides
-- Case studies
-- Training materials
-- Technical specifications
+**Purpose**: Standard folder structure aligned with 10-Stage Lifecycle
 
-**Standard Header Format**:
-```markdown
-# Document Title
-
-**Version**: 5.0.0
-**Date**: December 5, 2025
-**Stage**: XX - STAGE_NAME
-**Status**: ACTIVE
-**Authority**: Owner/Team
+**Sprint Documentation Location**:
+```
+docs/
+├── 01-planning/
+│   └── ROADMAP.md                    # Pillar 2: Planning Hierarchy Level 1
+├── 04-build/
+│   └── 02-Sprint-Plans/              # ⭐ Pillar 2: Sprint documentation
+│       ├── CURRENT-SPRINT.md
+│       ├── SPRINT-INDEX.md
+│       └── SPRINT-XX-*.md
+└── 09-govern/
+    └── ROADMAP-CHANGE-LOG.md         # Pillar 2: Roadmap changes
 ```
 
-**Why**: Consistent headers improve discoverability and maintenance
+**Key Rules**:
+- Stage mapping applies ONLY to `/docs` folders
+- Code folders (`backend/`, `frontend/`) are NOT stage-mapped
+- Sprint documentation lives in `docs/04-build/02-Sprint-Plans/`
 
-**Use When**:
-- Creating new documents
-- Updating existing documents
-- Need template reference
+**Lines**: 368 lines complete specification  
+**Compliance**: MANDATORY for all projects
 
-**Lines**: 464 lines with examples  
+---
+
+### 3. SDLC-Document-Header-Templates.md
+
+**Purpose**: Standard headers for all SDLC documents
+
+**Sprint Document Header Template**:
+```markdown
+# Sprint XX: [Sprint Name]
+
+**Sprint ID:** SXX  
+**Status:** ⏳ PLANNED | 🔄 ACTIVE | ✅ COMPLETED | ❌ CANCELLED  
+**Duration:** [X] days ([Start Date] - [End Date])  
+**Goal:** [Single sentence sprint goal]  
+**Story Points:** XX SP  
+**Phase:** [Phase Name] (links to Roadmap)
+
+---
+
+## 🎯 Why This Sprint?
+
+[Connection to Phase objective and Roadmap goal - Pillar 2 traceability]
+
+...
+```
+
+**Lines**: 472 lines with examples  
 **Compliance**: RECOMMENDED for consistency
 
 ---
 
-### 3. SDLC-Code-File-Naming-Standards.md ⭐ MANDATORY
-**Purpose**: Defines how to name all code files (Python, TypeScript, JavaScript, etc.)
+### 4. SDLC-Code-File-Naming-Standards.md ⭐ MANDATORY
+
+**Purpose**: Code file naming standards (Python, TypeScript, etc.)
 
 **Key Rules**:
-- ✅ **Python**: snake_case (models.py, views.py) - Maximum 50 characters
-- ✅ **TypeScript/JavaScript**: camelCase for files, PascalCase for components - Maximum 50 characters
-- ✅ **Alembic Migrations**: {revision}_{description}.py - Maximum 60 characters
-- ✅ **Django Migrations**: {number}_{description}.py - Maximum 50 characters
-- ✅ **Documentation**: kebab-case (see SDLC-Document-Naming-Standards.md)
+- ✅ **Python**: snake_case (max 50 chars) - `user_service.py`
+- ✅ **TypeScript/JavaScript**: camelCase for files, PascalCase for components
+- ✅ **Alembic Migrations**: `{revision}_{description}.py` (max 60 chars)
 
-**Why**: Consistent code file naming improves maintainability and discoverability. Standards established in SDLC 4.3/4.4 and enhanced through version iterations.
-
-**Use When**:
-- Creating new code files
-- Renaming existing code files
-- Reviewing code during pull requests
-- Setting up pre-commit hooks
-
-**Lines**: 354 lines comprehensive guide
+**Lines**: 359 lines comprehensive guide  
 **Compliance**: MANDATORY for all code files
-**Version**: 5.0.0 (December 5, 2025)
 
 ---
 
-### 4. ARCHIVAL-HEADER-TEMPLATE.md
+### 5. ARCHIVAL-HEADER-TEMPLATE.md
+
 **Purpose**: Template for archiving old documents
 
-**Use Case**: When upgrading SDLC versions (e.g., 4.9.1 → 5.0.0)
+**Use Case**: When moving documents to `99-legacy/` during upgrades
 
-**Standard Archival Header**:
-```markdown
-# ⚠️ ARCHIVED: [Document Name]
-
-**ARCHIVE STATUS**: This document is archived for historical reference only
-**ARCHIVED DATE**: December 5, 2025
-**REASON**: Superseded by SDLC 5.0.0 version
-**NEW VERSION**: ../../../[path]/[new-filename].md
-**DO NOT USE**: For active work - historical reference only
-```
-
-**Why**: Clear archival headers prevent accidental use of old documents
-
-**Use When**:
-- Archiving documents during upgrades
-- Moving documents to 99-Legacy
-- Need archival template
-
-**Lines**: 63 lines template
+**Lines**: 63 lines template  
 **Compliance**: MANDATORY for archived documents
 
 ---
 
-### 5. Team-Collaboration/ (Subfolder)
-**Purpose**: Multi-team coordination, communication, and escalation standards
+### 6. Situation-Specific-Guides/ (Subfolder)
 
-**Contains**:
+**Purpose**: Guides for specific situations
+
+| Document | Purpose | Pillar |
+|----------|---------|--------|
+| **When-Planning-Sprint.md** ⭐ | Step-by-step sprint planning guide | Pillar 2 |
+
+**Lines**: 397 lines sprint planning guide  
+**Compliance**: RECOMMENDED for STANDARD+ tiers
+
+---
+
+### 7. Team-Collaboration/ (Subfolder)
+
+**Purpose**: Multi-team coordination and communication standards
+
 | Document | Purpose | Tier Required |
 |----------|---------|---------------|
-| [README.md](./Team-Collaboration/README.md) | Overview and quick start | ALL |
-| [SDLC-Team-Communication-Protocol.md](./Team-Collaboration/SDLC-Team-Communication-Protocol.md) | Tiered communication requirements | ALL |
-| [SDLC-Team-Collaboration-Protocol.md](./Team-Collaboration/SDLC-Team-Collaboration-Protocol.md) | Multi-team coordination, RACI, Handoffs | STANDARD+ |
-| [SDLC-Escalation-Path-Standards.md](./Team-Collaboration/SDLC-Escalation-Path-Standards.md) | 4-level escalation framework | STANDARD+ |
-
-**Key Capabilities**:
-- ✅ RACI matrix framework (who does what)
-- ✅ Handoff protocols (team-to-team transfers)
-- ✅ Escalation paths (4 levels: Self → Lead → Manager → Executive)
-- ✅ Communication standards by tier (LITE → ENTERPRISE)
-- ✅ Team structure templates (Team Topologies aligned)
-
-**Industry Standards**: Team Topologies, SAFe 6.0, ITIL 4, DORA
-
-**Use When**:
-- Setting up multi-team projects
-- Defining team coordination
-- Establishing escalation procedures
-- Training new team members
+| README.md | Overview and quick start | ALL |
+| SDLC-Team-Communication-Protocol.md | Tiered communication | ALL |
+| SDLC-Team-Collaboration-Protocol.md | Multi-team coordination, RACI | STANDARD+ |
+| SDLC-Escalation-Path-Standards.md | 4-level escalation framework | STANDARD+ |
 
 **Compliance**: MANDATORY for STANDARD+ tiers
 
 ---
 
-## 🎯 SDLC 5.0 Alignment
+## 🔗 Integration with 7-Pillar Architecture
 
-### Stage 08 (COLLABORATE) - Team Management & Documentation
+### Pillar 6 Supports All Other Pillars
 
-**Documentation Standards Enable**:
-- **Team Alignment**: Everyone follows same conventions
-- **Knowledge Sharing**: Easy to find and understand docs
-- **Onboarding**: New members quickly learn structure
-- **Maintenance**: Clear patterns for updates
-- **Collaboration**: Reduced friction in documentation work
-
-**BFlow Platform Validation** (Stage 08):
-- 150+ pages documentation maintained
-- Consistent naming across all docs
-- Zero confusion on doc versions
-- Team velocity maintained at scale
-
----
-
-## 📊 Why These Standards Matter
-
-### Problem Without Standards
-```yaml
-Before SDLC 5.0 Standards:
-  - SPRINT-32-Deployment-Plan.md (temporal - becomes obsolete)
-  - sdlc_4_8_core_methodology.md (version in filename - obsolete on upgrade)
-  - deployment_guide_v2_final_FINAL.md (chaos)
-  - update-nov-13.md (no context)
-
-Result:
-  - 50+ obsolete documents
-  - Confusion on current version
-  - Time wasted searching
-  - Risk of using old docs
 ```
-
-### Solution With Standards
-```yaml
-After SDLC 5.0 Standards:
-  - Deployment-Guide-Production-Golive.md (feature-based - permanent)
-  - SDLC-Core-Methodology.md (version inside doc - permanent filename)
-  - Deployment-Guide.md (clear, simple)
-  - System-Update-Guide.md (descriptive)
-
-Result:
-  - All docs permanent
-  - Always know what's current
-  - Easy discovery
-  - Safe to use any doc
+╔════════════════════════════════════════════════════════════════════════════╗
+║                PILLAR 6 INTEGRATION WITH OTHER PILLARS                     ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  Pillar 0: Design Thinking                                                 ║
+║  └─ Docs: User research, personas, problem statements                     ║
+║     Location: docs/00-foundation/                                          ║
+║                                                                            ║
+║  Pillar 1: 10-Stage Lifecycle                                             ║
+║  └─ Docs: Stage-specific documentation in docs/00-09/                     ║
+║     Standard: SDLC-Project-Structure-Standard.md                          ║
+║                                                                            ║
+║  Pillar 2: Sprint Governance ⭐ CRITICAL INTEGRATION                      ║
+║  └─ Docs: SPRINT-XX.md, CURRENT-SPRINT.md, ROADMAP.md                     ║
+║     Location: docs/04-build/02-Sprint-Plans/                              ║
+║     Standard: When-Planning-Sprint.md                                      ║
+║     Enforcement: 24h documentation rule                                    ║
+║                                                                            ║
+║  Pillar 3: 4-Tier Classification                                          ║
+║  └─ Docs: Tier-appropriate documentation level                            ║
+║     LITE: README + SPRINT-XX.md                                            ║
+║     ENTERPRISE: Full documentation suite                                   ║
+║                                                                            ║
+║  Pillar 4: Quality Gates                                                   ║
+║  └─ Docs: Gate documentation, approval records                            ║
+║     G-Sprint: SPRINT-XX.md must exist                                      ║
+║     G-Sprint-Close: CURRENT-SPRINT.md must be updated                     ║
+║                                                                            ║
+║  Pillar 5: SASE Integration                                                ║
+║  └─ Docs: AI-parseable formats (Markdown, YAML)                           ║
+║     Standard: Structured headers, consistent formatting                    ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🚀 How to Use These Standards
+## 📊 SSOT Validation (Single Source of Truth)
+
+### Validation Checks
+
+```yaml
+SSOT Validation Script Checks:
+  Sprint Consistency:
+    - CURRENT-SPRINT.md points to latest active sprint
+    - SPRINT-INDEX.md includes all SPRINT-XX.md files
+    - No orphan sprint references in other docs
+    
+  Roadmap Consistency:
+    - ROADMAP.md dates align with phase dates
+    - Phase → Sprint traceability valid
+    
+  Version Consistency:
+    - All docs have consistent version headers
+    - No stale version references
+```
+
+### Enforcement by Tier
+
+| Tier | SSOT Enforcement |
+|------|------------------|
+| LITE | None (recommended) |
+| STANDARD | CI warning |
+| PROFESSIONAL | CI blocking |
+| ENTERPRISE | CI blocking + Slack alert |
+
+---
+
+## 🚀 Quick Start Guide
 
 ### For New Projects
 
-**Step 1**: Read SDLC-Document-Naming-Standards.md
-- Understand the 5 core principles
-- Review examples (good vs bad)
-- Check compliance checklist
-
-**Step 2**: Use SDLC-Document-Header-Templates.md
-- Choose appropriate template
-- Fill in your document details
-- Maintain consistent format
-
-**Step 3**: Apply Standards Consistently
-- Every document follows naming rules
-- Every document has proper header
-- Archive old docs with ARCHIVAL-HEADER-TEMPLATE.md
-
----
-
-### For Existing Projects (Migration)
-
-**Phase 1: Assessment**
+**Step 1**: Set up folder structure
 ```bash
-# Find documents violating naming standards
-grep -r "v[0-9]" --include="*.md" .  # Version in filename
-find . -name "*-20[0-9][0-9]-*" --include="*.md"  # Date in filename
-find . -name "*SPRINT*" --include="*.md"  # Sprint number in filename
+# Create SDLC-compliant docs structure
+mkdir -p docs/{00-foundation,01-planning,02-design,03-integrate}
+mkdir -p docs/{04-build/{01-ADRs,02-Sprint-Plans},05-test,06-deploy}
+mkdir -p docs/{07-operate,08-collaborate,09-govern,10-archive}
 ```
 
-**Phase 2: Systematic Rename**
+**Step 2**: Create sprint documentation
 ```bash
-# Example: Rename with version-free naming
-OLD: SDLC-4.8-Core-Methodology.md
-NEW: SDLC-Core-Methodology.md (version 4.9.0 inside document)
+# Create initial sprint docs
+touch docs/04-build/02-Sprint-Plans/CURRENT-SPRINT.md
+touch docs/04-build/02-Sprint-Plans/SPRINT-INDEX.md
+touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 ```
 
-**Phase 3: Archive Old Versions**
-```bash
-# Move to 99-Legacy with archival header
-mv OLD-FILE.md 99-Legacy/SDLC-4.8-Archive/
-# Add ARCHIVAL-HEADER-TEMPLATE content to top
-```
+**Step 3**: Apply naming standards
+- Read [SDLC-Document-Naming-Standards.md](./SDLC-Document-Naming-Standards.md)
+- Use [SDLC-Document-Header-Templates.md](./SDLC-Document-Header-Templates.md)
+- Follow [When-Planning-Sprint.md](./Situation-Specific-Guides/When-Planning-Sprint.md)
+
+### For Sprint Planning (Pillar 2 Compliance)
+
+**Before Sprint Start** (G-Sprint Gate):
+1. Create `SPRINT-XX-[NAME].md` in `docs/04-build/02-Sprint-Plans/`
+2. Use sprint header template
+3. Document traceability (Sprint → Phase → Roadmap)
+
+**After Sprint End** (G-Sprint-Close Gate):
+1. Update `CURRENT-SPRINT.md` within 24 business hours
+2. Update `SPRINT-INDEX.md` with completion status
+3. Document carryover items
 
 ---
 
 ## 📋 Compliance Checklist
 
-### For Every Document
+### Sprint Documentation Checklist
 
-- [ ] **Naming**: Follows SDLC-Document-Naming-Standards.md
-  - [ ] No version in filename
-  - [ ] No dates/sprint numbers in filename
-  - [ ] Kebab-case format
-  - [ ] Descriptive, feature-based name
+- [ ] `SPRINT-XX.md` created with proper header
+- [ ] Sprint goal is single sentence
+- [ ] Traceability to Phase/Roadmap documented
+- [ ] `CURRENT-SPRINT.md` updated within 24h
+- [ ] `SPRINT-INDEX.md` includes new sprint
 
-- [ ] **Header**: Uses SDLC-Document-Header-Templates.md
-  - [ ] Has version field (inside document)
-  - [ ] Has date field
-  - [ ] Has stage field (for stage-specific docs)
-  - [ ] Has status field (ACTIVE/ARCHIVED/DRAFT)
-  - [ ] Has authority/owner field
+### General Documentation Checklist
 
-- [ ] **Content**: High quality
-  - [ ] Clear purpose statement
-  - [ ] Structured with headings
-  - [ ] Examples where helpful
-  - [ ] Updated to current version
-
-- [ ] **Links**: All working
-  - [ ] Internal links point to correct files
-  - [ ] External links are valid
-  - [ ] No broken references
+- [ ] No version in filename (version inside document)
+- [ ] No dates in filename (except sprint numbers)
+- [ ] Kebab-case format
+- [ ] Proper header with Version, Date, Status
+- [ ] AI-parseable format (Markdown)
 
 ---
 
-## 🎓 Training & Adoption
+## 🔗 Related Documents
 
-### Team Training (30 minutes)
+### Pillar 2: Sprint Governance
+- [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - 10 Golden Rules
+- [When-Planning-Sprint.md](./Situation-Specific-Guides/When-Planning-Sprint.md) - Step-by-step guide
 
-**Session 1: Why Standards Matter (10 min)**
-- Show before/after examples
-- Explain problems solved
-- Demonstrate discoverability
+### Core Methodology
+- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 7-Pillar Architecture
+- [SDLC-Quality-Gates.md](../Governance-Compliance/SDLC-Quality-Gates.md) - Dual-track gates
 
-**Session 2: Naming Standards (10 min)**
-- Read SDLC-Document-Naming-Standards.md key sections
-- Practice: Rename 5 example files
-- Quiz: Good vs bad names
-
-**Session 3: Header Templates (10 min)**
-- Review SDLC-Document-Header-Templates.md
-- Create sample document with proper header
-- Practice: Add headers to 3 existing docs
-
----
-
-### Quick Reference Card
-
-```markdown
-📝 SDLC 5.0.0 Documentation Quick Reference
-
-Naming Rules:
-✅ Feature-based: Deployment-Guide.md
-✅ Version-free: SDLC-Core-Methodology.md
-✅ Kebab-case: SDLC-Implementation-Guide.md
-❌ Temporal: SPRINT-32-Plan.md
-❌ Version in name: SDLC-5.0-Guide.md
-
-Code File Naming:
-✅ Python: snake_case, max 50 chars (user_service.py)
-✅ TypeScript: camelCase, max 50 chars (userService.ts)
-✅ React Components: PascalCase (UserProfile.tsx)
-✅ Alembic: {rev}_{desc}.py, max 60 chars
-
-Header Format:
-**Version**: 5.0.0
-**Date**: December 5, 2025
-**Stage**: XX - STAGE_NAME
-**Status**: ACTIVE
-
-Archive Location: 99-Legacy/SDLC-4.9.1-Archive/
-```
-
----
-
-## 🔗 Related Documentation
-
-### Stage Documentation (Shortened Names - SDLC 5.0+)
-- `/00-foundation/` - WHY stage (problem validation)
-- `/01-planning/` - WHAT stage (requirements)
-- `/02-design/` - HOW stage (design)
-- `/03-integrate/` - INTEGRATE stage (microservices)
-- `/04-build/` - BUILD stage (implementation)
-- `/05-test/` - TEST stage (quality)
-- `/06-deploy/` - DEPLOY stage (delivery)
-- `/07-operate/` - OPERATE stage (production)
-- `/08-collaborate/` - **COLLABORATE stage (documentation)** ⬅ YOU ARE HERE
-- `/09-govern/` - GOVERN stage (compliance)
-
-### Framework Documentation
-- `/01-Overview/SDLC-Executive-Summary.md` - Framework overview
-- `/02-Core-Methodology/SDLC-Core-Methodology.md` - 10-stage methodology
-- `/09-Continuous-Improvement/` - Framework evolution
+### Case Studies
+- [BFlow Sprint 86 Direction Confusion](../../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Why Pillar 2 & 6 matter
 
 ---
 
 ## 📊 Success Metrics
 
-**Documentation Quality** (Stage 08):
-- ✅ 100% naming standards compliance (BFlow: achieved)
-- ✅ Zero obsolete documents (BFlow: achieved)
-- ✅ <1 minute to find any document (BFlow: achieved)
-- ✅ Team satisfaction > 90% (BFlow: 95%)
+**Documentation Quality**:
+- ✅ 100% naming standards compliance
+- ✅ Zero obsolete documents
+- ✅ <1 minute to find any document
+- ✅ 24h documentation compliance (Pillar 2)
 
-**Business Impact**:
-- Time saved: 5-10 hours/week (no searching for docs)
-- Onboarding speed: 2 weeks → 3 days (clear structure)
-- Maintenance cost: 70% reduction (permanent naming)
-- Team friction: 80% reduction (consistent standards)
-
----
-
-## ❓ FAQ
-
-**Q: Why can't I put version in filename?**
-A: Version in filename = obsolescence. When you upgrade to 5.1, `SDLC-5.0-Guide.md` becomes outdated. Better: `SDLC-Guide.md` with version 5.1 inside.
-
-**Q: What about sprint-specific documents?**
-A: Exception: `/08-collaborate/sprint-logs/` allows sprint numbers (temporal context needed). Everywhere else: feature-based naming.
-
-**Q: How do I handle multiple versions?**  
-A: Keep ONE current version (e.g., `Deployment-Guide.md`). Archive old versions to `99-Legacy/` with archival header.
-
-**Q: What if I need a date reference?**  
-A: Put date INSIDE document, not in filename. Exception: Sprint management docs.
-
-**Q: How strictly are these enforced?**  
-A: MANDATORY for all new documents. Existing documents: migrate during next major update.
+**Sprint Documentation Metrics**:
+- ✅ 100% sprints have SPRINT-XX.md
+- ✅ CURRENT-SPRINT.md always current
+- ✅ SSOT validation passing
 
 ---
 
-## 🎯 Summary
+## Version History
 
-**Documentation-Standards provides**:
-- ✅ Naming conventions (permanent, feature-based)
-- ✅ Header templates (consistent format)
-- ✅ Archival procedures (clear legacy handling)
-- ✅ Compliance checklists (quality assurance)
-
-**Result**: Team-aligned documentation that stays relevant, discoverable, and maintainable.
-
-**For Stage 08 (COLLABORATE)**: These standards enable team velocity through documentation excellence.
+| Version | Date | Changes |
+|---------|------|---------|
+| **5.1.3** | **Jan 18, 2026** | **Pillar 6 integration with Pillar 2 (Sprint Governance)** |
+| 5.1.2 | Dec 24, 2025 | SASE integration, AI-parseable standards |
+| 5.0.0 | Dec 5, 2025 | Initial 6-pillar architecture |
 
 ---
 
-## 📖 Case Study: SDLC 4.9.1 → 5.0.0 Upgrade (December 2025)
+**Pillar 6 Principle**: *"Documentation Permanence enables all other pillars"* 📝
 
-### Context
+**Sprint Governance Integration**: *"24h documentation is not bureaucracy—it's incident prevention"* ⏰
 
-**Project**: SDLC-Enterprise-Framework (Universal Framework cho 5+ dự án)
-**Challenge**: Nâng cấp framework lên 5.0.0 mà không gây breaking changes cho các dự án đang áp dụng
-
-### Vấn đề gặp phải
-
-```yaml
-Before Standards Applied:
-  - 120+ files cần review và update version
-  - References đến 4.9.1 rải rác khắp framework
-  - Risk: Cập nhật thiếu sót → inconsistent versions
-  - Team: 1 AI assistant + CEO review
-
-Pain Points:
-  - Không có checklist chuẩn cho version upgrade
-  - Phải grep thủ công từng file tìm "4.9"
-  - Risk bỏ sót files trong subfolders
-```
-
-### Giải pháp áp dụng
-
-```yaml
-Step 1 - Systematic Search:
-  # Find all version references
-  grep -r "4.9" --include="*.md" SDLC-Enterprise-Framework/
-
-  Result: 112 files with version references
-
-Step 2 - Structured Update Process:
-  - Update từ core ra: README → CLAUDE.md → Core-Methodology
-  - Update theo folder: 01-Overview → 02-Core → 03-Templates...
-  - Track progress với todo list
-
-Step 3 - Archive Old Version:
-  - Create 99-Legacy/SDLC-4.9.1-Archive/
-  - Add ARCHIVAL-HEADER-TEMPLATE to archived docs
-  - Document upgrade changes in archive README
-
-Step 4 - Validation:
-  - grep "4.9" để verify no missed references
-  - Check broken links
-  - CEO review từng document
-```
-
-### Kết quả
-
-```yaml
-Metrics:
-  Files Updated: 112+ (100% coverage)
-  Time Taken: ~3 hours (systematic approach)
-  Errors Found: 0 (after CEO review)
-  Broken Links: 0 (validated post-update)
-
-Without Standards (Estimated):
-  Time: 8-12 hours (ad-hoc approach)
-  Error Rate: 15-20% (missed files)
-  Rework: 2-3 iterations
-
-Efficiency Gain: 70% time saved, 100% accuracy
-```
-
-### Lessons Learned
-
-1. **Version inside, not filename**: Upgrade chỉ cần update version trong header, filename không đổi
-2. **Systematic folder review**: Đi từ root → subfolders, không bỏ sót
-3. **Archive immediately**: Tạo 99-Legacy folder TRƯỚC khi update, preserve history
-4. **CEO review mandatory**: Framework universal ảnh hưởng nhiều projects, cần review kỹ
-
-### Template cho Future Upgrades
-
-```markdown
-## Version Upgrade Checklist
-
-□ 1. Create archive folder: 99-Legacy/SDLC-{old-version}-Archive/
-□ 2. Search all version references: grep -r "{old-version}" --include="*.md"
-□ 3. Update core files first:
-   □ README.md
-   □ CLAUDE.md
-   □ Core-Methodology.md
-□ 4. Update each folder systematically (01 → 09)
-□ 5. Update examples and templates
-□ 6. Validate: grep for old version (should return 0)
-□ 7. Check broken links
-□ 8. CEO/CPO review
-□ 9. Update CHANGELOG.md
-□ 10. Announce to all projects using framework
-```
-
----
-
-**Folder Status**: COMPLETE - All standards defined and validated
-**Compliance**: MANDATORY for SDLC 5.0 projects
-**Last Updated**: December 5, 2025 (SDLC 5.0.0 - Governance & Compliance Integration)
+**Last Updated**: January 18, 2026  
 **Owner**: CPO Office
-
----
-
-***"Permanent naming = Permanent value."*** 📝
-
-***"Version inside, not in filename."*** ✅
-
-***"Feature-based naming never becomes obsolete."*** 🎯
-
-***"Stage 08 (COLLABORATE): Documentation standards enable team excellence."*** 🚀
 

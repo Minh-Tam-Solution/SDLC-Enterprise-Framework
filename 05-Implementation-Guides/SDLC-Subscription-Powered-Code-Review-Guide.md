@@ -1,7 +1,7 @@
-# 🔍 SDLC 5.1.2 - Subscription-Powered Code Review Excellence
+# 🔍 SDLC 5.1.3 - Subscription-Powered Code Review Excellence
 
-**Version**: 5.1.2
-**Last Updated**: December 24, 2025
+**Version**: 5.1.3
+**Last Updated**: January 2025
 **Purpose**: Maximize ROI from paid subscriptions (Cursor, Copilot, Claude Max) for world-class code review without API costs
 **Audience**: Development teams (5-20 developers) using subscription-based AI tools
 **Budget Model**: $0 API costs, fixed subscription fees ($49-$200/month per developer)
@@ -116,13 +116,20 @@ curl -fsSL https://download.cursor.sh | sh
 
 # 4. Configure custom rules (.cursorrules file in project root)
 cat > .cursorrules <<'EOF'
-# SDLC 5.0.0 Code Review Rules
+# SDLC 5.1.3 Code Review Rules
+
+## Sprint Planning Governance (Pillar 2) - NEW in 5.1.3
+- PRs MUST reference SPRINT-XXX in title/description
+- Backlog items MUST be linked (US-XXX, BUG-XXX, TT-XXX)
+- Work MUST align with documented Sprint Goal
+- DoD checklist MUST be verified before merge
+- G-Sprint approval required before work starts
 
 ## Quality Standards
 - Zero mock/fake data (real DB operations only)
 - English-only code and comments
 - Vietnamese i18n strings in i18n files only
-- SDLC 5.0.0 file header standards
+- SDLC 5.1.3 file header standards
 - 80%+ test coverage for new code
 
 ## Vietnamese Business Logic
@@ -147,6 +154,14 @@ cat > .cursorrules <<'EOF'
 - Complex logic inline comments (English only)
 - API endpoint descriptions
 - Database schema comments
+
+## Definition of Done (DoD)
+- Code complete and reviewed (2+ approvers)
+- Unit tests passing (coverage target met)
+- Integration tests passing
+- Documentation updated
+- Deployed to staging environment
+- Product Owner acceptance
 EOF
 ```
 
@@ -185,14 +200,18 @@ async function generateInvoice(orderId: string): Promise<Invoice> {
 
 ```
 Review this code for:
-1. SDLC 5.0.0 compliance (.cursorrules violations)
-2. Vietnamese business logic accuracy (VAT, date formats, BHXH)
-3. Security vulnerabilities (SQL injection, XSS, secrets)
-4. Performance issues (N+1 queries, large loops)
-5. Test coverage gaps
+1. Sprint context (SPRINT-XXX reference, backlog item linked)
+2. SDLC 5.1.3 compliance (.cursorrules violations)
+3. Vietnamese business logic accuracy (VAT, date formats, BHXH)
+4. Security vulnerabilities (SQL injection, XSS, secrets)
+5. Performance issues (N+1 queries, large loops)
+6. Test coverage gaps
+7. Definition of Done (DoD) criteria
 
 File: [current file]
 Context: [full codebase]
+Sprint: SPRINT-XXX
+Backlog Item: US-XXX / BUG-XXX / TT-XXX
 
 Provide specific line numbers and suggested fixes.
 ```

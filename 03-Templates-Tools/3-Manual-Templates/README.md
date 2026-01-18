@@ -1,9 +1,10 @@
 # 📋 3-Manual-Templates - Traditional Process Templates
-## Backup Templates for SDLC 5.0.0 (Use When AI Unavailable)
+## Backup Templates for SDLC 5.1.3 (Use When AI Unavailable)
 
-**Version**: 5.0.0
-**Date**: December 6, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Priority**: ⭐⭐ (BACKUP)
+**Pillar**: 0 - Design Thinking Foundation (Manual Templates)
 **Purpose**: Manual templates for when AI tools are unavailable or for training
 **Status**: COMPLETE (9 templates for Stage 00-01)
 **Recommendation**: Use [/1-AI-Tools/](../1-AI-Tools/) first (96% faster)

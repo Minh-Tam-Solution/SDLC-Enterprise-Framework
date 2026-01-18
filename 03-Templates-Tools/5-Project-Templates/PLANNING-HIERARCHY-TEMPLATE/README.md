@@ -1,11 +1,12 @@
 # Planning Hierarchy Templates
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Stage**: 00 - FOUNDATION
+**Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy)
 **Status**: ACTIVE - Production Templates
 **Authority**: CPO Office
-**Framework**: SDLC 5.1.2 (Documentation vs Code Separation)
+**Framework**: SDLC 5.1.3 (7-Pillar Architecture)
 
 ---
 
@@ -89,7 +90,7 @@ ENTERPRISE (50+ people, $1M+):
 
 ### Step 2: Copy Templates
 ```bash
-# For PROFESSIONAL+ tier (SDLC 5.1.2 folder structure)
+# For PROFESSIONAL+ tier (SDLC 5.1.3 folder structure)
 # Note: Only /docs folders are stage-mapped, code folders are organizational units
 cp ROADMAP-TEMPLATE.md /your-project/docs/00-foundation/
 cp PHASE-TEMPLATE.md /your-project/docs/04-build/02-Sprint-Plans/
@@ -128,5 +129,5 @@ Example:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY template adoption for PROFESSIONAL+ tier
-**Last Updated**: December 24, 2025
+**Last Updated**: January 2025
 **Owner**: CPO Office

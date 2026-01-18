@@ -1,11 +1,12 @@
 # Project Templates
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Stage**: 06 - TEMPLATES & TOOLS
+**Pillar**: 2 - Sprint Planning Governance (Planning Templates)
 **Status**: ACTIVE - Production Templates
 **Authority**: CTO + CPO Office
-**Framework**: SDLC 5.1.2 (Documentation vs Code Separation)
+**Framework**: SDLC 5.1.3 (7-Pillar Architecture)
 
 ---
 
@@ -155,6 +156,6 @@ Before using templates, verify:
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 5.1.2 projects
-**Last Updated**: December 24, 2025
+**Compliance**: Templates RECOMMENDED for all SDLC 5.1.3 projects
+**Last Updated**: January 2025
 **Owner**: CTO + CPO Office

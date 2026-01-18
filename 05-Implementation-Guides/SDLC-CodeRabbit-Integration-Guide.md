@@ -1,12 +1,33 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 5.1.2
-**Last Updated**: December 24, 2025
+**Version**: 5.1.3
+**Last Updated**: January 2025
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
 **Tier**: 3 (Enterprise Automated Review)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
+**SDLC Pillar**: Pillar 4 (Quality Gates) + Pillar 2 (Sprint Planning Governance)
 **SDLC Tier**: PROFESSIONAL (10-50) / ENTERPRISE (50+)
+
+---
+
+## 🆕 Sprint Planning Governance Integration (5.1.3)
+
+**CodeRabbit can enforce Sprint Planning Governance automatically**:
+
+```yaml
+Sprint Governance Checks (Automated):
+  1. PR Title contains SPRINT-XXX reference
+  2. PR Description links backlog item (US-XXX, BUG-XXX, TT-XXX)
+  3. Sprint Goal alignment documented
+  4. DoD checklist present in PR template
+
+Benefits:
+  - 100% Sprint traceability (zero manual verification)
+  - Sprint Review preparation automated
+  - Backlog item status auto-updated
+  - Non-compliant PRs blocked from merge
+```
 
 ---
 
@@ -180,7 +201,7 @@ Expected Result:
 Create in repository root:
 
 ```yaml
-# .coderabbit.yaml - SDLC 5.0.0 Configuration
+# .coderabbit.yaml - SDLC 5.1.3 Configuration
 
 # ==============================================================================
 # REVIEW SETTINGS
@@ -200,6 +221,7 @@ reviews:
 
   # Focus Areas (prioritize these in review)
   focus:
+    - sprint_governance  # NEW in 5.1.3
     - security
     - performance
     - testing
@@ -207,10 +229,47 @@ reviews:
     - documentation
 
 # ==============================================================================
-# SDLC 5.0.0 CUSTOM RULES
+# SDLC 5.1.3 CUSTOM RULES - 7-PILLAR ARCHITECTURE
 # ==============================================================================
 
 rules:
+  # ---------------------------------------------------------------------------
+  # SPRINT PLANNING GOVERNANCE (Pillar 2) - NEW in 5.1.3
+  # ---------------------------------------------------------------------------
+
+  - name: "Sprint Reference Required"
+    pattern: "^(?!.*SPRINT-\\d+).*$"
+    applies_to_pr:
+      - title
+      - description
+    message: |
+      Sprint Planning Governance (Pillar 2) - REQUIRED:
+      - PR title/description MUST reference SPRINT-XXX
+      - Example: "[SPRINT-086] Add user authentication"
+      - This enables Sprint Review traceability
+    severity: error
+
+  - name: "Backlog Item Linkage Required"
+    pattern: "^(?!.*(US-|BUG-|TT-)\\d+).*$"
+    applies_to_pr:
+      - description
+    message: |
+      Sprint Planning Governance (Pillar 2) - REQUIRED:
+      - PR MUST link to backlog item (US-XXX, BUG-XXX, TT-XXX)
+      - This enables Sprint Backlog traceability
+      - Add "Backlog Item: US-123" to PR description
+    severity: error
+
+  - name: "Definition of Done Checklist"
+    pattern: "DoD|Definition of Done"
+    applies_to_pr:
+      - description
+    message: |
+      Sprint Planning Governance (Pillar 2) - RECOMMENDED:
+      - Include DoD checklist in PR description
+      - Verify all DoD criteria met before merge
+    severity: info
+
   # ---------------------------------------------------------------------------
   # DESIGN THINKING VALIDATION (Pillar 0)
   # ---------------------------------------------------------------------------

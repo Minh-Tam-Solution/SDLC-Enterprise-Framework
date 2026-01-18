@@ -1,19 +1,25 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.2
+# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.3
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.2**) with complete 10-Stage lifecycle (WHY → GOVERN), SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 6 months of real platform development (June-December 2025) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.3**) featuring the **7-Pillar Architecture** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 7 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
-**What's New in 5.1.2 (December 24, 2025)**:
+**What's New in 5.1.3 (January 2026)**:
+- ✅ **7-Pillar Architecture** - Complete framework structure with Sprint Planning Governance as Pillar 2
+- ✅ **Sprint Planning Governance (Pillar 2)** - G-Sprint/G-Sprint-Close gates, Planning Hierarchy (ROADMAP → PHASE → SPRINT → BACKLOG)
+- ✅ **10 Golden Rules** - Sprint governance principles for consistent execution
+- ✅ **Dual-Track Quality Gates** - Feature Gate (G0-G4) + Sprint Gate (G-Sprint/G-Sprint-Close)
+- ✅ **24h Documentation Enforcement** - Sprint-related docs within 24 hours of completion
+- ✅ **Code Review Sprint Integration** - 4-Layer system with Sprint Context Check
+
+**What's in 5.1.2 (December 24, 2025)**:
 - ✅ **Project Structure Standard** - Clear separation between documentation stage mapping and code folder organization
 - ✅ **Documentation-Only Stage Mapping** - Only `/docs` folders are mapped to SDLC stages (00-09)
-- ✅ **Code Folders Are NOT Stage-Mapped** - `backend/`, `frontend/`, `tools/`, `tests/` are organizational units, not lifecycle stages
-- ✅ **Archive Clarification** - `10-archive/` is a project-level archive folder, NOT a numbered stage
-- ✅ **Tier Matrix** - Clear requirements by LITE/STANDARD/PROFESSIONAL/ENTERPRISE
+- ✅ **Code Folders Are NOT Stage-Mapped** - `backend/`, `frontend/`, `tools/`, `tests/` are organizational units
 
-**What's New in 5.1.1 (December 12, 2025)**:
+**What's in 5.1.1 (December 12, 2025)**:
 - ✅ **Legacy/Archive Folder Skip** - Validators skip 99-legacy and 10-archive folders
 - ✅ **Stage Consistency** - INTEGRATE is Stage 03, all 10 stages: 00-09
 - ✅ **Version Consistency** - Framework-wide 5.1.1 alignment
@@ -41,12 +47,12 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 
 ## Key Framework Concepts
 
-### The Complete 10-Stage Lifecycle (Documentation Only - SDLC 5.1.2)
+### The Complete 10-Stage Lifecycle (Documentation Only - SDLC 5.1.3)
 
 **IMPORTANT**: Stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, etc.) are NOT stage-mapped.
 
 ```yaml
-Business Question → SDLC Stage → /docs Folder (5.1.2)
+Business Question → SDLC Stage → /docs Folder (5.1.3)
 WHY?        → Stage 00: Foundation    → docs/00-foundation/
 WHAT?       → Stage 01: Planning      → docs/01-planning/
 HOW?        → Stage 02: Design        → docs/02-design/
@@ -98,37 +104,45 @@ Documentation Files:
   Examples: SDLC-Core-Methodology.md
 ```
 
-### The Six Universal Pillars (Complete Architecture)
+### The 7-Pillar Architecture (SDLC 5.1.3)
 
 **Pillar 0: Design Thinking Foundation**
 - Stanford d.school 5-phase methodology (Empathize, Define, Ideate, Prototype, Test)
 - System Thinking integration (4-layer Iceberg Model)
 - 96% time savings proven (NQH-Bot: 4 weeks vs 6 months)
 
-**Pillar 1: AI-Native Excellence Standards**
+**Pillar 1: 10-Stage Lifecycle**
+- Complete lifecycle: WHY → GOVERN (Stages 00-09)
+- Documentation permanence with stage mapping
+- Archive management (99-Legacy, 10-archive)
+
+**Pillar 2: Sprint Planning Governance (NEW in 5.1.3)**
+- Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
+- G-Sprint/G-Sprint-Close gates
+- 10 Golden Rules for sprint execution
+- 24h documentation enforcement
+
+**Pillar 3: 4-Tier Classification**
+- LITE (1-2), STANDARD (3-10), PROFESSIONAL (10-50), ENTERPRISE (50+)
+- Scalable documentation requirements
+- Tier-appropriate governance
+
+**Pillar 4: Quality Gates (Dual-Track)**
+- Feature Gates: G0 → G1 → G2 → G3 → G4
+- Sprint Gates: G-Sprint → G-Sprint-Close
 - Zero Mock Policy (679 mocks → 0 in 48 hours)
-- Works with ANY AI (Claude Code, Cursor, Copilot, CodeRabbit)
 - 90%+ test coverage with real services
 
-**Pillar 2: AI+Human Orchestration Model**
-- NQH-Bot: 5 specialized AI agents
-- BFlow: 20x productivity with 4-6 developers
-- Universal role interchangeability
+**Pillar 5: SASE Integration**
+- SE 3.0 (arXiv:2509.06216v2) principles
+- 6 SASE Artifacts: BRS, LPS, MTS, CRP, MRP, VCR
+- SE4H vs SE4A roles
+- Agentic Maturity Levels (L0-L3)
 
-**Pillar 3: Quality Governance System**
-- System Thinking (4-layer Iceberg Model)
-- Universal Code Review (3 tiers)
-- Crisis response <48 hours proven
-
-**Pillar 4: Documentation Permanence**
+**Pillar 6: Documentation Permanence**
 - 919 files standardized (NQH-Bot)
 - Document naming standards (no sprint references)
 - Archive management (99-Legacy)
-
-**Pillar 5: Continuous Compliance Platform**
-- 24-48 hour emergency response capability
-- Mock Detection Agent V3.0
-- Vietnamese Cultural Intelligence (96.4% accuracy)
 
 ## Repository Structure
 
@@ -182,20 +196,21 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ## Development Workflow
 
 ### When Working with Framework Documentation
-1. **Check current version**: Framework is at **SDLC 5.1.2** (December 24, 2025)
-2. **Apply 10-stage lifecycle**: WHY → GOVERN complete coverage
+1. **Check current version**: Framework is at **SDLC 5.1.3** (January 2026)
+2. **Apply 7-Pillar Architecture**: Design Thinking + 10-Stage + Sprint Governance + 4-Tier + Quality Gates + SASE + Documentation
 3. **Stage mapping for docs only**: Only `/docs` folders are stage-mapped
 4. **Use English only**: All technical content must be in English
 5. **Follow code file naming**: Python snake_case, TypeScript camelCase, React PascalCase
-6. **Maintain version consistency**: Update to 5.1.2 across related documents
+6. **Maintain version consistency**: Update to 5.1.3 across related documents
 
 ### When Updating Framework Content
 1. **Review CHANGELOG.md**: Check version history
-2. **Check 02-Core-Methodology/**: Core principles and 10-stage framework
-3. **Update consistently**: Version 5.1.2, dates December 24, 2025
+2. **Check 02-Core-Methodology/**: Core principles and 7-Pillar Architecture
+3. **Update consistently**: Version 5.1.3, dates January 2026
 4. **Preserve legacy**: Use 99-Legacy/ for superseded content
 5. **Apply code file naming**: All new files must follow naming standards
 6. **Respect documentation vs code separation**: Stage mapping only for `/docs`
+7. **Apply Sprint Governance**: Include sprint context in PRs and documentation
 
 ### When Creating New Content
 1. **Start with Design Thinking**: Apply 5-phase methodology before coding
@@ -242,6 +257,12 @@ SDLC 4.9.1 (November 29, 2025)
   ↓ Code File Naming Standards Restored
 SDLC 5.0.0 (December 5, 2025)
   ↓ Governance & Compliance + 4-Tier Classification + Industry Best Practices
+SDLC 5.1.0 (December 11, 2025)
+  ↓ SASE Integration + SE 3.0 Agentic Principles
+SDLC 5.1.2 (December 24, 2025)
+  ↓ Project Structure Standard + Quality Gates Enhancement
+SDLC 5.1.3 (January 2026)
+  ↓ 7-Pillar Architecture + Sprint Planning Governance (Pillar 2)
 ```
 
 ## Proven ROI (SDLC 5.0.0)
@@ -261,6 +282,10 @@ SDLC 5.0.0 (December 5, 2025)
 - Implementation Guide: [05-Implementation-Guides/SDLC-Implementation-Guide.md](05-Implementation-Guides/SDLC-Implementation-Guide.md)
 - Code File Naming: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
+**NEW in 5.1.3**:
+- Sprint Planning Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+- 7-Pillar Architecture documented in Core Methodology and Executive Summary
+
 **NEW in 5.1.2**:
 - Project Structure Standard: [02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md](02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md)
 
@@ -277,8 +302,8 @@ SDLC 5.0.0 (December 5, 2025)
 
 ---
 
-The framework represents not theory but battle-tested patterns from 6 months of real platform development. With SDLC 5.1.2, we achieve excellence faster: **10-stage complete lifecycle, clear documentation vs code separation, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 7 months of real platform development. With SDLC 5.1.3, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, clear documentation vs code separation, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: December 24, 2025
-**Framework Version**: SDLC 5.1.2
-**Status**: PRODUCTION READY - Complete 10-Stage Lifecycle + Project Structure Standard + Governance & Compliance + 4-Tier Classification
+**Last Updated**: January 2026
+**Framework Version**: SDLC 5.1.3
+**Status**: PRODUCTION READY - 7-Pillar Architecture + Sprint Planning Governance + Complete 10-Stage Lifecycle + SASE Integration

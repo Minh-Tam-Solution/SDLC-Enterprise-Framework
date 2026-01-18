@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-SDLC 5.1.2 Complete Validator
-Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework compliance
+SDLC 5.1.3 Complete Validator
+Validates complete 10-stage lifecycle + 7-pillar architecture + SASE Framework compliance
 
-Version: 5.1.2
-Date: December 24, 2025
+Version: 5.1.3
+Date: January 2025
 Status: ACTIVE - PRODUCTION READY
 Foundation: Proven validation across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
-Enhancement: SASE Framework (SE 3.0) + Agentic Maturity Model + Self-Contained Deployment + Project Structure Standard
+Enhancement: 7-Pillar Architecture (Pillar 2: Sprint Planning Governance) + SASE Framework (SE 3.0)
 
-DOCUMENTATION vs CODE SEPARATION (SDLC 5.1.2):
+DOCUMENTATION vs CODE SEPARATION (SDLC 5.1.3):
 - Stage mapping applies ONLY to /docs folders (stages 00-09)
 - Code folders (backend/, frontend/, tools/, tests/) are NOT stage-mapped
 - Code folders are validated for PRESENCE, not stage compliance
@@ -31,18 +31,19 @@ Project Structure Validation (NOT stage-mapped):
 - Code folders: backend/, frontend/, tools/, tests/
 - Required files by tier: README.md, CLAUDE.md, .env.example, etc.
 
-Legacy/Archive Structure (SDLC 5.1.1+):
+Legacy/Archive Structure (SDLC 5.1.3+):
 - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated or upgraded
 
-6 Pillars Validated:
+7 Pillars Validated:
 - Pillar 0: Design Thinking Foundation
-- Pillar 1: AI-Native Excellence Standards (Zero Mock Policy)
-- Pillar 2: AI+Human Orchestration Model (+ SASE Framework)
-- Pillar 3: Quality Governance System (with Code Review)
-- Pillar 4: Documentation Permanence
-- Pillar 5: Continuous Compliance Platform
+- Pillar 1: 10-Stage Lifecycle
+- Pillar 2: Sprint Planning Governance (NEW in 5.1.3)
+- Pillar 3: 4-Tier Classification
+- Pillar 4: Quality Gates (Dual-Track)
+- Pillar 5: SASE Integration
+- Pillar 6: Documentation Permanence
 
 SASE Framework (NEW in 5.1.0):
 - SE4H (Agent Coach): Human creates BRS, MTS, VCR
@@ -88,7 +89,16 @@ from typing import Dict, List, Tuple
 import re
 
 class SDLC51Validator:
-    """SDLC 5.1.1 Complete 6-Pillar + SASE Framework + Team Collaboration Validator
+    """SDLC 5.1.3 Complete 7-Pillar + SASE Framework + Team Collaboration Validator
+
+    7-Pillar Architecture (SDLC 5.1.3):
+    - Pillar 0: Design Thinking Foundation
+    - Pillar 1: 10-Stage Lifecycle
+    - Pillar 2: Sprint Planning Governance (NEW in 5.1.3)
+    - Pillar 3: 4-Tier Classification
+    - Pillar 4: Quality Gates (Dual-Track)
+    - Pillar 5: SASE Integration
+    - Pillar 6: Documentation Permanence
 
     Legacy/Archive Handling:
     - Skips 10-archive folder at docs root (not a stage)
@@ -105,12 +115,13 @@ class SDLC51Validator:
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
         self.results = {
-            "pillar_0": {"name": "Design Thinking", "passed": False, "score": 0, "details": []},
-            "pillar_1": {"name": "Zero Mock Policy", "passed": False, "score": 0, "details": []},
-            "pillar_2": {"name": "AI+Human Orchestration", "passed": False, "score": 0, "details": []},
-            "pillar_3": {"name": "Quality Governance", "passed": False, "score": 0, "details": []},
-            "pillar_4": {"name": "Documentation Permanence", "passed": False, "score": 0, "details": []},
-            "pillar_5": {"name": "Continuous Compliance", "passed": False, "score": 0, "details": []},
+            "pillar_0": {"name": "Design Thinking Foundation", "passed": False, "score": 0, "details": []},
+            "pillar_1": {"name": "10-Stage Lifecycle", "passed": False, "score": 0, "details": []},
+            "pillar_2": {"name": "Sprint Planning Governance", "passed": False, "score": 0, "details": []},
+            "pillar_3": {"name": "4-Tier Classification", "passed": False, "score": 0, "details": []},
+            "pillar_4": {"name": "Quality Gates (Dual-Track)", "passed": False, "score": 0, "details": []},
+            "pillar_5": {"name": "SASE Integration", "passed": False, "score": 0, "details": []},
+            "pillar_6": {"name": "Documentation Permanence", "passed": False, "score": 0, "details": []},
         }
         self.overall_compliant = False
 
@@ -143,18 +154,19 @@ class SDLC51Validator:
                 yield path
 
     def validate_all_pillars(self) -> Dict:
-        """Validate all 6 pillars of SDLC 5.1.1"""
-        print("🔍 SDLC 5.1.1 Complete Validation Starting...")
+        """Validate all 6 pillars of SDLC 5.1.3"""
+        print("🔍 SDLC 5.1.3 Complete Validation Starting...")
         print(f"📁 Project: {self.project_path}")
         print("=" * 80)
 
-        # Validate each pillar
+        # Validate each pillar (7-Pillar Architecture)
         self.validate_pillar_0_design_thinking()
-        self.validate_pillar_1_zero_mock()
-        self.validate_pillar_2_ai_human()
-        self.validate_pillar_3_quality_governance()
-        self.validate_pillar_4_documentation()
-        self.validate_pillar_5_continuous_compliance()
+        self.validate_pillar_1_lifecycle()
+        self.validate_pillar_2_sprint_governance()
+        self.validate_pillar_3_tier_classification()
+        self.validate_pillar_4_quality_gates()
+        self.validate_pillar_5_sase_integration()
+        self.validate_pillar_6_documentation()
 
         # Calculate overall compliance
         self.calculate_overall_compliance()
@@ -212,18 +224,322 @@ class SDLC51Validator:
         status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
         print(f"   {status} - Score: {score}%")
 
-    def validate_pillar_1_zero_mock(self):
-        """Pillar 1: AI-Native Excellence Standards (Zero Mock Policy)"""
-        print("\n🚫 Validating Pillar 1: Zero Mock Policy...")
+    def validate_pillar_1_lifecycle(self):
+        """Pillar 1: 10-Stage Lifecycle Validation"""
+        print("\n📋 Validating Pillar 1: 10-Stage Lifecycle...")
 
         pillar = self.results["pillar_1"]
+        score = 0
 
-        # Scan for mock patterns
+        # 10 stages to validate (00-09)
+        stages = [
+            ("00", "FOUNDATION", "WHY?"),
+            ("01", "PLANNING", "WHAT?"),
+            ("02", "DESIGN", "HOW?"),
+            ("03", "INTEGRATE", "API Contracts"),
+            ("04", "BUILD", "Development"),
+            ("05", "TEST", "Quality Assurance"),
+            ("06", "DEPLOY", "Release"),
+            ("07", "OPERATE", "Operations"),
+            ("08", "COLLABORATE", "Team Coordination"),
+            ("09", "GOVERN", "Compliance"),
+        ]
+
+        found_stages = []
+        docs_path = self.project_path / "docs"
+
+        for stage_num, stage_name, stage_desc in stages:
+            stage_patterns = [
+                f"{stage_num}-{stage_name.lower()}",
+                f"{stage_num}-{stage_name}",
+                stage_name.lower(),
+            ]
+            for pattern in stage_patterns:
+                if list(self._rglob_skip_legacy(f"*{pattern}*")):
+                    found_stages.append((stage_num, stage_name))
+                    score += 10
+                    break
+
+        if len(found_stages) >= 8:
+            pillar["details"].append(f"✅ {len(found_stages)}/10 stages documented")
+        elif len(found_stages) >= 5:
+            pillar["details"].append(f"⚠️  {len(found_stages)}/10 stages documented (minimum 8 recommended)")
+        else:
+            pillar["details"].append(f"❌ Only {len(found_stages)}/10 stages documented")
+
+        # Check for stage README files
+        readme_count = len(list(self._rglob_skip_legacy("*README*")))
+        if readme_count >= 5:
+            pillar["details"].append(f"✅ {readme_count} README files found")
+        else:
+            pillar["details"].append(f"⚠️  Only {readme_count} README files found")
+
+        pillar["score"] = min(score, 100)
+        pillar["passed"] = score >= 50  # At least 5 stages
+
+        status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
+        print(f"   {status} - Score: {pillar['score']}%")
+
+    def validate_pillar_2_sprint_governance(self):
+        """Pillar 2: Sprint Planning Governance (NEW in 5.1.3)
+
+        Validates Sprint Planning Hierarchy:
+        - ROADMAP: Quarterly/yearly strategic planning
+        - PHASE: Major milestone planning (2-4 sprints)
+        - SPRINT: Biweekly tactical planning
+        - BACKLOG: Task-level management
+
+        Sprint Governance Checks:
+        - Sprint naming convention (SPRINT-XXX)
+        - Sprint documentation structure
+        - Sprint retrospective records
+        - Velocity tracking
+        - Definition of Done compliance
+        """
+        print("\n🏃 Validating Pillar 2: Sprint Planning Governance...")
+
+        pillar = self.results["pillar_2"]
+        score = 0
+
+        # Check for Planning Hierarchy documents
+        hierarchy_docs = {
+            "ROADMAP": ["roadmap", "ROADMAP", "strategic-plan"],
+            "PHASE": ["phase", "PHASE", "milestone"],
+            "SPRINT": ["sprint", "SPRINT", "iteration"],
+            "BACKLOG": ["backlog", "BACKLOG", "task-list"],
+        }
+
+        found_hierarchy = []
+        for level, patterns in hierarchy_docs.items():
+            for pattern in patterns:
+                if list(self._rglob_skip_legacy(f"*{pattern}*")):
+                    found_hierarchy.append(level)
+                    score += 15
+                    break
+
+        if len(found_hierarchy) >= 3:
+            pillar["details"].append(f"✅ Planning hierarchy: {', '.join(found_hierarchy)}")
+        elif len(found_hierarchy) >= 1:
+            pillar["details"].append(f"⚠️  Partial planning hierarchy: {', '.join(found_hierarchy)}")
+        else:
+            pillar["details"].append("❌ No planning hierarchy documents found")
+
+        # Check for Sprint Planning folder structure
+        sprint_folders = ["01-planning", "planning", "sprints"]
+        found_sprint_folder = False
+        for folder in sprint_folders:
+            if list(self._rglob_skip_legacy(folder)):
+                found_sprint_folder = True
+                score += 15
+                pillar["details"].append(f"✅ Sprint planning folder found: {folder}")
+                break
+
+        if not found_sprint_folder:
+            pillar["details"].append("⚠️  No dedicated sprint planning folder")
+
+        # Check for Sprint Retrospective documents
+        retro_patterns = ["retrospective", "retro", "sprint-review", "lessons-learned"]
+        found_retro = False
+        for pattern in retro_patterns:
+            if list(self._rglob_skip_legacy(f"*{pattern}*")):
+                found_retro = True
+                score += 10
+                pillar["details"].append("✅ Sprint retrospective documents found")
+                break
+
+        if not found_retro:
+            pillar["details"].append("⚠️  No sprint retrospective documents found")
+
+        # Check for Definition of Done (DoD)
+        dod_patterns = ["definition-of-done", "DoD", "done-criteria", "acceptance-criteria"]
+        found_dod = False
+        for pattern in dod_patterns:
+            if list(self._rglob_skip_legacy(f"*{pattern}*")):
+                found_dod = True
+                score += 10
+                pillar["details"].append("✅ Definition of Done documented")
+                break
+
+        if not found_dod:
+            pillar["details"].append("⚠️  Definition of Done not documented")
+
+        # Check for Sprint naming convention compliance
+        sprint_naming_score = self.check_sprint_naming_convention()
+        score += sprint_naming_score
+        if sprint_naming_score >= 10:
+            pillar["details"].append("✅ Sprint naming convention followed")
+        else:
+            pillar["details"].append("⚠️  Sprint naming convention not consistently followed")
+
+        pillar["score"] = min(score, 100)
+        pillar["passed"] = score >= 40  # 40% minimum
+
+        status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
+        print(f"   {status} - Score: {pillar['score']}%")
+
+    def check_sprint_naming_convention(self) -> int:
+        """Check for proper sprint naming convention (SPRINT-XXX)
+
+        Valid patterns:
+        - SPRINT-001, SPRINT-074, etc.
+        - sprint-001, sprint-074, etc.
+        - Generic: Sprint N, Sprint N+1
+
+        Invalid patterns:
+        - Temporal references: DAY-1, PHASE-1, TEMP-
+        """
+        score = 0
+
+        # Look for proper sprint naming
+        sprint_patterns = [
+            r"SPRINT-\d{3}",  # SPRINT-001, SPRINT-074
+            r"sprint-\d{3}",  # sprint-001, sprint-074
+            r"Sprint\s+\d+",  # Sprint 1, Sprint 74
+        ]
+
+        found_proper_naming = False
+        for pattern in sprint_patterns:
+            for file_path in self._rglob_skip_legacy("*.md"):
+                try:
+                    content = file_path.read_text(encoding='utf-8')
+                    if re.search(pattern, content):
+                        found_proper_naming = True
+                        break
+                except:
+                    continue
+            if found_proper_naming:
+                break
+
+        if found_proper_naming:
+            score += 10
+
+        return score
+
+    def validate_pillar_3_tier_classification(self):
+        """Pillar 3: 4-Tier Classification Validation"""
+        print("\n🏷️  Validating Pillar 3: 4-Tier Classification...")
+
+        pillar = self.results["pillar_3"]
+        score = 0
+
+        # Detect project tier based on structure
+        tier = self.detect_project_tier()
+
+        if tier:
+            pillar["details"].append(f"✅ Project tier detected: {tier}")
+            score += 40
+        else:
+            pillar["details"].append("⚠️  Project tier not clearly defined")
+
+        # Check tier-appropriate documentation
+        tier_docs = {
+            "LITE": ["README.md"],
+            "STANDARD": ["README.md", "CLAUDE.md"],
+            "PROFESSIONAL": ["README.md", "CLAUDE.md", "docs/"],
+            "ENTERPRISE": ["README.md", "CLAUDE.md", "docs/", "ADRs/"],
+        }
+
+        if tier and tier in tier_docs:
+            required_docs = tier_docs[tier]
+            found_docs = []
+            for doc in required_docs:
+                if (self.project_path / doc).exists() or list(self._rglob_skip_legacy(doc)):
+                    found_docs.append(doc)
+                    score += 15
+
+            if len(found_docs) == len(required_docs):
+                pillar["details"].append(f"✅ All {tier} tier docs present")
+            else:
+                pillar["details"].append(f"⚠️  Missing {tier} tier docs: {set(required_docs) - set(found_docs)}")
+
+        pillar["score"] = min(score, 100)
+        pillar["passed"] = score >= 40
+
+        status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
+        print(f"   {status} - Score: {pillar['score']}%")
+
+    def detect_project_tier(self) -> str:
+        """Detect project tier based on structure and documentation"""
+        # Check for ENTERPRISE indicators
+        if ((self.project_path / "docs" / "ADRs").exists() or
+            list(self._rglob_skip_legacy("*CAB*")) or
+            list(self._rglob_skip_legacy("*CTO-Report*"))):
+            return "ENTERPRISE"
+
+        # Check for PROFESSIONAL indicators
+        if ((self.project_path / "docs").exists() and
+            len(list((self.project_path / "docs").rglob("*.md"))) > 20):
+            return "PROFESSIONAL"
+
+        # Check for STANDARD indicators
+        if (self.project_path / "CLAUDE.md").exists():
+            return "STANDARD"
+
+        # Default to LITE
+        if (self.project_path / "README.md").exists():
+            return "LITE"
+
+        return None
+
+    def validate_pillar_4_quality_gates(self):
+        """Pillar 4: Quality Gates (Dual-Track) Validation"""
+        print("\n🚦 Validating Pillar 4: Quality Gates (Dual-Track)...")
+
+        pillar = self.results["pillar_4"]
+        score = 0
+
+        # Check for code review configuration (Track 1: Code Quality)
+        review_tier = self.detect_code_review_tier()
+        if review_tier:
+            score += 30
+            pillar["details"].append(f"✅ Code Review Tier {review_tier} detected")
+        else:
+            pillar["details"].append("⚠️  No code review tier configured")
+
+        # Check for Zero Mock Policy (Track 1: Code Quality)
+        mock_count = self.count_mocks()
+        if mock_count == 0:
+            score += 20
+            pillar["details"].append("✅ Zero Mock Policy compliant")
+        else:
+            pillar["details"].append(f"⚠️  {mock_count} mock instances found")
+
+        # Check for test coverage (Track 2: Test Quality)
+        if self.check_test_coverage():
+            score += 20
+            pillar["details"].append("✅ Test coverage >90% estimated")
+        else:
+            pillar["details"].append("⚠️  Test coverage appears low")
+
+        # Check for pre-commit hooks
+        if (self.project_path / ".pre-commit-config.yaml").exists():
+            score += 15
+            pillar["details"].append("✅ Pre-commit hooks configured")
+        elif (self.project_path / ".git" / "hooks" / "pre-commit").exists():
+            score += 10
+            pillar["details"].append("✅ Git pre-commit hooks found")
+        else:
+            pillar["details"].append("⚠️  Pre-commit hooks not found")
+
+        # Check for CI/CD pipeline
+        if self.check_ci_cd():
+            score += 15
+            pillar["details"].append("✅ CI/CD pipeline configured")
+        else:
+            pillar["details"].append("⚠️  CI/CD pipeline not found")
+
+        pillar["score"] = min(score, 100)
+        pillar["passed"] = score >= 50  # 50% minimum
+
+        status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
+        print(f"   {status} - Score: {pillar['score']}%")
+
+    def count_mocks(self) -> int:
+        """Count mock instances in codebase"""
         mock_patterns = [
             r'\bmock\b',
             r'\bstub\b',
             r'\bfake\b',
-            r'\bdummy\b',
             r'unittest\.mock',
             r'jest\.mock',
             r'@mock',
@@ -231,37 +547,29 @@ class SDLC51Validator:
         ]
 
         mock_count = 0
-        mock_files = []
-
         for file_path in self._rglob_skip_legacy("*.py"):
             try:
                 content = file_path.read_text(encoding='utf-8')
                 for pattern in mock_patterns:
-                    if re.search(pattern, content, re.IGNORECASE):
-                        mock_count += len(re.findall(pattern, content, re.IGNORECASE))
-                        if file_path not in mock_files:
-                            mock_files.append(file_path)
+                    mock_count += len(re.findall(pattern, content, re.IGNORECASE))
             except:
                 continue
 
-        if mock_count == 0:
-            pillar["score"] = 100
-            pillar["passed"] = True
-            pillar["details"].append("✅ Zero mocks found - COMPLIANT")
-        else:
-            pillar["score"] = max(0, 100 - (mock_count * 5))
-            pillar["passed"] = False
-            pillar["details"].append(f"❌ {mock_count} mock instances found in {len(mock_files)} files")
-            pillar["details"].append("💡 Solution: Replace mocks with real test services")
+        return mock_count
 
-        status = "✅ PASSED" if pillar["passed"] else "❌ FAILED"
-        print(f"   {status} - Mocks: {mock_count} (must be 0)")
+    def check_ci_cd(self) -> bool:
+        """Check for CI/CD configuration"""
+        ci_files = [".github/workflows", ".gitlab-ci.yml", "Jenkinsfile", ".circleci"]
+        for ci_file in ci_files:
+            if (self.project_path / ci_file).exists():
+                return True
+        return False
 
-    def validate_pillar_2_ai_human(self):
-        """Pillar 2: AI+Human Orchestration Model (+ SASE Framework + Team Collaboration)"""
-        print("\n🤖 Validating Pillar 2: AI+Human Orchestration + SASE Framework...")
+    def validate_pillar_5_sase_integration(self):
+        """Pillar 5: SASE Integration (AI+Human Orchestration + SE 3.0)"""
+        print("\n🤖 Validating Pillar 5: SASE Integration...")
 
-        pillar = self.results["pillar_2"]
+        pillar = self.results["pillar_5"]
         score = 0
 
         # Check for AI integration files
@@ -317,46 +625,11 @@ class SDLC51Validator:
         status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
         print(f"   {status} - Score: {pillar['score']}%")
 
-    def validate_pillar_3_quality_governance(self):
-        """Pillar 3: Quality Governance System (with Code Review)"""
-        print("\n📊 Validating Pillar 3: Quality Governance + Code Review...")
+    def validate_pillar_6_documentation(self):
+        """Pillar 6: Documentation Permanence"""
+        print("\n📚 Validating Pillar 6: Documentation Permanence...")
 
-        pillar = self.results["pillar_3"]
-        score = 0
-
-        # Check for code review configuration
-        review_tier = self.detect_code_review_tier()
-        if review_tier:
-            score += 40
-            pillar["details"].append(f"✅ Code Review Tier {review_tier} detected")
-        else:
-            pillar["details"].append("⚠️  No code review tier configured")
-
-        # Check for pre-commit hooks
-        if (self.project_path / ".git" / "hooks" / "pre-commit").exists():
-            score += 20
-            pillar["details"].append("✅ Pre-commit hooks configured")
-        else:
-            pillar["details"].append("⚠️  Pre-commit hooks not found")
-
-        # Check for test coverage
-        if self.check_test_coverage():
-            score += 20
-            pillar["details"].append("✅ Test coverage >90% estimated")
-        else:
-            pillar["details"].append("⚠️  Test coverage appears low")
-
-        pillar["score"] = score
-        pillar["passed"] = score >= 50  # 50% minimum
-
-        status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
-        print(f"   {status} - Score: {score}%")
-
-    def validate_pillar_4_documentation(self):
-        """Pillar 4: Documentation Permanence"""
-        print("\n📚 Validating Pillar 4: Documentation Permanence...")
-
-        pillar = self.results["pillar_4"]
+        pillar = self.results["pillar_6"]
         score = 0
 
         # Check for documentation structure
@@ -388,52 +661,31 @@ class SDLC51Validator:
         else:
             pillar["details"].append("⚠️  Version headers missing")
 
-        pillar["score"] = score
+        # Check for archival headers (Pillar 6 specific)
+        if self.check_archival_headers():
+            score += 20
+            pillar["details"].append("✅ Archival headers found")
+        else:
+            pillar["details"].append("⚠️  Archival headers not found")
+
+        pillar["score"] = min(score, 100)
         pillar["passed"] = score >= 50  # 50% minimum
 
         status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
-        print(f"   {status} - Score: {score}%")
+        print(f"   {status} - Score: {pillar['score']}%")
 
-    def validate_pillar_5_continuous_compliance(self):
-        """Pillar 5: Continuous Compliance Platform"""
-        print("\n⚙️  Validating Pillar 5: Continuous Compliance...")
-
-        pillar = self.results["pillar_5"]
-        score = 0
-
-        # Check for CI/CD configuration
-        ci_files = [".github/workflows", ".gitlab-ci.yml", "Jenkinsfile", ".circleci"]
-        found_ci = False
-        for ci_file in ci_files:
-            if (self.project_path / ci_file).exists():
-                found_ci = True
-                score += 40
-                break
-
-        if found_ci:
-            pillar["details"].append("✅ CI/CD pipeline configured")
-        else:
-            pillar["details"].append("⚠️  No CI/CD configuration found")
-
-        # Check for monitoring setup
-        if self.check_monitoring():
-            score += 30
-            pillar["details"].append("✅ Monitoring configuration detected")
-        else:
-            pillar["details"].append("⚠️  No monitoring configuration found")
-
-        # Check for compliance scripts
-        if (self.project_path / "scripts" / "compliance").exists():
-            score += 30
-            pillar["details"].append("✅ Compliance scripts available")
-        else:
-            pillar["details"].append("⚠️  Compliance scripts not found")
-
-        pillar["score"] = score
-        pillar["passed"] = score >= 50  # 50% minimum
-
-        status = "✅ PASSED" if pillar["passed"] else "❌ NEEDS IMPROVEMENT"
-        print(f"   {status} - Score: {score}%")
+    def check_archival_headers(self) -> bool:
+        """Check for archival header patterns in documentation"""
+        archival_patterns = [
+            "Archival-Header",
+            "ARCHIVAL-HEADER",
+            "Document-Lifecycle",
+            "Preservation-Status"
+        ]
+        for pattern in archival_patterns:
+            if list(self._rglob_skip_legacy(f"*{pattern}*")):
+                return True
+        return False
 
     # Helper methods
 
@@ -535,7 +787,7 @@ class SDLC51Validator:
                 found_patterns.append(pattern)
                 score += 5
 
-        # Check for specific SDLC 5.1.1 documents
+        # Check for specific SDLC 5.1.3 documents
         specific_docs = [
             "SDLC-Team-Communication-Protocol.md",
             "SDLC-Team-Collaboration-Protocol.md",
@@ -603,17 +855,17 @@ class SDLC51Validator:
         return False
 
     def calculate_overall_compliance(self):
-        """Calculate overall SDLC 5.1.1 compliance"""
+        """Calculate overall SDLC 5.1.3 compliance (7 pillars)"""
         passed_count = sum(1 for p in self.results.values() if p["passed"])
-        total_score = sum(p["score"] for p in self.results.values()) / 6
+        total_score = sum(p["score"] for p in self.results.values()) / 7  # 7 pillars
 
-        self.overall_compliant = passed_count >= 5  # At least 5/6 pillars must pass
+        self.overall_compliant = passed_count >= 5  # At least 5/7 pillars must pass
         self.overall_score = total_score
 
     def print_results(self):
         """Print detailed validation results"""
         print("\n" + "=" * 80)
-        print("📊 SDLC 5.1.1 VALIDATION RESULTS")
+        print("📊 SDLC 5.1.3 VALIDATION RESULTS")
         print("=" * 80)
 
         for pillar_key, pillar_data in self.results.items():
@@ -626,16 +878,18 @@ class SDLC51Validator:
         print(f"Overall Score: {self.overall_score:.1f}%")
 
         if self.overall_compliant:
-            print("🎉 PROJECT IS SDLC 5.1.1 COMPLIANT!")
+            print("🎉 PROJECT IS SDLC 5.1.3 COMPLIANT!")
             print("✅ Ready for production deployment")
-            print("✅ SASE Framework validated (SE 3.0)")
-            print("✅ Team Collaboration Standards validated")
+            print("✅ 7-Pillar Architecture validated")
+            print("✅ Sprint Planning Governance validated (Pillar 2)")
+            print("✅ SASE Framework validated (Pillar 5)")
             print("✅ Legacy/Archive folders excluded from validation")
         else:
             print("⚠️  PROJECT NEEDS IMPROVEMENT")
             print("💡 Address failed pillars before production deployment")
+            print("💡 Check Sprint Planning Governance (Pillar 2)")
             print("💡 Check SASE Artifacts (BRS, LPS, MRP, VCR)")
-            print("💡 See: SDLC-Enterprise-Framework/03-Templates-Tools/SASE-Artifacts/")
+            print("💡 See: SDLC-Enterprise-Framework/03-Templates-Tools/")
             print("💡 Note: Legacy/Archive folders (99-legacy, 10-archive) are excluded")
 
         print("=" * 80)

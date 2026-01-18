@@ -1,12 +1,13 @@
 # SDLC Sprint Planning Governance
 
 **Version**: 5.1.3
-**Date**: January 18, 2026
+**Date**: January 2025
 **Stage**: 02 - Core Methodology (Governance & Compliance)
+**Pillar**: 2 - Sprint Planning Governance (Core Pillar)
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO Office
 **Industry Standards**: SAFe, Scrum Guide, ITIL 4
-**Incident Reference**: BFlow Sprint 86 Direction Confusion (January 18, 2026)
+**Incident Reference**: BFlow Sprint 86 Direction Confusion (January 2025)
 
 ---
 

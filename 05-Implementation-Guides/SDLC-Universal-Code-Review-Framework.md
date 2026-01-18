@@ -1,9 +1,10 @@
 # SDLC Universal Code Review Framework
 
-**Version**: 5.1.2
-**Last Updated**: December 24, 2025
+**Version**: 5.1.3
+**Last Updated**: January 2025
 **Status**: PRODUCTION READY
 **Stage**: 04 (BUILD) - Code Review Excellence
+**Pillar**: Pillar 4 (Quality Gates - Dual Track) + Pillar 2 (Sprint Planning Governance)
 **Audience**: Engineering Teams (All Tiers - LITE to ENTERPRISE)
 **ROI**: 2,033% (Tier 2) to 14,340% (Tier 3) validated
 
@@ -15,7 +16,7 @@ This framework provides **comprehensive code review guidance for ALL team contex
 
 **Universal Framework Principle**: We document ALL options objectively. Your choice depends on YOUR context, not our preference.
 
-### SDLC 5.1.2 Integration
+### SDLC 5.1.3 Integration
 
 **Stage Mapping**: Code Review is a core component of **Stage 04 (BUILD)**
 
@@ -27,6 +28,37 @@ Stage 04: BUILD (Development)
 │   ├── Tier 2: Subscription-Based AI
 │   └── Tier 3: CodeRabbit Professional
 └── Quality Gates (Pre-merge validation)
+```
+
+### 7-Pillar Architecture Alignment
+
+| Pillar | Code Review Integration |
+|--------|------------------------|
+| **P0: Design Thinking** | Verify PR addresses validated user need |
+| **P1: 10-Stage Lifecycle** | Stage-appropriate review focus |
+| **P2: Sprint Planning Governance** | **Sprint context validation in PR** |
+| **P3: 4-Tier Classification** | Right-sized review depth |
+| **P4: Quality Gates** | Pre-merge quality enforcement |
+| **P5: SASE Integration** | Human-AI collaboration evidence |
+| **P6: Documentation Permanence** | Doc updates verified |
+
+### Sprint Planning Governance Integration (NEW in 5.1.3)
+
+**PR Must Include Sprint Context**:
+```yaml
+Sprint Reference:
+  - PR title/description references SPRINT-XXX
+  - Backlog item linked (US-XXX, BUG-XXX, TT-XXX)
+  - Sprint Goal alignment documented
+
+Sprint Review Checkpoint:
+  - Code review BEFORE Sprint Review demo
+  - Sprint Review feedback incorporated
+  - Definition of Done (DoD) verified
+
+Governance Gates:
+  - G-Sprint: Planning approved before work starts
+  - G-Sprint-Close: Documentation within 24h of sprint end
 ```
 
 **4-Tier Classification Integration**:
@@ -165,7 +197,13 @@ repos:
 - [ ] Breaking change (fix or feature causing existing functionality to break)
 - [ ] Documentation update
 
-## SDLC 5.0.0 Compliance
+## SDLC 5.1.3 Compliance
+
+### Sprint Planning Governance (Pillar 2) - NEW
+- [ ] PR references SPRINT-XXX in title/description
+- [ ] Backlog item linked (US-XXX, BUG-XXX, TT-XXX)
+- [ ] Aligns with documented Sprint Goal
+- [ ] Work started AFTER G-Sprint gate approval
 
 ### Stage 00-01 (Design Thinking)
 - [ ] User need documented (if user-facing change)
@@ -182,11 +220,24 @@ repos:
 - [ ] Integration tests pass
 - [ ] Manual testing completed
 
+### Definition of Done (DoD) Verification
+- [ ] Code complete and reviewed (2+ approvers)
+- [ ] Tests passing (unit + integration)
+- [ ] Documentation updated
+- [ ] Deployed to staging
+- [ ] Product Owner acceptance
+
 ## Testing Performed
 Coverage Before: ___%
 Coverage After: ___%
 
+## Sprint Context
+Sprint: SPRINT-___
+Backlog Item: US-___ / BUG-___ / TT-___
+Sprint Goal Alignment: [Describe how this PR supports sprint goal]
+
 ## Reviewer Checklist
+- [ ] Sprint context verified
 - [ ] Code is readable and maintainable
 - [ ] Tests are comprehensive
 - [ ] No code smells detected
@@ -196,6 +247,12 @@ Coverage After: ___%
 
 **Review Protocol** (15-30 min per PR):
 ```yaml
+Step 0: Sprint Context Check (2 min) - NEW in 5.1.3
+  - Verify SPRINT-XXX reference
+  - Confirm backlog item linkage
+  - Check sprint goal alignment
+  - Validate G-Sprint gate approval
+
 Step 1: Context Review (3 min)
   - Read PR description
   - Understand problem being solved
@@ -218,7 +275,12 @@ Step 4: Testing Review (5 min)
   - Edge cases handled
   - Integration test completeness
 
-Step 5: Feedback (5 min)
+Step 5: DoD Verification (3 min) - NEW in 5.1.3
+  - Verify all DoD criteria met
+  - Check documentation updates
+  - Confirm staging deployment ready
+
+Step 6: Feedback (5 min)
   - Provide actionable comments
   - Suggest improvements
   - Approve or request changes
@@ -296,17 +358,28 @@ Net Benefit Year 1: $137,300
 **Tool**: Cursor Pro ($20/dev/month)
 **Purpose**: Catch issues BEFORE commit via real-time AI analysis.
 
-**Setup** (.cursorrules file - SDLC 5.0.0):
+**Setup** (.cursorrules file - SDLC 5.1.3):
 ```markdown
-# SDLC 5.0.0 Code Review Rules
+# SDLC 5.1.3 Code Review Rules
 
 ## Project Context
 - Framework: [Django/React/FastAPI]
-- Standards: SDLC 5.0.0 compliance required
+- Standards: SDLC 5.1.3 compliance required
 - Coverage Target: 80%+ test coverage
 - Performance: <50ms API response, <100ms p95
 
+## Sprint Planning Governance (Pillar 2)
+- PRs MUST reference SPRINT-XXX
+- Backlog items MUST be linked (US-XXX, BUG-XXX, TT-XXX)
+- Work MUST align with documented Sprint Goal
+- DoD checklist MUST be verified before merge
+
 ## Code Review Criteria
+
+### Sprint Context Check (NEW in 5.1.3)
+- Sprint reference present and valid
+- Backlog item linked and traceable
+- Sprint goal alignment documented
 
 ### Design Thinking Alignment (Stage 00-01)
 - User impact clearly documented

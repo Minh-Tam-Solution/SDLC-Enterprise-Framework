@@ -4,17 +4,17 @@ logger = logging.getLogger(__name__)
 
 """
 =========================================================================
-SDLC 5.1.1 Universal Framework Scanner
+SDLC 5.1.3 Universal Framework Scanner
 Lightweight wrapper for backward compatibility with enhanced validation
 
-Version: 5.1.1
-Date: December 12, 2025
+Version: 5.1.3
+Date: January 2025
 Status: ACTIVE - PRODUCTION READY
 Authority: CPO Office + CTO Implementation
-Framework: SDLC 5.1.1 Complete Lifecycle (10 Stages: 00-09) + SASE/SE 3.0 Integration
+Framework: SDLC 5.1.3 Complete Lifecycle (10 Stages: 00-09) + 7-Pillar Architecture + SASE/SE 3.0
 Foundation: Battle-tested across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
 
-10 STAGES (SDLC 5.1.1):
+10 STAGES (SDLC 5.1.3):
 - Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
 - Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
 - Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
@@ -73,7 +73,7 @@ from datetime import datetime
 
 def run_universal_validator(project_path: str, project_scale: Optional[str] = None) -> Dict[str, Any]:
     """
-    Run SDLC 5.1.1 Universal Validator and return results in legacy format
+    Run SDLC 5.1.3 Universal Validator and return results in legacy format
 
     Args:
         project_path: Path to project directory
@@ -149,7 +149,7 @@ def run_universal_validator(project_path: str, project_scale: Optional[str] = No
         
     except Exception as e:
         return {
-            "error": f"Failed to run SDLC 5.1.1 Universal Validator: {str(e)}",
+            "error": f"Failed to run SDLC 5.1.3 Universal Validator: {str(e)}",
             "scan_result": None
         }
 
@@ -158,7 +158,7 @@ def main():
 
     # Parse command line arguments
     if len(sys.argv) < 2:
-        logger.info("SDLC 5.1.1 Universal Scanner - SASE Framework + Code Review Excellence")
+        logger.info("SDLC 5.1.3 Universal Scanner - SASE Framework + Code Review Excellence")
         logger.info("======================================================================")
         logger.info()
         logger.info("Usage: python sdlc_scanner.py <project_path> [project_scale]")
@@ -194,7 +194,7 @@ def main():
         logger.info(f"Error: Project path '{project_path}' does not exist")
         sys.exit(1)
     
-    logger.info("SDLC 5.1.1 Universal Scanner")
+    logger.info("SDLC 5.1.3 Universal Scanner")
     logger.info("============================")
     logger.info(f"Scanning project: {project_path}")
     if project_scale:

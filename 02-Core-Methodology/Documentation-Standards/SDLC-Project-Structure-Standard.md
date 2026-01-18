@@ -1,10 +1,11 @@
 # SDLC Project Structure Standard
 
-**Version**: 1.0.0
-**SDLC Framework Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**SDLC Framework Version**: 5.1.3
+**Date**: January 18, 2026
 **Status**: ACTIVE
 **Authority**: CTO Approved
+**Pillar**: 1 (10-Stage Lifecycle) + Pillar 6 (Documentation Permanence)
 
 ---
 
@@ -348,16 +349,94 @@ sdlcctl migrate --from 4.x --to 5.1.2
 
 ---
 
-## 9. Related Documents
+## 9. Sprint Documentation Structure (Pillar 2 Integration)
 
-- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 10-stage lifecycle definition
+### 9.1 Sprint Folder Standard Location
+
+```
+docs/
+├── 04-build/
+│   └── sprints/              # Standard location for sprint docs
+│       ├── README.md         # Sprint overview & index
+│       ├── SPRINT-001-*.md   # Sprint 1 documents
+│       ├── SPRINT-002-*.md   # Sprint 2 documents
+│       └── templates/        # Sprint templates
+│           ├── SPRINT-PLAN-TEMPLATE.md
+│           └── SPRINT-RETROSPECTIVE-TEMPLATE.md
+```
+
+### 9.2 Sprint Document Naming Convention
+
+| Document Type | Pattern | Example |
+|--------------|---------|---------|
+| Sprint Plan | `SPRINT-{XXX}-{PHASE}-{TITLE}.md` | `SPRINT-001-PHASE2-USER-AUTH.md` |
+| Sprint Retrospective | `SPRINT-{XXX}-RETRO.md` | `SPRINT-001-RETRO.md` |
+| Sprint Review | `SPRINT-{XXX}-REVIEW.md` | `SPRINT-001-REVIEW.md` |
+| Sprint Scope Change | `SPRINT-{XXX}-SCOPE-CHANGE-{YY}.md` | `SPRINT-001-SCOPE-CHANGE-01.md` |
+
+### 9.3 Required Sprint Documentation by Tier
+
+| Document | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
+|----------|------|----------|--------------|------------|
+| Sprint Plan | Required | Required | Required | Required |
+| Scope Definition | Optional | Required | Required | Required |
+| Daily Progress | Optional | Optional | Required | Required |
+| Sprint Retrospective | Optional | Required | Required | Required |
+| Scope Change Records | Optional | Optional | Required | Required |
+| Sprint Metrics | Optional | Optional | Required | Required |
+
+### 9.4 Sprint Plan Validation
+
+Sprint plans MUST contain (validated by `sdlcctl`):
+
+```markdown
+## Required Sections
+- [ ] Sprint Goal (clear, measurable)
+- [ ] Scope Definition (explicit boundaries)
+- [ ] Story List with Story Points
+- [ ] Acceptance Criteria per story
+- [ ] Dependencies declared
+- [ ] Risk Assessment (PROFESSIONAL+)
+- [ ] Phase alignment (which phase of Roadmap)
+```
+
+### 9.5 Sprint Governance Integration
+
+Per **Pillar 2: Sprint Planning Governance**:
+
+| Stage | Sprint Documentation Requirement |
+|-------|----------------------------------|
+| 00-FOUNDATION | Project Roadmap with Phase definitions |
+| 01-PLANNING | Sprint Plan template customization |
+| 02-DESIGN | Sprint scope aligned with design decisions |
+| 04-BUILD | Sprint Plan, Daily Progress, Retrospective |
+| 09-GOVERN | Sprint Governance compliance records |
+
+**Cross-Reference**: 
+- [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+- [When-Planning-Sprint.md](./Situation-Specific-Guides/When-Planning-Sprint.md)
+
+---
+
+## 10. Related Documents
+
+- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 7-Pillar Architecture definition
 - [SDLC-Document-Naming-Standards.md](./SDLC-Document-Naming-Standards.md) - File naming rules
 - [SDLC-Code-File-Naming-Standards.md](./SDLC-Code-File-Naming-Standards.md) - Code file naming rules
+- [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Pillar 2 governance
 - [AI-ONBOARDING-TEMPLATE.md](../../03-Templates-Tools/5-Project-Templates/AI-ONBOARDING-TEMPLATE.md) - CLAUDE.md template
 
 ---
 
-## 10. Changelog
+## 11. Changelog
+
+### v5.1.3 (January 2025)
+- Added Section 9: Sprint Documentation Structure (Pillar 2 Integration)
+- Added Sprint folder standard location under `docs/04-build/sprints/`
+- Added Sprint document naming conventions
+- Added Sprint documentation requirements by tier
+- Updated related documents with Sprint Governance references
+- Aligned with 7-Pillar Architecture
 
 ### v1.0.0 (December 24, 2025)
 - Initial release for SDLC 5.1.2

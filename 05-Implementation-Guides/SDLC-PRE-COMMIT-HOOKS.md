@@ -1,10 +1,11 @@
-# SDLC 5.1.2 Pre-Commit Hooks - Battle-Tested Protection
-**Version**: 5.1.2
-**Date**: December 24, 2025
+# SDLC 5.1.3 Pre-Commit Hooks - Battle-Tested Protection
+**Version**: 5.1.3
+**Date**: January 2025
 **Status**: ACTIVE - INTEGRATED WITH UNIVERSAL CODE REVIEW FRAMEWORK
 **Foundation**: Lessons from 679 mock crisis and 3 platforms
 **Integration**: Works with all 3 Code Review Tiers (Free/Subscription/CodeRabbit)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
+**SDLC Pillar**: Pillar 4 (Quality Gates) + Pillar 2 (Sprint Planning Governance)
 **SDLC Tier**: ALL TIERS (Mandatory)
 
 ---
@@ -14,20 +15,30 @@
 **Pre-commit hooks are LAYER 1** of the Universal Code Review Framework:
 
 ```yaml
-Code Review Architecture:
+Code Review Architecture (5.1.3 - Updated):
+  Layer 0: Sprint Context Check (NEW in 5.1.3)
+    → Verify commit message references SPRINT-XXX
+    → Validate backlog item linkage
+    → Ensure G-Sprint approval
+
   Layer 1: Pre-Commit Hooks (THIS DOCUMENT)
     → All Tiers require this foundation
     → Prevents issues BEFORE commit
     → Zero Mock Policy enforcement
     → Performance validation
-    → SDLC 5.1.2 compliance
+    → SDLC 5.1.3 compliance
 
   Layer 2: Code Review (Choose Your Tier)
     → Tier 1: Manual peer review + checklist
     → Tier 2: AI-powered review (Cursor/Claude)
     → Tier 3: CodeRabbit automated review
 
-  Layer 3: CI/CD Pipeline
+  Layer 3: DoD Verification (NEW in 5.1.3)
+    → Definition of Done checklist
+    → Sprint Review readiness
+    → Documentation updates
+
+  Layer 4: CI/CD Pipeline
     → Automated tests
     → Security scans
     → Deployment gates
@@ -38,6 +49,39 @@ Code Review Architecture:
 - [Manual Code Review Playbook](SDLC-Manual-Code-Review-Playbook.md) - Tier 1 guide
 - [Subscription Code Review Guide](SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 guide
 - [CodeRabbit Integration Guide](SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 guide
+
+---
+
+## 🆕 Sprint Planning Governance Hook (NEW in 5.1.3)
+
+### Priority 0: Sprint Context Validation
+```bash
+# Ensure commits reference Sprint context
+Hook: sprint-context-check
+Purpose: Validate Sprint Planning Governance compliance
+Blocks: Commits without SPRINT-XXX reference
+Learning: BFlow Sprint 86 direction confusion case study
+```
+
+**Add to .pre-commit-config.yaml**:
+```yaml
+- id: sprint-context-check
+  name: Sprint Context Validation
+  entry: |
+    #!/bin/bash
+    COMMIT_MSG=$(git log -1 --pretty=%B)
+    if ! echo "$COMMIT_MSG" | grep -qE "SPRINT-[0-9]+"; then
+      echo "❌ Sprint Planning Governance Violation!"
+      echo "   Commit message MUST reference SPRINT-XXX"
+      echo "   Example: [SPRINT-086] Add user authentication"
+      exit 1
+    fi
+    echo "✅ Sprint context validated"
+  language: system
+  always_run: true
+  pass_filenames: false
+  stages: [commit-msg]
+```
 
 ---
 

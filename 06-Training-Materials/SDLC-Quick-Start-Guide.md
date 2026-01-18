@@ -1,15 +1,16 @@
-# SDLC 5.1.2 Quick Start - Build RIGHT Things RIGHT in 2 Days
+# SDLC 5.1.3 Quick Start - Build RIGHT Things RIGHT in 2 Days
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Time Required**: 2 days solo, 1 week for teams
 **Result**: 10x-50x productivity + 3x feature adoption + 14,822% ROI
 
-**What's New in 5.1.2**: Documentation vs Code Separation + Stage Mapping Clarity + SASE Integration
+**What's New in 5.1.3**: Sprint Planning Governance (Pillar 2) + 7-Pillar Architecture
 
-**SDLC 5.1.2 Features**:
+**SDLC 5.1.3 Features**:
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
-- ✅ 6 Pillars: Design Thinking + 5 core pillars
+- ✅ 7 Pillars: Design Thinking + Sprint Planning Governance + 5 core pillars
+- ✅ Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
 - ✅ 4-Tier Classification: LITE, STANDARD, PROFESSIONAL, ENTERPRISE
 - ✅ Governance & Compliance: Quality Gates, Security Gates, Observability, Change Management
 - ✅ Team Collaboration Standards: RACI, Communication Protocol, Escalation
@@ -28,8 +29,9 @@
 3. [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - 25 min
 
 **Key Takeaways**:
-- ✅ SDLC 5.1.2 = Complete 10-Stage Lifecycle (WHY → GOVERN) + Governance & Compliance
-- ✅ 6 Pillars: Pillar 0 (Design Thinking) + Pillars 1-5 (from 4.7)
+- ✅ SDLC 5.1.3 = Complete 10-Stage Lifecycle (WHY → GOVERN) + 7-Pillar Architecture
+- ✅ 7 Pillars: Design Thinking + Sprint Planning Governance + 5 core pillars
+- ✅ Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
 - ✅ 4-Tier Classification: LITE (1-2) → STANDARD (3-10) → PROFESSIONAL (10-50) → ENTERPRISE (50+)
 - ✅ 3x higher feature adoption through user validation
 - ✅ 14,822% ROI proven (BFlow 52-day journey)
@@ -55,7 +57,7 @@ pip install pre-commit
 # Install from VS Code/Cursor marketplace
 ```
 
-**Configure for SDLC 5.0.0** (30 min):
+**Configure for SDLC 5.1.3** (30 min):
 ```bash
 # Create project structure
 mkdir my-project && cd my-project
@@ -654,12 +656,12 @@ You can confidently:
 
 ---
 
-**Document Version**: 5.1.0
-**Last Updated**: December 11, 2025
+**Document Version**: 5.1.3
+**Last Updated**: January 2025
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**What's New**: Governance & Compliance + 4-Tier Classification + SASE Integration + Shortened Folder Names
+**What's New**: 7-Pillar Architecture + Sprint Planning Governance (Pillar 2) + SASE Integration
 
 ---
 
-**🏆 SDLC 5.1.0 Quick Start**
-*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with Complete Lifecycle + Governance + SASE*
+**🏆 SDLC 5.1.3 Quick Start**
+*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with 7-Pillar Architecture + Sprint Governance*

@@ -7,9 +7,10 @@
 **Author:** SE4H (Software Engineering for Humans - Agent Coach)
 **Consumer:** SE4A (Software Engineering for Agents - Agent Executor)
 
-**Version:** 1.0.0
-**Framework:** SDLC 5.1.1
+**Version:** 1.1.0
+**Framework:** SDLC 5.1.3 (7-Pillar Architecture)
 **Created:** December 2025
+**Updated:** January 2025
 
 ---
 
@@ -25,6 +26,14 @@
 | **Created Date** | YYYY-MM-DD |
 | **Last Updated** | YYYY-MM-DD |
 | **Owner** | [Tech Lead / Architect Name] |
+
+### Sprint Planning Governance (NEW in 5.1.3)
+
+| Governance | Value |
+|------------|-------|
+| **Applicable Sprints** | SPRINT-XXX to SPRINT-YYY |
+| **Sprint Goals Supported** | [List relevant sprint goals] |
+| **DoD Integration** | Defines DoD criteria for code quality |
 
 ---
 

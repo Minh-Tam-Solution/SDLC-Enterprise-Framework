@@ -1,11 +1,12 @@
 # SDLC Code File Naming Standards - Universal Framework
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 18, 2026
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
 **Component**: Document Governance Framework (DGF)
 **Stage**: 08 - COLLABORATE (Documentation Standards)
+**Pillar**: 6 - Documentation Permanence
 
 ---
 

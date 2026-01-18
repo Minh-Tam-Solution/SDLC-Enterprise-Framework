@@ -1,29 +1,130 @@
-# SDLC 5.1.2 Core Methodology
+# SDLC 5.1.3 Core Methodology
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
-**Status**: ACTIVE
-**Authority**: Chairman + CEO + CPO + CTO Approved
+**Version**: 5.1.3  
+**Date**: January 18, 2026  
+**Status**: ACTIVE  
+**Authority**: Chairman + CEO + CPO + CTO Approved  
 
 ---
 
 ## Executive Summary
 
-SDLC 5.1.2 is a **10-Stage AI+Human Excellence Framework** integrating:
-- **10 Lifecycle Stages** (00-09): Foundation → Govern
-- **4-Tier Classification**: LITE → ENTERPRISE (team size-based)
-- **SASE Integration** (SE 3.0): Software Agentic Software Engineering
-- **Design Thinking Foundation**: 5-phase user-centered approach
+SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations.
+
+### The 7 Pillars
+
+```
+╔════════════════════════════════════════════════════════════════════════════╗
+║                      SDLC 5.1.3 - 7 PILLARS                                ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 0: DESIGN THINKING FOUNDATION                                 │  ║
+║  │ "Build the RIGHT thing" - User-centered approach throughout          │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 1: 10-STAGE LIFECYCLE                                         │  ║
+║  │ Foundation → Plan → Design → Integrate → Build → Test → Deploy →    │  ║
+║  │ Operate → Collaborate → Govern                                       │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 2: SPRINT PLANNING GOVERNANCE ⭐ NEW IN 5.1.3                 │  ║
+║  │ Planning Hierarchy + G-Sprint Gates + 10 Golden Rules                │  ║
+║  │ "Sprint governance is NOT optional - it's the execution backbone"    │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 3: 4-TIER CLASSIFICATION                                      │  ║
+║  │ LITE (1-2) → STANDARD (3-10) → PROFESSIONAL (10-50) → ENTERPRISE    │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 4: QUALITY GATES                                              │  ║
+║  │ Feature Gates (G0-G4) + Sprint Gates (G-Sprint, G-Sprint-Close)      │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 5: SASE INTEGRATION (SE 3.0)                                  │  ║
+║  │ AI+Human Excellence - SE4H + SE4A dual-modality                      │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ PILLAR 6: DOCUMENTATION PERMANENCE                                   │  ║
+║  │ AI-parseable, version-free naming, 10-stage /docs structure          │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+```
+
+### Why 7 Pillars?
+
+| Pillar | Purpose | Without It |
+|--------|---------|------------|
+| Design Thinking | Build the RIGHT thing | 70% features unused |
+| 10-Stage Lifecycle | Complete coverage | Gaps cause failures |
+| **Sprint Governance** | **Execution backbone** | **Direction confusion, doc lag** |
+| 4-Tier Classification | Right-size processes | Over/under engineering |
+| Quality Gates | Prevent bad code shipping | Production incidents |
+| SASE Integration | AI+Human productivity | 10x vs 50x potential |
+| Documentation | Knowledge preservation | Context loss |
 
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
 
 ---
 
-## The 10-Stage Lifecycle
+## Pillar 0: Design Thinking Foundation
+
+> **"Build the RIGHT thing, then build the thing RIGHT"**
+
+### The 5 Phases
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    DESIGN THINKING 5 PHASES                         │
+├─────────────────────────────────────────────────────────────────────┤
+│  1. EMPATHIZE   │ Understand users through observation & interviews │
+│  2. DEFINE      │ Frame the core problem to solve                   │
+│  3. IDEATE      │ Generate 100+ solutions, select top 3             │
+│  4. PROTOTYPE   │ Build minimum testable versions                   │
+│  5. TEST        │ Validate with real users, iterate                 │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Design Thinking × SDLC Stage Mapping
+
+| Phase | SDLC Stage | Primary Output |
+|-------|------------|----------------|
+| EMPATHIZE | Stage 00 | User Interview Summaries, Personas |
+| DEFINE | Stage 00 | Problem Statement, Pain Points |
+| IDEATE | Stage 01-02 | Solution Concepts, Architecture Options |
+| PROTOTYPE | Stage 04 | MVP, Working Features |
+| TEST | Stage 05 | User Feedback, Iteration Plan |
+
+### Quality Gates (Design Thinking)
+
+**G0.1: Problem Definition**
+- 5+ user interviews conducted
+- Pain point ranked (severity 1-10)
+- Problem statement validated by stakeholders
+
+**G0.2: Solution Diversity**
+- 100+ ideas generated (brainstorm)
+- Top 3 concepts selected with rationale
+- Validation plan defined
+
+**Reference**: [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md)
+
+---
+
+## Pillar 1: 10-Stage Lifecycle
+
+### Overview
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.1.2 - 10 STAGES                              │
+│                    SDLC 5.1.3 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -38,62 +139,207 @@ SDLC 5.1.2 is a **10-Stage AI+Human Excellence Framework** integrating:
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Stage → Folder Mapping (Documentation Only)
+### Stage Summary
 
-**IMPORTANT (SDLC 5.1.2)**: Stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units that exist independently of lifecycle stages.
+| Stage | Name | Core Question | Primary Deliverable |
+|-------|------|---------------|---------------------|
+| 00 | FOUNDATION | WHY are we building this? | Business Case, Problem Statement |
+| 01 | PLANNING | WHAT are we building? | Requirements, User Stories, API Specs |
+| 02 | DESIGN | HOW will we build it? | Architecture, ADRs, Security Design |
+| 03 | INTEGRATE | How does it connect? | API Contracts, Integration Tests |
+| 04 | BUILD | Are we building it right? | Working Code, Unit Tests |
+| 05 | TEST | Does it work correctly? | Test Reports, UAT Sign-off |
+| 06 | DEPLOY | How do we ship safely? | Release Notes, Rollback Procedures |
+| 07 | OPERATE | Is it running reliably? | Runbooks, Monitoring Dashboards |
+| 08 | COLLABORATE | Is the team effective? | Team Charter, Training Materials |
+| 09 | GOVERN | Are we compliant? | Compliance Reports, Audit Docs |
 
-| Stage | Name | Folder | Core Question |
-|-------|------|--------|---------------|
-| 00 | FOUNDATION | `docs/00-foundation/` | WHY are we building this? |
-| 01 | PLANNING | `docs/01-planning/` | WHAT are we building? |
-| 02 | DESIGN | `docs/02-design/` | HOW will we build it? |
-| 03 | INTEGRATE | `docs/03-integrate/` | How does it connect? |
-| 04 | BUILD | `docs/04-build/` | Are we building it right? |
-| 05 | TEST | `docs/05-test/` | Does it work correctly? |
-| 06 | DEPLOY | `docs/06-deploy/` | How do we ship safely? |
-| 07 | OPERATE | `docs/07-operate/` | Is it running reliably? |
-| 08 | COLLABORATE | `docs/08-collaborate/` | Is the team effective? |
-| 09 | GOVERN | `docs/09-govern/` | Are we compliant & accountable? |
-| - | ARCHIVE | `docs/10-archive/` | Project-level archive (NOT a stage) |
+### Stage → Folder Mapping
 
----
+| Stage | Folder | Notes |
+|-------|--------|-------|
+| 00 | `docs/00-foundation/` | Strategic documents |
+| 01 | `docs/01-planning/` | Requirements, stories |
+| 02 | `docs/02-design/` | Architecture, ADRs |
+| 03 | `docs/03-integrate/` | API contracts |
+| 04 | `docs/04-build/` | **Sprint plans, build logs** |
+| 05 | `docs/05-test/` | Test plans, reports |
+| 06 | `docs/06-deploy/` | Deployment guides |
+| 07 | `docs/07-operate/` | Runbooks, SRE docs |
+| 08 | `docs/08-collaborate/` | Team docs, training |
+| 09 | `docs/09-govern/` | Compliance, executive reports |
+| - | `docs/10-archive/` | Project-level archive (NOT a stage) |
 
-## Documentation vs Code Separation (5.1.2)
-
-### Core Principle
-
-SDLC 5.1.2 clearly separates:
-
-| Concept | Location | Stage Mapping | Validation |
-|---------|----------|---------------|------------|
-| **Documentation** | `/docs/*` | YES (stages 00-09) | Stage compliance |
-| **Code Organization** | `backend/`, `frontend/`, etc. | NO | Presence validation |
-| **Configuration** | Root files (README.md, etc.) | NO | Presence validation |
-
-### Why Code Folders Are NOT Stage-Mapped
-
-Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units, not lifecycle stages:
-
-1. **Code development happens across ALL stages** - A bug fix in Stage 07 (OPERATE) still modifies code in `backend/`
-2. **Technology-agnostic** - Whether you use Python, Go, or Node.js, the folder names don't change
-3. **Parallel work** - While Stage 04 (BUILD) is primary for coding, developers work on code during Stage 05 (TEST) fixes, Stage 06 (DEPLOY) patches, etc.
-
-### Project Structure Standard
-
-See [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) for complete specification.
+**Important**: Stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`) are organizational units independent of stages.
 
 ---
 
-## 4-Tier Classification System
+## Pillar 2: Sprint Planning Governance ⭐ NEW IN 5.1.3
 
-| Tier | Team Size | Required Stages | Documentation Level |
-|------|-----------|-----------------|---------------------|
-| **LITE** | 1-2 | 00, 01, 02, 04 | README + .env.example |
-| **STANDARD** | 3-10 | 00-02, 04-06 | + CLAUDE.md + /docs |
-| **PROFESSIONAL** | 10-50 | All 10 stages | + Full ADRs + Compliance |
-| **ENTERPRISE** | 50+ | All 10 stages | + Executive Reports + Audit |
+> **"Sprint governance is NOT optional - it's the execution backbone of every project"**
 
-### Folder Structure by Tier
+### Why Sprint Governance is a Core Pillar
+
+**The Incident That Changed Everything** (BFlow Sprint 86, January 18, 2026):
+- 27-day documentation lag
+- 4+ documents with inconsistent sprint references
+- Sprint started without formal approval
+- Team direction confusion requiring CTO intervention
+
+**Root Cause**: SDLC had excellent stage templates but NO sprint governance.
+
+**The Truth**: Every stage (00-09) is executed through SPRINTS. Without sprint governance, even perfect stage documentation doesn't prevent execution chaos.
+
+### Planning Hierarchy
+
+```
+╔════════════════════════════════════════════════════════════════════════╗
+║                    PLANNING HIERARCHY (4 LEVELS)                       ║
+╠════════════════════════════════════════════════════════════════════════╣
+║                                                                        ║
+║  Level 1: ROADMAP (12 months)                                         ║
+║  └─ Strategic goals, quarterly milestones, OKRs                       ║
+║       │                                                                ║
+║       ▼                                                                ║
+║  Level 2: PHASE (4-8 weeks)                                           ║
+║  └─ Phase objectives, feature groupings, release goals                ║
+║       │                                                                ║
+║       ▼                                                                ║
+║  Level 3: SPRINT (5-10 days)                                          ║
+║  └─ Sprint goal, committed work, G-Sprint approval                    ║
+║       │                                                                ║
+║       ▼                                                                ║
+║  Level 4: BACKLOG (Tasks)                                             ║
+║  └─ User stories, tasks, bugs with assignments                        ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+```
+
+### The 10 Golden Rules
+
+```
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    10 GOLDEN RULES OF SPRINT GOVERNANCE                   ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║   1. Sprint Numbers Are Immutable                                         ║
+║      Once assigned, a sprint number cannot be changed or reused.          ║
+║      CANCELLED sprints retain their number.                               ║
+║                                                                           ║
+║   2. Every Sprint Has One Clear Goal                                      ║
+║      Single sentence describing the sprint's primary outcome.             ║
+║      Not a list of features - a coherent objective.                       ║
+║                                                                           ║
+║   3. Documentation Within 24 Business Hours                               ║
+║      All sprint docs updated within 24h of completion.                    ║
+║      Business hours only (weekends/holidays excluded).                    ║
+║                                                                           ║
+║   4. G-Sprint Gate Before Execution                                       ║
+║      No sprint starts without formal planning gate approval.              ║
+║      Prevents "ready, fire, aim" development.                             ║
+║                                                                           ║
+║   5. G-Sprint-Close Gate Before Next Sprint                               ║
+║      Current sprint must pass close gate before next sprint starts.       ║
+║      Ensures continuity and accountability.                               ║
+║                                                                           ║
+║   6. Traceability is Mandatory                                            ║
+║      Every sprint links to Phase → Roadmap → Strategic Goal.              ║
+║      "Why are we doing this sprint?" always answerable.                   ║
+║                                                                           ║
+║   7. Sprint Goal Must Align with Phase Objective                          ║
+║      Verify alignment during G-Sprint gate evaluation.                    ║
+║      Misaligned sprints fail the gate.                                    ║
+║                                                                           ║
+║   8. Strategic Priorities Must Be Explicit                                ║
+║      P0/P1/P2 labels required for all work items.                         ║
+║      No "options" for P0 items - they are mandates.                       ║
+║                                                                           ║
+║   9. Failed Gate Blocks Progress                                          ║
+║      Cannot proceed to next phase without gate pass or exception.         ║
+║      Exceptions require CTO approval with documented rationale.           ║
+║                                                                           ║
+║  10. Weekly Roadmap Review is Required                                    ║
+║      Minimum bi-weekly for STANDARD tier, weekly for PROFESSIONAL+.       ║
+║      Prevents roadmap drift and strategic misalignment.                   ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+```
+
+### Sprint Governance Gates
+
+**G-Sprint (Sprint Planning Gate)**
+
+| Category | Checklist Item | Required |
+|----------|---------------|----------|
+| Alignment | Sprint goal aligns with Phase objective | ✅ |
+| Alignment | Sprint goal aligns with Roadmap goal | ✅ |
+| Alignment | Priorities explicit (P0/P1/P2 labeled) | ✅ |
+| Capacity | Team capacity calculated | ✅ |
+| Capacity | Story points within velocity (+10% max) | ✅ |
+| Dependencies | External dependencies identified | ✅ |
+| Risk | Top 3 risks identified | ✅ |
+| Documentation | SPRINT-XX.md created | ✅ |
+
+**G-Sprint-Close (Sprint Completion Gate)**
+
+| Category | Checklist Item | Required |
+|----------|---------------|----------|
+| Work | All items accounted for (done/carryover) | ✅ |
+| Work | Carryover documented with reason | ✅ |
+| Quality | Definition of Done met | ✅ |
+| Retrospective | Sprint retro completed | ✅ |
+| Metrics | Velocity calculated | ✅ |
+| Documentation | CURRENT-SPRINT.md updated | ✅ |
+| Documentation | Documentation within 24 business hours | ✅ |
+
+### Sprint Governance by Tier
+
+| Tier | G-Sprint Approval | G-Sprint-Close | Weekly Review | Documentation |
+|------|-------------------|----------------|---------------|---------------|
+| LITE | Self (optional) | Self (optional) | Monthly | SPRINT-XX.md only |
+| STANDARD | Tech Lead | Tech Lead | Bi-weekly | + CURRENT-SPRINT.md |
+| PROFESSIONAL | Tech Lead + PO | Tech Lead | Weekly | + SPRINT-INDEX.md |
+| ENTERPRISE | Steering Committee | Tech Lead + PO | Weekly + Monthly | Full audit trail |
+
+### Sprint Governance × 10-Stage Integration
+
+Sprint governance operates ACROSS all stages:
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                SPRINT GOVERNANCE ACROSS STAGES                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  Stage 00 FOUNDATION ─┐                                                │
+│  Stage 01 PLANNING ───┤                                                │
+│  Stage 02 DESIGN ─────┤                                                │
+│  Stage 03 INTEGRATE ──┼──→ All executed through SPRINTS with:         │
+│  Stage 04 BUILD ──────┤    • G-Sprint gate before start               │
+│  Stage 05 TEST ───────┤    • Traceability to Phase/Roadmap            │
+│  Stage 06 DEPLOY ─────┤    • G-Sprint-Close after completion          │
+│  Stage 07 OPERATE ────┤    • 24h documentation requirement            │
+│  Stage 08 COLLABORATE ┤                                                │
+│  Stage 09 GOVERN ─────┘                                                │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+**Reference**: [SDLC-Sprint-Planning-Governance.md](./Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+
+---
+
+## Pillar 3: 4-Tier Classification
+
+### Overview
+
+| Tier | Team Size | Required Stages | Sprint Governance |
+|------|-----------|-----------------|-------------------|
+| **LITE** | 1-2 | 00, 01, 02, 04 | Optional (recommended) |
+| **STANDARD** | 3-10 | 00-02, 04-06 | Required (Tech Lead) |
+| **PROFESSIONAL** | 10-50 | All 10 stages | Required (formal gates) |
+| **ENTERPRISE** | 50+ | All 10 stages | Mandatory + Audit |
+
+### Documentation Level by Tier
 
 **LITE (1-2 members)**:
 ```
@@ -102,6 +348,8 @@ docs/
 ├── 01-planning/
 ├── 02-design/
 └── 04-build/
+    └── 02-Sprint-Plans/   ← Sprint governance docs
+        └── SPRINT-XX.md
 ```
 
 **STANDARD (3-10 members)**:
@@ -111,6 +359,9 @@ docs/
 ├── 01-planning/
 ├── 02-design/
 ├── 04-build/
+│   └── 02-Sprint-Plans/
+│       ├── CURRENT-SPRINT.md    ← Required
+│       └── SPRINT-XX.md
 ├── 05-test/
 └── 06-deploy/
 ```
@@ -119,63 +370,130 @@ docs/
 ```
 docs/
 ├── 00-foundation/
-│   └── 99-legacy/     # Stage-level legacy
 ├── 01-planning/
-│   └── 99-legacy/
+│   └── ROADMAP.md               ← Required
 ├── 02-design/
-│   └── 99-legacy/
 ├── 03-integrate/
-│   └── 99-legacy/
 ├── 04-build/
-│   └── 99-legacy/
+│   ├── 01-ADRs/
+│   └── 02-Sprint-Plans/
+│       ├── CURRENT-SPRINT.md
+│       ├── SPRINT-INDEX.md      ← Required
+│       └── SPRINT-XX.md
 ├── 05-test/
-│   └── 99-legacy/
 ├── 06-deploy/
-│   └── 99-legacy/
 ├── 07-operate/
-│   └── 99-legacy/
 ├── 08-collaborate/
-│   └── 99-legacy/
 ├── 09-govern/
-│   └── 99-legacy/
-└── 10-archive/        # Project-level archive (NOT a stage)
-
-backend/
-└── 99-legacy/         # Legacy in backend
-
-frontend/
-└── 99-legacy/         # Legacy in frontend
-
-tools/
-└── 99-legacy/         # Legacy in tools
+│   └── ROADMAP-CHANGE-LOG.md    ← Required
+└── 10-archive/
 ```
 
-**Legacy/Archive Rules**:
-- **10-archive**: ONLY at docs root (not a stage, holds unsorted legacy docs)
-- **99-legacy**: within EACH stage (00-09) AND in backend, frontend, tools
-- Content in legacy/archive folders is never validated or upgraded
+### Sprint Planning Governance by Tier
+
+| Requirement | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
+|-------------|------|----------|--------------|------------|
+| Planning Hierarchy | Optional | Recommended | Required | Required |
+| G-Sprint Gate | Self | Tech Lead | Tech Lead + PO | Steering Committee |
+| G-Sprint-Close | Self | Tech Lead | Tech Lead | Tech Lead + PO |
+| 24h Documentation | Best effort | Required | Enforced | Enforced + Audit |
+| Weekly Review | Monthly | Bi-weekly | Weekly | Weekly + Monthly |
+| SSOT Validation | None | CI warning | CI blocking | CI blocking + Alert |
+| Roadmap Change | Informal | PO approval | Steering Committee | Change Advisory Board |
 
 ---
 
-## SASE Integration (SE 3.0)
+## Pillar 4: Quality Gates
 
-### SE4H vs SE4A Distinction
+### Dual-Track Gate System
+
+SDLC 5.1.3 has TWO parallel gate tracks:
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    DUAL-TRACK QUALITY GATES                             │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  TRACK 1: FEATURE GATES (G0-G4)                                        │
+│  └─ Control feature development lifecycle                              │
+│     G0.1 → G0.2 → G1 → G2 → G3 → G4                                   │
+│                                                                         │
+│  TRACK 2: SPRINT GATES (G-Sprint, G-Sprint-Close)                      │
+│  └─ Control sprint execution rhythm                                    │
+│     G-Sprint → [Sprint Work] → G-Sprint-Close                          │
+│                                                                         │
+│  RELATIONSHIP: Feature work is EXECUTED through Sprints               │
+│  └─ A feature may span multiple sprints                               │
+│  └─ A sprint may contain work from multiple features                  │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Track 1: Feature Gates (G0-G4)
+
+| Gate | Stage | Purpose | Key Criteria |
+|------|-------|---------|--------------|
+| G0.1 | 00 | Problem Validated | 5+ user interviews, pain points ranked |
+| G0.2 | 00 | Solution Validated | 100+ ideas, top 3 selected |
+| G1 | 01 | Requirements Complete | All stories have acceptance criteria |
+| G2 | 02 | Design Approved | Architecture reviewed, ADRs approved |
+| G3 | 04-05 | Ship Ready | Tests passing, code reviewed, UAT signed |
+| G4 | 06-07 | Production Stable | SLA met, monitoring in place |
+
+### Track 2: Sprint Gates (G-Sprint, G-Sprint-Close)
+
+| Gate | Timing | Purpose | Key Criteria |
+|------|--------|---------|--------------|
+| G-Sprint | Pre-Sprint | Plan Approved | Goal aligned, capacity validated |
+| G-Sprint-Close | Post-Sprint | Sprint Complete | Work accounted, docs updated within 24h |
+
+### Gate Integration Example
+
+```
+Feature: User Authentication (G0 → G4)
+│
+├── Sprint N: Foundation (G-Sprint → G-Sprint-Close)
+│   └── Completes G0.1, G0.2
+│
+├── Sprint N+1: Requirements (G-Sprint → G-Sprint-Close)
+│   └── Completes G1
+│
+├── Sprint N+2: Design (G-Sprint → G-Sprint-Close)
+│   └── Completes G2
+│
+├── Sprint N+3, N+4: Build (G-Sprint → G-Sprint-Close × 2)
+│   └── Partial G3
+│
+├── Sprint N+5: Test (G-Sprint → G-Sprint-Close)
+│   └── Completes G3
+│
+└── Sprint N+6: Deploy (G-Sprint → G-Sprint-Close)
+    └── Completes G4
+```
+
+**Reference**: [SDLC-Quality-Gates.md](./Governance-Compliance/SDLC-Quality-Gates.md)
+
+---
+
+## Pillar 5: SASE Integration (SE 3.0)
+
+### SE4H vs SE4A Dual-Modality
 
 | Aspect | SE4H (Agent Coach) | SE4A (Agent Executor) |
 |--------|-------------------|----------------------|
 | **Role** | Guide & supervise AI agents | Implement human-specified intent |
-| **Primary Skills** | Intent specification, quality validation | Code generation, pattern consistency |
+| **Primary Skills** | Intent specification, validation | Code generation, consistency |
 | **Artifacts Created** | BRS, MTS, VCR | LPS, CRP, MRP |
 | **Decision Authority** | FINAL (veto power) | NONE (propose only) |
 
 ### Agentic Maturity Levels
 
-| Level | Name | Characteristic | Artifacts |
-|-------|------|----------------|-----------|
-| **L0** | Tool-Assisted | AI as autocomplete | None |
-| **L1** | Agent-Assisted | Structured handoff | BRS, MRP, VCR |
-| **L2** | Structured Agentic | Full SASE workflow | All 6 + ACE/AEE |
-| **L3** | Lifecycle Agentic | Proactive agents | Full + Memory |
+| Level | Name | Characteristic | Sprint Governance |
+|-------|------|----------------|-------------------|
+| **L0** | Tool-Assisted | AI as autocomplete | Manual sprint tracking |
+| **L1** | Agent-Assisted | Structured handoff | Agent assists sprint docs |
+| **L2** | Structured Agentic | Full SASE workflow | Agent generates sprint reports |
+| **L3** | Lifecycle Agentic | Proactive agents | Agent monitors gate compliance |
 
 ### 7 Agentic Principles
 
@@ -195,321 +513,99 @@ tools/
 | 01 Planning | BriefingEng | Create BRS for features |
 | 02 Design | ALE + ATIE | Design LPS, MTS |
 | 03 Integrate | ATME + ATIE | CRP generation, API contracts |
-| 04 Build | ATLE | Build ACE/AEE |
+| 04 Build | ATLE | Build ACE/AEE, **sprint execution** |
 | 05 Test | ALE + ATME | Execute LPS, generate MRP |
 | 06 Deploy | ATME | Validation, coverage |
 | 07 Operate | ATME + AGE | Monitoring, verification |
 | 08 Collaborate | ATIE + AGE | Code review, team coordination |
-| 09 Govern | AGE | Policy, audit |
+| 09 Govern | AGE | Policy, audit, **sprint governance reports** |
 
-**See**: [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md)
-
----
-
-## Stage Details
-
-### Stage 00: FOUNDATION (WHY?)
-
-**Purpose**: Validate the problem is worth solving before any development begins.
-
-**Key Activities**:
-- Stakeholder interviews (CEO, CTO, users)
-- Design Thinking: EMPATHIZE + DEFINE phases
-- Market analysis and competitive research
-- Business case development (ROI projection)
-- Risk assessment
-
-**Quality Gate G0**: Problem validated, business case approved
-
-**Deliverables**:
-- Problem Statement
-- Business Case Document
-- User Interview Summary
-- Risk Register
+**Reference**: [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md)
 
 ---
 
-### Stage 01: PLANNING (WHAT?)
-
-**Purpose**: Define what to build with sufficient detail for estimation and design.
-
-**Key Activities**:
-- Functional Requirements (FR1-FRn)
-- Non-Functional Requirements (NFR1-NFRn)
-- User Stories (Epics → Stories → Tasks)
-- Data Model design (ERD, Schema)
-- API Specification (OpenAPI 3.0)
-
-**Quality Gate G1**: Requirements complete, stakeholders approved
-
-**Deliverables**:
-- Functional Requirements Document
-- Non-Functional Requirements
-- User Stories with Acceptance Criteria
-- Data Model ERD
-- API Specification
-
----
-
-### Stage 02: DESIGN (HOW?)
-
-**Purpose**: Design the technical architecture and system components.
-
-**Key Activities**:
-- System Architecture (4-layer design)
-- Database Schema (with migrations)
-- API Design (REST/GraphQL)
-- Security Architecture (RBAC, encryption)
-- ADRs (Architecture Decision Records)
-
-**Quality Gate G2**: Design approved by CTO/Tech Lead
-
-**Deliverables**:
-- System Architecture Document
-- Technical Design Document
-- Security Baseline
-- ADRs
-
----
-
-### Stage 03: INTEGRATE
-
-**Purpose**: Define and setup all integration points before main development.
-
-**Key Activities**:
-- API contract definition (OpenAPI, Protobuf)
-- Third-party integration setup (OAuth, payment, etc.)
-- Event-driven architecture (Kafka, queues)
-- Data integration patterns (ETL, CDC)
-- Integration testing strategy
-
-**Quality Gate**: API contracts validated, integration tests defined
-
-**Deliverables**:
-- API Contracts
-- Integration Architecture
-- Third-party Setup Guides
-- Integration Test Plan
-
----
-
-### Stage 04: BUILD
-
-**Purpose**: Implement the designed solution with quality.
-
-**Key Activities**:
-- Sprint-based development
-- Code review (PR process)
-- Unit testing (80%+ coverage)
-- CI/CD pipeline setup
-- Feature documentation
-
-**Quality Gate G3**: Feature complete, tests passing, code reviewed
-
-**Deliverables**:
-- Working code
-- Unit tests
-- Sprint logs
-- Technical documentation
-
----
-
-### Stage 05: TEST
-
-**Purpose**: Comprehensive testing before production.
-
-**Key Activities**:
-- Integration testing
-- End-to-end testing
-- Performance testing (load, stress)
-- Security testing (OWASP, penetration)
-- User Acceptance Testing (UAT)
-
-**Quality Gate**: All tests pass, UAT approved, zero P0 bugs
-
-**Deliverables**:
-- Test Reports
-- Performance Benchmarks
-- Security Audit Report
-- UAT Sign-off
-
----
-
-### Stage 06: DEPLOY
-
-**Purpose**: Safe production deployment with rollback capability.
-
-**Key Activities**:
-- Pre-deployment checklist
-- Blue-green / Canary deployment
-- Rollback procedure validation
-- War room activation
-- Graduated rollout (10% → 50% → 100%)
-
-**Quality Gate**: Successful deployment, rollback tested
-
-**Deliverables**:
-- Deployment Guide
-- Release Notes
-- Rollback Procedure
-- Post-deployment Report
-
----
-
-### Stage 07: OPERATE
-
-**Purpose**: Production excellence and reliability.
-
-**Key Activities**:
-- Monitoring & alerting (Prometheus, Grafana)
-- Incident response (P0 <15min, P1 <1h)
-- SLA management (99.9%+ uptime)
-- Maintenance (proactive, reactive)
-- Continuous improvement
-
-**Quality Gate**: SLA met, monitoring coverage >95%
-
-**Deliverables**:
-- Runbooks
-- Monitoring Dashboards
-- Incident Reports
-- SLA Reports
-
----
-
-### Stage 08: COLLABORATE
-
-**Purpose**: Effective team coordination and knowledge sharing.
-
-**Key Activities**:
-- Team structure (RACI matrix)
-- Communication protocols
-- Knowledge management
-- Training & onboarding
-- Retrospectives
-
-**Quality Gate**: Team velocity stable, satisfaction >8/10
-
-**Deliverables**:
-- Team Charter
-- Communication Protocol
-- Training Materials
-- Retrospective Reports
-
----
-
-### Stage 09: GOVERN
-
-**Purpose**: Strategic oversight, compliance, and accountability.
-
-**Key Activities**:
-- Executive reporting (weekly/monthly/quarterly)
-- Risk management
-- Compliance monitoring
-- Budget tracking
-- Audit preparation
-
-**Quality Gate**: Zero violations, budget ±10%
-
-**Deliverables**:
-- Executive Reports
-- Risk Register Updates
-- Compliance Reports
-- Audit Documentation
-
----
-
-## Design Thinking Integration
-
-### 5 Phases → SDLC Stages
-
-| Design Thinking | SDLC Stage | Output |
-|----------------|------------|--------|
-| **EMPATHIZE** | Stage 00 | User Interview Summaries |
-| **DEFINE** | Stage 00 | Problem Statement |
-| **IDEATE** | Stage 01-02 | Solution Concepts, Architecture |
-| **PROTOTYPE** | Stage 04 | MVP, Working Code |
-| **TEST** | Stage 05 | User Feedback, Iteration Plan |
-
-### Quality Gates (Design Thinking)
-
-**G0.1: Problem Definition**
-- 5+ user interviews
-- Pain point ranked (1-10)
-- Problem statement validated
-
-**G0.2: Solution Diversity**
-- 100+ ideas generated
-- Top 3 concepts selected
-- Validation plan defined
-
----
-
-## Governance & Compliance
-
-### Quality Gates Summary
-
-| Gate | Stage | Key Criteria |
-|------|-------|--------------|
-| G0.1 | 00 | Problem validated |
-| G0.2 | 00 | Solution concepts validated |
-| G1 | 01 | Requirements complete |
-| G2 | 02 | Design approved |
-| G3 | 04-05 | Ship ready |
-| G4 | 06-07 | Production stable |
-
-### DORA Metrics (PROFESSIONAL+ Tiers)
-
-- **Deployment Frequency**: How often code deploys to production
-- **Lead Time**: Commit to production time
-- **MTTR**: Mean time to recovery
-- **Change Failure Rate**: % deployments causing issues
-
-### Security Requirements by Tier
-
-| Tier | Security Level |
-|------|---------------|
-| LITE | Basic (.env protection) |
-| STANDARD | Dependency scanning |
-| PROFESSIONAL | OWASP ASVS Level 1 |
-| ENTERPRISE | OWASP ASVS Level 2+ |
+## Pillar 6: Documentation Permanence
+
+### Core Principles
+
+1. **Version-Free Naming**: `SDLC-Core-Methodology.md` (NOT `SDLC-5.1.3-Core-Methodology.md`)
+2. **Feature-Based**: `Authentication-Guide.md` (NOT `Nov-13-Auth.md`)
+3. **AI-Parseable**: Markdown, YAML, structured formats
+4. **10-Stage Structure**: Documentation organized by lifecycle stage
+
+### Sprint Documentation Standards
+
+| Document | Location | Purpose | Update Frequency |
+|----------|----------|---------|------------------|
+| ROADMAP.md | `docs/01-planning/` | 12-month strategic plan | Quarterly |
+| CURRENT-SPRINT.md | `docs/04-build/` | Active sprint pointer | Every sprint |
+| SPRINT-INDEX.md | `docs/04-build/02-Sprint-Plans/` | Sprint history | Every sprint |
+| SPRINT-XX.md | `docs/04-build/02-Sprint-Plans/` | Individual sprint plan | Per sprint |
+| ROADMAP-CHANGE-LOG.md | `docs/09-govern/` | Strategic changes | As needed |
+
+### SSOT (Single Source of Truth) Validation
+
+```yaml
+# CI/CD validation script checks:
+SSOT Checks:
+  - CURRENT-SPRINT.md matches latest SPRINT-XX.md
+  - SPRINT-INDEX.md includes all sprint files
+  - Roadmap dates align with phase dates
+  - No orphan sprint references in docs
+  
+Enforcement by Tier:
+  LITE: None
+  STANDARD: CI warning
+  PROFESSIONAL: CI blocking
+  ENTERPRISE: CI blocking + Slack alert
+```
+
+**Reference**: [SDLC-Document-Naming-Standards.md](./Documentation-Standards/SDLC-Document-Naming-Standards.md)
 
 ---
 
 ## Industry Standards Integration
 
+SDLC 5.1.3 maps to industry standards:
+
 ```yaml
 Standards Mapped:
   CMMI v3.0:      Maturity level mapping (LITE=L1-2, ENTERPRISE=L4-5)
-  SAFe 6.0:       Lean Governance for gate approval
+  SAFe 6.0:       Planning hierarchy (Portfolio → Program → Team)
   DORA Metrics:   Deployment Frequency, Lead Time, MTTR, CFR
   OWASP ASVS:     Application Security Verification (Levels 1-3)
   NIST SSDF:      Secure Software Development Framework
   ISO/IEC 12207:  Process categories mapping
   Team Topologies: Stream-aligned, Platform, Enabling teams
+  
+Sprint Governance Standards:
+  Scrum Guide:    Sprint Planning, Sprint Review, Retrospective
+  SAFe PI:        Planning Iteration concepts
+  PMBOK 7:        Project governance principles
 ```
 
 ---
 
 ## Related Documents
 
-**Core Methodology**:
-- [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md) - SASE principles
+### Core Methodology
+- [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md) - SASE/SE 3.0 principles
 - [SDLC-Agentic-Maturity-Model.md](./SDLC-Agentic-Maturity-Model.md) - L0→L3 progression
+- [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) - User-centered approach
 
-**Governance & Compliance**:
-- [SDLC-Quality-Gates.md](./Governance-Compliance/SDLC-Quality-Gates.md)
-- [SDLC-Security-Gates.md](./Governance-Compliance/SDLC-Security-Gates.md)
-- [SDLC-Observability-Checklist.md](./Governance-Compliance/SDLC-Observability-Checklist.md)
+### Governance & Compliance
+- [SDLC-Sprint-Planning-Governance.md](./Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - ⭐ **Pillar 2 detail**
+- [SDLC-Quality-Gates.md](./Governance-Compliance/SDLC-Quality-Gates.md) - Feature + Sprint gates
+- [SDLC-Security-Gates.md](./Governance-Compliance/SDLC-Security-Gates.md) - Security requirements
+- [SDLC-Change-Management-Standard.md](./Governance-Compliance/SDLC-Change-Management-Standard.md) - Change control
 
-**Documentation Standards**:
-- [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) - **NEW (5.1.2)** Project structure & stage mapping rules
-- [SDLC-Document-Naming-Standards.md](./Documentation-Standards/SDLC-Document-Naming-Standards.md)
-- [SDLC-Team-Communication-Protocol.md](./Documentation-Standards/Team-Collaboration/SDLC-Team-Communication-Protocol.md)
+### Documentation Standards
+- [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) - Folder structure
+- [SDLC-Document-Naming-Standards.md](./Documentation-Standards/SDLC-Document-Naming-Standards.md) - Naming conventions
+- [When-Planning-Sprint.md](./Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - ⭐ Sprint planning guide
 
-**Templates**:
-- [SASE Artifact Templates](../03-Templates-Tools/SASE-Artifacts/)
-- [Stage Templates](../03-Templates-Tools/2-Agent-Templates/)
+### Case Studies
+- [BFlow Sprint 86 Direction Confusion](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Incident that triggered Pillar 2
 
 ---
 
@@ -517,7 +613,8 @@ Standards Mapped:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 5.1.2 | Dec 24, 2025 | Documentation vs Code separation, Stage mapping only for /docs |
+| **5.1.3** | **Jan 18, 2026** | **7-Pillar Architecture: Sprint Planning Governance as Pillar 2** |
+| 5.1.2 | Dec 24, 2025 | Documentation vs Code separation, 6-pillar structure |
 | 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
 | 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
 | 5.0.0 | Dec 5, 2025 | 4-Tier Classification, Governance standards |
@@ -526,6 +623,7 @@ Standards Mapped:
 
 ---
 
-**Last Updated**: December 24, 2025
-**Maintained By**: Framework Team
-**Authority**: CTO Approved
+**Last Updated**: January 18, 2026  
+**Maintained By**: Framework Team  
+**Authority**: CTO Approved  
+**Case Study**: [BFlow Sprint 86](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)

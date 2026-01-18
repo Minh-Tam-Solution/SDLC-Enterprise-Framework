@@ -1,8 +1,9 @@
 # SDLC Change Management Standard
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Stage**: 02 - Core Methodology (Governance & Compliance)
+**Pillar**: 2 - Sprint Planning Governance (Change Control)
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO Office
 **Industry Standards**: ITIL 4, ISO 20000

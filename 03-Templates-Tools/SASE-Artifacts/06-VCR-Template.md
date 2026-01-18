@@ -7,9 +7,10 @@
 **Author:** SE4H (Software Engineering for Humans - Agent Coach)
 **Consumer:** SE4A (for revision) + Git History (permanent record)
 
-**Version:** 1.0.0
-**Framework:** SDLC 5.1.1
+**Version:** 1.1.0
+**Framework:** SDLC 5.1.3 (7-Pillar Architecture)
 **Created:** December 2025
+**Updated:** January 2025
 
 ---
 
@@ -33,7 +34,17 @@
 | **Source LPS** | LPS-YYYY-NNN | [Link to LoopScript] |
 | **Project** | PRJ-XXX | [Link to Project] |
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
-| **SDLC Gate** | G0.1 \| G1 \| G2 \| G3 \| G4 | Gate this work supports |
+| **SDLC Gate** | G0.1 \| G1 \| G2 \| G3 \| G4 \| G-Sprint \| G-Sprint-Close | Gate this work supports |
+
+### Sprint Planning Governance Verification (NEW in 5.1.3)
+
+| Criterion | Verified | Notes |
+|-----------|----------|-------|
+| **Sprint Reference** | ✅ / ❌ | SPRINT-XXX present in BRS/PR |
+| **Backlog Item Linked** | ✅ / ❌ | US-XXX / BUG-XXX / TT-XXX traced |
+| **Sprint Goal Alignment** | ✅ / ❌ | Work supports sprint goal |
+| **G-Sprint Approved** | ✅ / ❌ | Work started after gate approval |
+| **DoD Verification** | ✅ / ❌ | All DoD criteria met |
 
 ---
 
@@ -43,6 +54,8 @@
 
 | Category | MRP Claimed | Verified | Status |
 |----------|-------------|----------|--------|
+| **Sprint Governance (5.1.3)** | Compliant | XX% | ✅ / ⚠️ / ❌ |
+| **Definition of Done** | Complete | XX/6 criteria | ✅ / ⚠️ / ❌ |
 | **Functional Completeness** | 100% | XX% | ✅ / ⚠️ / ❌ |
 | **Test Coverage** | 95% | XX% | ✅ / ⚠️ / ❌ |
 | **Security Scan** | Clean | XX findings | ✅ / ⚠️ / ❌ |
@@ -72,9 +85,10 @@
 ```
 Example (APPROVED):
 The MRP demonstrates complete implementation of all BRS requirements.
-Test coverage exceeds threshold (95% vs 90% required). Security scan
-is clean. Performance meets targets. Code follows project standards.
-Ready for merge.
+Sprint Governance verified: SPRINT-086 context present, US-456 linked.
+DoD complete: all 6 criteria met. Test coverage exceeds threshold 
+(95% vs 90% required). Security scan is clean. Performance meets 
+targets. Code follows project standards. Ready for merge.
 
 Example (REJECTED):
 Critical security vulnerability found (SQL injection in line 45).

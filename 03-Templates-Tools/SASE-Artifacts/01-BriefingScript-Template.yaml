@@ -6,9 +6,10 @@
 # Author: SE4H (Software Engineering for Humans - Agent Coach)
 # Consumer: SE4A (Software Engineering for Agents - Agent Executor)
 #
-# Version: 1.0.0
-# Framework: SDLC 5.1.1
+# Version: 1.1.0
+# Framework: SDLC 5.1.3 (7-Pillar Architecture)
 # Created: December 2025
+# Updated: January 2025
 
 ---
 # METADATA SECTION
@@ -23,7 +24,15 @@ metadata:
   # Traceability
   project_id: "PRJ-XXX"
   sdlc_stage: "00-10"  # Which SDLC stage this BRS belongs to
-  gate_id: "G0.1 | G0.2 | G1 | G2 | G3 | G4"
+  gate_id: "G0.1 | G0.2 | G1 | G2 | G3 | G4 | G-Sprint | G-Sprint-Close"
+
+  # Sprint Planning Governance (NEW in 5.1.3 - Pillar 2)
+  sprint_context:
+    sprint_id: "SPRINT-XXX"  # MANDATORY - e.g., SPRINT-086
+    backlog_item: "US-XXX | BUG-XXX | TT-XXX"  # MANDATORY - linked backlog item
+    sprint_goal: "Brief description of sprint goal"
+    roadmap_phase: "PHASE-X"  # Optional - parent phase
+    g_sprint_approved: true  # Must be true before work starts
 
   # Ownership
   author:

@@ -1,7 +1,7 @@
-# SDLC 5.1.2 Executive Summary
+# SDLC 5.1.3 Executive Summary
 
-**Version**: 5.1.2
-**Release Date**: December 24, 2025
+**Version**: 5.1.3
+**Release Date**: January 18, 2026
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
@@ -9,7 +9,7 @@
 
 ## Framework Overview
 
-**SDLC 5.1.2** is a **10-Stage AI+Human Excellence Framework** combining:
+**SDLC 5.1.3** is a **10-Stage AI+Human Excellence Framework** combining:
 - **10 Lifecycle Stages** (00-09): Complete software development journey
 - **4-Tier Classification**: LITE → ENTERPRISE (team size-based)
 - **SASE Integration** (SE 3.0): Software Agentic Software Engineering
@@ -141,6 +141,8 @@ Pillar 5: Continuous Compliance
 
 ## Quality Gates
 
+### Feature Development Gates (G0-G4)
+
 | Gate | Stage | Key Criteria |
 |------|-------|--------------|
 | G0.1 | 00 | Problem validated with 5+ users |
@@ -149,6 +151,30 @@ Pillar 5: Continuous Compliance
 | G2 | 02 | Design approved by CTO/Tech Lead |
 | G3 | 04-05 | Ship ready, tests passing |
 | G4 | 06-07 | Production stable |
+
+### Sprint Governance Gates (G-Sprint) - NEW in 5.1.3
+
+| Gate | Stage | Key Criteria |
+|------|-------|--------------|
+| G-Sprint | Pre-Sprint | Sprint plan approved, goal aligned, capacity validated |
+| G-Sprint-Close | Post-Sprint | Work accounted, retro done, docs updated within 24h |
+
+> **Reference**: [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+
+### 10 Golden Rules of Sprint Governance (5.1.3)
+
+```
+ 1. Sprint Numbers Are Immutable
+ 2. Every Sprint Has One Clear Goal
+ 3. Documentation Within 24 Business Hours
+ 4. G-Sprint Gate Before Execution
+ 5. G-Sprint-Close Gate Before Next Sprint
+ 6. Traceability is Mandatory (Sprint → Phase → Roadmap)
+ 7. Sprint Goal Must Align with Phase Objective
+ 8. Strategic Priorities Must Be Explicit (P0/P1/P2)
+ 9. Failed Gate Blocks Progress
+10. Weekly Roadmap Review is Required
+```
 
 ---
 
@@ -204,14 +230,19 @@ Standards Mapped:
 ## Framework Evolution
 
 ```
-SDLC 1.0 (Jun 2025)  → Initial AI+Human collaboration
-SDLC 4.7 (Sep 2025)  → Battle-tested 5 pillars
-SDLC 4.8 (Nov 2025)  → Design Thinking enhancement
-SDLC 4.9 (Nov 2025)  → 10-Stage Complete Lifecycle
-SDLC 5.0 (Dec 2025)  → 4-Tier Classification + Governance
-SDLC 5.1.1 (Dec 2025) → Legacy/Archive + Stage Consistency
+SDLC 1.0 (Jun 2025)   → Initial AI+Human collaboration
+SDLC 4.7 (Sep 2025)   → Battle-tested 5 pillars
+SDLC 4.8 (Nov 2025)   → Design Thinking enhancement
+SDLC 4.9 (Nov 2025)   → 10-Stage Complete Lifecycle
+SDLC 5.0 (Dec 2025)   → 4-Tier Classification + Governance
 SDLC 5.1.0 (Dec 2025) → SASE Integration + Stage Restructure
+SDLC 5.1.1 (Dec 2025) → Legacy/Archive + Stage Consistency
+SDLC 5.1.2 (Dec 2025) → Complete Lifecycle + SASE Integration
+SDLC 5.1.3 (Jan 2026) → Sprint Planning Governance + G-Sprint Gates ⭐ LATEST
 ```
+
+> **5.1.3 Trigger**: BFlow Sprint 86 Direction Confusion incident revealed critical sprint governance gaps.
+> See [Case Study](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
 
 ---
 
@@ -222,6 +253,11 @@ SDLC 5.1.0 (Dec 2025) → SASE Integration + Stage Restructure
 - [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
 - [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md)
 
+**Governance (5.1.3)**:
+- [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md) ⭐ NEW
+- [SDLC-Quality-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
+- [When-Planning-Sprint.md](../02-Core-Methodology/Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) ⭐ NEW
+
 **Implementation Guides**:
 - [SDLC-Implementation-Guide.md](../05-Implementation-Guides/SDLC-Implementation-Guide.md)
 - [SDLC-Universal-Code-Review-Framework.md](../05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
@@ -229,6 +265,9 @@ SDLC 5.1.0 (Dec 2025) → SASE Integration + Stage Restructure
 **Templates**:
 - [SASE Artifact Templates](../03-Templates-Tools/SASE-Artifacts/)
 - [Design Thinking Templates](../03-Templates-Tools/3-Manual-Templates/design-thinking/)
+
+**Case Studies**:
+- [BFlow Sprint 86 Direction Confusion](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) ⭐ NEW
 
 ---
 
@@ -255,6 +294,7 @@ SDLC 5.1.0 (Dec 2025) → SASE Integration + Stage Restructure
 
 ---
 
-**Last Updated**: December 12, 2025
+**Last Updated**: January 18, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
+**Version**: 5.1.3

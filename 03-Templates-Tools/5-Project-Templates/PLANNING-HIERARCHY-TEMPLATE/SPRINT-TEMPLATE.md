@@ -1,11 +1,13 @@
 # Sprint Template
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Stage**: 04 - BUILD
+**Pillar**: 2 - Sprint Planning Governance
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
-**Framework**: SDLC 5.1.2
+**Framework**: SDLC 5.1.3
+**Governance**: [SDLC-Sprint-Planning-Governance.md](../../../../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
 
 ---
 
@@ -229,5 +231,5 @@ Before starting a Sprint, verify:
 
 **Template Status**: ACTIVE
 **Compliance**: RECOMMENDED for STANDARD+ tier projects
-**Last Updated**: December 24, 2025
+**Last Updated**: January 2025
 **Owner**: CPO Office

@@ -7,9 +7,10 @@
 **Author:** SE4A (Software Engineering for Agents - Agent Executor)
 **Consumer:** SE4H (Software Engineering for Humans - Agent Coach)
 
-**Version:** 1.0.0
-**Framework:** SDLC 5.1.1
+**Version:** 1.1.0
+**Framework:** SDLC 5.1.3 (7-Pillar Architecture)
 **Created:** December 2025
+**Updated:** January 2025
 
 ---
 
@@ -34,6 +35,15 @@
 | **Blocked Step** | STEP-X.Y | Specific step that is blocked |
 | **Project** | PRJ-XXX | Project identifier |
 | **Agent Session** | SESSION-XXXXX | Current execution session |
+
+### Sprint Planning Governance (NEW in 5.1.3)
+
+| Governance | Value |
+|------------|-------|
+| **Sprint ID** | SPRINT-XXX |
+| **Backlog Item** | US-XXX \| BUG-XXX \| TT-XXX |
+| **Sprint Goal Impact** | Blocking \| Delaying \| No Impact |
+| **DoD Risk** | CRP resolution required for DoD |
 
 ---
 

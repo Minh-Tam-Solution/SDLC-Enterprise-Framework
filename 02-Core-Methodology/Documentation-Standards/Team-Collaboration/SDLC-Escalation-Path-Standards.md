@@ -1,8 +1,9 @@
 # SDLC Escalation Path Standards
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Stage**: 02 - Core Methodology (Documentation Standards / Team Collaboration)
+**Pillar**: 2 - Sprint Planning Governance
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
 **Industry Standards**: ITIL 4, SAFe 6.0

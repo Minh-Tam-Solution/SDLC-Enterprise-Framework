@@ -1,7 +1,7 @@
 # SDLC Manual Code Review Playbook - Tier 1 Free/Manual Excellence
 
-**Version**: 5.1.2
-**Last Updated**: December 24, 2025
+**Version**: 5.1.3
+**Last Updated**: January 2025
 **Status**: Production Ready
 **Audience**: Engineering Teams (1-5 developers, <20 PRs/month, $0 budget)
 **Tier**: 1 (Free/Manual with Maximum Discipline)
@@ -26,9 +26,9 @@ This playbook provides **complete manual code review excellence at zero cost** t
 
 ---
 
-## 🎯 SDLC 5.1.2 Integration
+## 🎯 SDLC 5.1.3 Integration
 
-### 10-Stage Lifecycle Mapping
+### 10-Stage Lifecycle Mapping (SDLC 5.1.3)
 
 | Stage | Name | Manual Code Review Role |
 |-------|------|------------------------|
@@ -42,6 +42,18 @@ This playbook provides **complete manual code review excellence at zero cost** t
 | 07 | INTEGRATE (Systems) | Validate integration points |
 | 08 | COLLABORATE (Teams) | Document review findings |
 | 09 | GOVERN (Compliance) | Ensure standards compliance |
+
+### 7-Pillar Architecture Alignment
+
+| Pillar | Manual Code Review Support |
+|--------|---------------------------|
+| P0: Design Thinking | Verify feature aligns with user needs |
+| P1: 10-Stage Lifecycle | Stage-appropriate review focus |
+| P2: Sprint Planning | Check Sprint context in PR |
+| P3: 4-Tier Classification | Right-sized review depth |
+| P4: Quality Gates | Pre-merge validation |
+| P5: SASE Integration | Human-AI collaboration evidence |
+| P6: Documentation Permanence | Documentation updates verified |
 
 ### 4-Tier Classification
 
@@ -63,9 +75,64 @@ This playbook provides **complete manual code review excellence at zero cost** t
 
 ---
 
-## 🎯 Core Principle: The 3-Layer Manual Review System
+## � Sprint Planning Governance Integration (NEW in 5.1.3)
+
+### Code Review & Sprint Review Alignment
+
+**Key Principle**: Code Review supports Sprint Review, not replaces it.
+
+```yaml
+Sprint Planning Hierarchy:
+  ROADMAP → PHASE → SPRINT → BACKLOG → PR (Code Review)
+
+Code Review Must Verify:
+  1. PR references SPRINT-XXX
+  2. Backlog item linked (US-XXX, BUG-XXX, TT-XXX)
+  3. Aligns with Sprint Goal
+  4. Work started AFTER G-Sprint approval
+
+Sprint Review Integration:
+  - Code Review completes BEFORE Sprint Review
+  - Sprint Review demos MERGED code only
+  - Feedback loops back to next sprint backlog
+```
+
+### Definition of Done (DoD) in Code Review
+
+**Every PR Must Meet DoD Before Merge**:
+```yaml
+DoD Checklist (verify in code review):
+  - [ ] Code complete and reviewed (2+ approvers)
+  - [ ] Unit tests passing (coverage target met)
+  - [ ] Integration tests passing
+  - [ ] Documentation updated
+  - [ ] Deployed to staging environment
+  - [ ] Product Owner acceptance (for user-facing changes)
+```
+
+### Sprint Context PR Template Addition
+
+```markdown
+## Sprint Context (Required)
+- **Sprint**: SPRINT-___
+- **Backlog Item**: US-___ / BUG-___ / TT-___
+- **Sprint Goal Alignment**: [How does this PR support the sprint goal?]
+- **G-Sprint Approved**: ✅ Yes / ❌ No
+```
+
+---
+
+## 🎯 Core Principle: The 4-Layer Manual Review System (Updated 5.1.3)
 
 ```
+┌─────────────────────────────────────────────────────────────┐
+│  LAYER 0: SPRINT CONTEXT CHECK (NEW in 5.1.3)               │
+│  Verify PR has valid Sprint reference & backlog link       │
+│  Tools: PR template, Sprint dashboard                      │
+│  Time: <1 minute per PR                                    │
+└────────────────┬────────────────────────────────────────────┘
+                 │
+                 ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  LAYER 1: PRE-COMMIT QUALITY GATES (Automated, Free)        │
 │  Catch 60-70% of issues BEFORE human review                │
@@ -83,14 +150,22 @@ This playbook provides **complete manual code review excellence at zero cost** t
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  LAYER 3: CONTINUOUS LEARNING (Team Retrospective)          │
+│  LAYER 3: DOD VERIFICATION (NEW in 5.1.3)                   │
+│  Verify Definition of Done criteria before merge           │
+│  Tools: DoD checklist, staging deployment check            │
+│  Time: 3-5 minutes per PR                                  │
+└────────────────┬────────────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────────────┐
+│  LAYER 4: CONTINUOUS LEARNING (Team Retrospective)          │
 │  Extract patterns, update processes, prevent recurrence    │
-│  Tools: Monthly review meeting, shared knowledge base      │
-│  Time: 1 hour per month                                    │
+│  Tools: Monthly review meeting, Sprint Retrospective       │
+│  Time: 1 hour per month + Sprint Retro                     │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Value Proposition**: Zero cost + systematic quality + team learning = Professional-grade reviews
+**Value Proposition**: Zero cost + Sprint alignment + systematic quality + team learning = Professional-grade reviews
 
 ---
 
@@ -1042,9 +1117,9 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**Document Version**: 5.1.2
-**Last Updated**: December 24, 2025
-**Next Review**: January 24, 2026
+**Document Version**: 5.1.3
+**Last Updated**: January 2025
+**Next Review**: February 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 
 ---
@@ -1053,6 +1128,7 @@ You can achieve professional-grade code review at **zero cost**.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.1.3 | Jan 2025 | 7-Pillar Architecture, Sprint Governance, 4-Layer Code Review |
 | 5.1.2 | Dec 24, 2025 | SDLC 5.1.2 alignment, stage mapping clarity |
 | 5.0.0 | Dec 6, 2025 | SDLC 5.0.0 upgrade, 10-stage mapping, 4-tier classification |
 | 4.9.0 | Nov 13, 2025 | Initial production release |
@@ -1066,6 +1142,6 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**🏆 SDLC 5.1.2 Code Review Excellence**
+**🏆 SDLC 5.1.3 Code Review Excellence**
 *Zero Cost - Maximum Discipline - Professional Quality*
 *Stage 04 (BUILD) - LITE/STANDARD Tiers*

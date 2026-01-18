@@ -7,9 +7,10 @@
 **Author:** SE4A (Software Engineering for Agents - Agent Executor)
 **Consumer:** SE4H (Software Engineering for Humans - Agent Coach) for VCR decision
 
-**Version:** 1.0.0
-**Framework:** SDLC 5.1.1
+**Version:** 1.1.0
+**Framework:** SDLC 5.1.3 (7-Pillar Architecture)
 **Created:** December 2025
+**Updated:** January 2025
 
 ---
 
@@ -33,6 +34,30 @@
 | **Project** | PRJ-XXX | [Link to Project] |
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **Branch** | feature/xxx | [Link to Branch] |
+
+### Sprint Planning Governance (NEW in 5.1.3)
+
+| Reference | ID | Status |
+|-----------|------|--------|
+| **Sprint** | SPRINT-XXX | [Link to Sprint] |
+| **Backlog Item** | US-XXX \| BUG-XXX \| TT-XXX | [Link to Item] |
+| **Sprint Goal** | [Brief sprint goal] | Aligned ✅ / Not Aligned ⚠️ |
+| **G-Sprint Gate** | Approved | ✅ |
+
+---
+
+## ✅ DEFINITION OF DONE (DoD) VERIFICATION (NEW in 5.1.3)
+
+| Criterion | Status | Evidence |
+|-----------|--------|----------|
+| Code complete and reviewed (2+ approvers) | ✅ / ❌ | PR #NNN approved by X, Y |
+| Unit tests passing (coverage target met) | ✅ / ❌ | XX% coverage (target: 80%+) |
+| Integration tests passing | ✅ / ❌ | [Test results link] |
+| Documentation updated | ✅ / ❌ | [Docs updated in PR] |
+| Deployed to staging environment | ✅ / ❌ | [Staging URL] |
+| Product Owner acceptance | ✅ / ❌ | [PO approval comment] |
+
+**DoD Status**: ✅ ALL CRITERIA MET / ⚠️ PARTIAL / ❌ NOT MET
 
 ---
 

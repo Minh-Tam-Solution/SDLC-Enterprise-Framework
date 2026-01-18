@@ -1,16 +1,18 @@
-# SDLC 5.1.2 Training Materials - Complete Learning Package
+# SDLC 5.1.3 Training Materials - Complete Learning Package
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 2025
 **Audience**: All team members (developers, designers, product managers, QA)
 **Duration**: 8 hours total (can be split across multiple sessions)
 **Prerequisites**: Basic SDLC 4.9 knowledge (or 2-hour SDLC fundamentals course)
 
 ---
 
-## 🆕 What's New in SDLC 5.1.2 (December 24, 2025)
+## 🆕 What's New in SDLC 5.1.3 (January 2025)
 
-**Documentation vs Code Separation**: SDLC 5.1.2 clarifies that stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units that exist independently of lifecycle stages.
+**Sprint Planning Governance (Pillar 2)**: SDLC 5.1.3 introduces the 7-Pillar Architecture with new Pillar 2 - Sprint Planning Governance featuring Sprint Planning Hierarchy (ROADMAP → PHASE → SPRINT → BACKLOG), G-Sprint/G-Sprint-Close gates, and 24h documentation enforcement.
+
+**Documentation vs Code Separation**: SDLC 5.1.x clarifies that stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units that exist independently of lifecycle stages.
 
 **SASE Integration & Shortened Folder Names**: SDLC 5.1.x introduces Software Agentic Software Engineering (SASE) with 6 artifact templates. Also updates folder naming convention to use shortened names (e.g., `00-foundation` instead of `00-Project-Foundation`).
 
@@ -34,9 +36,9 @@ By completing this training, participants will be able to:
 1. ✅ **Explain** what Design Thinking is and why it matters (reduce 70% feature waste)
 2. ✅ **Apply** all 5 Design Thinking phases to real projects (Empathize → Test)
 3. ✅ **Use** 9 practical templates without assistance (15-30 min per template)
-4. ✅ **Map** Design Thinking to SDLC 5.1.2 10-Stage Framework (WHY → GOVERN)
+4. ✅ **Map** Design Thinking to SDLC 5.1.3 10-Stage Framework (WHY → GOVERN)
 5. ✅ **Validate** assumptions with real users before building (5-8 user tests)
-6. ✅ **Integrate** SDLC 5.1.2 into daily workflow (80%+ compliance within 2 weeks)
+6. ✅ **Integrate** SDLC 5.1.3 into daily workflow (80%+ compliance within 2 weeks)
 7. ✅ **Apply** code quality standards including file naming conventions
 8. ✅ **Understand** 4-Tier Classification and select appropriate tier for projects
 9. ✅ **Use** SASE artifacts for AI-human collaboration (6 templates)
@@ -48,7 +50,7 @@ Session 1: SDLC 5.0.0 Overview & Design Thinking Fundamentals
   Duration: 2 hours
   Format: Lecture + Discussion
   Deliverable: Understanding quiz (80% pass rate)
-  Topics: 10-Stage Lifecycle, 6 Pillars, Design Thinking foundation
+  Topics: 10-Stage Lifecycle, 7 Pillars, Sprint Planning Governance
 
 Session 2: Design Thinking Hands-On Workshop
   Duration: 3 hours
@@ -64,14 +66,14 @@ Session 3: Templates, Code Quality & Code Review Excellence
 Session 4: Real Project Application
   Duration: 1 hour (ongoing)
   Format: Guided practice on actual project
-  Deliverable: Pilot project with SDLC 4.9.1 applied
+  Deliverable: Pilot project with SDLC 5.1.3 applied
 
 Total: 8 hours core + ongoing practice
 ```
 
 ---
 
-## 📚 SESSION 1: SDLC 4.9.1 Overview & Design Thinking Fundamentals
+## 📚 SESSION 1: SDLC 5.1.3 Overview & Design Thinking Fundamentals
 
 **Duration**: 2 hours
 **Format**: Lecture (60 min) + Discussion (30 min) + Quiz (30 min)
@@ -79,7 +81,7 @@ Total: 8 hours core + ongoing practice
 
 ---
 
-### Part 1: Why SDLC 4.9.1? (15 minutes)
+### Part 1: Why SDLC 5.1.3? (15 minutes)
 
 **Slide 1: The Problem We're Solving**
 
@@ -101,7 +103,7 @@ Cost: $100M feature × 64% waste = $64M wasted
 
 ---
 
-**Slide 2: SDLC Evolution (4.7 → 4.8 → 4.9 → 4.9.1)**
+**Slide 2: SDLC Evolution (4.7 → 4.8 → 4.9 → 5.0 → 5.1.3)**
 
 ```
 SDLC 4.7 (September 2025):
@@ -125,11 +127,14 @@ Focus: Complete Lifecycle Excellence (6 Pillars, 10 stages)
   ✅ 14,822% ROI proven (2x improvement)
   ✅ Perfect /docs alignment (00-09)
 
-SDLC 4.9.1 (November 29, 2025):
+SDLC 5.1.3 (January 2025):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Focus: Complete Lifecycle + Code Consistency
-  ✅ Code File Naming Standards restored
-  ✅ All 4.9 features maintained
+Focus: Sprint Planning Governance (7 Pillars)
+  ✅ NEW Pillar 2: Sprint Planning Governance
+  ✅ Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
+  ✅ G-Sprint/G-Sprint-Close gates
+  ✅ 24h documentation enforcement
+  ✅ All 5.1.2 features maintained
 ```
 
 ---
@@ -1310,12 +1315,12 @@ Day 11: CPO 1-on-1
 
 ---
 
-**Document**: SDLC-5.1.0-Training-Materials
+**Document**: SDLC-5.1.3-Training-Materials
 **Purpose**: Complete learning package for team adoption
 **Audience**: All team members (developers, designers, PM, QA)
 **Duration**: 8 hours core + ongoing practice
-**Certification**: SDLC 5.1.0 Certified Practitioner
-**Version**: 3.0
-**Date**: December 11, 2025
+**Certification**: SDLC 5.1.3 Certified Practitioner
+**Version**: 3.1
+**Date**: January 2025
 **License**: MTS Internal Use
-**What's New**: SASE Integration, Shortened Folder Names, 4-Tier Classification
+**What's New**: 7-Pillar Architecture, Sprint Planning Governance, SASE Integration

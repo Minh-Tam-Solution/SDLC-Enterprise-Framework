@@ -4,9 +4,9 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define maturity levels for adopting agentic practices in software development
-**Framework:** SDLC 5.1.2 Complete Lifecycle + SASE Integration
-**Version:** 5.1.2
-**Date:** December 24, 2025
+**Framework:** SDLC 5.1.3 Complete Lifecycle + SASE Integration + Sprint Governance
+**Version:** 5.1.3
+**Date:** January 18, 2026
 **Status:** ACTIVE - PRODUCTION READY
 
 ---
