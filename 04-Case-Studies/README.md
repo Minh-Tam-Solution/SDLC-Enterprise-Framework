@@ -1,21 +1,49 @@
 # 📚 SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 18, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Latest**: SDLC 5.1.2 Framework - Complete Lifecycle + SASE Integration
+**Latest**: SDLC 5.1.3 Framework - Sprint Planning Governance
 
 ---
 
 ## 🎯 What You'll Find Here
 
-This directory contains **real case studies** from three production platforms that shaped SDLC 5.1.2, plus **historical case studies** documenting framework evolution from 4.2 to 5.0.
+This directory contains **real case studies** from three production platforms that shaped SDLC 5.1.3, plus **historical case studies** documenting framework evolution from 4.2 to 5.1.
 
 ---
 
-## 🎊 NEW: SDLC 5.0.0 Framework Upgrade Case Study
+## 🎊 NEW: BFlow Sprint 86 Direction Confusion Case Study (SDLC 5.1.3)
+
+### 0. BFlow Sprint 86 - Sprint Planning Governance Gap Discovery
+**File**: [BFlow-Sprint-86-Direction-Confusion-Case-Study.md](BFlow-Sprint-86-Direction-Confusion-Case-Study.md) ⭐ **NEW - LATEST**
+
+**Challenge**: Sprint direction confusion with 27-day documentation lag and inconsistent sprint references across multiple documents
+
+**Solution**: Comprehensive gap analysis → SDLC 5.1.3 Sprint Planning Governance framework with G-Sprint/G-Sprint-Close gates
+
+**Results**:
+- ✅ **6 Critical Gaps Identified**: Sprint planning gate, 24h documentation, roadmap change control, sprint numbering, weekly review, SSOT validation
+- ✅ **10 Golden Rules**: Established sprint governance principles
+- ✅ **G-Sprint Gate**: Formal sprint planning approval before execution
+- ✅ **G-Sprint-Close Gate**: 24h documentation enforcement
+- ✅ **Roadmap Change Request**: Formal process for strategic changes
+- ✅ **SSOT Validation**: Automated consistency checks in CI/CD
+
+**Key Learnings**:
+- Process gaps are more dangerous than code bugs
+- Documentation debt compounds faster than technical debt
+- Implicit expectations fail at scale
+- SSOT requires automated validation
+- Sprint planning is a gate, not a meeting
+
+**Status**: **FRAMEWORK UPGRADED** - SDLC 5.1.3 Released
+
+---
+
+## 🎊 SDLC 5.0.0 Framework Upgrade Case Study
 
 ### 0. SDLC 5.0.0 Framework Upgrade - Enterprise Scale + Industry Best Practices
 **File**: [SDLC-5.0-Framework-Upgrade-Case-Study.md](SDLC-5.0-Framework-Upgrade-Case-Study.md) ⭐ **NEW - FLAGSHIP**
