@@ -1,6 +1,6 @@
-# SDLC 5.1.2 Universal Framework
+# SDLC 5.1.3 Universal Framework
 
-**Version**: 5.1.2 | **Status**: ACTIVE | **Date**: December 24, 2025
+**Version**: 5.1.3 | **Status**: ACTIVE | **Date**: January 18, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 5.1.2 is a **10-Stage AI+Human Excellence Framework** with:
+SDLC 5.1.3 is a **10-Stage AI+Human Excellence Framework** with:
 - **10 Lifecycle Stages** (00-09): Foundation → Govern
 - **4-Tier Classification**: LITE → ENTERPRISE
 - **SASE Integration** (SE 3.0): Software Agentic Software Engineering
@@ -149,6 +149,7 @@ SDLC-Enterprise-Framework/
 - [SDLC-Document-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Document-Naming-Standards.md)
 - [SDLC-Quality-Gates.md](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
 - [SDLC-Security-Gates.md](./02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md)
+- [SDLC-Sprint-Planning-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md) ← **NEW in 5.1.3**
 
 **Templates**:
 - [SASE Artifacts](./03-Templates-Tools/SASE-Artifacts/) - BRS, LPS, MTS, CRP, MRP, VCR
@@ -165,6 +166,8 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
+| 5.1.3 | Jan 18, 2026 | **Sprint Planning Governance** - G-Sprint/G-Sprint-Close gates, Roadmap Change Control, 10 Golden Rules |
+| 5.1.2 | Dec 24, 2025 | Quality Gates enhancement, Change Management update |
 | 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
 | 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
 | 5.0.0 | Dec 5, 2025 | 4-Tier Classification, Governance standards |

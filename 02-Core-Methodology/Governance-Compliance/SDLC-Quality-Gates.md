@@ -1,7 +1,7 @@
 # SDLC Quality Gates
 
-**Version**: 5.1.2
-**Date**: December 24, 2025
+**Version**: 5.1.3
+**Date**: January 18, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO Office
@@ -208,6 +208,71 @@ Exit Criteria:
 
 ---
 
+## Sprint Governance Gates (Separate Track)
+
+Sprint governance gates operate **PARALLEL** to feature gates (G0-G3). They govern the sprint planning and completion process, not feature development.
+
+**See**: [SDLC-Sprint-Planning-Governance.md](./SDLC-Sprint-Planning-Governance.md) for full details.
+
+### G-Sprint (Sprint Planning Gate)
+
+```yaml
+Purpose: Validate sprint plan before execution begins
+
+Entry Criteria:
+  □ Previous sprint documented (G-Sprint-Close passed)
+  □ Roadmap up-to-date (SSOT validation passed)
+  □ Sprint plan document created (SPRINT-XX.md)
+  □ Sprint goal defined (single sentence)
+  □ Backlog items prioritized (P0/P1/P2)
+  □ Dependencies identified
+
+Exit Criteria:
+  □ Sprint goal aligns with roadmap
+  □ Team capacity confirmed
+  □ Approved by authority (tier-dependent)
+  □ Sprint plan committed to repo
+  □ Team kickoff scheduled
+
+Tier Requirements:
+  - LITE: Optional (self-approval)
+  - STANDARD: Recommended (Tech Lead approval)
+  - PROFESSIONAL: Mandatory (CTO/PM approval)
+  - ENTERPRISE: Mandatory (CPO + CTO approval)
+```
+
+### G-Sprint-Close (Sprint Completion Gate)
+
+```yaml
+Purpose: Ensure proper sprint closure before next sprint begins
+
+Entry Criteria:
+  □ Sprint end date reached or work complete
+  □ Sprint retro conducted
+  □ Metrics captured
+
+Exit Criteria:
+  □ All committed work done or carried over
+  □ Documentation updated within 24 business hours
+  □ CURRENT-SPRINT.md updated
+  □ SPRINT-INDEX.md updated
+  □ Approved by authority (tier-dependent)
+
+Time Limit: 24 business hours after sprint end date
+
+Failure Consequence:
+  - New sprint BLOCKED until G-Sprint-Close passes
+  - Escalation to CTO if >48h delay
+
+Tier Requirements:
+  - LITE: Optional
+  - STANDARD: Recommended
+  - PROFESSIONAL: Mandatory
+  - ENTERPRISE: Mandatory + metrics review
+```
+
+---
+
 ## Code Quality Thresholds
 
 ### Linting Rules
@@ -398,7 +463,76 @@ Quality Issue Escalation:
 
 ---
 
+## Sprint Governance Gates (Separate Track)
+
+Sprint governance gates operate **PARALLEL** to feature lifecycle gates (G0-G3). They govern the sprint planning and completion process, not feature development.
+
+```yaml
+Feature Lifecycle:  G0.1 → G0.2 → G1 → G2 → G3 (per feature)
+Sprint Lifecycle:   G-Sprint → [sprint work] → G-Sprint-Close (per sprint)
+
+Relationship:
+  - A sprint may contain work from multiple features at different G-levels
+  - Sprint gates validate PROCESS, feature gates validate QUALITY
+  - Both tracks are mandatory for PROFESSIONAL+ tiers
+```
+
+See detailed specification: [SDLC-Sprint-Planning-Governance.md](./SDLC-Sprint-Planning-Governance.md)
+
+### G-Sprint (Sprint Planning Gate)
+
+**Purpose**: Validate sprint plan before execution begins.
+
+```yaml
+Entry Criteria:
+  □ Previous sprint documented (G-Sprint-Close passed)
+  □ Roadmap up-to-date
+  □ Sprint plan document created
+  □ Sprint goal defined
+  □ Dependencies identified
+
+Exit Criteria:
+  □ Sprint plan approved by tier-appropriate authority
+  □ SPRINT-XX.md committed to repo
+  □ Team kickoff scheduled
+
+Tier Requirements:
+  LITE: Optional
+  STANDARD: Recommended (Tech Lead approval)
+  PROFESSIONAL: Mandatory (CTO/PM approval)
+  ENTERPRISE: Mandatory (CPO + CTO approval)
+```
+
+### G-Sprint-Close (Sprint Completion Gate)
+
+**Purpose**: Ensure proper sprint closure before next sprint begins.
+
+```yaml
+Entry Criteria:
+  □ Sprint end date reached or work complete
+  □ Sprint retro conducted
+  □ Metrics captured
+
+Exit Criteria:
+  □ CURRENT-SPRINT.md updated (within 24 business hours)
+  □ SPRINT-INDEX.md updated
+  □ Roadmap reviewed
+  □ Closure approved
+
+Time Limit: 24 business hours after sprint end
+Enforcement: Next sprint BLOCKED until G-Sprint-Close passes
+
+Tier Requirements:
+  LITE: Optional
+  STANDARD: Recommended
+  PROFESSIONAL: Mandatory
+  ENTERPRISE: Mandatory + metrics review
+```
+
+---
+
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Last Updated**: December 5, 2025
+**Version**: 5.1.3
+**Last Updated**: January 18, 2026
 **Owner**: CTO Office

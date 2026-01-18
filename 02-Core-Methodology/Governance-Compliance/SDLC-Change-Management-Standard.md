@@ -74,6 +74,60 @@ Lead Time: Immediate
 Documentation: Incident + change record
 ```
 
+### Roadmap Change (Strategic Planning)
+
+```yaml
+Definition:
+  - Changes to strategic planning documents (roadmap, phase, sprint)
+  - Requires impact assessment across multiple documents
+  - Different approval authority than code changes
+
+Examples:
+  - Sprint renumbering (e.g., Sprint 87-90 moved from 83-86)
+  - Phase objective change
+  - Roadmap goal addition/removal
+  - Strategic priority reordering (P0 vs P1)
+
+Approval Authority:
+  - Sprint renumbering: CTO or PM
+  - Phase changes: CPO or CTO
+  - Roadmap goal changes: CEO or CPO
+  - Strategic priority: CEO
+
+Lead Time:
+  - Sprint renumbering: 24-48 hours
+  - Phase changes: 48-72 hours
+  - Roadmap goal changes: 1 week
+  - Emergency strategic: Immediate (CEO ratify within 24h)
+
+Documentation: Roadmap Change Request (RCR)
+See: SDLC-Sprint-Planning-Governance.md for RCR template
+```
+
+### Roadmap Change Request (RCR) Summary
+
+```yaml
+When to Use:
+  - Sprint renumbering
+  - Phase objective changes
+  - Roadmap goal additions/removals
+  - Strategic priority changes
+  - Timeline shifts >1 week
+
+Process:
+  1. Create RCR document using template
+  2. Identify all affected documents
+  3. Get appropriate approval (see matrix above)
+  4. Update all documents simultaneously
+  5. Run SSOT validation
+  6. Notify affected teams
+
+Validation:
+  - CI/CD validates sprint consistency
+  - SSOT check blocks merge if inconsistent
+  - All document references must match
+```
+
 ---
 
 ## Change Management by Tier
