@@ -313,15 +313,25 @@ The BFlow Sprint 86 incident directly led to the establishment of the **10 Golde
 
 | Component | Story Points | Status |
 |-----------|--------------|--------|
-| Roadmap Model & API | 8 SP | ⏳ Planned |
-| Phase Model & API | 6 SP | ⏳ Planned |
-| Sprint Model & API | 10 SP | ⏳ Planned |
-| Sprint Governance Gates | 8 SP | ⏳ Planned |
-| Backlog Item Model & API | 5 SP | ⏳ Planned |
-| Planning Dashboard UI | 10 SP | ⏳ Planned |
-| Integration Tests | 5 SP | ⏳ Planned |
-| SSOT Validation Script | 3 SP | ⏳ Planned |
-| **Total** | **55 SP** | **Sprint 74** |
+| Roadmap Model & API | 8 SP | 🔄 70% (Model ✅, Schema ✅, Routes ✅, Migration ⏳) |
+| Phase Model & API | 6 SP | 🔄 70% (Model ✅, Schema ✅, Routes ✅, Migration ⏳) |
+| Sprint Model & API | 10 SP | 🔄 70% (Model ✅, Schema ✅, Routes ✅, Migration ⏳) |
+| Sprint Governance Gates | 8 SP | 🔄 80% (Model ✅, Service ✅, Routes ✅, Tests ⏳) |
+| Backlog Item Model & API | 5 SP | 🔄 70% (Model ✅, Schema ✅, Routes ✅, Migration ⏳) |
+| Planning Dashboard UI | 10 SP | ⏳ Pending |
+| Integration Tests | 5 SP | ⏳ Pending |
+| SSOT Validation Script | 3 SP | ⏳ Pending |
+| **Total** | **55 SP** | **🔄 Sprint 74 In Progress (~70%)** |
+
+**Files Created (January 18, 2026):**
+- `backend/app/models/roadmap.py` (186 lines)
+- `backend/app/models/phase.py` (~150 lines)
+- `backend/app/models/sprint.py` (355 lines)
+- `backend/app/models/sprint_gate_evaluation.py` (370 lines)
+- `backend/app/models/backlog_item.py` (~200 lines)
+- `backend/app/schemas/planning.py` (700+ lines)
+- `backend/app/api/routes/planning.py` (1600+ lines, 24+ endpoints)
+- `backend/app/services/sprint_gate_service.py` (400+ lines)
 
 ---
 

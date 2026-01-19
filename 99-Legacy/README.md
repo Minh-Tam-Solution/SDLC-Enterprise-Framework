@@ -2,7 +2,7 @@
 
 **Purpose**: Historical archive for superseded SDLC framework versions (1.x → 5.0)
 **Status**: READ-ONLY ARCHIVE
-**Current Version**: SDLC 5.1.1 (see parent folder)
+**Current Version**: SDLC 5.1.3 (see parent folder)
 **Maintainer**: CPO Office
 **Last Updated**: December 12, 2025
 
@@ -43,7 +43,7 @@
 - Comparative analysis with current version
 
 ❌ **Do NOT use for:**
-- New project baselines (use SDLC 5.1.1)
+- New project baselines (use SDLC 5.1.3)
 - Active development guidance
 - Current best practices
 

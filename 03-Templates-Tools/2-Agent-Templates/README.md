@@ -42,7 +42,7 @@
 
 ## 🎯 What's New in SDLC 5.0.0
 
-### 10-Stage Agent Mapping (SDLC 5.1.1)
+### 10-Stage Agent Mapping (SDLC 5.1.3)
 
 Agents are now mapped to the complete 10-stage lifecycle (00-09):
 
@@ -518,7 +518,7 @@ Sprint: CPO + CEO (strategic validation)
 
 ---
 
-**Folder Status**: ACTIVE - SDLC 5.1.1 Complete
+**Folder Status**: ACTIVE - SDLC 5.1.3 Complete
 **Last Updated**: December 12, 2025
 **Owner**: CPO Office
 

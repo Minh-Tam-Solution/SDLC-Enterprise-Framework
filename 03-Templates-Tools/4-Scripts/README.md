@@ -189,7 +189,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 
 ## 🎯 Key Scripts Explained
 
-### SDLC 5.1.1 Complete Validator ✅
+### SDLC 5.1.3 Complete Validator ✅
 
 **Validates complete 10-stage lifecycle + 6-pillar architecture + SASE Framework**
 
@@ -198,7 +198,7 @@ python3 scripts/quick-start/solo_setup.py /path/to/project
 python3 compliance/sdlc_validator.py /path/to/project
 
 # What it checks:
-## 10-Stage Lifecycle (SDLC 5.1.1):
+## 10-Stage Lifecycle (SDLC 5.1.3):
 - Stage 00 (FOUNDATION/WHY): Problem validation, user research
 - Stage 01 (PLANNING/WHAT): Requirements, acceptance criteria
 - Stage 02 (DESIGN/HOW): Architecture, design decisions
@@ -238,7 +238,7 @@ python3 compliance/sdlc_validator.py /path/to/project
 ✅ SASE Artifacts: DETECTED (SE 3.0)
 ✅ File Naming Standards: COMPLIANT
 ✅ Legacy/Archive folders excluded from validation
-🎉 SDLC 5.1.1 FULLY COMPLIANT (10 stages + 6 pillars + SASE)
+🎉 SDLC 5.1.3 FULLY COMPLIANT (10 stages + 6 pillars + SASE)
 ```
 
 ### Design Thinking Validator ✨ NEW
@@ -274,7 +274,7 @@ python3 scripts/compliance/design_thinking_validator.py /path/to/project
 python3 scripts/quick-start/solo_setup.py /path/to/project
 
 # What it does:
-1. Creates SDLC 5.1.1 complete 10-stage structure (00-09)
+1. Creates SDLC 5.1.3 complete 10-stage structure (00-09)
 2. Installs compliance validators (10-stage + 6-pillar + SASE)
 3. Sets up Design Thinking templates (5 phases)
 4. Creates SASE Artifacts templates (BRS, LPS, MRP, VCR)
