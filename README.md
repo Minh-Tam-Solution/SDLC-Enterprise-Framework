@@ -74,7 +74,20 @@ SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** with:
 |--------|-------------------|----------------------|
 | **Role** | Guide & supervise | Implement intent |
 | **Decision** | FINAL (veto power) | NONE (propose only) |
-| **Artifacts** | BRS, MTS, VCR | LPS, CRP, MRP |
+| **Artifacts** | **AGENTS.md**, VCR | CRP, MRP |
+
+> **⚠️ DEPRECATION NOTICE (ADR-029, Jan 2026)**
+>
+> **MTS (MentorScript)**, **BRS (BriefingScript)**, and **LPS (LearnedPatternsScript)** are **DEPRECATED**.
+>
+> **Use `AGENTS.md` instead** - the industry standard for AI coding agents (60K+ projects on GitHub).
+>
+> Migration path:
+> - MTS → `AGENTS.md` (## Conventions, ## DO NOT sections)
+> - BRS → `AGENTS.md` (## Quick Start, ## Architecture sections)
+> - LPS → PR comments via Context Overlay Service (NOT committed to git)
+>
+> CLI: `sdlcctl agents init` to generate AGENTS.md from project analysis.
 
 ### Agentic Maturity Levels
 
@@ -87,11 +100,11 @@ SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** with:
 
 ### 7 Agentic Principles
 
-1. **Brief-First** - BriefingScript before any agent work
+1. **AGENTS.md First** - AGENTS.md committed to repo before agent work _(replaces Brief-First)_
 2. **Evidence-Based MRP** - 5-point evidence for every merge
 3. **Human Accountability** - Human responsible for shipped code
 4. **Consultation Protocol** - CRP when agent uncertain
-5. **Mentorship-as-Code** - Standards in MentorScript
+5. **Conventions-as-Code** - Standards in AGENTS.md _(replaces Mentorship-as-Code)_
 6. **Dual Workbenches** - ACE for humans, AEE for agents
 7. **Gradual Autonomy** - Trust earned L0→L3
 
@@ -155,7 +168,8 @@ SDLC-Enterprise-Framework/
 - [SDLC-Sprint-Planning-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md) ← **NEW in 5.1.3**
 
 **Templates**:
-- [SASE Artifacts](./03-Templates-Tools/SASE-Artifacts/) - BRS, LPS, MTS, CRP, MRP, VCR
+- [AGENTS.md Template](./03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
+- [SASE Artifacts](./03-Templates-Tools/SASE-Artifacts/) - CRP, MRP, VCR _(MTS/BRS/LPS deprecated)_
 - [AI Tools](./03-Templates-Tools/1-AI-Tools/) - AI prompts
 - [Agent Templates](./03-Templates-Tools/2-Agent-Templates/) - 17 agents
 

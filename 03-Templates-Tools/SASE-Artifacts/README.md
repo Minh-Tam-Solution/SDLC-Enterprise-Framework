@@ -1,8 +1,8 @@
 # 📦 SASE Artifact Templates
-## 6 Core Templates for Structured Human-Agent Collaboration
+## Streamlined Templates for Human-Agent Collaboration
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.1.4
+**Date**: January 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Pillar**: 5 - SASE Integration
 **Framework**: SDLC 5.1.3 + SASE/SE 3.0 Integration
@@ -10,67 +10,124 @@
 
 ---
 
+## ⚠️ IMPORTANT: AGENTS.md Migration (ADR-029)
+
+**Effective January 2026**, the following artifacts are **DEPRECATED** in favor of [AGENTS.md](https://agents.md/), the industry standard for AI coding agents:
+
+| Artifact | Status | Migration Path |
+|----------|--------|----------------|
+| **BriefingScript (BRS)** | 🚫 DEPRECATED | → GitHub Issue template + AGENTS.md |
+| **LoopScript (LPS)** | 🚫 DEPRECATED | → AI coders generate own execution plans |
+| **MentorScript (MTS)** | 🚫 DEPRECATED | → AGENTS.md "Conventions" section |
+| **CRP** | ✅ ACTIVE | Governance artifact (keep) |
+| **MRP** | ✅ ACTIVE | Governance artifact (keep) |
+| **VCR** | ✅ ACTIVE | Governance artifact (keep) |
+
+### Why AGENTS.md?
+
+- **Industry standard**: 60,000+ projects using AGENTS.md
+- **Tool support**: Native support in Cursor, Copilot, Claude Code, OpenCode, RooCode
+- **Simplicity**: ≤150 lines Markdown vs 1,400+ lines of YAML/MD
+- **Ecosystem**: Founded by Google, OpenAI, Factory, Sourcegraph
+
+### Migration Steps
+
+1. Run `sdlc agents init` to generate AGENTS.md
+2. Move coding conventions from MTS → AGENTS.md
+3. Convert BRS → GitHub Issue templates
+4. Archive LPS (AI coders generate own plans)
+
+**Reference**: [ADR-029: AGENTS.md Integration Strategy](../../../../docs/02-design/01-ADRs/ADR-029-AGENTS-MD-Integration-Strategy.md)
+
+---
+
 ## 🎯 Overview
 
-**SASE (Software Agentic Software Engineering)** introduces **6 artifact templates** for structured human-agent collaboration. These templates enable teams to transition from ad-hoc AI usage (Level 0) to structured agentic workflows (Level 2+).
+**SASE (Software Agentic Software Engineering)** introduces artifact templates for structured human-agent collaboration. With AGENTS.md adoption, the focus shifts to **3 governance artifacts** (CRP, MRP, VCR) while using the industry standard for AI guidance.
 
-### The 6 SASE Artifacts
+### Current SASE Artifacts (Post-Migration)
 
-| # | Artifact | Created By | Purpose |
-|---|----------|------------|---------|
-| 01 | **BriefingScript (BRS)** | SE4H (Human) | Task specification from human to agent |
-| 02 | **LoopScript (LPS)** | SE4A (Agent) | Execution plan with iterations |
-| 03 | **MentorScript (MTS)** | SE4H (Human) | Coding standards for agent compliance |
-| 04 | **CRP** | SE4A (Agent) | Consultation Request Protocol - when uncertain |
-| 05 | **MRP** | SE4A (Agent) | Merge-Readiness Pack - 5-point evidence |
-| 06 | **VCR** | SE4H (Human) | Version Controlled Resolution - approval record |
+| # | Artifact | Created By | Purpose | Status |
+|---|----------|------------|---------|--------|
+| 01 | **AGENTS.md** | SE4H (Human) | Industry-standard AI guidance | ✅ PRIMARY |
+| 02 | **CRP** | SE4A (Agent) | Consultation Request Protocol - when uncertain | ✅ ACTIVE |
+| 03 | **MRP** | SE4A (Agent) | Merge-Readiness Pack - 5-point evidence | ✅ ACTIVE |
+| 04 | **VCR** | SE4H (Human) | Version Controlled Resolution - approval record | ✅ ACTIVE |
+
+### Deprecated Artifacts (Archive Only)
+
+| # | Artifact | Created By | Purpose | Status |
+|---|----------|------------|---------|--------|
+| 05 | **BriefingScript (BRS)** | SE4H (Human) | Task specification from human to agent | 🚫 DEPRECATED |
+| 06 | **LoopScript (LPS)** | SE4A (Agent) | Execution plan with iterations | 🚫 DEPRECATED |
+| 07 | **MentorScript (MTS)** | SE4H (Human) | Coding standards for agent compliance | 🚫 DEPRECATED |
 
 ---
 
 ## 🔄 Workflow
 
-### Minimum Viable SASE (Level 1)
+### Modern SASE Workflow (With AGENTS.md)
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│               AGENTS.md-BASED WORKFLOW (Recommended)                │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  Human                          Agent                               │
+│    │                              │                                 │
+│    │─── AGENTS.md (repo) ────────▶│  (AI reads conventions)        │
+│    │                              │                                 │
+│    │─── GitHub Issue/Task ───────▶│  (Task specification)          │
+│    │                              │                                 │
+│    │◀── Dynamic Overlay ─────────│  (Context via PR comment)       │
+│    │                              │                                 │
+│    │                    [Execute Task]                              │
+│    │                              │                                 │
+│    │◀── CRP (if uncertain) ──────│  (Escalate to human)           │
+│    │                              │                                 │
+│    │─── Answer CRP ──────────────▶│                                │
+│    │                              │                                 │
+│    │                    [Complete]                                  │
+│    │                              │                                 │
+│    │◀── MRP (5-point evidence) ──│  (Merge readiness)             │
+│    │                              │                                 │
+│    │─── VCR (Approve/Reject) ────▶│  (Human decision)              │
+│    │                              │                                 │
+│    ├── GitHub Check ─────────────▶│  (Enforcement)                 │
+│    │                              │                                 │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Key Differences from Legacy Workflow
+
+| Aspect | Legacy (BRS/MTS/LPS) | Modern (AGENTS.md) |
+|--------|---------------------|-------------------|
+| **AI Guidance** | MentorScript (550 lines) | AGENTS.md (≤150 lines) |
+| **Task Spec** | BriefingScript (307 lines) | GitHub Issue + AGENTS.md |
+| **Execution Plan** | LoopScript (558 lines) | AI generates internally |
+| **Enforcement** | Manual review | GitHub Checks API |
+| **Tool Support** | None | Cursor, Copilot, Claude Code |
+
+### Legacy Workflow (DEPRECATED)
 
 ```
 Human                          Agent
   │                              │
-  │─── BriefingScript (BRS) ────▶│
+  │─── BriefingScript (BRS) ────▶│  ⚠️ DEPRECATED
   │                              │
-  │                    [Execute Task]
+  │─── MentorScript (MTS) ──────▶│  ⚠️ DEPRECATED
   │                              │
-  │◀── Merge-Readiness Pack ────│
-  │        (MRP)                 │
-  │                              │
-  │─── VCR (Approve/Reject) ────▶│
-  │                              │
-```
-
-### Full SASE Workflow (Level 2)
-
-```
-Human                          Agent
-  │                              │
-  │─── BriefingScript (BRS) ────▶│
-  │                              │
-  │─── MentorScript (MTS) ──────▶│
-  │                              │
-  │                    [Create LPS]
-  │                              │
-  │◀── LoopScript (LPS) ────────│
+  │◀── LoopScript (LPS) ────────│  ⚠️ DEPRECATED
   │                              │
   │─── Approve LPS ─────────────▶│
   │                              │
   │                    [Execute]
   │                              │
-  │◀── CRP (if uncertain) ──────│
+  │◀── CRP (if uncertain) ──────│  ✅ KEEP
   │                              │
-  │─── Answer CRP ──────────────▶│
+  │◀── MRP (5-point evidence) ──│  ✅ KEEP
   │                              │
-  │                    [Complete]
-  │                              │
-  │◀── MRP (5-point evidence) ──│
-  │                              │
-  │─── VCR (Approve/Reject) ────▶│
+  │─── VCR (Approve/Reject) ────▶│  ✅ KEEP
   │                              │
 ```
 
