@@ -13,6 +13,8 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 - ✅ **Dual-Track Quality Gates** - Feature Gate (G0-G4) + Sprint Gate (G-Sprint/G-Sprint-Close)
 - ✅ **24h Documentation Enforcement** - Sprint-related docs within 24 hours of completion
 - ✅ **Code Review Sprint Integration** - 4-Layer system with Sprint Context Check
+- ✅ **AI Agent Best Practices (2026)** - Planning Mode, Model Selection Matrix, Sub-agents Guidelines
+- ✅ **ADR-034** - Planning Sub-agent Orchestration (EP-10) for expert workflow alignment
 
 **What's in 5.1.2 (December 24, 2025)**:
 - ✅ **Project Structure Standard** - Clear separation between documentation stage mapping and code folder organization
@@ -144,6 +146,140 @@ Documentation Files:
 - Document naming standards (no sprint references)
 - Archive management (99-Legacy)
 
+## AI Agent Best Practices (2026)
+
+Based on expert AI coding workflow analysis (January 2026), these practices maximize AI-assisted development effectiveness. See [ADR-034](02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md) for full specification.
+
+### Planning Mode (CRITICAL for >15 LOC Changes)
+
+```yaml
+When to Use Planning Mode:
+  - Changes affecting >15 lines of code
+  - Multi-file modifications
+  - New feature implementations
+  - Architectural changes
+
+Planning Mode Workflow:
+  1. Spawn explore sub-agents → Extract patterns from codebase
+  2. Search for similar implementations (agentic grep > RAG)
+  3. Review existing ADRs and conventions
+  4. Build implementation plan based on extracted patterns
+  5. Get human approval before execution
+
+Key Insight:
+  "Agentic grep (AI-powered code search) > RAG indexing"
+  - Direct codebase exploration finds real patterns
+  - RAG can miss context and produce stale results
+```
+
+### Model Selection Matrix
+
+```yaml
+Task-Type Model Routing (2026):
+
+  Large Features (>50 LOC, multi-file):
+    Primary: Claude Opus 4.5 (70% of work)
+    Reason: Best at complex reasoning, multi-file refactoring
+
+  Small Fixes (<15 LOC, single file):
+    Primary: Claude Sonnet 4.5
+    Reason: Fast, accurate for targeted changes
+
+  Architecture & Debugging:
+    Primary: GPT 5.2 (when stuck)
+    Reason: Strong reasoning, different perspective helps
+
+  Design & Creativity:
+    Primary: Gemini 3 Pro
+    Reason: Large context, creative solutions
+
+  Quick Answers & Micro-edits:
+    Primary: Claude Haiku 4.5
+    Reason: Fastest response time
+
+Expert Rule:
+  "Switch models when stuck - different model = different perspective"
+```
+
+### Sub-agents Usage Guidelines
+
+```yaml
+When to Use Sub-agents:
+  ✅ Research and exploration (isolated context)
+  ✅ Pattern extraction before implementation
+  ✅ Parallel information gathering
+  ✅ ADR and convention review
+
+When to AVOID Sub-agents:
+  ❌ Parallel editing in same project (coordination issues)
+  ❌ Tightly coupled operations
+  ❌ Sequential dependencies
+
+Session Management:
+  - Fork sessions to learn without polluting main context
+  - Use Explore sub-agents for pattern discovery
+  - Keep main session clean for implementation
+```
+
+### Developer Role Evolution (Software 3.0)
+
+```yaml
+2026 Developer Responsibilities:
+  ✅ Design feedback loops (not write code)
+  ✅ Monitor agent work quality
+  ✅ Identify patterns and update context files
+  ✅ Make high-level architecture decisions
+  ✅ Update AGENTS.md/CLAUDE.md with learnings
+  ✅ Configure tools/skills/MCP servers
+
+Key Shift:
+  "Developer role = Design feedback loops, NOT write code"
+  - Review AI output for patterns and anti-patterns
+  - Update context files to improve future generations
+  - Make architectural decisions AI cannot make alone
+```
+
+### Specification Generation Workflow
+
+```yaml
+Expert Specification Process:
+  1. Reference Collection
+     - Screenshot/record similar features
+     - Gather existing code patterns
+     - Review related ADRs
+
+  2. PRD Synthesis (Gemini 3 Pro)
+     - Large context for synthesis
+     - Input reference materials
+     - Output structured PRD draft
+
+  3. Interactive Refinement (Claude)
+     - "Interview mode" with ask_user_question
+     - Clarify ambiguities iteratively
+     - Produce refined specification
+
+  4. Dependency Discovery (ChatGPT + Search)
+     - Find recommended packages
+     - Check compatibility with tech stack
+     - Validate library choices
+```
+
+### Feedback Loop Closure
+
+```yaml
+Learning from Code Reviews:
+  1. Extract patterns from PR review comments
+  2. Categorize: pattern_violation | missing_requirement | edge_case | performance
+  3. Store learnings for future reference
+  4. Monthly: Aggregate → Update decomposition hints
+  5. Quarterly: Synthesize → Update CLAUDE.md patterns
+
+Continuous Improvement:
+  - Track recurring review comments
+  - Update context files with lessons learned
+  - Improve future AI generations automatically
+```
+
 ## Repository Structure
 
 ### Core Documentation Structure (SDLC 5.0.0)
@@ -159,15 +295,18 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ├── 02-Core-Methodology/           # Core principles
 │   ├── SDLC-Core-Methodology.md   # Complete 10-stage framework
 │   ├── SDLC-Design-Thinking-Principles.md
+│   ├── SDLC-Agentic-Core-Principles.md
 │   ├── Documentation-Standards/   # ⭐ MOVED HERE
 │   │   ├── SDLC-Document-Naming-Standards.md
 │   │   ├── SDLC-Code-File-Naming-Standards.md
 │   │   └── Team-Collaboration/
-│   └── Governance-Compliance/     # ⭐ NEW IN 5.0
-│       ├── SDLC-Quality-Gates.md
-│       ├── SDLC-Security-Gates.md
-│       ├── SDLC-Observability-Checklist.md
-│       └── SDLC-Change-Management-Standard.md
+│   ├── Governance-Compliance/     # ⭐ NEW IN 5.0
+│   │   ├── SDLC-Quality-Gates.md
+│   │   ├── SDLC-Security-Gates.md
+│   │   ├── SDLC-Observability-Checklist.md
+│   │   └── SDLC-Change-Management-Standard.md
+│   └── 03-ADRs/                   # ⭐ NEW IN 5.1.3
+│       └── ADR-034-Planning-Subagent-Orchestration.md
 │
 ├── 03-Templates-Tools/            # ⭐ REORGANIZED
 │   ├── 1-AI-Tools/                # PRIMARY: 96% time savings
@@ -285,6 +424,7 @@ SDLC 5.1.3 (January 2026)
 **NEW in 5.1.3**:
 - Sprint Planning Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
 - 7-Pillar Architecture documented in Core Methodology and Executive Summary
+- **ADR-034: Planning Sub-agent Orchestration** - [02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md](02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md)
 
 **NEW in 5.1.2**:
 - Project Structure Standard: [02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md](02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md)
