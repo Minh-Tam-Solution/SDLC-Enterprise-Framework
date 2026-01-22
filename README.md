@@ -1,6 +1,6 @@
-# SDLC 5.1.3 Universal Framework
+# SDLC 5.2.0 Universal Framework
 
-**Version**: 5.1.3 | **Status**: ACTIVE | **Date**: January 2025
+**Version**: 5.2.0 | **Status**: ACTIVE | **Date**: January 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,14 +8,19 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 5.2.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
-- **Pillar 2**: Sprint Planning Governance (NEW in 5.1.3)
+- **Pillar 2**: Sprint Planning Governance
 - **Pillar 3**: 4-Tier Classification (LITE → ENTERPRISE)
 - **Pillar 4**: Quality Gates (Dual-Track: Feature + Sprint)
 - **Pillar 5**: SASE Integration (SE 3.0)
 - **Pillar 6**: Documentation Permanence
+
+**NEW in 5.2.0**:
+- **Planning Mode**: Mandatory for >15 LOC changes
+- **Model Selection Matrix**: Task-appropriate AI model routing
+- **AI Agent Best Practices 2026**: Complete orchestration guide
 
 **Proven**: BFlow ($43M, 827:1 ROI), NQH-Bot (₫15B+), MTEP (<30 min PaaS)
 

@@ -1,16 +1,16 @@
 # SDLC Agentic Core Principles
 ## Software Engineering 3.0 - SASE Integration
 
-**Version:** 5.1.3
+**Version:** 5.2.0
 **Status:** ACTIVE - PRODUCTION READY
-**Date:** January 22, 2026 (Updated for AGENTS.md migration)
+**Date:** January 22, 2026 (Planning Mode + Model Selection)
 **Author:** SE 3.0 Track 1 Team
 **Source:** arXiv:2509.06216v2 (SASE Framework)
-**Framework:** SDLC 5.1.3 Complete Lifecycle + SASE Integration + Sprint Governance
+**Framework:** SDLC 5.2.0 Complete Lifecycle + SASE Integration + Planning Mode
 
 ---
 
-## ⚠️ IMPORTANT: AGENTS.md Migration (ADR-029)
+## ⚠️ IMPORTANT: AGENTS.md Migration
 
 **As of January 2026, we have migrated from proprietary BRS/MTS/LPS artifacts to the industry-standard AGENTS.md format.**
 
@@ -30,7 +30,7 @@
 | **MRP** (Merge Request Process) | Code review and approval workflow | ✅ ACTIVE |
 | **VCR** (Value Chain Record) | Compliance and audit trail | ✅ ACTIVE |
 
-**Rationale:** AGENTS.md is the industry standard for AI context (60K+ projects, native IDE support). CRP/MRP/VCR provide the governance layer that AGENTS.md lacks. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md) for full details.
+**Rationale:** AGENTS.md is the industry standard for AI context (60K+ projects, native IDE support). CRP/MRP/VCR provide the governance layer that AGENTS.md lacks.
 
 **This document uses legacy BRS/MTS/LPS terminology for historical context. For new projects, use AGENTS.md template instead.**
 
@@ -114,7 +114,7 @@ This document defines the core principles for integrating Software Agentic Softw
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Note:** Diagram shows updated artifact structure (ADR-029). Legacy diagrams may show BRS/MTS/LPS.
+**Note:** Diagram shows updated artifact structure. Legacy diagrams may show BRS/MTS/LPS.
 
 ### 1.3 AGENTS.md: Industry Standard for AI Context (NEW)
 
@@ -164,7 +164,86 @@ This document defines the core principles for integrating Software Agentic Softw
 
 **See:** `03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` for full template and validation CLI.
 
-### 1.4 Why SASE for SDLC 5.0.0?
+### 1.4 Planning Mode Principle (NEW in 5.2.0)
+
+**Key Insight from Expert Workflow Analysis (Jan 2026):**
+
+> "When AI agents make changes exceeding 15 lines of code, architectural drift becomes a significant risk. Planning mode spawns sub-agents to extract patterns first, then builds on them. This prevents drift."
+
+**Planning Mode Workflow:**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│ PLANNING MODE (MANDATORY for >15 LOC changes)                   │
+│                                                                 │
+│  PHASE 1: PATTERN EXTRACTION (Parallel)                         │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
+│  │ Similar Code │  │ Architecture │  │ Test Pattern │          │
+│  │ Explorer     │  │ Explorer     │  │ Explorer     │          │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘          │
+│         └─────────────────┼─────────────────┘                   │
+│                           ▼                                     │
+│  PHASE 2: SYNTHESIS                                             │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ Planning Agent: Merge patterns → Implementation plan    │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                           ▼                                     │
+│  PHASE 3: HUMAN APPROVAL                                        │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ Present plan → Human reviews → Approve/Modify/Reject     │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                           ▼                                     │
+│  PHASE 4: CONTEXT-AWARE GENERATION                              │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ Generate code following extracted patterns + plan        │   │
+│  └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│  OUTPUT: Code that follows existing patterns + Evidence         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**When to Use Planning Mode:**
+| Change Size | Planning Mode | Rationale |
+|-------------|---------------|-----------|
+| <15 LOC | Optional | Low drift risk, direct execution OK |
+| 15-50 LOC | Recommended | Moderate drift risk |
+| >50 LOC | **Mandatory** | High drift risk, multi-file changes |
+| New feature | **Mandatory** | Requires pattern consistency |
+| Architecture change | **Mandatory** | Must align with existing decisions |
+
+**Key Expert Insight:**
+
+> "Agentic grep (AI-powered code search) > RAG for context retrieval. Direct codebase exploration finds real patterns. RAG can miss context and produce stale results."
+
+**Planning Mode Benefits:**
+1. **Prevents Architectural Drift** - 90% reduction in pattern violations
+2. **Enforces Consistency** - Generated code follows existing patterns
+3. **Human Oversight** - Approval gate before significant changes
+4. **Audit Trail** - Full traceability from plan → code → evidence
+
+### 1.5 Model Selection Matrix (NEW in 5.2.0)
+
+**Task-Appropriate Model Routing:**
+
+| Task Type | Recommended Model Class | Rationale |
+|-----------|------------------------|-----------|
+| Large features (>50 LOC, multi-file) | Premium reasoning model | Best at complex reasoning, multi-file refactoring |
+| Small fixes (<15 LOC, single file) | Fast balanced model | Quick, accurate for targeted changes |
+| Architecture & debugging | Alternative provider | Different perspective when stuck |
+| Design & creativity | Large context model | Creative solutions, synthesis |
+| Quick answers & micro-edits | Fast compact model | Fastest response time |
+
+**Expert Rule:**
+
+> "Switch models when stuck - different model = different perspective"
+
+**Model Selection Guidelines:**
+- Use **premium models** for planning and complex reasoning
+- Use **fast models** for execution and quick iterations
+- Use **alternative providers** when primary model is stuck (different training = different insights)
+- Match context window to task scope (small context for focused edits, large for codebase analysis)
+
+### 1.6 Why SASE for SDLC 5.0.0?
 
 **Problem:** Current SDLC methodologies assume human-only development
 - 60-70% feature waste (built features never used)
@@ -649,7 +728,7 @@ Developer: "Claude, implement the login task from AGENTS.md"
 Agent: [builds login page per documented requirements]
 ```
 
-**Migration Note:** Legacy workflows used BriefingScript (BRS). New projects should use AGENTS.md. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md).
+**Migration Note:** Legacy workflows used BriefingScript (BRS). New projects should use AGENTS.md format.
 
 ### Principle 2: Evidence-Based MRP
 
@@ -1070,7 +1149,7 @@ level_3_requirements:
 - [ ] Update AGENTS.md based on learnings (code standards, patterns)
 - [ ] Document challenges and solutions
 
-**Migration Note:** For teams using legacy BRS/MTS/LPS artifacts, use `sdlcctl agents migrate` to convert to AGENTS.md format. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md).
+**Migration Note:** For teams using legacy BRS/MTS/LPS artifacts, convert to AGENTS.md format for industry-standard AI context.
 
 ### 5.2 Scaling Up (Level 1 → Level 2)
 
@@ -1183,11 +1262,7 @@ level_3_requirements:
    - docs/03-Development-Implementation/04-Phase-Plans/PHASE-01-AI-COUNCIL-SERVICE.md
    - Multi-provider AI integration
 
-4. **ADR-029: AGENTS.md Migration**
-   - 99-Legacy/ADR-029-AGENTS-MD-Migration.md
-   - BRS/MTS/LPS → AGENTS.md migration rationale and steps
-
-5. **AGENTS.md Template**
+4. **AGENTS.md Template**
    - 03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md
    - Complete template with validation CLI
 
@@ -1205,7 +1280,8 @@ level_3_requirements:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 5.1.0-alpha | Dec 2025 | SE 3.0 Team | Initial draft - Phase 1-Spec |
-| 5.1.3 | Jan 2026 | SE 3.0 Team | AGENTS.md migration (ADR-029) |
+| 5.1.3 | Jan 2026 | SE 3.0 Team | AGENTS.md migration |
+| 5.2.0 | Jan 2026 | SE 3.0 Team | Planning Mode + Model Selection Matrix |
 
 **Review Schedule:**
 - CTO Review: December 20, 2025 (3pm) - APPROVED

@@ -1,10 +1,134 @@
-# 📋 MTS SDLC Framework - CHANGELOG
+# MTS SDLC Framework - CHANGELOG
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 5.1.3 Enterprise Framework - 7-Pillar Architecture + Sprint Planning Governance
+**Framework**: SDLC 5.2.0 Enterprise Framework - Planning Mode + AI Agent Best Practices 2026
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: January 2025 (SDLC 5.1.3 Sprint Planning Governance)
+**Last Updated**: January 2026 (SDLC 5.2.0 Planning Mode + Model Selection)
+
+---
+
+## 🚀 Version 5.2.0 - January 2026 (MAJOR RELEASE)
+
+**Release Date**: January 22, 2026
+**Type**: MAJOR RELEASE - Planning Mode + AI Agent Best Practices 2026
+**Status**: PRODUCTION-READY
+**Breaking Changes**: Yes - Deprecated artifacts removed, renumbered SASE artifacts
+**Supersedes**: SDLC 5.1.3 Sprint Planning Governance
+**Achievement**: Complete AI Agent orchestration with Planning Mode
+
+### 🎯 Key Enhancement: Planning Mode + Model Selection Matrix
+
+**THE CHANGE**: Introduced Planning Mode for >15 LOC changes and task-appropriate model routing.
+
+| Feature | Description |
+|---------|-------------|
+| **Planning Mode** | Mandatory pre-implementation pattern extraction for >15 LOC changes |
+| **Model Selection Matrix** | Task-type aware model routing (Premium, Balanced, Compact) |
+| **Sub-agent Orchestration** | Session management patterns for focused AI tasks |
+| **Agentic Grep > RAG** | Direct codebase exploration beats indexed retrieval |
+| **Developer Role Evolution** | Design feedback loops, not write code |
+
+### 🆕 Planning Mode (NEW)
+
+**Threshold**: >15 LOC changes require Planning Mode
+
+**4-Phase Workflow**:
+1. **Pattern Extraction** - Parallel sub-agents explore similar code, ADRs, test patterns
+2. **Synthesis** - Merge patterns into implementation plan
+3. **Human Approval** - Present plan for validation
+4. **Context-Aware Generation** - Generate code following extracted patterns
+
+**Key Insight**:
+> "Agentic grep (AI-powered code search) > RAG for context retrieval. Direct codebase exploration finds real patterns. RAG can miss context and produce stale results."
+
+### 🆕 Model Selection Matrix (NEW)
+
+| Task Type | Model Class | Use When |
+|-----------|-------------|----------|
+| Large features (>50 LOC) | Premium Reasoning | New features, major refactors |
+| Small fixes (<15 LOC) | Fast Balanced | Bug fixes, minor updates |
+| Architecture & debugging | Alternative Provider | Complex bugs, stuck problems |
+| Design & creativity | Large Context | PRDs, design docs |
+| Quick answers | Fast Compact | Code lookup, simple questions |
+
+**Expert Rule**: "Switch models when stuck - different model = different perspective"
+
+### 🆕 AI Agent Best Practices 2026 Guide (NEW)
+
+**New folder**: `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/`
+
+| Guide | Purpose |
+|-------|---------|
+| 01-planning-mode.md | Pre-implementation pattern extraction |
+| 02-model-selection-matrix.md | Task-appropriate model routing |
+| 03-sub-agent-orchestration.md | Session management patterns |
+| 04-prompting-best-practices.md | Effective AI communication |
+| 05-memory-context-management.md | CLAUDE.md patterns |
+| 06-permissions-security.md | Safe AI execution |
+| 07-developer-role-evolution.md | SE 3.0 responsibilities |
+
+### 🔄 SASE Artifacts Restructured
+
+**Removed** (deprecated in 5.1.3, now deleted):
+- BriefingScript (BRS) - replaced by GitHub Issues
+- LoopScript (LPS) - AI generates internally
+- MentorScript (MTS) - replaced by AGENTS.md
+
+**Renumbered** (was 04-06, now 01-03):
+- 01-CRP-Template.md (was 04)
+- 02-MRP-Template.md (was 05)
+- 03-VCR-Template.md (was 06)
+
+**Active SASE Artifacts**:
+| # | Artifact | Purpose |
+|---|----------|---------|
+| - | AGENTS.md | Industry-standard AI guidance |
+| 01 | CRP | Consultation Request Protocol |
+| 02 | MRP | Merge-Readiness Pack (5-point evidence) |
+| 03 | VCR | Version Controlled Resolution |
+
+### 📝 Framework-First Compliance Clarified
+
+**Key principle**: ADRs and implementation details belong in Orchestrator, not Framework.
+
+- Framework = Methodology layer (vendor-neutral, timeless)
+- Orchestrator = Implementation layer (tool-specific ADRs)
+
+**Removed from Framework**:
+- ADR-029 reference links (Orchestrator-specific)
+- ADR-034 file (moved to Orchestrator)
+
+### 📂 Files Added/Updated
+
+**New - AI Agent Best Practices 2026**:
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md
+- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md
+
+**Updated - Core Methodology**:
+- 02-Core-Methodology/SDLC-Agentic-Core-Principles.md (5.2.0, Planning Mode, Model Selection)
+
+**Updated - SASE Artifacts**:
+- 03-Templates-Tools/SASE-Artifacts/README.md (5.2.0, renumbered)
+- Renamed: 04-CRP → 01-CRP, 05-MRP → 02-MRP, 06-VCR → 03-VCR
+
+**Removed**:
+- 02-Core-Methodology/03-ADRs/ (Orchestrator-specific)
+- 99-Legacy/ADR-029-AGENTS-MD-Migration.md (Orchestrator-specific)
+
+### 🎓 Learning Source
+
+**Expert Workflow Analysis (Jan 2026)**:
+- Planning Mode prevents architectural drift
+- Agentic grep outperforms RAG for pattern extraction
+- Model switching provides fresh perspective when stuck
+- Developer role shifts to feedback loop design
 
 ---
 
