@@ -1,33 +1,75 @@
-# SDLC 5.1.3 Executive Summary
+# SDLC 5.2.0 Executive Summary
 
-**Version**: 5.1.3
-**Release Date**: January 22, 2026 (AGENTS.md Migration)
+**Version**: 5.2.0
+**Release Date**: January 22, 2026 (Planning Mode + AI Agent Best Practices)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
-## ⚠️ AGENTS.md Migration (ADR-029)
+## What's New in 5.2.0
 
-**As of January 2026, we have migrated from proprietary BRS/MTS/LPS artifacts to the industry-standard AGENTS.md format.**
+### Planning Mode (MANDATORY for >15 LOC)
 
-- **Deprecated**: BriefingScript (BRS), MentorScript (MTS), LoopScript (LPS)
-- **Replacement**: AGENTS.md (60K+ projects, native IDE support in Cursor, Copilot, Claude Code)
-- **Still Active**: CRP (Consultation Request), MRP (Merge-Readiness Pack), VCR (Value Chain Record)
-- **See**: [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md) for full migration details
+**Key insight**: AI agents making changes exceeding 15 lines of code risk architectural drift.
 
-**Strategic Positioning**: "Governance Layer for AGENTS.md" - We provide gates, approvals, evidence chains that AI coding tools lack.
+**Solution**: 4-phase planning workflow:
+1. **Pattern Extraction** - Parallel sub-agents explore similar code, ADRs, test patterns
+2. **Synthesis** - Merge patterns into implementation plan
+3. **Human Approval** - Present plan for validation
+4. **Context-Aware Generation** - Generate code following extracted patterns
+
+> "Agentic grep (AI-powered code search) > RAG for context retrieval. Direct codebase exploration finds real patterns."
+
+### Model Selection Matrix
+
+| Task Type | Model Class | Use When |
+|-----------|-------------|----------|
+| Large features (>50 LOC) | Premium Reasoning | Complex multi-file refactoring |
+| Small fixes (<15 LOC) | Fast Balanced | Bug fixes, minor updates |
+| Architecture & debugging | Alternative Provider | When stuck, need fresh perspective |
+| Design & creativity | Large Context | PRDs, design docs |
+| Quick answers | Fast Compact | Code lookup, simple questions |
+
+**Expert Rule**: "Switch models when stuck - different model = different perspective"
+
+### AI Agent Best Practices 2026
+
+New comprehensive guide covering:
+- Planning Mode workflow
+- Model Selection Matrix
+- Sub-agent Orchestration
+- Prompting Best Practices
+- Memory & Context Management
+- Permissions & Security
+- Developer Role Evolution
+
+**Location**: `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/`
+
+### SASE Artifacts Restructured
+
+**Removed** (deprecated):
+- BriefingScript (BRS) → Use GitHub Issues
+- LoopScript (LPS) → AI generates internally
+- MentorScript (MTS) → Use AGENTS.md
+
+**Active** (renumbered 01-03):
+- 01-CRP-Template.md (Consultation Request Protocol)
+- 02-MRP-Template.md (Merge-Readiness Pack)
+- 03-VCR-Template.md (Version Controlled Resolution)
 
 ---
 
 ## Framework Overview
 
-**SDLC 5.1.3** is a **10-Stage AI+Human Excellence Framework** combining:
-- **10 Lifecycle Stages** (00-09): Complete software development journey
-- **4-Tier Classification**: LITE → ENTERPRISE (team size-based)
-- **SASE Integration** (SE 3.0): Software Agentic Software Engineering
-- **Design Thinking Foundation**: 5-phase user-centered approach
-- **6-Pillar Architecture**: AI-Native Excellence standards
+**SDLC 5.2.0** is a **7-Pillar AI+Human Excellence Framework** combining:
+- **Pillar 0**: Design Thinking Foundation
+- **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
+- **Pillar 2**: Sprint Planning Governance
+- **Pillar 3**: 4-Tier Classification (LITE → ENTERPRISE)
+- **Pillar 4**: Quality Gates (Dual-Track: Feature + Sprint)
+- **Pillar 5**: SASE Integration (SE 3.0)
+- **Pillar 6**: Documentation Permanence
 
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -37,7 +79,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.1.2 - 10 STAGES                           │
+│                    SDLC 5.2.0 - 10 STAGES                           │
 ├─────────────────────────────────────────────────────────────────────┤
 │  00 FOUNDATION  (WHY?)      Strategic Discovery & Validation        │
 │  01 PLANNING    (WHAT?)     Requirements & User Stories             │
@@ -88,68 +130,59 @@
 |--------|-------------------|----------------------|
 | **Role** | Guide & supervise AI agents | Implement human-specified intent |
 | **Decision Authority** | FINAL (veto power) | NONE (propose only) |
-| **Artifacts Created** | AGENTS.md, VCR | LoopScript.yaml, CRP, MRP |
+| **Artifacts Created** | AGENTS.md, VCR | CRP, MRP |
 
-> **Note**: Legacy docs may reference BRS/MTS/LPS. New projects use AGENTS.md. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md).
+### SASE Artifacts (5.2.0)
 
-### SASE × SDLC Stage Mapping
+| # | Artifact | Purpose |
+|---|----------|---------|
+| - | **AGENTS.md** | Industry-standard AI guidance |
+| 01 | **CRP** | Consultation Request Protocol (escalate uncertainty) |
+| 02 | **MRP** | Merge-Readiness Pack (5-point evidence) |
+| 03 | **VCR** | Version Controlled Resolution (approval record) |
 
-| Stage | SASE Discipline | Primary Activity |
-|-------|-----------------|------------------|
-| 00 Foundation | None | Human-only strategic work |
-| 01 Planning | AGENTS.md Eng | Create/update AGENTS.md |
-| 02 Design | ALE + ATIE | Design LoopScript, update AGENTS.md |
-| 03 Integrate | ATME + ATIE | CRP generation, API contracts |
-| 04 Build | ATLE | Build ACE/AEE |
-| 05 Test | ALE + ATME | Execute LoopScript, generate MRP |
-| 06 Deploy | ATME | Validation, coverage |
-| 07 Operate | ATME + AGE | Monitoring, verification |
-| 08 Collaborate | ATIE + AGE | Code review, team coordination |
-| 09 Govern | AGE | Policy, audit |
-
-### Agentic Maturity Levels
+### Agentic Maturity Levels (Updated 5.2.0)
 
 | Level | Name | Characteristic |
 |-------|------|----------------|
 | **L0** | Tool-Assisted | AI as autocomplete |
-| **L1** | Agent-Assisted | Structured handoff |
-| **L2** | Structured Agentic | Full SASE workflow |
-| **L3** | Lifecycle Agentic | Proactive agents |
+| **L1** | Agent-Assisted | AGENTS.md + MRP + VCR |
+| **L2** | Structured Agentic | Full SASE + CRP workflow |
+| **L3** | Lifecycle Agentic | All + Planning Mode + Dynamic Context |
 
 ---
 
-## 6-Pillar Architecture
+## 7-Pillar Architecture
 
 ```yaml
 Pillar 0: Design Thinking Foundation
   - 5 phases: EMPATHIZE → DEFINE → IDEATE → PROTOTYPE → TEST
-  - 9 practical templates
   - User-centered validation
 
-Pillar 1: AI-Native Excellence Standards
-  - Zero Mock Policy (no placeholders, real implementations)
-  - Contract-first development
-  - 80%+ test coverage target
+Pillar 1: 10-Stage Lifecycle
+  - Complete software development journey
+  - Stage-appropriate governance
 
-Pillar 2: AI+Human Orchestration
-  - 10-50x productivity potential
-  - Claude Code + Cursor + Copilot coordination
-  - Quality gates at each stage
+Pillar 2: Sprint Planning Governance (5.1.3)
+  - G-Sprint / G-Sprint-Close gates
+  - 24h documentation enforcement
+  - Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
 
-Pillar 3: Quality Governance
-  - System Thinking (4-layer Iceberg Model)
-  - DORA metrics tracking
-  - OWASP ASVS compliance
+Pillar 3: 4-Tier Classification
+  - LITE → ENTERPRISE scaling
+  - Team size-appropriate requirements
 
-Pillar 4: Documentation Permanence
-  - AI-parseable formats (Markdown, YAML)
-  - Permanent naming (no dates in filenames)
-  - 10-stage /docs structure alignment
+Pillar 4: Quality Gates (Dual-Track)
+  - Feature gates: G0.1 → G4
+  - Sprint gates: G-Sprint, G-Sprint-Close
 
-Pillar 5: Continuous Compliance
-  - Real-time monitoring (<5 min violation detection)
-  - 24-48 hour crisis response
-  - Regulatory compliance (Vietnamese laws)
+Pillar 5: SASE Integration (SE 3.0)
+  - Human-AI collaboration patterns
+  - AGENTS.md + CRP/MRP/VCR governance
+
+Pillar 6: Documentation Permanence
+  - AI-parseable formats
+  - Permanent naming conventions
 ```
 
 ---
@@ -167,16 +200,14 @@ Pillar 5: Continuous Compliance
 | G3 | 04-05 | Ship ready, tests passing |
 | G4 | 06-07 | Production stable |
 
-### Sprint Governance Gates (G-Sprint) - NEW in 5.1.3
+### Sprint Governance Gates
 
 | Gate | Stage | Key Criteria |
 |------|-------|--------------|
 | G-Sprint | Pre-Sprint | Sprint plan approved, goal aligned, capacity validated |
 | G-Sprint-Close | Post-Sprint | Work accounted, retro done, docs updated within 24h |
 
-> **Reference**: [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
-
-### 10 Golden Rules of Sprint Governance (5.1.3)
+### 10 Golden Rules of Sprint Governance
 
 ```
  1. Sprint Numbers Are Immutable
@@ -253,11 +284,9 @@ SDLC 5.0 (Dec 2025)   → 4-Tier Classification + Governance
 SDLC 5.1.0 (Dec 2025) → SASE Integration + Stage Restructure
 SDLC 5.1.1 (Dec 2025) → Legacy/Archive + Stage Consistency
 SDLC 5.1.2 (Dec 2025) → Complete Lifecycle + SASE Integration
-SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration (ADR-029) ⭐ LATEST
+SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration
+SDLC 5.2.0 (Jan 2026) → Planning Mode + AI Agent Best Practices 2026 ⭐ LATEST
 ```
-
-> **5.1.3 Trigger**: BFlow Sprint 86 Direction Confusion incident revealed critical sprint governance gaps.
-> See [Case Study](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
 
 ---
 
@@ -268,23 +297,18 @@ SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration (ADR-029) ⭐ 
 - [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
 - [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md)
 
-**Governance (5.1.3)**:
-- [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md) ⭐ NEW
-- [SDLC-Quality-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
-- [When-Planning-Sprint.md](../02-Core-Methodology/Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) ⭐ NEW
+**AI Agent Best Practices 2026** (NEW):
+- [AI Agent Best Practices 2026](../03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md) ⭐ NEW
+- [Planning Mode Guide](../03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md) ⭐ NEW
+- [Model Selection Matrix](../03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md) ⭐ NEW
 
-**Implementation Guides**:
-- [SDLC-Implementation-Guide.md](../05-Implementation-Guides/SDLC-Implementation-Guide.md)
-- [SDLC-Universal-Code-Review-Framework.md](../05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
+**Governance**:
+- [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+- [SDLC-Quality-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
 
 **Templates**:
 - [AGENTS.md Template](../03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) ⭐ RECOMMENDED
 - [SASE Artifact Templates](../03-Templates-Tools/SASE-Artifacts/)
-- [Design Thinking Templates](../03-Templates-Tools/3-Manual-Templates/design-thinking/)
-- [Deprecated Templates](../99-Legacy/SASE-Deprecated-Artifacts/) (BRS/MTS/LPS - reference only)
-
-**Case Studies**:
-- [BFlow Sprint 86 Direction Confusion](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) ⭐ NEW
 
 ---
 
@@ -311,7 +335,7 @@ SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration (ADR-029) ⭐ 
 
 ---
 
-**Last Updated**: January 22, 2026 (AGENTS.md Migration)
+**Last Updated**: January 22, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
-**Version**: 5.1.3
+**Version**: 5.2.0
