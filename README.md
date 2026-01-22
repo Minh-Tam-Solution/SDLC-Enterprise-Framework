@@ -18,8 +18,9 @@ SDLC 5.2.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 6**: Documentation Permanence
 
 **NEW in 5.2.0**:
-- **Planning Mode**: Mandatory for >15 LOC changes
-- **Model Selection Matrix**: Task-appropriate AI model routing
+- **AI Governance Principles**: 7 timeless principles for AI+Human collaboration
+- **Risk-Based Planning**: Planning triggered by risk factors, not LOC count
+- **Concentric Circles Model**: Core (timeless) → Governance (stable) → Outer Ring (tools)
 - **AI Agent Best Practices 2026**: Complete orchestration guide
 
 **Proven**: BFlow ($43M, 827:1 ROI), NQH-Bot (₫15B+), MTEP (<30 min PaaS)
@@ -115,6 +116,35 @@ SDLC 5.2.0 is a **7-Pillar AI+Human Excellence Framework** with:
 
 ---
 
+## Concentric Circles Model (NEW in 5.2.0)
+
+Framework content is organized by stability:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│    ┌─────────────────────────────────────────────────────┐     │
+│    │         🎯 CORE (Timeless Principles)              │     │
+│    │                                                     │     │
+│    │    • Design Thinking          • Quality Gates      │     │
+│    │    • 10-Stage Lifecycle       • Human Accountability│     │
+│    │    • AI Governance Principles (NEW)                │     │
+│    └─────────────────────────────────────────────────────┘     │
+│                                                                 │
+│              📋 GOVERNANCE (Stable Rules)                      │
+│              4-Tier, Sprint Planning, Roles, SASE              │
+│                                                                 │
+│         🔧 OUTER RING (Tool Guides - Changes Often)            │
+│         Claude, Cursor, Copilot specific content               │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+> **Philosophy**: "Govern tools, don't document them."
+> Framework documents timeless principles. Tool-specific content lives in outer ring.
+
+---
+
 ## Framework Structure
 
 ```
@@ -125,8 +155,16 @@ SDLC-Enterprise-Framework/
 │   ├── SDLC-Agentic-Core-Principles.md
 │   ├── Documentation-Standards/
 │   └── Governance-Compliance/
+├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (NEW)
+│   ├── 01-AI-Human-Collaboration.md
+│   ├── 02-Agent-Accountability.md
+│   ├── 03-Planning-Mode-Principle.md
+│   ├── 04-Verification-Principle.md
+│   ├── 05-Context-Management.md
+│   ├── 06-Tool-Evaluation-Criteria.md
+│   └── 07-Anti-Patterns.md
 ├── 03-Templates-Tools/           # Templates & Automation
-│   ├── SASE-Artifacts/           # BRS, LPS, MTS, CRP, MRP, VCR
+│   ├── SASE-Artifacts/           # CRP, MRP, VCR (MTS/BRS/LPS deprecated)
 │   ├── 1-AI-Tools/
 │   ├── 2-Agent-Templates/
 │   └── 3-Manual-Templates/
@@ -135,7 +173,9 @@ SDLC-Enterprise-Framework/
 ├── 06-Training-Materials/
 ├── 07-Continuous-Improvement/
 ├── 08-Version-History/
-└── 99-Legacy/                    # Archive
+├── 99-Legacy/                    # Archive
+├── CONTENT-MAP.md                # Topic → file mapping (NEW)
+└── DEPRECATION-POLICY.md         # Redirect rules (NEW)
 ```
 
 ---
@@ -165,6 +205,7 @@ SDLC-Enterprise-Framework/
 - [SDLC-Executive-Summary.md](./01-Overview/SDLC-Executive-Summary.md)
 - [SDLC-Core-Methodology.md](./02-Core-Methodology/SDLC-Core-Methodology.md)
 - [SDLC-Agentic-Core-Principles.md](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
+- [AI Governance Principles](./03-AI-GOVERNANCE/) - **NEW in 5.2.0** (7 timeless principles)
 
 **Standards**:
 - [SDLC-Document-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Document-Naming-Standards.md)
@@ -188,6 +229,7 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
+| 5.2.0 | Jan 22, 2026 | **Principle-Centric Restructuring** - AI Governance Principles, Risk-Based Planning, Concentric Circles Model, CONTENT-MAP.md, DEPRECATION-POLICY.md |
 | 5.1.3 | Jan 18, 2026 | **Sprint Planning Governance** - G-Sprint/G-Sprint-Close gates, Roadmap Change Control, 10 Golden Rules |
 | 5.1.2 | Dec 24, 2025 | Quality Gates enhancement, Change Management update |
 | 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
