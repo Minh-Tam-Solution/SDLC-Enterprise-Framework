@@ -3,10 +3,36 @@
 
 **Version:** 5.1.3
 **Status:** ACTIVE - PRODUCTION READY
-**Date:** January 18, 2026
+**Date:** January 22, 2026 (Updated for AGENTS.md migration)
 **Author:** SE 3.0 Track 1 Team
 **Source:** arXiv:2509.06216v2 (SASE Framework)
 **Framework:** SDLC 5.1.3 Complete Lifecycle + SASE Integration + Sprint Governance
+
+---
+
+## ⚠️ IMPORTANT: AGENTS.md Migration (ADR-029)
+
+**As of January 2026, we have migrated from proprietary BRS/MTS/LPS artifacts to the industry-standard AGENTS.md format.**
+
+### What Changed
+
+| Deprecated | Replacement | Status |
+|------------|-------------|--------|
+| BriefingScript (BRS) | AGENTS.md (Project Context + Tasks) | ⛔ DEPRECATED |
+| MentorScript (MTS) | AGENTS.md (Code Standards + Best Practices) | ⛔ DEPRECATED |
+| LoopScript (LPS) | AGENTS.md (Execution Plan) + LoopScript.yaml (tracking) | ⛔ DEPRECATED |
+
+### What Stays (ACTIVE)
+
+| Artifact | Purpose | Status |
+|----------|---------|--------|
+| **CRP** (Consultation Request) | Human escalation for complex decisions | ✅ ACTIVE |
+| **MRP** (Merge Request Process) | Code review and approval workflow | ✅ ACTIVE |
+| **VCR** (Value Chain Record) | Compliance and audit trail | ✅ ACTIVE |
+
+**Rationale:** AGENTS.md is the industry standard for AI context (60K+ projects, native IDE support). CRP/MRP/VCR provide the governance layer that AGENTS.md lacks. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md) for full details.
+
+**This document uses legacy BRS/MTS/LPS terminology for historical context. For new projects, use AGENTS.md template instead.**
 
 ---
 
@@ -16,14 +42,15 @@ This document defines the core principles for integrating Software Agentic Softw
 
 **Target Audience:**
 - Engineering Managers (Agent Coaches)
-- Tech Leads (MentorScript authors)
+- Tech Leads (AGENTS.md maintainers)
 - Developers (working alongside AI agents)
-- PM/POs (BriefingScript creators)
+- PM/POs (Project context authors)
 
 **Prerequisite Knowledge:**
 - SDLC 5.0.0 Complete Lifecycle (10 stages)
 - Basic AI/LLM concepts (prompts, context, tokens)
 - Git workflow (branching, PRs, code review)
+- AGENTS.md format (recommended: see `03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md`)
 
 ---
 
@@ -74,9 +101,9 @@ This document defines the core principles for integrating Software Agentic Softw
 │  │ - Mentor        │         │ - Test          │           │
 │  │ - Validate      │         │ - Document      │           │
 │  │                 │         │                 │           │
-│  │ BriefingScript  │         │ LoopScript      │           │
-│  │ MentorScript    │         │ CRP             │           │
-│  │ VCR (approval)  │         │ MRP (evidence)  │           │
+│  │ AGENTS.md       │         │ AGENTS.md       │           │
+│  │ + CRP/MRP/VCR   │         │ + LoopScript    │           │
+│  │ (governance)    │         │ (execution)     │           │
 │  └─────────────────┘         └─────────────────┘           │
 │                                                             │
 │  ┌─────────────────┐         ┌─────────────────┐           │
@@ -87,7 +114,57 @@ This document defines the core principles for integrating Software Agentic Softw
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 1.3 Why SASE for SDLC 5.0.0?
+**Note:** Diagram shows updated artifact structure (ADR-029). Legacy diagrams may show BRS/MTS/LPS.
+
+### 1.3 AGENTS.md: Industry Standard for AI Context (NEW)
+
+**As of January 2026, AGENTS.md is the industry-standard format for AI agent context files.**
+
+**Why AGENTS.md?**
+- **60,000+ projects** on GitHub use AGENTS.md
+- **Native IDE support** in Cursor, GitHub Copilot, Claude Code, Windsurf, OpenCode, Roo
+- **Single file** vs 3 separate artifacts (BRS/MTS/LPS)
+- **Lower learning curve** - developers already know the format
+- **Better positioning** - "Governance layer for AGENTS.md" vs "yet another proprietary format"
+
+**AGENTS.md Structure:**
+```markdown
+# AGENTS.md
+
+## Project Context
+- What we're building
+- Why it matters
+- Key constraints
+
+## Architecture
+- Tech stack
+- System design
+- Data models
+
+## Code Standards
+- Style guide
+- Best practices
+- Common patterns
+
+## Tasks
+- Current sprint goals
+- Acceptance criteria
+- Definition of Done
+
+## Execution Plan
+- Implementation steps
+- Testing approach
+- Deployment checklist
+```
+
+**SDLC 5.1.3 Enhancement:** Dynamic Context Engine
+- AGENTS.md updates automatically based on gate status (Planning → Design → Build)
+- Gate-triggered context overlay (e.g., "Currently in BUILD stage, CRP escalation required for architecture changes")
+- This is our **TRUE MOAT** - no competitor has gate-aware dynamic context
+
+**See:** `03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` for full template and validation CLI.
+
+### 1.4 Why SASE for SDLC 5.0.0?
 
 **Problem:** Current SDLC methodologies assume human-only development
 - 60-70% feature waste (built features never used)
@@ -528,28 +605,29 @@ lessons_learned:
 
 ## 3. THE 7 AGENTIC PRINCIPLES
 
-### Principle 1: Brief-First
+### Principle 1: AGENTS.md First (Updated from "Brief-First")
 
-**Definition:** Agent Coach ALWAYS creates BriefingScript before agent starts any work.
+**Definition:** Agent Coach ALWAYS creates/updates AGENTS.md before agent starts any work.
 
 **Rationale:**
 - Prevents agents from "hallucinating" requirements
-- Ensures human intent is explicitly documented
+- Ensures human intent is explicitly documented via industry-standard format
 - Creates audit trail for decisions
-- Enables multiple agents to work from same brief
+- Leverages native IDE support (Cursor, Copilot, Claude Code)
+- Enables multiple agents to work from same context file
 
 **Implementation:**
 ```
 ┌─────────────────────────────────────────────────────┐
-│ BRIEF-FIRST WORKFLOW                                │
+│ AGENTS.MD FIRST WORKFLOW                            │
 │                                                     │
-│ 1. SE4H creates BriefingScript (BRS)               │
+│ 1. SE4H creates/updates AGENTS.md                  │
 │    ↓                                                │
-│ 2. BRS committed to repository (version controlled) │
+│ 2. AGENTS.md committed to repository (versioned)   │
 │    ↓                                                │
-│ 3. SE4A receives BRS (read-only)                   │
+│ 3. SE4A reads AGENTS.md (native tool support)      │
 │    ↓                                                │
-│ 4. SE4A creates LoopScript (plan to execute BRS)   │
+│ 4. SE4A creates LoopScript.yaml (execution plan)   │
 │    ↓                                                │
 │ 5. SE4H approves LoopScript                        │
 │    ↓                                                │
@@ -559,17 +637,19 @@ lessons_learned:
 └─────────────────────────────────────────────────────┘
 ```
 
-**Anti-Pattern:** Starting agent work without BriefingScript
+**Anti-Pattern:** Starting agent work without AGENTS.md
 ```
 ❌ WRONG:
 Developer: "Hey Claude, build me a login page"
 Agent: [builds login page based on assumptions]
 
 ✅ CORRECT:
-Developer: Creates BRS-2025-001-Login-Page.yaml
-Developer: "Claude, execute BRS-2025-001"
+Developer: Updates AGENTS.md with login requirements
+Developer: "Claude, implement the login task from AGENTS.md"
 Agent: [builds login page per documented requirements]
 ```
+
+**Migration Note:** Legacy workflows used BriefingScript (BRS). New projects should use AGENTS.md. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md).
 
 ### Principle 2: Evidence-Based MRP
 
@@ -974,26 +1054,29 @@ level_3_requirements:
 **Week 1: Foundation**
 - [ ] Read this document fully
 - [ ] Identify first pilot project (small, low-risk)
-- [ ] Create first BriefingScript (BRS) for pilot
-- [ ] Define MentorScript (MTS) for pilot domain
+- [ ] Create AGENTS.md for pilot project (use `sdlcctl agents init`)
+- [ ] Validate AGENTS.md structure (`sdlcctl agents validate`)
 
 **Week 2: First Execution**
-- [ ] Agent creates LoopScript (LPS) from BRS
-- [ ] Human approves LPS
-- [ ] Agent executes LPS, creates MRP
+- [ ] Agent reads AGENTS.md (native IDE support)
+- [ ] Agent creates LoopScript.yaml (execution plan)
+- [ ] Human approves LoopScript
+- [ ] Agent executes LoopScript, creates MRP
 - [ ] Human reviews MRP, issues VCR
 
 **Week 3-4: Iteration**
 - [ ] Repeat for 5-10 tasks
 - [ ] Track metrics (CRP rate, approval rate)
-- [ ] Update MentorScript based on learnings
+- [ ] Update AGENTS.md based on learnings (code standards, patterns)
 - [ ] Document challenges and solutions
+
+**Migration Note:** For teams using legacy BRS/MTS/LPS artifacts, use `sdlcctl agents migrate` to convert to AGENTS.md format. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md).
 
 ### 5.2 Scaling Up (Level 1 → Level 2)
 
 **Prerequisites:**
 - 10+ successful Level 1 executions
-- MentorScript covers 80%+ of common patterns
+- AGENTS.md covers 80%+ of common patterns
 - CRP rate <20%
 - Team trained on SASE workflow
 
@@ -1015,19 +1098,20 @@ level_3_requirements:
 1. Cross-sprint memory (agent remembers past work)
 2. Proactive suggestions (agent proposes improvements)
 3. Self-healing (agent detects and fixes own errors)
-4. Knowledge synthesis (agent updates MentorScript)
+4. Knowledge synthesis (agent updates AGENTS.md)
+5. **Dynamic Context Overlay** (SDLC 5.1.3 unique): AGENTS.md auto-updates based on gate status
 
 ### 5.4 Common Pitfalls
 
-**Pitfall 1: Skipping BriefingScript**
+**Pitfall 1: Skipping AGENTS.md Creation**
 - Problem: Starting agent work without documented requirements
 - Symptom: High CRP rate, frequent misunderstandings
-- Solution: Enforce Brief-First principle strictly
+- Solution: Enforce AGENTS.md First principle strictly
 
-**Pitfall 2: Insufficient MentorScript**
-- Problem: Agent doesn't know domain patterns
+**Pitfall 2: Insufficient AGENTS.md Context**
+- Problem: Agent doesn't know domain patterns or constraints
 - Symptom: Code doesn't follow team conventions
-- Solution: Invest time in comprehensive MentorScript
+- Solution: Invest time in comprehensive AGENTS.md (use template)
 
 **Pitfall 3: Ignoring CRPs**
 - Problem: Delayed or no response to agent questions
@@ -1054,11 +1138,12 @@ level_3_requirements:
 | **AEE** | Agent Execution Environment - infrastructure for agents to execute |
 | **Agent Coach** | Human role (SE4H) - guides and supervises agents |
 | **Agent Executor** | AI role (SE4A) - implements human-specified intent |
-| **BRS** | BriefingScript - human-created task specification |
+| **AGENTS.md** | Industry-standard AI context file (60K+ projects, native IDE support) |
+| **BRS** | BriefingScript - DEPRECATED (use AGENTS.md) |
 | **CRP** | Consultation Request Protocol - agent escalation to human |
-| **LPS** | LoopScript - agent-created execution plan |
+| **LPS** | LoopScript - agent-created execution plan (still ACTIVE) |
 | **MRP** | Merge-Readiness Pack - evidence package for code merge |
-| **MTS** | MentorScript - coding standards and patterns |
+| **MTS** | MentorScript - DEPRECATED (use AGENTS.md code standards section) |
 | **SASE** | Software Agentic Software Engineering (arXiv:2509.06216v2) |
 | **SE4A** | Software Engineering for Agents |
 | **SE4H** | Software Engineering for Humans |
@@ -1079,6 +1164,11 @@ level_3_requirements:
    - SDLC-Enterprise-Framework/02-Core-Methodology/SDLC-Core-Methodology.md
    - 10-stage lifecycle definition
 
+3. **AGENTS.md Standard**
+   - 60,000+ projects on GitHub
+   - Native support: Cursor, GitHub Copilot, Claude Code, Windsurf, OpenCode, Roo
+   - Industry consensus format for AI agent context
+
 ### 7.2 Internal Documents
 
 1. **SE 3.0 Integration Plan**
@@ -1092,6 +1182,14 @@ level_3_requirements:
 3. **AI Council Service**
    - docs/03-Development-Implementation/04-Phase-Plans/PHASE-01-AI-COUNCIL-SERVICE.md
    - Multi-provider AI integration
+
+4. **ADR-029: AGENTS.md Migration**
+   - 99-Legacy/ADR-029-AGENTS-MD-Migration.md
+   - BRS/MTS/LPS → AGENTS.md migration rationale and steps
+
+5. **AGENTS.md Template**
+   - 03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md
+   - Complete template with validation CLI
 
 ### 7.3 External Standards
 
@@ -1107,9 +1205,11 @@ level_3_requirements:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 5.1.0-alpha | Dec 2025 | SE 3.0 Team | Initial draft - Phase 1-Spec |
+| 5.1.3 | Jan 2026 | SE 3.0 Team | AGENTS.md migration (ADR-029) |
 
 **Review Schedule:**
-- CTO Review: December 20, 2025 (3pm)
+- CTO Review: December 20, 2025 (3pm) - APPROVED
+- AGENTS.md Update: January 22, 2026 - COMPLETE
 - Next Revision: Phase 2-Pilot feedback (Feb 2026)
 
 **Change Management:**
@@ -1119,6 +1219,5 @@ level_3_requirements:
 
 ---
 
-**Document Status:** ACTIVE - PRODUCTION READY
-**Last Updated:** December 12, 2025
-**Framework Version:** SDLC 5.1.3
+**Document Status:** ACTIVE - PRODUCTION READY (Updated for AGENTS.md)
+**Last Updated:** January 22, 2026
