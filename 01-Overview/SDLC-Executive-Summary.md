@@ -1,9 +1,22 @@
 # SDLC 5.1.3 Executive Summary
 
 **Version**: 5.1.3
-**Release Date**: January 18, 2026
+**Release Date**: January 22, 2026 (AGENTS.md Migration)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## ⚠️ AGENTS.md Migration (ADR-029)
+
+**As of January 2026, we have migrated from proprietary BRS/MTS/LPS artifacts to the industry-standard AGENTS.md format.**
+
+- **Deprecated**: BriefingScript (BRS), MentorScript (MTS), LoopScript (LPS)
+- **Replacement**: AGENTS.md (60K+ projects, native IDE support in Cursor, Copilot, Claude Code)
+- **Still Active**: CRP (Consultation Request), MRP (Merge-Readiness Pack), VCR (Value Chain Record)
+- **See**: [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md) for full migration details
+
+**Strategic Positioning**: "Governance Layer for AGENTS.md" - We provide gates, approvals, evidence chains that AI coding tools lack.
 
 ---
 
@@ -75,18 +88,20 @@
 |--------|-------------------|----------------------|
 | **Role** | Guide & supervise AI agents | Implement human-specified intent |
 | **Decision Authority** | FINAL (veto power) | NONE (propose only) |
-| **Artifacts Created** | BRS, MTS, VCR | LPS, CRP, MRP |
+| **Artifacts Created** | AGENTS.md, VCR | LoopScript.yaml, CRP, MRP |
+
+> **Note**: Legacy docs may reference BRS/MTS/LPS. New projects use AGENTS.md. See [ADR-029](../99-Legacy/ADR-029-AGENTS-MD-Migration.md).
 
 ### SASE × SDLC Stage Mapping
 
 | Stage | SASE Discipline | Primary Activity |
 |-------|-----------------|------------------|
 | 00 Foundation | None | Human-only strategic work |
-| 01 Planning | BriefingEng | Create BRS for features |
-| 02 Design | ALE + ATIE | Design LPS, MTS |
+| 01 Planning | AGENTS.md Eng | Create/update AGENTS.md |
+| 02 Design | ALE + ATIE | Design LoopScript, update AGENTS.md |
 | 03 Integrate | ATME + ATIE | CRP generation, API contracts |
 | 04 Build | ATLE | Build ACE/AEE |
-| 05 Test | ALE + ATME | Execute LPS, generate MRP |
+| 05 Test | ALE + ATME | Execute LoopScript, generate MRP |
 | 06 Deploy | ATME | Validation, coverage |
 | 07 Operate | ATME + AGE | Monitoring, verification |
 | 08 Collaborate | ATIE + AGE | Code review, team coordination |
@@ -236,9 +251,9 @@ SDLC 4.8 (Nov 2025)   → Design Thinking enhancement
 SDLC 4.9 (Nov 2025)   → 10-Stage Complete Lifecycle
 SDLC 5.0 (Dec 2025)   → 4-Tier Classification + Governance
 SDLC 5.1.0 (Dec 2025) → SASE Integration + Stage Restructure
-SDLC 5.1.3 (Dec 2025) → Legacy/Archive + Stage Consistency
+SDLC 5.1.1 (Dec 2025) → Legacy/Archive + Stage Consistency
 SDLC 5.1.2 (Dec 2025) → Complete Lifecycle + SASE Integration
-SDLC 5.1.3 (Jan 2026) → Sprint Planning Governance + G-Sprint Gates ⭐ LATEST
+SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration (ADR-029) ⭐ LATEST
 ```
 
 > **5.1.3 Trigger**: BFlow Sprint 86 Direction Confusion incident revealed critical sprint governance gaps.
@@ -263,8 +278,10 @@ SDLC 5.1.3 (Jan 2026) → Sprint Planning Governance + G-Sprint Gates ⭐ LATEST
 - [SDLC-Universal-Code-Review-Framework.md](../05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
 
 **Templates**:
+- [AGENTS.md Template](../03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) ⭐ RECOMMENDED
 - [SASE Artifact Templates](../03-Templates-Tools/SASE-Artifacts/)
 - [Design Thinking Templates](../03-Templates-Tools/3-Manual-Templates/design-thinking/)
+- [Deprecated Templates](../99-Legacy/SASE-Deprecated-Artifacts/) (BRS/MTS/LPS - reference only)
 
 **Case Studies**:
 - [BFlow Sprint 86 Direction Confusion](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) ⭐ NEW
@@ -294,7 +311,7 @@ SDLC 5.1.3 (Jan 2026) → Sprint Planning Governance + G-Sprint Gates ⭐ LATEST
 
 ---
 
-**Last Updated**: January 18, 2026
+**Last Updated**: January 22, 2026 (AGENTS.md Migration)
 **Authority**: CTO Approved
 **Status**: ACTIVE
 **Version**: 5.1.3
