@@ -27,6 +27,10 @@
 
 **→ [Full principles: 03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/)**
 
+> **Best Practices Note**: For AI agent best practices (planning mode, model selection, sub-agents), see [04-AI-TOOLS-LANDSCAPE/best-practices-2026/](../../04-AI-TOOLS-LANDSCAPE/best-practices-2026/).
+>
+> This folder focuses on **stage-aligned prompts** (WHAT to generate at each stage).
+
 ---
 
 ### 7-Pillar Architecture (SDLC 5.2.0+)

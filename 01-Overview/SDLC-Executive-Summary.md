@@ -44,7 +44,7 @@ New comprehensive guide covering:
 - Permissions & Security
 - Developer Role Evolution
 
-**Location**: `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/`
+**Location**: `04-AI-TOOLS-LANDSCAPE/best-practices-2026/`
 
 ### SASE Artifacts Restructured
 
@@ -298,9 +298,9 @@ SDLC 5.2.0 (Jan 2026) → Planning Mode + AI Agent Best Practices 2026 ⭐ LATES
 - [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md)
 
 **AI Agent Best Practices 2026** (NEW):
-- [AI Agent Best Practices 2026](../05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md) ⭐ NEW
-- [Planning Mode Guide](../05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md) ⭐ NEW
-- [Model Selection Matrix](../05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md) ⭐ NEW
+- [AI Agent Best Practices 2026](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md) ⭐ NEW
+- [Planning Mode Guide](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md) ⭐ NEW
+- [Model Selection Matrix](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md) ⭐ NEW
 
 **Governance**:
 - [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)

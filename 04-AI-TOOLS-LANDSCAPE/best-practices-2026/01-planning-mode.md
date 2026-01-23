@@ -3,26 +3,33 @@
 
 **Version:** 5.2.0
 **Status:** ACTIVE
-**Date:** January 22, 2026
+**Date:** January 23, 2026
+**Core Principle:** [03-AI-GOVERNANCE/03-Planning-Mode-Principle.md](../../03-AI-GOVERNANCE/03-Planning-Mode-Principle.md)
 
 ---
 
 ## Overview
 
-Planning Mode is a mandatory workflow for AI agents making significant code changes (>15 LOC). It prevents architectural drift by extracting patterns BEFORE code generation.
+Planning Mode is a **RISK-BASED** workflow for AI agents. The key insight: **Planning is triggered by RISK, not just lines of code.**
+
+> "LOC is a heuristic. Risk factors are the real criteria."
+> — SDLC 5.2.0 Core Principle
 
 ---
 
 ## The Problem
 
-When AI agents make changes exceeding 15 lines of code, **architectural drift** becomes a significant risk:
+When AI agents make risky changes, **architectural drift** becomes a significant risk:
 
 1. **Pattern Inconsistency**: New code doesn't follow existing codebase patterns
 2. **Architecture Violation**: Architectural decisions are ignored or contradicted
 3. **Convention Drift**: Code style and naming conventions become inconsistent
 4. **Test Pattern Mismatch**: Tests don't follow existing test patterns
+5. **Security Vulnerabilities**: Risky changes bypass security review
 
 > "Khi không dùng planning mode, codebase dễ bị architectural drift. Planning mode spawns explore sub-agents → extract patterns → build on them. This prevents drift."
+
+**Important (5.2.0 Update)**: The old ">15 LOC" rule was **gameable** (split 100 LOC into 7 commits of 14 LOC each). Risk-based triggers are **intent-based** and cannot be gamed.
 
 ---
 
@@ -89,17 +96,57 @@ When AI agents make changes exceeding 15 lines of code, **architectural drift** 
 
 ---
 
-## When to Use Planning Mode
+## When to Use Planning Mode (Risk-Based Triggers)
 
-| Change Size | Planning Mode | Rationale |
-|-------------|---------------|-----------|
-| <15 LOC | Optional | Low drift risk, direct execution OK |
-| 15-50 LOC | Recommended | Moderate drift risk, planning helps |
-| >50 LOC | **Mandatory** | High drift risk, multi-file changes |
-| New feature | **Mandatory** | Requires pattern consistency |
-| Architecture change | **Mandatory** | Must align with existing decisions |
-| Refactoring | **Mandatory** | Must preserve existing patterns |
-| Cross-module | **Mandatory** | Affects multiple parts of codebase |
+### MANDATORY Planning Required
+
+Planning is **REQUIRED** when change touches ANY of these risk factors:
+
+| Risk Factor | Why It's Risky | Example |
+|-------------|----------------|---------|
+| **Data schema / API contracts** | Breaking changes affect consumers | Adding required field to API |
+| **Authentication / Authorization** | Security-critical | Modifying login flow |
+| **Cross-service boundaries** | Coordination complexity | Service A calls new Service B |
+| **Concurrency / Race conditions** | Hard to test, subtle bugs | Shared state modification |
+| **Security-sensitive code** | Vulnerabilities | Input validation, encryption |
+| **Public API interfaces** | External consumers affected | REST endpoint changes |
+| **Payment / Financial logic** | Money involved | Pricing calculation |
+
+### RECOMMENDED Planning
+
+Planning is **RECOMMENDED** (but not mandatory) when:
+
+| Heuristic | Threshold | Rationale |
+|-----------|-----------|-----------|
+| Lines of code | >50 LOC | Higher drift risk |
+| Files affected | >3 files | Coordination needed |
+| Unfamiliar area | Yes | Need context first |
+| Complex logic | Yes | Easy to miss edge cases |
+
+### NO Planning Needed
+
+Skip planning for:
+
+| Scenario | Example |
+|----------|---------|
+| <15 LOC + no risk factors | Fix typo in error message |
+| Documentation only | Update README |
+| Test additions (no prod code) | Add missing test case |
+| Formatting / linting | Run prettier |
+
+### Decision Tree
+
+```
+Does change touch a MANDATORY risk factor?
+├── YES → Planning REQUIRED
+└── NO →
+    Is change >50 LOC or >3 files?
+    ├── YES → Planning RECOMMENDED
+    └── NO →
+        Is area unfamiliar?
+        ├── YES → Planning RECOMMENDED
+        └── NO → Planning OPTIONAL (just code)
+```
 
 ---
 

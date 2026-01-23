@@ -213,7 +213,7 @@ Date and time of decision
 
 - [SDLC-Agentic-Core-Principles](../../02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
 - [SDLC-Agentic-Maturity-Model](../../02-Core-Methodology/SDLC-Agentic-Maturity-Model.md)
-- [AI Agent Best Practices 2026](../1-AI-Tools/ai-agent-best-practices-2026/README.md)
+- [AI Agent Best Practices 2026](../../04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md)
 
 ---
 

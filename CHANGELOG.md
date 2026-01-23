@@ -2,45 +2,58 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 5.2.0 Enterprise Framework - Planning Mode + AI Agent Best Practices 2026
+**Framework**: SDLC 5.2.0 Enterprise Framework - Risk-Based Planning Mode + AI Agent Best Practices 2026
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: January 2026 (SDLC 5.2.0 Planning Mode + Model Selection)
+**Last Updated**: January 23, 2026 (SDLC 5.2.0 Risk-Based Planning + Model Selection)
 
 ---
 
 ## 🚀 Version 5.2.0 - January 2026 (MAJOR RELEASE)
 
-**Release Date**: January 22, 2026
-**Type**: MAJOR RELEASE - Planning Mode + AI Agent Best Practices 2026
+**Release Date**: January 23, 2026
+**Type**: MAJOR RELEASE - Risk-Based Planning Mode + AI Agent Best Practices 2026
 **Status**: PRODUCTION-READY
 **Breaking Changes**: Yes - Deprecated artifacts removed, renumbered SASE artifacts
 **Supersedes**: SDLC 5.1.3 Sprint Planning Governance
 **Achievement**: Complete AI Agent orchestration with Planning Mode
 
-### 🎯 Key Enhancement: Planning Mode + Model Selection Matrix
+### 🎯 Key Enhancement: Risk-Based Planning Mode + Model Selection Matrix
 
-**THE CHANGE**: Introduced Planning Mode for >15 LOC changes and task-appropriate model routing.
+**THE CHANGE**: Introduced RISK-BASED Planning Mode (replaces LOC-based triggers) and task-appropriate model routing.
 
 | Feature | Description |
 |---------|-------------|
-| **Planning Mode** | Mandatory pre-implementation pattern extraction for >15 LOC changes |
+| **Risk-Based Planning Mode** | Planning triggered by RISK factors (auth, API, security), not just LOC |
 | **Model Selection Matrix** | Task-type aware model routing (Premium, Balanced, Compact) |
 | **Sub-agent Orchestration** | Session management patterns for focused AI tasks |
 | **Agentic Grep > RAG** | Direct codebase exploration beats indexed retrieval |
 | **Developer Role Evolution** | Design feedback loops, not write code |
 
-### 🆕 Planning Mode (NEW)
+### 🆕 Risk-Based Planning Mode (NEW - KEY CHANGE)
 
-**Threshold**: >15 LOC changes require Planning Mode
+**Key Insight**: "Planning is triggered by RISK, not just lines of code."
+
+**MANDATORY Planning When Touching**:
+- Data schema / API contracts (breaking changes)
+- Authentication / Authorization (security-critical)
+- Cross-service boundaries (coordination complexity)
+- Concurrency / Race conditions (hard to test)
+- Security-sensitive code (vulnerabilities)
+- Payment / Financial logic (money involved)
+
+**RECOMMENDED Planning When**:
+- >50 LOC changes (heuristic, not hard rule)
+- >3 files affected
+- Unfamiliar code area
 
 **4-Phase Workflow**:
-1. **Pattern Extraction** - Parallel sub-agents explore similar code, ADRs, test patterns
-2. **Synthesis** - Merge patterns into implementation plan
-3. **Human Approval** - Present plan for validation
-4. **Context-Aware Generation** - Generate code following extracted patterns
+1. **EXPLORE** - Search similar implementations (agentic grep > RAG)
+2. **SYNTHESIZE** - Build implementation plan from patterns
+3. **APPROVE** - Present to human for validation
+4. **EXECUTE** - Generate code following approved plan
 
-**Key Insight**:
-> "Agentic grep (AI-powered code search) > RAG for context retrieval. Direct codebase exploration finds real patterns. RAG can miss context and produce stale results."
+**Why Risk-Based > LOC-Based**:
+> "The old '>15 LOC requires planning' rule was gameable (split 100 LOC into 7 commits of 14 LOC each). Risk-based triggers are intent-based and cannot be gamed."
 
 ### 🆕 Model Selection Matrix (NEW)
 
@@ -54,9 +67,9 @@
 
 **Expert Rule**: "Switch models when stuck - different model = different perspective"
 
-### 🆕 AI Agent Best Practices 2026 Guide (NEW)
+### 🆕 AI Agent Best Practices 2026 Guide (NEW - MOVED)
 
-**New folder**: `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/`
+**Location**: `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` (moved from 05-Templates-Tools in Jan 2026)
 
 | Guide | Purpose |
 |-------|---------|
@@ -67,6 +80,8 @@
 | 05-memory-context-management.md | CLAUDE.md patterns |
 | 06-permissions-security.md | Safe AI execution |
 | 07-developer-role-evolution.md | SE 3.0 responsibilities |
+
+> **Move Reason**: Concentric Circles Model restructuring - best practices are strategic intel (OUTER RING) and belong with tool profiles in 04-AI-TOOLS-LANDSCAPE/, not with operational templates in 05-Templates-Tools/.
 
 ### 🔄 SASE Artifacts Restructured
 
@@ -102,14 +117,14 @@
 ### 📂 Files Added/Updated
 
 **New - AI Agent Best Practices 2026**:
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md
-- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-prompting-best-practices.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/05-memory-context-management.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-permissions-security.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-developer-role-evolution.md
 
 **Updated - Core Methodology**:
 - 02-Core-Methodology/SDLC-Agentic-Core-Principles.md (5.2.0, Planning Mode, Model Selection)

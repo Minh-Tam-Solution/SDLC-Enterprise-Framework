@@ -2,7 +2,7 @@
 
 **Version**: 5.2.0
 **Status**: ACTIVE
-**Date**: January 22, 2026
+**Date**: January 23, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
 
 ---
@@ -44,25 +44,28 @@ Before creating any new document, check if a canonical file already exists for t
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
 | AGENTS.md Template | `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` | — | ACTIVE |
-| CRP (Consultation Request) | `05-Templates-Tools/SASE-Artifacts/04-CRP-Template.md` | — | ACTIVE |
-| MRP (Merge-Readiness Pack) | `05-Templates-Tools/SASE-Artifacts/05-MRP-Template.md` | — | ACTIVE |
-| VCR (Version Controlled Resolution) | `05-Templates-Tools/SASE-Artifacts/06-VCR-Template.md` | — | ACTIVE |
+| CRP (Consultation Request) | `05-Templates-Tools/SASE-Artifacts/01-CRP-Template.md` | Renamed from 04-CRP | ACTIVE |
+| MRP (Merge-Readiness Pack) | `05-Templates-Tools/SASE-Artifacts/02-MRP-Template.md` | Renamed from 05-MRP | ACTIVE |
+| VCR (Version Controlled Resolution) | `05-Templates-Tools/SASE-Artifacts/03-VCR-Template.md` | Renamed from 06-VCR | ACTIVE |
 | BriefingScript (BRS) | — | `05-Templates-Tools/SASE-Artifacts/01-BriefingScript-Template.yaml` | DEPRECATED |
 | LoopScript (LPS) | — | `05-Templates-Tools/SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
 | MentorScript (MTS) | — | `05-Templates-Tools/SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
 
-### AI Tools Best Practices (05-Templates-Tools/1-AI-Tools/)
+### AI Agent Best Practices (04-AI-TOOLS-LANDSCAPE/best-practices-2026/) - MOVED
+
+> **MOVED in 5.2.0**: Best practices moved from `05-Templates-Tools/1-AI-Tools/` to `04-AI-TOOLS-LANDSCAPE/`
+> **Reason**: Concentric Circles separation - best practices are strategic intel, not templates
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| AI Best Practices Index | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md` | — | ACTIVE |
-| Planning Mode (Tool Guide) | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md` | — | ACTIVE |
-| Model Selection | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
-| Sub-agent Orchestration | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE |
-| Prompting Best Practices | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md` | — | ACTIVE |
-| Memory & Context | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md` | — | ACTIVE |
-| Permissions & Security | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md` | — | ACTIVE |
-| Developer Role Evolution | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md` | — | ACTIVE |
+| AI Best Practices Index | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md` | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/` | ACTIVE |
+| Planning Mode (Tool Guide) | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md` | — | ACTIVE |
+| Model Selection | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
+| Sub-agent Orchestration | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE |
+| Prompting Best Practices | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-prompting-best-practices.md` | — | ACTIVE |
+| Memory & Context | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/05-memory-context-management.md` | — | ACTIVE |
+| Permissions & Security | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-permissions-security.md` | — | ACTIVE |
+| Developer Role Evolution | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-developer-role-evolution.md` | — | ACTIVE |
 
 ### Implementation Guides (07-Implementation-Guides/)
 
@@ -110,8 +113,9 @@ Before creating any new document, check if a canonical file already exists for t
 
 ## Active Redirect Stubs
 
-| Original Location | Archive Location | Created | Expires |
-|-------------------|------------------|---------|---------|
+| Original Location | New/Archive Location | Created | Expires |
+|-------------------|----------------------|---------|---------|
+| `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
 | `2-Agent-Templates/claude-code/` | `99-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
 | `2-Agent-Templates/cursor/` | `99-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
 | `2-Agent-Templates/copilot/` | `99-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |

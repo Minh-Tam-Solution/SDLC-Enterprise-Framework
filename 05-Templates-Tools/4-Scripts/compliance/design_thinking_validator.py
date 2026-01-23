@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 =========================================================================
-SDLC 5.1.3 Design Thinking Validator
+SDLC 5.2.0 Design Thinking Validator
 Validates Design Thinking 5-phase methodology compliance (Pillar 0)
 
 Version: 5.1.3
@@ -11,7 +11,7 @@ Authority: CPO Office + Design Thinking Excellence
 Foundation: Battle-tested on NQH-Bot (96% time savings proven)
 Pillar: 0 - Design Thinking Foundation (7-Pillar Architecture)
 
-Legacy/Archive Structure (SDLC 5.1.3):
+Legacy/Archive Structure (SDLC 5.2.0):
 - 10-archive: ONLY at docs root (not a stage)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated
@@ -57,7 +57,7 @@ logger = logging.getLogger(__name__)
 
 class DesignThinkingValidator:
     """
-    Validates Design Thinking methodology compliance in projects (SDLC 5.1.3)
+    Validates Design Thinking methodology compliance in projects (SDLC 5.2.0)
 
     Checks for evidence of Stanford d.school 5-phase approach:
     1. Empathize (user research)
@@ -157,12 +157,12 @@ class DesignThinkingValidator:
 
     def validate(self) -> Dict[str, Any]:
         """
-        Run complete Design Thinking validation (SDLC 5.1.3)
+        Run complete Design Thinking validation (SDLC 5.2.0)
 
         Returns:
             Dict with validation results for all 5 phases
         """
-        logger.info("🎨 SDLC 5.1.3 Design Thinking Validator")
+        logger.info("🎨 SDLC 5.2.0 Design Thinking Validator")
         logger.info("=" * 60)
         logger.info(f"Project: {self.project_path}")
         logger.info(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -306,7 +306,7 @@ class DesignThinkingValidator:
     def _search_for_patterns(self, phase: str) -> List[str]:
         """
         Search project for evidence of specific Design Thinking phase
-        (Excludes legacy/archive folders per SDLC 5.1.3)
+        (Excludes legacy/archive folders per SDLC 5.2.0)
 
         Args:
             phase: Phase name (empathize, define, ideate, prototype, test)
@@ -408,7 +408,7 @@ class DesignThinkingValidator:
 
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 5.1.3 Design Thinking Guide: /00-foundation/")
+        logger.info("   • SDLC 5.2.0 Design Thinking Guide: /00-foundation/")
         logger.info("   • AI Tools: /03-Templates-Tools/1-AI-Tools/design-thinking/")
         logger.info("   • Case Study: NQH-Bot 96% time savings")
         logger.info("   • Note: Legacy/Archive folders (99-legacy, 10-archive) excluded")
@@ -417,7 +417,7 @@ class DesignThinkingValidator:
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        logger.info("SDLC 5.1.3 Design Thinking Validator")
+        logger.info("SDLC 5.2.0 Design Thinking Validator")
         logger.info("=" * 60)
         logger.info("")
         logger.info("Usage: python design_thinking_validator.py <project_path>")

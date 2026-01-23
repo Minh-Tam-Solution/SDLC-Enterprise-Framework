@@ -98,7 +98,7 @@ A tool feature is promoted to Core when it meets ALL criteria:
 - [CONTENT-MAP.md](../CONTENT-MAP.md) - Topic → canonical file mapping
 - [DEPRECATION-POLICY.md](../DEPRECATION-POLICY.md) - Redirect rules
 - [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - SE4H/SE4A model
-- [ai-agent-best-practices-2026/](../05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/) - Tool-specific guides
+- [best-practices-2026/](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/) - Tool-specific guides
 
 ---
 
