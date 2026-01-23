@@ -75,11 +75,23 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Topic | Archive Location | Original Location | Status |
 |-------|-----------------|-------------------|--------|
-| Claude Code Templates | `99-ARCHIVE/tool-guides-2026/claude-code/` | `2-Agent-Templates/claude-code/` | TO ARCHIVE |
-| Cursor Templates | `99-ARCHIVE/tool-guides-2026/cursor/` | `2-Agent-Templates/cursor/` | TO ARCHIVE |
-| Copilot Templates | `99-ARCHIVE/tool-guides-2026/copilot/` | `2-Agent-Templates/copilot/` | TO ARCHIVE |
-| ChatGPT Templates | `99-ARCHIVE/tool-guides-2026/chatgpt/` | `2-Agent-Templates/chatgpt/` | TO ARCHIVE |
-| Gemini Templates | `99-ARCHIVE/tool-guides-2026/gemini/` | `2-Agent-Templates/gemini/` | TO ARCHIVE |
+| Claude Code Templates | `99-ARCHIVE/tool-guides-2026/claude-code/` | `2-Agent-Templates/claude-code/` | ARCHIVED |
+| Cursor Templates | `99-ARCHIVE/tool-guides-2026/cursor/` | `2-Agent-Templates/cursor/` | ARCHIVED |
+| Copilot Templates | `99-ARCHIVE/tool-guides-2026/copilot/` | `2-Agent-Templates/copilot/` | ARCHIVED |
+| ChatGPT Templates | `99-ARCHIVE/tool-guides-2026/chatgpt/` | `2-Agent-Templates/chatgpt/` | ARCHIVED |
+| Gemini Templates | `99-ARCHIVE/tool-guides-2026/gemini/` | `2-Agent-Templates/gemini/` | ARCHIVED |
+
+---
+
+## Active Redirect Stubs
+
+| Original Location | Archive Location | Created | Expires |
+|-------------------|------------------|---------|---------|
+| `2-Agent-Templates/claude-code/` | `99-ARCHIVE/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/cursor/` | `99-ARCHIVE/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/copilot/` | `99-ARCHIVE/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/chatgpt/` | `99-ARCHIVE/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/gemini/` | `99-ARCHIVE/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
 
 ---
 
