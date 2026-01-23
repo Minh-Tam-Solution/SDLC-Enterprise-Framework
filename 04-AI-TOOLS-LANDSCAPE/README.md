@@ -45,11 +45,11 @@ To govern effectively, Orchestrator MUST:
 
 | Content | Purpose | Update Frequency |
 |---------|---------|------------------|
-| Tool Categories | Classification of AI coding tools | Quarterly |
-| Tool Profiles | Individual tool capabilities | As needed |
-| Capability Matrix | Feature comparison | Quarterly |
-| Integration Notes | How tools integrate with Orchestrator | As needed |
-| Trend Watch | Emerging patterns and features | Monthly |
+| [Tool Categories](#tool-categories-january-2026) | Classification of AI coding tools | Quarterly |
+| Tool Profiles ([Claude Code](tool-profiles/claude-code-2026.md) · [Cursor](tool-profiles/cursor-2026.md) · [Copilot](tool-profiles/copilot-2026.md)) | Individual tool capabilities | As needed |
+| [Capability Matrix](capability-matrix.md) | Feature comparison & readiness score | Quarterly |
+| [Integration Notes](integration-guides/mcp-integration.md) | MCP onboarding playbook | As needed |
+| Trend Watch ([Jan 2026](trend-watch/2026-01-trends.md)) | Emerging patterns and features | Monthly |
 
 ---
 
@@ -86,6 +86,8 @@ To govern effectively, Orchestrator MUST:
 ---
 
 ## Capability Matrix (January 2026)
+
+Full matrix with expanded criteria: [capability-matrix.md](capability-matrix.md)
 
 | Capability | Claude Code | Cursor | Copilot | Codeium |
 |------------|-------------|--------|---------|---------|
@@ -133,6 +135,8 @@ When evaluating ANY tool for use with SDLC Orchestrator:
 ---
 
 ## Trend Watch (January 2026)
+
+Detailed monthly briefing: [trend-watch/2026-01-trends.md](trend-watch/2026-01-trends.md)
 
 ### Emerging Patterns
 

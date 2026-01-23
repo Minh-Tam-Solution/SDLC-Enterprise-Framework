@@ -77,8 +77,11 @@ Before creating any new document, check if a canonical file already exists for t
 |-------|---------------|---------|--------|
 | AI Tools Overview | `04-AI-TOOLS-LANDSCAPE/README.md` | Tool landscape for Orchestrator | ACTIVE |
 | Claude Code Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/claude-code-2026.md` | Primary tool integration | ACTIVE |
-| Capability Matrix | `04-AI-TOOLS-LANDSCAPE/capability-matrix.md` | Tool comparison | PENDING |
-| Trend Watch | `04-AI-TOOLS-LANDSCAPE/trend-watch/` | Monthly updates | ACTIVE |
+| Cursor Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/cursor-2026.md` | Secondary tool (IDE-native) | ACTIVE |
+| Copilot Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/copilot-2026.md` | Limited-use assistant | ACTIVE |
+| Capability Matrix | `04-AI-TOOLS-LANDSCAPE/capability-matrix.md` | Tool comparison | ACTIVE |
+| MCP Integration Guide | `04-AI-TOOLS-LANDSCAPE/integration-guides/mcp-integration.md` | Protocol onboarding steps | ACTIVE |
+| Trend Watch | `04-AI-TOOLS-LANDSCAPE/trend-watch/` | Monthly updates (starting with 2026-01-trends.md) | ACTIVE |
 
 > **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
 > Tool-specific knowledge enables Orchestrator to enforce Core principles.
@@ -153,4 +156,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: January 22, 2026
+**Last Updated**: January 23, 2026
