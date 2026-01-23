@@ -168,6 +168,10 @@ SDLC-Enterprise-Framework/
 │   ├── 1-AI-Tools/
 │   ├── 2-Agent-Templates/
 │   └── 3-Manual-Templates/
+├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (NEW - Outer Ring)
+│   ├── tool-profiles/            # Claude Code, Cursor, Copilot, etc.
+│   ├── integration-guides/       # Orchestrator integration specs
+│   └── trend-watch/              # Monthly tool evolution updates
 ├── 04-Case-Studies/              # BFlow, NQH-Bot examples
 ├── 05-Implementation-Guides/     # Rollout guides
 ├── 06-Training-Materials/
@@ -206,6 +210,9 @@ SDLC-Enterprise-Framework/
 - [SDLC-Core-Methodology.md](./02-Core-Methodology/SDLC-Core-Methodology.md)
 - [SDLC-Agentic-Core-Principles.md](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
 - [AI Governance Principles](./03-AI-GOVERNANCE/) - **NEW in 5.2.0** (7 timeless principles)
+
+**AI Tools (Outer Ring)**:
+- [AI Tools Landscape](./04-AI-TOOLS-LANDSCAPE/) - **NEW in 5.2.0** (tool tracking for Orchestrator)
 
 **Standards**:
 - [SDLC-Document-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Document-Naming-Standards.md)

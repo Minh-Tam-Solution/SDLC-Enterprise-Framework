@@ -71,6 +71,18 @@ Before creating any new document, check if a canonical file already exists for t
 | Code Review Framework | `05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `1-AI-Tools/code-review/` (partial) | ACTIVE |
 | Implementation Guide | `05-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
 
+### AI Tools Landscape (04-AI-TOOLS-LANDSCAPE/) - NEW
+
+| Topic | Canonical File | Purpose | Status |
+|-------|---------------|---------|--------|
+| AI Tools Overview | `04-AI-TOOLS-LANDSCAPE/README.md` | Tool landscape for Orchestrator | ACTIVE |
+| Claude Code Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/claude-code-2026.md` | Primary tool integration | ACTIVE |
+| Capability Matrix | `04-AI-TOOLS-LANDSCAPE/capability-matrix.md` | Tool comparison | PENDING |
+| Trend Watch | `04-AI-TOOLS-LANDSCAPE/trend-watch/` | Monthly updates | ACTIVE |
+
+> **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
+> Tool-specific knowledge enables Orchestrator to enforce Core principles.
+
 ### Tool-Specific Content (99-ARCHIVE/tool-guides-2026/)
 
 | Topic | Archive Location | Original Location | Status |
