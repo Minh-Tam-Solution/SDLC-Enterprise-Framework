@@ -1,11 +1,12 @@
 # Team Collaboration Standards
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Documentation Standards)
 **Pillar**: 2 - Sprint Planning Governance × Pillar 6 - Documentation Permanence
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
+**AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Human Accountability, CRP Escalation)
 
 ---
 
@@ -247,6 +248,6 @@ Sprint End (Day 10):
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for STANDARD+ tiers
-**Last Updated**: January 2025
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office
 

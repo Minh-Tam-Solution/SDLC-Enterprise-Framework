@@ -1,16 +1,17 @@
 # When Planning a Sprint
 
-**Version**: 5.1.3
-**Date**: January 18, 2026
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Type**: Situation-Specific Guide
 **Status**: ACTIVE
 **Authority**: CTO Office
+**AI Governance**: Aligns with Planning Mode Principle (>15 LOC changes require planning)
 
 ---
 
 ## Overview
 
-This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 5.1.3 Sprint Planning Governance.
+This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 5.2.0 Sprint Planning Governance.
 
 **When to use this guide**:
 - Starting a new sprint
@@ -393,5 +394,5 @@ Documentation:
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: January 18, 2026
+**Last Updated**: January 22, 2026
 **Owner**: CTO Office

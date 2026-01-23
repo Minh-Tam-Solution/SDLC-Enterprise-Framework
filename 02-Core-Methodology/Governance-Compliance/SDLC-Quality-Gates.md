@@ -1,7 +1,7 @@
 # SDLC Quality Gates
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 4 - Quality Gates (Dual-Track)
 **Status**: ACTIVE - Production Standard
@@ -534,6 +534,6 @@ Tier Requirements:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Version**: 5.1.3
-**Last Updated**: January 18, 2026
+**Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Owner**: CTO Office

@@ -1,12 +1,13 @@
 # Backlog Template
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 04 - BUILD
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy - Level 4)
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
-**Framework**: SDLC 5.1.3
+**Framework**: SDLC 5.2.0
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -252,5 +253,5 @@ For effective backlog management:
 
 **Template Status**: ACTIVE
 **Compliance**: RECOMMENDED for STANDARD+ tier projects
-**Last Updated**: January 2025
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office

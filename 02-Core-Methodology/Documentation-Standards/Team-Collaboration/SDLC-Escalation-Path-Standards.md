@@ -1,12 +1,13 @@
 # SDLC Escalation Path Standards
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Documentation Standards / Team Collaboration)
 **Pillar**: 2 - Sprint Planning Governance
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
 **Industry Standards**: ITIL 4, SAFe 6.0
+**AI Governance**: Aligned with CRP (Consultation Request Protocol) for AI uncertainty escalation
 
 ---
 
@@ -515,6 +516,10 @@ REMEMBER:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for STANDARD+ tiers
-**Last Updated**: December 5, 2025
+**Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office
+**Related Documents**:
+- [05-Templates-Tools/SASE-Artifacts/CRP-Template.md](../../../05-Templates-Tools/SASE-Artifacts/CRP-Template.md) - AI Consultation Request Protocol
+- [03-AI-GOVERNANCE/04-Verification-Principle.md](../../../03-AI-GOVERNANCE/04-Verification-Principle.md) - When to escalate AI uncertainty
 

@@ -1,8 +1,10 @@
 # SDLC 5.1.3 Implementation Guides
 
-**Version**: 5.1.3 | **Status**: PRODUCTION READY | **Date**: January 2025
+**Version**: 5.2.0 | **Status**: PRODUCTION READY | **Date**: January 22, 2026
 
-Practical how-to guides for implementing SDLC 5.1.3 framework + SASE artifacts.
+Practical how-to guides for implementing SDLC 5.2.0 framework + SASE artifacts.
+
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -24,7 +26,7 @@ Practical how-to guides for implementing SDLC 5.1.3 framework + SASE artifacts.
 
 | Guide | Purpose | Use When |
 |-------|---------|----------|
-| **SDLC-Implementation-Guide.md** | Complete SDLC 5.1.3 deployment | Starting from scratch |
+| **SDLC-Implementation-Guide.md** | Complete SDLC 5.2.0 deployment | Starting from scratch |
 | **SDLC-Self-Contained-Deployment-Guide.md** | Team folder deployment | Deploying to specific team |
 
 ### Code Review Framework (3-Tier)
@@ -74,7 +76,7 @@ mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
 # 99-legacy folders created as needed within each stage
 ```
 
-### Legacy/Archive Structure (SDLC 5.1.3)
+### Legacy/Archive Structure (SDLC 5.2.0)
 
 ```yaml
 Rules:
@@ -119,7 +121,7 @@ Location: [05-Templates-Tools/4-Scripts/](../05-Templates-Tools/4-Scripts/)
 
 | Script | Purpose |
 |--------|---------|
-| `compliance/sdlc_validator.py` | Validate SDLC 5.1 folder structure |
+| `compliance/sdlc_validator.py` | Validate SDLC 5.2 folder structure |
 | `compliance/sdlc_scanner.py` | Scan project for compliance |
 | `quick-start/solo_setup.py` | Setup for solo developer |
 
@@ -135,5 +137,6 @@ Location: [05-Templates-Tools/4-Scripts/](../05-Templates-Tools/4-Scripts/)
 
 ---
 
-**Last Updated**: December 11, 2025
+**Last Updated**: January 22, 2026
 **Authority**: CTO + CPO Office
+**Framework Version**: SDLC 5.2.0

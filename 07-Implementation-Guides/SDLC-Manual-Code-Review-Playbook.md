@@ -1,12 +1,13 @@
 # SDLC Manual Code Review Playbook - Tier 1 Free/Manual Excellence
 
-**Version**: 5.1.3
-**Last Updated**: January 2025
+**Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Status**: Production Ready
 **Audience**: Engineering Teams (1-5 developers, <20 PRs/month, $0 budget)
 **Tier**: 1 (Free/Manual with Maximum Discipline)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Tier**: LITE (1-2 people) / STANDARD (3-10 people)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -1117,10 +1118,11 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**Document Version**: 5.1.3
-**Last Updated**: January 2025
+**Document Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Next Review**: February 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
+**Framework**: SDLC 5.2.0
 
 ---
 
@@ -1128,6 +1130,7 @@ You can achieve professional-grade code review at **zero cost**.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.2.0 | Jan 22, 2026 | Planning Mode + AI Best Practices alignment |
 | 5.1.3 | Jan 2025 | 7-Pillar Architecture, Sprint Governance, 4-Layer Code Review |
 | 5.1.2 | Dec 24, 2025 | SDLC 5.1.2 alignment, stage mapping clarity |
 | 5.0.0 | Dec 6, 2025 | SDLC 5.0.0 upgrade, 10-stage mapping, 4-tier classification |
@@ -1142,6 +1145,6 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**🏆 SDLC 5.1.3 Code Review Excellence**
+**SDLC 5.2.0 Code Review Excellence**
 *Zero Cost - Maximum Discipline - Professional Quality*
 *Stage 04 (BUILD) - LITE/STANDARD Tiers*

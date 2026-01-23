@@ -7,10 +7,11 @@
 **Author:** SE4H (Software Engineering for Humans - Agent Coach)
 **Consumer:** SE4A (for revision) + Git History (permanent record)
 
-**Version:** 1.1.0
-**Framework:** SDLC 5.1.3 (7-Pillar Architecture)
+**Version:** 1.2.0
+**Framework:** SDLC 5.2.0 (7-Pillar Architecture)
 **Created:** December 2025
-**Updated:** January 2025
+**Updated:** January 22, 2026
+**AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -36,7 +37,7 @@
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **SDLC Gate** | G0.1 \| G1 \| G2 \| G3 \| G4 \| G-Sprint \| G-Sprint-Close | Gate this work supports |
 
-### Sprint Planning Governance Verification (NEW in 5.1.3)
+### Sprint Planning Governance Verification (SDLC 5.2.0)
 
 | Criterion | Verified | Notes |
 |-----------|----------|-------|
@@ -54,7 +55,7 @@
 
 | Category | MRP Claimed | Verified | Status |
 |----------|-------------|----------|--------|
-| **Sprint Governance (5.1.3)** | Compliant | XX% | ✅ / ⚠️ / ❌ |
+| **Sprint Governance (5.2.0)** | Compliant | XX% | ✅ / ⚠️ / ❌ |
 | **Definition of Done** | Complete | XX/6 criteria | ✅ / ⚠️ / ❌ |
 | **Functional Completeness** | 100% | XX% | ✅ / ⚠️ / ❌ |
 | **Test Coverage** | 95% | XX% | ✅ / ⚠️ / ❌ |

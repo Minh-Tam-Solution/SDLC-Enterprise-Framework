@@ -1,21 +1,22 @@
 # 📚 SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 5.1.3
-**Date**: January 18, 2026
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Latest**: SDLC 5.1.3 Framework - Sprint Planning Governance
+**Latest**: SDLC 5.2.0 Framework - Planning Mode + AI Best Practices
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
 ## 🎯 What You'll Find Here
 
-This directory contains **real case studies** from three production platforms that shaped SDLC 5.1.3, plus **historical case studies** documenting framework evolution from 4.2 to 5.1.
+This directory contains **real case studies** from three production platforms that shaped SDLC 5.2.0, plus **historical case studies** documenting framework evolution from 4.2 to 5.2.
 
 ---
 
-## 🎊 NEW: BFlow Sprint 86 Direction Confusion Case Study (SDLC 5.1.3)
+## BFlow Sprint 86 Direction Confusion Case Study (SDLC 5.1.3 Historical)
 
 ### 0. BFlow Sprint 86 - Sprint Planning Governance Gap Discovery
 **File**: [BFlow-Sprint-86-Direction-Confusion-Case-Study.md](BFlow-Sprint-86-Direction-Confusion-Case-Study.md) ⭐ **NEW - LATEST**
@@ -100,7 +101,7 @@ This directory contains **real case studies** from three production platforms th
 
 ---
 
-## 🚀 Active Case Studies (SDLC 5.0.0)
+## Active Case Studies (SDLC 5.2.0)
 
 ### 2. Design Thinking Success - NQH-Bot Platform
 **File**: [SDLC-Design-Thinking-Case-Study-NQH-Bot.md](SDLC-Design-Thinking-Case-Study-NQH-Bot.md)
@@ -486,9 +487,10 @@ SDLC 5.0.0 (December 2025): ⭐ CURRENT
 
 ---
 
-**Last Updated**: December 5, 2025
+**Last Updated**: January 22, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
+**Framework Version**: SDLC 5.2.0
 
 ---
 

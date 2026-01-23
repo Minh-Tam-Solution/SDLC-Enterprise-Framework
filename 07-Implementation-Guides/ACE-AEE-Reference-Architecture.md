@@ -4,11 +4,12 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define the dual workbench architecture for human-agent collaboration
-**Framework:** SDLC 5.1.3 Complete Lifecycle + SASE Integration
-**Version:** 1.0.2
+**Framework:** SDLC 5.2.0 Complete Lifecycle + SASE Integration
+**Version:** 1.0.3
 **Created:** December 2025
-**Updated:** January 2025
+**Updated:** January 22, 2026
 **Status:** ACTIVE - PRODUCTION READY
+**AI Governance:** Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -1082,9 +1083,10 @@ SASE Kanban Board:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0.0 | 2025-12-16 | PM/PO + AI | Initial version |
+| 1.0.3 | 2026-01-22 | Framework Team | SDLC 5.2.0 alignment |
 
 ---
 
 **Document Status:** Phase 1-Spec (SE 3.0 Track 1)
-**Next Review:** CTO Final Review (Jan 2026)
-**Framework Version:** SDLC 5.1.3 (7-Pillar Architecture)
+**Next Review:** CTO Final Review (Q1 2026)
+**Framework Version:** SDLC 5.2.0 (7-Pillar Architecture + Planning Mode + AI Best Practices)

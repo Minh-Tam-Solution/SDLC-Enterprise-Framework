@@ -1,11 +1,12 @@
 # 🔄 SDLC Continuous Improvement Guide
 ## How to Evolve the Framework Without Losing Battle-Tested Wisdom
 
-**Version**: 5.1.3
-**Date**: January 2025
-**Status**: ACTIVE - ENHANCED WITH 4.7 → 5.1.3 UPGRADE LESSONS
+**Version**: 5.2.0
+**Date**: January 22, 2026
+**Status**: ACTIVE - ENHANCED WITH 4.7 → 5.2.0 UPGRADE LESSONS
 **Authority**: CEO + CPO + CTO Leadership
-**Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x
+**Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x → 5.2.0
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -108,6 +109,15 @@ SDLC 5.1.3 (January 2025):
   → 10 Golden Rules for sprint governance
   → SSOT validation in CI/CD
   → Validated from BFlow Sprint 86 direction confusion case study
+
+SDLC 5.2.0 (January 22, 2026):
+  → Planning Mode for >15 LOC changes
+  → AI Agent Best Practices (2026)
+  → Model Selection Matrix (task-type routing)
+  → Sub-agents Usage Guidelines
+  → Developer Role Evolution (Software 3.0)
+  → Specification Generation Workflow
+  → Feedback Loop Closure mechanisms
 
 Pattern: Each version BUILDS ON previous learnings
 Strategy: 90% Preserve + 10% Enhance (Never rebuild)
@@ -1134,16 +1144,18 @@ Potential Transformations (from SDLC-5.0-ROADMAP):
 ---
 
 **Document**: SDLC-Continuous-Improvement-Guide
-**Version**: 5.1.3
-**Status**: ACTIVE - ENHANCED WITH 4.7 → 5.1.3 UPGRADE LESSONS (7-Pillar Architecture)
-**Validation**: Systematic upgrade process proven successful across 6 major upgrades
+**Version**: 5.2.0
+**Date**: January 22, 2026
+**Status**: ACTIVE - ENHANCED WITH 4.7 → 5.2.0 UPGRADE LESSONS (Planning Mode + AI Best Practices)
+**Validation**: Systematic upgrade process proven successful across 7 major upgrades
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 5.1.3 adds 7-Pillar Architecture with Sprint Planning Governance (Pillar 2)
+**Latest**: SDLC 5.2.0 adds Planning Mode + AI Best Practices for expert AI-assisted development
+**Framework**: SDLC 5.2.0
 
 ***"Evolution without losing revolution."*** 🔄
 
 ***"We keep what works, add what's learned, share what helps."*** 🚀
 
-***"5.1.3 proves: 90% Preserve + 10% Enhance = Perfect Evolution."*** ✨
+***"5.2.0 proves: 90% Preserve + 10% Enhance = Perfect Evolution."*** ✨
 
-***"From complete lifecycle to 7-Pillar SASE-enhanced agentic development."*** 🎯
+***"From complete lifecycle to Planning Mode + AI Best Practices excellence."*** 🎯

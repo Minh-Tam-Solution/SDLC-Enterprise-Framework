@@ -1,7 +1,7 @@
 # 📊 AI Audit Report Generator - Stage 09 (GOVERN)
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 09 - GOVERN (Governance & Compliance)
 **Time Savings**: 85%
 **Authority**: CTO Office
@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Generate **comprehensive audit reports** for SDLC 5.1.3 projects covering compliance, security, operations, and governance. Supports tiered requirements from STANDARD to ENTERPRISE.
+Generate **comprehensive audit reports** for SDLC 5.2.0 projects covering compliance, security, operations, and governance. Supports tiered requirements from STANDARD to ENTERPRISE.
 
 ---
 
@@ -20,7 +20,7 @@ Generate **comprehensive audit reports** for SDLC 5.1.3 projects covering compli
 
 ```yaml
 System Prompt:
-  You are generating SDLC 5.1.3 compliance audit reports.
+  You are generating SDLC 5.2.0 compliance audit reports.
   Check: 10 stages (00-09), 6 pillars, gate evidence, documentation standards.
   Apply tier-appropriate requirements (LITE/STANDARD/PROFESSIONAL/ENTERPRISE).
   Reference: SDLC-Core-Methodology.md and sdlc_validator.py
@@ -322,7 +322,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are assessing governance maturity against CMMI and SDLC 5.1.3 standards.
+  You are assessing governance maturity against CMMI and SDLC 5.2.0 standards.
   Map current practices to maturity levels (1-5).
   Provide upgrade path recommendations.
   Reference: SDLC-Maturity-Assessment-Guide.md

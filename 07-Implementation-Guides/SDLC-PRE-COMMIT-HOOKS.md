@@ -1,12 +1,13 @@
-# SDLC 5.1.3 Pre-Commit Hooks - Battle-Tested Protection
-**Version**: 5.1.3
-**Date**: January 2025
+# SDLC 5.2.0 Pre-Commit Hooks - Battle-Tested Protection
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Status**: ACTIVE - INTEGRATED WITH UNIVERSAL CODE REVIEW FRAMEWORK
 **Foundation**: Lessons from 679 mock crisis and 3 platforms
 **Integration**: Works with all 3 Code Review Tiers (Free/Subscription/CodeRabbit)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Pillar**: Pillar 4 (Quality Gates) + Pillar 2 (Sprint Planning Governance)
 **SDLC Tier**: ALL TIERS (Mandatory)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -465,20 +466,22 @@ After Pre-Commit Hooks:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.2.0 | Jan 22, 2026 | Planning Mode + AI Best Practices alignment |
 | 5.0.0 | Dec 6, 2025 | Complete 10-stage + 4-tier integration, industry standards |
 | 4.9.0 | Nov 13, 2025 | Added tier-based hook requirements |
 | 4.8.0 | Oct 2025 | Initial battle-tested hooks from BFlow crisis |
 
 ---
 
-**Document**: SDLC-5.0.0-PRE-COMMIT-HOOKS
-**Version**: 5.0.0
-**Date**: December 6, 2025
+**Document**: SDLC-5.2.0-PRE-COMMIT-HOOKS
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Tier**: ALL TIERS (Mandatory)
 **Status**: ENHANCED WITH BFLOW BATTLE-TESTED PATTERNS
 **Coverage**: 6 Mandatory Hooks, 20+ Detection Patterns
 **Achievement**: 679 → 0 mocks, proven protection
+**Framework**: SDLC 5.2.0
 
-***"Every pattern here prevented a real crisis at BFlow"*** 🛡️
-***"Install these hooks. Sleep better at night."*** 🚀
+***"Every pattern here prevented a real crisis at BFlow"***
+***"Install these hooks. Sleep better at night."***

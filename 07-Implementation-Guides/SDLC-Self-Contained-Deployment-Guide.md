@@ -1,10 +1,11 @@
-# SDLC 5.1.3 Self-Contained Deployment Guide
+# SDLC 5.2.0 Self-Contained Deployment Guide
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Status**: ACTIVE - CEO Requirement
-**Authority**: CEO + CTO Office  
+**Authority**: CEO + CTO Office
 **Purpose**: Enable any team member (AI or Human) to understand SDLC compliance from one folder
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -442,6 +443,7 @@ Projects must implement quality gates appropriate to their tier.
 
 ---
 
-**Document Owner**: CTO  
-**Last Updated**: December 11, 2025  
-**Next Review**: Sprint 49 (SASE pilot completion)
+**Document Owner**: CTO
+**Last Updated**: January 22, 2026
+**Next Review**: February 2026
+**Framework**: SDLC 5.2.0

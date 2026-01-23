@@ -1,12 +1,13 @@
 # Project Templates
 
-**Version**: 5.1.3
-**Date**: January 2025
-**Stage**: 06 - TEMPLATES & TOOLS
+**Version**: 5.2.0
+**Date**: January 22, 2026
+**Stage**: 05 - TEMPLATES & TOOLS
 **Pillar**: 2 - Sprint Planning Governance (Planning Templates)
 **Status**: ACTIVE - Production Templates
 **Authority**: CTO + CPO Office
-**Framework**: SDLC 5.1.3 (7-Pillar Architecture)
+**Framework**: SDLC 5.2.0 (7-Pillar Architecture)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -156,6 +157,6 @@ Before using templates, verify:
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 5.1.3 projects
-**Last Updated**: January 2025
+**Compliance**: Templates RECOMMENDED for all SDLC 5.2.0 projects
+**Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office

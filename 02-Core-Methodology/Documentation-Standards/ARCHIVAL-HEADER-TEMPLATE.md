@@ -1,8 +1,8 @@
 # 🔒 SDLC Archival Header Template
 ## Universal Archival Standard for Document Governance Framework (DGF)
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Status**: ACTIVE TEMPLATE - UNIVERSAL ARCHIVAL STANDARD
 **Scope**: All SDLC framework version archival operations
 **Authority**: CPO Office + Document Governance Framework Standards
@@ -70,16 +70,17 @@ NOTES: <SHORT CONTEXT – WHY RETAINED>
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.2.0 | Jan 22, 2026 | Updated for SDLC 5.2.0 - Principle-Centric Framework |
 | 5.1.3 | Jan 2025 | Updated for SDLC 5.1.3 - Added Pillar 6 reference |
 | 5.0.0 | Dec 5, 2025 | Upgraded for SDLC 5.0.0 - Governance & Compliance Integration |
 | 4.5.0 | Sep 21, 2025 | Initial archival template version |
 
 ---
 
-**SDLC 5.1.3**: Stage 08 (Documentation Standards) - Pillar 6
+**SDLC 5.2.0**: Stage 08 (Documentation Standards) - Pillar 6
 **Component**: Document Governance Framework (DGF)
 **Compliance**: MANDATORY for all archived documents
-**Last Updated**: January 2025
+**Last Updated**: January 22, 2026
 
 ---
 End of template.

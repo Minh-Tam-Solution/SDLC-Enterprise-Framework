@@ -1,21 +1,21 @@
-# SDLC 5.1.3 Core Methodology
+# SDLC 5.2.0 Core Methodology
 
-**Version**: 5.1.3  
-**Date**: January 18, 2026  
-**Status**: ACTIVE  
+**Version**: 5.2.0
+**Date**: January 22, 2026
+**Status**: ACTIVE - Principle-Centric Framework with AI Governance
 **Authority**: Chairman + CEO + CPO + CTO Approved  
 
 ---
 
 ## Executive Summary
 
-SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations.
+SDLC 5.2.0 is a **7-Pillar AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations.
 
 ### The 7 Pillars
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                      SDLC 5.1.3 - 7 PILLARS                                ║
+║                      SDLC 5.2.0 - 7 PILLARS                                ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
@@ -30,7 +30,7 @@ SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** that governs the comp
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
-║  │ PILLAR 2: SPRINT PLANNING GOVERNANCE ⭐ NEW IN 5.1.3                 │  ║
+║  │ PILLAR 2: SPRINT PLANNING GOVERNANCE ⭐ NEW IN 5.2.0                 │  ║
 ║  │ Planning Hierarchy + G-Sprint Gates + 10 Golden Rules                │  ║
 ║  │ "Sprint governance is NOT optional - it's the execution backbone"    │  ║
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
@@ -124,7 +124,7 @@ SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** that governs the comp
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.1.3 - 10 STAGES                              │
+│                    SDLC 5.2.0 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -174,7 +174,7 @@ SDLC 5.1.3 is a **7-Pillar AI+Human Excellence Framework** that governs the comp
 
 ---
 
-## Pillar 2: Sprint Planning Governance ⭐ NEW IN 5.1.3
+## Pillar 2: Sprint Planning Governance ⭐ NEW IN 5.2.0
 
 > **"Sprint governance is NOT optional - it's the execution backbone of every project"**
 
@@ -407,7 +407,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 5.1.3 has TWO parallel gate tracks:
+SDLC 5.2.0 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -528,7 +528,7 @@ Feature: User Authentication (G0 → G4)
 
 ### Core Principles
 
-1. **Version-Free Naming**: `SDLC-Core-Methodology.md` (NOT `SDLC-5.1.3-Core-Methodology.md`)
+1. **Version-Free Naming**: `SDLC-Core-Methodology.md` (NOT `SDLC-5.2.0-Core-Methodology.md`)
 2. **Feature-Based**: `Authentication-Guide.md` (NOT `Nov-13-Auth.md`)
 3. **AI-Parseable**: Markdown, YAML, structured formats
 4. **10-Stage Structure**: Documentation organized by lifecycle stage
@@ -566,7 +566,7 @@ Enforcement by Tier:
 
 ## Industry Standards Integration
 
-SDLC 5.1.3 maps to industry standards:
+SDLC 5.2.0 maps to industry standards:
 
 ```yaml
 Standards Mapped:
@@ -613,7 +613,8 @@ Sprint Governance Standards:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **5.1.3** | **Jan 18, 2026** | **7-Pillar Architecture: Sprint Planning Governance as Pillar 2** |
+| **5.2.0** | **Jan 22, 2026** | **Principle-Centric Framework: 7-Pillar + AI Governance Principles** |
+| 5.1.3 | Jan 18, 2026 | 7-Pillar Architecture: Sprint Planning Governance as Pillar 2 |
 | 5.1.2 | Dec 24, 2025 | Documentation vs Code separation, 6-pillar structure |
 | 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
 | 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
@@ -623,7 +624,8 @@ Sprint Governance Standards:
 
 ---
 
-**Last Updated**: January 18, 2026  
-**Maintained By**: Framework Team  
-**Authority**: CTO Approved  
+**Last Updated**: January 22, 2026
+**Maintained By**: Framework Team
+**Authority**: CTO Approved
 **Case Study**: [BFlow Sprint 86](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

@@ -1,17 +1,18 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 5.1.3
-**Last Updated**: January 2025
+**Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
 **Tier**: 3 (Enterprise Automated Review)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Pillar**: Pillar 4 (Quality Gates) + Pillar 2 (Sprint Planning Governance)
 **SDLC Tier**: PROFESSIONAL (10-50) / ENTERPRISE (50+)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
-## 🆕 Sprint Planning Governance Integration (5.1.3)
+## Sprint Planning Governance Integration (5.2.0)
 
 **CodeRabbit can enforce Sprint Planning Governance automatically**:
 
@@ -1231,12 +1232,13 @@ For complete tier comparison, see the SDLC Implementation Guide.
 
 ---
 
-**Document Version**: 5.0.0
-**Last Updated**: December 6, 2025
-**Next Review**: January 6, 2026
+**Document Version**: 5.2.0
+**Last Updated**: January 22, 2026
+**Next Review**: February 22, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Tier**: PROFESSIONAL / ENTERPRISE
+**Framework**: SDLC 5.2.0
 
 ---
 

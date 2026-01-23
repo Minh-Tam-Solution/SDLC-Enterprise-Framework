@@ -1,12 +1,13 @@
 # SDLC Universal Code Review Framework
 
-**Version**: 5.1.3
-**Last Updated**: January 2025
+**Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Status**: PRODUCTION READY
 **Stage**: 04 (BUILD) - Code Review Excellence
 **Pillar**: Pillar 4 (Quality Gates - Dual Track) + Pillar 2 (Sprint Planning Governance)
 **Audience**: Engineering Teams (All Tiers - LITE to ENTERPRISE)
 **ROI**: 2,033% (Tier 2) to 14,340% (Tier 3) validated
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -1016,10 +1017,11 @@ This framework provides **three equally valid approaches** to code review excell
 
 ---
 
-**Document Version**: 5.0.0
-**Last Updated**: December 6, 2025
-**Next Review**: January 6, 2026
+**Document Version**: 5.2.0
+**Last Updated**: January 22, 2026
+**Next Review**: February 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
+**Framework**: SDLC 5.2.0
 
 ---
 
@@ -1031,6 +1033,6 @@ This framework provides **three equally valid approaches** to code review excell
 
 ---
 
-**🏆 SDLC 5.0.0 Universal Code Review Framework**
+**SDLC 5.2.0 Universal Code Review Framework**
 *Excellence at Every Scale - From LITE to ENTERPRISE*
 *Stage 04: BUILD - Code Review Excellence*

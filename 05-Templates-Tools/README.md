@@ -1,21 +1,43 @@
-# 🛠️ SDLC 5.1.3 Templates & Tools
+# 🛠️ SDLC 5.2.0 Templates & Tools
 ## Complete 10-Stage Productivity Suite + SASE Artifact Templates
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 03 - TEMPLATES & TOOLS
 **Pillar**: Supporting all 7 Pillars (Templates & Automation)
 **Status**: PRODUCTION-READY - COMPLETE 10-STAGE + SASE/SE 3.0 INTEGRATION
 **Authority**: CTO + CPO Office
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 **Organization**: Numbered directories (1-5) indicate priority and usage order + SASE-Artifacts
 **ROI**: 14,822% combined (BFlow Platform validated, 52-day journey)
 **Proven**: BFlow, NQH-Bot, MTEP platforms
 
 ---
 
-## 🆕 What's New in SDLC 5.1.0 (December 11, 2025)
+## 🆕 What's New in SDLC 5.2.0 (January 2026)
 
-### SASE Artifact Templates (NEW)
+### AI Governance Integration
+
+**SDLC 5.2.0** adds **AI Governance Principles** to govern AI tool usage:
+
+```yaml
+AI-Governance Principles (NEW - 03-AI-GOVERNANCE/):
+  01-AI-Human-Collaboration.md    # Human guides, AI executes, Human verifies
+  02-Agent-Accountability.md      # Human ALWAYS responsible for shipped code
+  03-Planning-Mode-Principle.md   # Risk-based trigger for planning
+  04-Verification-Principle.md    # TDD, evidence, validation before merge
+  05-Context-Management.md        # AGENTS.md pattern (<60 lines)
+  06-Tool-Evaluation-Criteria.md  # How to evaluate ANY AI tool
+  07-Anti-Patterns.md             # What NOT to do with AI
+```
+
+**→ [NEW: 03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/)**
+
+---
+
+## SASE Artifact Templates (SDLC 5.1.0+)
+
+### SASE Artifact Templates (Streamlined)
 
 **SDLC 5.1.0** adds **6 SASE artifact templates** for structured human-agent collaboration:
 
@@ -378,7 +400,7 @@ Time Saved: 861.5 hours annually (94% reduction)
 
 ### Get Help
 - **Directory-specific**: See README in each numbered directory
-- **General questions**: [SDLC 5.1.3 Overview](../01-Overview/)
+- **General questions**: [SDLC 5.2.0 Overview](../01-Overview/)
 - **Case studies**: [06-Case-Studies/](../06-Case-Studies/)
 - **CPO Office**: taidt@mtsolution.com.vn
 
@@ -388,7 +410,8 @@ Time Saved: 861.5 hours annually (94% reduction)
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 5.1.3 | Jan 2025 | Updated for 7-Pillar Architecture, Sprint Planning Governance integration |
+| **5.2.0** | **Jan 22, 2026** | **AI Governance integration, simplified SASE artifacts (AGENTS.md primary)** |
+| 5.1.3 | Jan 2026 | Updated for 7-Pillar Architecture, Sprint Planning Governance integration |
 | 5.1.0 | Dec 11, 2025 | SASE artifact templates, Agentic Maturity integration |
 | 5.0.0 | Dec 6, 2025 | Complete 10-stage rewrite, 4-tier classification, industry standards |
 | 4.9.0 | Nov 13, 2025 | Initial 10-stage lifecycle tool coverage |
@@ -396,12 +419,12 @@ Time Saved: 861.5 hours annually (94% reduction)
 ---
 
 **Document Status**: ACTIVE - PRODUCTION READY
-**Compliance**: MANDATORY for all SDLC 5.1.3 projects
-**Last Updated**: January 2025
+**Compliance**: MANDATORY for all SDLC 5.2.0 projects
+**Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office
 
 ***"Follow the numbers, unlock the productivity."*** 🚀
 
 ***"1-AI-Tools first, 2-configure agents, 3-backup available, 4-automate compliance, 5-setup new projects."*** ⚡
 
-***"From 920 hours to 58 hours - the SDLC 5.1.3 difference."*** 🎯
+***"From 920 hours to 58 hours - the SDLC 5.2.0 difference."*** 🎯

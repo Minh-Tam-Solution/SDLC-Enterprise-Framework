@@ -1,17 +1,18 @@
 # Governance & Compliance Standards
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning Governance × Pillar 4 - Quality Gates × Pillar 5 - SASE Integration
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
+**AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 5.1.3**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 5.2.0**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
@@ -242,6 +243,11 @@ Security:
 
 ## Changelog
 
+### v5.2.0 (January 2026)
+- AI Governance integration (aligned with 03-AI-GOVERNANCE principles)
+- Added Verification-First and Human Accountability references
+- Updated to principle-centric framework structure
+
 ### v5.1.3 (January 2025)
 - Restructured around Pillar 2, 4, 5 integration
 - Added Pillar Integration Map diagram
@@ -256,5 +262,5 @@ Security:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Last Updated**: January 2025
+**Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office

@@ -1,8 +1,8 @@
 # 📚 **BFLOW SPRINT 86 DIRECTION CONFUSION - CASE STUDY**
-## Version: 5.1.3
-## Date: January 18, 2026
+## Version: 5.2.0
+## Date: January 22, 2026
 ## Status: RESOLVED → FRAMEWORK UPGRADE
-## Framework: SDLC 5.1.2 → 5.1.3 Evolution
+## Framework: SDLC 5.2.0 (Historical: 5.1.2 → 5.1.3 Evolution)
 ## Sponsor: Minh Tam Solution (MTS) / NQH Holding
 ## Case Study: Sprint Planning Governance Gap Discovery
 
@@ -434,7 +434,8 @@ The BFlow Sprint 86 Direction Confusion incident, while disruptive, led to a **s
 
 ---
 
-**Case Study Author**: SDLC Framework Team  
-**Review Date**: January 18, 2026  
-**CTO Approval**: ✅ Approved  
-**Framework Version**: SDLC 5.1.3
+**Case Study Author**: SDLC Framework Team
+**Review Date**: January 22, 2026
+**CTO Approval**: ✅ Approved
+**Framework Version**: SDLC 5.2.0
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

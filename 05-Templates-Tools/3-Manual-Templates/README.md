@@ -1,17 +1,18 @@
 # 📋 3-Manual-Templates - Traditional Process Templates
-## Backup Templates for SDLC 5.1.3 (Use When AI Unavailable)
+## Backup Templates for SDLC 5.2.0 (Use When AI Unavailable)
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Priority**: ⭐⭐ (BACKUP)
 **Pillar**: 0 - Design Thinking Foundation (Manual Templates)
 **Purpose**: Manual templates for when AI tools are unavailable or for training
 **Status**: COMPLETE (9 templates for Stage 00-01)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 **Recommendation**: Use [/1-AI-Tools/](../1-AI-Tools/) first (96% faster)
 
 ---
 
-## 🎯 SDLC 5.0.0 Integration
+## 🎯 SDLC 5.2.0 Integration
 
 ### Stage Mapping
 
@@ -560,8 +561,8 @@ Result: Team knows methodology + productivity tools
 
 ---
 
-**Folder Status**: BACKUP - SDLC 5.0.0 Complete
-**Last Updated**: December 6, 2025
+**Folder Status**: BACKUP - SDLC 5.2.0 Complete
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office
 
 ***"Manual templates teach, AI accelerates, hybrid delivers both."*** 🎯

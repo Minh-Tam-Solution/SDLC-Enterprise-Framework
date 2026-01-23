@@ -1,20 +1,37 @@
-# 🤖 AI Tools for SDLC 5.1.3
+# 🤖 AI Tools for SDLC 5.2.0
 ## Stage-Aligned AI Automation for Complete Lifecycle + SASE Integration
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Status**: ACTIVE - Production Standards + SASE/SE 3.0
 **Pillar**: 5 - SASE Integration (AI Tools)
 **Scope**: AI tools mapped to all 10 SDLC stages (00-09) + 4-Tier Classification + Agentic Maturity
 **Foundation**: Proven across 3 platforms (BFlow, NQH-Bot, MTEP)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
 ---
 
-## 🆕 What's New in SDLC 5.1.3 (January 2025)
+## 🆕 What's New in SDLC 5.2.0 (January 2026)
 
-### 7-Pillar Architecture Integration
+### AI Governance Principles Integration
 
-**SDLC 5.1.3** introduces the **7-Pillar Architecture** with Sprint Planning Governance as Pillar 2:
+**SDLC 5.2.0** adds **timeless AI Governance Principles** that apply to ALL AI tools:
+
+| Principle | Summary | Reference |
+|-----------|---------|-----------|
+| AI-Human Collaboration | Human guides, AI executes, Human verifies | [01-AI-Human-Collaboration.md](../../03-AI-GOVERNANCE/01-AI-Human-Collaboration.md) |
+| Planning Mode | Risk-based trigger (>15 LOC, API changes, auth) | [03-Planning-Mode-Principle.md](../../03-AI-GOVERNANCE/03-Planning-Mode-Principle.md) |
+| Verification-First | TDD with AI, evidence before merge | [04-Verification-Principle.md](../../03-AI-GOVERNANCE/04-Verification-Principle.md) |
+| Context Management | AGENTS.md <60 lines | [05-Context-Management.md](../../03-AI-GOVERNANCE/05-Context-Management.md) |
+| Anti-Patterns | Avoid blind acceptance, context stuffing | [07-Anti-Patterns.md](../../03-AI-GOVERNANCE/07-Anti-Patterns.md) |
+
+**→ [Full principles: 03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/)**
+
+---
+
+### 7-Pillar Architecture (SDLC 5.2.0+)
+
+**SDLC 5.2.0+** features the **7-Pillar Architecture** with Sprint Planning Governance as Pillar 2:
 
 ```yaml
 7-Pillar Framework:
@@ -29,7 +46,7 @@
 
 ### SASE Integration for AI Tools
 
-**SDLC 5.1.3** integrates **SE 3.0 SASE principles** into AI tool usage:
+**SDLC 5.2.0** integrates **SE 3.0 SASE principles** into AI tool usage:
 
 ```yaml
 SE4H (Human) Role with AI Tools:
@@ -58,9 +75,9 @@ SE4A (AI Agent) Role:
 
 ## 🎯 10-Stage Lifecycle Coverage
 
-### 10-Stage Lifecycle Coverage (SDLC 5.1.3)
+### 10-Stage Lifecycle Coverage (SDLC 5.2.0)
 
-SDLC 5.1.3 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
+SDLC 5.2.0 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
 
 | Stage | Name | AI Tools Folder | Key Automation |
 |-------|------|-----------------|----------------|
@@ -100,7 +117,7 @@ AI tools scale with your team size:
 
 ---
 
-## 📂 Folder Structure (10-Stage Aligned - SDLC 5.1.3)
+## 📂 Folder Structure (10-Stage Aligned - SDLC 5.2.0)
 
 ```
 1-AI-Tools/
@@ -297,7 +314,7 @@ AI Prompt Pattern:
 
 ```
 AI Prompt Pattern:
-"Review code for SDLC 5.1.3:
+"Review code for SDLC 5.2.0:
 [paste code]
 
 Check:
@@ -424,7 +441,7 @@ AI Prompt Pattern:
 AI Prompt Pattern:
 "Check compliance for [project]:
 - Tier: [LITE/STANDARD/PROFESSIONAL/ENTERPRISE]
-- Standards: SDLC 5.1.3, OWASP ASVS L[1-3]
+- Standards: SDLC 5.2.0, OWASP ASVS L[1-3]
 
 Check:
 ✅ 10-stage structure
@@ -493,10 +510,12 @@ Output: Score + violations + auto-fix commands"
 
 ---
 
-**Folder Status**: ACTIVE - SDLC 5.1.3 Complete
-**Last Updated**: December 12, 2025
+**Folder Status**: ACTIVE - SDLC 5.2.0 Complete
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office
 
 ***"AI automation for every stage of the lifecycle."*** 🚀
+
+**AI Governance**: All tools align with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles.
 
 **Legacy/Archive Policy**: Content in 99-legacy and 10-archive folders is never validated or upgraded.

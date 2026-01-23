@@ -1,11 +1,12 @@
-# SDLC 5.1.3 Quick Start - Build RIGHT Things RIGHT in 2 Days
+# SDLC 5.2.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Time Required**: 2 days solo, 1 week for teams
 **Result**: 10x-50x productivity + 3x feature adoption + 14,822% ROI
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
-**What's New in 5.1.3**: Sprint Planning Governance (Pillar 2) + 7-Pillar Architecture
+**What's New in 5.2.0**: Planning Mode + AI Best Practices + 7-Pillar Architecture
 
 **SDLC 5.1.3 Features**:
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
@@ -656,12 +657,13 @@ You can confidently:
 
 ---
 
-**Document Version**: 5.1.3
-**Last Updated**: January 2025
+**Document Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**What's New**: 7-Pillar Architecture + Sprint Planning Governance (Pillar 2) + SASE Integration
+**What's New**: Planning Mode + AI Best Practices + 7-Pillar Architecture
+**Framework**: SDLC 5.2.0
 
 ---
 
-**🏆 SDLC 5.1.3 Quick Start**
-*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with 7-Pillar Architecture + Sprint Governance*
+**🏆 SDLC 5.2.0 Quick Start**
+*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with Planning Mode + AI Best Practices*

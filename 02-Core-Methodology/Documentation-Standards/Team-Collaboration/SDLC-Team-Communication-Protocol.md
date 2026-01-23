@@ -1,12 +1,13 @@
 # SDLC Team Communication Protocol
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Documentation Standards / Team Collaboration)
 **Pillar**: 2 - Sprint Planning Governance × Pillar 6 - Documentation Permanence
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
 **Industry Standards**: Team Topologies, SAFe 6.0, DORA
+**AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Context Management, Verification-First)
 
 ---
 
@@ -442,6 +443,10 @@ Target: Average 4.0+ across all questions
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects (scaled by tier)
-**Last Updated**: December 5, 2025
+**Version**: 5.2.0
+**Last Updated**: January 22, 2026
 **Owner**: CPO Office
+**Related Documents**:
+- [03-AI-GOVERNANCE/05-Context-Management.md](../../../03-AI-GOVERNANCE/05-Context-Management.md) - AGENTS.md/CLAUDE.md principles
+- [04-AI-TOOLS-LANDSCAPE/](../../../04-AI-TOOLS-LANDSCAPE/) - Tool-specific integration guides
 

@@ -1,16 +1,17 @@
 # 📋 AI Governance Tools - Stage 09 (GOVERN)
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 09 - GOVERN (Governance & Compliance)
 **Status**: ACTIVE - Production Standards
 **Authority**: CTO Office
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---
 
 ## Purpose
 
-AI-powered tools for **governance, compliance auditing, and maturity assessment** following SDLC 5.1.3 standards. These tools automate compliance checks and generate audit-ready reports for all project tiers.
+AI-powered tools for **governance, compliance auditing, and maturity assessment** following SDLC 5.2.0 standards. These tools automate compliance checks and generate audit-ready reports for all project tiers.
 
 ---
 
@@ -97,7 +98,7 @@ AI: [Maturity level mapping, area assessment, upgrade path]
 
 ---
 
-## Integration with SDLC 5.1.3
+## Integration with SDLC 5.2.0
 
 ### Compliance Check Areas (5.0.0)
 
@@ -145,7 +146,7 @@ repos:
   - repo: local
     hooks:
       - id: sdlc-compliance
-        name: SDLC 5.1.3 Compliance Check
+        name: SDLC 5.2.0 Compliance Check
         entry: python sdlc_validator.py --quick
         language: system
         pass_filenames: false
@@ -243,6 +244,6 @@ ENTERPRISE (50+ people):
 
 ---
 
-**Folder Status**: ACTIVE - v5.1.3 Complete
-**Last Updated**: December 5, 2025
+**Folder Status**: ACTIVE - v5.2.0 Complete
+**Last Updated**: January 22, 2026
 **Owner**: CTO Office

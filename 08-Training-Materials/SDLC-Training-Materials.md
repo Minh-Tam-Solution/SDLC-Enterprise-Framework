@@ -1,10 +1,11 @@
-# SDLC 5.1.3 Training Materials - Complete Learning Package
+# SDLC 5.2.0 Training Materials - Complete Learning Package
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Audience**: All team members (developers, designers, product managers, QA)
 **Duration**: 8 hours total (can be split across multiple sessions)
 **Prerequisites**: Basic SDLC 4.9 knowledge (or 2-hour SDLC fundamentals course)
+**AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
@@ -1315,12 +1316,13 @@ Day 11: CPO 1-on-1
 
 ---
 
-**Document**: SDLC-5.1.3-Training-Materials
+**Document**: SDLC-5.2.0-Training-Materials
 **Purpose**: Complete learning package for team adoption
 **Audience**: All team members (developers, designers, PM, QA)
 **Duration**: 8 hours core + ongoing practice
-**Certification**: SDLC 5.1.3 Certified Practitioner
-**Version**: 3.1
-**Date**: January 2025
+**Certification**: SDLC 5.2.0 Certified Practitioner
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **License**: MTS Internal Use
-**What's New**: 7-Pillar Architecture, Sprint Planning Governance, SASE Integration
+**What's New**: Planning Mode + AI Best Practices + 7-Pillar Architecture
+**Framework**: SDLC 5.2.0

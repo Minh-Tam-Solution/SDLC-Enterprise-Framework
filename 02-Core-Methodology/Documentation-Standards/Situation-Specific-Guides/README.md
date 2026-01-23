@@ -1,11 +1,12 @@
 # Situation-Specific Guides
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Documentation Standards)
 **Pillar**: Cross-Pillar Reference Guides
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO Office
+**AI Governance**: Aligned with Planning Mode Principle (03-AI-GOVERNANCE)
 
 ---
 
@@ -133,5 +134,5 @@ Step 5: Pass G-Sprint Gate
 
 **Document Status**: ACTIVE
 **Compliance**: Reference Guide
-**Last Updated**: January 2025
+**Last Updated**: January 22, 2026
 **Owner**: CTO Office

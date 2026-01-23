@@ -1,7 +1,7 @@
 # SDLC Security Gates
 
-**Version**: 5.1.3
-**Date**: January 2025
+**Version**: 5.2.0
+**Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 5 - SASE Integration
 **Status**: ACTIVE - Production Standard
