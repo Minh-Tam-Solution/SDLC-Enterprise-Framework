@@ -155,7 +155,7 @@ SDLC-Enterprise-Framework/
 │   ├── SDLC-Agentic-Core-Principles.md
 │   ├── Documentation-Standards/
 │   └── Governance-Compliance/
-├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (NEW)
+├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (NEW 5.2.0)
 │   ├── 01-AI-Human-Collaboration.md
 │   ├── 02-Agent-Accountability.md
 │   ├── 03-Planning-Mode-Principle.md
@@ -163,23 +163,23 @@ SDLC-Enterprise-Framework/
 │   ├── 05-Context-Management.md
 │   ├── 06-Tool-Evaluation-Criteria.md
 │   └── 07-Anti-Patterns.md
-├── 03-Templates-Tools/           # Templates & Automation
-│   ├── SASE-Artifacts/           # CRP, MRP, VCR (MTS/BRS/LPS deprecated)
-│   ├── 1-AI-Tools/
-│   ├── 2-Agent-Templates/
-│   └── 3-Manual-Templates/
-├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (NEW - Outer Ring)
-│   ├── tool-profiles/            # Claude Code, Cursor, Copilot, etc.
-│   ├── integration-guides/       # Orchestrator integration specs
+├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (NEW 5.2.0 - Outer Ring)
+│   ├── tool-profiles/            # Claude Code, Cursor, Copilot profiles
+│   ├── integration-guides/       # MCP integration specs
+│   ├── capability-matrix.md      # Tool comparison
 │   └── trend-watch/              # Monthly tool evolution updates
-├── 04-Case-Studies/              # BFlow, NQH-Bot examples
-├── 05-Implementation-Guides/     # Rollout guides
-├── 06-Training-Materials/
-├── 07-Continuous-Improvement/
-├── 08-Version-History/
-├── 99-Legacy/                    # Archive
-├── CONTENT-MAP.md                # Topic → file mapping (NEW)
-└── DEPRECATION-POLICY.md         # Redirect rules (NEW)
+├── 05-Templates-Tools/           # Templates & Automation
+│   ├── SASE-Artifacts/           # CRP, MRP, VCR, AGENTS.md template
+│   ├── 1-AI-Tools/               # AI prompts by stage
+│   ├── 2-Agent-Templates/        # Redirect stubs → 99-Legacy/
+│   └── 3-Manual-Templates/
+├── 06-Case-Studies/              # BFlow, NQH-Bot examples
+├── 07-Implementation-Guides/     # Rollout guides
+├── 08-Training-Materials/
+├── 09-Continuous-Improvement/
+├── 99-Legacy/                    # Archive (tool-guides, deployment-guides, etc.)
+├── CONTENT-MAP.md                # Topic → file mapping (NEW 5.2.0)
+└── DEPRECATION-POLICY.md         # Redirect rules (NEW 5.2.0)
 ```
 
 ---
@@ -192,9 +192,9 @@ SDLC-Enterprise-Framework/
 3. [SASE Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - Agentic workflow
 
 ### Path 2: Implement (3 hours)
-1. Download [AI Tools](./03-Templates-Tools/1-AI-Tools/) or [Manual Templates](./03-Templates-Tools/3-Manual-Templates/)
+1. Download [AI Tools](./05-Templates-Tools/1-AI-Tools/) or [Manual Templates](./05-Templates-Tools/3-Manual-Templates/)
 2. Run 1 feature through 10-stage methodology
-3. Setup [Code Review Tier](./05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
+3. Setup [Code Review Tier](./07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
 
 ### Path 3: Full Rollout (2-3 weeks)
 1. Week 1: Team training + framework setup
@@ -221,14 +221,14 @@ SDLC-Enterprise-Framework/
 - [SDLC-Sprint-Planning-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md) ← **NEW in 5.1.3**
 
 **Templates**:
-- [AGENTS.md Template](./03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
-- [SASE Artifacts](./03-Templates-Tools/SASE-Artifacts/) - CRP, MRP, VCR _(MTS/BRS/LPS deprecated)_
-- [AI Tools](./03-Templates-Tools/1-AI-Tools/) - AI prompts
-- [Agent Templates](./03-Templates-Tools/2-Agent-Templates/) - 17 agents
+- [AGENTS.md Template](./05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
+- [SASE Artifacts](./05-Templates-Tools/SASE-Artifacts/) - CRP, MRP, VCR _(MTS/BRS/LPS deprecated)_
+- [AI Tools](./05-Templates-Tools/1-AI-Tools/) - AI prompts
+- [Agent Templates](./05-Templates-Tools/2-Agent-Templates/) - 17 agents
 
 **Implementation**:
-- [SDLC-Implementation-Guide.md](./05-Implementation-Guides/SDLC-Implementation-Guide.md)
-- [SDLC-Universal-Code-Review-Framework.md](./05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
+- [SDLC-Implementation-Guide.md](./07-Implementation-Guides/SDLC-Implementation-Guide.md)
+- [SDLC-Universal-Code-Review-Framework.md](./07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
 
 ---
 

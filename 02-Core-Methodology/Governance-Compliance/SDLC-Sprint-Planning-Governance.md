@@ -828,8 +828,8 @@ Validation:
 
 - [SDLC-Quality-Gates.md](./SDLC-Quality-Gates.md) - Feature lifecycle gates
 - [SDLC-Change-Management-Standard.md](./SDLC-Change-Management-Standard.md) - Change control
-- [SPRINT-TEMPLATE.md](../../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) - Sprint documentation template
-- [ROADMAP-TEMPLATE.md](../../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/ROADMAP-TEMPLATE.md) - Roadmap template
+- [SPRINT-TEMPLATE.md](../../05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) - Sprint documentation template
+- [ROADMAP-TEMPLATE.md](../../05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/ROADMAP-TEMPLATE.md) - Roadmap template
 - BFlow Gap Analysis (January 18, 2026) - Incident that drove this governance
 
 ---

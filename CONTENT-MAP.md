@@ -39,37 +39,37 @@ Before creating any new document, check if a canonical file already exists for t
 | Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md` | — | ACTIVE |
 | Sprint Planning Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md` | — | ACTIVE |
 
-### Templates (03-Templates-Tools/SASE-Artifacts/)
+### Templates (05-Templates-Tools/SASE-Artifacts/)
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| AGENTS.md Template | `03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` | — | ACTIVE |
-| CRP (Consultation Request) | `03-Templates-Tools/SASE-Artifacts/04-CRP-Template.md` | — | ACTIVE |
-| MRP (Merge-Readiness Pack) | `03-Templates-Tools/SASE-Artifacts/05-MRP-Template.md` | — | ACTIVE |
-| VCR (Version Controlled Resolution) | `03-Templates-Tools/SASE-Artifacts/06-VCR-Template.md` | — | ACTIVE |
-| BriefingScript (BRS) | — | `03-Templates-Tools/SASE-Artifacts/01-BriefingScript-Template.yaml` | DEPRECATED |
-| LoopScript (LPS) | — | `03-Templates-Tools/SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
-| MentorScript (MTS) | — | `03-Templates-Tools/SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
+| AGENTS.md Template | `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` | — | ACTIVE |
+| CRP (Consultation Request) | `05-Templates-Tools/SASE-Artifacts/04-CRP-Template.md` | — | ACTIVE |
+| MRP (Merge-Readiness Pack) | `05-Templates-Tools/SASE-Artifacts/05-MRP-Template.md` | — | ACTIVE |
+| VCR (Version Controlled Resolution) | `05-Templates-Tools/SASE-Artifacts/06-VCR-Template.md` | — | ACTIVE |
+| BriefingScript (BRS) | — | `05-Templates-Tools/SASE-Artifacts/01-BriefingScript-Template.yaml` | DEPRECATED |
+| LoopScript (LPS) | — | `05-Templates-Tools/SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
+| MentorScript (MTS) | — | `05-Templates-Tools/SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
 
-### AI Tools Best Practices (03-Templates-Tools/1-AI-Tools/)
-
-| Topic | Canonical File | Redirects From | Status |
-|-------|---------------|----------------|--------|
-| AI Best Practices Index | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md` | — | ACTIVE |
-| Planning Mode (Tool Guide) | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md` | — | ACTIVE |
-| Model Selection | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
-| Sub-agent Orchestration | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE |
-| Prompting Best Practices | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md` | — | ACTIVE |
-| Memory & Context | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md` | — | ACTIVE |
-| Permissions & Security | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md` | — | ACTIVE |
-| Developer Role Evolution | `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md` | — | ACTIVE |
-
-### Implementation Guides (05-Implementation-Guides/)
+### AI Tools Best Practices (05-Templates-Tools/1-AI-Tools/)
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| Code Review Framework | `05-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `1-AI-Tools/code-review/` (partial) | ACTIVE |
-| Implementation Guide | `05-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
+| AI Best Practices Index | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md` | — | ACTIVE |
+| Planning Mode (Tool Guide) | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md` | — | ACTIVE |
+| Model Selection | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
+| Sub-agent Orchestration | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE |
+| Prompting Best Practices | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md` | — | ACTIVE |
+| Memory & Context | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md` | — | ACTIVE |
+| Permissions & Security | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md` | — | ACTIVE |
+| Developer Role Evolution | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md` | — | ACTIVE |
+
+### Implementation Guides (07-Implementation-Guides/)
+
+| Topic | Canonical File | Redirects From | Status |
+|-------|---------------|----------------|--------|
+| Code Review Framework | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `1-AI-Tools/code-review/` (partial) | ACTIVE |
+| Implementation Guide | `07-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
 
 ### AI Tools Landscape (04-AI-TOOLS-LANDSCAPE/) - NEW
 
@@ -86,15 +86,25 @@ Before creating any new document, check if a canonical file already exists for t
 > **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
 > Tool-specific knowledge enables Orchestrator to enforce Core principles.
 
-### Tool-Specific Content (99-ARCHIVE/tool-guides-2026/)
+### Tool-Specific Content (99-Legacy/tool-guides-2026/)
 
 | Topic | Archive Location | Original Location | Status |
 |-------|-----------------|-------------------|--------|
-| Claude Code Templates | `99-ARCHIVE/tool-guides-2026/claude-code/` | `2-Agent-Templates/claude-code/` | ARCHIVED |
-| Cursor Templates | `99-ARCHIVE/tool-guides-2026/cursor/` | `2-Agent-Templates/cursor/` | ARCHIVED |
-| Copilot Templates | `99-ARCHIVE/tool-guides-2026/copilot/` | `2-Agent-Templates/copilot/` | ARCHIVED |
-| ChatGPT Templates | `99-ARCHIVE/tool-guides-2026/chatgpt/` | `2-Agent-Templates/chatgpt/` | ARCHIVED |
-| Gemini Templates | `99-ARCHIVE/tool-guides-2026/gemini/` | `2-Agent-Templates/gemini/` | ARCHIVED |
+| Claude Code Templates | `99-Legacy/tool-guides-2026/claude-code/` | `2-Agent-Templates/claude-code/` | ARCHIVED |
+| Cursor Templates | `99-Legacy/tool-guides-2026/cursor/` | `2-Agent-Templates/cursor/` | ARCHIVED |
+| Copilot Templates | `99-Legacy/tool-guides-2026/copilot/` | `2-Agent-Templates/copilot/` | ARCHIVED |
+| ChatGPT Templates | `99-Legacy/tool-guides-2026/chatgpt/` | `2-Agent-Templates/chatgpt/` | ARCHIVED |
+| Gemini Templates | `99-Legacy/tool-guides-2026/gemini/` | `2-Agent-Templates/gemini/` | ARCHIVED |
+
+### Deployment Guides (99-Legacy/deployment-guides-5.1.3/)
+
+| Topic | Archive Location | Purpose | Status |
+|-------|-----------------|---------|--------|
+| Team Compliance Docs | `99-Legacy/deployment-guides-5.1.3/08-Team-Management/` | BFlow 5.1.3 deployment | ARCHIVED |
+| AI Platform Deployment | `99-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
+
+> **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
+> For 5.2.0 deployments, adapt the governance docs from 02-Core-Methodology/.
 
 ---
 
@@ -102,11 +112,11 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Original Location | Archive Location | Created | Expires |
 |-------------------|------------------|---------|---------|
-| `2-Agent-Templates/claude-code/` | `99-ARCHIVE/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/cursor/` | `99-ARCHIVE/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/copilot/` | `99-ARCHIVE/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/chatgpt/` | `99-ARCHIVE/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/gemini/` | `99-ARCHIVE/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/claude-code/` | `99-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/cursor/` | `99-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/copilot/` | `99-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/chatgpt/` | `99-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
+| `2-Agent-Templates/gemini/` | `99-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
 
 ---
 
@@ -147,7 +157,7 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 ### When Archiving
 
-1. Move file to 99-ARCHIVE/ with dated subfolder
+1. Move file to 99-Legacy/ with dated subfolder
 2. Create redirect stub at original location
 3. Update status to ARCHIVED in this map
 4. Stub expires after 6 months

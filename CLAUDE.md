@@ -308,22 +308,22 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 │   └── 03-ADRs/                   # ⭐ NEW IN 5.1.3
 │       └── ADR-034-Planning-Subagent-Orchestration.md
 │
-├── 03-Templates-Tools/            # ⭐ REORGANIZED
+├── 05-Templates-Tools/            # ⭐ REORGANIZED
 │   ├── 1-AI-Tools/                # PRIMARY: 96% time savings
 │   ├── 2-Agent-Templates/         # 17 AI agents configured
 │   ├── 3-Manual-Templates/        # Backup templates
 │   └── 4-Scripts/                 # Validators + automation
 │
-├── 04-Case-Studies/               # Case studies
+├── 06-Case-Studies/               # Case studies
 │   ├── BFlow-52-Day-Journey-Case-Study.md  # 827:1 ROI
 │   └── SDLC-Design-Thinking-Case-Study-NQH-Bot.md
 │
-├── 05-Implementation-Guides/      # Practical guides
+├── 07-Implementation-Guides/      # Practical guides
 │   ├── SDLC-Implementation-Guide.md
 │   ├── SDLC-Universal-Code-Review-Framework.md
 │   └── SDLC-Platform-Patterns.md
 │
-├── 06-Training-Materials/         # Training resources
+├── 08-Training-Materials/         # Training resources
 ├── 07-Deployment-Toolkit/         # Deployment tools
 ├── 08-Continuous-Improvement/     # Improvement processes
 ├── 09-Version-History/            # Version history
@@ -418,7 +418,7 @@ SDLC 5.1.3 (January 2026)
 **Essential Documentation**:
 - Main README: [README.md](README.md)
 - Core Methodology: [02-Core-Methodology/SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md)
-- Implementation Guide: [05-Implementation-Guides/SDLC-Implementation-Guide.md](05-Implementation-Guides/SDLC-Implementation-Guide.md)
+- Implementation Guide: [07-Implementation-Guides/SDLC-Implementation-Guide.md](07-Implementation-Guides/SDLC-Implementation-Guide.md)
 - Code File Naming: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
 **NEW in 5.1.3**:
@@ -438,7 +438,7 @@ SDLC 5.1.3 (January 2026)
 - Code File Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
 **NEW in 4.9**:
-- BFlow 52-Day Journey: [04-Case-Studies/BFlow-52-Day-Journey-Case-Study.md](04-Case-Studies/BFlow-52-Day-Journey-Case-Study.md)
+- BFlow 52-Day Journey: [06-Case-Studies/BFlow-52-Day-Journey-Case-Study.md](06-Case-Studies/BFlow-52-Day-Journey-Case-Study.md)
 
 ---
 

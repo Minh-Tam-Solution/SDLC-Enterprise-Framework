@@ -352,7 +352,7 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 - [SDLC-Quality-Gates.md](../Governance-Compliance/SDLC-Quality-Gates.md) - Dual-track gates
 
 ### Case Studies
-- [BFlow Sprint 86 Direction Confusion](../../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Why Pillar 2 & 6 matter
+- [BFlow Sprint 86 Direction Confusion](../../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Why Pillar 2 & 6 matter
 
 ---
 

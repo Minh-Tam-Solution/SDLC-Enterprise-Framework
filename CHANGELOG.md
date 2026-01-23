@@ -56,7 +56,7 @@
 
 ### 🆕 AI Agent Best Practices 2026 Guide (NEW)
 
-**New folder**: `03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/`
+**New folder**: `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/`
 
 | Guide | Purpose |
 |-------|---------|
@@ -102,20 +102,20 @@
 ### 📂 Files Added/Updated
 
 **New - AI Agent Best Practices 2026**:
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md
-- 03-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/README.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/02-model-selection-matrix.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/03-sub-agent-orchestration.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/04-prompting-best-practices.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/06-permissions-security.md
+- 05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/07-developer-role-evolution.md
 
 **Updated - Core Methodology**:
 - 02-Core-Methodology/SDLC-Agentic-Core-Principles.md (5.2.0, Planning Mode, Model Selection)
 
 **Updated - SASE Artifacts**:
-- 03-Templates-Tools/SASE-Artifacts/README.md (5.2.0, renumbered)
+- 05-Templates-Tools/SASE-Artifacts/README.md (5.2.0, renumbered)
 - Renamed: 04-CRP → 01-CRP, 05-MRP → 02-MRP, 06-VCR → 03-VCR
 
 **Removed**:
@@ -307,8 +307,8 @@ Level 4: BACKLOG (Daily work items)
 - Root README.md, CHANGELOG.md
 - 01-Overview/SDLC-Executive-Summary.md
 - 02-Core-Methodology/* (Core Methodology, Agentic Principles, Maturity Model, etc.)
-- 03-Templates-Tools/* (Scripts, SASE Artifacts, AI Tools, Agent Templates)
-- 05-Implementation-Guides/* (All implementation guides)
+- 05-Templates-Tools/* (Scripts, SASE Artifacts, AI Tools, Agent Templates)
+- 07-Implementation-Guides/* (All implementation guides)
 
 ---
 
@@ -371,7 +371,7 @@ SE4A (Software Engineering for Agents) - Agent Executor:
 | MRP | Merge-Readiness Pack (5-point evidence) | SE4A |
 | VCR | Version Controlled Resolution | SE4H |
 
-**Documentation**: [03-Templates-Tools/SASE-Artifacts/](./03-Templates-Tools/SASE-Artifacts/)
+**Documentation**: [05-Templates-Tools/SASE-Artifacts/](./05-Templates-Tools/SASE-Artifacts/)
 
 ---
 
@@ -418,7 +418,7 @@ AEE (Agent Execution Environment):
   Security: Sandboxed, no production access, audited
 ```
 
-**Documentation**: [05-Implementation-Guides/ACE-AEE-Reference-Architecture.md](./05-Implementation-Guides/ACE-AEE-Reference-Architecture.md)
+**Documentation**: [07-Implementation-Guides/ACE-AEE-Reference-Architecture.md](./07-Implementation-Guides/ACE-AEE-Reference-Architecture.md)
 
 ---
 
@@ -547,7 +547,7 @@ Targets by Tier:
 
 #### 5. 5-Project-Templates (NEW)
 
-**New folder `03-Templates-Tools/5-Project-Templates/`**:
+**New folder `05-Templates-Tools/5-Project-Templates/`**:
 
 | Template | Purpose |
 |----------|---------|
@@ -608,7 +608,7 @@ After (Tiered Governance):
 - README.md (root) - Version + tier overview
 - 02-Core-Methodology/SDLC-Core-Methodology.md - Tiered references
 - 02-Core-Methodology/Documentation-Standards/README.md - Team-Collaboration added
-- 03-Templates-Tools/README.md - 5-Project-Templates added
+- 05-Templates-Tools/README.md - 5-Project-Templates added
 
 **New Documents (12)**:
 - Governance-Compliance/SDLC-Quality-Gates.md

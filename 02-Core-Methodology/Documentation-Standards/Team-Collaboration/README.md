@@ -240,7 +240,7 @@ Sprint End (Day 10):
 
 - [02-Core-Methodology/SDLC-Core-Methodology.md](../../SDLC-Core-Methodology.md) - 7-Pillar Architecture
 - [02-Core-Methodology/Governance-Compliance/](../Governance-Compliance/) - Quality & Security gates
-- [03-Templates-Tools/5-Project-Templates/](../../../03-Templates-Tools/5-Project-Templates/) - Project templates
+- [05-Templates-Tools/5-Project-Templates/](../../../05-Templates-Tools/5-Project-Templates/) - Project templates
 - [SDLC-Sprint-Planning-Governance.md](../../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Sprint Governance
 
 ---

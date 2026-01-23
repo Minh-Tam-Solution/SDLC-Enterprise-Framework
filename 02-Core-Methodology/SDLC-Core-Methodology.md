@@ -605,7 +605,7 @@ Sprint Governance Standards:
 - [When-Planning-Sprint.md](./Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - ⭐ Sprint planning guide
 
 ### Case Studies
-- [BFlow Sprint 86 Direction Confusion](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Incident that triggered Pillar 2
+- [BFlow Sprint 86 Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Incident that triggered Pillar 2
 
 ---
 
@@ -626,4 +626,4 @@ Sprint Governance Standards:
 **Last Updated**: January 18, 2026  
 **Maintained By**: Framework Team  
 **Authority**: CTO Approved  
-**Case Study**: [BFlow Sprint 86](../04-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
+**Case Study**: [BFlow Sprint 86](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)

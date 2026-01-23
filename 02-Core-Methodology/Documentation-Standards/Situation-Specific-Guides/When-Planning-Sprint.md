@@ -19,7 +19,7 @@ This guide provides a step-by-step process for planning a new sprint in complian
 
 **Prerequisites**:
 - Familiarity with [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
-- Access to [SPRINT-TEMPLATE.md](../../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md)
+- Access to [SPRINT-TEMPLATE.md](../../05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md)
 
 ---
 
@@ -352,7 +352,7 @@ Documentation:
 
 | Template | Location | Purpose |
 |----------|----------|---------|
-| SPRINT-TEMPLATE.md | `03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/` | Sprint plan structure |
+| SPRINT-TEMPLATE.md | `05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/` | Sprint plan structure |
 | ROADMAP-TEMPLATE.md | Same location | Roadmap structure |
 | Roadmap Change Request | `SDLC-Sprint-Planning-Governance.md` Section 5 | Change control |
 

@@ -50,7 +50,7 @@ This document defines the core principles for integrating Software Agentic Softw
 - SDLC 5.0.0 Complete Lifecycle (10 stages)
 - Basic AI/LLM concepts (prompts, context, tokens)
 - Git workflow (branching, PRs, code review)
-- AGENTS.md format (recommended: see `03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md`)
+- AGENTS.md format (recommended: see `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md`)
 
 ---
 
@@ -162,7 +162,7 @@ This document defines the core principles for integrating Software Agentic Softw
 - Gate-triggered context overlay (e.g., "Currently in BUILD stage, CRP escalation required for architecture changes")
 - This is our **TRUE MOAT** - no competitor has gate-aware dynamic context
 
-**See:** `03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` for full template and validation CLI.
+**See:** `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` for full template and validation CLI.
 
 ### 1.4 Planning Mode Principle (NEW in 5.2.0)
 
@@ -1263,7 +1263,7 @@ level_3_requirements:
    - Multi-provider AI integration
 
 4. **AGENTS.md Template**
-   - 03-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md
+   - 05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md
    - Complete template with validation CLI
 
 ### 7.3 External Standards

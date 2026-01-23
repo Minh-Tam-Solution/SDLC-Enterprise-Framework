@@ -127,7 +127,7 @@ Step 5: Pass G-Sprint Gate
 
 - [SDLC-Sprint-Planning-Governance.md](../../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Full governance framework
 - [SDLC-Core-Methodology.md](../../SDLC-Core-Methodology.md) - 7-Pillar Architecture
-- [SPRINT-TEMPLATE.md](../../../03-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) - Sprint template
+- [SPRINT-TEMPLATE.md](../../../05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) - Sprint template
 
 ---
 

@@ -797,8 +797,8 @@ Level 3 Governance:
 | Document | Location | Purpose |
 |----------|----------|---------|
 | SDLC-Agentic-Core-Principles | 02-Core-Methodology/ | SE4H/SE4A framework |
-| ACE-AEE-Reference-Architecture | 05-Implementation-Guides/ | Environment specs |
-| SASE Artifact Templates | 03-Templates-Tools/SASE-Artifacts/ | All 6 templates |
+| ACE-AEE-Reference-Architecture | 07-Implementation-Guides/ | Environment specs |
+| SASE Artifact Templates | 05-Templates-Tools/SASE-Artifacts/ | All 6 templates |
 
 ### External References
 

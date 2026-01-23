@@ -1996,7 +1996,7 @@ Competitive Position:
 **Status**: ✅ APPROVED - Ready for Implementation
 **Related**: 10-Stage Framework, Iceberg Model, Quality Gates, Governance & Compliance
 **Training**: SDLC-Design-Thinking-Training.md
-**Templates**: /03-Templates-Tools/Design-Thinking/
+**Templates**: /05-Templates-Tools/Design-Thinking/
 
 ---
 

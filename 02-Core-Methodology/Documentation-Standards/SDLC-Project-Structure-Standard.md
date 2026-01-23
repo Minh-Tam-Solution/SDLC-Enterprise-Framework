@@ -424,7 +424,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 - [SDLC-Document-Naming-Standards.md](./SDLC-Document-Naming-Standards.md) - File naming rules
 - [SDLC-Code-File-Naming-Standards.md](./SDLC-Code-File-Naming-Standards.md) - Code file naming rules
 - [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Pillar 2 governance
-- [AI-ONBOARDING-TEMPLATE.md](../../03-Templates-Tools/5-Project-Templates/AI-ONBOARDING-TEMPLATE.md) - CLAUDE.md template
+- [AI-ONBOARDING-TEMPLATE.md](../../05-Templates-Tools/5-Project-Templates/AI-ONBOARDING-TEMPLATE.md) - CLAUDE.md template
 
 ---
 
