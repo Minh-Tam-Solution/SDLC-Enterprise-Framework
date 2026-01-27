@@ -1,8 +1,8 @@
 # AI Governance Principles
 
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Status**: ACTIVE
-**Date**: January 22, 2026
+**Date**: January 27, 2026
 **Pillar**: Core AI Governance (NEW in 5.2.0)
 
 ---

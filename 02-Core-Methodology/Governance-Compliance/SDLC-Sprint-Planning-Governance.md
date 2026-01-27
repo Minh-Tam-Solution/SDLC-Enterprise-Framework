@@ -1,7 +1,7 @@
 # SDLC Sprint Planning Governance
 
-**Version**: 5.2.0
-**Date**: January 22, 2026
+**Version**: 5.3.0
+**Date**: January 27, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 2 - Sprint Planning Governance (Core Pillar)
 **Status**: ACTIVE - Production Standard

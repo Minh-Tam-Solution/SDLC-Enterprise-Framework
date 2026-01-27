@@ -1,12 +1,13 @@
 # SDLC Quality Gates
 
-**Version**: 5.2.0
-**Date**: January 22, 2026
+**Version**: 5.3.0
+**Date**: January 27, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 4 - Quality Gates (Dual-Track)
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO Office
 **Industry Standards**: ISO 12207, CMMI, DORA Metrics
+**Related**: [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) - Pillar 7 (Vibecoding Index)
 
 ---
 

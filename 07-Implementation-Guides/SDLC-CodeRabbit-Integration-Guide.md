@@ -1,7 +1,7 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 5.2.0
-**Last Updated**: January 22, 2026
+**Version**: 5.3.0
+**Last Updated**: January 27, 2026
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
 **Tier**: 3 (Enterprise Automated Review)
@@ -230,7 +230,7 @@ reviews:
     - documentation
 
 # ==============================================================================
-# SDLC 5.1.3 CUSTOM RULES - 7-PILLAR ARCHITECTURE
+# SDLC 5.3.0 CUSTOM RULES - 7-PILLAR ARCHITECTURE
 # ==============================================================================
 
 rules:
@@ -1233,7 +1233,7 @@ For complete tier comparison, see the SDLC Implementation Guide.
 ---
 
 **Document Version**: 5.2.0
-**Last Updated**: January 22, 2026
+**Last Updated**: January 27, 2026
 **Next Review**: February 22, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation

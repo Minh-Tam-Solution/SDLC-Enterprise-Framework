@@ -1,6 +1,6 @@
 # AI Tools Landscape
 
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Status**: ACTIVE - OUTER RING (STRATEGIC)
 **Date**: January 2026
 **Purpose**: Track AI coding tools for Orchestrator governance

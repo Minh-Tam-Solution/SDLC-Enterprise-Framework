@@ -1,7 +1,7 @@
-# SDLC 5.2.0 - Subscription-Powered Code Review Excellence
+# SDLC 5.3.0 - Subscription-Powered Code Review Excellence
 
-**Version**: 5.2.0
-**Last Updated**: January 22, 2026
+**Version**: 5.3.0
+**Last Updated**: January 27, 2026
 **Purpose**: Maximize ROI from paid subscriptions (Cursor, Copilot, Claude Max) for world-class code review without API costs
 **Audience**: Development teams (5-20 developers) using subscription-based AI tools
 **Budget Model**: $0 API costs, fixed subscription fees ($49-$200/month per developer)
@@ -117,7 +117,7 @@ curl -fsSL https://download.cursor.sh | sh
 
 # 4. Configure custom rules (.cursorrules file in project root)
 cat > .cursorrules <<'EOF'
-# SDLC 5.1.3 Code Review Rules
+# SDLC 5.3.0 Code Review Rules
 
 ## Sprint Planning Governance (Pillar 2) - NEW in 5.1.3
 - PRs MUST reference SPRINT-XXX in title/description
@@ -1340,7 +1340,7 @@ ROI: 387%
 **Part of**: SDLC 5.2.0 Universal Framework
 **Tier**: Tier 2 (Subscription-Based) - STANDARD / PROFESSIONAL
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
-**Version**: 5.2.0
-**Last Updated**: January 22, 2026
+**Version**: 5.3.0
+**Last Updated**: January 27, 2026
 **License**: MTS Internal Use
 **Framework**: SDLC 5.2.0

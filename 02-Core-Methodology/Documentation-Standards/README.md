@@ -11,7 +11,7 @@
 
 ## 🎯 Purpose
 
-This folder contains the **mandatory documentation standards** for all SDLC 5.2.0 projects. As **Pillar 6** of the 7-Pillar Architecture, Documentation Permanence ensures:
+This folder contains the **mandatory documentation standards** for all SDLC 5.3.0 projects. As **Pillar 6** of the 7-Pillar Architecture, Documentation Permanence ensures:
 
 - **Permanence**: Documentation doesn't become obsolete
 - **Discoverability**: Easy to find what you need
