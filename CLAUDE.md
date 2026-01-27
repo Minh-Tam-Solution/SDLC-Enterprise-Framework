@@ -1,12 +1,29 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 5.1.3
+# CLAUDE.md - AI Assistant Guidelines for SDLC 5.3.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.1.3**) featuring the **7-Pillar Architecture** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 7 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.3.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance System)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
-**What's New in 5.1.3 (January 2026)**:
+**What's New in 5.3.0 (January 2026)**:
+- ✅ **Stage Dependency Matrix (ADR-041)** - Explicit stage prerequisites, parallel execution rules, early start triggers
+- ✅ **Stage Exit Criteria** - Documentation, evidence, artifact integrity requirements per tier (LITE/PRO/ENTERPRISE)
+- ✅ **Sprint-Stage Integration** - Multi-stage sprint handling, G-Sprint gate integration with stage validation
+- ✅ **Quality Assurance System (Section 7)** - Anti-Vibecoding governance with Vibecoding Index (0-100)
+- ✅ **Progressive Routing** - Auto-approve Green (0-30) → CEO mandatory Red (81-100)
+- ✅ **Auto-Generation Layer** - Intent, Ownership, Context, Attestation generators (<5 min compliance)
+- ✅ **Kill Switch Criteria** - Auto-rollback on rejection >80%, latency >500ms, false positives >20%
+- ✅ **Tier-Specific Stage Requirements** - Decision trees for LITE/PRO/ENTERPRISE stage skipping
+- ✅ **Stage Transition Checklists** - Actionable checklists for all 9 stage transitions
+
+**What's in 5.2.0 (January 2026)**:
+- ✅ **AI Governance Principles** - 7 timeless principles for AI+Human collaboration
+- ✅ **Risk-Based Planning Mode** - Planning triggered by risk factors, not LOC count
+- ✅ **Concentric Circles Model** - Core (timeless) → Governance (stable) → Outer Ring (tools)
+- ✅ **AI Agent Best Practices 2026** - Complete orchestration guide
+
+**What's in 5.1.3 (January 2026)**:
 - ✅ **7-Pillar Architecture** - Complete framework structure with Sprint Planning Governance as Pillar 2
 - ✅ **Sprint Planning Governance (Pillar 2)** - G-Sprint/G-Sprint-Close gates, Planning Hierarchy (ROADMAP → PHASE → SPRINT → BACKLOG)
 - ✅ **10 Golden Rules** - Sprint governance principles for consistent execution
@@ -106,38 +123,41 @@ Documentation Files:
   Examples: SDLC-Core-Methodology.md
 ```
 
-### The 7-Pillar Architecture (SDLC 5.1.3)
+### The 7-Pillar Architecture + Section 7 (SDLC 5.3.0)
 
 **Pillar 0: Design Thinking Foundation**
 - Stanford d.school 5-phase methodology (Empathize, Define, Ideate, Prototype, Test)
 - System Thinking integration (4-layer Iceberg Model)
 - 96% time savings proven (NQH-Bot: 4 weeks vs 6 months)
 
-**Pillar 1: 10-Stage Lifecycle**
+**Pillar 1: 10-Stage Lifecycle (Enhanced in 5.3.0)**
 - Complete lifecycle: WHY → GOVERN (Stages 00-09)
-- Documentation permanence with stage mapping
+- **Explicit Stage Dependencies** (ADR-041) - Prerequisites, parallel rules, early start triggers
+- **Stage Exit Criteria** - Documentation, evidence, signoff per tier
 - Archive management (99-Legacy, 10-archive)
 
-**Pillar 2: Sprint Planning Governance (NEW in 5.1.3)**
+**Pillar 2: Sprint Planning Governance (5.1.3)**
 - Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
 - G-Sprint/G-Sprint-Close gates
+- **Sprint-Stage Integration** (5.3.0) - Multi-stage sprint handling
 - 10 Golden Rules for sprint execution
 - 24h documentation enforcement
 
-**Pillar 3: 4-Tier Classification**
+**Pillar 3: 4-Tier Classification (Enhanced in 5.3.0)**
 - LITE (1-2), STANDARD (3-10), PROFESSIONAL (10-50), ENTERPRISE (50+)
+- **Tier-Specific Stage Requirements** - Decision trees for stage skipping
 - Scalable documentation requirements
-- Tier-appropriate governance
 
 **Pillar 4: Quality Gates (Dual-Track)**
 - Feature Gates: G0 → G1 → G2 → G3 → G4
 - Sprint Gates: G-Sprint → G-Sprint-Close
+- **Stage Transition Checklists** (5.3.0) - Actionable checklists for 9 transitions
 - Zero Mock Policy (679 mocks → 0 in 48 hours)
 - 90%+ test coverage with real services
 
 **Pillar 5: SASE Integration**
 - SE 3.0 (arXiv:2509.06216v2) principles
-- 6 SASE Artifacts: BRS, LPS, MTS, CRP, MRP, VCR
+- SASE Artifacts: CRP, MRP, VCR, AGENTS.md _(BRS/LPS/MTS deprecated)_
 - SE4H vs SE4A roles
 - Agentic Maturity Levels (L0-L3)
 
@@ -146,30 +166,55 @@ Documentation Files:
 - Document naming standards (no sprint references)
 - Archive management (99-Legacy)
 
+**Section 7: Quality Assurance System (NEW in 5.3.0)**
+- **Vibecoding Index** (0-100) - 5 weighted signals:
+  - Architectural Smell (25%): God class, feature envy, shotgun surgery
+  - Abstraction Complexity (15%): Deep inheritance, interface proliferation
+  - AI Dependency Ratio (20%): AI lines / total lines
+  - Change Surface Area (20%): Files, modules, API contracts touched
+  - Drift Velocity (20%): New patterns, naming violations
+- **Progressive Routing**:
+  - Green (0-30): Auto-approve
+  - Yellow (31-60): Tech Lead review
+  - Orange (61-80): CEO optional
+  - Red (81-100): CEO mandatory
+- **Auto-Generation Layer** - 4 generators: Intent, Ownership, Context, Attestation
+- **Kill Switch** - Auto-rollback on rejection >80%, latency >500ms, false positives >20%
+- **Governance Modes** - OFF/WARNING/SOFT/FULL
+
 ## AI Agent Best Practices (2026)
 
 Based on expert AI coding workflow analysis (January 2026), these practices maximize AI-assisted development effectiveness. See [ADR-034](02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md) for full specification.
 
-### Planning Mode (CRITICAL for >15 LOC Changes)
+### Planning Mode (RISK-BASED - Updated in 5.2.0)
 
 ```yaml
-When to Use Planning Mode:
-  - Changes affecting >15 lines of code
-  - Multi-file modifications
-  - New feature implementations
-  - Architectural changes
+When to Use Planning Mode (MANDATORY - Risk-Based):
+  - Data schema / API contracts (breaking changes)
+  - Authentication / Authorization (security-critical)
+  - Cross-service boundaries (coordination complexity)
+  - Concurrency / Race conditions (hard to test)
+  - Security-sensitive code (vulnerabilities)
+  - Public API interfaces (external impact)
+  - Payment / Financial logic (money involved)
+
+When to Use Planning Mode (RECOMMENDED):
+  - >50 LOC changes (not hard rule, use judgment)
+  - >3 files affected
+  - Unfamiliar code area
+  - Complex business logic
 
 Planning Mode Workflow:
-  1. Spawn explore sub-agents → Extract patterns from codebase
-  2. Search for similar implementations (agentic grep > RAG)
-  3. Review existing ADRs and conventions
-  4. Build implementation plan based on extracted patterns
-  5. Get human approval before execution
+  1. EXPLORE → Search similar implementations (agentic grep > RAG)
+  2. SYNTHESIZE → Build implementation plan from extracted patterns
+  3. APPROVE → Present to human for validation
+  4. EXECUTE → Generate code following approved plan
 
-Key Insight:
-  "Agentic grep (AI-powered code search) > RAG indexing"
-  - Direct codebase exploration finds real patterns
-  - RAG can miss context and produce stale results
+Key Insight (5.2.0):
+  "Planning is RISK-BASED, not LOC-based"
+  - Simple rename across 50 files? Maybe skip planning.
+  - Touches auth even 5 lines? PLAN.
+  - Intent-based, not size-based.
 ```
 
 ### Model Selection Matrix

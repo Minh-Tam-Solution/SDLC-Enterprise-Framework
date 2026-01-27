@@ -1,8 +1,8 @@
-# SDLC Framework 5.2.0 Content Map
+# SDLC Framework 5.3.0 Content Map
 
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Status**: ACTIVE
-**Date**: January 23, 2026
+**Date**: January 27, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
 
 ---
@@ -38,6 +38,8 @@ Before creating any new document, check if a canonical file already exists for t
 | Quality Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md` | — | ACTIVE |
 | Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md` | — | ACTIVE |
 | Sprint Planning Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md` | — | ACTIVE |
+| **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
+| **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
 
 ### Templates (05-Templates-Tools/SASE-Artifacts/)
 
@@ -170,4 +172,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: January 23, 2026
+**Last Updated**: January 27, 2026
