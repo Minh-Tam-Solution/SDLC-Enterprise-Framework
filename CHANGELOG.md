@@ -2,9 +2,314 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 5.2.0 Enterprise Framework - Risk-Based Planning Mode + AI Agent Best Practices 2026
+**Framework**: SDLC 5.3.0 Enterprise Framework - Stage Dependency Matrix + Exit Criteria
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: January 23, 2026 (SDLC 5.2.0 Risk-Based Planning + Model Selection)
+**Last Updated**: January 28, 2026 (SDLC 5.3.0 Stage Content & Dependencies)
+
+---
+
+## 🚀 Version 5.3.0 - January 2026 (MINOR RELEASE)
+
+**Release Date**: January 28, 2026
+**Type**: MINOR RELEASE - Stage Dependency Matrix, Exit Criteria, Sprint Integration
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No (additive only)
+**Supersedes**: SDLC 5.2.0 Risk-Based Planning Mode
+**Achievement**: Explicit stage dependencies, tier-specific guidance, sprint-stage integration
+
+### 🎯 Key Enhancement: Explicit Stage Dependencies + Exit Criteria
+
+**THE CHANGE**: Introduced explicit stage dependency matrix, stage exit criteria, and sprint-stage integration documentation.
+
+| Feature | Description |
+|---------|-------------|
+| **Stage Dependency Matrix** | Explicit prerequisites, parallel execution rules, early start triggers |
+| **Stage Exit Criteria** | Separate gate requirements from stage completion requirements |
+| **Sprint-Stage Integration** | Multi-stage sprint handling, G-Sprint gate integration |
+| **Tier-Specific Guidance** | LITE/PRO/ENTERPRISE stage requirements with decision trees |
+| **Stage Transition Checklists** | Actionable checklists for all 9 stage transitions |
+
+### 🆕 Stage Dependency Matrix (NEW - CORE IMPROVEMENT)
+
+**Key Insight**: "Stage dependencies were implicit (inferred from gates). Now explicit with YAML + Mermaid."
+
+**ADR-041 Defines**:
+- `requires`: Which stages must complete before this stage starts
+- `enables`: Which stages this stage unlocks
+- `prerequisite_gates`: Gates that must pass before stage entry
+- `parallel_ok`: Whether stage can run parallel to others
+- `early_start_triggers`: Conditions for starting stage earlier than standard
+
+**Example - Stage 09 (GOVERN)**:
+```yaml
+09-GOVERN:
+  requires: [06-DEPLOY]  # Standard start post-deployment
+  early_start_triggers:
+    - "Regulated industry (healthcare, finance)"
+    - "SOC 2 / HIPAA / GDPR compliance required"
+    - "AI/ML system (AI Governance Principles 1-6 required)"
+  early_start_stage: 01-PLANNING  # Can start as early as planning
+  parallel_stages: [02-DESIGN, 04-BUILD, 06-DEPLOY, 07-OPERATE]
+```
+
+**Mermaid Diagram**: Visual stage dependency graph included in ADR-041
+
+---
+
+### 🆕 Stage Exit Criteria (NEW - CORE IMPROVEMENT)
+
+**Key Distinction**: Gates validate quality checkpoints, exit criteria validate stage completion.
+
+**Stage Exit Criteria Document Defines**:
+- **Documentation Requirements**: What docs must exist (e.g., ADRs, requirements, test plans)
+- **Evidence Requirements**: What proof must be stored (e.g., approvals, test reports, recordings)
+- **Artifact Integrity**: SHA256 checksums for critical deliverables (ENTERPRISE tier)
+- **Stakeholder Signoff**: Who must approve stage completion
+- **Sprint Closure**: Integration with sprint retrospectives
+
+**Example - Stage 02 (DESIGN)**:
+```yaml
+Stage 02 Exit:
+  gate: G2 passed (architecture validated)
+  docs: ADRs (minimum 2 LITE, 5 PRO), architecture diagrams
+  evidence: Architecture review notes, ADR approvals, design review presentation
+  integrity: SHA256 checksums of all ADRs (ENTERPRISE)
+  signoff: CTO or Principal Engineer
+  sprint: Retrospective complete, CURRENT-SPRINT.md updated
+```
+
+**Tier Variations**:
+- **LITE**: Minimum docs, no evidence vault, informal signoff
+- **PRO**: Standard docs, evidence recommended, formal signoff
+- **ENTERPRISE**: Full docs, evidence vault mandatory, artifact integrity hashing
+
+---
+
+### 🆕 Sprint-Stage Integration (NEW - WORKFLOW IMPROVEMENT)
+
+**Key Challenge**: Sprints are time-boxed (1-2 weeks), stages are deliverable-based (duration varies).
+
+**SDLC-Stage-Sprint-Integration.md Provides**:
+- **Multi-Stage Sprint Handling**: Sprint 106 example (crossed 3 stages in 4 days)
+- **G-Sprint Gate Integration**: Verify stage prerequisites at sprint start/close
+- **Stage-Specific Responsibilities**: What each stage expects from sprints
+- **Rollback Procedures**: What to do if stage exit criteria not met
+
+**Real Example - Sprint 106**:
+```yaml
+Sprint 106 (4 days):
+  Day 0: Stage 02 (DESIGN) → ADR-040, ADR-041
+  Day 1: Stage 03 (INTEGRATE) → TemplateBlueprint schema
+  Day 1-3: Stage 04 (BUILD) → 5 templates, provider, tests (7,258 LOC)
+  
+  Stage Transitions:
+    - 02 → 03: G2 passed, 2 ADRs complete
+    - 03 → 04: G2 passed, API contracts defined
+    - 04 exit: G3 passed, 64 test cases, CI/CD green
+```
+
+**G-Sprint-Start Checklist**:
+- Verify prerequisite stages complete
+- Verify current stage entry criteria met
+- Document expected stage transitions
+
+**G-Sprint-Close Checklist**:
+- Verify all stage exit criteria met
+- Update all affected stage folders
+- Commit evidence artifacts (if PRO/ENTERPRISE)
+
+---
+
+### 🆕 Tier-Specific Stage Requirements (NEW - LITE/PRO/ENTERPRISE)
+
+**Key Question Answered**: "When can I safely skip optional stages?"
+
+**SDLC-Tier-Stage-Requirements.md Provides**:
+- **LITE Tier** (1-2 devs): Required stages 00, 01, 02, 04 | Optional 03, 05, 06, 07, 08, 09
+- **PRO Tier** (3-10 devs): Required stages 00-07 | Optional 08, 09
+- **ENTERPRISE Tier** (10+ devs): All 10 stages required
+
+**Decision Trees**:
+```
+Stage 05 (TEST) - Can I skip?
+├─ Is this going to production?
+│  ├─ No (prototype) → SKIP ⚠️
+│  └─ Yes
+│     ├─ Internal tool → OPTIONAL (unit tests sufficient)
+│     └─ User-facing → REQUIRED ❌
+```
+
+**Skip Risk Levels**:
+| Stage | Skip Risk | Consequence |
+|-------|-----------|-------------|
+| 03-INTEGRATE | LOW | Integration issues discovered in BUILD (+10-20% time) |
+| 05-TEST | HIGH | Bugs reach production (+5-10 days fixing) |
+| 06-DEPLOY | MEDIUM | No deployment strategy (+3-5 days ad-hoc process) |
+| 07-OPERATE | HIGH | No monitoring, outages undetected |
+| 08-COLLABORATE | LOW | No code reviews, lower quality |
+| 09-GOVERN | CRITICAL | Legal/compliance violations, fines, lawsuits |
+
+**AI/ML Exception**: Stage 09 (GOVERN) **always required** for AI/ML systems regardless of tier (AI Governance Principles 1-6).
+
+---
+
+### 🆕 Stage Transition Checklists (NEW - ACTIONABLE TEMPLATES)
+
+**Stage-Transition-Checklist.md Provides**:
+- Actionable checklists for all 9 stage transitions
+- Prerequisites, exit criteria, entry criteria, transition activities
+- Skip decision guidance (LITE tier)
+- Rollback procedures (if stage exit criteria not met)
+
+**Example - Stage 04 → 05 (BUILD → TEST)**:
+```markdown
+### Stage 04 Exit Criteria
+- [ ] G3 passed: Code + Tests validated
+- [ ] Code review approvals (GitHub/GitLab PR approvals)
+- [ ] CI/CD pipeline passing
+- [ ] Code coverage met:
+  - LITE: 40%+
+  - PRO: 60%+
+  - ENTERPRISE: 80%+
+- [ ] Stakeholder signoff: Tech Lead approval
+
+### Skip Decision (LITE Tier)
+- [ ] Skip Stage 05 if:
+  - Unit tests only (no integration/E2E)
+  - Single developer (no QA team)
+  - Internal prototype
+- [ ] Warning: Skip risk is HIGH - bugs reach production
+```
+
+---
+
+### 📂 Files Added (5 New Documents)
+
+**02-Core-Methodology/**:
+1. **ADR-041-Stage-Dependency-Matrix.md** (~1,200 LOC)
+   - Explicit stage dependencies (YAML format)
+   - Mermaid dependency diagram
+   - Gate-stage mapping
+   - Parallel execution rules
+   - Early start triggers (Stage 09 for regulated industries)
+
+2. **SDLC-Stage-Exit-Criteria.md** (~1,500 LOC)
+   - Exit criteria for all 10 stages
+   - Documentation requirements (tier-specific)
+   - Evidence requirements (PRO/ENTERPRISE)
+   - Artifact integrity (SHA256 checksums for ENTERPRISE)
+   - Stakeholder signoff requirements
+   - Exit criteria matrix (summary table)
+
+**02-Core-Methodology/Governance-Compliance/**:
+3. **SDLC-Stage-Sprint-Integration.md** (~1,400 LOC)
+   - Multi-stage sprint scenarios
+   - Sprint 106 real example (3-stage sprint)
+   - G-Sprint gate integration (start/close checklists)
+   - Stage-specific sprint responsibilities (all 10 stages)
+   - Rollback procedures
+   - Sprint planning template with stage tracking
+
+**02-Core-Methodology/Documentation-Standards/**:
+4. **SDLC-Tier-Stage-Requirements.md** (~1,300 LOC)
+   - LITE tier requirements (4/10 stages required)
+   - PRO tier requirements (7/10 stages required)
+   - ENTERPRISE tier requirements (10/10 stages required)
+   - Skip decision trees (all optional stages)
+   - Skip risk matrix (time saved vs time cost)
+   - Cost-benefit analysis examples
+   - AI/ML exception for Stage 09
+   - FAQ (5 common questions)
+
+**05-Templates-Tools/2-Checklists/**:
+5. **Stage-Transition-Checklist.md** (~1,600 LOC)
+   - Actionable checklists for all 9 stage transitions
+   - Prerequisites, exit criteria, entry criteria for each transition
+   - Skip decision guidance (LITE tier)
+   - Rollback procedure (if exit criteria not met)
+   - Stage 08 activation (ongoing collaboration)
+   - Stage 09 early start (regulated industries)
+
+**Total New Content**: ~7,000 LOC
+
+---
+
+### 🔄 Files Modified
+
+**CHANGELOG.md** (this file):
+- Added SDLC 5.3.0 release notes
+- Version bumped from 5.2.0 → 5.3.0
+
+---
+
+### 📋 Migration Guide (5.2.0 → 5.3.0)
+
+**No Breaking Changes**: SDLC 5.3.0 is additive only.
+
+**Action Items**:
+1. **Review Stage Dependencies**: Read ADR-041 to understand explicit stage prerequisites
+2. **Update Sprint Plans**: Add stage tracking fields to CURRENT-SPRINT.md (see sprint-stage integration doc)
+3. **Validate Tier Requirements**: Confirm your project tier (LITE/PRO/ENTERPRISE) and verify required stages
+4. **Adopt Stage Transition Checklists**: Use checklists for next stage transition (copy from 05-Templates-Tools/2-Checklists/)
+5. **Enable Stage Exit Validation**: If using `sdlcctl`, enable stage exit criteria validation (future feature)
+
+**No Backward Incompatibility**: Existing projects using SDLC 5.2.0 continue to work. New documentation provides optional enhancements.
+
+---
+
+### 🎯 Business Impact
+
+**Problem Solved**:
+- ❌ **Before**: Stage dependencies implicit, teams guessed when to advance
+- ❌ **Before**: Sprint 106 crossed 3 stages with no transition tracking
+- ❌ **Before**: LITE tier "optional stages" had no guidance on when to skip
+- ❌ **Before**: No clear distinction between gate requirements and stage completion
+
+**After SDLC 5.3.0**:
+- ✅ **Explicit Dependencies**: YAML-based matrix + Mermaid diagram
+- ✅ **Multi-Stage Sprint Tracking**: Sprint 106 example shows proper documentation
+- ✅ **Tier-Specific Guidance**: Decision trees for LITE/PRO/ENTERPRISE
+- ✅ **Clear Exit Criteria**: Documentation + Evidence + Signoff requirements
+
+**Expected Outcomes**:
+- Faster onboarding (new teams understand stage sequencing immediately)
+- Reduced stage transition errors (checklists prevent skipped steps)
+- Better LITE tier adoption (clear guidance on what can be skipped safely)
+- Tooling readiness (`sdlcctl` can now validate stage prerequisites)
+
+---
+
+### 🔍 Related Documents
+
+**New in 5.3.0**:
+- [ADR-041: Stage Dependency Matrix](02-Core-Methodology/ADR-041-Stage-Dependency-Matrix.md)
+- [SDLC-Stage-Exit-Criteria.md](02-Core-Methodology/SDLC-Stage-Exit-Criteria.md)
+- [SDLC-Stage-Sprint-Integration.md](02-Core-Methodology/Governance-Compliance/SDLC-Stage-Sprint-Integration.md)
+- [SDLC-Tier-Stage-Requirements.md](02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md)
+- [Stage-Transition-Checklist.md](05-Templates-Tools/2-Checklists/Stage-Transition-Checklist.md)
+
+**Existing (Updated References)**:
+- [SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md) - 10-Stage lifecycle
+- [Quality Gates Documentation](02-Core-Methodology/SDLC-Core-Methodology.md#quality-gates) - G0.1, G0.2, G1, G2, G3, G4
+
+---
+
+### 🚀 Next Steps
+
+**Immediate (January 2026)**:
+- Update Orchestrator repo folder structure (rename `docs/05-deploy/` → `docs/06-deploy/`)
+- Integrate stage tracking into `sdlcctl` validator (validate stage transitions)
+- Update CURRENT-SPRINT.md template with stage tracking fields
+
+**Short-Term (February 2026)**:
+- Create stage transition automation (`sdlcctl validate --stage-transition X Y`)
+- Add stage exit criteria validation (`sdlcctl show-exit-criteria --stage X`)
+- Generate stage dependency diagram visualization (`sdlcctl show-dependencies`)
+
+**Long-Term (Q1 2026)**:
+- AI-powered stage transition recommendations (detect when stage exit criteria met)
+- Evidence vault artifact integrity validation (SHA256 checksums)
+- Stage backfill tooling (upgrade from LITE → PRO by completing skipped stages)
 
 ---
 
