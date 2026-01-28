@@ -1,6 +1,6 @@
 # When Planning a Sprint
 
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Date**: January 22, 2026
 **Type**: Situation-Specific Guide
 **Status**: ACTIVE

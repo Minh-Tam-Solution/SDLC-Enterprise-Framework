@@ -439,5 +439,5 @@ P3 - Low:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for STANDARD+ tiers
-**Last Updated**: December 5, 2025
+**Last Updated**: January 27, 2026
 **Owner**: CTO + Security Lead

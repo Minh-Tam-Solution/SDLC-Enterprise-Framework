@@ -505,6 +505,6 @@ Example:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for PROFESSIONAL+ tiers
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Last Updated**: January 22, 2026
 **Owner**: CTO Office

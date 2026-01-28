@@ -1,7 +1,7 @@
 # Situation-Specific Guides
 
-**Version**: 5.2.0
-**Date**: January 22, 2026
+**Version**: 5.3.0
+**Date**: January 27, 2026
 **Stage**: 02 - Core Methodology (Documentation Standards)
 **Pillar**: Cross-Pillar Reference Guides
 **Status**: ACTIVE - Production Standard
@@ -86,6 +86,7 @@ All Situation-Specific Guides follow this structure:
 | **Pillar 4: Quality Gates** | When-Gate-Fails.md (planned) |
 | **Pillar 5: SASE Integration** | When-Security-Audit-Required.md (planned) |
 | **Pillar 6: Documentation Permanence** | When-SSOT-Conflict-Detected.md (planned) |
+| **Pillar 7: Quality Assurance System** | When-Vibecoding-Index-High.md (planned) |
 
 ---
 
@@ -127,12 +128,12 @@ Step 5: Pass G-Sprint Gate
 ## Related Documents
 
 - [SDLC-Sprint-Planning-Governance.md](../../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Full governance framework
-- [SDLC-Core-Methodology.md](../../SDLC-Core-Methodology.md) - 7-Pillar Architecture
+- [SDLC-Core-Methodology.md](../../SDLC-Core-Methodology.md) - 8-Pillar Architecture
 - [SPRINT-TEMPLATE.md](../../../05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) - Sprint template
 
 ---
 
 **Document Status**: ACTIVE
 **Compliance**: Reference Guide
-**Last Updated**: January 22, 2026
+**Last Updated**: January 27, 2026
 **Owner**: CTO Office

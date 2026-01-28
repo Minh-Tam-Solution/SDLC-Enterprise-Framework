@@ -1,6 +1,6 @@
 # SDLC Team Communication Protocol
 
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Date**: January 22, 2026
 **Stage**: 02 - Core Methodology (Documentation Standards / Team Collaboration)
 **Pillar**: 2 - Sprint Planning Governance × Pillar 6 - Documentation Permanence
@@ -443,7 +443,7 @@ Target: Average 4.0+ across all questions
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects (scaled by tier)
-**Version**: 5.2.0
+**Version**: 5.3.0
 **Last Updated**: January 22, 2026
 **Owner**: CPO Office
 **Related Documents**:

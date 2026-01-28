@@ -535,6 +535,6 @@ Tier Requirements:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Version**: 5.2.0
-**Last Updated**: January 22, 2026
+**Version**: 5.3.0
+**Last Updated**: January 27, 2026
 **Owner**: CTO Office
