@@ -28,11 +28,20 @@ Define governance, quality, security, and compliance standards that form the **c
 
 | Document | Pillar | Purpose | Tier Required |
 |----------|--------|---------|---------------|
-| [SDLC-Sprint-Planning-Governance.md](./SDLC-Sprint-Planning-Governance.md) | **Pillar 2** | Planning Hierarchy, 10 Golden Rules, Sprint gates | ALL tiers |
-| [SDLC-Quality-Gates.md](./SDLC-Quality-Gates.md) | **Pillar 4** | Dual-Track Quality Gates (G0-G4 + G-Sprint) | ALL tiers |
-| [SDLC-Security-Gates.md](./SDLC-Security-Gates.md) | **Pillar 5** | SBOM, SAST, DAST, OWASP ASVS | STANDARD+ |
+| [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | **Pillar 2** | 10 Golden Rules, Sprint gates, Stage-Sprint integration, Change management | ALL tiers |
+| [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
 | [SDLC-Observability-Checklist.md](./SDLC-Observability-Checklist.md) | Supporting | Metrics, logging, tracing, alerting | PROFESSIONAL+ |
-| [SDLC-Change-Management-Standard.md](./SDLC-Change-Management-Standard.md) | **Pillar 2** | Change types, CAB process, rollback | PROFESSIONAL+ |
+
+### Consolidated Documents (5.3.0)
+
+The following documents were consolidated for clarity:
+
+| New Document | Merged From |
+|--------------|-------------|
+| **SDLC-Sprint-Governance.md** | SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md |
+| **SDLC-Quality-Security-Gates.md** | SDLC-Quality-Gates.md + SDLC-Security-Gates.md |
+
+Previous versions moved to `99-Legacy/5.2.0-Deprecated/`
 
 ---
 
@@ -44,34 +53,34 @@ Define governance, quality, security, and compliance standards that form the **c
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
 │  ┌───────────────────────────────────────────────────────────────┐     │
-│  │ Pillar 2: Sprint Planning Governance                          │     │
+│  │ Pillar 2: Sprint Planning Governance (SDLC-Sprint-Governance) │     │
 │  │ ┌─────────────────────────────────────────────────────────┐   │     │
-│  │ │ Planning Hierarchy: Roadmap → Phase → Sprint → Backlog  │   │     │
-│  │ │ 10 Golden Rules                                         │   │     │
-│  │ │ Sprint Gates: G-Sprint (Start) + G-Sprint-Close (End)   │   │     │
+│  │ │ • 10 Golden Rules (Sprint Numbers, Documentation, SSOT) │   │     │
+│  │ │ • Sprint Gates: G-Sprint + G-Sprint-Close               │   │     │
+│  │ │ • Stage × Sprint Integration (Multi-stage sprints)      │   │     │
+│  │ │ • Change Management (Standard/Normal/Emergency/Roadmap) │   │     │
 │  │ └─────────────────────────────────────────────────────────┘   │     │
 │  └───────────────────────────────────────────────────────────────┘     │
 │                              │                                          │
 │                              ▼                                          │
 │  ┌───────────────────────────────────────────────────────────────┐     │
-│  │ Pillar 4: Quality Gates (Dual-Track)                          │     │
-│  │ ┌─────────────────────┐   ┌──────────────────────────────┐   │     │
-│  │ │ Feature Track       │   │ Sprint Track                 │   │     │
-│  │ │ G0: Ideation        │   │ G-Sprint: Sprint Start       │   │     │
-│  │ │ G1: Planning        │   │ G-Sprint-Close: Sprint End   │   │     │
-│  │ │ G2: Design          │   │                              │   │     │
-│  │ │ G3: Development     │   │ (per-sprint quality          │   │     │
-│  │ │ G4: Production      │   │  verification)               │   │     │
-│  │ └─────────────────────┘   └──────────────────────────────┘   │     │
+│  │ Pillar 4+5: Quality & Security Gates (SDLC-Quality-Security)  │     │
+│  │ ┌─────────────────────────────────────────────────────────┐   │     │
+│  │ │ • Feature Track: G0 → G1 → G2 → G3 → G4                 │   │     │
+│  │ │ • Quality by Tier: LITE → STANDARD → PRO → ENTERPRISE   │   │     │
+│  │ │ • Security: SBOM, SAST, DAST, OWASP ASVS L1/L2          │   │     │
+│  │ │ • DORA Metrics: DF, LT, MTTR, CFR                       │   │     │
+│  │ └─────────────────────────────────────────────────────────┘   │     │
 │  └───────────────────────────────────────────────────────────────┘     │
 │                              │                                          │
 │                              ▼                                          │
 │  ┌───────────────────────────────────────────────────────────────┐     │
-│  │ Pillar 5: SASE Integration                                    │     │
+│  │ Pillar 7: Quality Assurance System (Anti-Vibecoding)          │     │
 │  │ ┌─────────────────────────────────────────────────────────┐   │     │
-│  │ │ Security THROUGHOUT lifecycle, not bolted on            │   │     │
-│  │ │ SBOM, SAST, DAST, Secret scanning at every stage        │   │     │
-│  │ │ OWASP ASVS compliance by tier                           │   │     │
+│  │ │ • Vibecoding Index (0-100) - 5 weighted signals         │   │     │
+│  │ │ • Progressive Routing (Green → Yellow → Orange → Red)   │   │     │
+│  │ │ • Auto-Generation Layer (Intent, Ownership, Context)    │   │     │
+│  │ │ • Kill Switch Criteria (>80% rejection, >500ms latency) │   │     │
 │  │ └─────────────────────────────────────────────────────────┘   │     │
 │  └───────────────────────────────────────────────────────────────┘     │
 │                                                                         │
@@ -237,15 +246,19 @@ Security:
 ## Related Documents
 
 - [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture (incl. Pillar 7: Quality Assurance System)
+- [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) - Pillar 7 (Anti-Vibecoding)
+- [SDLC-Stage-Exit-Criteria.md](../SDLC-Stage-Exit-Criteria.md) - Stage completion requirements
 - [Documentation-Standards/](../Documentation-Standards/) - Pillar 6 standards
-- [Documentation-Standards/Team-Collaboration/](../Documentation-Standards/Team-Collaboration/) - Team coordination
 - [Situation-Specific-Guides/When-Planning-Sprint.md](../Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - Sprint planning guide
 
 ---
 
 ## Changelog
 
-### v5.3.0 (January 2026)
+### v5.3.0 (January 28, 2026)
+- **Document Consolidation**: Reduced from 7 → 4 documents
+  - SDLC-Quality-Gates.md + SDLC-Security-Gates.md → **SDLC-Quality-Security-Gates.md**
+  - SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md → **SDLC-Sprint-Governance.md**
 - **Pillar 7: Quality Assurance System** - Anti-Vibecoding governance integration
 - Added Vibecoding Index, Progressive Routing references
 - Updated to 8-Pillar Architecture structure
