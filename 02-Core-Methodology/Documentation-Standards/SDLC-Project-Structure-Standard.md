@@ -412,18 +412,18 @@ Per **Pillar 2: Sprint Planning Governance**:
 | 04-BUILD | Sprint Plan, Daily Progress, Retrospective |
 | 09-GOVERN | Sprint Governance compliance records |
 
-**Cross-Reference**: 
-- [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+**Cross-Reference**:
+- [SDLC-Sprint-Governance.md](../Governance-Compliance/SDLC-Sprint-Governance.md)
 - [When-Planning-Sprint.md](./Situation-Specific-Guides/When-Planning-Sprint.md)
 
 ---
 
 ## 10. Related Documents
 
-- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 7-Pillar Architecture definition
-- [SDLC-Document-Naming-Standards.md](./SDLC-Document-Naming-Standards.md) - File naming rules
-- [SDLC-Code-File-Naming-Standards.md](./SDLC-Code-File-Naming-Standards.md) - Code file naming rules
-- [SDLC-Sprint-Planning-Governance.md](../Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Pillar 2 governance
+- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture definition
+- [SDLC-Naming-Standards.md](./SDLC-Naming-Standards.md) - File and document naming rules
+- [SDLC-Team-Collaboration.md](./SDLC-Team-Collaboration.md) - Team communication and escalation
+- [SDLC-Sprint-Governance.md](../Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 governance
 - [AI-ONBOARDING-TEMPLATE.md](../../05-Templates-Tools/5-Project-Templates/AI-ONBOARDING-TEMPLATE.md) - CLAUDE.md template
 
 ---

@@ -418,10 +418,9 @@ SDLC 5.1.3 (Jan 18, 2026)
 
 ## 📚 **RELATED DOCUMENTS**
 
-- [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+- [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 (Sprint + Stage + Change)
 - [When-Planning-Sprint.md](../02-Core-Methodology/Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md)
-- [SDLC-Quality-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
-- [SDLC-Change-Management-Standard.md](../02-Core-Methodology/Governance-Compliance/SDLC-Change-Management-Standard.md)
+- [SDLC-Quality-Security-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5
 - [SPRINT-74-PLANNING-HIERARCHY.md](../../../docs/04-build/02-Sprint-Plans/SPRINT-74-PLANNING-HIERARCHY.md)
 
 ---

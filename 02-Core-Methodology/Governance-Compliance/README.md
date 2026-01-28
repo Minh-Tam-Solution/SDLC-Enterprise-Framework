@@ -17,9 +17,8 @@ Define governance, quality, security, and compliance standards that form the **c
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
-| **Pillar 2** | SDLC-Sprint-Planning-Governance.md | Sprint execution governance |
-| **Pillar 4** | SDLC-Quality-Gates.md | Feature gates (G0-G4) & Sprint gates |
-| **Pillar 5** | SDLC-Security-Gates.md | Security throughout lifecycle |
+| **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + Stage integration + Change management |
+| **Pillar 4+5** | [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) | Feature gates (G0-G4) + Security gates |
 | **Pillar 7** | [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) | Anti-Vibecoding governance (NEW in 5.3.0) |
 
 ---

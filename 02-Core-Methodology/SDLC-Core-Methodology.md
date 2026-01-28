@@ -356,7 +356,7 @@ Sprint governance operates ACROSS all stages:
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Reference**: [SDLC-Sprint-Planning-Governance.md](./Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+**Reference**: [SDLC-Sprint-Governance.md](./Governance-Compliance/SDLC-Sprint-Governance.md)
 
 ---
 
@@ -707,14 +707,14 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Tier-Stage-Requirements.md](./SDLC-Tier-Stage-Requirements.md) - ⭐ **Decision Trees**
 
 ### Governance & Compliance
-- [SDLC-Sprint-Planning-Governance.md](./Governance-Compliance/SDLC-Sprint-Planning-Governance.md) - Pillar 2 detail
-- [SDLC-Quality-Gates.md](./Governance-Compliance/SDLC-Quality-Gates.md) - Feature + Sprint gates
-- [SDLC-Security-Gates.md](./Governance-Compliance/SDLC-Security-Gates.md) - Security requirements
-- [SDLC-Change-Management-Standard.md](./Governance-Compliance/SDLC-Change-Management-Standard.md) - Change control
+- [SDLC-Sprint-Governance.md](./Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 detail (Sprint + Stage + Change Management)
+- [SDLC-Quality-Security-Gates.md](./Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5 detail (Quality + Security)
+- [SDLC-Observability-Checklist.md](./Governance-Compliance/SDLC-Observability-Checklist.md) - Operations readiness
 
 ### Documentation Standards
 - [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) - Folder structure
-- [SDLC-Document-Naming-Standards.md](./Documentation-Standards/SDLC-Document-Naming-Standards.md) - Naming conventions
+- [SDLC-Naming-Standards.md](./Documentation-Standards/SDLC-Naming-Standards.md) - Naming + Header conventions
+- [SDLC-Team-Collaboration.md](./Documentation-Standards/SDLC-Team-Collaboration.md) - Team communication + escalation
 - [When-Planning-Sprint.md](./Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - Sprint planning guide
 
 ### Case Studies

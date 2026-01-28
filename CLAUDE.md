@@ -464,23 +464,16 @@ SDLC 5.1.3 (January 2026)
 - Main README: [README.md](README.md)
 - Core Methodology: [02-Core-Methodology/SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md)
 - Implementation Guide: [07-Implementation-Guides/SDLC-Implementation-Guide.md](07-Implementation-Guides/SDLC-Implementation-Guide.md)
-- Code File Naming: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+- Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md)
 
-**NEW in 5.1.3**:
-- Sprint Planning Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
-- 7-Pillar Architecture documented in Core Methodology and Executive Summary
-- **ADR-034: Planning Sub-agent Orchestration** - [02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md](02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md)
-
-**NEW in 5.1.2**:
-- Project Structure Standard: [02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md](02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md)
-
-**NEW in 5.0**:
-- Quality Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
-- Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md)
+**NEW in 5.3.0**:
+- Document Consolidation: Governance-Compliance (7→4), Documentation-Standards (13→7)
+- Quality Assurance System (Pillar 7): Anti-Vibecoding, Vibecoding Index
+- Stage Dependencies: Explicit stage prerequisites and exit criteria
+- Sprint Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md)
+- Quality+Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md)
+- Team Collaboration: [02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md](02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md)
 - Observability Checklist: [02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md](02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md)
-
-**NEW in 4.9.1**:
-- Code File Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
 
 **NEW in 4.9**:
 - BFlow 52-Day Journey: [06-Case-Studies/BFlow-52-Day-Journey-Case-Study.md](06-Case-Studies/BFlow-52-Day-Journey-Case-Study.md)

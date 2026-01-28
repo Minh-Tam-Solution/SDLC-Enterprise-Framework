@@ -377,8 +377,8 @@ SDLC 5.3.0 (Jan 2026) → Quality Assurance System + Stage Dependencies ⭐ LATE
 - [Model Selection Matrix](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md)
 
 **Governance**:
-- [SDLC-Sprint-Planning-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
-- [SDLC-Quality-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
+- [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 (Sprint + Stage + Change)
+- [SDLC-Quality-Security-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5 (Quality + Security)
 
 **Templates**:
 - [AGENTS.md Template](../05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) ⭐ RECOMMENDED

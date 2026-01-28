@@ -324,10 +324,10 @@ SDLC-Enterprise-Framework/
 - [AI Tools Landscape](./04-AI-TOOLS-LANDSCAPE/) - Tool tracking for Orchestrator (5.2.0)
 
 **Standards**:
-- [SDLC-Document-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Document-Naming-Standards.md)
-- [SDLC-Quality-Gates.md](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates.md)
-- [SDLC-Security-Gates.md](./02-Core-Methodology/Governance-Compliance/SDLC-Security-Gates.md)
-- [SDLC-Sprint-Planning-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Planning-Governance.md)
+- [SDLC-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md) - Naming + Headers
+- [SDLC-Team-Collaboration.md](./02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md) - Team + Escalation
+- [SDLC-Quality-Security-Gates.md](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5
+- [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2
 
 **Templates**:
 - [AGENTS.md Template](./05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
