@@ -1,0 +1,193 @@
+# SDLC Framework 6.0.0 - Anti-Vibecoding Control Definitions
+# Machine-readable controls from SPEC-0001
+# Source: SDLC-Enterprise-Framework/05-Templates-Tools/01-Specification-Standard/SPEC-0001-Anti-Vibecoding.md
+
+metadata:
+  spec_id: "SPEC-0001"
+  version: "1.0.0"
+  effective_date: "2026-01-28"
+  schema_version: "1.0"
+  last_updated: "2026-01-28"
+  source_document: "05-Templates-Tools/01-Specification-Standard/SPEC-0001-Anti-Vibecoding.md"
+
+control_family:
+  id: ANTI-VIBECODING
+  name: "Anti-Vibecoding Quality Assurance"
+  description: "Controls to prevent low-quality AI-generated code (vibecoding)"
+  tier_applicability: ["PROFESSIONAL", "ENTERPRISE"]
+
+controls:
+  - id: AVC-001
+    title: "Vibecoding Index Calculation"
+    description: "Calculate vibecoding risk score (0-100) based on 5 weighted signals"
+    tier: ["PROFESSIONAL", "ENTERPRISE"]
+    enforcement_mode:
+      PROFESSIONAL: "WARNING"
+      ENTERPRISE: "SOFT"
+    signals:
+      - name: "Intent Clarity Score"
+        weight: 0.30
+        description: "How clear is the requirement/ticket? (0-100)"
+        measurement_semantics: |
+          Natural language processing analysis of requirement documentation
+          to assess clarity, completeness, and actionability.
+        evidence_type: "REQUIREMENT_ANALYSIS"
+        thresholds:
+          RED: "< 40"
+          ORANGE: "40-60"
+          YELLOW: "60-80"
+          GREEN: ">= 80"
+
+      - name: "Code Ownership Confidence"
+        weight: 0.25
+        description: "Does the AI know who owns this code? (0-100)"
+        measurement_semantics: |
+          Presence and recency of code ownership documentation
+          indicating responsible individuals or teams for code areas.
+        evidence_type: "OWNERSHIP_DOCUMENTATION"
+        thresholds:
+          RED: "No ownership documentation"
+          ORANGE: "Ownership documentation outdated (>6 months)"
+          YELLOW: "Ownership documentation recent but incomplete"
+          GREEN: "Ownership documentation complete and up-to-date"
+
+      - name: "Context Completeness"
+        weight: 0.20
+        description: "How complete is the context provided to AI? (0-100)"
+        measurement_semantics: |
+          Assessment of AI context file quality and completeness,
+          including architecture documentation, coding standards,
+          and project-specific guidance.
+        evidence_type: "CONTEXT_DOCUMENTATION"
+        thresholds:
+          RED: "No AI context documentation"
+          ORANGE: "Minimal AI context documentation (< 500 lines)"
+          YELLOW: "Good AI context documentation (500-1500 lines)"
+          GREEN: "Comprehensive AI context documentation (> 1500 lines)"
+
+      - name: "AI Attestation Rate"
+        weight: 0.15
+        description: "% of code changes with AI co-authorship declared"
+        measurement_semantics: |
+          Percentage of code contributions where AI assistance is
+          explicitly declared in commit metadata or PR description.
+        evidence_type: "CODE_CONTRIBUTION_METADATA"
+        thresholds:
+          RED: "< 20%"
+          ORANGE: "20-50%"
+          YELLOW: "50-80%"
+          GREEN: ">= 80%"
+
+      - name: "Historical Rejection Rate"
+        weight: 0.10
+        description: "% of recent PRs rejected in code review"
+        measurement_semantics: |
+          Percentage of code review submissions rejected in the
+          evaluation period (default: 30 days).
+        evidence_type: "CODE_REVIEW_OUTCOME"
+        thresholds:
+          RED: "> 40%"
+          ORANGE: "20-40%"
+          YELLOW: "10-20%"
+          GREEN: "< 10%"
+
+    overall_score_formula: |
+      Vibecoding Index = 100 - (
+        (Intent * 0.30) +
+        (Ownership * 0.25) +
+        (Context * 0.20) +
+        (Attestation * 0.15) +
+        (100 - Rejection) * 0.10
+      )
+
+    routing_thresholds:
+      GREEN: "< 20 (Low Risk)"
+      YELLOW: "20-40 (Medium Risk)"
+      ORANGE: "40-60 (High Risk)"
+      RED: ">= 60 (Critical Risk)"
+
+  - id: AVC-002
+    title: "Progressive Routing Enforcement"
+    description: "Route AI-generated code based on vibecoding index"
+    tier: ["PROFESSIONAL", "ENTERPRISE"]
+    enforcement_mode:
+      PROFESSIONAL: "WARNING"
+      ENTERPRISE: "SOFT"
+    routing_rules:
+      GREEN:
+        label: "Low Risk (< 20)"
+        action: "AUTO_MERGE"
+        conditions:
+          - "All CI checks pass"
+          - "1+ approvals (automated OK)"
+          - "No security vulnerabilities"
+
+      YELLOW:
+        label: "Medium Risk (20-40)"
+        action: "HUMAN_REVIEW_REQUIRED"
+        conditions:
+          - "2+ human code reviews required"
+          - "Security scan pass"
+          - "Test coverage >= 80%"
+
+      ORANGE:
+        label: "High Risk (40-60)"
+        action: "SENIOR_REVIEW_REQUIRED"
+        conditions:
+          - "Senior engineer review mandatory"
+          - "Security lead sign-off"
+          - "Test coverage >= 90%"
+          - "Evidence of AI output validation"
+
+      RED:
+        label: "Critical Risk (>= 60)"
+        action: "BLOCK_OR_COUNCIL"
+        conditions:
+          - "PR blocked by default (SOFT mode)"
+          - "Escalate to AI Council"
+          - "CTO override required (FULL mode)"
+          - "Mandatory human rewrite if council rejects"
+
+  - id: AVC-003
+    title: "Kill Switch Activation"
+    description: "Automatic AI code generation disable on quality degradation"
+    tier: ["ENTERPRISE"]
+    enforcement_mode:
+      ENTERPRISE: "FULL"
+    kill_switch_triggers:
+      - metric: "Rejection Rate"
+        threshold: "> 80%"
+        duration: "30 consecutive minutes"
+        action: "Disable AI codegen for 24h"
+
+      - metric: "Latency p95"
+        threshold: "> 500ms"
+        duration: "15 consecutive minutes"
+        action: "Fallback to rule-based"
+
+      - metric: "Security Scan Failures"
+        threshold: "> 5 critical CVEs"
+        duration: "Any occurrence"
+        action: "Immediate disable + alert CTO"
+
+    recovery_conditions:
+      - "Manual CTO approval required"
+      - "Root cause analysis completed"
+      - "Fix deployed and validated"
+      - "Gradual re-enable (10% → 50% → 100%)"
+
+evidence_requirements:
+  - type: "VIBECODING_INDEX_REPORT"
+    format: "JSON"
+    retention: "90 days"
+    schema: "https://sdlc-framework.org/evidence/vibecoding-index/v1"
+
+  - type: "ROUTING_DECISION_LOG"
+    format: "JSON"
+    retention: "90 days"
+    schema: "https://sdlc-framework.org/evidence/routing-decision/v1"
+
+  - type: "KILL_SWITCH_EVENT"
+    format: "JSON"
+    retention: "1 year"
+    schema: "https://sdlc-framework.org/evidence/kill-switch-event/v1"

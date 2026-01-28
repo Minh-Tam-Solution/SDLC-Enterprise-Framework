@@ -1,0 +1,237 @@
+# SDLC Framework 6.0.0 - Quality Gates Definitions
+# Machine-readable gate requirements for G0-G4
+# Source: SDLC-Enterprise-Framework/02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md
+
+metadata:
+  version: "6.0.0"
+  effective_date: "2026-01-28"
+  schema_version: "1.0"
+  last_updated: "2026-01-28"
+  source_document: "02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md"
+
+gates:
+  - id: G0
+    stage: "00-FOUNDATION"
+    name: "Problem Definition"
+    description: "Validate problem statement before solution design"
+    documentation: "https://sdlc-framework.org/gates/G0"
+    failure_consequence: "blocking"
+
+    required_evidence:
+      - type: "PROBLEM_STATEMENT"
+        min_count: 1
+        description: "Documented problem statement"
+        schema: "https://sdlc-framework.org/evidence/problem-statement/v1"
+
+      - type: "INTERVIEW_TRANSCRIPT"
+        min_count: 3
+        description: "3+ user interviews"
+        schema: "https://sdlc-framework.org/evidence/interview/v1"
+
+    tier_requirements:
+      LITE:
+        approval_required: false
+        evidence_required: ["PROBLEM_STATEMENT"]
+        documentation_required: false
+
+      STANDARD:
+        approval_required: true
+        approvers: ["Tech Lead"]
+        evidence_required: ["PROBLEM_STATEMENT", "INTERVIEW_TRANSCRIPT"]
+        documentation_required: true
+        documentation_path: "docs/00-foundation/PROBLEM-STATEMENT.md"
+
+      PROFESSIONAL:
+        approval_required: true
+        approvers: ["Tech Lead", "Product Manager"]
+        evidence_required: ["PROBLEM_STATEMENT", "INTERVIEW_TRANSCRIPT", "COMPETITIVE_ANALYSIS"]
+        documentation_required: true
+        documentation_path: "docs/00-foundation/"
+
+      ENTERPRISE:
+        approval_required: true
+        approvers: ["Tech Lead", "Product Manager", "Security Lead"]
+        evidence_required: ["PROBLEM_STATEMENT", "INTERVIEW_TRANSCRIPT", "COMPETITIVE_ANALYSIS", "RISK_ASSESSMENT"]
+        documentation_required: true
+        documentation_path: "docs/00-foundation/"
+
+  - id: G1
+    stage: "01-PLANNING"
+    name: "Requirements Approved"
+    description: "Validate requirements completeness and stakeholder sign-off"
+    documentation: "https://sdlc-framework.org/gates/G1"
+    failure_consequence: "blocking"
+
+    required_evidence:
+      - type: "BRD"
+        min_count: 1
+        description: "Business Requirements Document"
+        schema: "https://sdlc-framework.org/evidence/brd/v1"
+
+      - type: "APPROVAL_SIGNOFF"
+        min_count: 2
+        description: "Stakeholder approvals"
+        schema: "https://sdlc-framework.org/evidence/approval/v1"
+
+    tier_requirements:
+      LITE:
+        approval_required: false
+        evidence_required: ["BRD"]
+
+      STANDARD:
+        approval_required: true
+        approvers: ["Product Manager"]
+        evidence_required: ["BRD", "APPROVAL_SIGNOFF"]
+
+      PROFESSIONAL:
+        approval_required: true
+        approvers: ["Product Manager", "Tech Lead"]
+        evidence_required: ["BRD", "APPROVAL_SIGNOFF", "ACCEPTANCE_CRITERIA"]
+
+      ENTERPRISE:
+        approval_required: true
+        approvers: ["Product Manager", "Tech Lead", "Compliance Officer"]
+        evidence_required: ["BRD", "APPROVAL_SIGNOFF", "ACCEPTANCE_CRITERIA", "COMPLIANCE_CHECKLIST"]
+
+  - id: G2
+    stage: "02-DESIGN"
+    name: "Architecture Approved"
+    description: "Validate architecture design and security review"
+    documentation: "https://sdlc-framework.org/gates/G2"
+    failure_consequence: "blocking"
+
+    required_evidence:
+      - type: "ARCHITECTURE_DIAGRAM"
+        min_count: 1
+        description: "System architecture diagram"
+        schema: "https://sdlc-framework.org/evidence/architecture/v1"
+
+      - type: "ADR"
+        min_count: 3
+        description: "Architecture Decision Records"
+        schema: "https://sdlc-framework.org/evidence/adr/v1"
+
+      - type: "SECURITY_REVIEW"
+        min_count: 1
+        description: "Security architecture review"
+        schema: "https://sdlc-framework.org/evidence/security-review/v1"
+
+    tier_requirements:
+      LITE:
+        approval_required: false
+        evidence_required: ["ARCHITECTURE_DIAGRAM"]
+
+      STANDARD:
+        approval_required: true
+        approvers: ["Tech Lead"]
+        evidence_required: ["ARCHITECTURE_DIAGRAM", "ADR"]
+
+      PROFESSIONAL:
+        approval_required: true
+        approvers: ["Tech Lead", "Security Engineer"]
+        evidence_required: ["ARCHITECTURE_DIAGRAM", "ADR", "SECURITY_REVIEW"]
+
+      ENTERPRISE:
+        approval_required: true
+        approvers: ["Tech Lead", "Security Lead", "Compliance Officer"]
+        evidence_required: ["ARCHITECTURE_DIAGRAM", "ADR", "SECURITY_REVIEW", "THREAT_MODEL"]
+
+  - id: G3
+    stage: "04-BUILD"
+    name: "Ship Ready"
+    description: "Validate code quality, security, and tests before deployment"
+    documentation: "https://sdlc-framework.org/gates/G3"
+    failure_consequence: "blocking"
+
+    required_evidence:
+      - type: "CODE_REVIEW_APPROVAL"
+        min_count: 2
+        description: "2+ code review approvals"
+        schema: "https://sdlc-framework.org/evidence/code-review/v1"
+
+      - type: "TEST_RESULTS"
+        min_count: 1
+        description: "All tests passing"
+        schema: "https://sdlc-framework.org/evidence/test-results/v1"
+
+      - type: "SAST_SCAN"
+        min_count: 1
+        description: "Security scan pass"
+        schema: "https://sdlc-framework.org/evidence/sast-scan/v1"
+
+    tier_requirements:
+      LITE:
+        approval_required: false
+        evidence_required: ["TEST_RESULTS"]
+        quality_thresholds:
+          test_coverage: ">= 60%"
+
+      STANDARD:
+        approval_required: true
+        approvers: ["Tech Lead"]
+        evidence_required: ["CODE_REVIEW_APPROVAL", "TEST_RESULTS"]
+        quality_thresholds:
+          test_coverage: ">= 80%"
+          code_review_approvals: 1
+
+      PROFESSIONAL:
+        approval_required: true
+        approvers: ["Tech Lead", "Security Engineer"]
+        evidence_required: ["CODE_REVIEW_APPROVAL", "TEST_RESULTS", "SAST_SCAN"]
+        quality_thresholds:
+          test_coverage: ">= 90%"
+          code_review_approvals: 2
+          sast_critical_vulns: 0
+
+      ENTERPRISE:
+        approval_required: true
+        approvers: ["Tech Lead", "Security Lead", "QA Lead"]
+        evidence_required: ["CODE_REVIEW_APPROVAL", "TEST_RESULTS", "SAST_SCAN", "DAST_SCAN", "SBOM"]
+        quality_thresholds:
+          test_coverage: ">= 95%"
+          code_review_approvals: 2
+          sast_critical_vulns: 0
+          dast_critical_vulns: 0
+
+  - id: G4
+    stage: "06-DEPLOY"
+    name: "Production Ready"
+    description: "Validate production readiness and deployment artifacts"
+    documentation: "https://sdlc-framework.org/gates/G4"
+    failure_consequence: "blocking"
+
+    required_evidence:
+      - type: "DEPLOYMENT_CHECKLIST"
+        min_count: 1
+        description: "Pre-deployment checklist completed"
+        schema: "https://sdlc-framework.org/evidence/deployment-checklist/v1"
+
+      - type: "SMOKE_TEST_RESULTS"
+        min_count: 1
+        description: "Smoke tests pass in staging"
+        schema: "https://sdlc-framework.org/evidence/smoke-test/v1"
+
+      - type: "ROLLBACK_PLAN"
+        min_count: 1
+        description: "Documented rollback procedure"
+        schema: "https://sdlc-framework.org/evidence/rollback-plan/v1"
+
+    tier_requirements:
+      LITE:
+        approval_required: false
+        evidence_required: ["SMOKE_TEST_RESULTS"]
+
+      STANDARD:
+        approval_required: true
+        approvers: ["Tech Lead"]
+        evidence_required: ["DEPLOYMENT_CHECKLIST", "SMOKE_TEST_RESULTS"]
+
+      PROFESSIONAL:
+        approval_required: true
+        approvers: ["Tech Lead", "DevOps Engineer"]
+        evidence_required: ["DEPLOYMENT_CHECKLIST", "SMOKE_TEST_RESULTS", "ROLLBACK_PLAN"]
+
+      ENTERPRISE:
+        approval_required: true
+        approvers: ["Tech Lead", "DevOps Lead", "Security Lead"]
+        evidence_required: ["DEPLOYMENT_CHECKLIST", "SMOKE_TEST_RESULTS", "ROLLBACK_PLAN", "DISASTER_RECOVERY_PLAN", "COMPLIANCE_SIGNOFF"]
