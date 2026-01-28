@@ -1,9 +1,10 @@
 # SDLC Framework Deprecation Policy
 
-**Version**: 5.2.0
+**Version**: 6.0.0
 **Status**: ACTIVE
-**Date**: January 22, 2026
+**Date**: January 28, 2026
 **Purpose**: Define redirect rules and deprecation procedures
+**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
 
 ---
 

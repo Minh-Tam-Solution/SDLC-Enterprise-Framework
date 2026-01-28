@@ -1,6 +1,6 @@
 # SDLC Quality & Security Gates
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Date**: January 28, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 4 - Quality Gates + Pillar 5 - SASE Integration
@@ -808,6 +808,7 @@ E2E Tests:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.0.0** | **Jan 28, 2026** | **Folder flattening (remove layer 3)**, version upgrade |
 | 5.3.0 | Jan 28, 2026 | Consolidated Quality Gates + Security Gates into single document |
 | 5.2.0 | Jan 22, 2026 | AI Governance integration |
 | 5.1.3 | Jan 18, 2026 | Sprint gate integration |
@@ -816,6 +817,6 @@ E2E Tests:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Last Updated**: January 28, 2026
 **Owner**: CTO + Security Lead

@@ -1,12 +1,26 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 5.3.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.0.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v5.3.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance System)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.0.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
-**What's New in 5.3.0 (January 2026)**:
+**What's New in 6.0.0 (January 28, 2026) - MAJOR RELEASE**:
+- ✅ **Unified Specification Standard (Section 8)** - YAML frontmatter required, BDD requirements format
+- ✅ **DESIGN_DECISIONS.md Template** - Lightweight ADR alternative for sprint-scoped decisions
+- ✅ **SPEC_DELTA.md Template** - Version change tracking with breaking change documentation
+- ✅ **Context Authority Methodology** - Dynamic AGENTS.md with 4 zones (Static → Ephemeral)
+- ✅ **OpenSpec Alignment** - Industry-standard spec-driven development compatibility
+- ✅ **20 Priority Spec Migration** - Structured migration plan for existing specifications
+- ✅ **CONVERSION-LAYER-SPECIFICATION** - Technical spec for `sdlcctl spec convert` command
+
+**Breaking Changes in 6.0.0**:
+- ⚠️ All new specs MUST use YAML frontmatter (`spec_id`, `tier`, `stage`, `status`)
+- ⚠️ Requirements MUST use BDD format (GIVEN-WHEN-THEN)
+- ⚠️ Tier declaration REQUIRED for all specifications
+
+**What's in 5.3.0 (January 2026) - ARCHIVED**:
 - ✅ **Stage Dependency Matrix (ADR-041)** - Explicit stage prerequisites, parallel execution rules, early start triggers
 - ✅ **Stage Exit Criteria** - Documentation, evidence, artifact integrity requirements per tier (LITE/PRO/ENTERPRISE)
 - ✅ **Sprint-Stage Integration** - Multi-stage sprint handling, G-Sprint gate integration with stage validation

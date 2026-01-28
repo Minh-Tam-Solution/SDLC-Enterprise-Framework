@@ -1,22 +1,24 @@
-# SDLC 5.3.0 Core Methodology
+# SDLC 6.0.0 Core Methodology
 
-**Version**: 5.3.0
-**Date**: January 27, 2026
-**Status**: ACTIVE - Quality Assurance System + Stage Dependencies
+**Version**: 6.0.0
+**Date**: January 28, 2026
+**Status**: ACTIVE - Unified Specification Standard (MAJOR RELEASE)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
 ## Executive Summary
 
-SDLC 5.3.0 is an **8-Pillar AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance against AI-generated "vibecode".
+SDLC 6.0.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance and unified specification standards.
 
-### The 8 Pillars
+### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                      SDLC 5.3.0 - 8 PILLARS                                ║
+║                    SDLC 6.0.0 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
+║                                                                            ║
+║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
 ║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
 ║  │ PILLAR 0: DESIGN THINKING FOUNDATION                                 │  ║
@@ -38,7 +40,7 @@ SDLC 5.3.0 is an **8-Pillar AI+Human Excellence Framework** that governs the com
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
 ║  │ PILLAR 3: 4-TIER CLASSIFICATION                                      │  ║
 ║  │ LITE (1-2) → STANDARD (3-10) → PROFESSIONAL (10-50) → ENTERPRISE    │  ║
-║  │ With Tier-Specific Stage Exit Criteria (5.3.0)                       │  ║
+║  │ With Tier-Specific Stage Exit Criteria                               │  ║
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
@@ -56,27 +58,43 @@ SDLC 5.3.0 is an **8-Pillar AI+Human Excellence Framework** that governs the com
 ║  │ AI-parseable, version-free naming, 10-stage /docs structure          │  ║
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
+║  ═══════════════════ EXTENSION SECTIONS (Additive) ════════════════════   ║
+║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
-║  │ PILLAR 7: QUALITY ASSURANCE SYSTEM ⭐ NEW IN 5.3.0                   │  ║
+║  │ SECTION 7: QUALITY ASSURANCE SYSTEM (5.3.0)                          │  ║
 ║  │ Anti-Vibecoding: Vibecoding Index + Progressive Routing + Kill Switch│  ║
 ║  │ "Governance must be the fastest way - or developers will bypass it"  │  ║
+║  └──────────────────────────────────────────────────────────────────────┘  ║
+║                                                                            ║
+║  ┌──────────────────────────────────────────────────────────────────────┐  ║
+║  │ SECTION 8: UNIFIED SPECIFICATION STANDARD (6.0.0) ⭐ NEW             │  ║
+║  │ YAML Frontmatter + BDD Requirements + Lightweight ADRs               │  ║
+║  │ "Consistent specs enable AI+Human collaboration at scale"            │  ║
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 ```
 
-### Why 8 Pillars?
+### Why 7 Pillars + 2 Sections?
+
+**Core Pillars (0-6)** - Stable foundation, rarely changes:
 
 | Pillar | Purpose | Without It |
 |--------|---------|------------|
-| Design Thinking | Build the RIGHT thing | 70% features unused |
-| 10-Stage Lifecycle | Complete coverage | Gaps cause failures |
-| Sprint Governance | Execution backbone | Direction confusion, doc lag |
-| 4-Tier Classification | Right-size processes | Over/under engineering |
-| Quality Gates | Prevent bad code shipping | Production incidents |
-| SASE Integration | AI+Human productivity | 10x vs 50x potential |
-| Documentation | Knowledge preservation | Context loss |
-| **Quality Assurance** | **Anti-vibecoding** | **AI-generated tech debt, unmaintainable code** |
+| 0. Design Thinking | Build the RIGHT thing | 70% features unused |
+| 1. 10-Stage Lifecycle | Complete coverage | Gaps cause failures |
+| 2. Sprint Governance | Execution backbone | Direction confusion, doc lag |
+| 3. 4-Tier Classification | Right-size processes | Over/under engineering |
+| 4. Quality Gates | Prevent bad code shipping | Production incidents |
+| 5. SASE Integration | AI+Human productivity | 10x vs 50x potential |
+| 6. Documentation | Knowledge preservation | Context loss |
+
+**Extension Sections (7-8)** - Additive capabilities, evolves with AI landscape:
+
+| Section | Purpose | Without It |
+|---------|---------|------------|
+| 7. Quality Assurance | Anti-vibecoding governance | AI-generated tech debt |
+| **8. Unified Specs** | **Consistent specification format** | **Integration friction, AI confusion** |
 
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -132,7 +150,7 @@ SDLC 5.3.0 is an **8-Pillar AI+Human Excellence Framework** that governs the com
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.3.0 - 10 STAGES                              │
+│                    SDLC 6.0.0 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -439,7 +457,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 5.3.0 has TWO parallel gate tracks:
+SDLC 6.0.0 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -596,7 +614,7 @@ Enforcement by Tier:
 
 ---
 
-## Pillar 7: Quality Assurance System ⭐ NEW IN 5.3.0
+## Section 7: Quality Assurance System (5.3.0)
 
 > **"Governance must be the fastest way - or developers will bypass it"**
 
@@ -668,7 +686,7 @@ Governance auto-rolls back to WARNING mode if:
 
 ## Industry Standards Integration
 
-SDLC 5.3.0 maps to industry standards:
+SDLC 6.0.0 maps to industry standards:
 
 ```yaml
 Standards Mapped:
@@ -700,11 +718,17 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Agentic-Maturity-Model.md](./SDLC-Agentic-Maturity-Model.md) - L0→L3 progression
 - [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) - User-centered approach
 
-### 5.3.0 New Documents
-- [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - ⭐ **Pillar 7: Anti-Vibecoding**
-- [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md) - ⭐ **Stage Dependency Matrix**
-- [SDLC-Stage-Exit-Criteria.md](./SDLC-Stage-Exit-Criteria.md) - ⭐ **Tier-Specific Exit Criteria**
-- [SDLC-Tier-Stage-Requirements.md](./SDLC-Tier-Stage-Requirements.md) - ⭐ **Decision Trees**
+### 6.0.0 NEW (Section 8 - Unified Specification Standard)
+- [SDLC-Specification-Standard.md](../05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
+- [DESIGN_DECISIONS.md](../05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) - ⭐ **Lightweight ADRs**
+- [SPEC_DELTA.md](../05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) - ⭐ **Version tracking**
+- [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/Framework-6.0/CONTEXT_AUTHORITY_METHODOLOGY.md) - ⭐ **Dynamic AGENTS.md**
+
+### 5.3.0 (Section 7 - Quality Assurance)
+- [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
+- [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md) - **Stage Dependency Matrix**
+- [SDLC-Stage-Exit-Criteria.md](./SDLC-Stage-Exit-Criteria.md) - **Tier-Specific Exit Criteria**
+- [SDLC-Tier-Stage-Requirements.md](./SDLC-Tier-Stage-Requirements.md) - **Decision Trees**
 
 ### Governance & Compliance
 - [SDLC-Sprint-Governance.md](./Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 detail (Sprint + Stage + Change Management)
@@ -726,7 +750,8 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **5.3.0** | **Jan 27, 2026** | **8-Pillar Architecture: Quality Assurance System + Stage Dependencies** |
+| **6.0.0** | **Jan 28, 2026** | **MAJOR: 7-Pillar + 2-Section Architecture, Unified Specification Standard** |
+| 5.3.0 | Jan 27, 2026 | Section 7 - Quality Assurance System + Stage Dependencies |
 | 5.2.0 | Jan 22, 2026 | Principle-Centric Framework: 7-Pillar + AI Governance Principles |
 | 5.1.3 | Jan 18, 2026 | 7-Pillar Architecture: Sprint Planning Governance as Pillar 2 |
 | 5.1.2 | Dec 24, 2025 | Documentation vs Code separation, 6-pillar structure |
@@ -738,9 +763,10 @@ Quality Assurance Standards (5.3.0):
 
 ---
 
-**Last Updated**: January 27, 2026
+**Last Updated**: January 28, 2026
 **Maintained By**: Framework Team
 **Authority**: CTO Approved
 **Case Study**: [BFlow Sprint 86](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
-**Quality Assurance**: [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Pillar 7
+**Quality Assurance**: [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Section 7
+**Unified Specs**: [Framework 6.0 Templates](../05-Templates-Tools/Framework-6.0/) - Section 8
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

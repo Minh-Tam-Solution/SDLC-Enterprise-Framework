@@ -1,0 +1,29 @@
+SDLC Enterprise Framework
+Version: 5.3.0
+Archived: January 28, 2026
+Superseded By: 6.0.0
+
+Key Features (5.3.0):
+- Stage Dependency Matrix (ADR-041)
+- Stage Exit Criteria (per-tier documentation requirements)
+- Sprint-Stage Integration (multi-stage sprint handling)
+- Quality Assurance System (Section 7 - Anti-Vibecoding)
+  - Vibecoding Index (0-100 composite score)
+  - Progressive Routing (Green → Yellow → Orange → Red)
+  - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
+  - Kill Switch Criteria
+- Tier-Specific Stage Requirements (LITE/PRO/ENTERPRISE)
+- Stage Transition Checklists
+
+Reason for Major Upgrade:
+- 6.0.0 introduces Unified Specification Standard (Section 8)
+- Breaking change: YAML frontmatter required for all new specs
+- Breaking change: BDD (GIVEN-WHEN-THEN) format required
+- New: Lightweight Design Decisions (DD-NNNN)
+- New: SPEC_DELTA.md version tracking
+- New: Context Authority Methodology (Dynamic AGENTS.md)
+
+Timeline:
+- 5.3.0 Released: January 28, 2026 (AM)
+- 5.3.0 Archived: January 28, 2026 (PM)
+- 6.0.0 Released: January 28, 2026 (PM)

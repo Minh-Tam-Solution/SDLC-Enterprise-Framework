@@ -1,19 +1,18 @@
 # Governance & Compliance Standards
 
-**Version**: 5.3.0
-**Date**: January 27, 2026
+**Version**: 6.0.0
+**Date**: January 28, 2026
 **Stage**: 02 - Core Methodology
-**Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × **Pillar 7 - Quality Assurance System (NEW)**
+**Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
-**New in 5.3.0**: Pillar 7 Quality Assurance System (Anti-Vibecoding) - Vibecoding Index, Progressive Routing
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 5.3.0**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.0**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
@@ -31,7 +30,7 @@ Define governance, quality, security, and compliance standards that form the **c
 | [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
 | [SDLC-Observability-Checklist.md](./SDLC-Observability-Checklist.md) | Supporting | Metrics, logging, tracing, alerting | PROFESSIONAL+ |
 
-### Consolidated Documents (5.3.0)
+### Consolidated Documents
 
 The following documents were consolidated for clarity:
 
@@ -248,11 +247,15 @@ Security:
 - [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) - Pillar 7 (Anti-Vibecoding)
 - [SDLC-Stage-Exit-Criteria.md](../SDLC-Stage-Exit-Criteria.md) - Stage completion requirements
 - [Documentation-Standards/](../Documentation-Standards/) - Pillar 6 standards
-- [Situation-Specific-Guides/When-Planning-Sprint.md](../Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - Sprint planning guide
+- [SDLC-Sprint-Planning-Guide.md](../Documentation-Standards/SDLC-Sprint-Planning-Guide.md) - Sprint planning guide (flattened in 6.0.0)
 
 ---
 
 ## Changelog
+
+### v6.0.0 (January 28, 2026)
+- Folder flattening (remove layer 3), version upgrade
+- Updated all SDLC references to 6.0.0
 
 ### v5.3.0 (January 28, 2026)
 - **Document Consolidation**: Reduced from 7 → 4 documents
@@ -282,5 +285,5 @@ Security:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Last Updated**: January 27, 2026
+**Last Updated**: January 28, 2026
 **Owner**: CTO + CPO Office

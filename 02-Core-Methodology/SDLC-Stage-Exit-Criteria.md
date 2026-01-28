@@ -1,6 +1,6 @@
 # SDLC Stage Exit Criteria
 
-**Framework**: SDLC 5.3.0  
+**Framework**: SDLC 6.0.0  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
 **Related**: [ADR-041 Stage Dependency Matrix](./ADR-041-Stage-Dependency-Matrix.md), Quality Gates

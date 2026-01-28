@@ -1,10 +1,11 @@
-# SDLC 5.2.0 Training Materials - Complete Learning Package
+# SDLC 6.0.0 Training Materials - Complete Learning Package
 
-**Version**: 5.2.0
-**Date**: January 22, 2026
+**Version**: 6.0.0
+**Date**: January 28, 2026
 **Audience**: All team members (developers, designers, product managers, QA)
 **Duration**: 8 hours total (can be split across multiple sessions)
-**Prerequisites**: Basic SDLC 4.9 knowledge (or 2-hour SDLC fundamentals course)
+**Prerequisites**: SDLC fundamentals knowledge (or 2-hour SDLC fundamentals course)
+**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---

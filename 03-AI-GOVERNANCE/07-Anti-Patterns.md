@@ -1,8 +1,8 @@
 # Principle 7: AI Development Anti-Patterns
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Status**: ACTIVE
-**Date**: January 27, 2026
+**Date**: January 28, 2026
 
 ---
 

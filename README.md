@@ -1,6 +1,6 @@
-# SDLC 5.3.0 Universal Framework
+# SDLC 6.0.0 Universal Framework
 
-**Version**: 5.3.0 | **Status**: ACTIVE | **Date**: January 2026
+**Version**: 6.0.0 | **Status**: ACTIVE | **Date**: January 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 5.3.0 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -16,15 +16,22 @@ SDLC 5.3.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 4**: Quality Gates (Dual-Track: Feature + Sprint)
 - **Pillar 5**: SASE Integration (SE 3.0)
 - **Pillar 6**: Documentation Permanence
-- **Section 7**: Quality Assurance System (Anti-Vibecoding) **NEW in 5.3.0**
+- **Section 7**: Quality Assurance System (Anti-Vibecoding)
+- **Section 8**: Unified Specification Standard **NEW in 6.0.0**
 
-**NEW in 5.3.0**:
-- **Stage Dependency Matrix**: Explicit stage prerequisites, parallel execution rules, early start triggers (ADR-041)
-- **Stage Exit Criteria**: Documentation, evidence, artifact integrity requirements per tier
-- **Sprint-Stage Integration**: Multi-stage sprint handling, G-Sprint gate integration
-- **Quality Assurance System**: Vibecoding Index, progressive routing, auto-generation layer
-- **Tier-Specific Guidance**: LITE/PRO/ENTERPRISE stage requirements with decision trees
-- **Stage Transition Checklists**: Actionable checklists for all 9 stage transitions
+**NEW in 6.0.0 (Major Release)**:
+- **Unified Specification Standard**: YAML frontmatter, BDD requirements (GIVEN-WHEN-THEN), tier-aware specs
+- **DESIGN_DECISIONS.md Template**: Lightweight ADR alternative for sprint-scoped decisions
+- **SPEC_DELTA.md Template**: Version change tracking with breaking change documentation
+- **Context Authority Methodology**: Dynamic AGENTS.md patterns with 4 zones (Static → Ephemeral)
+- **OpenSpec Alignment**: Industry-standard spec-driven development compatibility
+- **20 Priority Spec Migration**: Structured migration plan for existing specifications
+
+**From 5.3.0**:
+- Stage Dependency Matrix (ADR-041)
+- Stage Exit Criteria per tier
+- Sprint-Stage Integration
+- Quality Assurance System (Vibecoding Index, Progressive Routing)
 
 **From 5.2.0**:
 - AI Governance Principles (7 timeless principles)
@@ -205,6 +212,79 @@ Reduces compliance friction from 30 min → <5 min per PR:
 
 ---
 
+## Unified Specification Standard (NEW in 6.0.0 - Section 8)
+
+### SDLC-Specification-Standard.md
+
+Framework 6.0 introduces a **unified specification standard** inspired by OpenSpec:
+
+```yaml
+---
+# YAML Frontmatter (Required)
+spec_id: SPEC-NNNN
+spec_name: "Feature Name"
+spec_version: "1.0.0"
+status: draft | approved | deprecated | superseded
+tier: LITE | STANDARD | PROFESSIONAL | ENTERPRISE | ALL
+stage: "00-09"
+category: functional | technical | security
+owner: "team/person"
+created: YYYY-MM-DD
+last_updated: YYYY-MM-DD
+related_adrs: ["ADR-XXX"]
+related_specs: ["SPEC-XXX"]
+---
+```
+
+### BDD Requirements Format
+
+All requirements must use **Gherkin syntax**:
+
+```gherkin
+GIVEN a user with valid credentials
+  AND the user is not currently logged in
+WHEN the user submits login form
+  AND MFA verification succeeds
+THEN a session token is issued
+  AND the user is redirected to dashboard
+```
+
+### Design Decisions (Lightweight ADRs)
+
+For sprint-scoped decisions that don't warrant full ADRs:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `decision_id` | ✅ | DD-NNNN |
+| `impact` | ✅ | low / medium / high |
+| `reversibility` | ✅ | easy / moderate / difficult |
+| `options` | ✅ | At least 2 alternatives considered |
+
+### Spec Delta (Version Tracking)
+
+Track changes between specification versions:
+
+| Delta Type | Version Bump | Breaking |
+|------------|--------------|----------|
+| **Major** | X.0.0 | Yes |
+| **Minor** | 0.X.0 | No |
+| **Patch** | 0.0.X | No |
+
+### Context Authority (Dynamic AGENTS.md)
+
+SDLC Orchestrator's TRUE MOAT - dynamic context vs static files:
+
+| Zone | Authority | Trigger | Example |
+|------|-----------|---------|---------|
+| **Static** | Tech Lead | ADR approval | Architecture, conventions |
+| **Semi-Dynamic** | PM/Tech Lead | Sprint planning | Phase, goals, assignments |
+| **Dynamic** | System | Gate pass/fail | Stage, restrictions, mode |
+| **Ephemeral** | AI Assistant | Session start | Task context |
+
+> **Key Insight**: "Static AGENTS.md is guidance. Dynamic AGENTS.md is governance."
+
+---
+
 ## Concentric Circles Model (5.2.0)
 
 Framework content is organized by stability:
@@ -264,6 +344,13 @@ SDLC-Enterprise-Framework/
 │   └── trend-watch/              # Monthly tool evolution updates
 ├── 05-Templates-Tools/           # Templates & Automation
 │   ├── SASE-Artifacts/           # CRP, MRP, VCR, AGENTS.md template
+│   ├── Framework-6.0/            # **NEW 6.0.0** Unified Spec Standard
+│   │   ├── SDLC-Specification-Standard.md
+│   │   ├── DESIGN_DECISIONS.md
+│   │   ├── SPEC_DELTA.md
+│   │   ├── CONTEXT_AUTHORITY_METHODOLOGY.md
+│   │   ├── OpenSpec-Analysis.md
+│   │   └── MIGRATION-PLAN-20-SPECS.md
 │   ├── 1-AI-Tools/               # AI prompts by stage
 │   ├── 2-Checklists/
 │   │   └── Stage-Transition-Checklist.md # NEW 5.3.0
@@ -320,6 +407,27 @@ SDLC-Enterprise-Framework/
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms, etc.)
 
+**NEW in 6.0.0 (Unified Specification Standard)**:
+- [SDLC-Specification-Standard.md](./05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) - **Section 8: Unified Spec Format**
+  - YAML frontmatter (spec_id, tier, stage, category)
+  - BDD requirements format (GIVEN-WHEN-THEN)
+  - Acceptance criteria tables
+  - ADR linking requirements
+- [DESIGN_DECISIONS.md](./05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) - Lightweight ADR alternative
+  - Sprint-scoped decisions
+  - Options analysis (pros/cons/effort)
+  - Escalation rules to full ADR
+- [SPEC_DELTA.md](./05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) - Version change tracking
+  - Breaking change documentation
+  - Migration guides
+  - CI/CD integration patterns
+- [CONTEXT_AUTHORITY_METHODOLOGY.md](./05-Templates-Tools/Framework-6.0/CONTEXT_AUTHORITY_METHODOLOGY.md) - Dynamic AGENTS.md
+  - 4 context zones (Static → Ephemeral)
+  - Gate-triggered updates
+  - Governance mode injection
+- [OpenSpec-Analysis.md](./05-Templates-Tools/Framework-6.0/OpenSpec-Analysis.md) - Week 8 Gate recommendation
+- [MIGRATION-PLAN-20-SPECS.md](./05-Templates-Tools/Framework-6.0/MIGRATION-PLAN-20-SPECS.md) - 20 priority specs for migration
+
 **AI Tools (Outer Ring)**:
 - [AI Tools Landscape](./04-AI-TOOLS-LANDSCAPE/) - Tool tracking for Orchestrator (5.2.0)
 
@@ -344,7 +452,8 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
-| **5.3.0** | **Jan 28, 2026** | **Stage Dependency Matrix + Quality Assurance System** - Explicit stage dependencies (ADR-041), Stage Exit Criteria, Sprint-Stage Integration, Tier-Specific Requirements, Stage Transition Checklists, Quality Assurance System (Section 7 - Anti-Vibecoding: Vibecoding Index, Progressive Routing, Auto-Generation Layer, Kill Switch) |
+| **6.0.0** | **Jan 28, 2026** | **MAJOR: Unified Specification Standard (Section 8)** - YAML frontmatter requirement, BDD requirements format, DESIGN_DECISIONS.md template (lightweight ADRs), SPEC_DELTA.md template (version tracking), Context Authority Methodology (dynamic AGENTS.md with 4 zones), OpenSpec alignment analysis, 20 priority spec migration plan. Breaking: All new specs must use unified format. |
+| 5.3.0 | Jan 28, 2026 | **Stage Dependency Matrix + Quality Assurance System** - Explicit stage dependencies (ADR-041), Stage Exit Criteria, Sprint-Stage Integration, Tier-Specific Requirements, Stage Transition Checklists, Quality Assurance System (Section 7 - Anti-Vibecoding: Vibecoding Index, Progressive Routing, Auto-Generation Layer, Kill Switch) |
 | 5.2.0 | Jan 22, 2026 | **Principle-Centric Restructuring** - AI Governance Principles, Risk-Based Planning, Concentric Circles Model, CONTENT-MAP.md, DEPRECATION-POLICY.md |
 | 5.1.3 | Jan 18, 2026 | **Sprint Planning Governance** - G-Sprint/G-Sprint-Close gates, Roadmap Change Control, 10 Golden Rules |
 | 5.1.2 | Dec 24, 2025 | Quality Gates enhancement, Change Management update |

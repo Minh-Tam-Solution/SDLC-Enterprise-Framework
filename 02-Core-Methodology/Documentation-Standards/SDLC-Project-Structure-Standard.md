@@ -1,8 +1,8 @@
 # SDLC Project Structure Standard
 
-**Version**: 5.3.0
-**SDLC Framework Version**: 5.3.0
-**Date**: January 27, 2026
+**Version**: 6.0.0
+**SDLC Framework Version**: 6.0.0
+**Date**: January 28, 2026
 **Status**: ACTIVE
 **Authority**: CTO Approved
 **Pillar**: 1 (10-Stage Lifecycle) + Pillar 6 (Documentation Permanence)
@@ -11,7 +11,7 @@
 
 ## 1. Overview
 
-This document defines the standard project folder structure for SDLC 5.1.2 compliant projects. It establishes clear separation between:
+This document defines the standard project folder structure for SDLC 6.0.0 compliant projects. It establishes clear separation between:
 
 1. **Documentation Stage Mapping** - `/docs` folders mapped to SDLC lifecycle stages (00-09)
 2. **Project Structure Validation** - Root-level code folders validated for presence (NOT stage-mapped)
@@ -316,7 +316,7 @@ my-project/
 
 ## 8. Migration Guide
 
-### 8.1 From SDLC 4.x to 5.1.2
+### 8.1 From SDLC 4.x/5.x to 6.0.0
 
 If your project uses old stage names (WHY, WHAT, HOW, BUILD, etc.):
 
@@ -341,10 +341,10 @@ Use `sdlcctl migrate` command:
 sdlcctl validate --tier standard
 
 # Generate migration plan
-sdlcctl migrate --from 4.x --to 5.1.2 --dry-run
+sdlcctl migrate --from 5.x --to 6.0.0 --dry-run
 
 # Execute migration
-sdlcctl migrate --from 4.x --to 5.1.2
+sdlcctl migrate --from 5.x --to 6.0.0
 ```
 
 ---
@@ -429,6 +429,11 @@ Per **Pillar 2: Sprint Planning Governance**:
 ---
 
 ## 11. Changelog
+
+### v6.0.0 (January 28, 2026)
+- Folder flattening (remove layer 3), version upgrade
+- Updated all SDLC version references to 6.0.0
+- Aligned with 8-Pillar Architecture (Pillar 7: Quality Assurance System)
 
 ### v5.1.3 (January 2025)
 - Added Section 9: Sprint Documentation Structure (Pillar 2 Integration)

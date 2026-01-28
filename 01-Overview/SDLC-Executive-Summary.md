@@ -1,13 +1,49 @@
-# SDLC 5.3.0 Executive Summary
+# SDLC 6.0.0 Executive Summary
 
-**Version**: 5.3.0
-**Release Date**: January 27, 2026 (Quality Assurance System + Stage Dependencies)
+**Version**: 6.0.0
+**Release Date**: January 28, 2026 (MAJOR: Unified Specification Standard)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
-## What's New in 5.3.0
+## What's New in 6.0.0 (MAJOR RELEASE)
+
+### Unified Specification Standard (Section 8)
+
+**The Problem**: Inconsistent specification formats across teams cause integration friction and reduce AI tool effectiveness.
+
+**The Solution**: Mandatory specification format with YAML frontmatter and BDD requirements.
+
+| Component | Requirement | Example |
+|-----------|-------------|---------|
+| **YAML Frontmatter** | `spec_id`, `tier`, `stage`, `status` | `spec_id: SPEC-0042` |
+| **BDD Requirements** | GIVEN-WHEN-THEN format | `GIVEN user logged in WHEN...` |
+| **Tier Declaration** | LITE/STANDARD/PROFESSIONAL/ENTERPRISE | `tier: STANDARD` |
+
+**New Templates (Framework-6.0/)**:
+| Template | Purpose |
+|----------|---------|
+| **SDLC-Specification-Standard.md** | Unified spec format |
+| **DESIGN_DECISIONS.md** | Lightweight ADR for sprint decisions |
+| **SPEC_DELTA.md** | Version change tracking |
+| **CONTEXT_AUTHORITY_METHODOLOGY.md** | Dynamic AGENTS.md (4 zones) |
+
+**OpenSpec Alignment** (CEO APPROVED: EXTEND):
+- OpenSpec for fast planning (speed)
+- SDLC 6.0 for governance (quality)
+- `sdlcctl spec convert` bridges both workflows
+
+### Breaking Changes in 6.0.0
+
+⚠️ **All new specifications MUST**:
+1. Use YAML frontmatter with required fields
+2. Write requirements in BDD format (GIVEN-WHEN-THEN)
+3. Declare target tier
+
+---
+
+## What's in 5.3.0 (Stage Governance)
 
 ### Quality Assurance System (Section 7 - Anti-Vibecoding)
 
@@ -55,17 +91,9 @@
 - 04-05: Can overlap (continuous testing)
 - 07-08-09: Always parallel (operations, collaboration, governance)
 
-### 7-Pillar Architecture (NEW: Pillar 7)
-
-SDLC 5.3.0 adds **Pillar 7: Quality Assurance System** to the architecture:
-- Vibecoding Index calculation
-- Progressive routing
-- Auto-generation layer
-- Kill switch for safety
-
 ---
 
-## What's New in 5.2.0
+## What's in 5.2.0 (AI Agent Best Practices)
 
 ### Planning Mode (MANDATORY for >15 LOC)
 
@@ -120,7 +148,9 @@ New comprehensive guide covering:
 
 ## Framework Overview
 
-**SDLC 5.3.0** is an **8-Pillar AI+Human Excellence Framework** combining:
+**SDLC 6.0.0** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
+
+### 7 Core Pillars
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -128,7 +158,10 @@ New comprehensive guide covering:
 - **Pillar 4**: Quality Gates (Dual-Track: Feature + Sprint)
 - **Pillar 5**: SASE Integration (SE 3.0)
 - **Pillar 6**: Documentation Permanence
-- **Pillar 7**: Quality Assurance System (Anti-Vibecoding) ⭐ NEW
+
+### 2 Extension Sections
+- **Section 7**: Quality Assurance System (Anti-Vibecoding) - 5.3.0
+- **Section 8**: Unified Specification Standard (BDD + YAML) - 6.0.0 ⭐ NEW
 
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -138,7 +171,7 @@ New comprehensive guide covering:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    SDLC 5.3.0 - 10 STAGES                           │
+│                    SDLC 6.0.0 - 10 STAGES                           │
 ├─────────────────────────────────────────────────────────────────────┤
 │  00 FOUNDATION  (WHY?)      Strategic Discovery & Validation        │
 │  01 PLANNING    (WHAT?)     Requirements & User Stories             │
@@ -211,9 +244,11 @@ New comprehensive guide covering:
 
 ---
 
-## 8-Pillar Architecture
+## 7-Pillar + 2-Section Architecture
 
 ```yaml
+# CORE PILLARS (Stable - Change Rarely)
+
 Pillar 0: Design Thinking Foundation
   - 5 phases: EMPATHIZE → DEFINE → IDEATE → PROTOTYPE → TEST
   - User-centered validation
@@ -245,11 +280,20 @@ Pillar 6: Documentation Permanence
   - AI-parseable formats
   - Permanent naming conventions
 
-Pillar 7: Quality Assurance System (5.3.0) ⭐ NEW
+# EXTENSION SECTIONS (Additive - New Capabilities)
+
+Section 7: Quality Assurance System (5.3.0)
   - Vibecoding Index (0-100, 5 weighted signals)
   - Progressive Routing (Green/Yellow/Orange/Red)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms)
+
+Section 8: Unified Specification Standard (6.0.0) ⭐ NEW
+  - YAML Frontmatter (spec_id, tier, stage, status)
+  - BDD Requirements (GIVEN-WHEN-THEN format)
+  - DESIGN_DECISIONS.md (lightweight ADRs)
+  - SPEC_DELTA.md (version tracking)
+  - Context Authority Methodology (Dynamic AGENTS.md)
 ```
 
 ---
@@ -353,7 +397,8 @@ SDLC 5.1.1 (Dec 2025) → Legacy/Archive + Stage Consistency
 SDLC 5.1.2 (Dec 2025) → Complete Lifecycle + SASE Integration
 SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration
 SDLC 5.2.0 (Jan 2026) → Planning Mode + AI Agent Best Practices 2026
-SDLC 5.3.0 (Jan 2026) → Quality Assurance System + Stage Dependencies ⭐ LATEST
+SDLC 5.3.0 (Jan 2026) → Quality Assurance System (Section 7) + Stage Dependencies
+SDLC 6.0.0 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR RELEASE
 ```
 
 ---
@@ -361,15 +406,20 @@ SDLC 5.3.0 (Jan 2026) → Quality Assurance System + Stage Dependencies ⭐ LATE
 ## Related Documents
 
 **Core Methodology**:
-- [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md)
-- [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
-- [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md)
+- [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-Stage lifecycle
+- [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - SASE principles
+- [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - Pillar 0
 
-**5.3.0 NEW Documents**:
-- [SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) ⭐ NEW (Pillar 7)
-- [SDLC-Stage-Dependencies.md](../02-Core-Methodology/SDLC-Stage-Dependencies.md) ⭐ NEW
-- [SDLC-Stage-Exit-Criteria.md](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) ⭐ NEW
-- [SDLC-Tier-Stage-Requirements.md](../02-Core-Methodology/SDLC-Tier-Stage-Requirements.md) ⭐ NEW
+**6.0.0 NEW (Section 8 - Unified Specification Standard)**:
+- [SDLC-Specification-Standard.md](../05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) ⭐ YAML + BDD format
+- [DESIGN_DECISIONS.md](../05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) ⭐ Lightweight ADRs
+- [SPEC_DELTA.md](../05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) ⭐ Version tracking
+- [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/Framework-6.0/CONTEXT_AUTHORITY_METHODOLOGY.md) ⭐ Dynamic AGENTS.md
+
+**5.3.0 (Section 7 - Quality Assurance)**:
+- [SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) - Anti-Vibecoding
+- [SDLC-Stage-Dependencies.md](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - ADR-041
+- [SDLC-Stage-Exit-Criteria.md](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Per-tier requirements
 
 **AI Agent Best Practices 2026**:
 - [AI Agent Best Practices 2026](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md)
@@ -377,11 +427,12 @@ SDLC 5.3.0 (Jan 2026) → Quality Assurance System + Stage Dependencies ⭐ LATE
 - [Model Selection Matrix](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md)
 
 **Governance**:
-- [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 (Sprint + Stage + Change)
-- [SDLC-Quality-Security-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5 (Quality + Security)
+- [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2
+- [SDLC-Quality-Security-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5
 
 **Templates**:
 - [AGENTS.md Template](../05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) ⭐ RECOMMENDED
+- [Framework 6.0 Templates](../05-Templates-Tools/Framework-6.0/) ⭐ NEW
 - [SASE Artifact Templates](../05-Templates-Tools/SASE-Artifacts/)
 
 ---
@@ -409,7 +460,7 @@ SDLC 5.3.0 (Jan 2026) → Quality Assurance System + Stage Dependencies ⭐ LATE
 
 ---
 
-**Last Updated**: January 27, 2026
+**Last Updated**: January 28, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
-**Version**: 5.3.0
+**Version**: 6.0.0

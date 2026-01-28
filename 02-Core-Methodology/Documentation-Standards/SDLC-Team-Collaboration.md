@@ -1,6 +1,6 @@
 # SDLC Team Collaboration Standards - Universal Framework
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Date**: January 28, 2026
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
@@ -73,7 +73,7 @@ Principle 4: RACI Clarity
     I - Informed: Who needs updates?
 ```
 
-### Consolidation Note (5.3.0)
+### Consolidation Note
 
 This document merges four previous standards from Team-Collaboration/:
 - SDLC-Team-Collaboration-Protocol.md → Parts 2, 4
@@ -961,6 +961,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
 | 5.3.0 | Jan 28, 2026 | Consolidated from 4 files (Collaboration, Communication, Escalation, README) |
 | 5.2.0 | Jan 22, 2026 | Added AI Governance alignment |
 | 5.0.0 | Dec 5, 2025 | Initial SDLC 5.0.0 version |

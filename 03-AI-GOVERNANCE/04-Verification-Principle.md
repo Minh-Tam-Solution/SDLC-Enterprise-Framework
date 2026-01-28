@@ -1,8 +1,8 @@
 # Principle 4: Verification-First
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Status**: ACTIVE
-**Date**: January 27, 2026
+**Date**: January 28, 2026
 
 ---
 

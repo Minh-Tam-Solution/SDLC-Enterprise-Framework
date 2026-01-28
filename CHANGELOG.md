@@ -2,13 +2,124 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 5.3.0 Enterprise Framework - Stage Dependency Matrix + Quality Assurance System
+**Framework**: SDLC 6.0.0 Enterprise Framework - Unified Specification Standard
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: January 27, 2026 (SDLC 5.3.0 Quality Assurance System - Anti-Vibecoding)
+**Last Updated**: January 28, 2026 (SDLC 6.0.0 Unified Specification Standard)
 
 ---
 
-## 🚀 Version 5.3.0 - January 2026 (MINOR RELEASE)
+## 🚀 Version 6.0.0 - January 28, 2026 (MAJOR RELEASE)
+
+**Release Date**: January 28, 2026
+**Type**: MAJOR RELEASE - Unified Specification Standard (Section 8)
+**Status**: PRODUCTION-READY
+**Breaking Changes**: YES (spec format requirements)
+**Supersedes**: SDLC 5.3.0 Stage Dependency Matrix + Quality Assurance System
+**Achievement**: Industry-aligned specification standard, OpenSpec compatibility
+
+### 🎯 Key Enhancement: Unified Specification Standard (Section 8)
+
+**THE CHANGE**: Introduced mandatory specification format with YAML frontmatter and BDD requirements.
+
+| Feature | Description |
+|---------|-------------|
+| **YAML Frontmatter** | Required metadata: `spec_id`, `tier`, `stage`, `status`, `owner` |
+| **BDD Requirements** | GIVEN-WHEN-THEN format mandatory for all functional requirements |
+| **DESIGN_DECISIONS.md** | Lightweight ADR alternative for sprint-scoped decisions |
+| **SPEC_DELTA.md** | Version change tracking with breaking change documentation |
+| **Context Authority Methodology** | Dynamic AGENTS.md with 4 zones (Static → Ephemeral) |
+| **OpenSpec Alignment** | Industry-standard spec-driven development compatibility |
+
+### ⚠️ BREAKING CHANGES
+
+**All new specifications MUST:**
+
+1. **Use YAML Frontmatter**
+   ```yaml
+   ---
+   spec_id: SPEC-NNNN
+   spec_name: "Feature Name"
+   spec_version: "1.0.0"
+   status: draft | approved | deprecated
+   tier: LITE | STANDARD | PROFESSIONAL | ENTERPRISE | ALL
+   stage: "00-09"
+   category: functional | technical | security
+   owner: "team/person"
+   created: YYYY-MM-DD
+   last_updated: YYYY-MM-DD
+   ---
+   ```
+
+2. **Use BDD Format for Requirements**
+   ```gherkin
+   GIVEN a user with valid credentials
+     AND the user is not currently logged in
+   WHEN the user submits login form
+   THEN a session token is issued
+   ```
+
+3. **Declare Target Tier**
+   - Tier-specific validation enforced
+   - LITE: Minimal metadata
+   - ENTERPRISE: Full metadata + integrity checks
+
+### 🆕 Framework 6.0 Templates (NEW)
+
+| Template | Purpose | Location |
+|----------|---------|----------|
+| **SDLC-Specification-Standard.md** | Unified spec format | `05-Templates-Tools/Framework-6.0/` |
+| **DESIGN_DECISIONS.md** | Lightweight ADRs | `05-Templates-Tools/Framework-6.0/` |
+| **SPEC_DELTA.md** | Version tracking | `05-Templates-Tools/Framework-6.0/` |
+| **CONTEXT_AUTHORITY_METHODOLOGY.md** | Dynamic AGENTS.md | `05-Templates-Tools/Framework-6.0/` |
+| **CONVERSION-LAYER-SPECIFICATION.md** | `sdlcctl spec convert` | `05-Templates-Tools/Framework-6.0/` |
+
+### 🆕 OpenSpec Week 8 Gate Decision
+
+**CEO APPROVED: EXTEND**
+
+- ✅ OpenSpec for fast planning (speed)
+- ✅ SDLC 6.0 for governance (quality)
+- ✅ Conversion layer bridges both workflows
+- ✅ `sdlcctl spec convert` command planned (Sprint 117)
+
+### 🆕 Context Authority Methodology
+
+**Dynamic AGENTS.md with 4 Zones:**
+
+| Zone | Authority | Trigger | Example |
+|------|-----------|---------|---------|
+| **Static** | Tech Lead | ADR approval | Architecture, conventions |
+| **Semi-Dynamic** | PM/Tech Lead | Sprint planning | Phase, goals, assignments |
+| **Dynamic** | System | Gate pass/fail | Stage, restrictions, mode |
+| **Ephemeral** | AI Assistant | Session start | Task context |
+
+**Key Insight**: "Static AGENTS.md is guidance. Dynamic AGENTS.md is governance."
+
+### 🆕 20 Priority Spec Migration Plan
+
+**Sprint 117-119 Execution:**
+
+| Priority | Count | Target Sprint |
+|----------|-------|---------------|
+| P0 (Critical) | 2 specs | Sprint 117 |
+| P1 (High) | 6 specs | Sprint 117-118 |
+| P2 (Medium) | 8 specs | Sprint 118-119 |
+| P3 (Low) | 4 specs | Sprint 119+ |
+
+### 📦 5.3.0 Archive
+
+**Archived to**: `99-Legacy/v5.3.0-Archive/`
+
+- SDLC-Stage-Dependencies.md
+- SDLC-Stage-Exit-Criteria.md
+- SDLC-Quality-Assurance-System.md
+- SDLC-Tier-Stage-Requirements.md
+
+**Note**: 5.3.0 features remain in 6.0.0, archive is for version history.
+
+---
+
+## 🚀 Version 5.3.0 - January 2026 (MINOR RELEASE) - ARCHIVED
 
 **Release Date**: January 28, 2026
 **Type**: MINOR RELEASE - Stage Dependency Matrix, Exit Criteria, Sprint Integration

@@ -1,6 +1,6 @@
 # 📝 SDLC Documentation Standards - Pillar 6: Documentation Permanence
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Date**: January 28, 2026
 **Status**: ACTIVE - Production Standards
 **Authority**: CPO Office
@@ -11,7 +11,7 @@
 
 ## 🎯 Purpose
 
-This folder contains the **mandatory documentation standards** for all SDLC 5.3.0 projects. As **Pillar 6** of the 8-Pillar Architecture, Documentation Permanence ensures:
+This folder contains the **mandatory documentation standards** for all SDLC 6.0.0 projects. As **Pillar 6** of the 8-Pillar Architecture, Documentation Permanence ensures:
 
 - **Permanence**: Documentation doesn't become obsolete
 - **Discoverability**: Easy to find what you need
@@ -31,11 +31,11 @@ This folder contains the **mandatory documentation standards** for all SDLC 5.3.
 
 ---
 
-## 📚 Document Consolidation (SDLC 5.3.0)
+## 📚 Document Consolidation (SDLC 6.0.0)
 
 ### Consolidation Summary
 
-SDLC 5.3.0 consolidated 13 files → 7 files for improved clarity:
+SDLC 6.0.0 consolidated 13 files → 7 files for improved clarity:
 
 | Previous Files | Merged Into | Lines |
 |----------------|-------------|-------|
@@ -45,7 +45,7 @@ SDLC 5.3.0 consolidated 13 files → 7 files for improved clarity:
 | ARCHIVAL-HEADER-TEMPLATE.md | ↑ | |
 | Team-Collaboration/* (4 files) | **SDLC-Team-Collaboration.md** | ~700 |
 
-### Current Documents (7 files)
+### Current Documents (6 files - SDLC 6.0.0 Flattened)
 
 | Document | Purpose | Compliance |
 |----------|---------|------------|
@@ -53,15 +53,15 @@ SDLC 5.3.0 consolidated 13 files → 7 files for improved clarity:
 | **SDLC-Team-Collaboration.md** ⭐ | Communication + RACI + Escalation standards | MANDATORY (STANDARD+) |
 | **SDLC-Project-Structure-Standard.md** | Folder structure (10 stages) | MANDATORY |
 | **SDLC-Tier-Stage-Requirements.md** | Tier-specific stage requirements | MANDATORY |
-| **Situation-Specific-Guides/** | Step-by-step situation guides | RECOMMENDED |
+| **SDLC-Sprint-Planning-Guide.md** | Step-by-step sprint planning guide | RECOMMENDED |
 
 ---
 
 ## 📁 Documents in This Folder
 
-### 1. SDLC-Naming-Standards.md ⭐ MANDATORY (NEW 5.3.0)
+### 1. SDLC-Naming-Standards.md ⭐ MANDATORY
 
-**Purpose**: Unified naming and header standards for all SDLC 5.3.0 projects
+**Purpose**: Unified naming and header standards for all SDLC 6.0.0 projects
 
 **Covers** (8 Parts):
 - Part 1: Overview & Principles
@@ -84,7 +84,7 @@ SDLC 5.3.0 consolidated 13 files → 7 files for improved clarity:
 
 ---
 
-### 2. SDLC-Team-Collaboration.md ⭐ MANDATORY (NEW 5.3.0)
+### 2. SDLC-Team-Collaboration.md ⭐ MANDATORY
 
 **Purpose**: Unified team collaboration, communication, and escalation standards
 
@@ -152,17 +152,21 @@ docs/
 
 ---
 
-### 5. Situation-Specific-Guides/ (Subfolder)
+### 5. SDLC-Sprint-Planning-Guide.md ⭐ RECOMMENDED
 
-**Purpose**: Step-by-step guides for specific situations
+**Purpose**: Step-by-step sprint planning guide (Pillar 2 compliance)
 
-| Document | Purpose | Pillar |
-|----------|---------|--------|
-| **README.md** | Index of available guides | Cross-pillar |
-| **When-Planning-Sprint.md** ⭐ | Step-by-step sprint planning guide | Pillar 2 |
+**Covers**:
+- Pre-Sprint Checklist (verify previous sprint closed, roadmap alignment)
+- G-Sprint Gate Evaluation (alignment, capacity, dependencies, risk)
+- During Sprint Activities (daily standup, blocker escalation, mid-sprint check)
+- Post-Sprint Checklist (sprint completion, review, retrospective, documentation)
+- Common Pitfalls (direction confusion, documentation lag, scope creep)
 
-**Lines**: 400+ lines in sprint planning guide
+**Lines**: ~400 lines comprehensive guide
 **Compliance**: RECOMMENDED for STANDARD+ tiers
+
+> **SDLC 6.0.0**: This document was previously in `Situation-Specific-Guides/When-Planning-Sprint.md`. Folder flattened for 2-level maximum structure.
 
 ---
 
@@ -211,7 +215,7 @@ From **10 Golden Rules** (Rule #3):
 ║  Pillar 2: Sprint Governance ⭐ CRITICAL INTEGRATION                      ║
 ║  └─ Docs: SPRINT-XX.md, CURRENT-SPRINT.md, ROADMAP.md                     ║
 ║     Location: docs/04-build/02-Sprint-Plans/                              ║
-║     Standard: When-Planning-Sprint.md                                      ║
+║     Standard: SDLC-Sprint-Planning-Guide.md                               ║
 ║     Enforcement: 24h documentation rule                                    ║
 ║                                                                            ║
 ║  Pillar 3: 4-Tier Classification                                          ║
@@ -290,7 +294,7 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 **Step 3**: Apply naming standards
 - Read [SDLC-Naming-Standards.md](./SDLC-Naming-Standards.md)
-- Follow [When-Planning-Sprint.md](./Situation-Specific-Guides/When-Planning-Sprint.md)
+- Follow [SDLC-Sprint-Planning-Guide.md](./SDLC-Sprint-Planning-Guide.md)
 
 ### For Sprint Planning (Pillar 2 Compliance)
 
@@ -330,7 +334,7 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 ### Pillar 2: Sprint Governance
 - [SDLC-Sprint-Governance.md](../Governance-Compliance/SDLC-Sprint-Governance.md) - 10 Golden Rules + Stage Integration
-- [When-Planning-Sprint.md](./Situation-Specific-Guides/When-Planning-Sprint.md) - Step-by-step guide
+- [SDLC-Sprint-Planning-Guide.md](./SDLC-Sprint-Planning-Guide.md) - Step-by-step guide
 
 ### Core Methodology
 - [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture
@@ -360,7 +364,8 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **5.3.0** | **Jan 28, 2026** | **Document consolidation (13 → 7 files)**, 8-Pillar updates |
+| **6.0.0** | **Jan 28, 2026** | **Folder flattening (remove layer 3)**, version upgrade |
+| 5.3.0 | Jan 28, 2026 | Document consolidation (13 → 7 files), 8-Pillar updates |
 | 5.2.0 | Jan 22, 2026 | AI Governance integration, Context Management alignment |
 | 5.1.3 | Jan 18, 2026 | Pillar 6 integration with Pillar 2 (Sprint Governance) |
 | 5.1.2 | Dec 24, 2025 | SASE integration, AI-parseable standards |

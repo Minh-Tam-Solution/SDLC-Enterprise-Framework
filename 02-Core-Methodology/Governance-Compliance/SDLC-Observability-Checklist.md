@@ -1,7 +1,7 @@
 # SDLC Observability Checklist
 
-**Version**: 5.3.0
-**Date**: January 27, 2026
+**Version**: 6.0.0
+**Date**: January 28, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: Supporting - Operational Excellence
 **Status**: ACTIVE - Production Standard
@@ -505,6 +505,15 @@ Example:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for PROFESSIONAL+ tiers
-**Version**: 5.3.0
-**Last Updated**: January 22, 2026
+**Version**: 6.0.0
+**Last Updated**: January 28, 2026
 **Owner**: CTO Office
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| **6.0.0** | **Jan 28, 2026** | **Folder flattening (remove layer 3)**, version upgrade |
+| 5.3.0 | Jan 27, 2026 | Initial version - observability checklist |

@@ -1,8 +1,8 @@
-# SDLC 5.3.0 Implementation Guides
+# SDLC 6.0.0 Implementation Guides
 
-**Version**: 5.3.0 | **Status**: PRODUCTION READY | **Date**: January 27, 2026
+**Version**: 6.0.0 | **Status**: PRODUCTION READY | **Date**: January 28, 2026
 
-Practical how-to guides for implementing SDLC 5.2.0 framework + SASE artifacts.
+Practical how-to guides for implementing SDLC 6.0.0 framework + Section 8 Specification Standard.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 

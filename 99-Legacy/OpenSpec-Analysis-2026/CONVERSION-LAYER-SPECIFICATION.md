@@ -1,0 +1,686 @@
+# Conversion Layer Technical Specification
+## OpenSpec → SDLC 6.0 Format Transformer
+
+**Version**: 1.0.0
+**Status**: APPROVED
+**Created**: January 28, 2026
+**Author**: PM/PJM Team
+**Framework**: SDLC 6.0
+**Sprint**: 117 (Feb 24-28, 2026)
+
+---
+
+## 1. Executive Summary
+
+This specification defines the **Conversion Layer** that transforms OpenSpec output into SDLC 6.0 compliant specifications. This enables the EXTEND hybrid workflow approved by CEO:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        EXTEND HYBRID WORKFLOW                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  OpenSpec CLI          Conversion Layer         SDLC 6.0 Governance        │
+│  ┌──────────────┐     ┌──────────────────┐     ┌─────────────────────┐     │
+│  │ /openspec:   │     │ sdlcctl spec     │     │ Quality Gates       │     │
+│  │  proposal    │────▶│  convert         │────▶│ Evidence Vault      │     │
+│  │              │     │                  │     │ Tier Requirements   │     │
+│  │ PROPOSAL.md  │     │ Parser + Render  │     │ SPEC-XXXX.md        │     │
+│  └──────────────┘     └──────────────────┘     └─────────────────────┘     │
+│                                                                             │
+│  "Plan fast"           "Bridge"                "Govern strictly"           │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Key Insight**: OpenSpec handles speed (planning in seconds). SDLC 6.0 handles quality (governance, audit trail, tier requirements). The Conversion Layer bridges them.
+
+---
+
+## 2. Functional Requirements
+
+### 2.1 FR-001: OpenSpec Parser
+
+**Priority**: P0
+**Tier**: ALL
+
+```gherkin
+GIVEN an OpenSpec output directory (.openspec/proposals/*)
+  AND the directory contains PROPOSAL.md, DESIGN_DECISIONS.md, TASKS.md, SPEC_DELTA.md
+WHEN the user runs `sdlcctl spec convert <openspec_dir>`
+THEN the parser extracts:
+  - Title and description from PROPOSAL.md
+  - Design decisions from DESIGN_DECISIONS.md
+  - Tasks from TASKS.md
+  - Change summary from SPEC_DELTA.md
+  AND returns a structured Python dictionary
+```
+
+**Parser Output Schema**:
+
+```python
+ParsedOpenSpec = {
+    "title": str,                    # From PROPOSAL.md H1
+    "description": str,              # From PROPOSAL.md body
+    "design_decisions": [
+        {
+            "id": str,               # DD-001, DD-002, etc.
+            "title": str,
+            "context": str,
+            "decision": str,
+            "consequences": list[str]
+        }
+    ],
+    "tasks": [
+        {
+            "id": str,               # T-001, T-002, etc.
+            "title": str,
+            "description": str,
+            "acceptance_criteria": list[str]
+        }
+    ],
+    "spec_delta": {
+        "added": list[str],
+        "modified": list[str],
+        "removed": list[str]
+    },
+    "metadata": {
+        "source_dir": str,
+        "created_at": datetime,
+        "openspec_version": str
+    }
+}
+```
+
+**Rationale**: Structured parsing enables deterministic transformation and validation.
+
+**Verification**: Unit tests with sample OpenSpec outputs.
+
+---
+
+### 2.2 FR-002: SDLC 6.0 Renderer
+
+**Priority**: P0
+**Tier**: ALL
+
+```gherkin
+GIVEN a parsed OpenSpec dictionary (ParsedOpenSpec)
+  AND a target tier (LITE | STANDARD | PROFESSIONAL | ENTERPRISE)
+WHEN the renderer is invoked
+THEN it generates a compliant SDLC 6.0 specification with:
+  - YAML frontmatter (spec_id, tier, stage, status)
+  - BDD requirements (GIVEN-WHEN-THEN format)
+  - Design decisions section (ADR references)
+  - Acceptance criteria table
+  - Spec delta section (if applicable)
+```
+
+**Renderer Output Template**:
+
+```yaml
+---
+spec_id: SPEC-{auto_increment}
+spec_name: {from_title}
+spec_version: 1.0.0
+status: draft
+tier: {target_tier}
+stage: "02"  # DESIGN stage default
+category: functional
+owner: {from_git_config}
+created: {timestamp}
+last_updated: {timestamp}
+related_adrs: []
+related_specs: []
+---
+
+# {title}
+
+## 1. Overview
+
+{description}
+
+## 2. Context
+
+### 2.1 Problem Statement
+
+{extracted_from_proposal}
+
+### 2.2 Stakeholders
+
+- **Primary**: {auto_detect}
+- **Secondary**: {auto_detect}
+
+## 3. Requirements
+
+### 3.1 Functional Requirements
+
+{converted_tasks_to_bdd}
+
+## 4. Design Decisions
+
+{converted_design_decisions}
+
+## 5. Technical Specification
+
+{extracted_from_proposal}
+
+## 6. Acceptance Criteria
+
+| ID | Criterion | Priority | Verification |
+|----|-----------|----------|--------------|
+{acceptance_criteria_table}
+
+## 7. Spec Delta
+
+{spec_delta_section}
+
+## 8. Dependencies
+
+{auto_detected_dependencies}
+
+---
+
+*Generated by sdlcctl spec convert v1.0.0*
+*Source: {openspec_dir}*
+```
+
+**Rationale**: Automated generation ensures consistency and reduces manual effort.
+
+**Verification**: Integration tests comparing output against Framework 6.0 templates.
+
+---
+
+### 2.3 FR-003: CLI Interface
+
+**Priority**: P0
+**Tier**: ALL
+
+```gherkin
+GIVEN the sdlcctl CLI is installed
+WHEN the user runs `sdlcctl spec convert --help`
+THEN the following options are displayed:
+  - <openspec_dir>: Path to OpenSpec output directory (required)
+  - --tier: Target tier (LITE|STANDARD|PROFESSIONAL|ENTERPRISE, default: STANDARD)
+  - --output: Output file path (default: ./SPEC-{id}.md)
+  - --validate: Run validation after conversion (default: true)
+  - --dry-run: Preview output without writing file
+  - --force: Overwrite existing file if exists
+```
+
+**CLI Command Examples**:
+
+```bash
+# Basic conversion
+sdlcctl spec convert .openspec/proposals/auth-oauth-2026-01-28/
+
+# With tier specification
+sdlcctl spec convert .openspec/proposals/auth-oauth-2026-01-28/ --tier PROFESSIONAL
+
+# Custom output path
+sdlcctl spec convert .openspec/proposals/auth-oauth-2026-01-28/ -o docs/specs/SPEC-0042.md
+
+# Dry run (preview only)
+sdlcctl spec convert .openspec/proposals/auth-oauth-2026-01-28/ --dry-run
+
+# Force overwrite
+sdlcctl spec convert .openspec/proposals/auth-oauth-2026-01-28/ --force
+```
+
+**Rationale**: Familiar CLI patterns reduce learning curve.
+
+**Verification**: E2E tests with actual OpenSpec directories.
+
+---
+
+### 2.4 FR-004: Validation Integration
+
+**Priority**: P1
+**Tier**: STANDARD, PROFESSIONAL, ENTERPRISE
+
+```gherkin
+GIVEN a converted SDLC 6.0 specification
+  AND the --validate flag is enabled (default)
+WHEN conversion completes
+THEN the validator runs automatically
+  AND reports any format compliance issues
+  AND returns exit code 0 if valid, 1 if invalid
+```
+
+**Validation Checks**:
+
+| Check | Description | Tier |
+|-------|-------------|------|
+| YAML frontmatter | Required fields present | ALL |
+| BDD format | GIVEN-WHEN-THEN syntax | ALL |
+| Spec ID format | SPEC-NNNN pattern | ALL |
+| Tier requirements | Tier-specific fields present | STANDARD+ |
+| ADR references | Valid ADR links | PROFESSIONAL+ |
+| Acceptance criteria | Table format valid | ALL |
+
+**Rationale**: Immediate validation catches issues before commit.
+
+**Verification**: Unit tests with valid/invalid specs.
+
+---
+
+### 2.5 FR-005: Batch Conversion
+
+**Priority**: P2
+**Tier**: PROFESSIONAL, ENTERPRISE
+
+```gherkin
+GIVEN multiple OpenSpec output directories
+WHEN the user runs `sdlcctl spec convert --batch <parent_dir>`
+THEN all subdirectories are processed
+  AND a summary report is generated
+  AND failed conversions are logged without stopping batch
+```
+
+**Batch Output**:
+
+```
+Batch Conversion Report
+=======================
+Processed: 10
+Succeeded: 8
+Failed: 2
+Skipped: 0
+
+Failures:
+  - .openspec/proposals/legacy-format/: Missing PROPOSAL.md
+  - .openspec/proposals/incomplete/: Invalid DESIGN_DECISIONS.md format
+
+Output Directory: ./specs/
+```
+
+**Rationale**: Batch processing enables migration of existing OpenSpec projects.
+
+**Verification**: Integration tests with multi-directory structures.
+
+---
+
+## 3. Technical Architecture
+
+### 3.1 Component Diagram
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         CONVERSION LAYER ARCHITECTURE                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  CLI Layer (click)                                                          │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  sdlcctl spec convert                                                │   │
+│  │    ├── parse_args()                                                  │   │
+│  │    ├── validate_input()                                              │   │
+│  │    └── orchestrate()                                                 │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                              │                                              │
+│                              ▼                                              │
+│  Parser Layer                                                               │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  OpenSpecParser                                                      │   │
+│  │    ├── parse_proposal(path) → dict                                   │   │
+│  │    ├── parse_design_decisions(path) → list[dict]                     │   │
+│  │    ├── parse_tasks(path) → list[dict]                                │   │
+│  │    ├── parse_spec_delta(path) → dict                                 │   │
+│  │    └── parse_all(dir) → ParsedOpenSpec                               │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                              │                                              │
+│                              ▼                                              │
+│  Renderer Layer                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  SDLC6Renderer                                                       │   │
+│  │    ├── render_frontmatter(parsed, tier) → str                        │   │
+│  │    ├── render_overview(parsed) → str                                 │   │
+│  │    ├── render_requirements(parsed) → str                             │   │
+│  │    ├── render_design_decisions(parsed) → str                         │   │
+│  │    ├── render_acceptance_criteria(parsed) → str                      │   │
+│  │    ├── render_spec_delta(parsed) → str                               │   │
+│  │    └── render_full(parsed, tier) → str                               │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                              │                                              │
+│                              ▼                                              │
+│  Validator Layer (existing)                                                 │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  SpecValidator                                                       │   │
+│  │    ├── validate_frontmatter(content) → list[Error]                   │   │
+│  │    ├── validate_structure(content) → list[Error]                     │   │
+│  │    └── validate_bdd(content) → list[Error]                           │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 3.2 Data Flow
+
+```
+┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│  OpenSpec    │    │   Parser     │    │   Renderer   │    │  SDLC 6.0    │
+│  Directory   │───▶│   Layer      │───▶│   Layer      │───▶│  Spec File   │
+│              │    │              │    │              │    │              │
+│ PROPOSAL.md  │    │ ParsedOpen   │    │ Jinja2       │    │ SPEC-XXXX.md │
+│ DESIGN_*.md  │    │ Spec dict    │    │ Templates    │    │ (validated)  │
+│ TASKS.md     │    │              │    │              │    │              │
+│ SPEC_DELTA.md│    │              │    │              │    │              │
+└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+```
+
+### 3.3 File Structure
+
+```
+backend/app/services/spec_converter/
+├── __init__.py
+├── cli.py                    # Click CLI commands
+├── parser/
+│   ├── __init__.py
+│   ├── openspec_parser.py    # Main parser class
+│   ├── proposal_parser.py    # PROPOSAL.md parser
+│   ├── decisions_parser.py   # DESIGN_DECISIONS.md parser
+│   ├── tasks_parser.py       # TASKS.md parser
+│   └── delta_parser.py       # SPEC_DELTA.md parser
+├── renderer/
+│   ├── __init__.py
+│   ├── sdlc6_renderer.py     # Main renderer class
+│   └── templates/
+│       ├── spec_base.md.j2   # Base template
+│       ├── frontmatter.yaml.j2
+│       ├── requirements.md.j2
+│       └── acceptance_criteria.md.j2
+├── validator/
+│   ├── __init__.py
+│   └── spec_validator.py     # Reuse existing validator
+└── tests/
+    ├── __init__.py
+    ├── test_parser.py
+    ├── test_renderer.py
+    ├── test_cli.py
+    └── fixtures/
+        └── sample_openspec/  # Test OpenSpec outputs
+```
+
+---
+
+## 4. Implementation Plan
+
+### 4.1 Sprint 117 Tasks (Feb 24-28, 2026)
+
+| Day | Task | Deliverable | Owner |
+|-----|------|-------------|-------|
+| 1 | Parser: PROPOSAL.md | `proposal_parser.py` | Backend |
+| 1 | Parser: DESIGN_DECISIONS.md | `decisions_parser.py` | Backend |
+| 2 | Parser: TASKS.md + SPEC_DELTA.md | `tasks_parser.py`, `delta_parser.py` | Backend |
+| 2 | Parser: Integration | `openspec_parser.py` | Backend |
+| 3 | Renderer: Templates | `templates/*.j2` | Backend |
+| 3 | Renderer: Core logic | `sdlc6_renderer.py` | Backend |
+| 4 | CLI: Implementation | `cli.py` | Backend |
+| 4 | Validator: Integration | Connect to existing | Backend |
+| 5 | Testing: Unit + Integration | `tests/*` | QA |
+| 5 | Documentation | README, examples | PM |
+
+### 4.2 Effort Estimation
+
+| Component | Effort | Complexity |
+|-----------|--------|------------|
+| Parser Layer | 2 days | Medium |
+| Renderer Layer | 1.5 days | Medium |
+| CLI Interface | 0.5 days | Low |
+| Validator Integration | 0.5 days | Low |
+| Testing | 0.5 days | Low |
+| **Total** | **5 days** | **Medium** |
+
+---
+
+## 5. Acceptance Criteria
+
+| ID | Criterion | Priority | Verification |
+|----|-----------|----------|--------------|
+| AC-001 | Parser extracts all 4 OpenSpec files | P0 | Unit test |
+| AC-002 | Renderer produces valid YAML frontmatter | P0 | Schema validation |
+| AC-003 | BDD requirements use GIVEN-WHEN-THEN | P0 | Regex validation |
+| AC-004 | CLI returns exit code 0 on success | P0 | E2E test |
+| AC-005 | CLI returns exit code 1 on validation failure | P0 | E2E test |
+| AC-006 | Batch mode processes 10+ directories | P2 | Integration test |
+| AC-007 | Dry-run mode produces no file output | P1 | E2E test |
+| AC-008 | Tier flag correctly applies tier requirements | P1 | Unit test |
+| AC-009 | Output passes `sdlcctl spec validate` | P0 | Integration test |
+| AC-010 | Conversion completes in <5s per spec | P1 | Performance test |
+
+---
+
+## 6. Error Handling
+
+### 6.1 Parser Errors
+
+| Error | Cause | Recovery |
+|-------|-------|----------|
+| `MissingFileError` | Required file not found | Log error, skip in batch |
+| `InvalidFormatError` | Markdown parsing failed | Show line number, abort |
+| `EncodingError` | Non-UTF8 file | Attempt with fallback encoding |
+
+### 6.2 Renderer Errors
+
+| Error | Cause | Recovery |
+|-------|-------|----------|
+| `TemplateError` | Jinja2 template failure | Show template name, abort |
+| `ValidationError` | Output fails validation | Show validation errors, abort |
+| `IOError` | Cannot write output file | Show path, abort |
+
+### 6.3 CLI Error Codes
+
+| Code | Meaning |
+|------|---------|
+| 0 | Success |
+| 1 | Validation failed |
+| 2 | Parser error |
+| 3 | Renderer error |
+| 4 | IO error |
+| 5 | Unknown error |
+
+---
+
+## 7. Security Considerations
+
+### 7.1 Input Validation
+
+```python
+# Prevent path traversal
+def validate_path(path: str) -> Path:
+    resolved = Path(path).resolve()
+    if ".." in path or not resolved.is_relative_to(Path.cwd()):
+        raise SecurityError("Path traversal detected")
+    return resolved
+```
+
+### 7.2 Output Sanitization
+
+- Escape special characters in rendered markdown
+- Validate YAML frontmatter against schema
+- Sanitize user-provided content (title, description)
+
+---
+
+## 8. Testing Strategy
+
+### 8.1 Unit Tests
+
+```python
+# test_parser.py
+def test_parse_proposal_extracts_title():
+    """PROPOSAL.md H1 becomes title"""
+    content = "# Add OAuth Authentication\n\nDescription here."
+    result = ProposalParser().parse(content)
+    assert result["title"] == "Add OAuth Authentication"
+
+def test_parse_design_decisions_extracts_all():
+    """All DD-XXX entries are extracted"""
+    content = "## DD-001: Use JWT\n...\n## DD-002: Use Redis\n..."
+    result = DecisionsParser().parse(content)
+    assert len(result) == 2
+```
+
+### 8.2 Integration Tests
+
+```python
+# test_integration.py
+def test_full_conversion_produces_valid_spec():
+    """End-to-end conversion produces valid SDLC 6.0 spec"""
+    result = subprocess.run([
+        "sdlcctl", "spec", "convert",
+        "tests/fixtures/sample_openspec/",
+        "--validate"
+    ])
+    assert result.returncode == 0
+```
+
+### 8.3 E2E Tests
+
+```python
+# test_e2e.py
+def test_cli_dry_run_no_file_created():
+    """--dry-run flag prevents file creation"""
+    result = subprocess.run([
+        "sdlcctl", "spec", "convert",
+        "tests/fixtures/sample_openspec/",
+        "--dry-run",
+        "-o", "/tmp/should_not_exist.md"
+    ])
+    assert not Path("/tmp/should_not_exist.md").exists()
+```
+
+---
+
+## 9. Dependencies
+
+### 9.1 Python Packages
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| click | >=8.0 | CLI framework |
+| jinja2 | >=3.0 | Template rendering |
+| pyyaml | >=6.0 | YAML parsing/generation |
+| markdown-it-py | >=3.0 | Markdown parsing |
+
+### 9.2 Internal Dependencies
+
+| Module | Purpose |
+|--------|---------|
+| `spec_validator` | Existing validation logic |
+| `spec_id_generator` | Auto-increment SPEC-NNNN |
+
+---
+
+## 10. Rollback Plan
+
+If conversion layer causes issues:
+
+1. **Immediate**: Disable `spec convert` command (feature flag)
+2. **Short-term**: Revert to manual spec creation
+3. **Long-term**: Fix issues, re-enable with improved validation
+
+---
+
+## 11. Success Metrics
+
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Conversion success rate | >95% | Logs |
+| Conversion time | <5s per spec | Benchmark |
+| Validation pass rate | 100% | CI/CD |
+| User adoption | 5+ team members | Usage analytics |
+
+---
+
+## 12. Approval
+
+| Role | Status | Date |
+|------|--------|------|
+| PM/PJM | ✅ Created | Jan 28, 2026 |
+| Tech Lead | ⏳ Pending | - |
+| CTO | ⏳ Pending | - |
+
+---
+
+## 13. Appendix: Sample Conversion
+
+### Input: OpenSpec PROPOSAL.md
+
+```markdown
+# Add User Authentication with OAuth
+
+## Summary
+Implement OAuth 2.0 authentication flow using GitHub as the identity provider.
+
+## Motivation
+Users need secure, passwordless authentication.
+
+## Design
+
+### Approach
+Use GitHub OAuth with JWT tokens for session management.
+
+### Components
+1. OAuth callback handler
+2. JWT token service
+3. Session middleware
+```
+
+### Output: SDLC 6.0 SPEC-0042.md
+
+```yaml
+---
+spec_id: SPEC-0042
+spec_name: Add User Authentication with OAuth
+spec_version: 1.0.0
+status: draft
+tier: STANDARD
+stage: "02"
+category: functional
+owner: developer@example.com
+created: 2026-01-28
+last_updated: 2026-01-28
+related_adrs: []
+related_specs: []
+---
+
+# Add User Authentication with OAuth
+
+## 1. Overview
+
+Implement OAuth 2.0 authentication flow using GitHub as the identity provider.
+
+## 2. Context
+
+### 2.1 Problem Statement
+
+Users need secure, passwordless authentication.
+
+### 2.2 Stakeholders
+
+- **Primary**: End Users
+- **Secondary**: Security Team
+
+## 3. Requirements
+
+### 3.1 Functional Requirements
+
+#### FR-001: OAuth Callback Handler
+
+**Priority**: P0
+**Tier**: STANDARD
+
+```gherkin
+GIVEN a user who clicks "Login with GitHub"
+WHEN GitHub redirects back with an authorization code
+THEN the callback handler exchanges the code for an access token
+  AND retrieves user profile from GitHub API
+  AND creates or updates the user record
+```
+
+...
+```
+
+---
+
+*Conversion Layer Technical Specification v1.0.0*
+*SDLC Enterprise Framework 6.0*
+*Sprint 117 Preparation - CEO APPROVED EXTEND Workflow*

@@ -1,8 +1,8 @@
-# SDLC Framework 5.3.0 Content Map
+# SDLC Framework 6.0.0 Content Map
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Status**: ACTIVE
-**Date**: January 27, 2026
+**Date**: January 28, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
 
 ---
@@ -22,9 +22,9 @@ Before creating any new document, check if a canonical file already exists for t
 |-------|---------------|----------------|--------|
 | AI-Human Collaboration | `03-AI-GOVERNANCE/01-AI-Human-Collaboration.md` | — | ACTIVE |
 | Agent Accountability | `03-AI-GOVERNANCE/02-Agent-Accountability.md` | — | ACTIVE |
-| Planning Mode Principle | `03-AI-GOVERNANCE/03-Planning-Mode-Principle.md` | `1-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md` | ACTIVE |
+| Planning Mode Principle | `03-AI-GOVERNANCE/03-Planning-Mode-Principle.md` | `02-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md` | ACTIVE |
 | Verification Principle | `03-AI-GOVERNANCE/04-Verification-Principle.md` | — | ACTIVE |
-| Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `1-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md` | ACTIVE |
+| Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `02-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md` | ACTIVE |
 | Tool Evaluation Criteria | `03-AI-GOVERNANCE/06-Tool-Evaluation-Criteria.md` | — | ACTIVE |
 | AI Anti-Patterns | `03-AI-GOVERNANCE/07-Anti-Patterns.md` | — | ACTIVE |
 
@@ -43,26 +43,42 @@ Before creating any new document, check if a canonical file already exists for t
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
 
-### Templates (05-Templates-Tools/SASE-Artifacts/)
+### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| AGENTS.md Template | `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` | — | ACTIVE |
-| CRP (Consultation Request) | `05-Templates-Tools/SASE-Artifacts/01-CRP-Template.md` | Renamed from 04-CRP | ACTIVE |
-| MRP (Merge-Readiness Pack) | `05-Templates-Tools/SASE-Artifacts/02-MRP-Template.md` | Renamed from 05-MRP | ACTIVE |
-| VCR (Version Controlled Resolution) | `05-Templates-Tools/SASE-Artifacts/03-VCR-Template.md` | Renamed from 06-VCR | ACTIVE |
-| BriefingScript (BRS) | — | `05-Templates-Tools/SASE-Artifacts/01-BriefingScript-Template.yaml` | DEPRECATED |
-| LoopScript (LPS) | — | `05-Templates-Tools/SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
-| MentorScript (MTS) | — | `05-Templates-Tools/SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
+| AGENTS.md Template | `05-Templates-Tools/04-SASE-Artifacts/AGENTS-MD-Template.md` | — | ACTIVE |
+| CRP (Consultation Request) | `05-Templates-Tools/04-SASE-Artifacts/01-CRP-Template.md` | Renamed from 04-CRP | ACTIVE |
+| MRP (Merge-Readiness Pack) | `05-Templates-Tools/04-SASE-Artifacts/02-MRP-Template.md` | Renamed from 05-MRP | ACTIVE |
+| VCR (Version Controlled Resolution) | `05-Templates-Tools/04-SASE-Artifacts/03-VCR-Template.md` | Renamed from 06-VCR | ACTIVE |
+| BriefingScript (BRS) | — | `05-Templates-Tools/04-SASE-Artifacts/01-BriefingScript-Template.yaml` | DEPRECATED |
+| LoopScript (LPS) | — | `05-Templates-Tools/04-SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
+| MentorScript (MTS) | — | `05-Templates-Tools/04-SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
+
+### Framework 6.0 Templates (05-Templates-Tools/01-Specification-Standard/) - NEW in 6.0.0
+
+| Topic | Canonical File | Purpose | Status |
+|-------|---------------|---------|--------|
+| **Unified Specification Standard** | `05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md` | YAML frontmatter + BDD format | **NEW 6.0.0** |
+| **Design Decisions Template** | `05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md` | Lightweight ADR for sprint decisions | **NEW 6.0.0** |
+| **Spec Delta Template** | `05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md` | Version change tracking | **NEW 6.0.0** |
+| **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.0** |
+| OpenSpec Analysis | `99-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
+| Migration Plan (20 Specs) | `99-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
+| Conversion Layer Spec | `99-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
+| Week 8 Gate Decision Brief | `99-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
+| Week 8 Gate Comparison Matrix | `99-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
+
+> **Note**: Framework 6.0 introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
 
 ### AI Agent Best Practices (04-AI-TOOLS-LANDSCAPE/best-practices-2026/) - MOVED
 
-> **MOVED in 5.2.0**: Best practices moved from `05-Templates-Tools/1-AI-Tools/` to `04-AI-TOOLS-LANDSCAPE/`
+> **MOVED in 5.2.0**: Best practices moved from `05-Templates-Tools/02-AI-Tools/` to `04-AI-TOOLS-LANDSCAPE/`
 > **Reason**: Concentric Circles separation - best practices are strategic intel, not templates
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| AI Best Practices Index | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md` | `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/` | ACTIVE |
+| AI Best Practices Index | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md` | `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | ACTIVE |
 | Planning Mode (Tool Guide) | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md` | — | ACTIVE |
 | Model Selection | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
 | Sub-agent Orchestration | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE |
@@ -75,7 +91,7 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| Code Review Framework | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `1-AI-Tools/code-review/` (partial) | ACTIVE |
+| Code Review Framework | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `02-AI-Tools/code-review/` (partial) | ACTIVE |
 | Implementation Guide | `07-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
 
 ### AI Tools Landscape (04-AI-TOOLS-LANDSCAPE/) - NEW
@@ -97,11 +113,11 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Topic | Archive Location | Original Location | Status |
 |-------|-----------------|-------------------|--------|
-| Claude Code Templates | `99-Legacy/tool-guides-2026/claude-code/` | `2-Agent-Templates/claude-code/` | ARCHIVED |
-| Cursor Templates | `99-Legacy/tool-guides-2026/cursor/` | `2-Agent-Templates/cursor/` | ARCHIVED |
-| Copilot Templates | `99-Legacy/tool-guides-2026/copilot/` | `2-Agent-Templates/copilot/` | ARCHIVED |
-| ChatGPT Templates | `99-Legacy/tool-guides-2026/chatgpt/` | `2-Agent-Templates/chatgpt/` | ARCHIVED |
-| Gemini Templates | `99-Legacy/tool-guides-2026/gemini/` | `2-Agent-Templates/gemini/` | ARCHIVED |
+| Claude Code Templates | `99-Legacy/tool-guides-2026/claude-code/` | `03-Agent-Templates/claude-code/` | ARCHIVED |
+| Cursor Templates | `99-Legacy/tool-guides-2026/cursor/` | `03-Agent-Templates/cursor/` | ARCHIVED |
+| Copilot Templates | `99-Legacy/tool-guides-2026/copilot/` | `03-Agent-Templates/copilot/` | ARCHIVED |
+| ChatGPT Templates | `99-Legacy/tool-guides-2026/chatgpt/` | `03-Agent-Templates/chatgpt/` | ARCHIVED |
+| Gemini Templates | `99-Legacy/tool-guides-2026/gemini/` | `03-Agent-Templates/gemini/` | ARCHIVED |
 
 ### Deployment Guides (99-Legacy/deployment-guides-5.1.3/)
 
@@ -111,7 +127,7 @@ Before creating any new document, check if a canonical file already exists for t
 | AI Platform Deployment | `99-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
 
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
-> For 5.2.0 deployments, adapt the governance docs from 02-Core-Methodology/.
+> For 6.0.0 deployments, adapt the governance docs from 02-Core-Methodology/.
 
 ---
 
@@ -119,12 +135,12 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Original Location | New/Archive Location | Created | Expires |
 |-------------------|----------------------|---------|---------|
-| `05-Templates-Tools/1-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/claude-code/` | `99-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/cursor/` | `99-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/copilot/` | `99-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/chatgpt/` | `99-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
-| `2-Agent-Templates/gemini/` | `99-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
+| `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/claude-code/` | `99-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/cursor/` | `99-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/copilot/` | `99-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/chatgpt/` | `99-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/gemini/` | `99-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
 
 ---
 

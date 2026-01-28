@@ -4,8 +4,8 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define maturity levels for adopting agentic practices in software development
-**Framework:** SDLC 5.3.0 (8-Pillar Architecture + Quality Assurance System)
-**Version:** 5.3.0
+**Framework:** SDLC 6.0.0 (7-Pillar + 2-Section Architecture)
+**Version:** 6.0.0
 **Date:** January 27, 2026
 **Status:** ACTIVE - PRODUCTION READY
 
