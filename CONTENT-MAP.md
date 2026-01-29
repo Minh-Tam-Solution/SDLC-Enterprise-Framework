@@ -2,7 +2,7 @@
 
 **Version**: 6.0.0
 **Status**: ACTIVE
-**Date**: January 28, 2026
+**Date**: January 29, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
 
 ---
@@ -14,7 +14,53 @@ Before creating any new document, check if a canonical file already exists for t
 
 ---
 
+## 3-Ring Architecture (Concentric Circles)
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│                                                                    │
+│  RING 1: CORE (01-03) - Timeless Methodology                     │
+│  ├── 01-Overview/ - Framework introduction                        │
+│  ├── 02-Core-Methodology/ - 10-Stage lifecycle, governance       │
+│  │   └── Governance-Compliance/*.yaml - Machine-readable specs   │
+│  └── 03-AI-GOVERNANCE/ - 7 AI principles                         │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────┤
+│                                                                    │
+│  RING 2: GOVERNANCE (04-05) - Stable Rules & Templates           │
+│  ├── 04-AI-TOOLS-LANDSCAPE/ - Tool profiles, best practices      │
+│  └── 05-Templates-Tools/ - Specifications, SASE artifacts        │
+│      └── 01-Specification-Standard/*.json - JSON Schema          │
+│                                                                    │
+├────────────────────────────────────────────────────────────────────┤
+│                                                                    │
+│  RING 3: OUTER (06-09) - Implementation & Training               │
+│  ├── 06-Case-Studies/ - Real-world examples                      │
+│  ├── 07-Implementation-Guides/ - How-to guides                   │
+│  ├── 08-Training-Materials/ - Onboarding, workshops              │
+│  └── 09-Continuous-Improvement/ - Feedback, iteration            │
+│                                                                    │
+└────────────────────────────────────────────────────────────────────┘
+│  99-Legacy/ - Archived and deprecated content                     │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
 ## Topic → Canonical File Mapping
+
+### Machine-Readable Governance (Ring 1 + Ring 2)
+
+| Topic | Canonical File | Purpose | Status |
+|-------|---------------|---------|--------|
+| **Schema Versioning** | `02-Core-Methodology/SDLC-Schema-Versioning.md` | Schema versioning strategy | **ACTIVE** |
+| **Anti-Vibecoding Controls** | `02-Core-Methodology/Governance-Compliance/anti-vibecoding.yaml` | Quality control definitions | **ACTIVE** |
+| **Quality Gates YAML** | `02-Core-Methodology/Governance-Compliance/gates.yaml` | G0-G4 gate requirements | **ACTIVE** |
+| **Spec Frontmatter Schema** | `05-Templates-Tools/01-Specification-Standard/spec-frontmatter-schema.json` | YAML frontmatter validation | **ACTIVE** |
+
+> **Note**: Machine-readable specs are distributed across rings based on their purpose:
+> - Ring 1: Core governance rules (controls, gates, versioning)
+> - Ring 2: Template validation schemas
 
 ### Core Principles (03-AI-GOVERNANCE/)
 
@@ -42,6 +88,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Team Collaboration | `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
+| **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.0** |
 
 ### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 
@@ -129,12 +176,26 @@ Before creating any new document, check if a canonical file already exists for t
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
 > For 6.0.0 deployments, adapt the governance docs from 02-Core-Methodology/.
 
+### Sprint 117 POC Documents (99-Legacy/Sprint-117-POC/)
+
+| Topic | Archive Location | Purpose | Status |
+|-------|-----------------|---------|--------|
+| Spec-First POC Validation | `99-Legacy/Sprint-117-POC/SPEC-FIRST-POC-VALIDATION.md` | POC validation report (working doc) | ARCHIVED |
+
+> **Note**: Working documents and drafts are archived here after sprint completion.
+
 ---
 
 ## Active Redirect Stubs
 
 | Original Location | New/Archive Location | Created | Expires |
 |-------------------|----------------------|---------|---------|
+| `spec/controls/anti-vibecoding.yaml` | `02-Core-Methodology/Governance-Compliance/anti-vibecoding.yaml` | Jan 29, 2026 | Jul 2026 |
+| `spec/gates/gates.yaml` | `02-Core-Methodology/Governance-Compliance/gates.yaml` | Jan 29, 2026 | Jul 2026 |
+| `spec/evidence/spec-frontmatter-schema.json` | `05-Templates-Tools/01-Specification-Standard/spec-frontmatter-schema.json` | Jan 29, 2026 | Jul 2026 |
+| `spec/VERSIONING.md` | `02-Core-Methodology/SDLC-Schema-Versioning.md` | Jan 29, 2026 | Jul 2026 |
+| `docs/SPEC-FIRST-POC-VALIDATION.md` | `99-Legacy/Sprint-117-POC/` | Jan 29, 2026 | Jul 2026 |
+| `docs/02-design/01-ADRs/SPEC-0011-*.md` | `05-Templates-Tools/01-Specification-Standard/SPEC-0011-*.md` | Jan 29, 2026 | Jul 2026 |
 | `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/claude-code/` | `99-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/cursor/` | `99-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
@@ -190,4 +251,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: January 27, 2026
+**Last Updated**: January 29, 2026

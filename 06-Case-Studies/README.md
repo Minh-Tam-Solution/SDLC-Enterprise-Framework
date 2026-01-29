@@ -487,10 +487,10 @@ SDLC 5.0.0 (December 2025): ⭐ CURRENT
 
 ---
 
-**Last Updated**: January 22, 2026
+**Last Updated**: January 29, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework Version**: SDLC 5.2.0
+**Framework Version**: SDLC 6.0.0
 
 ---
 

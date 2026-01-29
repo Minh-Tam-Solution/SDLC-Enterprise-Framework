@@ -31,31 +31,35 @@ Legacy/Archive Structure:
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated or upgraded
 
-ENHANCED FEATURES (5.2.0):
-- SASE Framework validation (6 artifacts: BRS, LPS, MTS, CRP, MRP, VCR)
-- SE4H (Agent Coach) + SE4A (Agent Executor) workflow support
+ENHANCED FEATURES (6.0.0):
+- SASE Framework validation (4 artifacts: AGENTS.md, CRP, MRP, VCR)
+- AI Collaboration workflow support (AGENTS.md industry standard)
 - Agentic Maturity Model (L0 → L3) detection
 - Design Thinking methodology validation (Pillar 0)
 - Universal Code Review Framework detection (3-tier)
 - Zero Mock Policy enforcement (679 mocks → 0 proven)
 - Vietnamese Cultural Intelligence validation (96.4% accuracy)
-- 6-pillar architecture validation (complete)
+- 7-pillar architecture validation (complete)
 - Universal project scale support (solo to enterprise)
 - Implementation authenticity verification
 - Backward compatibility with existing workflows
 
-SASE Framework (NEW in 5.2.0):
-- SE4H (Agent Coach): Human creates BRS, MTS, VCR
-- SE4A (Agent Executor): AI creates LPS, CRP, MRP
-- Workflow: BRS → LPS → [work] → CRP (if stuck) → MRP → VCR
+SASE Framework (Simplified in 6.0.0):
+- AGENTS.md: Dynamic context for AI collaboration (industry standard)
+- CRP (Consultation-Readiness Proof): Human-AI consultation evidence
+- MRP (Merge-Readiness Proof): Merge readiness documentation
+- VCR (Version Controlled Resolution): Resolution evidence
+- Deprecated: BRS, LPS, MTS (replaced by AGENTS.md)
 
 USAGE:
 This script provides backward compatibility for existing workflows that use sdlc_scanner.py
-while leveraging the SDLC 5.1 Validator for actual validation logic.
+while leveraging the SDLC 6.0 Validator for actual validation logic.
 
 For new implementations, use sdlc_validator.py directly.
 
 EVOLUTION HISTORY:
+- 6.0.0: AI Governance Principles, Concentric Circles Model
+- 6.0.0: SASE simplified (AGENTS.md + CRP + MRP + VCR), deprecated BRS/LPS/MTS
 - 5.2.0: Correct stage numbering + Legacy/Archive folder skip
 - 5.2.0: SASE Framework + SE 3.0 Integration
 - 5.2.0: Zero Mock Policy + Complete Lifecycle (10 Stages)
@@ -135,7 +139,7 @@ def run_universal_validator(project_path: str, project_scale: Optional[str] = No
             "scan_result": {
                 "project_path": project_path,
                 "scan_timestamp": datetime.now().isoformat(),
-                "sdlc_version": "5.2.0",
+                "sdlc_version": "6.0.0",
                 "framework_scale": project_scale_detected,
                 "facade_violations_count": facade_violations,
                 "authenticity_score": authenticity_score,

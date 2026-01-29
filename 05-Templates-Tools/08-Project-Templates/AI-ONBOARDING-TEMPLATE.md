@@ -1,6 +1,6 @@
 # AI Onboarding Template (CLAUDE.md)
 
-**Version**: 5.2.0
+**Version**: 6.0.0
 **Date**: January 22, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 6 - Documentation Permanence (AI Context)

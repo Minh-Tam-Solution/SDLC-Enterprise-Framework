@@ -46,11 +46,13 @@ Legacy/Archive Structure (SDLC 6.0.0+):
 - Pillar 5: SASE Integration
 - Pillar 6: Documentation Permanence
 
-SASE Framework (NEW in 5.1.0):
-- SE4H (Agent Coach): Human creates BRS, MTS, VCR
-- SE4A (Agent Executor): AI creates LPS, CRP, MRP
-- 6 SASE Artifacts: BRS, LPS, MTS, CRP, MRP, VCR
+SASE Framework (Simplified in 6.0.0):
+- AGENTS.md: Dynamic context for AI collaboration (industry standard)
+- CRP (Consultation-Readiness Proof): Human-AI consultation evidence
+- MRP (Merge-Readiness Proof): Merge readiness documentation
+- VCR (Version Controlled Resolution): Resolution evidence
 - Agentic Maturity: L0 (Tool-Assisted) → L3 (Lifecycle Agentic)
+- Deprecated: BRS, LPS, MTS (replaced by AGENTS.md)
 
 4-Tier Classification:
 - LITE: 1-2 people, basic documentation
@@ -89,7 +91,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 import re
 
-class SDLC51Validator:
+class SDLC60Validator:
     """SDLC 6.0.0 Complete 7-Pillar + SASE Framework + Team Collaboration Validator
 
     7-Pillar Architecture (SDLC 6.0.0):
@@ -606,7 +608,7 @@ class SDLC51Validator:
         if sase_score >= 20:
             pillar["details"].append("✅ SASE Artifacts found (5.1.0 SE 3.0)")
         elif sase_score > 0:
-            pillar["details"].append("⚠️  Partial SASE Artifacts (check BRS, LPS, MRP, VCR)")
+            pillar["details"].append("⚠️  Partial SASE Artifacts (check AGENTS.md, CRP, MRP, VCR)")
         else:
             pillar["details"].append("⚠️  SASE Artifacts not found (5.1.0)")
 
@@ -718,28 +720,32 @@ class SDLC51Validator:
 
     def check_sase_artifacts(self) -> int:
         """
-        Check for SASE Artifacts (SDLC 6.0.0 SASE Integration)
+        Check for SASE Artifacts (SDLC 6.0.0 - Simplified)
         Returns score 0-30 based on presence of SASE artifacts
 
-        SASE 6 Artifacts:
-        - BRS (BriefingScript): Human creates task specification
-        - LPS (LoopScript): Agent creates execution plan
-        - MTS (MentorScript): Human creates coding standards
-        - CRP (Consultation Request): Agent requests help when uncertain
-        - MRP (Merge-Readiness Pack): Agent creates 5-point evidence
-        - VCR (Version Controlled Resolution): Human approves work
+        SASE 4 Artifacts (SDLC 6.0.0):
+        - AGENTS.md: Dynamic context for AI collaboration (industry standard)
+        - CRP (Consultation-Readiness Proof): Human-AI consultation evidence
+        - MRP (Merge-Readiness Proof): Merge readiness documentation
+        - VCR (Version Controlled Resolution): Resolution evidence
+
+        Deprecated (replaced by AGENTS.md):
+        - BRS (BriefingScript), LPS (LoopScript), MTS (MentorScript)
         """
         score = 0
 
-        # SASE Artifact patterns to look for
+        # SASE Artifact patterns to look for (6.0.0 simplified)
         sase_patterns = [
-            "BriefingScript", "BRS",
-            "LoopScript", "LPS",
-            "MentorScript", "MTS",
-            "CRP", "Consultation-Request",
+            # Primary 6.0.0 artifacts
+            "AGENTS.md", "AGENTS",
+            "CRP", "Consultation-Readiness",
             "MRP", "Merge-Readiness",
             "VCR", "Version-Controlled-Resolution",
-            "SASE-Artifacts", "sase-artifacts"
+            "SASE-Artifacts", "sase-artifacts",
+            # Also accept legacy artifacts (backward compatible)
+            "BriefingScript", "BRS",
+            "LoopScript", "LPS",
+            "MentorScript", "MTS"
         ]
 
         found_patterns = []
@@ -889,7 +895,7 @@ class SDLC51Validator:
             print("⚠️  PROJECT NEEDS IMPROVEMENT")
             print("💡 Address failed pillars before production deployment")
             print("💡 Check Sprint Planning Governance (Pillar 2)")
-            print("💡 Check SASE Artifacts (BRS, LPS, MRP, VCR)")
+            print("💡 Check SASE Artifacts (AGENTS.md, CRP, MRP, VCR)")
             print("💡 See: SDLC-Enterprise-Framework/05-Templates-Tools/")
             print("💡 Note: Legacy/Archive folders (99-legacy, 10-archive) are excluded")
 
@@ -907,7 +913,7 @@ def main():
         print(f"❌ Error: Path does not exist: {project_path}")
         sys.exit(1)
 
-    validator = SDLC51Validator(project_path)
+    validator = SDLC60Validator(project_path)
     results = validator.validate_all_pillars()
 
     # Exit with appropriate code

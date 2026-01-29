@@ -1,20 +1,21 @@
-# SDLC 5.2.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
+# SDLC 6.0.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
 
-**Version**: 5.2.0
+**Version**: 6.0.0
 **Date**: January 22, 2026
 **Time Required**: 2 days solo, 1 week for teams
 **Result**: 10x-50x productivity + 3x feature adoption + 14,822% ROI
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
-**What's New in 5.2.0**: Planning Mode + AI Best Practices + 7-Pillar Architecture
+**What's New in 6.0.0**: 7-Pillar Architecture + Section 7 Quality Assurance System + AI Governance Principles
 
-**SDLC 5.1.3 Features**:
+**SDLC 6.0.0 Features**:
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
 - ✅ 7 Pillars: Design Thinking + Sprint Planning Governance + 5 core pillars
+- ✅ Section 7: Quality Assurance System (Anti-Vibecoding, Kill Switch)
 - ✅ Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
 - ✅ 4-Tier Classification: LITE, STANDARD, PROFESSIONAL, ENTERPRISE
-- ✅ Governance & Compliance: Quality Gates, Security Gates, Observability, Change Management
-- ✅ Team Collaboration Standards: RACI, Communication Protocol, Escalation
+- ✅ AI Governance Principles (7 principles for AI-Human collaboration)
+- ✅ SASE Simplified: AGENTS.md + CRP + MRP + VCR (deprecated BRS/LPS/MTS)
 - ✅ Code File Naming Standards (Python: snake_case, TypeScript: camelCase, React: PascalCase)
 - ✅ Universal Code Review (3 tiers)
 
@@ -30,13 +31,13 @@
 3. [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - 25 min
 
 **Key Takeaways**:
-- ✅ SDLC 5.1.3 = Complete 10-Stage Lifecycle (WHY → GOVERN) + 7-Pillar Architecture
+- ✅ SDLC 6.0.0 = Complete 10-Stage Lifecycle (WHY → GOVERN) + 7-Pillar + Section 7
 - ✅ 7 Pillars: Design Thinking + Sprint Planning Governance + 5 core pillars
-- ✅ Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
+- ✅ Section 7: Quality Assurance System (Anti-Vibecoding measures)
 - ✅ 4-Tier Classification: LITE (1-2) → STANDARD (3-10) → PROFESSIONAL (10-50) → ENTERPRISE (50+)
 - ✅ 3x higher feature adoption through user validation
 - ✅ 14,822% ROI proven (BFlow 52-day journey)
-- ✅ Code File Naming Standards for consistency
+- ✅ SASE Simplified: AGENTS.md + CRP + MRP + VCR
 
 ---
 
@@ -58,7 +59,7 @@ pip install pre-commit
 # Install from VS Code/Cursor marketplace
 ```
 
-**Configure for SDLC 5.1.3** (30 min):
+**Configure for SDLC 6.0.0** (30 min):
 ```bash
 # Create project structure
 mkdir my-project && cd my-project
@@ -214,7 +215,7 @@ Users validated: [feedback from Phase 5 TEST]
 Requirements:
 - Language: [Python/TypeScript/etc]
 - Framework: [FastAPI/React/etc]
-- SDLC 5.0.0 compliant:
+- SDLC 6.0.0 compliant:
   * Zero Mock Policy (real database only)
   * 80%+ test coverage
   * <50ms response time (p50)
@@ -256,7 +257,7 @@ Time: 20-30 min self-review
 **Tier 2 (Subscription - RECOMMENDED)**: AI-assisted review
 ```yaml
 1. Setup .cursorrules (10 min):
-   - Copy SDLC 5.0 rules from guide
+   - Copy SDLC 6.0.0 rules from guide
    - Cursor Pro analyzes in real-time
 
 2. Create PR and use Claude Max (5 min):
@@ -296,7 +297,7 @@ black . --check
 
 # Commit and deploy
 git add .
-git commit -m "feat: [feature name] - validated via Design Thinking (SDLC 5.0.0)"
+git commit -m "feat: [feature name] - validated via Design Thinking (SDLC 6.0.0)"
 git push
 
 # Deploy (your process)
@@ -326,7 +327,7 @@ Setup: Google Analytics, Mixpanel, or simple database query
 ```
 
 **Day 1 Checklist**:
-- [ ] Read SDLC 5.0 docs (3 key documents)
+- [ ] Read SDLC 6.0.0 docs (3 key documents)
 - [ ] AI tools installed and configured
 - [ ] Design Thinking completed (5 phases in 2 hours)
 - [ ] Feature concept validated by users
@@ -608,7 +609,7 @@ Prototype:
   "Build a working prototype in [language] that demonstrates [concept]"
 
 Code Review:
-  "Review this PR against SDLC 5.0.0 standards and provide detailed feedback"
+  "Review this PR against SDLC 6.0.0 standards and provide detailed feedback"
 
 File Naming Check:
   "Verify file naming: Python=snake_case, TypeScript=camelCase, React=PascalCase"
@@ -649,21 +650,21 @@ You can confidently:
 3. ✅ Review code in <5 minutes (Tier 2) or <30 minutes (Tier 1)
 4. ✅ Ship with confidence (zero critical bugs)
 5. ✅ Calculate and present ROI to stakeholders
-6. ✅ Train others on SDLC 5.0 framework
+6. ✅ Train others on SDLC 6.0.0 framework
 
-**Congratulations! You've mastered SDLC 5.0 Quick Start.** 🎉
+**Congratulations! You've mastered SDLC 6.0.0 Quick Start.** 🎉
 
 **Next**: Scale to team, prove ROI, share success, continuous improvement.
 
 ---
 
-**Document Version**: 5.2.0
-**Last Updated**: January 22, 2026
+**Document Version**: 6.0.0
+**Last Updated**: January 29, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**What's New**: Planning Mode + AI Best Practices + 7-Pillar Architecture
-**Framework**: SDLC 5.2.0
+**What's New**: 7-Pillar + Section 7 Quality Assurance System + AI Governance Principles
+**Framework**: SDLC 6.0.0
 
 ---
 
-**🏆 SDLC 5.2.0 Quick Start**
-*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with Planning Mode + AI Best Practices*
+**🏆 SDLC 6.0.0 Quick Start**
+*From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with 7-Pillar + AI Governance*

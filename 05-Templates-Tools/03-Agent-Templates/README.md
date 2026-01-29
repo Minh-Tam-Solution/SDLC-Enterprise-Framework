@@ -1,15 +1,15 @@
 # 03-Agent-Templates - AI Assistant Configurations
 
 **Version**: 6.0.0
-**Date**: January 28, 2026
-**Status**: ACTIVE - Flattened Structure
+**Date**: January 29, 2026
+**Status**: ACTIVE - Placeholder for Sprint 120+
 **Structure**: SDLC 6.0.0 (2-level maximum)
 
 ---
 
 ## Overview
 
-Cross-platform AI agent templates for SDLC 6.0.0 compliance. Tool-specific content has been archived to `99-Legacy/tool-guides-2026/`.
+Cross-platform AI agent templates for SDLC 6.0.0 compliance. This folder serves as the primary location for AI assistant configuration templates.
 
 ---
 
@@ -18,9 +18,20 @@ Cross-platform AI agent templates for SDLC 6.0.0 compliance. Tool-specific conte
 | Document | Purpose | Status |
 |----------|---------|--------|
 | **CLAUDE.md.template** | Generic context file template for any AI tool | ACTIVE |
-| **AI-TOOLS-COORDINATION-BEST-PRACTICES.md** | Multi-agent coordination patterns | ACTIVE |
 
-> **SDLC 6.0.0**: These files were previously in `universal/` subfolder. Folder flattened for 2-level maximum structure.
+---
+
+## Future Content (Sprint 120-122)
+
+This folder will expand with **Context Authority V2** implementation:
+
+| Planned Content | Sprint | Purpose |
+|-----------------|--------|---------|
+| Dynamic AGENTS.md overlay | 120 | Gate-aware context injection |
+| Agent persona templates | 121 | Architect, Debugger, Optimizer |
+| Multi-agent coordination | 122 | Cross-agent communication patterns |
+
+**Reference**: See [SPEC-0007](../01-Specification-Standard/SPEC-0007-AGENTS-MD-Technical-Design.md) for Context Authority roadmap.
 
 ---
 
@@ -36,6 +47,8 @@ Tool-specific templates have been archived to:
 | ChatGPT | `99-Legacy/tool-guides-2026/chatgpt/` |
 | Gemini | `99-Legacy/tool-guides-2026/gemini/` |
 
+> **Note**: Tool-specific templates archived per SDLC 6.0.0 principle - Framework provides universal patterns, not tool-specific configs.
+
 ---
 
 ## Related Documents
@@ -44,10 +57,10 @@ For current AI governance guidance:
 
 1. **[03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/)** - 7 timeless principles for AI-Human collaboration
 2. **[04-AI-TOOLS-LANDSCAPE/](../../04-AI-TOOLS-LANDSCAPE/)** - Tool profiles and best practices 2026
-3. **[04-SASE-Artifacts/AGENTS-MD-Template.md](../04-SASE-Artifacts/AGENTS-MD-Template.md)** - Industry-standard AGENTS.md
+3. **[04-SASE-Artifacts/AGENTS-MD-Template.md](../04-SASE-Artifacts/AGENTS-MD-Template.md)** - Industry-standard AGENTS.md (60K+ repos)
 
 ---
 
-**Folder Status**: ACTIVE (Flattened)
-**Last Updated**: January 28, 2026
+**Folder Status**: ACTIVE (Placeholder for Context Authority V2)
+**Last Updated**: January 29, 2026
 **Archive Location**: `99-Legacy/tool-guides-2026/`

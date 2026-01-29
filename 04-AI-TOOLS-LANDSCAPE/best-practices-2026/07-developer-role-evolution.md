@@ -1,7 +1,7 @@
 # Developer Role Evolution
 ## Software Engineering 3.0 Responsibilities
 
-**Version:** 5.3.0
+**Version:** 6.0.0
 **Status:** ACTIVE
 **Date:** January 27, 2026
 

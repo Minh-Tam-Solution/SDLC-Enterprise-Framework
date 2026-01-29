@@ -2,7 +2,7 @@
 
 **Status**: APPROVED  
 **Date**: January 28, 2026  
-**Framework Version**: SDLC 5.3.0  
+**Framework Version**: SDLC 6.0.0  
 **Deciders**: CTO (Tai), CPO, Framework Maintainers  
 **Related**: SDLC Core Methodology, 10-Stage Lifecycle, Quality Gates  
 **Supersedes**: Implicit stage dependencies (inferred from gates only)

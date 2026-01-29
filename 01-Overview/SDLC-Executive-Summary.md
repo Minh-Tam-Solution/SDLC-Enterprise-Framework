@@ -411,10 +411,10 @@ SDLC 6.0.0 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR R
 - [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - Pillar 0
 
 **6.0.0 NEW (Section 8 - Unified Specification Standard)**:
-- [SDLC-Specification-Standard.md](../05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) ⭐ YAML + BDD format
-- [DESIGN_DECISIONS.md](../05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) ⭐ Lightweight ADRs
-- [SPEC_DELTA.md](../05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) ⭐ Version tracking
-- [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/Framework-6.0/CONTEXT_AUTHORITY_METHODOLOGY.md) ⭐ Dynamic AGENTS.md
+- [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) ⭐ YAML + BDD format
+- [DESIGN_DECISIONS.md](../05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md) ⭐ Lightweight ADRs
+- [SPEC_DELTA.md](../05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md) ⭐ Version tracking
+- [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md) ⭐ Dynamic AGENTS.md
 
 **5.3.0 (Section 7 - Quality Assurance)**:
 - [SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) - Anti-Vibecoding
@@ -431,9 +431,9 @@ SDLC 6.0.0 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR R
 - [SDLC-Quality-Security-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5
 
 **Templates**:
-- [AGENTS.md Template](../05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) ⭐ RECOMMENDED
-- [Framework 6.0 Templates](../05-Templates-Tools/Framework-6.0/) ⭐ NEW
-- [SASE Artifact Templates](../05-Templates-Tools/SASE-Artifacts/)
+- [AGENTS.md Template](../05-Templates-Tools/04-SASE-Artifacts/AGENTS-MD-Template.md) ⭐ RECOMMENDED
+- [Framework 6.0 Templates](../05-Templates-Tools/01-Specification-Standard/) ⭐ NEW
+- [SASE Artifact Templates](../05-Templates-Tools/04-SASE-Artifacts/)
 
 ---
 

@@ -49,13 +49,11 @@ Scripts now validate Section 8 compliance:
 
 ```bash
 07-Scripts/
-├── README.md                         # This file
-├── compliance/
-│   ├── sdlc_validator.py            # PRIMARY: 7-Pillar + 2-Section validation
-│   ├── design_thinking_validator.py  # Pillar 0 validation (5 DT phases)
-│   └── sdlc_scanner.py              # Backward compatibility wrapper
-└── quick-start/
-    └── solo_setup.py                # Solo developer (2 days → 10x)
+├── README.md                             # This file
+├── compliance_sdlc_validator.py          # PRIMARY: 7-Pillar + 2-Section validation
+├── compliance_design_thinking_validator.py  # Pillar 0 validation (5 DT phases)
+├── compliance_sdlc_scanner.py            # Backward compatibility wrapper
+└── quickstart_solo_setup.py              # Solo developer (2 days → 10x)
 ```
 
 ---
@@ -66,16 +64,16 @@ Scripts now validate Section 8 compliance:
 
 ```bash
 # 1. SDLC 6.0.0 Complete Validation (7 Pillars + 2 Sections)
-python3 compliance/sdlc_validator.py /path/to/project
+python3 compliance_sdlc_validator.py /path/to/project
 
 # 2. Design Thinking Compliance (Pillar 0)
-python3 compliance/design_thinking_validator.py /path/to/project
+python3 compliance_design_thinking_validator.py /path/to/project
 
 # 3. Backward Compatible Scan
-python3 compliance/sdlc_scanner.py /path/to/project
+python3 compliance_sdlc_scanner.py /path/to/project
 
 # 4. Quick Start Solo Project
-python3 quick-start/solo_setup.py /path/to/project
+python3 quickstart_solo_setup.py /path/to/project
 ```
 
 ---
@@ -88,7 +86,7 @@ python3 quick-start/solo_setup.py /path/to/project
 
 ```bash
 # Usage
-python3 compliance/sdlc_validator.py /path/to/project
+python3 compliance_sdlc_validator.py /path/to/project
 
 # What it checks:
 # - 7 Pillars (Design Thinking → Documentation)
@@ -113,7 +111,7 @@ python3 compliance/sdlc_validator.py /path/to/project
 
 ```bash
 # Usage
-python3 compliance/design_thinking_validator.py /path/to/project
+python3 compliance_design_thinking_validator.py /path/to/project
 
 # What it validates:
 # - Phase 1 (Empathize): User research documented
@@ -137,7 +135,7 @@ python3 compliance/design_thinking_validator.py /path/to/project
 
 ```bash
 # Usage
-python3 quick-start/solo_setup.py /path/to/project
+python3 quickstart_solo_setup.py /path/to/project
 
 # What it does:
 # 1. Creates SDLC 6.0.0 complete structure

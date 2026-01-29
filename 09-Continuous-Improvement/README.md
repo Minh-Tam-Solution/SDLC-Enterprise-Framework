@@ -39,5 +39,5 @@ Old continuous improvement documents are moved to `99-Legacy/`:
 
 ---
 
-**Last Updated**: January 22, 2026
-**Framework**: SDLC 5.2.0
+**Last Updated**: January 29, 2026
+**Framework**: SDLC 6.0.0

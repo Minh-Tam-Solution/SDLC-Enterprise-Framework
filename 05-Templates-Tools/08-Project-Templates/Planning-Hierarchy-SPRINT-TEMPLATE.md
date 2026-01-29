@@ -1,6 +1,6 @@
 # Sprint Template
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Date**: January 28, 2026
 **Stage**: 04 - BUILD
 **Pillar**: 2 - Sprint Planning Governance

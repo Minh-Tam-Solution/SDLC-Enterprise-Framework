@@ -1,41 +1,39 @@
----
-spec_version: "1.0.0"
+# SPEC-0001: Anti-Vibecoding Quality Assurance System
+
+## Frontmatter
+
+```yaml
 spec_id: SPEC-0001
 title: Anti-Vibecoding Quality Assurance System
-version: "1.0.0"
-status: APPROVED
-tier:
-  - PROFESSIONAL
-  - ENTERPRISE
-pillar:
-  - Pillar 7 - Quality Assurance System
-  - Section 7 - Anti-Vibecoding Controls
+version: 2.0.0
+status: approved
+tier: PROFESSIONAL
+pillar: Section 7 - Quality Assurance System
 owner: CTO + Quality Lead
-last_updated: "2026-01-28"
+last_updated: 2026-01-29
 tags:
   - anti-vibecoding
   - quality-assurance
   - governance
   - ai-code-quality
   - progressive-routing
-related_adrs:
-  - ADR-035-Governance-System-Design
-  - ADR-041-Stage-Dependency-Matrix
 related_specs:
-  - SPEC-0002
-  - SPEC-0003
-  - SPEC-0004
+  - SPEC-0002  # Specification Standard
+  - SPEC-0003  # AI Context Engine
+  - SPEC-0004  # Policy Guards
+epic: Foundation - Quality Assurance
+sprint: Sprint 114-116 (Jan 2026)
+```
+
 ---
 
-# SPEC-0001: Anti-Vibecoding Quality Assurance System
-
-**Version**: 1.0.0
+**Version**: 2.0.0
 **Status**: APPROVED
 **Owner**: CTO + Quality Lead
 **Created**: 2026-01-28
-**Last Updated**: 2026-01-28
+**Last Updated**: 2026-01-29
 **Framework Version**: SDLC 6.0.0
-**Machine-Readable Spec**: [spec/controls/anti-vibecoding.yaml](../../SDLC-Enterprise-Framework/spec/controls/anti-vibecoding.yaml)
+**Machine-Readable Spec**: [spec/controls/anti-vibecoding.yaml](../../spec/controls/anti-vibecoding.yaml)
 
 ## 1. Overview
 
@@ -825,6 +823,7 @@ kill_switch_trigger_total = Counter(
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
+| 2.0.0 | 2026-01-29 | CTO + Quality Lead | Fixed relative path for machine-readable spec, Pure Methodology compliance |
 | 1.0.0 | 2026-01-28 | CTO + Quality Lead | Initial specification, Framework 6.0 format, machine-readable YAML (anti-vibecoding.yaml) |
 
 ---
@@ -841,8 +840,8 @@ kill_switch_trigger_total = Counter(
 
 **Document Control**:
 - **Template**: Framework 6.0.0 Unified Specification Standard
-- **Machine-Readable Spec**: `spec/controls/anti-vibecoding.yaml`
-- **Last Review**: 2026-01-28
+- **Machine-Readable Spec**: `../../spec/controls/anti-vibecoding.yaml`
+- **Last Review**: 2026-01-29
 - **Next Review**: Q2 2026 (after ENTERPRISE tier pilot)
 
 ---

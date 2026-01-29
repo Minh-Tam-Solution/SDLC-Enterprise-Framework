@@ -1,6 +1,6 @@
 # SDLC Manual Code Review Playbook - Tier 1 Free/Manual Excellence
 
-**Version**: 5.3.0
+**Version**: 6.0.0
 **Last Updated**: January 27, 2026
 **Status**: Production Ready
 **Audience**: Engineering Teams (1-5 developers, <20 PRs/month, $0 budget)
@@ -1118,11 +1118,11 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**Document Version**: 5.2.0
-**Last Updated**: January 27, 2026
+**Document Version**: 6.0.0
+**Last Updated**: January 29, 2026
 **Next Review**: February 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework**: SDLC 5.2.0
+**Framework**: SDLC 6.0.0
 
 ---
 
@@ -1145,6 +1145,6 @@ You can achieve professional-grade code review at **zero cost**.
 
 ---
 
-**SDLC 5.2.0 Code Review Excellence**
+**SDLC 6.0.0 Code Review Excellence**
 *Zero Cost - Maximum Discipline - Professional Quality*
 *Stage 04 (BUILD) - LITE/STANDARD Tiers*

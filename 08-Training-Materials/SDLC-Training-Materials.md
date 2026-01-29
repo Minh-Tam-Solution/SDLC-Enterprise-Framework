@@ -10,13 +10,15 @@
 
 ---
 
-## 🆕 What's New in SDLC 5.1.3 (January 2025)
+## 🆕 What's New in SDLC 6.0.0 (January 2026)
 
-**Sprint Planning Governance (Pillar 2)**: SDLC 5.1.3 introduces the 7-Pillar Architecture with new Pillar 2 - Sprint Planning Governance featuring Sprint Planning Hierarchy (ROADMAP → PHASE → SPRINT → BACKLOG), G-Sprint/G-Sprint-Close gates, and 24h documentation enforcement.
+**7-Pillar Architecture + Section 7 Quality Assurance**: SDLC 6.0.0 introduces the complete 7-Pillar Architecture with Section 7 Quality Assurance System featuring Anti-Vibecoding measures, Vibecoding Index (0-100), Progressive Routing, and Kill Switch criteria.
 
-**Documentation vs Code Separation**: SDLC 5.1.x clarifies that stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units that exist independently of lifecycle stages.
+**AI Governance Principles**: 7 new principles for AI-Human collaboration including Context Authority, Evidence-Based Decision Making, and Transparent AI Attribution.
 
-**SASE Integration & Shortened Folder Names**: SDLC 5.1.x introduces Software Agentic Software Engineering (SASE) with 6 artifact templates. Also updates folder naming convention to use shortened names (e.g., `00-foundation` instead of `00-Project-Foundation`).
+**SASE Simplified (4 Artifacts)**: AGENTS.md (industry standard) + CRP + MRP + VCR. Deprecated: BRS, LPS, MTS (replaced by AGENTS.md).
+
+**Documentation vs Code Separation**: Stage mapping applies ONLY to `/docs` folders. Code folders (`backend/`, `frontend/`, `tools/`, `tests/`) are organizational units that exist independently of lifecycle stages.
 
 **Governance & Compliance Standards**: Comprehensive Governance & Compliance with 4-Tier Classification (LITE → ENTERPRISE), Quality Gates, Security Gates, Observability, and Team Collaboration Standards.
 
@@ -38,9 +40,9 @@ By completing this training, participants will be able to:
 1. ✅ **Explain** what Design Thinking is and why it matters (reduce 70% feature waste)
 2. ✅ **Apply** all 5 Design Thinking phases to real projects (Empathize → Test)
 3. ✅ **Use** 9 practical templates without assistance (15-30 min per template)
-4. ✅ **Map** Design Thinking to SDLC 5.1.3 10-Stage Framework (WHY → GOVERN)
+4. ✅ **Map** Design Thinking to SDLC 6.0.0 10-Stage Framework (WHY → GOVERN)
 5. ✅ **Validate** assumptions with real users before building (5-8 user tests)
-6. ✅ **Integrate** SDLC 5.1.3 into daily workflow (80%+ compliance within 2 weeks)
+6. ✅ **Integrate** SDLC 6.0.0 into daily workflow (80%+ compliance within 2 weeks)
 7. ✅ **Apply** code quality standards including file naming conventions
 8. ✅ **Understand** 4-Tier Classification and select appropriate tier for projects
 9. ✅ **Use** SASE artifacts for AI-human collaboration (6 templates)
@@ -48,11 +50,11 @@ By completing this training, participants will be able to:
 ### Training Structure
 
 ```yaml
-Session 1: SDLC 5.0.0 Overview & Design Thinking Fundamentals
+Session 1: SDLC 6.0.0 Overview & Design Thinking Fundamentals
   Duration: 2 hours
   Format: Lecture + Discussion
   Deliverable: Understanding quiz (80% pass rate)
-  Topics: 10-Stage Lifecycle, 7 Pillars, Sprint Planning Governance
+  Topics: 10-Stage Lifecycle, 7 Pillars, Section 7 Quality Assurance, AI Governance
 
 Session 2: Design Thinking Hands-On Workshop
   Duration: 3 hours
@@ -68,14 +70,14 @@ Session 3: Templates, Code Quality & Code Review Excellence
 Session 4: Real Project Application
   Duration: 1 hour (ongoing)
   Format: Guided practice on actual project
-  Deliverable: Pilot project with SDLC 5.1.3 applied
+  Deliverable: Pilot project with SDLC 6.0.0 applied
 
 Total: 8 hours core + ongoing practice
 ```
 
 ---
 
-## 📚 SESSION 1: SDLC 5.1.3 Overview & Design Thinking Fundamentals
+## 📚 SESSION 1: SDLC 6.0.0 Overview & Design Thinking Fundamentals
 
 **Duration**: 2 hours
 **Format**: Lecture (60 min) + Discussion (30 min) + Quiz (30 min)
@@ -83,7 +85,7 @@ Total: 8 hours core + ongoing practice
 
 ---
 
-### Part 1: Why SDLC 5.1.3? (15 minutes)
+### Part 1: Why SDLC 6.0.0? (15 minutes)
 
 **Slide 1: The Problem We're Solving**
 
@@ -105,38 +107,34 @@ Cost: $100M feature × 64% waste = $64M wasted
 
 ---
 
-**Slide 2: SDLC Evolution (4.7 → 4.8 → 4.9 → 5.0 → 5.1.3)**
+**Slide 2: SDLC Evolution (4.7 → 4.8 → 4.9 → 5.x → 6.0.0)**
 
 ```
-SDLC 4.7 (September 2025):
+SDLC 4.7-4.9 (2025):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Focus: Build things RIGHT (5 Pillars, HOW)
+Focus: Build things RIGHT → Complete Lifecycle (6 Pillars)
   ✅ 10x-50x productivity with AI
-  ✅ Zero Mock Policy
-  ✅ 95% quality scores
-
-SDLC 4.8 (November 7, 2025):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Focus: Build RIGHT things RIGHT (6 Pillars, 4 stages)
-  ✅ + Design Thinking (Pillar 0)
-  ✅ 4 stages: WHY, WHAT, HOW, BUILD
-  ✅ 7,322% ROI proven
-
-SDLC 4.9 (November 13, 2025):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Focus: Complete Lifecycle Excellence (6 Pillars, 10 stages)
+  ✅ Zero Mock Policy, 95% quality scores
   ✅ 10 stages: WHY → GOVERN
-  ✅ 14,822% ROI proven (2x improvement)
-  ✅ Perfect /docs alignment (00-09)
+  ✅ 14,822% ROI proven
 
-SDLC 5.1.3 (January 2025):
+SDLC 5.x (Late 2025):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Focus: Sprint Planning Governance (7 Pillars)
   ✅ NEW Pillar 2: Sprint Planning Governance
   ✅ Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
-  ✅ G-Sprint/G-Sprint-Close gates
-  ✅ 24h documentation enforcement
-  ✅ All 5.1.2 features maintained
+  ✅ SASE Integration (6 artifacts: BRS, LPS, MTS, CRP, MRP, VCR)
+  ✅ 4-Tier Classification: LITE → ENTERPRISE
+
+SDLC 6.0.0 (January 2026):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Focus: AI Governance + Quality Assurance (7-Pillar + Section 7)
+  ✅ Section 7: Quality Assurance System (Anti-Vibecoding)
+  ✅ AI Governance Principles (7 principles)
+  ✅ SASE Simplified: AGENTS.md + CRP + MRP + VCR
+  ✅ Concentric Circles Model (Core → Governance → Outer Ring)
+  ✅ Risk-Based Planning Mode (replaces LOC-based triggers)
+  ✅ Deprecated: BRS, LPS, MTS (replaced by AGENTS.md)
 ```
 
 ---
@@ -1317,13 +1315,13 @@ Day 11: CPO 1-on-1
 
 ---
 
-**Document**: SDLC-5.2.0-Training-Materials
+**Document**: SDLC-6.0.0-Training-Materials
 **Purpose**: Complete learning package for team adoption
 **Audience**: All team members (developers, designers, PM, QA)
 **Duration**: 8 hours core + ongoing practice
-**Certification**: SDLC 5.2.0 Certified Practitioner
-**Version**: 5.2.0
-**Date**: January 22, 2026
+**Certification**: SDLC 6.0.0 Certified Practitioner
+**Version**: 6.0.0
+**Date**: January 29, 2026
 **License**: MTS Internal Use
-**What's New**: Planning Mode + AI Best Practices + 7-Pillar Architecture
-**Framework**: SDLC 5.2.0
+**What's New**: 7-Pillar + Section 7 Quality Assurance System + AI Governance Principles
+**Framework**: SDLC 6.0.0

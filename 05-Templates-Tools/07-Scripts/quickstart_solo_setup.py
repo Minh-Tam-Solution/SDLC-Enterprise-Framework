@@ -114,7 +114,7 @@ class SoloSetup:
             # Step 1: Create directory structure
             self._create_directory_structure()
 
-            # Step 2: Install SDLC 5.0 validators
+            # Step 2: Install SDLC 6.0.0 validators
             self._install_validators()
 
             # Step 3: Setup Design Thinking lightweight workflow
@@ -319,7 +319,7 @@ class SoloSetup:
         logger.info("   • Upgrade to Tier 3 Code Review when budget allows")
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 5.0 Docs: /00-Overview/")
+        logger.info("   • SDLC 6.0.0 Docs: /00-Overview/")
         logger.info("   • AI Tools: /05-Templates-Tools/02-AI-Tools/")
         logger.info("   • Case Studies: /07-Case-Studies/")
         logger.info("   • Support: taidt@mtsolution.com.vn")
@@ -477,11 +477,11 @@ Validate:
 """
 
     def _create_code_review_checklist(self) -> str:
-        return """# Code Review Checklist - SDLC 5.0 (Tier 1)
+        return """# Code Review Checklist - SDLC 6.0.0 (Tier 1)
 
 ## Before Commit - Check ALL Items
 
-### SDLC 5.0 Compliance
+### SDLC 6.0.0 Compliance
 - [ ] Zero Mock Policy: No mock/stub/fake/dummy code
 - [ ] Design Thinking: Feature has DT documentation
 - [ ] Performance: <50ms API response target
@@ -524,7 +524,7 @@ Validate:
 
 ## Run Before Commit
 ```bash
-# SDLC 5.0 validator
+# SDLC 6.0.0 validator
 python3 path/to/sdlc_4_8_validator.py .
 
 # Tests
@@ -547,7 +547,7 @@ Component: [Name]
 Location: [path]
 
 Requirements:
-✅ SDLC 5.0 compliant
+✅ SDLC 6.0.0 compliant
 ✅ English-only comments
 ✅ Test suite (80%+ coverage)
 ✅ Performance <50ms
@@ -560,7 +560,7 @@ Goal: [what trying to achieve]
 
 Generate actionable output for [Phase]""",
 
-            'code_review': """Review this code for SDLC 5.0:
+            'code_review': """Review this code for SDLC 6.0.0:
 [paste code]
 
 Check:

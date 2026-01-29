@@ -1,14 +1,16 @@
 # SDLC Framework Versioning Rules
 
-**Version**: 1.0.0
+**Version**: 1.0.1
 **Effective Date**: 2026-01-28
-**Last Updated**: 2026-01-28
+**Last Updated**: 2026-01-29
 
 ---
 
 ## Overview
 
-This document defines versioning rules for the SDLC Enterprise Framework and its machine-readable specifications in the `/spec/` directory.
+This document defines versioning rules for the SDLC Enterprise Framework and its machine-readable specifications:
+- `02-Core-Methodology/Governance-Compliance/*.yaml` - Controls and gates
+- `05-Templates-Tools/01-Specification-Standard/*.json` - JSON Schema validations
 
 ## Framework Version (Semantic Versioning)
 

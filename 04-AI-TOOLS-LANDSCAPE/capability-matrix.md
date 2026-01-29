@@ -1,6 +1,6 @@
 # AI Tool Capability Matrix (January 2026)
 
-**Version**: 5.3.0  
+**Version**: 6.0.0  
 **Status**: ACTIVE - OUTER RING  
 **Purpose**: Compare AI coding tools against SDLC Orchestrator governance requirements.
 

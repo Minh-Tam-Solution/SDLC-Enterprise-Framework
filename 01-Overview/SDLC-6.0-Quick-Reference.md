@@ -24,7 +24,7 @@ New Templates:
   - CONTEXT_AUTHORITY_METHODOLOGY.md  # Dynamic AGENTS.md
 ```
 
-**Location**: [05-Templates-Tools/Framework-6.0/](../05-Templates-Tools/Framework-6.0/)
+**Location**: [05-Templates-Tools/01-Specification-Standard/](../05-Templates-Tools/01-Specification-Standard/)
 
 ---
 
@@ -81,14 +81,14 @@ New Templates:
 
 | Stage | Name | Key Deliverable |
 |-------|------|-----------------|
-| 00 | WHY? | Problem validated |
-| 01 | WHAT? | Requirements defined |
-| 02 | HOW? | Architecture designed |
-| 03 | BUILD | Code implemented |
-| 04 | TEST | Tests passing |
-| 05 | DEPLOY | Released |
-| 06 | OPERATE | Running in production |
-| 07 | INTEGRATE | Systems connected |
+| 00 | FOUNDATION (WHY?) | Problem validated |
+| 01 | PLANNING (WHAT?) | Requirements defined |
+| 02 | DESIGN (HOW?) | Architecture designed |
+| 03 | INTEGRATE | API contracts, systems connected |
+| 04 | BUILD | Code implemented |
+| 05 | TEST | Tests passing |
+| 06 | DEPLOY | Released to production |
+| 07 | OPERATE | Running, monitored |
 | 08 | COLLABORATE | Teams aligned |
 | 09 | GOVERN | Compliant + auditable |
 
@@ -158,7 +158,7 @@ SDLC-Enterprise-Framework/
 ├── 03-AI-GOVERNANCE/         # 7 AI principles (Core ring)
 ├── 04-AI-TOOLS-LANDSCAPE/    # Tool profiles (Outer ring)
 ├── 05-Templates-Tools/       # All templates
-│   └── Framework-6.0/        # Section 8 templates
+│   └── 01-Specification-Standard/  # Section 8 templates (6.0)
 ├── 06-Case-Studies/          # Battle-tested patterns
 ├── 07-Implementation-Guides/ # How-to guides
 ├── 08-Training-Materials/    # Learning resources
@@ -186,7 +186,7 @@ SDLC-Enterprise-Framework/
 
 | Document | Purpose |
 |----------|---------|
-| [SDLC-Specification-Standard.md](../05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) | Core spec template |
+| [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) | Core spec template |
 | [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md) | 10-stage lifecycle |
 | [03-AI-GOVERNANCE/README.md](../03-AI-GOVERNANCE/README.md) | 7 AI principles |
 | [CONTENT-MAP.md](../CONTENT-MAP.md) | Topic navigation |

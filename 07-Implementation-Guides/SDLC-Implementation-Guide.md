@@ -1,20 +1,20 @@
-# SDLC 5.3.0 Implementation Guide - From Zero to Production
+# SDLC 6.0.0 Implementation Guide - From Zero to Production
 
-**Version**: 5.3.0
-**Date**: January 27, 2026
+**Version**: 6.0.0
+**Date**: January 29, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Target**: Any team, any size, any experience level
-**Promise**: Working SDLC in 1 day (LITE) to 2 weeks (ENTERPRISE)
+**Promise**: Working SDLC in 1 day (LITE) to 4 weeks (ENTERPRISE)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
 ## 🎯 30-Second Overview
 
-**What is SDLC 5.1.3?**
+**What is SDLC 6.0.0?**
 - A **10-stage lifecycle** framework (WHY → GOVERN)
-- With **7-Pillar Architecture** including Sprint Planning Governance
-- With **SASE** for human-AI collaboration (6 artifacts)
+- With **7-Pillar Architecture** + **Section 7 Quality Assurance System**
+- With **SASE** for human-AI collaboration (AGENTS.md + 3 artifacts)
 - And **4-tier scaling** (LITE → ENTERPRISE)
 
 **Why use it?**
@@ -22,10 +22,52 @@
 - **60-70% → <30%** feature waste reduction
 - **10-50x** productivity improvement
 
-**How to start?**
-1. Pick your tier (see below)
-2. Follow the Quick Start
-3. Deploy your first validated feature
+**How to start?** (Depends on your situation)
+1. Pick your implementation path (see below)
+2. Pick your tier
+3. Follow the Quick Start for your scenario
+
+---
+
+## 🛤️ Pick Your Implementation Path (CRITICAL)
+
+**Your situation determines your path.** Don't skip this section.
+
+| Situation | Path | Time | Start Here |
+|-----------|------|------|------------|
+| **New project** (Greenfield) | Full Setup | 1 day - 4 weeks | Continue below → [Pick Your Tier](#-pick-your-tier-1-minute) |
+| **Existing project** (Brownfield) | Incremental Adoption | 1 week - 2 months | → [Brownfield Implementation](#-brownfield-implementation-existing-projects) |
+| **Upgrading from 5.x** | Framework Migration | 2-5 days | → [Version Migration](#-version-migration-5x--60) |
+
+### Decision Tree
+
+```
+Is this a NEW project?
+├── YES → Greenfield Path (this guide's main content)
+│         └── Pick Tier → Follow Quick Start → Done
+│
+└── NO → Already have code/docs?
+          ├── YES, using SDLC 5.x → Version Migration Path
+          │         └── Run compatibility check → Fix gaps → Done
+          │
+          └── YES, but NO SDLC yet → Brownfield Path
+                    └── Phase 1-4 incremental → Don't disrupt existing work
+```
+
+### SDLC Orchestrator CLI Support
+
+```bash
+# Greenfield (new project)
+sdlcctl init /path/to/project --tier STANDARD
+
+# Brownfield (existing project)
+sdlcctl scan /path/to/project          # Assess current state
+sdlcctl fix /path/to/project           # Auto-fix compliance gaps
+sdlcctl report /path/to/project        # Generate compliance report
+
+# Version migration (5.x → 6.0)
+sdlcctl migrate /path/to/project --from 5.3 --to 6.0
+```
 
 ---
 
@@ -203,14 +245,14 @@ Afternoon:
 **SASE Integration** (for AI-assisted teams):
 ```yaml
 SE4H (Human - Agent Coach):
-  Creates: BriefingScript, MentorScript, VCR
+  Creates: AGENTS.md (context), VCR (approvals)
   Role: Define what to build, approve results
 
 SE4A (Agent - AI Executor):
-  Creates: LoopScript, CRP, MRP
+  Creates: CRP (questions), MRP (evidence)
   Role: Build what human defines, provide evidence
 
-Workflow: BRS → LPS → [work] → MRP → VCR
+Workflow: AGENTS.md → [work] → CRP (if stuck) → MRP → VCR
 ```
 
 **Quality Gates**:
@@ -341,7 +383,7 @@ Stage 09: GOVERN - Compliance, audits, governance
 
 ### Standard `/docs` Structure (10-Stage Aligned)
 
-Every SDLC 5.1 compliant project **MUST** have this documentation structure using **shortened folder names**:
+Every SDLC 6.0.0 compliant project **MUST** have this documentation structure using **shortened folder names**:
 
 ```
 your-project/
@@ -412,7 +454,7 @@ your-project/
 
 ### Folder Naming Convention
 
-**SDLC 5.0+ uses shortened folder names** (not long descriptive names):
+**SDLC 6.0.0 uses shortened folder names** (not long descriptive names):
 
 | Stage | Folder Name | NOT |
 |-------|-------------|-----|
@@ -524,26 +566,26 @@ python3 path/to/sdlc_validator.py /your/project
 
 ## 🤖 SASE Quick Reference (AI Teams)
 
-### The 6 Artifacts
+### SDLC 6.0.0 Simplified Artifacts
 
 | # | Artifact | Created By | Purpose |
 |---|----------|------------|---------|
-| 1 | **BRS** (BriefingScript) | Human | Task specification |
-| 2 | **LPS** (LoopScript) | Agent | Execution plan |
-| 3 | **MTS** (MentorScript) | Human | Coding standards |
-| 4 | **CRP** (Consultation Request) | Agent | When uncertain |
-| 5 | **MRP** (Merge-Readiness Pack) | Agent | 5-point evidence |
-| 6 | **VCR** (Version Controlled Resolution) | Human | Approval record |
+| 1 | **AGENTS.md** | Human | AI context file (industry standard, 60K+ repos) |
+| 2 | **CRP** (Consultation Request) | Agent | When uncertain, request human guidance |
+| 3 | **MRP** (Merge-Readiness Pack) | Agent | 5-point evidence before merge |
+| 4 | **VCR** (Version Controlled Resolution) | Human | Approval/rejection record |
+
+> **⚠️ Deprecated in 6.0.0**: BRS, LPS, MTS → All merged into AGENTS.md
 
 ### Minimum Workflow (Level 1)
 ```
-Human: BRS → Agent: [work] → Agent: MRP → Human: VCR
+Human: AGENTS.md → Agent: [work] → Agent: MRP → Human: VCR
 ```
 
 ### Full Workflow (Level 2)
 ```
-Human: BRS + MTS → Agent: LPS → Human: Approve →
-Agent: [work] → Agent: CRP (if stuck) → Human: Answer →
+Human: AGENTS.md (context) → Agent: [work] →
+Agent: CRP (if stuck) → Human: Answer →
 Agent: MRP → Human: VCR
 ```
 
@@ -609,7 +651,7 @@ Agent: MRP → Human: VCR
 ### Mistake 4: Skipping SASE Artifacts (AI Teams)
 ```
 ❌ "Just tell the AI what to build"
-✅ BriefingScript = clear intent = better output
+✅ AGENTS.md = clear context = better output
 ```
 
 ### Mistake 5: All Stages at Once
@@ -617,6 +659,193 @@ Agent: MRP → Human: VCR
 ❌ "We need all 10 stages from day 1"
 ✅ Start with your tier's minimum, add stages as needed
 ```
+
+---
+
+## 🔄 Brownfield Implementation (Existing Projects)
+
+**For teams with existing codebases that want to adopt SDLC 6.0.0 incrementally.**
+
+### Philosophy: Don't Disrupt, Enhance
+
+```yaml
+Brownfield Principles:
+  1. Never stop current work (ship features while adopting)
+  2. Start with highest-ROI improvements (pre-commit hooks)
+  3. Add structure gradually (don't reorganize everything day 1)
+  4. Measure before/after (prove value to skeptics)
+```
+
+### 4-Phase Brownfield Adoption
+
+| Phase | Focus | Time | Immediate Value |
+|-------|-------|------|-----------------|
+| **Phase 1** | Quality Gates | 1-2 days | Catch bugs before commit |
+| **Phase 2** | Documentation Structure | 1 week | Find docs easily, onboard faster |
+| **Phase 3** | AI Collaboration (SASE) | 2 weeks | 2-5x dev productivity with AI |
+| **Phase 4** | Full Governance | 4 weeks | Compliance, metrics, audit trail |
+
+### Phase 1: Quality Gates (Start Here)
+
+```bash
+# Day 1: Install pre-commit hooks
+pip install pre-commit
+# Copy .pre-commit-config.yaml from SDLC-PRE-COMMIT-HOOKS.md
+
+# Day 2: Establish code review
+# Choose tier from SDLC-Universal-Code-Review-Framework.md
+```
+
+**Guides:**
+- [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Pre-commit setup
+- [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) - Review tier selection
+
+### Phase 2: Documentation Structure
+
+```bash
+# Scan existing structure
+sdlcctl scan /your/project
+
+# Auto-create missing folders (non-destructive)
+sdlcctl fix /your/project --dry-run  # Preview changes
+sdlcctl fix /your/project            # Apply changes
+
+# Move existing docs to correct locations (MANUAL - be careful)
+# Don't delete old locations until team is trained
+```
+
+**Key Rule:** Keep `99-legacy/` folders for old docs that don't fit new structure.
+
+### Phase 3: AI Collaboration (SASE)
+
+```yaml
+Start Simple:
+  1. Create AGENTS.md in project root (industry standard)
+  2. Try CRP (Consultation Request) when AI is stuck
+  3. Use MRP (Merge-Readiness Pack) for AI-generated code
+  4. VCR (Version Controlled Resolution) for approvals
+
+Don't:
+  - Force all 4 artifacts immediately
+  - Disrupt existing dev workflow
+  - Expect perfect AI output on day 1
+```
+
+**Guides:**
+- [ACE-AEE-Reference-Architecture.md](ACE-AEE-Reference-Architecture.md) - SASE architecture
+- [../05-Templates-Tools/04-SASE-Artifacts/](../05-Templates-Tools/04-SASE-Artifacts/) - Templates
+
+### Phase 4: Full Governance
+
+```yaml
+Only After Phases 1-3 Stable:
+  - Quality Gates: Live for 2+ sprints
+  - Documentation: 80%+ compliance
+  - Team: Comfortable with workflow
+
+Phase 4 Adds:
+  - Stage 09 (GOVERN) - Compliance tracking
+  - Metrics dashboards - DORA metrics, quality trends
+  - Audit trail - Evidence Vault integration
+```
+
+**Guide:** [SDLC-Compliance-Enforcement-Guide.md](SDLC-Compliance-Enforcement-Guide.md)
+
+### Brownfield by Tier
+
+| Tier | Recommended Phases | Skip/Defer |
+|------|-------------------|------------|
+| LITE | Phase 1 only | Phases 2-4 (add when painful) |
+| STANDARD | Phases 1-2 | Phases 3-4 (add in 1-2 months) |
+| PROFESSIONAL | Phases 1-3 | Phase 4 (add in 2-3 months) |
+| ENTERPRISE | All 4 Phases | None - all required |
+
+---
+
+## ⬆️ Version Migration (5.x → 6.0)
+
+**For teams already using SDLC 5.x who want to upgrade to 6.0.0.**
+
+### What Changed in 6.0.0?
+
+| Component | 5.x | 6.0.0 | Migration Impact |
+|-----------|-----|-------|------------------|
+| **Pillars** | 7-Pillar | 7-Pillar + Section 7 (QA System) | LOW - additive |
+| **SASE Artifacts** | 6 artifacts (BRS, LPS, MTS, CRP, MRP, VCR) | 4 artifacts (AGENTS.md, CRP, MRP, VCR) | MEDIUM - deprecations |
+| **Folder Structure** | 10-stage + 99-legacy | Same + 10-archive clarification | LOW - compatible |
+| **Quality System** | Pillar 4 only | Section 7 (Anti-Vibecoding, Progressive Routing) | NEW - additive |
+| **AI Governance** | Principles scattered | 7 AI Governance Principles centralized | LOW - documentation |
+
+### Migration Checklist
+
+```yaml
+Step 1: Update Version References (30 min)
+  - [ ] Update CLAUDE.md header to 6.0.0
+  - [ ] Update any framework version references
+  - [ ] Update footer in documentation files
+
+Step 2: SASE Artifact Migration (1-2 hours)
+  - [ ] Create AGENTS.md if not exists (replaces BRS+MTS+LPS)
+  - [ ] Keep CRP, MRP, VCR (unchanged)
+  - [ ] Archive old BRS/LPS/MTS to 99-legacy (optional)
+  - [ ] Update any SASE workflow documentation
+
+Step 3: Section 7 Adoption (optional, 1-2 days)
+  - [ ] Review Anti-Vibecoding specification
+  - [ ] Configure Vibecoding Index thresholds
+  - [ ] Set up Progressive Routing (if PROFESSIONAL+)
+  - [ ] Enable Kill Switch criteria (if ENTERPRISE)
+
+Step 4: Validation (30 min)
+  - [ ] Run sdlcctl scan for 6.0.0 compliance
+  - [ ] Fix any reported issues
+  - [ ] Generate compliance report
+```
+
+### SASE Artifact Migration Detail
+
+```yaml
+Deprecated in 6.0.0:
+  ❌ BRS (BriefingScript) → Merged into AGENTS.md
+  ❌ LPS (LoopScript) → Merged into AGENTS.md
+  ❌ MTS (MentorScript) → Merged into AGENTS.md
+
+Still Active in 6.0.0:
+  ✅ AGENTS.md (NEW - industry standard, 60K+ repos)
+  ✅ CRP (Consultation Request) - Agent requests human help
+  ✅ MRP (Merge-Readiness Pack) - 5-point evidence before merge
+  ✅ VCR (Version Controlled Resolution) - Human approval record
+
+Migration Path:
+  1. Create AGENTS.md from existing BRS+MTS content
+  2. Keep CRP/MRP/VCR workflows unchanged
+  3. Move old BRS/LPS/MTS to 99-legacy folder
+```
+
+### CLI Migration Command
+
+```bash
+# Check 5.x → 6.0 compatibility
+sdlcctl migrate /path/to/project --from 5.3 --to 6.0 --dry-run
+
+# View migration plan
+sdlcctl migrate /path/to/project --from 5.3 --to 6.0 --plan
+
+# Execute migration (with backup)
+sdlcctl migrate /path/to/project --from 5.3 --to 6.0 --backup
+
+# Validate post-migration
+sdlcctl scan /path/to/project --version 6.0
+```
+
+### Migration by Tier
+
+| Tier | Migration Effort | Key Changes |
+|------|------------------|-------------|
+| LITE | **Minimal** (30 min) | Update version refs, create AGENTS.md |
+| STANDARD | **Low** (1-2 hours) | + SASE artifact migration |
+| PROFESSIONAL | **Medium** (1 day) | + Section 7 QA configuration |
+| ENTERPRISE | **Full** (2-3 days) | + Kill Switch, Progressive Routing, Audit |
 
 ---
 
@@ -665,7 +894,12 @@ Agent: MRP → Human: VCR
 ## 🎯 One Page Summary
 
 ```
-SDLC 5.1 = 10 Stages + SASE + 4 Tiers
+SDLC 6.0.0 = 10 Stages + 7 Pillars + Section 7 (QA) + 4 Tiers
+
+Pick Your Path:
+  Greenfield (new project)   → This guide's Quick Starts
+  Brownfield (existing)      → Phase 1-4 incremental
+  Migration (5.x → 6.0)      → Version migration section
 
 Pick Your Tier:
   LITE (1-2 people)       → 1 day setup
@@ -679,8 +913,8 @@ Essential Steps:
   3. Code review process (choose your style)
   4. Deploy first feature (celebrate!)
 
-SASE for AI Teams:
-  Human: BRS → Agent: MRP → Human: VCR
+SASE for AI Teams (6.0.0 Simplified):
+  Human: AGENTS.md → Agent: [work] → MRP → Human: VCR
 
 Success = Validated features with less waste
 ROI = 10-50x improvement (tier dependent)
@@ -688,11 +922,11 @@ ROI = 10-50x improvement (tier dependent)
 
 ---
 
-**Document Version**: 5.2.0
-**Last Updated**: January 27, 2026
+**Document Version**: 6.0.0
+**Last Updated**: January 29, 2026
 **Owner**: CPO Office
 **Next Review**: February 2026
-**Framework**: SDLC 5.2.0
+**Framework**: SDLC 6.0.0
 
 ---
 

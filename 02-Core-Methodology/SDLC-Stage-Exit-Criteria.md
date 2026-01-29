@@ -531,5 +531,5 @@ sdlcctl verify-integrity --stage 02 --artifact ADR-041.md
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 5.3.0  
+**Framework Version**: SDLC 6.0.0  
 **Status**: PRODUCTION-READY

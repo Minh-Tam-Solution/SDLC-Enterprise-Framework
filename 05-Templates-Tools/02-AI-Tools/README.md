@@ -1,7 +1,7 @@
 # 🤖 AI Tools for SDLC 6.0.0
 ## Stage-Aligned AI Automation for Complete Lifecycle + SASE Integration
 
-**Version**: 6.0.0
+**Framework Version**: 6.0.0
 **Date**: January 28, 2026
 **Status**: ACTIVE - Production Standards + SASE/SE 3.0
 **Pillar**: 5 - SASE Integration (AI Tools)
@@ -9,6 +9,8 @@
 **Structure**: SDLC 6.0.0 (2-level maximum, files prefixed by category)
 **Foundation**: Proven across 3 platforms (BFlow, NQH-Bot, MTEP)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
+
+> **Versioning Note**: Individual prompt files have their own version numbers (e.g., v5.2.0) indicating when the prompt content was last refined. All prompts are compatible with SDLC Framework 6.0.0.
 
 ---
 

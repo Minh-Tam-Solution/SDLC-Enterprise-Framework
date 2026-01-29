@@ -1,38 +1,32 @@
----
+# SPEC-0002: Framework 6.0.0 Specification Standard
+
+## Frontmatter
+
+```yaml
 spec_id: SPEC-0002
 title: Framework 6.0.0 Specification Standard
-version: "1.0.0"
-status: APPROVED
-tier:
-  - LITE
-  - STANDARD
-  - PROFESSIONAL
-  - ENTERPRISE
-pillar:
-  - Section 7 - Quality Assurance System
-  - Pillar 7 - Specification Standard
+version: 1.0.0
+status: approved
+tier: ALL
+pillar: Section 7 - Quality Assurance System
 owner: CTO + Framework Architect
-last_updated: "2026-01-28"
+last_updated: 2026-01-28
 tags:
   - specification-standard
   - metadata
   - documentation
   - governance
-related_adrs:
-  - ADR-041-Stage-Dependency-Matrix
-  - ADR-035-Governance-System-Design
+  - framework-6.0
 related_specs:
-  - SPEC-0001
-  - SPEC-0003
+  - SPEC-0001  # Anti-Vibecoding
+  - SPEC-0003  # AI Context Engine
+epic: Foundation - Framework 6.0
+sprint: Sprint 114-117 (Jan 2026)
+```
+
 ---
 
 # SPEC-0002: Framework 6.0.0 Specification Standard
-
-**Version**: 1.0.0
-**Status**: APPROVED
-**Owner**: CTO + Framework Architect
-**Created**: 2026-01-28
-**Last Updated**: 2026-01-28
 
 ---
 
@@ -293,8 +287,8 @@ THEN frontmatter MUST include related_adrs array
   AND each ADR reference uses format "ADR-XXX-Title"
   AND each spec reference uses format "SPEC-XXXX"
   AND specification body uses markdown links to references
-  AND link format is [ADR-XXX](../../02-design/03-ADRs/ADR-XXX-Title.md)
-  AND link format is [SPEC-XXXX](./SPEC-XXXX-Title.md)
+  AND ADR references use text format "ADR-XXX: Title" (links to implementation repos)
+  AND SPEC link format is [SPEC-XXXX](./SPEC-XXXX-Title.md)
 ```
 
 **Example**:
@@ -832,10 +826,10 @@ All acceptance criteria must pass before specification standard is considered AP
 
 **Deliverables**:
 1. **Migrate existing specs to Framework 6.0.0 format**:
-   - SPEC-0003-Quality-Gates-Codegen-Specification.md
-   - SPEC-0004-Policy-Guards-Design.md
-   - SPEC-0005-Evidence-Vault-Architecture.md
-   - (10+ additional specs)
+   - SPEC-0020-Quality-Gates-Codegen.md ✅
+   - SPEC-0004-Policy-Guards-Design.md ✅
+   - SPEC-0005-System-Architecture-Document.md ✅
+   - (15+ additional specs completed)
 
 2. **Migration script** (`migrate_specs_to_6.0.py`)
    - Auto-generate YAML frontmatter from old format
@@ -933,18 +927,22 @@ All acceptance criteria must pass before specification standard is considered AP
 
 ### Related ADRs
 
-- **[ADR-041: Stage Dependency Matrix](../../02-design/03-ADRs/ADR-041-Stage-Dependency-Matrix.md)** - Stage prerequisites inform specification stage classification
-- **[ADR-035: Governance System Design](../../02-design/03-ADRs/ADR-035-Governance-System-Design.md)** - Governance principles guide specification format
+> **Note**: ADRs are implementation documents in SDLC-Orchestrator. For governance methodology, see Framework specifications.
+
+- **ADR-041: Stage Dependency Matrix** - Stage prerequisites inform specification stage classification
+- **ADR-035: Governance System Design** - Governance principles guide specification format
+
+> **Implementation Reference**: For ADR details, see SDLC-Orchestrator/docs/02-design/03-ADRs/
 
 ### Related Specifications
 
-- **[SPEC-0001: Anti-Vibecoding](./SPEC-0001-Anti-Vibecoding.md)** - Example specification following Framework 6.0.0 format
-- **[SPEC-0003: Quality Gates Codegen Specification](./SPEC-0003-Quality-Gates-Codegen-Specification.md)** - To be migrated to Framework 6.0.0 format
-- **[SPEC-0004: Policy Guards Design](./SPEC-0004-Policy-Guards-Design.md)** - To be migrated to Framework 6.0.0 format
+- **[SPEC-0001: Anti-Vibecoding](./SPEC-0001-Anti-Vibecoding.md)** - Quality governance specification following Framework 6.0.0 format
+- **[SPEC-0003: AI Context Engine Architecture](./SPEC-0003-AI-Context-Engine-Architecture.md)** - Context engine specification following Framework 6.0.0 format
+- **[SPEC-0004: Policy Guards Design](./SPEC-0004-Policy-Guards-Design.md)** - Policy enforcement specification following Framework 6.0.0 format
 
 ### Machine-Readable Specifications
 
-- **[spec-frontmatter-schema.json](../../SDLC-Enterprise-Framework/spec/evidence/spec-frontmatter-schema.json)** - JSON Schema for YAML frontmatter validation
+- **[spec-frontmatter-schema.json](../../../spec/evidence/spec-frontmatter-schema.json)** - JSON Schema for YAML frontmatter validation
 
 ### External Standards
 

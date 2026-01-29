@@ -1,10 +1,36 @@
 # SDLC 6.0.0 Implementation Guides
 
-**Version**: 6.0.0 | **Status**: PRODUCTION READY | **Date**: January 28, 2026
+**Version**: 6.0.0 | **Status**: PRODUCTION READY | **Date**: January 29, 2026
 
-Practical how-to guides for implementing SDLC 6.0.0 framework + Section 8 Specification Standard.
+Practical how-to guides for implementing SDLC 6.0.0 framework + Section 7 Quality Assurance System.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
+
+---
+
+## 🚀 Getting Started - Pick Your Path
+
+### New Project (Greenfield)
+Start fresh with SDLC 6.0.0 from day one.
+
+| Team Size | Time | Start Here |
+|-----------|------|------------|
+| 1-2 people (LITE) | 1 day | [Quick Start Guide](../08-Training-Materials/SDLC-Quick-Start-Guide.md) |
+| 3-10 people (STANDARD) | 1 week | [Implementation Guide](SDLC-Implementation-Guide.md) |
+| 10-50 people (PROFESSIONAL) | 2 weeks | [Implementation Guide](SDLC-Implementation-Guide.md) + [Deployment Guide](SDLC-Deployment-Guide.md) |
+| 50+ people (ENTERPRISE) | 4 weeks | [Full Implementation](SDLC-Implementation-Guide.md) + [Self-Contained Deployment](SDLC-Self-Contained-Deployment-Guide.md) |
+
+### Existing Project (Brownfield)
+Adopt SDLC 6.0.0 incrementally into running projects.
+
+| Phase | Focus | Time | Guide |
+|-------|-------|------|-------|
+| **Phase 1** | Pre-commit hooks + Code review | 1-2 days | [Pre-Commit Hooks](SDLC-PRE-COMMIT-HOOKS.md) + [Code Review](SDLC-Universal-Code-Review-Framework.md) |
+| **Phase 2** | Folder structure + Documentation | 1 week | [Compliance Enforcement](SDLC-Compliance-Enforcement-Guide.md) |
+| **Phase 3** | AI agents + SASE artifacts | 2 weeks | [ACE-AEE Architecture](ACE-AEE-Reference-Architecture.md) |
+| **Phase 4** | Full governance + Quality gates | 4 weeks | [Platform Patterns](SDLC-Platform-Patterns.md) |
+
+> 💡 **Brownfield Tip**: Start with Phase 1 only. Each phase adds value independently. Don't try to do everything at once.
 
 ---
 
@@ -12,11 +38,14 @@ Practical how-to guides for implementing SDLC 6.0.0 framework + Section 8 Specif
 
 | I want to... | Go to |
 |--------------|-------|
-| Start SDLC from scratch | [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) |
+| Start SDLC from scratch (new project) | [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) |
+| Add SDLC to existing project | Start with [Pre-Commit Hooks](SDLC-PRE-COMMIT-HOOKS.md) |
 | Choose code review tier | [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) |
 | Setup pre-commit hooks | [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) |
 | Handle production crisis | [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) |
-| Work with AI agents (SASE) | [SASE Artifacts](../05-Templates-Tools/SASE-Artifacts/) |
+| Work with AI agents (SASE) | [SASE Artifacts](../05-Templates-Tools/04-SASE-Artifacts/) |
+| Learn the framework basics | [Quick Start Guide](../08-Training-Materials/SDLC-Quick-Start-Guide.md) (2 days) |
+| Train my team | [Training Materials](../08-Training-Materials/SDLC-Training-Materials.md) (8 hours) |
 
 ---
 
@@ -26,8 +55,9 @@ Practical how-to guides for implementing SDLC 6.0.0 framework + Section 8 Specif
 
 | Guide | Purpose | Use When |
 |-------|---------|----------|
-| **SDLC-Implementation-Guide.md** | Complete SDLC 5.2.0 deployment | Starting from scratch |
+| **SDLC-Implementation-Guide.md** | Complete SDLC 6.0.0 deployment | Starting from scratch (greenfield) |
 | **SDLC-Self-Contained-Deployment-Guide.md** | Team folder deployment | Deploying to specific team |
+| **SDLC-Compliance-Enforcement-Guide.md** | Adopt SDLC in existing project | Brownfield migration |
 
 ### Code Review Framework (3-Tier)
 
@@ -76,7 +106,7 @@ mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
 # 99-legacy folders created as needed within each stage
 ```
 
-### Legacy/Archive Structure (SDLC 5.2.0)
+### Legacy/Archive Structure (SDLC 6.0.0)
 
 ```yaml
 Rules:
@@ -85,22 +115,38 @@ Rules:
   - Content in legacy/archive folders is never validated or upgraded
 ```
 
+### SDLC Orchestrator CLI Integration
+
+> 💡 The strategies above are automated by SDLC Orchestrator CLI:
+
+```bash
+# New project (greenfield) - init command
+sdlcctl init /path/to/project --tier STANDARD
+
+# Existing project (brownfield) - scan + fix commands
+sdlcctl scan /path/to/project          # Scan current state
+sdlcctl fix /path/to/project           # Auto-fix compliance gaps
+sdlcctl report /path/to/project        # Generate compliance report
+```
+
+See [SDLC Orchestrator](https://github.com/Minh-Tam-Solution/SDLC-Orchestrator) for automation.
+
 ---
 
 ## Templates & Tools Reference
 
-### SASE Artifacts
+### SASE Artifacts (6.0.0 Simplified)
 
-Location: [05-Templates-Tools/SASE-Artifacts/](../05-Templates-Tools/SASE-Artifacts/)
+Location: [05-Templates-Tools/04-SASE-Artifacts/](../05-Templates-Tools/04-SASE-Artifacts/)
 
 | Artifact | Created By | Purpose |
 |----------|------------|---------|
-| **BRS** (BriefingScript) | Human (SE4H) | Task specification |
-| **LPS** (LoopScript) | Agent (SE4A) | Execution plan |
-| **MTS** (MentorScript) | Human (SE4H) | Coding standards |
-| **CRP** (Consultation Request) | Agent (SE4A) | When uncertain |
-| **MRP** (Merge-Readiness Pack) | Agent (SE4A) | 5-point evidence |
-| **VCR** (Version Controlled Resolution) | Human (SE4H) | Approval record |
+| **AGENTS.md** | Human | AI agent context (industry standard, 60K+ repos) |
+| **CRP** (Consultation Request) | Agent (SE4A) | When uncertain, request human guidance |
+| **MRP** (Merge-Readiness Pack) | Agent (SE4A) | 5-point evidence before merge |
+| **VCR** (Version Controlled Resolution) | Human (SE4H) | Approval/rejection record |
+
+> ⚠️ **Note**: BRS, LPS, MTS deprecated in 6.0.0. Use AGENTS.md instead (see [Deprecation Policy](../DEPRECATION-POLICY.md)).
 
 ### AI Tools & Prompts
 
@@ -117,13 +163,13 @@ Location: [05-Templates-Tools/1-AI-Tools/](../05-Templates-Tools/1-AI-Tools/)
 
 ### Automation Scripts
 
-Location: [05-Templates-Tools/4-Scripts/](../05-Templates-Tools/4-Scripts/)
+Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 | Script | Purpose |
 |--------|---------|
-| `compliance/sdlc_validator.py` | Validate SDLC 5.2 folder structure |
-| `compliance/sdlc_scanner.py` | Scan project for compliance |
-| `quick-start/solo_setup.py` | Setup for solo developer |
+| `compliance_sdlc_validator.py` | Validate SDLC 6.0.0 folder structure (7-Pillar + 2-Section) |
+| `compliance_sdlc_scanner.py` | Scan project for compliance |
+| `quickstart_solo_setup.py` | Setup for solo developer |
 
 ---
 
@@ -137,6 +183,6 @@ Location: [05-Templates-Tools/4-Scripts/](../05-Templates-Tools/4-Scripts/)
 
 ---
 
-**Last Updated**: January 27, 2026
+**Last Updated**: January 29, 2026
 **Authority**: CTO + CPO Office
-**Framework Version**: SDLC 5.2.0
+**Framework Version**: SDLC 6.0.0
