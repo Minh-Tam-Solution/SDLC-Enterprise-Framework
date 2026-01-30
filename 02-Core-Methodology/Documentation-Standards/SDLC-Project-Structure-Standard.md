@@ -1,8 +1,8 @@
 # SDLC Project Structure Standard
 
-**Version**: 6.0.0
+**Version**: 6.0.1
 **SDLC Framework Version**: 6.0.0
-**Date**: January 28, 2026
+**Date**: January 29, 2026
 **Status**: ACTIVE
 **Authority**: CTO Approved
 **Pillar**: 1 (10-Stage Lifecycle) + Pillar 6 (Documentation Permanence)
@@ -259,9 +259,167 @@ When validating root structure:
 
 ---
 
-## 7. Examples
+## 7. Specifications Location (MANDATORY)
 
-### 7.1 Compliant Project (STANDARD Tier)
+### 7.1 Where to Put Specs?
+
+**All specifications MUST be placed in `02-design/` with proper SPEC-XXXX numbering:**
+
+```
+docs/02-design/
+├── 01-ADRs/                          # Architecture Decision Records
+│   ├── SPEC-0001-ADR-001-Database-Choice.md
+│   ├── SPEC-0002-ADR-002-Auth-Strategy.md
+│   └── ...
+│
+├── 14-Technical-Specs/               # Technical Specifications
+│   ├── SPEC-0010-Auth-Service.md
+│   ├── SPEC-0011-API-Gateway.md
+│   ├── SPEC-0012-Event-Bus.md
+│   └── ...
+│
+└── 15-API-Specs/                     # API Specifications (optional subfolder)
+    ├── SPEC-0050-REST-API-v1.md
+    ├── SPEC-0051-WebSocket-API.md
+    └── ...
+```
+
+### 7.2 Specification Numbering Convention
+
+```
+SPEC-XXXX[-Type]-Name.md
+
+Format:
+  SPEC-    : Prefix (mandatory)
+  XXXX     : 4-digit sequential number (0001-9999)
+  Type     : Optional type (ADR, API, etc.)
+  Name     : Descriptive name (kebab-case)
+
+Examples:
+  SPEC-0001-ADR-001-Database-Choice.md    # ADR type
+  SPEC-0010-Auth-Service.md               # Technical spec
+  SPEC-0050-API-User-Management.md        # API spec
+```
+
+### 7.3 Numbering Ranges (Recommended)
+
+| Range | Type | Example |
+|-------|------|---------|
+| `0001-0099` | ADRs (Architecture Decisions) | `SPEC-0001-ADR-001-...` |
+| `0100-0499` | Technical Specs (Services) | `SPEC-0100-Auth-Service.md` |
+| `0500-0799` | API Specs | `SPEC-0500-REST-API-v1.md` |
+| `0800-0999` | Integration Specs | `SPEC-0800-GitHub-Integration.md` |
+
+### 7.4 Anti-Pattern: Specs Outside 02-design
+
+```
+# ❌ WRONG - Non-compliant locations
+docs/specs/                    # No stage prefix
+docs/specifications/           # No stage prefix
+docs/04-build/specs/           # Wrong stage (BUILD ≠ DESIGN)
+docs/01-planning/specs/        # Wrong stage (PLANNING ≠ DESIGN)
+
+# ✅ CORRECT - Always in 02-design
+docs/02-design/01-ADRs/SPEC-0001-*.md
+docs/02-design/14-Technical-Specs/SPEC-0100-*.md
+docs/02-design/15-API-Specs/SPEC-0500-*.md
+```
+
+### 7.5 Rationale
+
+- **Why 02-design?** Specifications define HOW to build, which is Stage 02's purpose
+- **Why numbered?** Ensures unique identification, easy referencing, and chronological tracking
+- **Why SPEC prefix?** Distinguishes from other documents, enables automated validation
+
+---
+
+## 8. SDLC Compliance Folder (Project Context)
+
+### 8.1 Purpose
+
+Every project implementing SDLC 6.0.0 should have an **SDLC Compliance folder** containing:
+- Project-specific summary of the SDLC Framework
+- AI context files (CLAUDE.md, AGENTS.md)
+- Quick reference for team members (human + AI)
+
+**This folder helps new team members quickly understand the project's SDLC implementation without reading the entire Framework.**
+
+### 8.2 Standard Location: `08-collaborate/01-SDLC-Compliance/`
+
+```
+docs/08-collaborate/
+└── 01-SDLC-Compliance/               # SDLC Context for this project
+    ├── CLAUDE.md                     # AI assistant context (project-specific)
+    ├── AGENTS.md                     # Agent guidelines & boundaries
+    ├── PROJECT-CONTEXT.md            # Human-readable quick reference
+    ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.0.0 summary (optional)
+```
+
+### 8.3 Why 08-collaborate (Not 09-govern)?
+
+| Aspect | 08-collaborate | 09-govern |
+|--------|----------------|-----------|
+| **Primary audience** | Team members (AI + Human) | Leadership, Auditors |
+| **Content type** | Context, onboarding, quick reference | Audit trails, compliance reports |
+| **Update frequency** | Per sprint/feature | Monthly/Quarterly |
+| **SDLC Compliance fits** | ✅ **Yes** - Team context | ❌ No - Not audit material |
+
+**Decision**: SDLC Compliance folder is for **team collaboration** (helping members understand the project), not for **governance audits** (tracking compliance).
+
+### 8.4 Root-Level Symlinks (Recommended)
+
+For convenience, create symlinks at project root to match industry standard (60K+ repos use root-level AGENTS.md):
+
+```bash
+# Create symlinks for quick access
+ln -s docs/08-collaborate/01-SDLC-Compliance/CLAUDE.md ./CLAUDE.md
+ln -s docs/08-collaborate/01-SDLC-Compliance/AGENTS.md ./AGENTS.md
+```
+
+**Result:**
+```
+your-project/
+├── CLAUDE.md → docs/08-collaborate/01-SDLC-Compliance/CLAUDE.md
+├── AGENTS.md → docs/08-collaborate/01-SDLC-Compliance/AGENTS.md
+├── docs/
+│   └── 08-collaborate/
+│       └── 01-SDLC-Compliance/
+│           ├── CLAUDE.md           # Source of truth
+│           ├── AGENTS.md           # Source of truth
+│           └── ...
+└── src/
+```
+
+### 8.5 SDLC Compliance Contents
+
+| File | Purpose | Required Tier |
+|------|---------|---------------|
+| `CLAUDE.md` | AI context: project overview, tech stack, conventions | STANDARD+ |
+| `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
+| `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
+| `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.0.0 quick reference | Optional |
+
+### 8.6 Migration for Existing Projects
+
+If your project uses a non-standard location:
+
+```bash
+# Old locations (migrate from)
+docs/08-Team-Management/01-SDLC-Compliance/    # Old folder naming
+docs/08-Team-Management/02-SDLC-Compliance/    # Old folder naming
+docs/09-govern/SDLC-Compliance/                # Wrong stage
+
+# New standard location (migrate to)
+docs/08-collaborate/01-SDLC-Compliance/        # Correct
+```
+
+---
+
+## 9. Examples
+
+### 9.1 Compliant Project (STANDARD Tier)
 
 ```
 my-project/
@@ -290,7 +448,7 @@ my-project/
 
 **Validation Result**: PASS (all STANDARD tier requirements met)
 
-### 7.2 Non-Compliant Project (PROFESSIONAL Tier)
+### 9.2 Non-Compliant Project (PROFESSIONAL Tier)
 
 ```
 my-project/
@@ -314,9 +472,9 @@ my-project/
 
 ---
 
-## 8. Migration Guide
+## 10. Migration Guide
 
-### 8.1 From SDLC 4.x/5.x to 6.0.0
+### 10.1 From SDLC 4.x/5.x to 6.0.0
 
 If your project uses old stage names (WHY, WHAT, HOW, BUILD, etc.):
 
@@ -332,7 +490,7 @@ If your project uses old stage names (WHY, WHAT, HOW, BUILD, etc.):
    - STANDARD+: Add `CLAUDE.md`, `.env.example`
    - PROFESSIONAL+: Add `docker-compose.yml`, `Makefile`
 
-### 8.2 Automated Migration
+### 10.2 Automated Migration
 
 Use `sdlcctl migrate` command:
 
@@ -349,9 +507,9 @@ sdlcctl migrate --from 5.x --to 6.0.0
 
 ---
 
-## 9. Sprint Documentation Structure (Pillar 2 Integration)
+## 11. Sprint Documentation Structure (Pillar 2 Integration)
 
-### 9.1 Sprint Folder Standard Location
+### 11.1 Sprint Folder Standard Location
 
 ```
 docs/
@@ -365,7 +523,7 @@ docs/
 │           └── SPRINT-RETROSPECTIVE-TEMPLATE.md
 ```
 
-### 9.2 Sprint Document Naming Convention
+### 11.2 Sprint Document Naming Convention
 
 | Document Type | Pattern | Example |
 |--------------|---------|---------|
@@ -374,7 +532,7 @@ docs/
 | Sprint Review | `SPRINT-{XXX}-REVIEW.md` | `SPRINT-001-REVIEW.md` |
 | Sprint Scope Change | `SPRINT-{XXX}-SCOPE-CHANGE-{YY}.md` | `SPRINT-001-SCOPE-CHANGE-01.md` |
 
-### 9.3 Required Sprint Documentation by Tier
+### 11.3 Required Sprint Documentation by Tier
 
 | Document | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
 |----------|------|----------|--------------|------------|
@@ -385,7 +543,7 @@ docs/
 | Scope Change Records | Optional | Optional | Required | Required |
 | Sprint Metrics | Optional | Optional | Required | Required |
 
-### 9.4 Sprint Plan Validation
+### 11.4 Sprint Plan Validation
 
 Sprint plans MUST contain (validated by `sdlcctl`):
 
@@ -400,7 +558,7 @@ Sprint plans MUST contain (validated by `sdlcctl`):
 - [ ] Phase alignment (which phase of Roadmap)
 ```
 
-### 9.5 Sprint Governance Integration
+### 11.5 Sprint Governance Integration
 
 Per **Pillar 2: Sprint Planning Governance**:
 
@@ -418,7 +576,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 
 ---
 
-## 10. Related Documents
+## 12. Related Documents
 
 - [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture definition
 - [SDLC-Naming-Standards.md](./SDLC-Naming-Standards.md) - File and document naming rules
@@ -428,7 +586,17 @@ Per **Pillar 2: Sprint Planning Governance**:
 
 ---
 
-## 11. Changelog
+## 13. Changelog
+
+### v6.0.1 (January 29, 2026)
+- Added Section 7: Specifications Location (MANDATORY)
+  - SPEC-XXXX numbering convention
+  - Numbering ranges for ADRs, Technical Specs, API Specs
+  - Anti-pattern guidance (specs outside 02-design)
+- Added Section 8: SDLC Compliance Folder (Project Context)
+  - Standardized location: `08-collaborate/01-SDLC-Compliance/`
+  - Root-level symlinks recommendation
+  - Migration guide for existing projects
 
 ### v6.0.0 (January 28, 2026)
 - Folder flattening (remove layer 3), version upgrade

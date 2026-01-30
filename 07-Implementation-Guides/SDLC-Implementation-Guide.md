@@ -399,9 +399,10 @@ your-project/
 │   │   └── roadmap.md                 # Product roadmap
 │   │
 │   ├── 02-design/                     # Stage 02: HOW?
-│   │   ├── architecture.md            # System architecture
-│   │   ├── ADRs/                      # Architecture Decision Records
-│   │   └── api-design.md              # API specifications
+│   │   ├── 01-ADRs/                   # Architecture Decision Records (SPEC-XXXX-ADR-XXX)
+│   │   ├── 02-System-Architecture/    # System architecture docs
+│   │   ├── 14-Technical-Specs/        # Technical Specifications (SPEC-XXXX)
+│   │   └── 15-API-Specs/              # API Specifications (optional)
 │   │
 │   ├── 03-integrate/                  # Stage 03: INTEGRATE
 │   │   ├── api-contracts/             # External API docs
@@ -429,9 +430,10 @@ your-project/
 │   │   └── incident-reports/          # Post-mortems
 │   │
 │   ├── 08-collaborate/                # Stage 08: COLLABORATE
-│   │   ├── team-protocols.md          # Team agreements
-│   │   ├── meeting-notes/             # Meeting records
-│   │   └── onboarding.md              # New member guide
+│   │   ├── 01-SDLC-Compliance/        # ⭐ Project SDLC context (CLAUDE.md, AGENTS.md)
+│   │   ├── 02-Team-Protocols/         # Team agreements
+│   │   ├── 03-Meeting-Notes/          # Meeting records
+│   │   └── 04-Onboarding/             # New member guide
 │   │
 │   ├── 09-govern/                     # Stage 09: GOVERN
 │   │   ├── compliance/                # Compliance evidence
@@ -554,6 +556,151 @@ mkdir -p .sdlc/checklists
 | **React** | `PascalCase` | 50 chars | `UserDashboard.tsx` |
 | **Markdown** | `kebab-case` | 60 chars | `deployment-guide.md` |
 | **Folders** | `kebab-case` | 30 chars | `sprint-logs/` |
+
+---
+
+## 📋 Specifications Location (MANDATORY)
+
+### Where to Put Specs?
+
+**All specifications MUST be in `02-design/` with proper numbering:**
+
+```
+docs/02-design/
+├── 01-ADRs/                          # Architecture Decision Records
+│   ├── SPEC-0001-ADR-001-Database-Choice.md
+│   ├── SPEC-0002-ADR-002-Auth-Strategy.md
+│   └── ...
+│
+├── 14-Technical-Specs/               # Technical Specifications
+│   ├── SPEC-0010-Auth-Service.md
+│   ├── SPEC-0011-API-Gateway.md
+│   ├── SPEC-0012-Event-Bus.md
+│   └── ...
+│
+└── 15-API-Specs/                     # API Specifications (optional subfolder)
+    ├── SPEC-0050-REST-API-v1.md
+    ├── SPEC-0051-WebSocket-API.md
+    └── ...
+```
+
+### Specification Numbering Convention
+
+```
+SPEC-XXXX[-Type]-Name.md
+
+Format:
+  SPEC-    : Prefix (mandatory)
+  XXXX     : 4-digit sequential number (0001-9999)
+  Type     : Optional type (ADR, API, etc.)
+  Name     : Descriptive name (kebab-case)
+
+Examples:
+  SPEC-0001-ADR-001-Database-Choice.md    # ADR type
+  SPEC-0010-Auth-Service.md               # Technical spec
+  SPEC-0050-API-User-Management.md        # API spec
+```
+
+### Numbering Ranges (Recommended)
+
+| Range | Type | Example |
+|-------|------|---------|
+| `0001-0099` | ADRs (Architecture Decisions) | `SPEC-0001-ADR-001-...` |
+| `0100-0499` | Technical Specs (Services) | `SPEC-0100-Auth-Service.md` |
+| `0500-0799` | API Specs | `SPEC-0500-REST-API-v1.md` |
+| `0800-0999` | Integration Specs | `SPEC-0800-GitHub-Integration.md` |
+
+### ❌ Anti-Pattern: Specs Outside 02-design
+
+```
+# ❌ WRONG - Don't do this
+docs/specs/                    # Non-compliant folder
+docs/specifications/           # Non-compliant folder
+docs/04-build/specs/           # Wrong stage
+
+# ✅ CORRECT - Always in 02-design
+docs/02-design/14-Technical-Specs/SPEC-0001-*.md
+```
+
+---
+
+## 🏢 SDLC Compliance Folder (Project Context)
+
+### Purpose
+
+Every project implementing SDLC 6.0.0 should have an **SDLC Compliance folder** containing:
+- Project-specific summary of the Framework
+- AI context files (CLAUDE.md, AGENTS.md)
+- Quick reference for team members (human + AI)
+
+**This folder helps new team members quickly understand the project without reading the entire Framework.**
+
+### Standard Location: `08-collaborate/01-SDLC-Compliance/`
+
+```
+docs/08-collaborate/
+└── 01-SDLC-Compliance/               # SDLC Context for this project
+    ├── CLAUDE.md                     # AI assistant context (project-specific)
+    ├── AGENTS.md                     # Agent guidelines & boundaries
+    ├── PROJECT-CONTEXT.md            # Human-readable quick reference
+    ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.0.0 summary (optional)
+```
+
+### Why 08-collaborate (Not 09-govern)?
+
+| Aspect | 08-collaborate | 09-govern |
+|--------|----------------|-----------|
+| **Primary audience** | Team members (AI + Human) | Leadership, Auditors |
+| **Content type** | Context, onboarding, quick ref | Audit trails, reports |
+| **Update frequency** | Per sprint/feature | Monthly/Quarterly |
+| **SDLC Compliance fits** | ✅ **Yes** - Team context | ❌ No - Not audit material |
+
+### Root-Level Symlinks (Recommended)
+
+For convenience, create symlinks at project root:
+
+```bash
+# Create symlinks for quick access
+ln -s docs/08-collaborate/01-SDLC-Compliance/CLAUDE.md ./CLAUDE.md
+ln -s docs/08-collaborate/01-SDLC-Compliance/AGENTS.md ./AGENTS.md
+```
+
+**Result:**
+```
+your-project/
+├── CLAUDE.md → docs/08-collaborate/01-SDLC-Compliance/CLAUDE.md
+├── AGENTS.md → docs/08-collaborate/01-SDLC-Compliance/AGENTS.md
+├── docs/
+│   └── 08-collaborate/
+│       └── 01-SDLC-Compliance/
+│           ├── CLAUDE.md           # Source of truth
+│           ├── AGENTS.md           # Source of truth
+│           └── ...
+└── src/
+```
+
+### SDLC Compliance Contents
+
+| File | Purpose | Required |
+|------|---------|----------|
+| `CLAUDE.md` | AI context: project overview, tech stack, conventions | STANDARD+ |
+| `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
+| `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
+| `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.0.0 quick reference | Optional |
+
+### Migration for Existing Projects
+
+If your project uses old location:
+```bash
+# Old locations (migrate from)
+docs/08-Team-Management/01-SDLC-Compliance/    # Old naming
+docs/09-govern/SDLC-Compliance/                # Wrong stage
+
+# New standard location (migrate to)
+docs/08-collaborate/01-SDLC-Compliance/        # Correct
+```
 
 ### Validation
 
@@ -849,6 +996,140 @@ sdlcctl scan /path/to/project --version 6.0
 
 ---
 
+## 📚 Real-World Migration Case Studies
+
+### Case Study 1: NQH-Bot Platform (Large-Scale Migration)
+
+**Context**: Vietnamese F&B Workforce Management Platform with 65+ specifications
+
+| Metric | Value |
+|--------|-------|
+| **Project Size** | Vietnamese F&B WFM Platform |
+| **Total Specs** | 65 specifications |
+| **Migration Timeline** | 8 weeks (Sprint 41-44) |
+| **Total Effort** | 129 SP (~258 hours) |
+| **Investment** | ₫338M |
+| **ROI** | 74% first year, 7-month payback |
+| **Final Compliance Score** | 87/100 |
+
+**Key Success Factors:**
+
+1. **ROI-Driven Planning**
+   - Calculate investment vs expected value before starting
+   - Present to CEO/CTO for formal approval
+   - Track against milestones
+
+2. **Phased Approach (P0 → P1 → P2 → P3)**
+   ```yaml
+   Phase P0: ADRs + API Specs (22 files) - Sprint 42
+   Phase P1: Technical Designs (50 files) - Sprint 42-43
+   Phase P2: UI/UX + Sprint Plans (40 files) - Sprint 43-44
+   Phase P3: Archive + Cleanup (100+ files) - Ongoing
+   ```
+
+3. **Domain Complexity Factor**
+   - Vietnamese F&B compliance specs required +40h extra effort
+   - BHXH, OT Calculation, Labor Law specs need CTO/Legal review
+   - Add complexity multiplier to estimates
+
+4. **Centralized Specs with Stage-Based Numbering**
+   ```
+   docs/specs/
+   ├── SPEC-01xx (Stage 01 - Planning)
+   ├── SPEC-02xx (Stage 02 - Design)
+   ├── ...
+   └── SPEC-10xx (Stage 10 - Operations)
+   ```
+
+**Pitfalls Encountered:**
+
+| Pitfall | Impact | Prevention |
+|---------|--------|------------|
+| Duplicate stage folders (04/05/06 collision) | High confusion | Check existing folders before creating |
+| Version reference inconsistency | Confusing docs | Update ALL headers, not just main files |
+| 23% specs missed 6.0.0 format | Validation failures | Use validation scripts early and often |
+
+**Lessons Learned:**
+- Large platforms (>100 files) benefit from centralized `docs/specs/`
+- SPEC-XXYY numbering (stage-based) provides clear organization
+- Pre-commit validation catches format issues before they accumulate
+
+---
+
+### Case Study 2: BFlow Platform (Stealth Pilot Approach)
+
+**Context**: Multi-tenant SaaS platform with careful, risk-averse migration strategy
+
+| Metric | Value |
+|--------|-------|
+| **Preparation Phase** | Sprint 122-126 (CTO-only, 10 weeks) |
+| **Execution Phase** | Sprint 127-130 (Team rollout) |
+| **Stealth Pilots** | 2 specs (CTO converts first) |
+| **Training** | 8-hour workshop before team migration |
+| **Gate Checkpoints** | G-Phase-0, G-Phase-1, G-Phase-2 |
+
+**Stealth Pilot Methodology:**
+
+```yaml
+Philosophy: "Validate before rollout"
+
+Week 1-4 (Sprint 122-123):
+  - CTO creates all templates
+  - CTO sets up validation tooling
+  - Team allocation: 0% SDLC 6.0.0 work
+
+Week 5-8 (Sprint 124-125):
+  - CTO converts 2 specs as "stealth pilots"
+  - Validates templates work in practice
+  - Measures actual conversion velocity
+  - Team allocation: Still 0% SDLC 6.0.0 work
+
+Week 9-10 (Sprint 126):
+  - Training materials finalized
+  - Tech Lead dry-run review
+  - Gate G-Phase-1 approval
+  - Team ready for Sprint 127 kickoff
+```
+
+**Key Success Factors:**
+
+1. **CTO Prepares Everything First**
+   - Templates, validation tools, training materials
+   - Team doesn't see incomplete work
+
+2. **Stealth Pilots Validate Templates**
+   - Real specs converted, not just theory
+   - Velocity data informs Sprint 127 planning
+
+3. **Clear Gate Checkpoints**
+   - G-Phase-0: Initial setup (AGENTS.md, version refs)
+   - G-Phase-1: Go-Live + CTO prep complete
+   - G-Phase-2: Team pilot success metrics
+
+4. **Team Communication Strategy**
+   - Set expectations early (Feb 3): "Sprint 127 conditional on Go-Live"
+   - Update regularly (Mar 28): "Still on track"
+   - Final confirmation (Apr 12): "Sprint 127 starts Apr 15"
+
+**Recommendation:**
+For teams new to SDLC 6.0.0, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
+- Team has never migrated SDLC versions before
+- High-stakes production system (can't afford migration failures)
+- CTO/Tech Lead capacity available for preparation work
+
+---
+
+### Choosing Your Approach
+
+| Scenario | Recommended Approach | Example |
+|----------|---------------------|---------|
+| **Small team, fast pace** | Direct migration | LITE/STANDARD tiers |
+| **Large codebase, many specs** | Phased (P0→P3) | NQH-Bot approach |
+| **Risk-averse, new to SDLC** | Stealth pilot | BFlow approach |
+| **Enterprise, compliance-heavy** | Full governance + stealth | Combine both approaches |
+
+---
+
 ## 📚 Related Documents
 
 ### Core Reading (Start Here)
@@ -922,8 +1203,8 @@ ROI = 10-50x improvement (tier dependent)
 
 ---
 
-**Document Version**: 6.0.0
-**Last Updated**: January 29, 2026
+**Document Version**: 6.0.1
+**Last Updated**: January 30, 2026
 **Owner**: CPO Office
 **Next Review**: February 2026
 **Framework**: SDLC 6.0.0
