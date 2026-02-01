@@ -1,13 +1,39 @@
-# SDLC Framework 6.0.0 Quick Reference Guide
+# SDLC Framework 6.0.1 Quick Reference Guide
 
-**Version**: 6.0.0
-**Date**: January 28, 2026
+**Version**: 6.0.1
+**Date**: February 1, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
 
 ---
 
-## What's New in 6.0.0
+## What's New in 6.0.1 (MINOR)
+
+### Stage Consistency Validation (SPEC-0021)
+
+```yaml
+New Specification:
+  - SPEC-0021: Stage Consistency Validation Service
+  - Prevents "spec drift" (implementation diverges from design)
+  - 4-stage consistency model (01 → 02 → 03 → 04)
+
+Key Features:
+  - Pre/Post-implementation checklists
+  - Artifact integrity hashing (SHA256 checksums)
+  - CLI validation commands (sdlcctl validate-consistency)
+  - CI/CD integration examples (GitHub Actions, GitLab)
+  - Tier-specific validation depths
+
+Historical Context:
+  - Sprint 128-129: Backend 100%, Frontend 0% (classic drift)
+  - Solution: Mandatory stage alignment validation
+```
+
+**Implementation Guide**: [07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md](../07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md)
+
+---
+
+## What's New in 6.0.0 (MAJOR)
 
 ### Section 8: Unified Specification Standard (MAJOR)
 
@@ -32,7 +58,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.0 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.1 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║

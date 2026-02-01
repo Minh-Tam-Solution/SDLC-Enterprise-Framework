@@ -1,9 +1,43 @@
-# SDLC 6.0.0 Executive Summary
+# SDLC 6.0.1 Executive Summary
 
-**Version**: 6.0.0
-**Release Date**: January 28, 2026 (MAJOR: Unified Specification Standard)
+**Version**: 6.0.1
+**Release Date**: February 1, 2026 (MINOR: Stage Consistency Validation)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## What's New in 6.0.1 (MINOR RELEASE)
+
+### Stage Consistency Validation (SPEC-0021)
+
+**The Problem**: "Spec drift" - implementation diverges from approved designs, causing rework and quality issues.
+
+**Historical Example** (Sprint 128-129):
+- Stage 01 (Planning): ✅ Team Invitations API spec complete
+- Stage 02 (Design): ✅ ADR-043 approved
+- Stage 03 (Integration): ✅ API contracts validated
+- Stage 04 (Build): ❌ Backend 100% complete, **Frontend 0%** (classic drift!)
+
+**The Solution**: Mandatory 4-stage consistency validation with automated checks.
+
+| Component | Capability | Implementation |
+|-----------|------------|----------------|
+| **4-Stage Model** | Planning → Design → Integration → Build | Cross-stage reference validation |
+| **Pre-Implementation Checklist** | Verify alignment BEFORE coding | Manual checklist (LITE/STANDARD) |
+| **Post-Implementation Checklist** | Verify alignment AFTER coding | Manual + automated (PROFESSIONAL+) |
+| **Artifact Integrity** | SHA256 checksums detect silent changes | CLI commands for checksum recording |
+| **CI/CD Integration** | Block PR merge if stages misaligned | GitHub Actions + GitLab examples |
+
+**Impact**:
+- **Cost Savings**: 60% reduction in manual review time (automated validation)
+- **Risk Mitigation**: Early detection prevents costly rework
+- **Developer Experience**: Clear checklists reduce cognitive load
+
+**Resources**:
+- Specification: [SPEC-0021](../05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md)
+- Implementation Guide: [SDLC-Stage-Consistency-Validation-Guide.md](../07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md)
+- Test-Fixing Skill: Updated to Framework 6.0.1 compliance (version 2.2.0)
 
 ---
 

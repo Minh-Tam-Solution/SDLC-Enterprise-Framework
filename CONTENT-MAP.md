@@ -1,8 +1,8 @@
-# SDLC Framework 6.0.0 Content Map
+# SDLC Framework 6.0.1 Content Map
 
-**Version**: 6.0.0
+**Version**: 6.0.1
 **Status**: ACTIVE
-**Date**: January 29, 2026
+**Date**: February 1, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
 
 ---
@@ -110,6 +110,7 @@ Before creating any new document, check if a canonical file already exists for t
 | **Design Decisions Template** | `05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md` | Lightweight ADR for sprint decisions | **NEW 6.0.0** |
 | **Spec Delta Template** | `05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md` | Version change tracking | **NEW 6.0.0** |
 | **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.0** |
+| **Stage Consistency Validation** | `05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md` | 4-stage consistency validation service | **NEW 6.0.1** |
 | OpenSpec Analysis | `99-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
 | Migration Plan (20 Specs) | `99-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
 | Conversion Layer Spec | `99-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
@@ -251,4 +252,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: January 29, 2026
+**Last Updated**: February 1, 2026

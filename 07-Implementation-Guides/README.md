@@ -1,8 +1,8 @@
-# SDLC 6.0.0 Implementation Guides
+# SDLC 6.0.1 Implementation Guides
 
-**Version**: 6.0.0 | **Status**: PRODUCTION READY | **Date**: January 29, 2026
+**Version**: 6.0.1 | **Status**: PRODUCTION READY | **Date**: February 1, 2026
 
-Practical how-to guides for implementing SDLC 6.0.0 framework + Section 7 Quality Assurance System.
+Practical how-to guides for implementing SDLC 6.0.1 framework + Section 7 Quality Assurance System + **SPEC-0021 Stage Consistency Validation**.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
@@ -34,12 +34,24 @@ Adopt SDLC 6.0.0 incrementally into running projects.
 
 ---
 
+## What's New in 6.0.1
+
+**SPEC-0021: Stage Consistency Validation** - Prevents "spec drift" where implementation diverges from design.
+
+| Feature | Description |
+|---------|-------------|
+| **4-Stage Model** | Stage 01 ↔ 02 ↔ 03 ↔ 04 consistency validation |
+| **Implementation Guide** | [SDLC-Stage-Consistency-Validation-Guide.md](SDLC-Stage-Consistency-Validation-Guide.md) ⭐ NEW |
+
+---
+
 ## Quick Navigation
 
 | I want to... | Go to |
 |--------------|-------|
 | Start SDLC from scratch (new project) | [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) |
 | Add SDLC to existing project | Start with [Pre-Commit Hooks](SDLC-PRE-COMMIT-HOOKS.md) |
+| **Validate stage consistency** | [SDLC-Stage-Consistency-Validation-Guide.md](SDLC-Stage-Consistency-Validation-Guide.md) ⭐ NEW |
 | Choose code review tier | [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) |
 | Setup pre-commit hooks | [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) |
 | Handle production crisis | [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) |
@@ -55,7 +67,8 @@ Adopt SDLC 6.0.0 incrementally into running projects.
 
 | Guide | Purpose | Use When |
 |-------|---------|----------|
-| **SDLC-Implementation-Guide.md** | Complete SDLC 6.0.0 deployment | Starting from scratch (greenfield) |
+| **SDLC-Implementation-Guide.md** | Complete SDLC 6.0.1 deployment | Starting from scratch (greenfield) |
+| **SDLC-Stage-Consistency-Validation-Guide.md** | 4-stage consistency validation | Preventing spec drift ⭐ NEW |
 | **SDLC-Self-Contained-Deployment-Guide.md** | Team folder deployment | Deploying to specific team |
 | **SDLC-Compliance-Enforcement-Guide.md** | Adopt SDLC in existing project | Brownfield migration |
 
@@ -183,6 +196,6 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 ---
 
-**Last Updated**: January 29, 2026
+**Last Updated**: February 1, 2026
 **Authority**: CTO + CPO Office
-**Framework Version**: SDLC 6.0.0
+**Framework Version**: SDLC 6.0.1

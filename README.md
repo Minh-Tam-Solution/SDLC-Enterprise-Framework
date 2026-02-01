@@ -1,6 +1,6 @@
-# SDLC 6.0.0 Universal Framework
+# SDLC 6.0.1 Universal Framework
 
-**Version**: 6.0.0 | **Status**: ACTIVE | **Date**: January 2026
+**Version**: 6.0.1 | **Status**: ACTIVE | **Date**: February 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.0 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.1 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -19,7 +19,14 @@ SDLC 6.0.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Section 7**: Quality Assurance System (Anti-Vibecoding)
 - **Section 8**: Unified Specification Standard **NEW in 6.0.0**
 
-**NEW in 6.0.0 (Major Release)**:
+**NEW in 6.0.1 (Minor Release - February 2026)**:
+- **SPEC-0021: Stage Consistency Validation**: Formalized 4-stage consistency validation workflow
+- **Pre/Post-Implementation Checklists**: Actionable checklists for stage transitions
+- **Artifact Integrity Hashing**: SHA256 checksums for post-approval modification detection
+- **CLI Validation Commands**: `sdlcctl validate-consistency` for automated checking
+- **Tier-Specific Validation**: LITE (basic), STANDARD (moderate), PROFESSIONAL (deep), ENTERPRISE (comprehensive)
+
+**From 6.0.0 (Major Release)**:
 - **Unified Specification Standard**: YAML frontmatter, BDD requirements (GIVEN-WHEN-THEN), tier-aware specs
 - **DESIGN_DECISIONS.md Template**: Lightweight ADR alternative for sprint-scoped decisions
 - **SPEC_DELTA.md Template**: Version change tracking with breaking change documentation
@@ -452,6 +459,7 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
+| **6.0.1** | **Feb 1, 2026** | **MINOR: Stage Consistency Validation** - SPEC-0021 formalizes proven 4-stage consistency validation workflow (Stage 01 PLANNING ↔ Stage 02 DESIGN ↔ Stage 03 INTEGRATE ↔ Stage 04 BUILD). Includes pre/post-implementation checklists, artifact integrity hashing (SHA256), CLI validation commands, CI/CD integration patterns, tier-specific validation depths. Addresses "spec drift" where implementation diverges from approved designs. Sprint 134 completion. |
 | **6.0.0** | **Jan 28, 2026** | **MAJOR: Unified Specification Standard (Section 8)** - YAML frontmatter requirement, BDD requirements format, DESIGN_DECISIONS.md template (lightweight ADRs), SPEC_DELTA.md template (version tracking), Context Authority Methodology (dynamic AGENTS.md with 4 zones), OpenSpec alignment analysis, 20 priority spec migration plan. Breaking: All new specs must use unified format. |
 | 5.3.0 | Jan 28, 2026 | **Stage Dependency Matrix + Quality Assurance System** - Explicit stage dependencies (ADR-041), Stage Exit Criteria, Sprint-Stage Integration, Tier-Specific Requirements, Stage Transition Checklists, Quality Assurance System (Section 7 - Anti-Vibecoding: Vibecoding Index, Progressive Routing, Auto-Generation Layer, Kill Switch) |
 | 5.2.0 | Jan 22, 2026 | **Principle-Centric Restructuring** - AI Governance Principles, Risk-Based Planning, Concentric Circles Model, CONTENT-MAP.md, DEPRECATION-POLICY.md |

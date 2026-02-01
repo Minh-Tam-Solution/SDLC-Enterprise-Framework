@@ -1,11 +1,11 @@
-# SDLC 6.0.0 Templates & Tools
+# SDLC 6.0.1 Templates & Tools
 ## Complete 10-Stage Productivity Suite + Section 8 Unified Specification Standard
 
-**Version**: 6.0.0
-**Date**: January 28, 2026
+**Version**: 6.0.1
+**Date**: February 1, 2026
 **Stage**: 03 - TEMPLATES & TOOLS
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
-**Status**: PRODUCTION-READY - FRAMEWORK 6.0 SPECIFICATION STANDARD
+**Status**: PRODUCTION-READY - FRAMEWORK 6.0.1 STAGE CONSISTENCY VALIDATION
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) (7 Principles)
 **Organization**: Numbered directories (01-08) with consistent 2-digit prefixes
@@ -14,7 +14,33 @@
 
 ---
 
-## What's New in SDLC 6.0.0 (January 2026)
+## What's New in SDLC 6.0.1 (February 2026)
+
+### SPEC-0021: Stage Consistency Validation (MINOR)
+
+**SDLC 6.0.1** introduces **SPEC-0021: Stage Consistency Validation** - ensures 4-stage alignment (Planning → Design → Integrate → Build).
+
+```yaml
+SPEC-0021 Key Features (01-Specification-Standard/):
+  4-Stage Model:              Stage 01 ↔ 02 ↔ 03 ↔ 04 consistency
+  Pre-Implementation:         Verify stages aligned BEFORE coding
+  Post-Implementation:        Verify code matches design AFTER coding
+  Artifact Integrity:         SHA256 checksums detect modifications
+  CLI Commands:               sdlcctl validate-consistency
+  CI/CD Integration:          GitHub Actions + GitLab examples
+  Tier-Specific Depths:       LITE (basic) → ENTERPRISE (comprehensive)
+
+Business Value:
+  - Prevents "spec drift" (implementation ≠ design)
+  - Catches frontend gaps BEFORE merge
+  - Enforces stage dependencies (ADR-041)
+```
+
+**[NEW: SPEC-0021-Stage-Consistency-Validation.md](01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md)**
+
+---
+
+## What's in SDLC 6.0.0 (January 2026)
 
 ### Section 8: Unified Specification Standard (MAJOR)
 
@@ -420,6 +446,7 @@ Result: 50x organizational efficiency
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.0.1** | **Feb 1, 2026** | **SPEC-0021 Stage Consistency Validation** - 4-stage model, pre/post checklists, artifact hashing, CLI validation |
 | **6.0.0** | **Jan 28, 2026** | **Section 8 Unified Specification Standard, YAML frontmatter, BDD format, OpenSpec alignment** |
 | 5.3.0 | Jan 27, 2026 | Section 7 Quality Assurance System (Vibecoding Index, Kill Switch) |
 | 5.2.0 | Jan 22, 2026 | AI Governance integration, simplified SASE (AGENTS.md primary) |
@@ -430,11 +457,11 @@ Result: 50x organizational efficiency
 ---
 
 **Document Status**: ACTIVE - PRODUCTION READY
-**Compliance**: MANDATORY for all SDLC 6.0.0 projects
-**Last Updated**: January 28, 2026
+**Compliance**: MANDATORY for all SDLC 6.0.1 projects
+**Last Updated**: February 1, 2026
 **Owner**: CTO + CPO Office
-**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.1 (7-Pillar + 2-Section)
 
 ***"Section 8: Unified specifications enable consistent quality."***
 
-***"From ad-hoc specs to AI-parseable standards - the SDLC 6.0.0 evolution."***
+***"SPEC-0021: Stage consistency prevents spec drift."***

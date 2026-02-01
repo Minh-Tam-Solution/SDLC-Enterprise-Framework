@@ -1,22 +1,38 @@
 # Section 8: Unified Specification Standard
 
-**Version**: 6.0.0
+**Version**: 6.0.1
 **Status**: ACTIVE - PRODUCTION READY
-**Date**: January 28, 2026
+**Date**: February 1, 2026
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
-**Framework**: SDLC 6.0.0
+**Framework**: SDLC 6.0.1
 
 ---
 
 ## Overview
 
-This directory contains the **Section 8: Unified Specification Standard** for SDLC Framework 6.0.0. All specifications in the SDLC ecosystem MUST follow this format to ensure AI-parseability, consistency, and tier-awareness.
+This directory contains the **Section 8: Unified Specification Standard** for SDLC Framework 6.0.1. All specifications in the SDLC ecosystem MUST follow this format to ensure AI-parseability, consistency, and tier-awareness.
 
 **Key Features**:
 - YAML frontmatter for metadata extraction (MANDATORY)
 - BDD requirements format (GIVEN-WHEN-THEN)
 - Tier-aware specifications (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
 - OpenSpec-inspired patterns + SDLC governance
+
+---
+
+## What's New in 6.0.1
+
+**SPEC-0021: Stage Consistency Validation** - Ensures 4-stage alignment (Planning → Design → Integrate → Build)
+
+| Feature | Description |
+|---------|-------------|
+| **4-Stage Model** | Stage 01 ↔ 02 ↔ 03 ↔ 04 consistency validation |
+| **Pre/Post Checklists** | Verify alignment before and after implementation |
+| **Artifact Hashing** | SHA256 checksums detect post-approval modifications |
+| **CLI Commands** | `sdlcctl validate-consistency` automation |
+| **CI/CD Integration** | GitHub Actions + GitLab examples |
+
+**Reference**: [SPEC-0021-Stage-Consistency-Validation.md](SPEC-0021-Stage-Consistency-Validation.md)
 
 ---
 
@@ -31,6 +47,9 @@ This directory contains the **Section 8: Unified Specification Standard** for SD
 │   ├── DESIGN_DECISIONS.md             # Lightweight ADR template
 │   ├── SPEC_DELTA.md                   # Version change tracking
 │   └── CONTEXT_AUTHORITY_METHODOLOGY.md  # Dynamic AGENTS.md patterns
+│
+├── Governance Specifications/
+│   └── SPEC-0021-Stage-Consistency-Validation.md  # ⭐ NEW in 6.0.1
 │
 └── examples/                           # Tier-specific examples
     ├── Example-Spec-LITE.md            # Minimal spec (1-2 people)
@@ -159,8 +178,8 @@ See [SDLC-Specification-Standard.md](./SDLC-Specification-Standard.md) Section 7
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: January 28, 2026
+**Last Updated**: February 1, 2026
 **Owner**: CTO + CPO Office
-**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.1 (7-Pillar + 2-Section)
 
 ***"Consistent specifications enable consistent quality."***

@@ -1,21 +1,21 @@
-# SDLC 6.0.0 Core Methodology
+# SDLC 6.0.1 Core Methodology
 
-**Version**: 6.0.0
-**Date**: January 28, 2026
-**Status**: ACTIVE - Unified Specification Standard (MAJOR RELEASE)
+**Version**: 6.0.1
+**Date**: February 1, 2026
+**Status**: ACTIVE - Stage Consistency Validation (MINOR RELEASE)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
 ## Executive Summary
 
-SDLC 6.0.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance and unified specification standards.
+SDLC 6.0.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, and **stage consistency validation**.
 
 ### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.0 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.1 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
@@ -750,6 +750,7 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.0.1** | **Feb 1, 2026** | **MINOR: SPEC-0021 Stage Consistency Validation** - 4-stage consistency model, pre/post-implementation checklists, artifact integrity hashing, CLI validation commands |
 | **6.0.0** | **Jan 28, 2026** | **MAJOR: 7-Pillar + 2-Section Architecture, Unified Specification Standard** |
 | 5.3.0 | Jan 27, 2026 | Section 7 - Quality Assurance System + Stage Dependencies |
 | 5.2.0 | Jan 22, 2026 | Principle-Centric Framework: 7-Pillar + AI Governance Principles |
