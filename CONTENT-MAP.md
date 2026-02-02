@@ -70,7 +70,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Agent Accountability | `03-AI-GOVERNANCE/02-Agent-Accountability.md` | — | ACTIVE |
 | Planning Mode Principle | `03-AI-GOVERNANCE/03-Planning-Mode-Principle.md` | `02-AI-Tools/ai-agent-best-practices-2026/01-planning-mode.md` | ACTIVE |
 | Verification Principle | `03-AI-GOVERNANCE/04-Verification-Principle.md` | — | ACTIVE |
-| Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `02-AI-Tools/ai-agent-best-practices-2026/05-memory-context-management.md` | ACTIVE |
+| Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `02-AI-Tools/ai-agent-best-practices-2026/06-memory-context-management.md` | ACTIVE |
 | Tool Evaluation Criteria | `03-AI-GOVERNANCE/06-Tool-Evaluation-Criteria.md` | — | ACTIVE |
 | AI Anti-Patterns | `03-AI-GOVERNANCE/07-Anti-Patterns.md` | — | ACTIVE |
 
@@ -144,9 +144,9 @@ Before creating any new document, check if a canonical file already exists for t
 | Model Selection | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
 | Sub-agent Orchestration | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE (Enhanced 6.0.3) |
 | Prompting Best Practices | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-prompting-best-practices.md` | — | ACTIVE |
-| Memory & Context | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/05-memory-context-management.md` | — | ACTIVE (Enhanced 6.0.3) |
-| Permissions & Security | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-permissions-security.md` | — | ACTIVE |
-| Developer Role Evolution | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-developer-role-evolution.md` | — | ACTIVE |
+| Memory & Context | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-memory-context-management.md` | — | ACTIVE (Enhanced 6.0.3) |
+| Permissions & Security | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-permissions-security.md` | — | ACTIVE |
+| Developer Role Evolution | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/08-developer-role-evolution.md` | — | ACTIVE |
 | **Git Workflow Patterns** | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-git-workflow-patterns.md` | RFC-SDLC-604 | **NEW 6.0.3** |
 
 ### Implementation Guides (07-Implementation-Guides/)
@@ -235,7 +235,7 @@ Before creating any new document, check if a canonical file already exists for t
 |----------|-------------------|-------------------|--------|
 | **RFC-SDLC-603** | `07-Implementation-Guides/MCP-Integration-Guide.md` | ✅ 100% methodology | DELETED |
 | **RFC-SDLC-604** | `04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md` | ✅ 100% complete | DELETED |
-| **RFC-SDLC-605** | `04-AI-Tools-Landscape/best-practices-2026/05-memory-context-management.md` (enhanced) | ✅ 100% methodology | DELETED |
+| **RFC-SDLC-605** | `04-AI-Tools-Landscape/best-practices-2026/06-memory-context-management.md` (enhanced) | ✅ 100% methodology | DELETED |
 | **RFC-SDLC-606** | `04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md` (enhanced) | ✅ 100% methodology | DELETED |
 | **RFC-SDLC-607** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | ✅ 100% methodology | DELETED |
 

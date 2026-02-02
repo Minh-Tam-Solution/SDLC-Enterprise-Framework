@@ -1,11 +1,11 @@
 # AI Agent Best Practices 2026
-## SDLC 5.3.0 - Software Engineering 3.0
+## SDLC 6.0.3 - Software Engineering 3.0
 
-**Version:** 6.0.2
+**Version:** 6.0.3
 **Status:** ACTIVE - PRODUCTION READY
-**Date:** January 27, 2026
-**Source:** Expert workflow analysis, Claude Code best practices, ADR-034 learnings
-**Framework:** SDLC 5.3.0 (8-Pillar Architecture + Quality Assurance System)
+**Date:** February 2, 2026
+**Source:** Expert workflow analysis, Claude Code best practices, ADR-034 learnings, Boris Cherny 10 Tactics
+**Framework:** SDLC 6.0.3 (7-Pillar + 2-Section Architecture)
 
 ---
 
@@ -24,10 +24,11 @@ This guide documents the 2026 best practices for AI-assisted software developmen
 1. [Planning Mode](01-planning-mode.md) - Pre-implementation pattern extraction
 2. [Model Selection Matrix](02-model-selection-matrix.md) - Task-appropriate model routing
 3. [Sub-agent Orchestration](03-sub-agent-orchestration.md) - Session management patterns
-4. [Prompting Best Practices](04-prompting-best-practices.md) - Effective AI communication
-5. [Memory & Context Management](05-memory-context-management.md) - CLAUDE.md patterns
-6. [Permissions & Security](06-permissions-security.md) - Safe AI execution
-7. [Developer Role Evolution](07-developer-role-evolution.md) - SE 3.0 responsibilities
+4. [Git Workflow Patterns](04-git-workflow-patterns.md) - Parallel AI development with worktrees ⭐ NEW
+5. [Prompting Best Practices](05-prompting-best-practices.md) - Effective AI communication
+6. [Memory & Context Management](06-memory-context-management.md) - CLAUDE.md patterns
+7. [Permissions & Security](07-permissions-security.md) - Safe AI execution
+8. [Developer Role Evolution](08-developer-role-evolution.md) - SE 3.0 responsibilities
 
 ---
 
@@ -201,5 +202,5 @@ All AI-generated code requires:
 ---
 
 **Document Status:** ACTIVE - PRODUCTION READY
-**Last Updated:** January 22, 2026
-**Framework:** SDLC 5.2.0
+**Last Updated:** February 2, 2026
+**Framework:** SDLC 6.0.3

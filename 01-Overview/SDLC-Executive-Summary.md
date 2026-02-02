@@ -19,7 +19,7 @@
 |-----------|----------------|-------------------|---------------------|
 | **MCP Integration** | RFC-603 | [MCP-Integration-Guide.md](../07-Implementation-Guides/MCP-Integration-Guide.md) (~450 lines) | **6x faster** bug triage (automated GitHub/Slack/Jira) |
 | **Git Worktrees** | RFC-604 | [git-workflow-patterns.md](../04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md) (~575 lines) | **2.5x faster** (20h → 8h with 4 parallel AI sessions) |
-| **Continuous Learning** | RFC-605 | Enhanced [memory-context-management.md](../04-AI-Tools-Landscape/best-practices-2026/05-memory-context-management.md) (+130 lines) | **Zero repeated bugs** (AI learns from `.claude/learnings/`) |
+| **Continuous Learning** | RFC-605 | Enhanced [memory-context-management.md](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-memory-context-management.md) (+130 lines) | **Zero repeated bugs** (AI learns from `.claude/learnings/`) |
 | **Research Delegation** | RFC-606 | Enhanced [sub-agent-orchestration.md](../04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md) (+95 lines) | **3.3x faster** research (5h → 1.5h parallel subagents) |
 | **Visual Documentation** | RFC-607 | [SDLC-Visual-Documentation-Standards.md](../02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md) (+280 lines) | **4x faster** onboarding (2h → 30min with ASCII diagrams) |
 

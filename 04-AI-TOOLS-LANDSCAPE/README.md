@@ -148,9 +148,9 @@ Full guide: [best-practices-2026/README.md](best-practices-2026/README.md)
 | **Model Selection** | Task-appropriate model routing | [02-model-selection-matrix.md](best-practices-2026/02-model-selection-matrix.md) |
 | **Sub-agents** | Session management patterns | [03-sub-agent-orchestration.md](best-practices-2026/03-sub-agent-orchestration.md) |
 | **Prompting** | Effective AI communication | [04-prompting-best-practices.md](best-practices-2026/04-prompting-best-practices.md) |
-| **Context Management** | CLAUDE.md patterns (<60 lines) | [05-memory-context-management.md](best-practices-2026/05-memory-context-management.md) |
-| **Security** | Safe AI execution | [06-permissions-security.md](best-practices-2026/06-permissions-security.md) |
-| **Developer Role** | SE 3.0 responsibilities | [07-developer-role-evolution.md](best-practices-2026/07-developer-role-evolution.md) |
+| **Context Management** | CLAUDE.md patterns (<60 lines) | [06-memory-context-management.md](best-practices-2026/06-memory-context-management.md) |
+| **Security** | Safe AI execution | [07-permissions-security.md](best-practices-2026/07-permissions-security.md) |
+| **Developer Role** | SE 3.0 responsibilities | [08-developer-role-evolution.md](best-practices-2026/08-developer-role-evolution.md) |
 
 ### Why Best Practices Are Here (Not in 05-Templates-Tools)
 
@@ -202,9 +202,9 @@ These patterns proved universal and were promoted to [03-AI-GOVERNANCE/](../03-A
 │   ├── 02-model-selection-matrix.md  # Task-appropriate model routing
 │   ├── 03-sub-agent-orchestration.md # Session management patterns
 │   ├── 04-prompting-best-practices.md # Effective AI communication
-│   ├── 05-memory-context-management.md # CLAUDE.md patterns
-│   ├── 06-permissions-security.md # Safe AI execution
-│   └── 07-developer-role-evolution.md # SE 3.0 responsibilities
+│   ├── 06-memory-context-management.md # CLAUDE.md patterns
+│   ├── 07-permissions-security.md # Safe AI execution
+│   └── 08-developer-role-evolution.md # SE 3.0 responsibilities
 ├── capability-matrix.md         # Detailed comparison
 ├── integration-guides/          # Orchestrator integration
 │   └── mcp-integration.md

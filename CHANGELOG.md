@@ -24,7 +24,7 @@
 2. `04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md` (~575 lines) - Git worktrees for parallel AI development (Ring 2: Governance)
 
 **Files Enhanced** (3 existing):
-1. `04-AI-Tools-Landscape/best-practices-2026/05-memory-context-management.md` (+130 lines) - Continuous Learning Protocol section added
+1. `04-AI-Tools-Landscape/best-practices-2026/06-memory-context-management.md` (+130 lines) - Continuous Learning Protocol section added
 2. `04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md` (+95 lines) - Research Delegation Pattern section added
 3. `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` (new, +280 lines) - Visual documentation standards (Ring 1: Core)
 
@@ -915,9 +915,9 @@ critical_paths:
 | 02-model-selection-matrix.md | Task-appropriate model routing |
 | 03-sub-agent-orchestration.md | Session management patterns |
 | 04-prompting-best-practices.md | Effective AI communication |
-| 05-memory-context-management.md | CLAUDE.md patterns |
-| 06-permissions-security.md | Safe AI execution |
-| 07-developer-role-evolution.md | SE 3.0 responsibilities |
+| 06-memory-context-management.md | CLAUDE.md patterns |
+| 07-permissions-security.md | Safe AI execution |
+| 08-developer-role-evolution.md | SE 3.0 responsibilities |
 
 > **Move Reason**: Concentric Circles Model restructuring - best practices are strategic intel (OUTER RING) and belong with tool profiles in 04-AI-TOOLS-LANDSCAPE/, not with operational templates in 05-Templates-Tools/.
 
@@ -960,9 +960,9 @@ critical_paths:
 - 04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md
 - 04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md
 - 04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-prompting-best-practices.md
-- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/05-memory-context-management.md
-- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-permissions-security.md
-- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-developer-role-evolution.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-memory-context-management.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-permissions-security.md
+- 04-AI-TOOLS-LANDSCAPE/best-practices-2026/08-developer-role-evolution.md
 
 **Updated - Core Methodology**:
 - 02-Core-Methodology/SDLC-Agentic-Core-Principles.md (5.2.0, Planning Mode, Model Selection)
