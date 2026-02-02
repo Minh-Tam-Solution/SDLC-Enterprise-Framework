@@ -18,80 +18,109 @@ This guide helps you set up standardized E2E API testing in under 30 minutes usi
 
 ## Prerequisites
 
-- [ ] OpenAPI 3.0 specification (Stage 03: `docs/03-Integration-APIs/openapi.json`)
+- [ ] OpenAPI 3.0+ specification (Stage 03: `docs/03-integrate/02-API-Specifications/openapi.json`)
 - [ ] Test credentials (API keys, OAuth tokens)
-- [ ] e2e-api-testing skill v1.1.0 (Claude Code skill)
-- [ ] sdlcctl CLI installed
+- [ ] e2e-api-testing skill v1.2.0+ (Claude Code skill)
+- [ ] sdlcctl CLI installed (optional, for automation)
+
+**Framework References**:
+- [E2E API Testing Methodology](../02-Core-Methodology/SDLC-E2E-API-Testing-Methodology.md) - 6-Phase workflow
+- [SSOT Principle](../02-Core-Methodology/SDLC-SSOT-Principle.md) - Single Source of Truth guidelines
 
 ---
 
 ## 5-Minute Setup
 
-### Step 1: Verify Stage 03 Documentation
+### Step 1: Verify Stage 03 Documentation (Phase 0: SSOT Check)
 
 ```bash
-# Check API documentation exists
+# Check API documentation exists (SSOT compliance)
+find . -name "openapi.json" -type f
+# Expected: EXACTLY ONE file at docs/03-integrate/02-API-Specifications/openapi.json
+
+# Validate OpenAPI spec quality
 sdlcctl validate --stage 03 --check api-docs
 
 # Expected output:
-# ✅ openapi.json found at docs/03-Integration-APIs/02-API-Specifications/openapi.json
+# ✅ openapi.json found at docs/03-integrate/02-API-Specifications/openapi.json
+# ✅ SSOT Compliance: PASS (no duplicates)
 # ✅ 58 endpoints defined
 # ✅ Schema validation PASSED
 ```
 
-### Step 2: Create Testing Folder Structure
+**Reference**: [SSOT Compliance Checklist](../05-Templates-Tools/05-Checklists/SSOT-COMPLIANCE-CHECKLIST.md)
+
+### Step 2: Create Testing Folder Structure (Stage 05 Setup)
 
 ```bash
-# Create SDLC-compliant folder structure
-mkdir -p docs/05-Testing-Quality/03-E2E-Testing/{reports,scripts,artifacts,security-tests}
+# Create SDLC 6.0.2 compliant folder structure
+mkdir -p docs/05-test/03-E2E-Testing/{reports,scripts,artifacts,security-tests}
 
-# Initialize README with cross-reference
-cat > docs/05-Testing-Quality/03-E2E-Testing/README.md << 'EOF'
+# Initialize README with SSOT cross-reference
+cat > docs/05-test/03-E2E-Testing/README.md << 'EOF'
 # E2E API Testing
 
 **Stage**: 05-TEST
-**Cross-Reference**: [Stage 03 API Specifications](../../03-Integration-APIs/02-API-Specifications/)
+**Framework**: SDLC 6.0.2
+**Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/02-API-Specifications/)
 
 ## Contents
 
 - `reports/` - E2E test reports (E2E-API-REPORT-YYYY-MM-DD.md)
 - `scripts/` - Test scripts and automation
 - `artifacts/` - Test data and fixtures
-- `security-tests/` - OWASP security test results
+- `security-tests/` - OWASP API Top 10 security test results
 
-## Links to Stage 03
+## SSOT Principle
 
-| API Document | Test Report |
-|--------------|-------------|
-| [openapi.json](../../03-Integration-APIs/02-API-Specifications/openapi.json) | [Latest Report](reports/) |
+**Canonical API Spec**: [openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
+
+**DO NOT COPY** - Always reference Stage 03 canonical source. Use symlinks if needed.
+
+## Stage 03 ↔ Stage 05 Links
+
+| API Document (Stage 03) | Test Report (Stage 05) |
+|-------------------------|------------------------|
+| [openapi.json](../../03-integrate/02-API-Specifications/openapi.json) | [Latest Report](reports/) |
+| [API Endpoint Reference](../../03-integrate/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md) | [Test Coverage](reports/) |
 EOF
 ```
 
-### Step 3: Run E2E Tests
+**Reference**: [E2E API Test Report Template](../05-Templates-Tools/06-Manual-Templates/E2E-API-TEST-REPORT-TEMPLATE.md)
+
+### Step 3: Run E2E Tests (Phase 2: Test Execution)
 
 ```bash
-# Using e2e-api-testing skill
-/e2e-api-testing --openapi docs/03-Integration-APIs/02-API-Specifications/openapi.json
+# Option 1: Using e2e-api-testing skill (Claude Code)
+/e2e-api-testing --openapi docs/03-integrate/02-API-Specifications/openapi.json
 
-# Or using sdlcctl CLI
+# Option 2: Using sdlcctl CLI (automated)
 sdlcctl e2e validate \
-  --openapi docs/03-Integration-APIs/02-API-Specifications/openapi.json \
+  --openapi docs/03-integrate/02-API-Specifications/openapi.json \
   --min-pass-rate 80
+
+# Option 3: Manual testing (curl/Postman)
+# See: E2E API Test Report Template for manual test checklist
 ```
 
-### Step 4: Validate Cross-References
+**Reference**: [E2E API Testing Methodology - Phase 2](../02-Core-Methodology/SDLC-E2E-API-Testing-Methodology.md#phase-2-test-execution-automated--manual)
+
+### Step 4: Validate Cross-References (Phase 5: Cross-Ref Validation)
 
 ```bash
 # Validate Stage 03 ↔ 05 bidirectional links
 sdlcctl e2e cross-reference \
-  --stage-03 docs/03-Integration-APIs \
-  --stage-05 docs/05-Testing-Quality
+  --stage-03 docs/03-integrate \
+  --stage-05 docs/05-test
 
 # Expected output:
 # ✅ Cross-reference validation PASSED
 # ✅ 58 endpoints linked to test reports
 # ✅ SSOT: openapi.json in Stage 03 (no duplicates)
+# ✅ Bidirectional links verified
 ```
+
+**Reference**: [E2E API Testing Methodology - Phase 5](../02-Core-Methodology/SDLC-E2E-API-Testing-Methodology.md#phase-5-cross-reference-validation)
 
 ### Step 5: Check OWASP Compliance
 
