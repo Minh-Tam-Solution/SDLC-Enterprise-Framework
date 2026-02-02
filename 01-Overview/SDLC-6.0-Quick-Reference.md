@@ -1,9 +1,60 @@
-# SDLC Framework 6.0.2 Quick Reference Guide
+# SDLC Framework 6.0.3 Quick Reference Guide
 
-**Version**: 6.0.2
+**Version**: 6.0.3
 **Date**: February 2, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
+
+---
+
+## What's New in 6.0.3 (MINOR)
+
+### Boris Cherny Best Practices Consolidation
+
+```yaml
+Consolidation (5 RFC → Framework):
+  - RFC-603 → MCP Integration Guide (6x faster bug triage)
+  - RFC-604 → Git Workflow Patterns (2.5x productivity with worktrees)
+  - RFC-605 → Continuous Learning Protocol (zero repeated bugs)
+  - RFC-606 → Research Delegation Pattern (3.3x faster research)
+  - RFC-607 → Visual Documentation Standards (4x faster onboarding)
+
+New Files Created (2):
+  - 07-Implementation-Guides/MCP-Integration-Guide.md (~450 lines)
+  - 04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md (~575 lines)
+
+Enhanced Files (3):
+  - memory-context-management.md (+130 lines: Continuous Learning)
+  - sub-agent-orchestration.md (+95 lines: Research Delegation)
+  - Visual Documentation Standards (new +280 lines)
+
+Key Features:
+  - MCP Integration: GitHub/Slack/Jira automated bug triage
+  - Git Worktrees: Parallel AI development (4 sessions simultaneously)
+  - Continuous Learning: .claude/learnings/ → auto-update CLAUDE.md
+  - Research Delegation: Parallel subagents for pattern discovery
+  - Visual Documentation: ASCII diagrams, HTML presentations, sequence diagrams
+
+Framework-First Compliance:
+  - Zero RFC naming in Framework (reserved for Orchestrator only)
+  - 3-Circle Architecture (Ring 1: Core, Ring 2: Governance, Ring 3: Implementation)
+  - Net change: -3 files (5 deleted - 2 created = better organization)
+  - Content loss: 0 methodology lines (100% preservation)
+
+Productivity Metrics Preserved:
+  - MCP: 6x faster bug triage
+  - Git Worktrees: 2.5x faster (20h → 8h with 4 parallel sessions)
+  - Research Delegation: 3.3x faster (5h → 1.5h)
+  - Visual Docs: 4x faster onboarding (2h → 30min)
+```
+
+**Rationale**: Boris Cherny's 10 AI Development Lessons consolidated into Framework structure following 3-Circle Architecture. All RFCs renamed and integrated to eliminate Framework-Orchestrator naming confusion.
+
+**References**:
+- [CHANGELOG.md (6.0.3)](../CHANGELOG.md)
+- [CONTENT-MAP.md (Boris Cherny Consolidation)](../CONTENT-MAP.md)
+- [MCP Integration Guide](../07-Implementation-Guides/MCP-Integration-Guide.md)
+- [Git Workflow Patterns](../04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md)
 
 ---
 
@@ -95,7 +146,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.2 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.3 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -275,7 +326,7 @@ AI Usage:
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: January 28, 2026
-**Framework**: SDLC 6.0.2 (7-Pillar + 2-Section)
+**Last Updated**: February 2, 2026
+**Framework**: SDLC 6.0.3 (7-Pillar + 2-Section)
 
-*Quick reference for SDLC Framework 6.0.2 - Keep this handy!*
+*Quick reference for SDLC Framework 6.0.3 - Keep this handy!*

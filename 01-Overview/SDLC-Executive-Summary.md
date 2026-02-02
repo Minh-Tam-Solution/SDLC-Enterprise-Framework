@@ -1,9 +1,52 @@
-# SDLC 6.0.2 Executive Summary
+# SDLC 6.0.3 Executive Summary
 
-**Version**: 6.0.2
-**Release Date**: February 2, 2026 (MINOR: E2E API Testing Enhancement)
+**Version**: 6.0.3
+**Release Date**: February 2, 2026 (MINOR: Boris Cherny Best Practices Consolidation)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## What's New in 6.0.3 (MINOR RELEASE)
+
+### Boris Cherny Best Practices Consolidation
+
+**The Problem**: 5 RFC documents (RFC-SDLC-603 to 607) containing Boris Cherny's AI Development Lessons were scattered across the Framework, violating Framework-First principles (RFC naming reserved for Orchestrator only).
+
+**The Solution**: Consolidate all 5 RFCs into Framework structure following 3-Circle Architecture (Ring 1: Core/Timeless, Ring 2: Governance/Stable, Ring 3: Implementation/Changing).
+
+| Component | Original (RFC) | Consolidated Into | Productivity Impact |
+|-----------|----------------|-------------------|---------------------|
+| **MCP Integration** | RFC-603 | [MCP-Integration-Guide.md](../07-Implementation-Guides/MCP-Integration-Guide.md) (~450 lines) | **6x faster** bug triage (automated GitHub/Slack/Jira) |
+| **Git Worktrees** | RFC-604 | [git-workflow-patterns.md](../04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md) (~575 lines) | **2.5x faster** (20h → 8h with 4 parallel AI sessions) |
+| **Continuous Learning** | RFC-605 | Enhanced [memory-context-management.md](../04-AI-Tools-Landscape/best-practices-2026/05-memory-context-management.md) (+130 lines) | **Zero repeated bugs** (AI learns from `.claude/learnings/`) |
+| **Research Delegation** | RFC-606 | Enhanced [sub-agent-orchestration.md](../04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md) (+95 lines) | **3.3x faster** research (5h → 1.5h parallel subagents) |
+| **Visual Documentation** | RFC-607 | [SDLC-Visual-Documentation-Standards.md](../02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md) (+280 lines) | **4x faster** onboarding (2h → 30min with ASCII diagrams) |
+
+**Key Features**:
+- **MCP Integration Pattern**: Model Context Protocol for automated bug triage from external sources (Slack, GitHub, Jira)
+- **Parallel AI Development**: Git worktrees enable 4 simultaneous Claude sessions (backend/frontend/tests/docs)
+- **Continuous Learning Protocol**: Monthly aggregation of bug fix lessons into CLAUDE.md (close feedback loop)
+- **Research Delegation**: Spawn 3-5 parallel Explore subagents for pattern discovery during Planning Mode Phase 1
+- **Visual Documentation Standards**: ASCII diagrams, HTML presentations, sequence diagrams (3 output formats)
+
+**Framework-First Compliance**:
+- ✅ Zero RFC naming in Framework (renamed and consolidated)
+- ✅ 3-Circle Architecture alignment (Ring 1: Standards, Ring 2: Best Practices, Ring 3: Guides)
+- ✅ Net file change: -3 files (5 deleted - 2 created = better organization)
+- ✅ Content preservation: 100% methodology retained (2,307 lines → 1,530 consolidated lines)
+
+**Impact**:
+- **Productivity**: 6x, 2.5x, 3.3x, 4x improvements documented and preserved
+- **Organization**: -3 files (5 RFCs deleted, 2 new guides created, 3 existing enhanced)
+- **Compliance**: Framework-First principle enforced (RFC naming reserved for Orchestrator only)
+- **Traceability**: CONTENT-MAP.md updated with deprecation table showing all consolidation mappings
+
+**Resources**:
+- Consolidation Details: [CHANGELOG.md (6.0.3)](../CHANGELOG.md)
+- Deprecation Table: [CONTENT-MAP.md (Boris Cherny Consolidation)](../CONTENT-MAP.md)
+- New Implementation Guide: [MCP-Integration-Guide.md](../07-Implementation-Guides/MCP-Integration-Guide.md)
+- New Best Practice: [Git Workflow Patterns](../04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md)
 
 ---
 
@@ -217,7 +260,7 @@ New comprehensive guide covering:
 
 ## Framework Overview
 
-**SDLC 6.0.2** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
+**SDLC 6.0.3** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
 
 ### 7 Core Pillars
 - **Pillar 0**: Design Thinking Foundation
@@ -240,7 +283,7 @@ New comprehensive guide covering:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.2 - 10 STAGES                           │
+│                    SDLC 6.0.3 - 10 STAGES                           │
 ├─────────────────────────────────────────────────────────────────────┤
 │  00 FOUNDATION  (WHY?)      Strategic Discovery & Validation        │
 │  01 PLANNING    (WHAT?)     Requirements & User Stories             │
@@ -467,7 +510,9 @@ SDLC 5.1.2 (Dec 2025) → Complete Lifecycle + SASE Integration
 SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration
 SDLC 5.2.0 (Jan 2026) → Planning Mode + AI Agent Best Practices 2026
 SDLC 5.3.0 (Jan 2026) → Quality Assurance System (Section 7) + Stage Dependencies
-SDLC 6.0.2 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR RELEASE
+SDLC 6.0.0 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR RELEASE
+SDLC 6.0.2 (Feb 2026) → E2E API Testing Enhancement (MINOR)
+SDLC 6.0.3 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
 ```
 
 ---
@@ -529,7 +574,7 @@ SDLC 6.0.2 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR R
 
 ---
 
-**Last Updated**: January 28, 2026
+**Last Updated**: February 2, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
-**Version**: 6.0.2
+**Version**: 6.0.3
