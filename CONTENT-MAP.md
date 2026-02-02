@@ -88,7 +88,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Team Collaboration | `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
-| **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.0** |
+| **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
 
 ### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 
@@ -102,14 +102,14 @@ Before creating any new document, check if a canonical file already exists for t
 | LoopScript (LPS) | — | `05-Templates-Tools/04-SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
 | MentorScript (MTS) | — | `05-Templates-Tools/04-SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
 
-### Framework 6.0 Templates (05-Templates-Tools/01-Specification-Standard/) - NEW in 6.0.0
+### Framework 6.0.2 Templates (05-Templates-Tools/01-Specification-Standard/) - NEW in 6.0.0
 
 | Topic | Canonical File | Purpose | Status |
 |-------|---------------|---------|--------|
-| **Unified Specification Standard** | `05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md` | YAML frontmatter + BDD format | **NEW 6.0.0** |
-| **Design Decisions Template** | `05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md` | Lightweight ADR for sprint decisions | **NEW 6.0.0** |
-| **Spec Delta Template** | `05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md` | Version change tracking | **NEW 6.0.0** |
-| **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.0** |
+| **Unified Specification Standard** | `05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md` | YAML frontmatter + BDD format | **NEW 6.0.2** |
+| **Design Decisions Template** | `05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md` | Lightweight ADR for sprint decisions | **NEW 6.0.2** |
+| **Spec Delta Template** | `05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md` | Version change tracking | **NEW 6.0.2** |
+| **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.2** |
 | **Stage Consistency Validation** | `05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md` | 4-stage consistency validation service | **NEW 6.0.1** |
 
 ### E2E API Testing Templates (05-Templates-Tools/02-AI-Tools/) - NEW in 6.0.2
@@ -129,7 +129,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Week 8 Gate Decision Brief | `99-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
 | Week 8 Gate Comparison Matrix | `99-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
 
-> **Note**: Framework 6.0 introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
+> **Note**: Framework 6.0.2 introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
 
 ### AI Agent Best Practices (04-AI-TOOLS-LANDSCAPE/best-practices-2026/) - MOVED
 

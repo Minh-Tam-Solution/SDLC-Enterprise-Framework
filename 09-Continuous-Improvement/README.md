@@ -1,10 +1,10 @@
 # 09 - Continuous Improvement
 
 **Stage**: 09 (Framework Folder, not Project Stage)
-**Version**: SDLC 6.0.0
+**Version**: SDLC 6.0.2
 **Date**: January 28, 2026
 **Status**: Active
-**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.2 (7-Pillar + 2-Section)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -40,4 +40,4 @@ Old continuous improvement documents are moved to `99-Legacy/`:
 ---
 
 **Last Updated**: January 29, 2026
-**Framework**: SDLC 6.0.0
+**Framework**: SDLC 6.0.2

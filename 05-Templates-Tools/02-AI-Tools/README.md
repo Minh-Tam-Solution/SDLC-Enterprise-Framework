@@ -41,11 +41,11 @@
 
 ---
 
-## 🆕 What's New in SDLC 6.0.0 (January 2026)
+## 🆕 What's New in SDLC 6.0.2 (January 2026)
 
 ### AI Governance Principles Integration
 
-**SDLC 6.0.0** adds **timeless AI Governance Principles** that apply to ALL AI tools:
+**SDLC 6.0.2** adds **timeless AI Governance Principles** that apply to ALL AI tools:
 
 | Principle | Summary | Reference |
 |-----------|---------|-----------|
@@ -63,9 +63,9 @@
 
 ---
 
-### 7-Pillar Architecture (SDLC 6.0.0+)
+### 7-Pillar Architecture (SDLC 6.0.2+)
 
-**SDLC 6.0.0+** features the **7-Pillar Architecture** with Sprint Planning Governance as Pillar 2:
+**SDLC 6.0.2+** features the **7-Pillar Architecture** with Sprint Planning Governance as Pillar 2:
 
 ```yaml
 7-Pillar Framework:
@@ -80,7 +80,7 @@
 
 ### SASE Integration for AI Tools
 
-**SDLC 6.0.0** integrates **SE 3.0 SASE principles** into AI tool usage:
+**SDLC 6.0.2** integrates **SE 3.0 SASE principles** into AI tool usage:
 
 ```yaml
 SE4H (Human) Role with AI Tools:
@@ -109,9 +109,9 @@ SE4A (AI Agent) Role:
 
 ## 🎯 10-Stage Lifecycle Coverage
 
-### 10-Stage Lifecycle Coverage (SDLC 6.0.0)
+### 10-Stage Lifecycle Coverage (SDLC 6.0.2)
 
-SDLC 6.0.0 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
+SDLC 6.0.2 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
 
 | Stage | Name | Files Prefix | Key Automation |
 |-------|------|--------------|----------------|
@@ -126,7 +126,7 @@ SDLC 6.0.0 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
 | 08 | COLLABORATE | `collaboration_*` | Protocols, RACI, documentation |
 | 09 | GOVERN | `governance_*` | Compliance checks, audit reports |
 
-> **SDLC 6.0.0**: Files are now prefixed by category (e.g., `design_thinking_empathy-synthesis.md`) instead of being in subfolders. This maintains 2-level maximum folder structure.
+> **SDLC 6.0.2**: Files are now prefixed by category (e.g., `design_thinking_empathy-synthesis.md`) instead of being in subfolders. This maintains 2-level maximum folder structure.
 
 ### 4-Tier Classification
 
@@ -153,7 +153,7 @@ AI tools scale with your team size:
 
 ---
 
-## 📂 Folder Structure (10-Stage Aligned - SDLC 6.0.0)
+## 📂 Folder Structure (10-Stage Aligned - SDLC 6.0.2)
 
 ```
 1-AI-Tools/
@@ -352,7 +352,7 @@ AI Prompt Pattern:
 
 ```
 AI Prompt Pattern:
-"Review code for SDLC 6.0.0:
+"Review code for SDLC 6.0.2:
 [paste code]
 
 Check:
@@ -499,7 +499,7 @@ AI Prompt Pattern:
 AI Prompt Pattern:
 "Check compliance for [project]:
 - Tier: [LITE/STANDARD/PROFESSIONAL/ENTERPRISE]
-- Standards: SDLC 6.0.0, OWASP ASVS L[1-3]
+- Standards: SDLC 6.0.2, OWASP ASVS L[1-3]
 
 Check:
 ✅ 10-stage structure

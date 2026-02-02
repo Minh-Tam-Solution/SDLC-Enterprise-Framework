@@ -5,7 +5,7 @@
 
 ## Universal AI Prompt
 ```
-Generate a comprehensive deployment checklist for SDLC 6.0.0 Stage 05:
+Generate a comprehensive deployment checklist for SDLC 6.0.2 Stage 05:
 
 Feature: [Name]
 Environment: [Staging/Production]

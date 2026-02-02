@@ -11,7 +11,7 @@ Practical how-to guides for implementing SDLC 6.0.1 framework + Section 7 Qualit
 ## 🚀 Getting Started - Pick Your Path
 
 ### New Project (Greenfield)
-Start fresh with SDLC 6.0.0 from day one.
+Start fresh with SDLC 6.0.2 from day one.
 
 | Team Size | Time | Start Here |
 |-----------|------|------------|
@@ -21,7 +21,7 @@ Start fresh with SDLC 6.0.0 from day one.
 | 50+ people (ENTERPRISE) | 4 weeks | [Full Implementation](SDLC-Implementation-Guide.md) + [Self-Contained Deployment](SDLC-Self-Contained-Deployment-Guide.md) |
 
 ### Existing Project (Brownfield)
-Adopt SDLC 6.0.0 incrementally into running projects.
+Adopt SDLC 6.0.2 incrementally into running projects.
 
 | Phase | Focus | Time | Guide |
 |-------|-------|------|-------|
@@ -119,7 +119,7 @@ mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
 # 99-legacy folders created as needed within each stage
 ```
 
-### Legacy/Archive Structure (SDLC 6.0.0)
+### Legacy/Archive Structure (SDLC 6.0.2)
 
 ```yaml
 Rules:
@@ -180,7 +180,7 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 | Script | Purpose |
 |--------|---------|
-| `compliance_sdlc_validator.py` | Validate SDLC 6.0.0 folder structure (7-Pillar + 2-Section) |
+| `compliance_sdlc_validator.py` | Validate SDLC 6.0.2 folder structure (7-Pillar + 2-Section) |
 | `compliance_sdlc_scanner.py` | Scan project for compliance |
 | `quickstart_solo_setup.py` | Setup for solo developer |
 

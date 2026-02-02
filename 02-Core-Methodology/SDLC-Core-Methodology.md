@@ -150,7 +150,7 @@ SDLC 6.0.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.0 - 10 STAGES                              │
+│                    SDLC 6.0.2 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -457,7 +457,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 6.0.0 has TWO parallel gate tracks:
+SDLC 6.0.2 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -686,7 +686,7 @@ Governance auto-rolls back to WARNING mode if:
 
 ## Industry Standards Integration
 
-SDLC 6.0.0 maps to industry standards:
+SDLC 6.0.2 maps to industry standards:
 
 ```yaml
 Standards Mapped:

@@ -48,7 +48,7 @@ Current SDLC Framework 6.0.1 has gaps in:
 | Attribute | Value |
 |-----------|-------|
 | **Project** | SOP Generator (BFlow Platform) |
-| **Framework** | SDLC 6.0.0 |
+| **Framework** | SDLC 6.0.2 |
 | **Phase** | Phase 2 - Pilot (SE 3.0 Track 1) |
 | **Test Date** | February 1, 2026 |
 | **Testing Tool** | `*-CyEyes-*` Automated Testing System |

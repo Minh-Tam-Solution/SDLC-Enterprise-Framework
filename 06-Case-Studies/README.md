@@ -1,11 +1,11 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 6.0.0
+**Version**: 6.0.2
 **Date**: January 28, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.2 (7-Pillar + 2-Section)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -490,7 +490,7 @@ SDLC 5.0.0 (December 2025): ⭐ CURRENT
 **Last Updated**: January 29, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework Version**: SDLC 6.0.0
+**Framework Version**: SDLC 6.0.2
 
 ---
 

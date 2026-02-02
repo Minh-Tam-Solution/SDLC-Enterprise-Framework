@@ -35,7 +35,7 @@ SDLC 6.0.2 is a **7-Pillar AI+Human Excellence Framework** with:
 - **CLI Validation Commands**: `sdlcctl validate-consistency` for automated checking
 - **Tier-Specific Validation**: LITE (basic), STANDARD (moderate), PROFESSIONAL (deep), ENTERPRISE (comprehensive)
 
-**From 6.0.0 (Major Release)**:
+**From 6.0.2 (Major Release)**:
 - **Unified Specification Standard**: YAML frontmatter, BDD requirements (GIVEN-WHEN-THEN), tier-aware specs
 - **DESIGN_DECISIONS.md Template**: Lightweight ADR alternative for sprint-scoped decisions
 - **SPEC_DELTA.md Template**: Version change tracking with breaking change documentation
@@ -423,7 +423,7 @@ SDLC-Enterprise-Framework/
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms, etc.)
 
-**NEW in 6.0.0 (Unified Specification Standard)**:
+**NEW in 6.0.2 (Unified Specification Standard)**:
 - [SDLC-Specification-Standard.md](./05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) - **Section 8: Unified Spec Format**
   - YAML frontmatter (spec_id, tier, stage, category)
   - BDD requirements format (GIVEN-WHEN-THEN)

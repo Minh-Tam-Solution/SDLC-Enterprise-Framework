@@ -59,7 +59,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are a sprint planning summarizer following SDLC 6.0.0 standards.
+  You are a sprint planning summarizer following SDLC 6.0.2 standards.
   Extract: Sprint goal, committed stories, capacity, risks.
   Calculate velocity and highlight scope changes.
 

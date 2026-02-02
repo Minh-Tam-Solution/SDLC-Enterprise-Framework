@@ -1,6 +1,6 @@
 # SDLC Tier-Stage Requirements
 
-**Framework**: SDLC 6.0.0
+**Framework**: SDLC 6.0.2
 **Last Updated**: January 28, 2026
 **Status**: PRODUCTION-READY
 **Related**: [ADR-041 Stage Dependency Matrix](../ADR-041-Stage-Dependency-Matrix.md), [Stage Exit Criteria](../SDLC-Stage-Exit-Criteria.md)
@@ -367,7 +367,7 @@ Is this an AI/ML system?
 - AI Governance Principles 1-6 must be followed
 - Legal/ethical implications of AI decisions
 
-**AI Governance Principles (from SDLC 6.0.0)**:
+**AI Governance Principles (from SDLC 6.0.2)**:
 1. **Transparency**: Model decisions must be explainable
 2. **Fairness**: Bias testing on protected classes (race, gender, age)
 3. **Privacy**: Data privacy validation (GDPR, CCPA compliance)
@@ -511,5 +511,5 @@ Project: Instagram Clone (LITE Tier)
 ---
 
 **Last Updated**: January 28, 2026
-**Framework Version**: SDLC 6.0.0
+**Framework Version**: SDLC 6.0.2
 **Status**: PRODUCTION-READY

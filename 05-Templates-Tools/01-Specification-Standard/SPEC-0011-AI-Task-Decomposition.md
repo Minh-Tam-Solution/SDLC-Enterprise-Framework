@@ -39,7 +39,7 @@ framework_version: 6.0.0
 **Date**: December 3, 2025
 **Decision Makers**: CTO, CPO (joint review)
 **Stage**: Stage 02 (HOW - Design & Architecture)
-**Framework**: SDLC 6.0.0
+**Framework**: SDLC 6.0.2
 
 ---
 
@@ -1221,5 +1221,5 @@ ALTER TABLE decomposition_sessions ADD CONSTRAINT fk_project_id FOREIGN KEY (pro
 **Decision**: **APPROVED** - AI Task Decomposition Service
 **Priority**: **HIGH** - Core AI Governance feature
 **Timeline**: Sprint 26 (AI Council Service Implementation)
-**Framework Version**: SDLC 6.0.0
+**Framework Version**: SDLC 6.0.2
 **Last Updated**: January 31, 2026

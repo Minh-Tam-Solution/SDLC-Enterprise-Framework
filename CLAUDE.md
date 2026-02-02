@@ -1,12 +1,26 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.0.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.0.2
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.0.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.0.2**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
-**What's New in 6.0.0 (January 28, 2026) - MAJOR RELEASE**:
+**What's New in 6.0.2 (February 2, 2026) - MINOR RELEASE (RFC-SDLC-602)**:
+- ✅ **E2E API Testing Workflow** - 6-phase standardized testing workflow with Stage 03 ↔ 05 cross-reference
+- ✅ **OWASP API Top 10 Checklist** - Complete API security testing coverage (2023 edition)
+- ✅ **Testing Artifacts Structure** - SDLC-compliant folder layout for test outputs
+- ✅ **sdlcctl E2E Commands** - `sdlcctl e2e validate`, `sdlcctl e2e cross-reference`, `sdlcctl e2e generate-report`
+- ✅ **OPA Policy Integration** - e2e_testing_compliance, stage_cross_reference policies
+- ✅ **4 New Evidence Types** - e2e_test_report, security_test_report, api_coverage_report, cross_reference_validation
+
+**What's New in 6.0.1 (February 1, 2026) - MINOR RELEASE (SPEC-0021)**:
+- ✅ **Stage Consistency Validation** - 4-stage consistency validation workflow (PLANNING ↔ DESIGN ↔ INTEGRATE ↔ BUILD)
+- ✅ **Pre/Post-Implementation Checklists** - Actionable checklists for stage transitions
+- ✅ **Artifact Integrity Hashing** - SHA256 checksums for post-approval modification detection
+- ✅ **CLI Validation Commands** - `sdlcctl validate-consistency` for automated checking
+
+**What's New in 6.0.2 (January 28, 2026) - MAJOR RELEASE**:
 - ✅ **Unified Specification Standard (Section 8)** - YAML frontmatter required, BDD requirements format
 - ✅ **DESIGN_DECISIONS.md Template** - Lightweight ADR alternative for sprint-scoped decisions
 - ✅ **SPEC_DELTA.md Template** - Version change tracking with breaking change documentation
@@ -497,5 +511,5 @@ SDLC 5.1.3 (January 2026)
 The framework represents not theory but battle-tested patterns from 7 months of real platform development. With SDLC 5.1.3, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, clear documentation vs code separation, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
 **Last Updated**: January 29, 2026
-**Framework Version**: SDLC 6.0.0
+**Framework Version**: SDLC 6.0.2
 **Status**: PRODUCTION READY - 7-Pillar Architecture + Section 7 Quality Assurance System + AI Governance Principles

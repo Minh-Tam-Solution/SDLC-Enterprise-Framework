@@ -107,7 +107,7 @@ Complete coverage for all 10 security items:
 **Type**: PATCH RELEASE - P0 Artifact Path Corrections
 **Status**: PRODUCTION-READY
 **Breaking Changes**: No
-**Supersedes**: SDLC 6.0.0 Unified Specification Standard
+**Supersedes**: SDLC 6.0.2 Unified Specification Standard
 
 ### 🔧 Fixes
 

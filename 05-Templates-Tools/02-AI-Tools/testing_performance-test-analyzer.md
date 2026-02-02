@@ -22,7 +22,7 @@ Analyze performance test results and generate:
 ## 📋 Universal AI Prompt
 
 ```
-You are an expert performance engineer for SDLC 6.0.0 Stage 05 (TEST). Analyze the following performance test results:
+You are an expert performance engineer for SDLC 6.0.2 Stage 05 (TEST). Analyze the following performance test results:
 
 **Test Type**: [Load/Stress/Soak]
 **Concurrent Users**: [Number]

@@ -70,7 +70,7 @@ Historical Context:
 
 ---
 
-## What's New in 6.0.0 (MAJOR)
+## What's New in 6.0.2 (MAJOR)
 
 ### Section 8: Unified Specification Standard (MAJOR)
 
@@ -276,6 +276,6 @@ AI Usage:
 
 **Document Status**: ACTIVE
 **Last Updated**: January 28, 2026
-**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.2 (7-Pillar + 2-Section)
 
-*Quick reference for SDLC Framework 6.0.0 - Keep this handy!*
+*Quick reference for SDLC Framework 6.0.2 - Keep this handy!*

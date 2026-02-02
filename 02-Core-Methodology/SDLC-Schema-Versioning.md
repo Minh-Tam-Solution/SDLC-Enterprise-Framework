@@ -39,9 +39,9 @@ MAJOR.MINOR.PATCH
 
 ### Current Version
 
-- **Framework Version**: 6.0.0 (In Development)
-- **Target Release**: Q1 2026
-- **Status**: Pre-Release
+- **Framework Version**: 6.0.2 (Production)
+- **Release**: February 2, 2026
+- **Status**: ACTIVE
 
 ## Schema Version (Independent Versioning)
 

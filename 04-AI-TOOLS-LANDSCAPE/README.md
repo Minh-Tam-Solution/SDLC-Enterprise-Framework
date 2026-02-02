@@ -1,10 +1,10 @@
 # AI Tools Landscape
 
-**Version**: 6.0.0
+**Version**: 6.0.2
 **Status**: ACTIVE - OUTER RING (STRATEGIC)
 **Date**: January 28, 2026
 **Purpose**: Track AI coding tools for Orchestrator governance
-**Framework**: SDLC 6.0.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.2 (7-Pillar + 2-Section)
 
 ---
 

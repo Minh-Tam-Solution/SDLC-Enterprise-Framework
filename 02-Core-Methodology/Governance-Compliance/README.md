@@ -1,6 +1,6 @@
 # Governance & Compliance Standards
 
-**Version**: 6.0.0
+**Version**: 6.0.2
 **Date**: January 28, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
@@ -12,7 +12,7 @@
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.0**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.2**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|

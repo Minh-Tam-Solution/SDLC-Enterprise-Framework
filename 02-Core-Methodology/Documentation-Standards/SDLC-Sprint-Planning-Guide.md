@@ -1,18 +1,18 @@
 # SDLC Sprint Planning Guide
 
-**Version**: 6.0.0
+**Version**: 6.0.2
 **Date**: January 28, 2026
 **Type**: Sprint Planning Guide (Pillar 2 Compliance)
 **Status**: ACTIVE
 **Authority**: CTO Office
 **AI Governance**: Aligns with Planning Mode Principle (Risk-Based triggers)
-**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.0.0 flattened)
+**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.0.2 flattened)
 
 ---
 
 ## Overview
 
-This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.0.0 Sprint Planning Governance.
+This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.0.2 Sprint Planning Governance.
 
 **When to use this guide**:
 - Starting a new sprint

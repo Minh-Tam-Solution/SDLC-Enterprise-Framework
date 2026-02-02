@@ -1,6 +1,6 @@
 # 🎭 User Testing Script Template
 
-**Version**: 6.0.0 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.0.2 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Standardized script for conducting user testing sessions
 **When to Use**: TEST phase (SDLC Stage 04 - BUILD)
 **Time Required**: 45-60 minutes per session

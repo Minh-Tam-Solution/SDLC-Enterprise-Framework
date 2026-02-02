@@ -1,12 +1,12 @@
 # Sprint Template
 
-**Version**: 6.0.0
+**Version**: 6.0.2
 **Date**: January 28, 2026
 **Stage**: 04 - BUILD
 **Pillar**: 2 - Sprint Planning Governance
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
-**Framework**: SDLC 6.0.0
+**Framework**: SDLC 6.0.2
 **Governance**: [SDLC-Sprint-Governance.md](../../../../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 

@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Generate **RACI matrices** for multi-team projects following SDLC 6.0.0 standards. Ensures clear accountability with exactly ONE Accountable (A) per deliverable.
+Generate **RACI matrices** for multi-team projects following SDLC 6.0.2 standards. Ensures clear accountability with exactly ONE Accountable (A) per deliverable.
 
 ---
 
@@ -25,7 +25,7 @@ Generate **RACI matrices** for multi-team projects following SDLC 6.0.0 standard
 | **C** | Consulted | Provides input before decision | Multiple allowed |
 | **I** | Informed | Notified after decision | Multiple allowed |
 
-### RACI Rules (SDLC 6.0.0)
+### RACI Rules (SDLC 6.0.2)
 
 1. **One A per deliverable**: Every row must have exactly one Accountable
 2. **At least one R**: Someone must do the work
@@ -41,7 +41,7 @@ Generate **RACI matrices** for multi-team projects following SDLC 6.0.0 standard
 
 ```yaml
 System Prompt:
-  You are generating RACI matrices following SDLC 6.0.0 standards.
+  You are generating RACI matrices following SDLC 6.0.2 standards.
   CRITICAL: Every row must have exactly ONE 'A' (Accountable).
   Multiple 'R' allowed but keep it focused.
   Minimize 'C' to avoid decision paralysis.
@@ -108,7 +108,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are generating RACI matrices aligned with SDLC 6.0.0 10-stage lifecycle.
+  You are generating RACI matrices aligned with SDLC 6.0.2 10-stage lifecycle.
   Map deliverables to stages: 00-Foundation through 09-Governance.
   Apply tier-appropriate governance (LITE/STANDARD/PROFESSIONAL/ENTERPRISE).
 
@@ -138,7 +138,7 @@ Output Format:
   # SDLC Stage-Based RACI: [Project Name]
 
   **Tier**: [Tier]
-  **Framework**: SDLC 6.0.0
+  **Framework**: SDLC 6.0.2
 
   ---
 
@@ -300,7 +300,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are auditing an existing RACI matrix for SDLC 6.0.0 compliance.
+  You are auditing an existing RACI matrix for SDLC 6.0.2 compliance.
   Check for: Single A per row, at least one R, no orphaned deliverables.
   Provide specific recommendations for fixing issues.
 

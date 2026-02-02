@@ -997,12 +997,12 @@ echo "PASS: No AGPL SDK imports"
 | **Last Updated** | January 29, 2026 |
 | **Author** | Backend Lead + Architect |
 | **Approvals** | CTO ✅ (Dec 23, 2025), CEO ✅ (Dec 23, 2025) |
-| **Framework Version** | SDLC 6.0.0 |
+| **Framework Version** | SDLC 6.0.2 |
 | **Status** | APPROVED |
 | **Migration From** | ADR-022-Multi-Provider-Codegen-Architecture.md |
 
 ---
 
 *SPEC-0006: Multi-Provider Codegen Architecture - Provider-agnostic IR-based code generation for Vietnam SME*
-*Framework 6.0.0 Specification Format - BDD Requirements + Tier Classification*
+*Framework 6.0.2 Specification Format - BDD Requirements + Tier Classification*
 *Sprint 117 Track 1 Day 3 - P1 Spec Migration*

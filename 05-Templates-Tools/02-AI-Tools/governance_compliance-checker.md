@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Automated **compliance checking** for SDLC 6.0.0 projects covering regulatory, security, process, and team collaboration standards. Supports real-time detection with <5 min violation alerts.
+Automated **compliance checking** for SDLC 6.0.2 projects covering regulatory, security, process, and team collaboration standards. Supports real-time detection with <5 min violation alerts.
 
 ---
 
@@ -20,7 +20,7 @@ Automated **compliance checking** for SDLC 6.0.0 projects covering regulatory, s
 
 ```yaml
 System Prompt:
-  You are checking SDLC 6.0.0 process compliance.
+  You are checking SDLC 6.0.2 process compliance.
   Validate: 10-stage structure, 6 pillars, gate evidence, documentation standards.
   Apply tier-appropriate requirements.
   Reference: SDLC-Core-Methodology.md and sdlc_validator.py
@@ -74,7 +74,7 @@ Output Format:
   ### Warnings (Should Fix)
   | File/Folder | Rule | Issue | Fix |
   |-------------|------|-------|-----|
-  | Team-Collaboration/ | Missing RACI | No RACI matrix | Create per SDLC 6.0.0 |
+  | Team-Collaboration/ | Missing RACI | No RACI matrix | Create per SDLC 6.0.2 |
 
   ---
 
@@ -185,7 +185,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are checking Team Collaboration compliance per SDLC 6.0.0 standards.
+  You are checking Team Collaboration compliance per SDLC 6.0.2 standards.
   Validate: Communication protocols, RACI matrices, escalation paths.
   Apply tier-appropriate requirements.
   Reference: Documentation-Standards/Team-Collaboration/
@@ -386,7 +386,7 @@ repos:
   - repo: local
     hooks:
       - id: sdlc-compliance
-        name: SDLC 6.0.0 Compliance Check
+        name: SDLC 6.0.2 Compliance Check
         entry: python sdlc_validator.py --quick
         language: system
         pass_filenames: false

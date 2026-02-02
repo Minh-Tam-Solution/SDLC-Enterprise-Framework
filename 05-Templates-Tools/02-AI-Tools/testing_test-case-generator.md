@@ -31,7 +31,7 @@ Tech Stack: [Backend/Frontend technologies]
 
 ### AI Prompt
 ```
-You are an expert QA engineer for SDLC 6.0.0 Stage 05 (TEST). Generate comprehensive test cases for the following feature:
+You are an expert QA engineer for SDLC 6.0.2 Stage 05 (TEST). Generate comprehensive test cases for the following feature:
 
 **Feature**: [Feature name]
 **Functionality**: [Brief description]
@@ -117,7 +117,7 @@ Tech Stack: Python/Django backend, React frontend, PostgreSQL database
 
 ---
 
-## 🎯 Quality Gates (SDLC 6.0.0 Stage 04)
+## 🎯 Quality Gates (SDLC 6.0.2 Stage 04)
 
 Before moving to Stage 06 (DEPLOY), ensure:
 
