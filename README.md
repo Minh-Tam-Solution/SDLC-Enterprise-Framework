@@ -375,7 +375,7 @@ SDLC-Enterprise-Framework/
 │   └── trend-watch/              # Monthly tool evolution updates
 ├── 05-Templates-Tools/           # Templates & Automation
 │   ├── SASE-Artifacts/           # CRP, MRP, VCR, AGENTS.md template
-│   ├── Framework-6.0/            # **NEW 6.0.0** Unified Spec Standard
+│   ├── Framework: 6.0.3** Unified Spec Standard
 │   │   ├── SDLC-Specification-Standard.md
 │   │   ├── DESIGN_DECISIONS.md
 │   │   ├── SPEC_DELTA.md
