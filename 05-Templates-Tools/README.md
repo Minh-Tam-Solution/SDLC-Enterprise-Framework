@@ -1,16 +1,47 @@
-# SDLC 6.0.1 Templates & Tools
+# SDLC 6.0.2 Templates & Tools
 ## Complete 10-Stage Productivity Suite + Section 8 Unified Specification Standard
 
-**Version**: 6.0.1
-**Date**: February 1, 2026
+**Version**: 6.0.2
+**Date**: February 2, 2026
 **Stage**: 03 - TEMPLATES & TOOLS
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
-**Status**: PRODUCTION-READY - FRAMEWORK 6.0.1 STAGE CONSISTENCY VALIDATION
+**Status**: PRODUCTION-READY - FRAMEWORK 6.0.2 E2E API TESTING ENHANCEMENT
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) (7 Principles)
 **Organization**: Numbered directories (01-08) with consistent 2-digit prefixes
 **ROI**: 14,822% combined (BFlow Platform validated, 52-day journey)
 **Proven**: BFlow, NQH-Bot, MTEP platforms
+
+---
+
+## What's New in SDLC 6.0.2 (February 2026)
+
+### RFC-SDLC-602: E2E API Testing Enhancement (MINOR)
+
+**SDLC 6.0.2** introduces **RFC-SDLC-602: E2E API Testing Enhancement** - standardized E2E API testing workflows with OWASP security and stage cross-reference.
+
+```yaml
+RFC-SDLC-602 Key Features (02-AI-Tools/):
+  E2E Workflow Template:        6-phase testing workflow (testing_e2e-api-testing-workflow.md)
+  Security Checklist:           OWASP API Top 10 (2023) (testing_security-testing-checklist.md)
+  Stage Cross-Reference:        Bidirectional Stage 03 ↔ 05 links
+  Testing Artifacts:            SDLC-compliant folder structure
+
+SDLC Orchestrator Integration:
+  CLI Commands:                 sdlcctl e2e validate, cross-reference, generate-report
+  OPA Policies:                 e2e_testing_compliance, stage_cross_reference
+  Evidence Types:               e2e_test_report, security_test_report, api_coverage_report
+
+Validation Results (SOP Generator Pilot):
+  - 58 endpoints tested
+  - 84.5% pass rate
+  - 83% time savings (3h → 30min)
+  - CTO Approval: 9.2/10
+```
+
+**[NEW: testing_e2e-api-testing-workflow.md](02-AI-Tools/testing_e2e-api-testing-workflow.md)**
+**[NEW: testing_security-testing-checklist.md](02-AI-Tools/testing_security-testing-checklist.md)**
+**[Quick Start: E2E-TESTING-QUICKSTART.md](../07-Implementation-Guides/E2E-TESTING-QUICKSTART.md)**
 
 ---
 

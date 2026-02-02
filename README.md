@@ -1,6 +1,6 @@
-# SDLC 6.0.1 Universal Framework
+# SDLC 6.0.2 Universal Framework
 
-**Version**: 6.0.1 | **Status**: ACTIVE | **Date**: February 2026
+**Version**: 6.0.2 | **Status**: ACTIVE | **Date**: February 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.1 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.2 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -17,9 +17,18 @@ SDLC 6.0.1 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 5**: SASE Integration (SE 3.0)
 - **Pillar 6**: Documentation Permanence
 - **Section 7**: Quality Assurance System (Anti-Vibecoding)
-- **Section 8**: Unified Specification Standard **NEW in 6.0.0**
+- **Section 8**: Unified Specification Standard
 
-**NEW in 6.0.1 (Minor Release - February 2026)**:
+**NEW in 6.0.2 (Minor Release - February 2, 2026)**:
+- **RFC-SDLC-602: E2E API Testing Enhancement**: Standardized 6-phase E2E testing workflow
+- **Stage Cross-Reference Matrix**: Bidirectional Stage 03 ↔ 05 traceability
+- **OWASP API Top 10 Checklist**: Complete API security testing coverage (2023)
+- **Testing Artifacts Structure**: SDLC-compliant folder layout for test outputs
+- **sdlcctl E2E Commands**: `sdlcctl e2e validate`, `sdlcctl e2e cross-reference`, `sdlcctl e2e generate-report`
+- **OPA Policy Integration**: e2e_testing_compliance, stage_cross_reference policies
+- **4 New Evidence Types**: e2e_test_report, security_test_report, api_coverage_report, cross_reference_validation
+
+**From 6.0.1 (Minor Release)**:
 - **SPEC-0021: Stage Consistency Validation**: Formalized 4-stage consistency validation workflow
 - **Pre/Post-Implementation Checklists**: Actionable checklists for stage transitions
 - **Artifact Integrity Hashing**: SHA256 checksums for post-approval modification detection

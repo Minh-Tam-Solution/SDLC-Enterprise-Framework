@@ -1,16 +1,43 @@
-# 🤖 AI Tools for SDLC 6.0.0
+# 🤖 AI Tools for SDLC 6.0.2
 ## Stage-Aligned AI Automation for Complete Lifecycle + SASE Integration
 
-**Framework Version**: 6.0.0
-**Date**: January 28, 2026
-**Status**: ACTIVE - Production Standards + SASE/SE 3.0
+**Framework Version**: 6.0.2
+**Date**: February 2, 2026
+**Status**: ACTIVE - Production Standards + SASE/SE 3.0 + E2E API Testing
 **Pillar**: 5 - SASE Integration (AI Tools)
 **Scope**: AI tools mapped to all 10 SDLC stages (00-09) + 4-Tier Classification + Agentic Maturity
-**Structure**: SDLC 6.0.0 (2-level maximum, files prefixed by category)
+**Structure**: SDLC 6.0.2 (2-level maximum, files prefixed by category)
 **Foundation**: Proven across 3 platforms (BFlow, NQH-Bot, MTEP)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
-> **Versioning Note**: Individual prompt files have their own version numbers (e.g., v5.2.0) indicating when the prompt content was last refined. All prompts are compatible with SDLC Framework 6.0.0.
+> **Versioning Note**: Individual prompt files have their own version numbers (e.g., v5.2.0) indicating when the prompt content was last refined. All prompts are compatible with SDLC Framework 6.0.2.
+
+---
+
+## 🆕 What's New in SDLC 6.0.2 (February 2026)
+
+### E2E API Testing Enhancement (RFC-SDLC-602)
+
+**SDLC 6.0.2** adds **standardized E2E API testing workflows** with OWASP security integration:
+
+| Template | Purpose | File |
+|----------|---------|------|
+| **E2E API Testing Workflow** | 6-phase standardized testing process | `testing_e2e-api-testing-workflow.md` |
+| **Security Testing Checklist** | OWASP API Top 10 (2023) coverage | `testing_security-testing-checklist.md` |
+
+**Key Features**:
+- **6-Phase Workflow**: Discovery → Configuration → Execution → Security → Reporting → CI/CD Integration
+- **OWASP API Top 10**: Complete security checklist (2023 edition)
+- **Stage Cross-Reference**: Bidirectional Stage 03 ↔ 05 traceability
+- **SSOT Principle**: Single openapi.json source in Stage 03
+
+**→ [Quick Start Guide: 07-Implementation-Guides/E2E-TESTING-QUICKSTART.md](../../07-Implementation-Guides/E2E-TESTING-QUICKSTART.md)**
+
+**Validation Metrics (SOP Generator Pilot)**:
+- 58 endpoints tested
+- 84.5% pass rate
+- 83% time savings (3h → 30min)
+- CTO Approval: 9.2/10
 
 ---
 
@@ -93,7 +120,7 @@ SDLC 6.0.0 has **10 stages (00-09)**. AI tools now cover the complete lifecycle:
 | 02 | DESIGN (HOW?) | `design_to_code_*` | Architecture, component design |
 | 03 | INTEGRATE | `integration_*` | API contracts, integration tests |
 | 04 | BUILD | `code_review_*` | Code generation, review automation |
-| 05 | TEST | `testing_*` | Test cases, UAT scripts, performance |
+| 05 | TEST | `testing_*` | Test cases, UAT, **E2E API testing**, security |
 | 06 | DEPLOY | `deployment_*` | Checklists, rollback plans, release notes |
 | 07 | OPERATE | `operations_*` | Monitoring, incident response, post-mortems |
 | 08 | COLLABORATE | `collaboration_*` | Protocols, RACI, documentation |
@@ -256,6 +283,8 @@ ROI: 50x productivity increase
 | 04 | Test Cases | 8 hours | 45 min | **90%** |
 | 04 | UAT Scripts | 4 hours | 36 min | **85%** |
 | 04 | Performance Analysis | 6 hours | 1.2 hours | **80%** |
+| **05** | **E2E API Testing** | **3 hours** | **30 min** | **83%** ⭐ NEW |
+| **05** | **OWASP Security Check** | **4 hours** | **45 min** | **81%** ⭐ NEW |
 | 05 | Deployment Checklist | 4 hours | 36 min | **85%** |
 | 06 | Monitoring Setup | 8 hours | 1.2 hours | **85%** |
 | 06 | Post-Mortem | 4 hours | 24 min | **90%** |
@@ -357,8 +386,28 @@ Coverage Target: 95%+
 Output: pytest/jest format"
 ```
 
-**Tools**: `testing/*.md`
+**Tools**: `testing_*.md`
 **BFlow Result**: 150+ tests in 45 min, 98% pass rate
+
+#### NEW in 6.0.2: E2E API Testing Workflow
+
+```
+AI Prompt Pattern (e2e-api-testing skill):
+"/e2e-api-testing --openapi docs/03-Integration-APIs/openapi.json
+
+6-Phase Workflow:
+✅ Phase 1: API Discovery (parse OpenAPI)
+✅ Phase 2: Test Configuration (env, auth)
+✅ Phase 3: Test Execution (all endpoints)
+✅ Phase 4: Security Testing (OWASP Top 10)
+✅ Phase 5: Report Generation (markdown)
+✅ Phase 6: CI/CD Integration
+
+Target: 80%+ pass rate, <30 min setup"
+```
+
+**Tools**: `testing_e2e-api-testing-workflow.md`, `testing_security-testing-checklist.md`
+**SOP Generator Result**: 58 endpoints, 84.5% pass rate, 83% time savings
 
 ---
 
@@ -519,12 +568,14 @@ Output: Score + violations + auto-fix commands"
 
 ---
 
-**Folder Status**: ACTIVE - SDLC 6.0.0 Complete
-**Last Updated**: January 22, 2026
+**Folder Status**: ACTIVE - SDLC 6.0.2 Complete
+**Last Updated**: February 2, 2026
 **Owner**: CPO Office
 
 ***"AI automation for every stage of the lifecycle."*** 🚀
 
 **AI Governance**: All tools align with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles.
+
+**E2E Testing**: See [E2E-TESTING-QUICKSTART.md](../../07-Implementation-Guides/E2E-TESTING-QUICKSTART.md) for quick start guide.
 
 **Legacy/Archive Policy**: Content in 99-legacy and 10-archive folders is never validated or upgraded.

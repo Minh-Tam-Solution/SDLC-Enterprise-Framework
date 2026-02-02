@@ -1,9 +1,46 @@
-# SDLC Framework 6.0.1 Quick Reference Guide
+# SDLC Framework 6.0.2 Quick Reference Guide
 
-**Version**: 6.0.1
-**Date**: February 1, 2026
+**Version**: 6.0.2
+**Date**: February 2, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
+
+---
+
+## What's New in 6.0.2 (MINOR)
+
+### E2E API Testing Enhancement (RFC-SDLC-602)
+
+```yaml
+New Templates (5):
+  - testing_e2e-api-testing-workflow.md     # 6-phase testing workflow
+  - testing_security-testing-checklist.md   # OWASP API Top 10 (2023)
+  - SDLC-Stage-Cross-Reference.md           # Stage 03 ↔ 05 traceability
+  - SDLC-Testing-Artifacts-Structure.md     # Test folder structure
+  - API Documentation Template              # Per-endpoint test status
+
+Key Features:
+  - 6-phase E2E testing workflow (Discovery → Execution → Reporting)
+  - Stage 03 ↔ 05 cross-reference matrix (bidirectional traceability)
+  - OWASP API Security Top 10 checklist (all 10 items)
+  - Testing artifacts folder structure (SDLC-compliant)
+  - SSOT principle for openapi.json (single source in Stage 03)
+
+SDLC Orchestrator Integration:
+  - sdlcctl e2e validate         # Validate E2E compliance
+  - sdlcctl e2e cross-reference  # Validate Stage 03 ↔ 05 links
+  - sdlcctl e2e generate-report  # Generate E2E test report
+  - 4 new evidence artifact types
+  - 2 new OPA policies (e2e_testing_compliance, stage_cross_reference)
+
+Validation Metrics (SOP Generator Pilot):
+  - 58 endpoints tested
+  - 84.5% pass rate
+  - 83% time savings (3h → 30min)
+  - CTO Approval: 9.2/10
+```
+
+**RFC**: [RFC-SDLC-602-E2E-API-TESTING.md](../09-Continuous-Improvement/RFC/RFC-SDLC-602-E2E-API-TESTING.md)
 
 ---
 
@@ -58,7 +95,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.1 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.2 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║

@@ -1,8 +1,8 @@
-# SDLC Framework 6.0.1 Content Map
+# SDLC Framework 6.0.2 Content Map
 
-**Version**: 6.0.1
+**Version**: 6.0.2
 **Status**: ACTIVE
-**Date**: February 1, 2026
+**Date**: February 2, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
 
 ---
@@ -111,6 +111,18 @@ Before creating any new document, check if a canonical file already exists for t
 | **Spec Delta Template** | `05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md` | Version change tracking | **NEW 6.0.0** |
 | **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.0** |
 | **Stage Consistency Validation** | `05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md` | 4-stage consistency validation service | **NEW 6.0.1** |
+
+### E2E API Testing Templates (05-Templates-Tools/02-AI-Tools/) - NEW in 6.0.2
+
+| Topic | Canonical File | Purpose | Status |
+|-------|---------------|---------|--------|
+| **E2E API Testing Workflow** | `05-Templates-Tools/02-AI-Tools/testing_e2e-api-testing-workflow.md` | 6-phase standardized E2E testing workflow | **NEW 6.0.2** |
+| **Security Testing Checklist** | `05-Templates-Tools/02-AI-Tools/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **NEW 6.0.2** |
+| **Stage Cross-Reference Matrix** | `02-Core-Methodology/SDLC-Stage-Cross-Reference.md` | Bidirectional Stage 03 ↔ 05 traceability | **NEW 6.0.2** |
+| **Testing Artifacts Structure** | `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | SDLC-compliant test folder layout | **NEW 6.0.2** |
+
+> **Note**: RFC-SDLC-602 introduces standardized E2E API testing with OWASP security integration and cross-stage traceability.
+
 | OpenSpec Analysis | `99-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
 | Migration Plan (20 Specs) | `99-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
 | Conversion Layer Spec | `99-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
