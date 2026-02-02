@@ -1,6 +1,6 @@
-# SDLC 6.0.2 Universal Framework
+# SDLC 6.0.3 Universal Framework
 
-**Version**: 6.0.2 | **Status**: ACTIVE | **Date**: February 2026
+**Version**: 6.0.3 | **Status**: ACTIVE | **Date**: February 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.2 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.3 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -19,7 +19,18 @@ SDLC 6.0.2 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Section 7**: Quality Assurance System (Anti-Vibecoding)
 - **Section 8**: Unified Specification Standard
 
-**NEW in 6.0.2 (Minor Release - February 2, 2026)**:
+**NEW in 6.0.3 (Minor Release - February 2, 2026)**:
+- **5 New RFC Patterns**: Boris Cherny AI development best practices integration (Sprint 143)
+- **RFC-SDLC-603**: MCP Integration Pattern (6x faster bug triage via chat automation)
+- **RFC-SDLC-604**: Parallel AI Development Pattern (2.5x productivity via git worktrees)
+- **RFC-SDLC-605**: Continuous Learning Protocol (self-improving AI context)
+- **RFC-SDLC-606**: Subagent Delegation Pattern (3.3x faster research phase)
+- **RFC-SDLC-607**: Explanatory Documentation Pattern (4x faster onboarding)
+- **Boris Cherny Coverage**: 8/10 tactics addressed (Git Worktrees, MCP, Learning, Subagents, Explanatory Mode)
+- **Tool-Agnostic**: All patterns work with Claude Code, Cursor, Copilot, GPT-4o, Gemini, Ollama
+- **Framework-First**: Track 1 methodology complete, Track 2 implementation deferred to Sprint 144
+
+**From 6.0.2 (Minor Release - February 2, 2026)**:
 - **RFC-SDLC-602: E2E API Testing Enhancement**: Standardized 6-phase E2E testing workflow
 - **Stage Cross-Reference Matrix**: Bidirectional Stage 03 ↔ 05 traceability
 - **OWASP API Top 10 Checklist**: Complete API security testing coverage (2023)
