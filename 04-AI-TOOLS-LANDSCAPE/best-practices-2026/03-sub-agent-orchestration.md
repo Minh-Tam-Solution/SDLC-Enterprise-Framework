@@ -36,6 +36,103 @@ Sub-agents are isolated AI sessions that handle focused tasks without polluting 
 
 ---
 
+## Research Delegation Pattern
+
+### Problem
+
+Manual task splitting doesn't leverage AI parallelization. Developers spend hours researching sequentially when tasks could run concurrently.
+
+**Sequential Research** (Manual):
+```
+1. Research auth patterns (2 hours)
+2. Research security best practices (1 hour)
+3. Research test patterns (1 hour)
+Total: 4 hours
+```
+
+**Parallel Research** (Subagents):
+```
+Launch 3 subagents simultaneously:
+1. Subagent 1: Auth patterns (30 minutes)
+2. Subagent 2: Security guidelines (20 minutes)
+3. Subagent 3: Test patterns (20 minutes)
+Total: 30 minutes (longest subagent) = 8x faster
+```
+
+### Solution
+
+Delegate research to specialized subagents during Planning Mode Phase 1 (EXPLORE).
+
+### Research Task Types
+
+| Task | Subagent | Use Case | Expected Output |
+|------|----------|----------|-----------------|
+| **Codebase exploration** | Explore | Find similar implementations | 3-5 code examples |
+| **Dependency research** | Explore | Research packages, compatibility | Library recommendations |
+| **Pattern extraction** | Explore | Extract coding patterns | Pattern summary |
+| **External docs** | WebFetch | Review OWASP, RFCs, guidelines | Best practices list |
+| **Architecture review** | Explore | Review ADRs, conventions | Architecture constraints |
+
+### When to Delegate
+
+✅ **Delegate when:**
+- Isolated research tasks (read-only)
+- 3+ independent subtasks
+- Parallel execution possible
+- Planning Mode Phase 1 (EXPLORE)
+
+❌ **Don't delegate when:**
+- Tightly coupled tasks (sequential dependencies)
+- Shared context needed across tasks
+- Blocking operations (one depends on another)
+- Simple tasks (<15 LOC, 1 subtask)
+
+### Example: User Authentication Research
+
+**Main Agent Spawns 3 Parallel Subagents:**
+
+```yaml
+Subagent 1 (Explore):
+  Task: Find existing auth patterns in codebase
+  Tools: Grep, Read
+  Search: "auth", "jwt", "token"
+  Duration: 30 minutes
+  Output: Found JWT pattern in 3 implementations
+
+Subagent 2 (WebFetch):
+  Task: OWASP authentication guidelines
+  Tools: WebFetch
+  URLs: owasp.org, auth0.com
+  Duration: 20 minutes
+  Output: bcrypt cost 12+, MFA, 15min JWT expiry
+
+Subagent 3 (Explore):
+  Task: Test patterns for authentication
+  Tools: Grep, Read
+  Search: "test_auth", "pytest", "fixture"
+  Duration: 20 minutes
+  Output: Use pytest fixtures + Redis mock
+```
+
+**Main Agent Synthesis:**
+- Aggregates findings from 3 subagents
+- Creates implementation plan
+- Presents to human for approval
+
+### Expected Impact
+
+**Time Savings:**
+- Sequential: 4 hours research + 1 hour synthesis = 5 hours
+- Parallel: 30 minutes (longest subagent) + 1 hour = 1.5 hours
+- **Result: 3.3x faster research phase**
+
+**Quality Benefits:**
+- More patterns discovered (parallel exploration)
+- Better coverage (multiple perspectives)
+- Evidence trail (all subagent work auditable)
+
+---
+
 ## Sub-agent Types
 
 ### Explore Sub-agents

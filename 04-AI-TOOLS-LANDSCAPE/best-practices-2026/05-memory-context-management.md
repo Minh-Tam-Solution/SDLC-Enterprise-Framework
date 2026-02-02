@@ -365,6 +365,147 @@ Context updates by gate:
 
 ---
 
+## Continuous Learning Protocol
+
+### The Learning Loop
+
+After every bug fix caused by AI-generated code:
+
+1. **Document the lesson** in `.claude/learnings/YYYY-MM-DD-issue-NNN.md`
+2. **Categorize by pattern** (pydantic, auth, testing, performance)
+3. **Monthly aggregation** → Update CLAUDE.md
+
+**Problem Addressed**: AI coding assistants repeatedly make the **same mistakes** because they lack feedback loops. The Continuous Learning Protocol closes this gap by automatically capturing lessons from bug fixes.
+
+### Learning Entry Format
+
+**File**: `.claude/learnings/2026-03-05-issue-1234.md`
+
+```markdown
+---
+date: 2026-03-05
+category: pydantic
+severity: medium
+issue: https://github.com/org/repo/issues/1234
+pr: https://github.com/org/repo/pull/1235
+---
+
+# Learning: Pydantic v2 Config Migration
+
+## Problem
+
+AI generated code using deprecated Pydantic v1 syntax:
+
+\`\`\`python
+class User(BaseModel):
+    name: str
+
+    class Config:  # ❌ Pydantic v1 (deprecated)
+        from_attributes = True
+\`\`\`
+
+This caused 500+ deprecation warnings during pytest.
+
+## Solution
+
+Use Pydantic v2 syntax:
+
+\`\`\`python
+from pydantic import BaseModel, ConfigDict
+
+class User(BaseModel):
+    name: str
+
+    model_config = ConfigDict(from_attributes=True)  # ✅ Pydantic v2
+\`\`\`
+
+## Rule for Future AI
+
+**DON'T**: Use `class Config:` (Pydantic v1)
+**DO**: Use `model_config = ConfigDict(...)` (Pydantic v2)
+
+## Test Case (Prevent Regression)
+
+\`\`\`python
+def test_uses_pydantic_v2():
+    assert hasattr(User, "model_config")
+    assert not hasattr(User, "Config")
+\`\`\`
+
+## Impact
+
+- Fixed: 19 files migrated
+- Warnings: 500+ → 30 (94% reduction)
+- Time saved: ~2 hours in future sprints
+```
+
+### Automation Options
+
+#### Option 1: Manual
+
+```bash
+# Create learning entry after bug fix
+mkdir -p .claude/learnings
+cat > .claude/learnings/2026-03-05-manual.md << 'EOF'
+# Learning: [Title]
+## Problem: [Description]
+## Solution: [Code fix]
+## Rule: [Guideline for AI]
+EOF
+
+# Monthly: Update CLAUDE.md manually
+```
+
+#### Option 2: CLI Command
+
+```bash
+# After merging bug fix PR
+sdlcctl learn --from-fix "Pydantic v2 migration pattern"
+
+# Monthly aggregation
+sdlcctl learn --aggregate --since 2026-02-01
+
+# View all learnings
+sdlcctl learn --list
+```
+
+#### Option 3: GitHub Actions (Automated)
+
+```yaml
+# .github/workflows/learning-capture.yml
+name: Capture Learning from Bug Fix
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  capture:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract learning
+        run: |
+          curl -X POST "$ORCHESTRATOR_URL/api/v1/learning/capture" \
+            -H "Authorization: Bearer $TOKEN" \
+            -d '{"pr": ${{ github.event.pull_request.number }}}'
+```
+
+### Expected Impact
+
+**Benefits**:
+- **Zero repeated bugs** - AI learns from past mistakes
+- **Knowledge retention** - Institutional memory preserved
+- **Faster onboarding** - New AI sessions learn from history
+
+**Costs**:
+- **Manual**: 5 min/bug fix (create learning entry)
+- **CLI**: 1 min/bug fix (run command)
+- **Automated**: 0 min/bug fix (GitHub Actions)
+
+---
+
 ## Context Size Management
 
 ### Monitor Usage

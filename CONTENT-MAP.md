@@ -1,6 +1,6 @@
-# SDLC Framework 6.0.2 Content Map
+# SDLC Framework 6.0.3 Content Map
 
-**Version**: 6.0.2
+**Version**: 6.0.3
 **Status**: ACTIVE
 **Date**: February 2, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping
@@ -86,6 +86,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Observability Checklist | `02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md` | — | ACTIVE |
 | Naming Standards | `02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md` | Consolidated from Code-File-Naming + Document-Naming + Header-Templates | ACTIVE |
 | Team Collaboration | `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
+| **Visual Documentation Standards** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | RFC-SDLC-607 | **NEW 6.0.3** |
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
 | **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
@@ -141,11 +142,12 @@ Before creating any new document, check if a canonical file already exists for t
 | AI Best Practices Index | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md` | `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | ACTIVE |
 | Planning Mode (Tool Guide) | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md` | — | ACTIVE |
 | Model Selection | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md` | — | ACTIVE |
-| Sub-agent Orchestration | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE |
+| Sub-agent Orchestration | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/03-sub-agent-orchestration.md` | — | ACTIVE (Enhanced 6.0.3) |
 | Prompting Best Practices | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-prompting-best-practices.md` | — | ACTIVE |
-| Memory & Context | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/05-memory-context-management.md` | — | ACTIVE |
+| Memory & Context | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/05-memory-context-management.md` | — | ACTIVE (Enhanced 6.0.3) |
 | Permissions & Security | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-permissions-security.md` | — | ACTIVE |
 | Developer Role Evolution | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/07-developer-role-evolution.md` | — | ACTIVE |
+| **Git Workflow Patterns** | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/04-git-workflow-patterns.md` | RFC-SDLC-604 | **NEW 6.0.3** |
 
 ### Implementation Guides (07-Implementation-Guides/)
 
@@ -153,6 +155,7 @@ Before creating any new document, check if a canonical file already exists for t
 |-------|---------------|----------------|--------|
 | Code Review Framework | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `02-AI-Tools/code-review/` (partial) | ACTIVE |
 | Implementation Guide | `07-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
+| **MCP Integration Guide** | `07-Implementation-Guides/MCP-Integration-Guide.md` | RFC-SDLC-603 | **NEW 6.0.3** |
 
 ### AI Tools Landscape (04-AI-TOOLS-LANDSCAPE/) - NEW
 
@@ -225,6 +228,22 @@ Before creating any new document, check if a canonical file already exists for t
 | BRS (BriefingScript) | DEPRECATED | AGENTS.md "## Task Brief" | July 2026 |
 | MTS (MentorScript) | DEPRECATED | AGENTS.md "## Conventions" | July 2026 |
 | LPS (LoopScript) | DEPRECATED | AI generates own plans | July 2026 |
+
+### Boris Cherny Consolidation (6.0.3 - Feb 2, 2026)
+
+| RFC File | Consolidated Into | Content Preserved | Status |
+|----------|-------------------|-------------------|--------|
+| **RFC-SDLC-603** | `07-Implementation-Guides/MCP-Integration-Guide.md` | ✅ 100% methodology | DELETED |
+| **RFC-SDLC-604** | `04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md` | ✅ 100% complete | DELETED |
+| **RFC-SDLC-605** | `04-AI-Tools-Landscape/best-practices-2026/05-memory-context-management.md` (enhanced) | ✅ 100% methodology | DELETED |
+| **RFC-SDLC-606** | `04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md` (enhanced) | ✅ 100% methodology | DELETED |
+| **RFC-SDLC-607** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | ✅ 100% methodology | DELETED |
+
+**Consolidation Metrics**:
+- Source: 2,307 lines (5 RFCs)
+- Target: ~1,530 lines (2 new + 3 enhanced files)
+- Net change: -3 files (5 deleted - 2 created)
+- Content loss: 0 methodology lines (Track 2 implementation details omitted per Framework-First principle)
 
 ---
 
