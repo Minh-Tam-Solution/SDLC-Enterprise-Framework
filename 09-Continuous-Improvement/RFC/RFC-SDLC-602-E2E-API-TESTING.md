@@ -36,6 +36,154 @@ Current SDLC Framework 6.0.1 has gaps in:
 - `docs/05-Testing-Quality/03-E2E-Testing/reports/E2E-API-REPORT-{DATE}.md`
 - `e2e-api-testing` skill v1.1.0 (with Security & GraphQL modes)
 
+---
+
+## 📖 Case Study: SOP Generator E2E API Testing
+
+### Project Context
+
+| Attribute | Value |
+|-----------|-------|
+| **Project** | SOP Generator (BFlow Platform) |
+| **Framework** | SDLC 6.0.0 |
+| **Phase** | Phase 2 - Pilot (SE 3.0 Track 1) |
+| **Test Date** | February 1, 2026 |
+| **Testing Tool** | `*-CyEyes-*` Automated Testing System |
+| **API Specification** | OpenAPI 3.0 (58 endpoints) |
+
+### Challenge: No Standard E2E Testing Workflow
+
+**Initial State**:
+- 58 API endpoints across 12 categories
+- No standardized E2E testing workflow
+- No Stage 03 ↔ Stage 05 traceability
+- No security testing patterns
+
+**Categories Tested**:
+1. Health & System (8 endpoints)
+2. Authentication (8 endpoints)
+3. Auth Aliases (2 endpoints)
+4. Onboarding (7 endpoints)
+5. SOP Management (8 endpoints)
+6. Admin User Management (9 endpoints)
+7. Admin Analytics (2 endpoints)
+8. Admin Templates (1 endpoint)
+9. Admin Audit (4 endpoints)
+10. Admin AI Settings (4 endpoints)
+11. Admin API Keys (4 endpoints)
+12. Config (1 endpoint)
+
+### Test Execution Results
+
+| Metric | Value |
+|--------|-------|
+| **Total Endpoints** | 58 |
+| **Initial Pass Rate** | 55.2% (32/58) |
+| **After Retry 1** | 72.4% (42/58) |
+| **After Retry 2** | 79.3% (46/58) |
+| **Final Pass Rate** | **84.5% (49/58)** |
+| **Average Response Time** | 9.9ms |
+| **Blocked by Design** | 4 endpoints (6.9%) |
+| **Needs Config Fix** | 5 endpoints (8.6%) |
+
+### Technical Discoveries
+
+**1. Position 3D Schema (CASE-SENSITIVE!)**
+```yaml
+X-Axis (Document Layer):
+  - Policy
+  - Process
+  - Procedure
+  - Work Instruction
+  - Checklist/Form
+
+Y-Axis (Organizational Scope):
+  - Group/Holding
+  - Company
+  - LOB
+  - Site/Branch
+  - Department
+  - Role
+
+Z-Axis (Maturity Level):
+  - Manual
+  - Guided
+  - Semi-auto
+  - Full-auto
+  - Self-learning
+```
+
+**2. Environment Configuration Issues**
+| Variable | Priority | Impact |
+|----------|----------|--------|
+| `API_KEY_ENCRYPTION_KEY` | HIGH | 4 endpoints blocked |
+| `CONFIG_SERVICE_INTERNAL_TOKEN` | MEDIUM | 1 endpoint blocked |
+| `OLLAMA_BASE_URL` | LOW | Optional integration |
+
+**3. Fixes Applied During Testing**
+- Schema validation for Position 3D (case-sensitivity)
+- Authentication header format standardization
+- Response structure validation
+- Error message consistency
+
+### Artifacts Created
+
+**Stage 03 (Integration)**:
+```
+docs/03-Integration-APIs/
+└── 02-API-Specifications/
+    ├── COMPLETE-API-ENDPOINT-REFERENCE.md  ← 58 endpoints documented
+    └── openapi.json                         ← Source spec
+```
+
+**Stage 05 (Testing)**:
+```
+docs/05-Testing-Quality/
+└── 03-E2E-Testing/
+    ├── reports/
+    │   └── E2E-API-REPORT-2026-02-01.md     ← Detailed results
+    ├── scripts/
+    │   └── test_all_endpoints.py            ← Generated test script
+    └── artifacts/
+        └── test_results_20260201.json       ← Raw results
+```
+
+### Gap Analysis (Why This RFC)
+
+| Gap Discovered | Impact | RFC Solution |
+|----------------|--------|--------------|
+| No testing workflow | 3 hours manual setup | Template 1: 5-phase workflow |
+| No API doc template | Inconsistent docs | Template 2: Structured format |
+| No cross-reference | Lost traceability | Template 3: Stage 03↔05 links |
+| No security testing | Unknown vulnerabilities | Template 4: OWASP Top 10 |
+| No artifact structure | Files scattered | Template 5: SDLC-compliant paths |
+
+### Key Learnings
+
+1. **5-Phase Workflow is Essential**: Without structure, each project reinvents the wheel
+2. **Cross-Reference is Critical**: Stage 03 docs MUST link to Stage 05 test results
+3. **Security Testing Often Skipped**: OWASP Top 10 checklist prevents this
+4. **Artifacts Need Standard Location**: Consistent paths enable automation
+5. **Case-Sensitivity Matters**: Schema validation catches data format issues
+
+### Performance Metrics (NFRs Validated)
+
+| NFR | Target | Actual | Status |
+|-----|--------|--------|--------|
+| SOP Generation | <30s (p95) | 22.3s | ✅ PASS |
+| Quality Rating | ≥4/5 | 4.2/5 | ✅ PASS |
+| AI Cost | <$50/month | $47/month | ✅ PASS |
+| Generation Success | ≥95% | 97.2% | ✅ PASS |
+
+### Conclusion
+
+SOP Generator E2E testing validated the need for:
+- **Standardized workflow** → Reduces setup time from 3h to 30min
+- **Template-driven documentation** → Consistent across all projects
+- **Mandatory cross-reference** → Enables SPEC-0016 evidence automation
+- **Security testing integration** → OWASP compliance by default
+- **SDLC-compliant storage** → Supports CLI validation (sdlcctl)
+
 ## 🔧 Proposed Changes
 
 ### 1. New Template: E2E API Testing Workflow
