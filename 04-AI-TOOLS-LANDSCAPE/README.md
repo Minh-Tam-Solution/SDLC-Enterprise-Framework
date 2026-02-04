@@ -1,10 +1,10 @@
 # AI Tools Landscape
 
-**Version**: 6.0.3
+**Version**: 6.0.4
 **Status**: ACTIVE - OUTER RING (STRATEGIC)
-**Date**: January 28, 2026
+**Date**: February 8, 2026
 **Purpose**: Track AI coding tools for Orchestrator governance
-**Framework**: SDLC 6.0.3 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
 
 ---
 
@@ -182,7 +182,7 @@ These patterns proved universal and were promoted to [03-AI-GOVERNANCE/](../03-A
 |---------|--------|-------------|
 | Context file (<60 lines) | CLAUDE.md, .cursorrules | 05-Context-Management.md |
 | Risk-based planning | Claude Code best practices | 03-Planning-Mode-Principle.md |
-| TDD with AI | Multiple tools | 04-Verification-Principle.md |
+| TDD with AI | Multiple tools | 04-Verification-Principle.md (Enhanced in 6.0.4) |
 | Human-in-loop | Universal | 01-AI-Human-Collaboration.md |
 
 ---
@@ -280,4 +280,5 @@ These patterns proved universal and were promoted to [03-AI-GOVERNANCE/](../03-A
 
 **Document Status**: ACTIVE - OUTER RING
 **Owner**: CTO Office
-**Last Updated**: January 2026
+**Last Updated**: February 2026
+**Framework**: SDLC 6.0.4

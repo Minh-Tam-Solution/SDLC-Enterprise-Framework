@@ -2,9 +2,88 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.0.3 Enterprise Framework - Boris Cherny AI Patterns Integration (FINALIZED)
+**Framework**: SDLC 6.0.4 Enterprise Framework - TDD Workflow + Spec Converter Integration
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: February 2, 2026 (SDLC 6.0.3 Consolidation Complete)
+**Last Updated**: February 8, 2026 (SDLC 6.0.4 TDD + Spec Converter Release)
+
+---
+
+## 🚀 Version 6.0.4 - February 8, 2026 (MINOR RELEASE)
+
+**Release Date**: February 8, 2026
+**Type**: MINOR RELEASE - TDD Workflow + Spec Converter Methodology (Sprint 154)
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No (additive only)
+**Supersedes**: SDLC 6.0.3 Boris Cherny Patterns Integration
+**Achievement**: TDD workflow validated (113 tests, 100% pass), Spec Converter methodology documented
+
+### 🎯 Key Enhancements: TDD Workflow + Spec Converter (Sprint 154)
+
+**THE CHANGE**: Enhanced framework with proven TDD workflow (validated through Sprint 154) and Spec Converter methodology for bidirectional specification conversion.
+
+| Enhancement | Description | Key Benefit |
+|-------------|-------------|-------------|
+| **TDD Workflow Integration** | RED-GREEN-REFACTOR cycle documentation | 100% test pass rate, 113 tests written FIRST |
+| **3-Phase Sprint Model Enhancement** | PRE-SPRINT → EXECUTION → POST-SPRINT | Better AI+Human collaboration structure |
+| **Spec Converter Methodology** | SpecIR, BDD↔OpenSpec conversion patterns | Format-agnostic specification handling |
+| **Tier-Aware TDD Requirements** | TDD coverage levels by tier | LITE: 70%, STANDARD: 85%, PRO+: 95% |
+
+### 📝 Files Enhanced (3 documents)
+
+1. **README.md** - Updated version to 6.0.4, added TDD + Spec Converter features
+2. **02-Core-Methodology/Documentation-Standards/SDLC-Sprint-Planning-Guide.md** - Enhanced 3-Phase model with TDD Workflow section
+3. **05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md** - Added Section 8: Spec Converter Methodology
+
+### 🏗️ TDD Workflow Integration (Sprint 154 Validated)
+
+**Core TDD Cycle (RED → GREEN → REFACTOR)**:
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│    RED      │     │   GREEN     │     │  REFACTOR   │
+│ Write Test  │ ──► │ Make Pass   │ ──► │  Optimize   │
+│ (Must Fail) │     │ (Minimal)   │     │  (Clean)    │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
+
+**Sprint 154 TDD Metrics**:
+- Total tests written: **113**
+- Pass rate: **100%**
+- Test-first adherence: **100%** (all tests written before implementation)
+- Coverage by component:
+  - Parser tests: 45
+  - Renderer tests: 38
+  - Integration tests: 23
+  - E2E tests: 7
+
+### 🔄 Spec Converter Methodology (Section 8)
+
+**SpecIR (Intermediate Representation)**: Format-agnostic canonical representation for specifications.
+
+**Conversion Patterns**:
+- OpenSpec → SpecIR → OpenSpec (roundtrip)
+- User Story → SpecIR → BDD Requirements
+- Jira/Linear Import → SpecIR → OpenSpec
+
+**Parser/Renderer Architecture**:
+- OpenSpecParser: YAML frontmatter + BDD markdown parsing
+- OpenSpecRenderer: SDLC 6.0.4 compliant output
+- UserStoryParser, JiraAdapter, LinearAdapter: Import adapters
+
+### 📊 Tier-Aware TDD Coverage Requirements
+
+| Tier | Minimum Coverage | Test Types Required |
+|------|------------------|---------------------|
+| **LITE** | 70% | Unit tests |
+| **STANDARD** | 85% | Unit + Integration |
+| **PROFESSIONAL** | 95% | Unit + Integration + E2E |
+| **ENTERPRISE** | 95%+ | All + Performance + Security |
+
+### 🏗️ 3-Circle Architecture Compliance
+
+- **Ring 1 (Core)**: TDD principles remain timeless methodology
+- **Ring 2 (Governance)**: 3-Phase Sprint Model enhanced with TDD gates
+- **Ring 3 (Outer)**: Spec Converter implementation details
 
 ---
 

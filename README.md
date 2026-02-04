@@ -1,6 +1,6 @@
-# SDLC 6.0.3 Universal Framework
+# SDLC 6.0.4 Universal Framework
 
-**Version**: 6.0.3 | **Status**: ACTIVE | **Date**: February 2026
+**Version**: 6.0.4 | **Status**: ACTIVE | **Date**: February 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.3 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.4 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -17,9 +17,29 @@ SDLC 6.0.3 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 5**: SASE Integration (SE 3.0)
 - **Pillar 6**: Documentation Permanence
 - **Section 7**: Quality Assurance System (Anti-Vibecoding)
-- **Section 8**: Unified Specification Standard
+- **Section 8**: Unified Specification Standard (+ Spec Converter)
 
-**NEW in 6.0.3 (Minor Release - February 2, 2026) - FINALIZED**:
+**NEW in 6.0.4 (Minor Release - February 8, 2026)**:
+- **TDD Workflow Integration**: Test-Driven Development workflow proven effective through Sprint 154 execution
+  - RED-GREEN-REFACTOR cycle documentation
+  - 113 tests written FIRST, 100% pass rate achieved
+  - Validation of test-first approach for AI-assisted development
+- **3-Phase Sprint Lifecycle Model**: Enhanced sprint structure for AI+Human collaboration
+  - Phase 1: PRE-SPRINT (Design doc validation, G-Sprint gate)
+  - Phase 2: EXECUTION (TDD implementation, daily standups)
+  - Phase 3: POST-SPRINT (24h documentation, retrospective)
+- **Spec Converter Methodology**: Section 8 enhanced with specification conversion patterns
+  - SpecIR (Intermediate Representation) for format-agnostic specifications
+  - BDD ↔ OpenSpec bidirectional conversion
+  - User Story → BDD → OpenSpec conversion chain
+  - Import patterns (Jira, Linear, Text)
+- **Tier-Aware TDD Requirements**: TDD compliance levels by tier
+  - LITE: 70% test coverage (Basic)
+  - STANDARD: 85% test coverage (Standard)
+  - PROFESSIONAL: 95% test coverage (Advanced)
+  - ENTERPRISE: 95%+ with security tests
+
+**From 6.0.3 (Minor Release - February 2, 2026) - FINALIZED**:
 - **Boris Cherny Consolidation**: 5 RFC documents (603-607) consolidated into Framework structure
 - **Created (2 new files)**:
   - MCP Integration Guide: 6x faster bug triage via Model Context Protocol automation (Slack/GitHub/Jira)
@@ -483,6 +503,7 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
+| **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Integration + Sprint 3-Phase Model + Spec Converter** - TDD Workflow Integration proven through Sprint 154 (113 tests, 100% pass rate, RED-GREEN-REFACTOR validated). 3-Phase Sprint Lifecycle Model (PRE-SPRINT, EXECUTION, POST-SPRINT) with enhanced design doc validation. Spec Converter Methodology adds SpecIR intermediate representation, BDD ↔ OpenSpec bidirectional conversion, User Story → BDD chain, Jira/Linear import patterns. Tier-Aware TDD Requirements (LITE 70%, STANDARD 85%, PROFESSIONAL/ENTERPRISE 95%+). Sprint 154 Track 2 completion. |
 | **6.0.3** | **Feb 2, 2026** | **MINOR: Boris Cherny Consolidation (FINALIZED)** - Consolidated 5 RFC documents (603-607) into Framework structure following 3-Circle Architecture. **Created**: MCP Integration Guide (6x faster bug triage), Git Workflow Patterns (2.5x productivity via worktrees). **Enhanced**: Memory & Context Management (Continuous Learning Protocol), Sub-agent Orchestration (Research Delegation 3.3x faster), Visual Documentation Standards (4x faster onboarding). **Result**: -3 files (better organization), 0 methodology content loss, 100% Framework-First compliance. **Metrics preserved**: 6x, 2.5x, 3.3x, 4x productivity improvements. Tool-agnostic patterns work with Claude Code, Cursor, Copilot, GPT-4o, Gemini, Ollama. Sprint 143 Track 1 completion. |
 | **6.0.2** | **Feb 2, 2026** | **MINOR: E2E API Testing Enhancement** - RFC-SDLC-602 introduces standardized 6-phase E2E testing workflow, Stage Cross-Reference Matrix (Stage 03 ↔ 05 bidirectional traceability), OWASP API Security Top 10 checklist (2023), Testing Artifacts Structure (SDLC-compliant folders), sdlcctl E2E commands (validate, cross-reference, generate-report), OPA policy integration, 4 new Evidence types (e2e_test_report, security_test_report, api_coverage_report, cross_reference_validation). Addresses API testing gaps and SSOT validation. Sprint 139-141 completion. |
 | **6.0.1** | **Feb 1, 2026** | **MINOR: Stage Consistency Validation** - SPEC-0021 formalizes proven 4-stage consistency validation workflow (Stage 01 PLANNING ↔ Stage 02 DESIGN ↔ Stage 03 INTEGRATE ↔ Stage 04 BUILD). Includes pre/post-implementation checklists, artifact integrity hashing (SHA256), CLI validation commands, CI/CD integration patterns, tier-specific validation depths. Addresses "spec drift" where implementation diverges from approved designs. Sprint 134 completion. |

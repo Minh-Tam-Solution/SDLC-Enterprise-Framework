@@ -1,17 +1,18 @@
 # 📝 SDLC Documentation Standards - Pillar 6: Documentation Permanence
 
-**Version**: 6.0.3
-**Date**: January 28, 2026
+**Version**: 6.0.4
+**Date**: February 8, 2026
 **Status**: ACTIVE - Production Standards
 **Authority**: CPO Office
 **Pillar**: 6 of 8 - Documentation Permanence (8-Pillar Architecture with Pillar 7: Quality Assurance System)
 **AI Governance**: Aligned with 03-AI-GOVERNANCE/05-Context-Management principles
+**NEW in 6.0.4**: TDD Workflow Integration + 3-Phase Sprint Lifecycle Enhanced
 
 ---
 
 ## 🎯 Purpose
 
-This folder contains the **mandatory documentation standards** for all SDLC 6.0.3 projects. As **Pillar 6** of the 8-Pillar Architecture, Documentation Permanence ensures:
+This folder contains the **mandatory documentation standards** for all SDLC 6.0.4 projects. As **Pillar 6** of the 8-Pillar Architecture, Documentation Permanence ensures:
 
 - **Permanence**: Documentation doesn't become obsolete
 - **Discoverability**: Easy to find what you need
@@ -31,11 +32,11 @@ This folder contains the **mandatory documentation standards** for all SDLC 6.0.
 
 ---
 
-## 📚 Document Consolidation (SDLC 6.0.3)
+## 📚 Document Consolidation (SDLC 6.0.4)
 
 ### Consolidation Summary
 
-SDLC 6.0.3 consolidated 13 files → 7 files for improved clarity:
+SDLC 6.0.4 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enhancements:
 
 | Previous Files | Merged Into | Lines |
 |----------------|-------------|-------|
@@ -45,7 +46,7 @@ SDLC 6.0.3 consolidated 13 files → 7 files for improved clarity:
 | ARCHIVAL-HEADER-TEMPLATE.md | ↑ | |
 | Team-Collaboration/* (4 files) | **SDLC-Team-Collaboration.md** | ~700 |
 
-### Current Documents (6 files - SDLC 6.0.3 Flattened)
+### Current Documents (6 files - SDLC 6.0.4 Enhanced)
 
 | Document | Purpose | Compliance |
 |----------|---------|------------|
@@ -53,7 +54,7 @@ SDLC 6.0.3 consolidated 13 files → 7 files for improved clarity:
 | **SDLC-Team-Collaboration.md** ⭐ | Communication + RACI + Escalation standards | MANDATORY (STANDARD+) |
 | **SDLC-Project-Structure-Standard.md** | Folder structure (10 stages) | MANDATORY |
 | **SDLC-Tier-Stage-Requirements.md** | Tier-specific stage requirements | MANDATORY |
-| **SDLC-Sprint-Planning-Guide.md** | Step-by-step sprint planning guide | RECOMMENDED |
+| **SDLC-Sprint-Planning-Guide.md** ⭐ | 3-Phase Sprint + TDD Workflow guide (6.0.4) | RECOMMENDED |
 
 ---
 
@@ -152,21 +153,26 @@ docs/
 
 ---
 
-### 5. SDLC-Sprint-Planning-Guide.md ⭐ RECOMMENDED
+### 5. SDLC-Sprint-Planning-Guide.md ⭐ RECOMMENDED (6.0.4 Enhanced)
 
-**Purpose**: Step-by-step sprint planning guide (Pillar 2 compliance)
+**Purpose**: Step-by-step sprint planning guide with 3-Phase Lifecycle + TDD Integration (Pillar 2 compliance)
 
-**Covers**:
-- Pre-Sprint Checklist (verify previous sprint closed, roadmap alignment)
+**Covers** (6.0.4 Enhanced):
+- **3-Phase Sprint Lifecycle Model** (PRE-SPRINT → EXECUTION → POST-SPRINT)
+- **TDD Workflow Integration** (RED-GREEN-REFACTOR per feature)
+- **Tier-Aware TDD Coverage** (LITE 70%, STANDARD 85%, PRO/ENT 95%)
+- Pre-Sprint Checklist (design doc validation, TDD test strategy)
 - G-Sprint Gate Evaluation (alignment, capacity, dependencies, risk)
-- During Sprint Activities (daily standup, blocker escalation, mid-sprint check)
+- During Sprint Activities (TDD cycle, daily standup, mid-sprint check)
 - Post-Sprint Checklist (sprint completion, review, retrospective, documentation)
 - Common Pitfalls (direction confusion, documentation lag, scope creep)
 
-**Lines**: ~400 lines comprehensive guide
+**Lines**: ~550 lines comprehensive guide (enhanced in 6.0.4)
 **Compliance**: RECOMMENDED for STANDARD+ tiers
 
-> **SDLC 6.0.3**: This document was previously in `Situation-Specific-Guides/When-Planning-Sprint.md`. Folder flattened for 2-level maximum structure.
+**Sprint 154 Validation**: TDD workflow validated with 113 tests, 100% pass rate
+
+> **SDLC 6.0.4**: Enhanced with 3-Phase Sprint Lifecycle Model and TDD Workflow Integration. Originally in `Situation-Specific-Guides/When-Planning-Sprint.md`.
 
 ---
 
@@ -364,7 +370,9 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.0.0** | **Jan 28, 2026** | **Folder flattening (remove layer 3)**, version upgrade |
+| **6.0.4** | **Feb 8, 2026** | **TDD Workflow Integration**, 3-Phase Sprint Enhancement, Spec Converter |
+| 6.0.3 | Feb 2, 2026 | Boris Cherny Best Practices Consolidation |
+| 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
 | 5.3.0 | Jan 28, 2026 | Document consolidation (13 → 7 files), 8-Pillar updates |
 | 5.2.0 | Jan 22, 2026 | AI Governance integration, Context Management alignment |
 | 5.1.3 | Jan 18, 2026 | Pillar 6 integration with Pillar 2 (Sprint Governance) |
@@ -377,5 +385,5 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 **Sprint Governance Integration**: *"24h documentation is not bureaucracy—it's incident prevention"* ⏰
 
-**Last Updated**: January 28, 2026
+**Last Updated**: February 8, 2026
 **Owner**: CPO Office

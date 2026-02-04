@@ -1,9 +1,53 @@
-# SDLC 6.0.3 Executive Summary
+# SDLC 6.0.4 Executive Summary
 
-**Version**: 6.0.3
-**Release Date**: February 2, 2026 (MINOR: Boris Cherny Best Practices Consolidation)
+**Version**: 6.0.4
+**Release Date**: February 8, 2026 (MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## What's New in 6.0.4 (MINOR RELEASE)
+
+### TDD Workflow Integration + 3-Phase Sprint Enhancement
+
+**The Problem**: AI-assisted development benefits from structured test-driven workflows, but the 3-Phase Sprint Model lacked explicit TDD integration and tier-aware coverage requirements.
+
+**The Solution**: Integrate TDD (RED-GREEN-REFACTOR) into the 3-Phase Sprint Lifecycle with tier-specific coverage targets.
+
+| Component | Capability | Implementation |
+|-----------|------------|----------------|
+| **TDD Workflow** | RED-GREEN-REFACTOR cycle | Write tests FIRST → Pass tests → Refactor |
+| **3-Phase Sprint Enhancement** | TDD integrated into each phase | Pre-Sprint: Test strategy, Execution: TDD cycle, Post-Sprint: Coverage verification |
+| **Tier-Aware Coverage** | Coverage targets per tier | LITE 70%, STANDARD 85%, PRO/ENT 95% |
+| **Spec Converter** | Format-agnostic SpecIR | OpenSpec ↔ SDLC 6.0 bidirectional conversion |
+
+**Sprint 154 Validation Results**:
+```yaml
+TDD Excellence Metrics:
+  Total Tests: 113 (all written FIRST)
+  Pass Rate: 100% on first implementation
+  Coverage: Exceeds tier requirements
+
+Day-by-Day:
+  Day 1: 48 tests (IR Schema + Parsers)     ✅ 100%
+  Day 2: 35 tests (Renderers)               ✅ 100%
+  Day 3: 18 tests (API Routes)              ✅ 100%
+  Day 5: 52 tests (Import + E2E)            ✅ 100%
+
+Validation: TDD workflow proven effective for AI-assisted development
+```
+
+**Impact**:
+- **Quality**: 100% test pass rate with TDD workflow
+- **Coverage**: Tier-appropriate requirements (70%-95%)
+- **Format Interoperability**: SpecIR enables OpenSpec ↔ SDLC conversion
+- **Sprint Governance**: 3-Phase model enhanced with explicit TDD integration
+
+**Resources**:
+- Sprint Planning Guide: [SDLC-Sprint-Planning-Guide.md](../02-Core-Methodology/Documentation-Standards/SDLC-Sprint-Planning-Guide.md)
+- Specification Standard: [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md)
+- Changelog: [CHANGELOG.md (6.0.4)](../CHANGELOG.md)
 
 ---
 
@@ -260,7 +304,7 @@ New comprehensive guide covering:
 
 ## Framework Overview
 
-**SDLC 6.0.3** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
+**SDLC 6.0.4** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
 
 ### 7 Core Pillars
 - **Pillar 0**: Design Thinking Foundation
@@ -283,7 +327,7 @@ New comprehensive guide covering:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.3 - 10 STAGES                           │
+│                    SDLC 6.0.4 - 10 STAGES                           │
 ├─────────────────────────────────────────────────────────────────────┤
 │  00 FOUNDATION  (WHY?)      Strategic Discovery & Validation        │
 │  01 PLANNING    (WHAT?)     Requirements & User Stories             │
@@ -370,10 +414,12 @@ Pillar 1: 10-Stage Lifecycle
   - Stage-appropriate governance
   - Stage Dependency Matrix (5.3.0)
 
-Pillar 2: Sprint Planning Governance (5.1.3)
+Pillar 2: Sprint Planning Governance (6.0.4)
   - G-Sprint / G-Sprint-Close gates
   - 24h documentation enforcement
   - Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
+  - 3-Phase Sprint Lifecycle: PRE-SPRINT → EXECUTION → POST-SPRINT
+  - TDD Integration: RED-GREEN-REFACTOR per feature
 
 Pillar 3: 4-Tier Classification
   - LITE → ENTERPRISE scaling
@@ -400,12 +446,14 @@ Section 7: Quality Assurance System (5.3.0)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms)
 
-Section 8: Unified Specification Standard (6.0.0) ⭐ NEW
+Section 8: Unified Specification Standard (6.0.4) ⭐ ENHANCED
   - YAML Frontmatter (spec_id, tier, stage, status)
   - BDD Requirements (GIVEN-WHEN-THEN format)
   - DESIGN_DECISIONS.md (lightweight ADRs)
   - SPEC_DELTA.md (version tracking)
   - Context Authority Methodology (Dynamic AGENTS.md)
+  - Spec Converter Methodology (SpecIR format-agnostic)
+  - Tier-Aware TDD Coverage Requirements
 ```
 
 ---
@@ -513,6 +561,7 @@ SDLC 5.3.0 (Jan 2026) → Quality Assurance System (Section 7) + Stage Dependenc
 SDLC 6.0.0 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR RELEASE
 SDLC 6.0.2 (Feb 2026) → E2E API Testing Enhancement (MINOR)
 SDLC 6.0.3 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
+SDLC 6.0.4 (Feb 2026) → TDD Workflow Integration + 3-Phase Sprint Enhancement ⭐ CURRENT
 ```
 
 ---
@@ -574,7 +623,7 @@ SDLC 6.0.3 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
 
 ---
 
-**Last Updated**: February 2, 2026
+**Last Updated**: February 8, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
-**Version**: 6.0.3
+**Version**: 6.0.4

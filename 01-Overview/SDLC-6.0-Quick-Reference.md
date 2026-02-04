@@ -1,9 +1,67 @@
-# SDLC Framework 6.0.3 Quick Reference Guide
+# SDLC Framework 6.0.4 Quick Reference Guide
 
-**Version**: 6.0.3
-**Date**: February 2, 2026
+**Version**: 6.0.4
+**Date**: February 8, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
+
+---
+
+## What's New in 6.0.4 (MINOR)
+
+### TDD Workflow Integration + 3-Phase Sprint Enhancement
+
+```yaml
+Sprint 154 Validation:
+  Total Tests: 113 (all written FIRST per TDD)
+  Pass Rate: 100% on first implementation
+  Coverage: Exceeds tier requirements
+
+TDD Workflow (RED-GREEN-REFACTOR):
+  1. RED Phase: Write tests FIRST (must fail initially)
+  2. GREEN Phase: Implement minimal code to pass (100% pass required)
+  3. REFACTOR Phase: Clean up code, maintain passing tests
+
+Tier-Aware TDD Coverage Targets:
+  - LITE: 70%
+  - STANDARD: 85%
+  - PROFESSIONAL: 95%
+  - ENTERPRISE: 95%+ with security tests
+
+3-Phase Sprint Lifecycle Enhanced:
+  Phase 1: PRE-SPRINT (1-2 days)
+    - Design doc validation (ADR/Spec/API contracts)
+    - TDD test strategy + coverage targets per tier
+    - G-Sprint gate approval
+
+  Phase 2: EXECUTION (5-8 days)
+    - TDD Cycle per feature: RED → GREEN → REFACTOR
+    - Daily standups + progress tracking
+    - Mid-sprint check (Day 5): 50% progress?
+
+  Phase 3: POST-SPRINT (24h max)
+    - Documentation completion (MANDATORY)
+    - G-Sprint-Close gate
+    - Retrospective (max 3 action items)
+
+Spec Converter Methodology (Section 8 Enhancement):
+  - SpecIR: Format-agnostic intermediate representation
+  - OpenSpec → SDLC 6.0 conversion: sdlcctl spec convert
+  - SDLC 6.0 → OpenSpec export: sdlcctl spec export
+  - BDD ↔ API mapping: Automatic test generation
+
+Key Files Updated:
+  - SDLC-Sprint-Planning-Guide.md (+TDD Workflow)
+  - SDLC-Specification-Standard.md (+Section 8: Spec Converter)
+  - SDLC-Continuous-Improvement-Guide.md (+6.0.4 Success Story)
+```
+
+**Rationale**: TDD proven effective for AI-assisted development in Sprint 154. 3-Phase Sprint Model enhanced with explicit TDD integration. Spec Converter enables format interoperability.
+
+**References**:
+- [CHANGELOG.md (6.0.4)](../CHANGELOG.md)
+- [SDLC-Sprint-Planning-Guide.md](../02-Core-Methodology/Documentation-Standards/SDLC-Sprint-Planning-Guide.md)
+- [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md)
 
 ---
 
@@ -146,22 +204,25 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.3 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.4 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
 ║    P1: 10-Stage Lifecycle P4: Quality Gates                                ║
 ║    P2: Sprint Governance  P5: SASE (AI-Human)                              ║
-║                           P6: Documentation Standards                      ║
+║       + 3-Phase Lifecycle P6: Documentation Standards                      ║
+║       + TDD Integration                                                    ║
 ║                                                                            ║
 ║  EXTENSION SECTIONS (7-8): Additive Capabilities                           ║
 ║    Section 7: Quality Assurance System (5.3.0)                            ║
 ║      - Vibecoding Index (0-100)                                           ║
 ║      - Progressive Routing (Green → Red)                                  ║
 ║                                                                            ║
-║    Section 8: Unified Specification Standard (6.0.0)                      ║
+║    Section 8: Unified Specification Standard (6.0.4)                      ║
 ║      - YAML Frontmatter (MANDATORY)                                        ║
 ║      - BDD Requirements (GIVEN-WHEN-THEN)                                 ║
+║      - Spec Converter (SpecIR format-agnostic)                            ║
+║      - Tier-Aware TDD Coverage Requirements                               ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -307,7 +368,7 @@ SDLC-Enterprise-Framework/
 
 ---
 
-## Quick Checklist: Is This 6.0 Compliant?
+## Quick Checklist: Is This 6.0.4 Compliant?
 
 ```yaml
 Specification:
@@ -321,12 +382,23 @@ AI Usage:
   [ ] Using Planning Mode for risk factors?
   [ ] Context file <60 lines?
   [ ] Evidence before merge?
+
+TDD Compliance (6.0.4):
+  [ ] Tests written FIRST (RED phase)?
+  [ ] All tests passing before merge (GREEN phase)?
+  [ ] Code refactored with tests maintained (REFACTOR phase)?
+  [ ] Coverage meets tier target (LITE 70%, STANDARD 85%, PRO/ENT 95%)?
+
+Sprint Governance (3-Phase):
+  [ ] Pre-Sprint: Design docs validated, TDD strategy defined?
+  [ ] Execution: TDD cycle followed per feature?
+  [ ] Post-Sprint: Documentation completed within 24h?
 ```
 
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: February 2, 2026
-**Framework**: SDLC 6.0.3 (7-Pillar + 2-Section)
+**Last Updated**: February 8, 2026
+**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
 
-*Quick reference for SDLC Framework 6.0.3 - Keep this handy!*
+*Quick reference for SDLC Framework 6.0.4 - Keep this handy!*

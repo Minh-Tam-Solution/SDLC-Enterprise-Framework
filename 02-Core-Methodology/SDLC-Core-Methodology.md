@@ -1,21 +1,21 @@
-# SDLC 6.0.2 Core Methodology
+# SDLC 6.0.4 Core Methodology
 
-**Version**: 6.0.2
-**Date**: February 2, 2026
-**Status**: ACTIVE - E2E API Testing Enhancement (MINOR RELEASE)
+**Version**: 6.0.4
+**Date**: February 8, 2026
+**Status**: ACTIVE - TDD Workflow Integration + 3-Phase Sprint Enhancement (MINOR RELEASE)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
 ## Executive Summary
 
-SDLC 6.0.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, and **standardized E2E API testing workflows**.
+SDLC 6.0.4 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
 
 ### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.2 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.4 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
@@ -32,8 +32,10 @@ SDLC 6.0.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
-║  │ PILLAR 2: SPRINT PLANNING GOVERNANCE                                 │  ║
+║  │ PILLAR 2: SPRINT PLANNING GOVERNANCE (6.0.4 Enhanced)                │  ║
 ║  │ Planning Hierarchy + G-Sprint Gates + 10 Golden Rules                │  ║
+║  │ 3-Phase Sprint: PRE-SPRINT → EXECUTION → POST-SPRINT                 │  ║
+║  │ TDD Integration: RED → GREEN → REFACTOR per feature                  │  ║
 ║  │ "Sprint governance is NOT optional - it's the execution backbone"    │  ║
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
@@ -67,8 +69,9 @@ SDLC 6.0.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
 ║  ┌──────────────────────────────────────────────────────────────────────┐  ║
-║  │ SECTION 8: UNIFIED SPECIFICATION STANDARD (6.0.0) ⭐ NEW             │  ║
+║  │ SECTION 8: UNIFIED SPECIFICATION STANDARD (6.0.4) ⭐ ENHANCED        │  ║
 ║  │ YAML Frontmatter + BDD Requirements + Lightweight ADRs               │  ║
+║  │ Spec Converter (SpecIR) + Tier-Aware TDD Coverage (6.0.4)            │  ║
 ║  │ "Consistent specs enable AI+Human collaboration at scale"            │  ║
 ║  └──────────────────────────────────────────────────────────────────────┘  ║
 ║                                                                            ║
@@ -83,7 +86,7 @@ SDLC 6.0.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 |--------|---------|------------|
 | 0. Design Thinking | Build the RIGHT thing | 70% features unused |
 | 1. 10-Stage Lifecycle | Complete coverage | Gaps cause failures |
-| 2. Sprint Governance | Execution backbone | Direction confusion, doc lag |
+| 2. Sprint Governance | Execution backbone + TDD | Direction confusion, doc lag |
 | 3. 4-Tier Classification | Right-size processes | Over/under engineering |
 | 4. Quality Gates | Prevent bad code shipping | Production incidents |
 | 5. SASE Integration | AI+Human productivity | 10x vs 50x potential |

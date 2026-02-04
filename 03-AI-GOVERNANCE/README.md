@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.0.3
+**Version**: 6.0.4
 **Status**: ACTIVE
-**Date**: January 28, 2026
-**Pillar**: Core AI Governance (NEW in 5.2.0)
+**Date**: February 8, 2026
+**Pillar**: Core AI Governance (Enhanced in 6.0.4 with TDD Integration)
 
 ---
 
@@ -25,7 +25,7 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 1 | **AI-Human Collaboration** | Human guides, AI executes, Human verifies | [01-AI-Human-Collaboration.md](01-AI-Human-Collaboration.md) |
 | 2 | **Agent Accountability** | Human ALWAYS responsible for shipped code | [02-Agent-Accountability.md](02-Agent-Accountability.md) |
 | 3 | **Planning Mode** | Risk-based trigger for planning before coding | [03-Planning-Mode-Principle.md](03-Planning-Mode-Principle.md) |
-| 4 | **Verification-First** | TDD, evidence, validation before merge | [04-Verification-Principle.md](04-Verification-Principle.md) |
+| 4 | **Verification-First** | TDD (RED-GREEN-REFACTOR), evidence, validation | [04-Verification-Principle.md](04-Verification-Principle.md) |
 | 5 | **Context Management** | AGENTS.md pattern, keep context <60 lines | [05-Context-Management.md](05-Context-Management.md) |
 | 6 | **Tool Evaluation** | Criteria to evaluate ANY new AI tool | [06-Tool-Evaluation-Criteria.md](06-Tool-Evaluation-Criteria.md) |
 | 7 | **Anti-Patterns** | What NOT to do with AI assistants | [07-Anti-Patterns.md](07-Anti-Patterns.md) |
@@ -68,7 +68,7 @@ These principles sit in the **Core** ring of the Framework:
 | AI-Human Collaboration | SE 3.0 SASE | v5.1.0 | Fundamental to all AI work |
 | Agent Accountability | BFlow lessons | v5.0.0 | Legal/compliance requirement |
 | Planning Mode | 2026 Best Practices | v5.2.0 | Universal pattern, proven effective |
-| Verification-First | TDD movement | v5.0.0 | Quality foundation |
+| Verification-First | TDD movement | v5.0.0 → v6.0.4 | Quality foundation + Tier-aware coverage |
 | Context Management | AGENTS.md standard | v5.2.0 | 60K+ repos use pattern |
 | Tool Evaluation | Framework need | v5.2.0 | Prevent tool-chasing |
 | Anti-Patterns | Production failures | v5.2.0 | Learn from mistakes |
@@ -104,5 +104,5 @@ A tool feature is promoted to Core when it meets ALL criteria:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: January 28, 2026
-**Framework**: SDLC 6.0.3
+**Last Updated**: February 8, 2026
+**Framework**: SDLC 6.0.4

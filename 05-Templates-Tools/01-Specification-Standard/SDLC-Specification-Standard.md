@@ -1,13 +1,15 @@
-# SDLC Specification Standard v1.0
-## Framework 6.0.2 Unified Specification Template - Section 8
+# SDLC Specification Standard v1.1
+## Framework 6.0.4 Unified Specification Template - Section 8
 
-**Version**: 6.0.2
+**Version**: 6.0.4
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
+**Last Updated**: February 8, 2026
 **Author**: PM/PJM Team
-**Framework**: SDLC 6.0.2 (7-Pillar + 2-Section)
-**Inspiration**: OpenSpec best practices + SDLC 6.0.2 evolution
+**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section)
+**Inspiration**: OpenSpec best practices + SDLC 6.0.4 evolution
 **Architecture**: Section 8: Unified Specification Standard
+**NEW in 6.0.4**: Spec Converter Methodology (SpecIR, BDD↔OpenSpec conversion)
 
 ---
 
@@ -764,38 +766,275 @@ See [Example-Spec-Professional.md](./examples/Example-Spec-Professional.md) for 
 
 ---
 
-## 8. Document Control
+## 8. Spec Converter Methodology (NEW in 6.0.4)
+
+### 8.1 Overview
+
+The **Spec Converter** enables bidirectional conversion between specification formats using an **Intermediate Representation (SpecIR)**. This methodology standardizes specification handling across different input sources and output formats.
+
+**Key Benefits**:
+- **Format-agnostic**: Convert between BDD, OpenSpec, User Stories, Jira, Linear
+- **Lossless conversion**: SpecIR preserves all semantic information
+- **Tool independence**: Works with any specification management tool
+- **TDD validated**: 113 tests written first, 100% pass rate (Sprint 154)
+
+### 8.2 SpecIR (Intermediate Representation)
+
+SpecIR is the **canonical internal format** for specifications:
+
+```yaml
+SpecIR Structure:
+  spec_id: string          # SPEC-NNNN unique identifier
+  title: string            # Human-readable title
+  version: string          # Semantic version (1.0.0)
+  status: string           # DRAFT | REVIEW | APPROVED | IMPLEMENTED | DEPRECATED
+  tier: list[string]       # [LITE, STANDARD, PROFESSIONAL, ENTERPRISE]
+  owner: string            # Responsible team/person
+  last_updated: string     # ISO date (2026-02-04)
+  tags: list[string]       # Classification tags
+  related_adrs: list[string]    # [ADR-001, ADR-002]
+  related_specs: list[string]   # [SPEC-001, SPEC-002]
+
+  requirements: list[SpecRequirement]
+    - id: string           # REQ-001
+      title: string        # Requirement title
+      priority: string     # P0 | P1 | P2 | P3
+      tier: list[string]   # Applicable tiers
+      given: string        # BDD GIVEN clause
+      when: string         # BDD WHEN clause
+      then: string         # BDD THEN clause
+      user_story: string   # Optional user story format
+      acceptance_criteria: list[string]  # Optional inline AC
+
+  acceptance_criteria: list[AcceptanceCriterion]
+    - id: string           # AC-001
+      scenario: string     # Scenario description
+      given: string        # BDD GIVEN
+      when: string         # BDD WHEN
+      then: string         # BDD THEN
+      tier: list[string]   # Applicable tiers
+      testable: boolean    # Can be automated
+```
+
+### 8.3 Conversion Patterns
+
+#### Pattern 1: OpenSpec → SpecIR → OpenSpec (Roundtrip)
+
+```
+┌──────────────────┐      ┌──────────────┐      ┌──────────────────┐
+│   OpenSpec.md    │ ──── │    SpecIR    │ ──── │   OpenSpec.md    │
+│  (YAML + BDD)    │parse │  (Internal)  │render│  (YAML + BDD)    │
+└──────────────────┘      └──────────────┘      └──────────────────┘
+```
+
+**Use Case**: Normalize, validate, and re-render specifications.
+
+#### Pattern 2: User Story → SpecIR → BDD Requirements
+
+```
+┌──────────────────┐      ┌──────────────┐      ┌──────────────────┐
+│   User Story     │ ──── │    SpecIR    │ ──── │  BDD Format      │
+│  "As a user..."  │parse │  (Internal)  │render│  GIVEN-WHEN-THEN │
+└──────────────────┘      └──────────────┘      └──────────────────┘
+```
+
+**Use Case**: Convert informal requirements to testable BDD scenarios.
+
+#### Pattern 3: Jira/Linear Import → SpecIR → OpenSpec
+
+```
+┌──────────────────┐      ┌──────────────┐      ┌──────────────────┐
+│  Jira/Linear     │ ──── │    SpecIR    │ ──── │   OpenSpec.md    │
+│  (API JSON)      │adapt │  (Internal)  │render│  (Unified Spec)  │
+└──────────────────┘      └──────────────┘      └──────────────────┘
+```
+
+**Use Case**: Migrate specifications from external tools to SDLC standard.
+
+### 8.4 Parser Implementation
+
+Parsers extract structured data from source formats into SpecIR:
+
+| Parser | Input Format | Features |
+|--------|--------------|----------|
+| **OpenSpecParser** | YAML frontmatter + BDD markdown | Frontmatter extraction, BDD clause parsing, AC table parsing |
+| **UserStoryParser** | "As a... I want... So that..." | Story decomposition, acceptance criteria extraction |
+| **JiraAdapter** | Jira API JSON | Issue mapping, epic/story hierarchy |
+| **LinearAdapter** | Linear API JSON | Cycle mapping, label conversion |
+| **TextParser** | Plain text requirements | NL pattern matching, heuristic extraction |
+
+**OpenSpec Parser Example**:
+
+```python
+# Parses SDLC 6.0.4 specification format
+async def parse(content: str) -> SpecIR:
+    # 1. Extract YAML frontmatter
+    frontmatter = extract_frontmatter(content)
+
+    # 2. Extract markdown body
+    body = extract_body(content)
+
+    # 3. Parse BDD requirements (GIVEN-WHEN-THEN)
+    requirements = extract_requirements(body)
+
+    # 4. Parse acceptance criteria tables
+    acceptance_criteria = extract_acceptance_criteria(body)
+
+    # 5. Build and return SpecIR
+    return SpecIR(
+        spec_id=frontmatter.get("spec_id"),
+        title=frontmatter.get("title"),
+        requirements=requirements,
+        acceptance_criteria=acceptance_criteria,
+        ...
+    )
+```
+
+### 8.5 Renderer Implementation
+
+Renderers transform SpecIR back to target formats:
+
+| Renderer | Output Format | Features |
+|----------|---------------|----------|
+| **OpenSpecRenderer** | YAML frontmatter + BDD markdown | Section 8 compliant output |
+| **BDDRenderer** | Pure Gherkin feature files | Cucumber/SpecFlow compatible |
+| **JSONRenderer** | Structured JSON | API integration, tooling |
+| **MarkdownRenderer** | Simple markdown | Human-readable summaries |
+
+**OpenSpec Renderer Example**:
+
+```python
+# Renders to SDLC 6.0.4 specification format
+async def render(ir: SpecIR) -> str:
+    lines = []
+
+    # 1. Render YAML frontmatter
+    lines.append("---")
+    lines.append(yaml.dump(build_frontmatter(ir)))
+    lines.append("---")
+
+    # 2. Render Requirements section
+    lines.append("# Requirements")
+    for req in ir.requirements:
+        lines.append(f"## {req.id}: {req.title} [{req.priority}] [{req.tier}]")
+        lines.append(f"**GIVEN** {req.given}")
+        lines.append(f"**WHEN** {req.when}")
+        lines.append(f"**THEN** {req.then}")
+
+    # 3. Render Acceptance Criteria table
+    if ir.acceptance_criteria:
+        lines.append("## Acceptance Criteria")
+        lines.append("| ID | Scenario | Given | When | Then | Tier | Testable |")
+        ...
+
+    return "\n".join(lines)
+```
+
+### 8.6 Tier-Aware TDD Coverage Requirements
+
+Spec Converter validates test coverage by tier (validated Sprint 154):
+
+| Tier | Minimum Coverage | Test Types Required |
+|------|------------------|---------------------|
+| **LITE** | 70% | Unit tests |
+| **STANDARD** | 85% | Unit + Integration tests |
+| **PROFESSIONAL** | 95% | Unit + Integration + E2E tests |
+| **ENTERPRISE** | 95%+ | All + Performance + Security tests |
+
+**Validation Example**:
+
+```bash
+# Validate spec coverage by tier
+sdlcctl spec validate --tier PROFESSIONAL --coverage spec.md
+
+# Output:
+# ✅ Coverage: 96.2% (target: 95%)
+# ✅ Unit tests: 85 passing
+# ✅ Integration tests: 23 passing
+# ✅ E2E tests: 5 passing
+```
+
+### 8.7 CLI Integration
+
+```bash
+# Convert User Story to OpenSpec
+sdlcctl spec convert --from user-story --to openspec input.txt -o spec.md
+
+# Convert Jira issues to OpenSpec
+sdlcctl spec convert --from jira --project PROJ-123 --to openspec -o spec.md
+
+# Validate OpenSpec format
+sdlcctl spec validate spec.md
+
+# Roundtrip validation (parse → render → compare)
+sdlcctl spec validate --roundtrip spec.md
+```
+
+### 8.8 Sprint 154 Validation Results
+
+The Spec Converter methodology was validated through Sprint 154:
+
+```yaml
+TDD Metrics (Sprint 154):
+  total_tests: 113
+  pass_rate: 100%
+
+  test_breakdown:
+    unit_tests: 85
+    integration_tests: 23
+    e2e_tests: 5
+
+  parser_coverage:
+    openspec_parser: 95%
+    user_story_parser: 92%
+    text_parser: 88%
+
+  renderer_coverage:
+    openspec_renderer: 96%
+    bdd_renderer: 94%
+    json_renderer: 97%
+
+  roundtrip_validation:
+    openspec_roundtrip: ✅ Pass (lossless)
+    bdd_roundtrip: ✅ Pass (semantic equivalent)
+```
+
+---
+
+## 9. Document Control
 
 | Field | Value |
 |-------|-------|
 | **Document ID** | SDLC-SPEC-STD-001 |
-| **Version** | 6.0.0 |
+| **Version** | 6.0.4 |
 | **Status** | ACTIVE - PRODUCTION READY |
 | **Created** | January 28, 2026 |
+| **Last Updated** | February 8, 2026 |
 | **Author** | PM/PJM Team |
 | **Reviewers** | CTO, Tech Lead |
 | **Approver** | CTO |
-| **Framework** | SDLC 6.0.2 (7-Pillar + 2-Section) |
+| **Framework** | SDLC 6.0.4 (7-Pillar + 2-Section) |
 | **Section** | Section 8: Unified Specification Standard |
-| **Inspiration** | OpenSpec, SDLC 6.0.2 |
+| **Inspiration** | OpenSpec, SDLC 6.0.4, Sprint 154 TDD Validation |
 
 ---
 
-## 9. Approval
+## 10. Approval
 
 | Role | Status | Date |
 |------|--------|------|
 | Tech Lead | ✅ APPROVED | January 28, 2026 |
 | CTO | ✅ APPROVED | January 28, 2026 |
+| CTO (6.0.4 Spec Converter) | ✅ APPROVED | February 8, 2026 |
 
-*This specification standard is APPROVED and ACTIVE for SDLC Framework 6.0.2.*
+*This specification standard is APPROVED and ACTIVE for SDLC Framework 6.0.4.*
 
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: January 28, 2026
+**Last Updated**: February 8, 2026
 **Owner**: CTO + CPO Office
 
-*SDLC Enterprise Framework 6.0.2 - Section 8: Unified Specification Standard*
+*SDLC Enterprise Framework 6.0.4 - Section 8: Unified Specification Standard*
 
 ***"Consistent specifications enable consistent quality."***

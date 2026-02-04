@@ -1,24 +1,25 @@
 # Governance & Compliance Standards
 
-**Version**: 6.0.3
-**Date**: January 28, 2026
+**Version**: 6.0.4
+**Date**: February 8, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
+**NEW in 6.0.4**: TDD Integration + 3-Phase Sprint Lifecycle + Tier-Aware Coverage
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.3**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.4**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
-| **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + Stage integration + Change management |
+| **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + 3-Phase Lifecycle + TDD Integration (6.0.4) |
 | **Pillar 4+5** | [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) | Feature gates (G0-G4) + Security gates |
-| **Pillar 7** | [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) | Anti-Vibecoding governance (NEW in 5.3.0) |
+| **Pillar 7** | [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) | Anti-Vibecoding governance + Tier-Aware TDD Coverage (6.0.4) |
 
 ---
 
@@ -55,6 +56,9 @@ Previous versions moved to `99-Legacy/5.2.0-Deprecated/`
 │  │ ┌─────────────────────────────────────────────────────────┐   │     │
 │  │ │ • 10 Golden Rules (Sprint Numbers, Documentation, SSOT) │   │     │
 │  │ │ • Sprint Gates: G-Sprint + G-Sprint-Close               │   │     │
+│  │ │ • 3-Phase Sprint Lifecycle (6.0.4): PRE → EXEC → POST   │   │     │
+│  │ │ • TDD Workflow: RED → GREEN → REFACTOR (6.0.4)          │   │     │
+│  │ │ • Tier-Aware TDD Coverage: 70% → 85% → 95% (6.0.4)      │   │     │
 │  │ │ • Stage × Sprint Integration (Multi-stage sprints)      │   │     │
 │  │ │ • Change Management (Standard/Normal/Emergency/Roadmap) │   │     │
 │  │ └─────────────────────────────────────────────────────────┘   │     │
@@ -253,6 +257,15 @@ Security:
 
 ## Changelog
 
+### v6.0.4 (February 8, 2026)
+- **TDD Workflow Integration**: RED-GREEN-REFACTOR cycle integrated into Sprint Governance
+- **3-Phase Sprint Lifecycle Enhanced**: PRE-SPRINT → EXECUTION → POST-SPRINT
+- **Tier-Aware TDD Coverage**: LITE 70%, STANDARD 85%, PRO/ENT 95%
+- Sprint 154 validation: 113 tests, 100% pass rate
+
+### v6.0.3 (February 2, 2026)
+- Boris Cherny Best Practices Consolidation
+
 ### v6.0.0 (January 28, 2026)
 - Folder flattening (remove layer 3), version upgrade
 - Updated all SDLC references to 6.0.0
@@ -285,5 +298,5 @@ Security:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Last Updated**: January 28, 2026
+**Last Updated**: February 8, 2026
 **Owner**: CTO + CPO Office

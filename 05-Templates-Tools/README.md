@@ -1,20 +1,54 @@
-# SDLC 6.0.3 Templates & Tools
-## Complete 10-Stage Productivity Suite + Section 8 Unified Specification Standard
+# SDLC 6.0.4 Templates & Tools
+## Complete 10-Stage Productivity Suite + Section 8 Unified Specification Standard + TDD Integration
 
-**Version**: 6.0.3
-**Date**: February 2, 2026
+**Version**: 6.0.4
+**Date**: February 8, 2026
 **Stage**: 03 - TEMPLATES & TOOLS
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
-**Status**: PRODUCTION-READY - FRAMEWORK 6.0.2 E2E API TESTING ENHANCEMENT
+**Status**: PRODUCTION-READY - FRAMEWORK 6.0.4 TDD + SPEC CONVERTER
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) (7 Principles)
 **Organization**: Numbered directories (01-08) with consistent 2-digit prefixes
 **ROI**: 14,822% combined (BFlow Platform validated, 52-day journey)
 **Proven**: BFlow, NQH-Bot, MTEP platforms
+**NEW in 6.0.4**: TDD Workflow Integration, Spec Converter Methodology, Tier-Aware Coverage
 
 ---
 
-## What's New in SDLC 6.0.3 (February 2026)
+## What's New in SDLC 6.0.4 (February 2026)
+
+### TDD Workflow Integration + Spec Converter Methodology
+
+**SDLC 6.0.4** introduces **TDD Workflow Integration** and **Spec Converter Methodology** - validated through Sprint 154 with 113 tests at 100% pass rate.
+
+```yaml
+TDD Integration (Sprint 154 Validated):
+  TDD Workflow:                RED-GREEN-REFACTOR per feature
+  Tier-Aware Coverage:
+    - LITE: 70%
+    - STANDARD: 85%
+    - PROFESSIONAL: 95%
+    - ENTERPRISE: 95%+ with security tests
+  Sprint 154 Results:          113 tests, 100% pass rate
+
+Spec Converter Methodology (Section 8 Enhancement):
+  SpecIR:                      Format-agnostic intermediate representation
+  Conversions:                 OpenSpec ↔ SDLC 6.0 bidirectional
+  CLI Commands:                sdlcctl spec convert, export
+  Parser/Renderer:             OpenSpecParser, OpenSpecRenderer
+
+3-Phase Sprint Lifecycle (Enhanced):
+  Phase 1: PRE-SPRINT          Design docs + TDD test strategy
+  Phase 2: EXECUTION           TDD cycle (RED → GREEN → REFACTOR)
+  Phase 3: POST-SPRINT         Coverage verification, documentation
+```
+
+**[UPDATED: 01-Specification-Standard/SDLC-Specification-Standard.md](01-Specification-Standard/SDLC-Specification-Standard.md)** - Section 8 with Spec Converter
+**[REFERENCE: SDLC-Sprint-Planning-Guide.md](../02-Core-Methodology/Documentation-Standards/SDLC-Sprint-Planning-Guide.md)** - TDD Workflow
+
+---
+
+## What's in SDLC 6.0.3 (February 2026)
 
 ### RFC-SDLC-602: E2E API Testing Enhancement (MINOR)
 
@@ -141,7 +175,7 @@ SDLC 6.0.3 uses the **7-Pillar + 2-Section** architecture:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.3 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.4 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
 ║                                                                            ║
@@ -160,11 +194,12 @@ SDLC 6.0.3 uses the **7-Pillar + 2-Section** architecture:
 ║    - Progressive Routing (Green → Yellow → Orange → Red)                  ║
 ║    - Auto-Generation Layer + Kill Switch Criteria                         ║
 ║                                                                            ║
-║  SECTION 8: UNIFIED SPECIFICATION STANDARD (6.0.0)                        ║
+║  SECTION 8: UNIFIED SPECIFICATION STANDARD (6.0.4)                        ║
 ║    - YAML Frontmatter (MANDATORY)                                          ║
 ║    - BDD Requirements Format (GIVEN-WHEN-THEN)                             ║
 ║    - Tier-Aware Specifications (LITE/STD/PRO/ENT)                          ║
-║    - OpenSpec-Inspired + SDLC Governance                                   ║
+║    - Spec Converter Methodology (SpecIR format-agnostic)                   ║
+║    - Tier-Aware TDD Coverage Requirements                                  ║
 ║                                                                            ║
 ╚════════════════════════════════════════════════════════════════════════════╝
 ```
@@ -477,8 +512,10 @@ Result: 50x organizational efficiency
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.0.1** | **Feb 1, 2026** | **SPEC-0021 Stage Consistency Validation** - 4-stage model, pre/post checklists, artifact hashing, CLI validation |
-| **6.0.0** | **Jan 28, 2026** | **Section 8 Unified Specification Standard, YAML frontmatter, BDD format, OpenSpec alignment** |
+| **6.0.4** | **Feb 8, 2026** | **TDD Workflow Integration, Spec Converter Methodology, Tier-Aware TDD Coverage** |
+| 6.0.3 | Feb 2, 2026 | Boris Cherny Best Practices Consolidation |
+| 6.0.1 | Feb 1, 2026 | SPEC-0021 Stage Consistency Validation |
+| 6.0.0 | Jan 28, 2026 | Section 8 Unified Specification Standard, YAML frontmatter, BDD format |
 | 5.3.0 | Jan 27, 2026 | Section 7 Quality Assurance System (Vibecoding Index, Kill Switch) |
 | 5.2.0 | Jan 22, 2026 | AI Governance integration, simplified SASE (AGENTS.md primary) |
 | 5.1.3 | Jan 2026 | 7-Pillar Architecture, Sprint Planning Governance |
@@ -488,11 +525,13 @@ Result: 50x organizational efficiency
 ---
 
 **Document Status**: ACTIVE - PRODUCTION READY
-**Compliance**: MANDATORY for all SDLC 6.0.3 projects
-**Last Updated**: February 1, 2026
+**Compliance**: MANDATORY for all SDLC 6.0.4 projects
+**Last Updated**: February 8, 2026
 **Owner**: CTO + CPO Office
-**Framework**: SDLC 6.0.3 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
 
 ***"Section 8: Unified specifications enable consistent quality."***
 
-***"SPEC-0021: Stage consistency prevents spec drift."***
+***"TDD Workflow: RED → GREEN → REFACTOR enables AI-assisted quality."***
+
+***"Sprint 154 Validation: 113 tests, 100% pass rate."***

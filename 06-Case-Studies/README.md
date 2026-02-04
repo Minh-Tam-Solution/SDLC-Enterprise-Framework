@@ -1,11 +1,11 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 6.0.3
-**Date**: January 28, 2026
+**Version**: 6.0.4
+**Date**: February 8, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.0.3 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -454,13 +454,20 @@ SDLC 4.9 (November 2025):
   → 10-stage validators ready
   → Production-proven at scale
 
-SDLC 5.0.0 (December 2025): ⭐ CURRENT
+SDLC 5.0.0 (December 2025):
   → Enterprise-grade framework upgrade
   → 4-Tier Classification (LITE, STANDARD, PROFESSIONAL, ENTERPRISE)
   → Stage 08 Team Collaboration Standards (RACI, Communication, Escalation, Handoff)
   → Industry Best Practices (ISO, CMMI, SAFe, DORA, SRE, ITIL)
   → AI-optimized folder structure (15 P0 Artifacts)
   → CTO+CPO Joint Approval (9.5/10 score)
+
+SDLC 6.0.4 (February 2026): ⭐ CURRENT
+  → TDD Workflow Integration (RED-GREEN-REFACTOR cycle)
+  → 3-Phase Sprint Lifecycle Enhanced (PRE-SPRINT → EXECUTION → POST-SPRINT)
+  → Spec Converter Methodology (SpecIR bidirectional conversion)
+  → Tier-Aware TDD Coverage (LITE 70%, STANDARD 85%, PRO/ENT 95%)
+  → Sprint 154 Validation: 113 tests, 100% pass rate
 ```
 
 ---
@@ -487,10 +494,10 @@ SDLC 5.0.0 (December 2025): ⭐ CURRENT
 
 ---
 
-**Last Updated**: January 29, 2026
+**Last Updated**: February 8, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework Version: 6.0.3
+**Framework Version**: 6.0.4
 
 ---
 
@@ -498,4 +505,4 @@ SDLC 5.0.0 (December 2025): ⭐ CURRENT
 
 ***"From 4.2 to 5.0.0 - Every upgrade earned through battle."*** ⚔️
 
-***"SDLC 5.0.0: Enterprise-grade. Industry best practices. Global standards."*** 🎯
+***"SDLC 6.0.4: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯

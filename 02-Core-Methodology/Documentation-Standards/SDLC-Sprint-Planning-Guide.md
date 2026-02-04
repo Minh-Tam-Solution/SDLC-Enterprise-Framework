@@ -1,18 +1,19 @@
 # SDLC Sprint Planning Guide
 
-**Version**: 6.0.2
-**Date**: January 28, 2026
+**Version**: 6.0.4
+**Date**: February 8, 2026
 **Type**: Sprint Planning Guide (Pillar 2 Compliance)
 **Status**: ACTIVE
 **Authority**: CTO Office
 **AI Governance**: Aligns with Planning Mode Principle (Risk-Based triggers)
-**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.0.2 flattened)
+**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.0.4 flattened)
+**NEW in 6.0.4**: 3-Phase Sprint Lifecycle Model + TDD Workflow Integration
 
 ---
 
 ## Overview
 
-This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.0.2 Sprint Planning Governance.
+This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.0.4 Sprint Planning Governance.
 
 **When to use this guide**:
 - Starting a new sprint
@@ -22,6 +23,133 @@ This guide provides a step-by-step process for planning a new sprint in complian
 **Prerequisites**:
 - Familiarity with [SDLC-Sprint-Governance.md](../Governance-Compliance/SDLC-Sprint-Governance.md)
 - Access to [Planning-Hierarchy-SPRINT-TEMPLATE.md](../../05-Templates-Tools/08-Project-Templates/Planning-Hierarchy-SPRINT-TEMPLATE.md)
+
+---
+
+## 3-Phase Sprint Lifecycle Model (NEW in 6.0.4)
+
+The 3-Phase Sprint Lifecycle Model provides a structured approach for AI+Human collaboration throughout the sprint, validated through Sprint 154 execution.
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                  3-PHASE SPRINT LIFECYCLE MODEL                         │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐         │
+│  │   PHASE 1       │  │   PHASE 2       │  │   PHASE 3       │         │
+│  │   PRE-SPRINT    │──│   EXECUTION     │──│   POST-SPRINT   │         │
+│  │   (1-2 days)    │  │   (5-8 days)    │  │   (24h max)     │         │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘         │
+│         │                    │                     │                   │
+│         ▼                    ▼                     ▼                   │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐         │
+│  │ Design Doc      │  │ TDD Workflow    │  │ Documentation   │         │
+│  │ Validation      │  │ RED→GREEN→      │  │ Completion      │         │
+│  │                 │  │ REFACTOR        │  │                 │         │
+│  │ G-Sprint Gate   │  │                 │  │ G-Sprint-Close  │         │
+│  └─────────────────┘  │ Daily Standups  │  │ Gate            │         │
+│                       └─────────────────┘  └─────────────────┘         │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Phase 1: PRE-SPRINT (1-2 Days)
+
+**Purpose**: Validate design documents and ensure sprint readiness before execution begins.
+
+```yaml
+Pre-Sprint Checklist:
+  Design Doc Validation:
+    □ ADR/Technical Spec exists for complex features
+    □ API contracts defined (OpenAPI if applicable)
+    □ Data model changes documented
+    □ Acceptance criteria in BDD format (GIVEN-WHEN-THEN)
+    □ Dependencies identified and resolved
+
+  TDD Preparation:
+    □ Test strategy defined (unit, integration, E2E)
+    □ Test file structure planned
+    □ Coverage targets set by tier:
+        - LITE: 70%
+        - STANDARD: 85%
+        - PROFESSIONAL: 95%
+        - ENTERPRISE: 95%+ with security tests
+
+  G-Sprint Gate:
+    □ Sprint goal aligns with Phase/Roadmap
+    □ Capacity calculated (velocity × availability)
+    □ Risks identified with mitigation
+    □ Approval obtained (per tier level)
+```
+
+### Phase 2: EXECUTION (5-8 Days)
+
+**Purpose**: Implement features using TDD methodology with daily progress tracking.
+
+```yaml
+TDD Workflow (Per Feature):
+  1. RED Phase (Write Tests First):
+     - Write test cases BEFORE implementation
+     - Tests must FAIL initially (confirms test logic works)
+     - Commit test suite separately
+
+  2. GREEN Phase (Make Tests Pass):
+     - Implement minimal code to pass tests
+     - No premature optimization
+     - All tests must pass (100%)
+
+  3. REFACTOR Phase (Clean Up):
+     - Improve code structure
+     - Maintain passing tests
+     - Remove duplication
+
+Daily Execution:
+  □ Standup (15 min): Done → Today → Blockers
+  □ Update task status on board
+  □ Escalate blockers per level (Team → Lead → CTO)
+  □ Mid-sprint check (Day 5): 50% progress verification
+```
+
+**TDD Excellence Metrics (Sprint 154 Validated)**:
+```yaml
+Sprint 154 Results:
+  Total Tests: 113 (all written FIRST)
+  Pass Rate: 100% on first implementation
+  Coverage: Exceeds tier requirements
+
+  Day-by-Day:
+    Day 1: 48 tests (IR Schema + Parsers)     ✅ 100%
+    Day 2: 35 tests (Renderers)               ✅ 100%
+    Day 3: 18 tests (API Routes)              ✅ 100%
+    Day 5: 52 tests (Import + E2E)            ✅ 100%
+
+  Validation: TDD workflow proven effective for AI-assisted development
+```
+
+### Phase 3: POST-SPRINT (24 Hours Maximum)
+
+**Purpose**: Complete documentation and retrospective within 24 business hours.
+
+```yaml
+Documentation (MANDATORY within 24h):
+  □ CURRENT-SPRINT.md updated (Status: COMPLETED)
+  □ Final metrics captured (velocity, completion rate)
+  □ SPRINT-INDEX.md updated
+  □ Carryover items documented with reasons
+  □ CHANGELOG.md updated (if release shipped)
+
+G-Sprint-Close Gate:
+  □ All P0 items completed or justified
+  □ Definition of Done met
+  □ Test coverage maintained
+  □ Retrospective completed
+  □ Action items assigned
+
+Retrospective:
+  □ What went well? (Preserve)
+  □ What could improve? (Enhance)
+  □ Action items (max 3, assigned)
+```
 
 ---
 
@@ -364,30 +492,37 @@ Documentation:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    SPRINT PLANNING FLOW                         │
+│              3-PHASE SPRINT LIFECYCLE (6.0.4)                   │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  1. CLOSE PREVIOUS SPRINT                                       │
-│     □ G-Sprint-Close passed                                     │
-│     □ Documentation updated (<24h)                              │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │ PHASE 1: PRE-SPRINT (1-2 days)                           │   │
+│  │   □ Validate design docs (ADR/Spec/API contracts)        │   │
+│  │   □ Define test strategy + coverage targets              │   │
+│  │   □ Pass G-Sprint gate (approval per tier)               │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                           ↓                                     │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │ PHASE 2: EXECUTION (5-8 days)                            │   │
+│  │   TDD Cycle (per feature):                               │   │
+│  │     1. RED   - Write tests FIRST (must fail)             │   │
+│  │     2. GREEN - Implement to pass tests (100%)            │   │
+│  │     3. REFACTOR - Clean up, maintain tests               │   │
+│  │                                                          │   │
+│  │   Daily: Standup → Progress → Blockers escalation        │   │
+│  │   Mid-sprint check (Day 5): 50% progress?                │   │
+│  └──────────────────────────────────────────────────────────┘   │
+│                           ↓                                     │
+│  ┌──────────────────────────────────────────────────────────┐   │
+│  │ PHASE 3: POST-SPRINT (24h max)                           │   │
+│  │   □ Update CURRENT-SPRINT.md (status: COMPLETED)         │   │
+│  │   □ Capture metrics (velocity, completion rate)          │   │
+│  │   □ Pass G-Sprint-Close gate                             │   │
+│  │   □ Retrospective (3 action items max)                   │   │
+│  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
-│  2. PLAN NEW SPRINT                                             │
-│     □ Check roadmap alignment                                   │
-│     □ Calculate capacity                                        │
-│     □ Create SPRINT-XX.md                                       │
-│     □ Prioritize backlog (P0/P1/P2)                            │
-│                                                                 │
-│  3. PASS G-SPRINT GATE                                          │
-│     □ All checklist items verified                              │
-│     □ Approved by authority                                     │
-│     □ Sprint kickoff scheduled                                  │
-│                                                                 │
-│  4. EXECUTE SPRINT                                              │
-│     □ Daily standups                                            │
-│     □ Track progress                                            │
-│     □ Escalate blockers                                         │
-│                                                                 │
-│  5. CLOSE SPRINT (repeat)                                       │
+│  TDD Coverage Targets by Tier:                                  │
+│    LITE: 70%  │  STANDARD: 85%  │  PRO/ENT: 95%+               │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -395,5 +530,6 @@ Documentation:
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: January 28, 2026
+**Last Updated**: February 8, 2026
 **Owner**: CTO Office
+**Version**: 6.0.4 (3-Phase Sprint Model + TDD Integration)

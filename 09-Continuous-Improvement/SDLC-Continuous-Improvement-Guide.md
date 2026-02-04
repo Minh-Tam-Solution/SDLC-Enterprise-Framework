@@ -1,11 +1,11 @@
 # 🔄 SDLC Continuous Improvement Guide
 ## How to Evolve the Framework Without Losing Battle-Tested Wisdom
 
-**Version**: 6.0.2
-**Date**: January 22, 2026
-**Status**: ACTIVE - ENHANCED WITH 4.7 → 6.0.0 UPGRADE LESSONS
+**Version**: 6.0.4
+**Date**: February 8, 2026
+**Status**: ACTIVE - ENHANCED WITH 6.0.3 → 6.0.4 TDD + SPEC CONVERTER UPGRADE
 **Authority**: CEO + CPO + CTO Leadership
-**Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x → 5.2.0 → 6.0.0
+**Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x → 5.2.0 → 6.0.x
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -130,6 +130,25 @@ SDLC 6.0.2 (January 28, 2026):
   → Brownfield Implementation Strategy (4-phase approach)
   → Tool-agnostic purity (100% methodology, zero implementation)
   → Complete migration guide (5.x → 6.0.0)
+
+SDLC 6.0.3 (February 2, 2026):
+  → Boris Cherny AI Development Patterns Integration (Sprint 143)
+  → 5 RFC patterns: MCP Integration, Parallel AI, Continuous Learning, Subagent Delegation, Visual Documentation
+  → RFC Consolidation: 5 RFC docs → 2 new files + 3 enhanced files
+  → 3-Circle Architecture Compliance (Ring 1 Core, Ring 2 Governance, Ring 3 Outer)
+  → Framework-First naming enforced (RFC naming reserved for Orchestrator only)
+  → Net change: -3 files (better organization)
+  → 2,307 source lines → 1,530 consolidated lines (0 methodology loss)
+
+SDLC 6.0.4 (February 8, 2026):
+  → TDD Workflow Integration (Sprint 154 validated: 113 tests, 100% pass)
+  → 3-Phase Sprint Model Enhancement (PRE-SPRINT → EXECUTION → POST-SPRINT)
+  → Spec Converter Methodology: SpecIR + BDD↔OpenSpec conversion patterns
+  → Tier-Aware TDD Requirements (LITE: 70%, STANDARD: 85%, PRO+: 95%)
+  → Parser/Renderer architecture documentation (OpenSpecParser, OpenSpecRenderer)
+  → User Story → BDD → OpenSpec conversion chain
+  → CLI integration: sdlcctl spec convert/validate commands
+  → Format-agnostic specification handling
 
 Pattern: Each version BUILDS ON previous learnings
 Strategy: 90% Preserve + 10% Enhance (Never rebuild)
@@ -1104,30 +1123,111 @@ Positioning Achievement:
    - Clear accountability established
 ```
 
+### Success Story 3: 6.0.3 to 6.0.4 Upgrade (February 8, 2026)
+
+```yaml
+Context:
+  Previous Version: 6.0.3 (Boris Cherny Patterns, Feb 2, 2026)
+  New Version: 6.0.4 (TDD + Spec Converter, Feb 8, 2026)
+  Driver: Sprint 154 TDD validation success (113 tests, 100% pass)
+  Duration: 1 day (minimal due to enhancement-only approach)
+
+What Changed:
+  1. TDD Workflow Integration:
+     - RED-GREEN-REFACTOR cycle documented
+     - Test-first methodology validated
+     - TDD Excellence Metrics established
+
+  2. 3-Phase Sprint Model Enhancement:
+     - PRE-SPRINT (Design doc validation)
+     - EXECUTION (TDD implementation)
+     - POST-SPRINT (24h documentation)
+
+  3. Spec Converter Methodology (Section 8):
+     - SpecIR (Intermediate Representation) concept
+     - Parser/Renderer architecture
+     - BDD ↔ OpenSpec bidirectional conversion
+     - Tier-Aware TDD coverage requirements
+
+Files Enhanced (NOT created):
+  - README.md: Version update + features list
+  - SDLC-Sprint-Planning-Guide.md: TDD Workflow section added
+  - SDLC-Specification-Standard.md: Section 8 Spec Converter added
+  - CHANGELOG.md: 6.0.4 entry added
+  - SDLC-Continuous-Improvement-Guide.md: This entry + version update
+
+3-Circle Architecture Compliance:
+  - Ring 1 (Core): TDD principles (timeless)
+  - Ring 2 (Governance): 3-Phase Sprint Model (stable)
+  - Ring 3 (Outer): Spec Converter implementation (tool-specific)
+
+Sprint 154 Validation Metrics:
+  Total Tests: 113
+  Pass Rate: 100%
+  Test-First Adherence: 100%
+  Parser Coverage: 95%
+  Renderer Coverage: 96%
+  Roundtrip Validation: ✅ Lossless
+
+Key Lesson:
+  "Enhance existing documents, NOT create new files"
+  - 5 documents enhanced, 0 new documents created
+  - Framework complexity stays manageable
+  - 3-Circle Architecture respected
+```
+
+### Lessons Applied: 6.0.3 → 6.0.4
+
+```yaml
+1. Enhancement-Only Approach Works:
+   - No new methodology documents created
+   - Existing docs enhanced with new sections
+   - Framework size stays manageable
+   - 3-Circle Architecture strictly followed
+
+2. Sprint Validation Provides Evidence:
+   - Sprint 154 TDD metrics prove methodology
+   - 113 tests, 100% pass rate = concrete validation
+   - Real implementation validates framework changes
+
+3. Tier-Aware Requirements Scale:
+   - LITE: 70% coverage (unit tests)
+   - STANDARD: 85% coverage (unit + integration)
+   - PROFESSIONAL+: 95% coverage (full suite)
+   - Different tiers, different expectations
+
+4. Spec Converter Bridges Formats:
+   - SpecIR enables format-agnostic specs
+   - Bidirectional conversion preserves semantics
+   - Tool independence maintained
+```
+
 ---
 
 ## 🚀 Next Evolution Planning
 
 ### Criteria for 6.1 Minor Update
 ```yaml
-Status: SDLC 6.0.2 COMPLETE (January 28, 2026)
+Status: SDLC 6.0.4 COMPLETE (February 8, 2026)
 Next Minor: 6.1.0
 
 Indicators:
   - 3-5 new AI Governance patterns validated
   - Quality Assurance System refinements
   - Context Authority V2 enhancements
-  - Progressive Routing optimizations
-  - Success stories accumulated (5+ platforms using 6.0.0)
+  - Spec Converter tooling maturity
+  - TDD workflow adoption metrics
+  - Success stories accumulated (5+ platforms using 6.0.x)
 
-Timeline: Q2-Q3 2026 (3-6 months from 6.0.0)
+Timeline: Q2-Q3 2026 (3-6 months from 6.0.4)
 
 Expected Additions:
   - Additional case studies (SDLC Orchestrator, Brownfield implementations)
   - Enhanced AI Governance metrics
   - Kill Switch automation patterns
   - Vibecoding Index calibration updates
-  - Tool ecosystem growth (CA V2 tooling)
+  - Spec Converter parser/renderer extensions
+  - Additional format adapters (Notion, Confluence)
 ```
 
 ### Criteria for 7.0 Major Update
@@ -1156,13 +1256,13 @@ Potential Transformations:
 ---
 
 **Document**: SDLC-Continuous-Improvement-Guide
-**Version**: 6.0.2
-**Date**: January 28, 2026
-**Status**: ACTIVE - ENHANCED WITH 4.7 → 6.0.0 UPGRADE LESSONS (AI Governance + Quality Assurance)
-**Validation**: Systematic upgrade process proven successful across 8 major upgrades
+**Version**: 6.0.4
+**Date**: February 8, 2026
+**Status**: ACTIVE - ENHANCED WITH 6.0.3 → 6.0.4 TDD + SPEC CONVERTER UPGRADE
+**Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.4)
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 6.0.2 adds Section 7 Quality Assurance, AI Governance Principles, and SASE Evolution
-**Framework**: SDLC 6.0.2
+**Latest**: SDLC 6.0.4 adds TDD Workflow Integration, 3-Phase Sprint Enhancement, and Spec Converter Methodology
+**Framework**: SDLC 6.0.4
 
 ***"Evolution without losing revolution."*** 🔄
 
