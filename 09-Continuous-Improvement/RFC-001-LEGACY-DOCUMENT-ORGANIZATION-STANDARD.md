@@ -1,7 +1,7 @@
 # RFC-001: Legacy Document Organization Standard
 
 **Type**: RFC (Request for Comments)
-**Status**: PROPOSED
+**Status**: ACCEPTED (MANDATORY - SDLC 6.0.5)
 **Date**: February 13, 2026
 **Author**: BFlow Platform Team
 **Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + 10-Stage Lifecycle)

@@ -382,7 +382,7 @@ All templates and tools are mapped to the complete 10-stage lifecycle:
 │   ├── README.md                    # Cross-platform templates
 │   ├── CLAUDE.md.template           # Generic context file (FLATTENED 6.0.0)
 │   └── AI-TOOLS-COORDINATION-BEST-PRACTICES.md  # Multi-agent patterns
-│   # Tool-specific templates archived to 99-Legacy/tool-guides-2026/
+│   # Tool-specific templates archived to 10-Archive/05-Legacy/tool-guides-2026/
 │
 ├── 05-Checklists/                    # Stage Transition
 │   └── Stage-Transition-Checklist.md

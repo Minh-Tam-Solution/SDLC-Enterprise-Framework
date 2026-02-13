@@ -237,7 +237,7 @@ New Templates:
 | Use AI governance | [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) |
 | Find a topic | [CONTENT-MAP.md](../CONTENT-MAP.md) |
 | Understand changes | [CHANGELOG.md](../CHANGELOG.md) |
-| Migrate from 5.3.0 | [99-Legacy/v5.3.0-Archive/](../99-Legacy/v5.3.0-Archive/) |
+| Migrate from 5.3.0 | [10-Archive/02-Legacy/v5.3.0-Archive/](../10-Archive/02-Legacy/v5.3.0-Archive/) |
 
 ---
 
@@ -338,7 +338,7 @@ SDLC-Enterprise-Framework/
 ├── 07-Implementation-Guides/ # How-to guides
 ├── 08-Training-Materials/    # Learning resources
 ├── 09-Continuous-Improvement/
-├── 99-Legacy/                # Archived versions
+├── 10-Archive/               # Centralized legacy archive (RFC-001, 6.0.5)
 ├── CHANGELOG.md              # Version history
 ├── CONTENT-MAP.md            # Topic → file mapping
 ├── DEPRECATION-POLICY.md     # Redirect rules
@@ -349,7 +349,7 @@ SDLC-Enterprise-Framework/
 
 ## Migration from 5.3.0
 
-1. **Archive Reference**: Old 5.3.0 docs at [99-Legacy/v5.3.0-Archive/](../99-Legacy/v5.3.0-Archive/)
+1. **Archive Reference**: Old 5.3.0 docs at [10-Archive/02-Legacy/v5.3.0-Archive/](../10-Archive/02-Legacy/v5.3.0-Archive/)
 2. **Add Frontmatter**: Add YAML metadata to all specs
 3. **Convert to BDD**: Rewrite requirements as GIVEN-WHEN-THEN
 4. **Declare Tier**: Add tier field (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)

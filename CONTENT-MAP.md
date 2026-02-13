@@ -1,9 +1,9 @@
-# SDLC Framework 6.0.3 Content Map
+# SDLC Framework 6.0.5 Content Map
 
-**Version**: 6.0.3
+**Version**: 6.0.5
 **Status**: ACTIVE
-**Date**: February 2, 2026
-**Purpose**: Single source of truth for topic → canonical file mapping
+**Date**: February 13, 2026
+**Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
 
 ---
 
@@ -41,7 +41,13 @@ Before creating any new document, check if a canonical file already exists for t
 │  └── 09-Continuous-Improvement/ - Feedback, iteration            │
 │                                                                    │
 └────────────────────────────────────────────────────────────────────┘
-│  99-Legacy/ - Archived and deprecated content                     │
+├────────────────────────────────────────────────────────────────────┤
+│                                                                    │
+│  ARCHIVE LAYER (10) - Centralized Legacy (RFC-001)               │
+│  └── 10-Archive/{NN}-Legacy/ - Stage-aligned archive              │
+│      (00-Legacy through 09-Legacy for production migration       │
+│       04-Historical-Documents, OpenCode-Evaluation, etc.)        │
+│                                                                    │
 └────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -78,8 +84,8 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| 10-Stage Lifecycle | `02-Core-Methodology/SDLC-Core-Methodology.md` | Legacy versions in 99-Legacy/ | ACTIVE |
-| Design Thinking | `02-Core-Methodology/SDLC-Design-Thinking-Principles.md` | Multiple legacy versions | ACTIVE |
+| 10-Stage Lifecycle | `02-Core-Methodology/SDLC-Core-Methodology.md` | Legacy versions in 10-Archive/02-Legacy/ | ACTIVE |
+| Design Thinking | `02-Core-Methodology/SDLC-Design-Thinking-Principles.md` | Multiple legacy versions in 10-Archive/02-Legacy/ | ACTIVE |
 | Agentic Principles | `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | — | ACTIVE |
 | Sprint Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md` | Consolidated from Sprint-Planning + Stage-Integration + Change-Management | ACTIVE |
 | Quality + Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md` | Consolidated from Quality-Gates + Security-Gates | ACTIVE |
@@ -124,11 +130,11 @@ Before creating any new document, check if a canonical file already exists for t
 
 > **Note**: RFC-SDLC-602 introduces standardized E2E API testing with OWASP security integration and cross-stage traceability.
 
-| OpenSpec Analysis | `99-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
-| Migration Plan (20 Specs) | `99-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
-| Conversion Layer Spec | `99-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
-| Week 8 Gate Decision Brief | `99-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
-| Week 8 Gate Comparison Matrix | `99-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
+| OpenSpec Analysis | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
+| Migration Plan (20 Specs) | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
+| Conversion Layer Spec | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
+| Week 8 Gate Decision Brief | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
+| Week 8 Gate Comparison Matrix | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
 
 > **Note**: Framework 6.0.2 introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
 
@@ -172,31 +178,31 @@ Before creating any new document, check if a canonical file already exists for t
 > **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
 > Tool-specific knowledge enables Orchestrator to enforce Core principles.
 
-### Tool-Specific Content (99-Legacy/tool-guides-2026/)
+### Tool-Specific Content (10-Archive/05-Legacy/tool-guides-2026/)
 
 | Topic | Archive Location | Original Location | Status |
 |-------|-----------------|-------------------|--------|
-| Claude Code Templates | `99-Legacy/tool-guides-2026/claude-code/` | `03-Agent-Templates/claude-code/` | ARCHIVED |
-| Cursor Templates | `99-Legacy/tool-guides-2026/cursor/` | `03-Agent-Templates/cursor/` | ARCHIVED |
-| Copilot Templates | `99-Legacy/tool-guides-2026/copilot/` | `03-Agent-Templates/copilot/` | ARCHIVED |
-| ChatGPT Templates | `99-Legacy/tool-guides-2026/chatgpt/` | `03-Agent-Templates/chatgpt/` | ARCHIVED |
-| Gemini Templates | `99-Legacy/tool-guides-2026/gemini/` | `03-Agent-Templates/gemini/` | ARCHIVED |
+| Claude Code Templates | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | `03-Agent-Templates/claude-code/` | ARCHIVED |
+| Cursor Templates | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | `03-Agent-Templates/cursor/` | ARCHIVED |
+| Copilot Templates | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | `03-Agent-Templates/copilot/` | ARCHIVED |
+| ChatGPT Templates | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` | `03-Agent-Templates/chatgpt/` | ARCHIVED |
+| Gemini Templates | `10-Archive/05-Legacy/tool-guides-2026/gemini/` | `03-Agent-Templates/gemini/` | ARCHIVED |
 
-### Deployment Guides (99-Legacy/deployment-guides-5.1.3/)
+### Deployment Guides (10-Archive/06-Legacy/deployment-guides-5.1.3/)
 
 | Topic | Archive Location | Purpose | Status |
 |-------|-----------------|---------|--------|
-| Team Compliance Docs | `99-Legacy/deployment-guides-5.1.3/08-Team-Management/` | BFlow 5.1.3 deployment | ARCHIVED |
-| AI Platform Deployment | `99-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
+| Team Compliance Docs | `10-Archive/06-Legacy/deployment-guides-5.1.3/08-Team-Management/` | BFlow 5.1.3 deployment | ARCHIVED |
+| AI Platform Deployment | `10-Archive/06-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
 
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
 > For 6.0.0 deployments, adapt the governance docs from 02-Core-Methodology/.
 
-### Sprint 117 POC Documents (99-Legacy/Sprint-117-POC/)
+### Sprint 117 POC Documents (10-Archive/04-Legacy/Sprint-117-POC/)
 
 | Topic | Archive Location | Purpose | Status |
 |-------|-----------------|---------|--------|
-| Spec-First POC Validation | `99-Legacy/Sprint-117-POC/SPEC-FIRST-POC-VALIDATION.md` | POC validation report (working doc) | ARCHIVED |
+| Spec-First POC Validation | `10-Archive/04-Legacy/Sprint-117-POC/SPEC-FIRST-POC-VALIDATION.md` | POC validation report (working doc) | ARCHIVED |
 
 > **Note**: Working documents and drafts are archived here after sprint completion.
 
@@ -210,14 +216,14 @@ Before creating any new document, check if a canonical file already exists for t
 | `spec/gates/gates.yaml` | `02-Core-Methodology/Governance-Compliance/gates.yaml` | Jan 29, 2026 | Jul 2026 |
 | `spec/evidence/spec-frontmatter-schema.json` | `05-Templates-Tools/01-Specification-Standard/spec-frontmatter-schema.json` | Jan 29, 2026 | Jul 2026 |
 | `spec/VERSIONING.md` | `02-Core-Methodology/SDLC-Schema-Versioning.md` | Jan 29, 2026 | Jul 2026 |
-| `docs/SPEC-FIRST-POC-VALIDATION.md` | `99-Legacy/Sprint-117-POC/` | Jan 29, 2026 | Jul 2026 |
+| `docs/SPEC-FIRST-POC-VALIDATION.md` | `10-Archive/04-Legacy/Sprint-117-POC/` | Jan 29, 2026 | Jul 2026 |
 | `docs/02-design/01-ADRs/SPEC-0011-*.md` | `05-Templates-Tools/01-Specification-Standard/SPEC-0011-*.md` | Jan 29, 2026 | Jul 2026 |
 | `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/claude-code/` | `99-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/cursor/` | `99-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/copilot/` | `99-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/chatgpt/` | `99-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/gemini/` | `99-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/cursor/` | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/copilot/` | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/chatgpt/` | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/gemini/` | `10-Archive/05-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
 
 ---
 
@@ -272,15 +278,16 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 3. Update all internal links
 4. Run CI link checker
 
-### When Archiving
+### When Archiving (RFC-001, SDLC 6.0.5)
 
-1. Move file to 99-Legacy/ with dated subfolder
+1. Move file to `10-Archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
 2. Create redirect stub at original location
 3. Update status to ARCHIVED in this map
 4. Stub expires after 6 months
+5. Example: Design doc from `02-Design/` → `10-Archive/02-Legacy/deprecation-2026/`
 
 ---
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 1, 2026
+**Last Updated**: February 13, 2026

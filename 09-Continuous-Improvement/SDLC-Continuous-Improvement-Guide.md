@@ -201,16 +201,16 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
 
 ```yaml
 1. Create Comprehensive Legacy Archive:
-   Structure:
-     99-Legacy/
-       SDLC-[old-version]-Archive/
-         01-Overview/
-         02-Core-Methodology/
-         03-Implementation-Guides/
-         ... (mirror main structure)
+   Structure (RFC-001, SDLC 6.0.5):
+     10-Archive/
+       {NN}-Legacy/
+         SDLC-[old-version]-Archive/
+           01-Overview/
+           02-Core-Methodology/
+           ... (mirror main structure)
 
    Example from 4.8:
-     99-Legacy/SDLC-4.7-Archive/ - 27 files preserved
+     10-Archive/09-Legacy/SDLC-4.7-Archive/ - 27 files preserved
      Complete directory structure maintained
      All operational documents archived
 
@@ -315,7 +315,7 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
 ```yaml
 1. Version Alignment Verification:
    Automated Check:
-     find . -name "*.md" -not -path "*/99-Legacy/*" | xargs grep "4.7"
+     find . -name "*.md" -not -path "*/10-Archive/*" | xargs grep "4.7"
 
    Manual Verify:
      - All active files show 4.8
@@ -826,7 +826,7 @@ Document the Journey:
 ### 5. Preserve Wisdom
 ```yaml
 Never Lose Lessons:
-  - Archive don't delete (99-Legacy structure)
+  - Archive don't delete (10-Archive/{NN}-Legacy structure per RFC-001)
   - Reference past solutions (cross-links)
   - Build on foundations (evolutionary approach)
   - Honor the journey (complete history)
@@ -852,7 +852,7 @@ Never Lose Lessons:
 - [ ] Success criteria defined
 
 ### During Upgrade Execution
-- [ ] Legacy archive structure created (99-Legacy/SDLC-X.X-Archive/)
+- [ ] Legacy archive structure created (10-Archive/{NN}-Legacy/SDLC-X.X-Archive/)
 - [ ] All operational files systematically archived (complete inventory)
 - [ ] Archive README comprehensive (purpose, inventory, migration)
 - [ ] Core documents transformed (README, Executive Summary, Core Methodology)
@@ -886,9 +886,9 @@ Never Lose Lessons:
 
 ```yaml
 SDLC Version Archives:
-  - 99-Legacy/SDLC-4.7-Archive/ (27 files, September 2025)
-  - 99-Legacy/Core-Methodology-Archive/ (framework evolution)
-  - 99-Legacy/CodeRabbit-Pilot-Oct2025/ (16 files, pilot evaluation)
+  - 10-Archive/09-Legacy/SDLC-4.7-Archive/ (27 files, September 2025)
+  - 10-Archive/09-Legacy/Core-Methodology-Archive/ (framework evolution)
+  - 10-Archive/09-Legacy/CodeRabbit-Pilot-Oct2025/ (16 files, pilot evaluation)
 
 Archive Structure Best Practices:
   - Mirror main directory structure
@@ -902,13 +902,13 @@ Archive Structure Best Practices:
 
 ```bash
 # Scan for files that should be archived
-find . -name "*-4.7*" -not -path "*/99-Legacy/*"
+find . -name "*-4.7*" -not -path "*/10-Archive/*"
 
 # Verify version consistency in active files
-grep -r "4.7" --include="*.md" --exclude-dir="99-Legacy"
+grep -r "4.7" --include="*.md" --exclude-dir="10-Archive"
 
 # Check archive completeness
-ls -la 99-Legacy/SDLC-4.7-Archive/*/*.md | wc -l
+ls -la 10-Archive/00-Legacy/08-SDLC-4.7/*/*.md | wc -l
 
 # Validate internal links
 # (Use link checker tool)
@@ -987,7 +987,7 @@ Positioning Achievement:
    - Enhancement decided: ADDITIVE (90% preserve + 10% enhance)
 
 2. Systematic Preservation Executed: ✅
-   - Complete archive structure (99-Legacy/SDLC-4.8-Archive/)
+   - Complete archive structure (10-Archive/{NN}-Legacy/SDLC-4.8-Archive/)
    - Comprehensive README with migration tracking
    - SDLC-4.9-UPGRADE-STATUS.md for progress tracking
    - Historical continuity maintained (review before upgrade)

@@ -21,15 +21,15 @@ This folder contains guides and processes for evolving the SDLC Framework while 
 | Document | Purpose | Status |
 |----------|---------|--------|
 | [SDLC-Continuous-Improvement-Guide.md](SDLC-Continuous-Improvement-Guide.md) | How to upgrade SDLC versions safely | Active |
-| [RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md](RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md) | Eliminate 99-Legacy from stages 00-09, centralize in 10-Archive | PROPOSED |
+| [RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md](RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md) | Eliminate 99-Legacy from stages 00-09, centralize in 10-Archive | ACCEPTED (6.0.5) |
 
 ---
 
 ## Archived Documents
 
-Old continuous improvement documents are moved to `99-Legacy/`:
-- `99-Legacy/SDLC-4.9-Upgrade-Archive/` - 4.9 upgrade records
-- `99-Legacy/SDLC-5.0-Archive/` - 5.0 roadmap documents
+Old continuous improvement documents are moved to `10-Archive/09-Legacy/` (per RFC-001):
+- `10-Archive/09-Legacy/SDLC-4.9-Upgrade-Archive/` - 4.9 upgrade records
+- `10-Archive/09-Legacy/SDLC-5.0-Archive/` - 5.0 roadmap documents
 
 ---
 
@@ -37,7 +37,7 @@ Old continuous improvement documents are moved to `99-Legacy/`:
 
 1. **90% Preserve + 10% Enhance** - Never rebuild from scratch
 2. **Document-by-Document Upgrade** - CEO review checkpoint
-3. **Archive Don't Delete** - Preserve wisdom in 99-Legacy
+3. **Archive Don't Delete** - Preserve wisdom in 10-Archive/{NN}-Legacy (RFC-001)
 4. **TDD for Framework Changes (6.0.4)** - Validate upgrades with RED-GREEN-REFACTOR cycle
 
 ---

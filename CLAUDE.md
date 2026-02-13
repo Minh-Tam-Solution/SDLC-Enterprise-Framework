@@ -162,7 +162,7 @@ Documentation Files:
 - Complete lifecycle: WHY → GOVERN (Stages 00-09)
 - **Explicit Stage Dependencies** (ADR-041) - Prerequisites, parallel rules, early start triggers
 - **Stage Exit Criteria** - Documentation, evidence, signoff per tier
-- Archive management (99-Legacy, 10-archive)
+- Archive management (10-Archive/{NN}-Legacy per RFC-001)
 
 **Pillar 2: Sprint Planning Governance (5.1.3)**
 - Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
@@ -192,7 +192,7 @@ Documentation Files:
 **Pillar 6: Documentation Permanence**
 - 919 files standardized (NQH-Bot)
 - Document naming standards (no sprint references)
-- Archive management (99-Legacy)
+- Archive management (10-Archive/{NN}-Legacy)
 
 **Section 7: Quality Assurance System (NEW in 5.3.0)**
 - **Vibecoding Index** (0-100) - 5 weighted signals:
@@ -401,7 +401,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ├── 08-Continuous-Improvement/     # Improvement processes
 ├── 09-Version-History/            # Version history
 │
-└── 99-Legacy/                     # Historical archive
+└── 10-Archive/                    # Centralized legacy archive (RFC-001)
     └── SDLC-4.9-Upgrade-Archive/  # 4.9 upgrade documents
 ```
 
@@ -419,7 +419,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 1. **Review CHANGELOG.md**: Check version history
 2. **Check 02-Core-Methodology/**: Core principles and 7-Pillar Architecture
 3. **Update consistently**: Version 5.1.3, dates January 2026
-4. **Preserve legacy**: Use 99-Legacy/ for superseded content
+4. **Preserve legacy**: Use 10-Archive/{NN}-Legacy/ for superseded content (RFC-001)
 5. **Apply code file naming**: All new files must follow naming standards
 6. **Respect documentation vs code separation**: Stage mapping only for `/docs`
 7. **Apply Sprint Governance**: Include sprint context in PRs and documentation

@@ -57,7 +57,7 @@ This directory contains the **Section 8: Unified Specification Standard** for SD
     └── Example-Spec-PROFESSIONAL.md    # Full spec (10+ people)
 ```
 
-> **Note**: OpenSpec analysis and decision records have been archived to `99-Legacy/OpenSpec-Analysis-2026/`.
+> **Note**: OpenSpec analysis and decision records have been archived to `10-Archive/05-Legacy/OpenSpec-Analysis-2026/`.
 
 ---
 

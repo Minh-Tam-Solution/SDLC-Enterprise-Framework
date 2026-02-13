@@ -1,6 +1,6 @@
-# SDLC 6.0.4 Universal Framework
+# SDLC 6.0.5 Universal Framework
 
-**Version**: 6.0.4 | **Status**: ACTIVE | **Date**: February 2026
+**Version**: 6.0.5 | **Status**: ACTIVE | **Date**: February 13, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -8,7 +8,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.4 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.5 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -18,29 +18,25 @@ SDLC 6.0.4 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 6**: Documentation Permanence
 - **Section 7**: Quality Assurance System (Anti-Vibecoding)
 - **Section 8**: Unified Specification Standard (+ Spec Converter)
+- **Section 9**: RFC-001 Legacy Document Organization Standard
 
-**NEW in 6.0.4 (Minor Release - February 8, 2026)**:
-- **TDD Workflow Integration**: Test-Driven Development workflow proven effective through Sprint 154 execution
-  - RED-GREEN-REFACTOR cycle documentation
-  - 113 tests written FIRST, 100% pass rate achieved
-  - Validation of test-first approach for AI-assisted development
-- **3-Phase Sprint Lifecycle Model**: Enhanced sprint structure for AI+Human collaboration
-  - Phase 1: PRE-SPRINT (Design doc validation, G-Sprint gate)
-  - Phase 2: EXECUTION (TDD implementation, daily standups)
-  - Phase 3: POST-SPRINT (24h documentation, retrospective)
-- **Spec Converter Methodology**: Section 8 enhanced with specification conversion patterns
-  - SpecIR (Intermediate Representation) for format-agnostic specifications
-  - BDD ↔ OpenSpec bidirectional conversion
-  - User Story → BDD → OpenSpec conversion chain
-  - Import patterns (Jira, Linear, Text)
-- **Tier-Aware TDD Requirements**: TDD compliance levels by tier
-  - LITE: 70% test coverage (Basic)
-  - STANDARD: 85% test coverage (Standard)
-  - PROFESSIONAL: 95% test coverage (Advanced)
-  - ENTERPRISE: 95%+ with security tests
+**NEW in 6.0.5 (Minor Release - February 13, 2026)**:
+- **RFC-001: Legacy Document Organization Standard**: Eliminates 99-Legacy/ from active stages (00-09)
+  - Centralizes archived content into `10-Archive/{NN}-Legacy/` with stage alignment
+  - Production-validated on BFlow Platform: 57% size reduction (211MB→91MB), 34% file count reduction
+  - Mandatory framework standard: All SDLC-compliant projects must adopt by March 15, 2026
+  - Eliminates 40% AI context pollution, supports Software 3.0 premise of AI-first development
+  - Includes migration script (`migrate-legacy-to-archive.sh`) and BFF templates
+  - CI/CD integration: GitHub Actions workflow blocks 99-Legacy/ reintroduction in stages 00-09
 
-**From 6.0.3 (Minor Release - February 2, 2026) - FINALIZED**:
-- **Boris Cherny Consolidation**: 5 RFC documents (603-607) consolidated into Framework structure
+**From 6.0.4 (Minor Release - February 8, 2026)**:
+- **TDD Workflow Integration**: Test-Driven Development workflow proven effective through Sprint 154
+  - RED-GREEN-REFACTOR cycle documentation, 113 tests written FIRST, 100% pass rate
+- **3-Phase Sprint Lifecycle Model**: PRE-SPRINT → EXECUTION (TDD) → POST-SPRINT
+- **Spec Converter Methodology**: SpecIR, BDD ↔ OpenSpec bidirectional conversion, import patterns
+- **Tier-Aware TDD Requirements**: Tier-specific coverage targets (LITE 70% → ENTERPRISE 95%+)
+
+**From 6.0.3 (Minor Release - February 2, 2026)
 - **Created (2 new files)**:
   - MCP Integration Guide: 6x faster bug triage via Model Context Protocol automation (Slack/GitHub/Jira)
   - Git Workflow Patterns: 2.5x productivity via parallel AI development with git worktrees
@@ -410,7 +406,12 @@ SDLC-Enterprise-Framework/
 ├── 07-Implementation-Guides/     # Rollout guides
 ├── 08-Training-Materials/
 ├── 09-Continuous-Improvement/
-├── 99-Legacy/                    # Archive (tool-guides, deployment-guides, etc.)
+├── 10-Archive/                   # Centralized legacy archive (RFC-001, SDLC 6.0.5)
+│   ├── 00-Legacy/               # Foundation archives (version evolution)
+│   ├── 02-Legacy/               # Design archives (validation, deprecated specs)
+│   ├── 05-Legacy/               # Templates archives (tool guides, SASE)
+│   ├── 06-Legacy/               # Deploy archives (deployment guides)
+│   └── 09-Legacy/               # Govern archives (deprecated RFCs, scripts)
 ├── CONTENT-MAP.md                # Topic → file mapping (5.2.0)
 └── DEPRECATION-POLICY.md         # Redirect rules (5.2.0)
 ```

@@ -14,7 +14,7 @@
 - **Section 7**: Quality Assurance System (Vibecoding Index, Kill Switch)
 - **Section 8**: Unified Specification Standard (YAML frontmatter, BDD)
 
-**Legacy/Archive Policy**: Content in 99-Legacy and 10-archive folders is never validated.
+**Legacy/Archive Policy**: Content in 10-Archive/{NN}-Legacy folders is never validated (RFC-001, SDLC 6.0.5).
 
 ---
 

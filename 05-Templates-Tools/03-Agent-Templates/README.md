@@ -41,11 +41,11 @@ Tool-specific templates have been archived to:
 
 | Tool | Archive Location |
 |------|------------------|
-| Claude Code | `99-Legacy/tool-guides-2026/claude-code/` |
-| Cursor | `99-Legacy/tool-guides-2026/cursor/` |
-| GitHub Copilot | `99-Legacy/tool-guides-2026/copilot/` |
-| ChatGPT | `99-Legacy/tool-guides-2026/chatgpt/` |
-| Gemini | `99-Legacy/tool-guides-2026/gemini/` |
+| Claude Code | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` |
+| Cursor | `10-Archive/05-Legacy/tool-guides-2026/cursor/` |
+| GitHub Copilot | `10-Archive/05-Legacy/tool-guides-2026/copilot/` |
+| ChatGPT | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` |
+| Gemini | `10-Archive/05-Legacy/tool-guides-2026/gemini/` |
 
 > **Note**: Tool-specific templates archived per SDLC 6.0.3 principle - Framework provides universal patterns, not tool-specific configs.
 
@@ -63,4 +63,4 @@ For current AI governance guidance:
 
 **Folder Status**: ACTIVE (Placeholder for Context Authority V2)
 **Last Updated**: January 29, 2026
-**Archive Location**: `99-Legacy/tool-guides-2026/`
+**Archive Location**: `10-Archive/05-Legacy/tool-guides-2026/`

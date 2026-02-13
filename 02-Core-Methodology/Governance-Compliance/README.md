@@ -40,7 +40,7 @@ The following documents were consolidated for clarity:
 | **SDLC-Sprint-Governance.md** | SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md |
 | **SDLC-Quality-Security-Gates.md** | SDLC-Quality-Gates.md + SDLC-Security-Gates.md |
 
-Previous versions moved to `99-Legacy/5.2.0-Deprecated/`
+Previous versions moved to `10-Archive/02-Legacy/5.2.0-Deprecated/`
 
 ---
 
