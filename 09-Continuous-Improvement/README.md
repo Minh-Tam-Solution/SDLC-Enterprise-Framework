@@ -18,9 +18,10 @@ This folder contains guides and processes for evolving the SDLC Framework while 
 
 ## Contents
 
-| Document | Purpose |
-|----------|---------|
-| [SDLC-Continuous-Improvement-Guide.md](SDLC-Continuous-Improvement-Guide.md) | How to upgrade SDLC versions safely |
+| Document | Purpose | Status |
+|----------|---------|--------|
+| [SDLC-Continuous-Improvement-Guide.md](SDLC-Continuous-Improvement-Guide.md) | How to upgrade SDLC versions safely | Active |
+| [RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md](RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md) | Eliminate 99-Legacy from stages 00-09, centralize in 10-Archive | PROPOSED |
 
 ---
 
