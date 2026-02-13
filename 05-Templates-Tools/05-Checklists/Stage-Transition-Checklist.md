@@ -1,6 +1,6 @@
 # Stage Transition Checklist
 
-**Framework**: SDLC 6.0.2  
+**Framework**: SDLC 6.0.5  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
 **Related**: [ADR-041 Stage Dependency Matrix](../../02-Core-Methodology/ADR-041-Stage-Dependency-Matrix.md), [Stage Exit Criteria](../../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md)
@@ -703,5 +703,5 @@ tasks:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.0.2  
+**Framework Version**: SDLC 6.0.5  
 **Status**: PRODUCTION-READY

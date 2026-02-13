@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Date**: February 1, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Framework**: SDLC 6.0.1
+**Framework**: SDLC 6.0.5
 **Specification**: [SPEC-0021](../05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md)
 **Target**: Developers, Tech Leads, QA Engineers implementing 4-stage consistency validation
 
@@ -1232,7 +1232,7 @@ Found a better validation pattern? Share it!
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 1, 2026
-**Framework Version**: SDLC 6.0.1
+**Framework Version**: SDLC 6.0.5
 **Specification**: SPEC-0021 v1.0.0
 
 ---

@@ -997,7 +997,7 @@ echo "PASS: No AGPL SDK imports"
 | **Last Updated** | January 29, 2026 |
 | **Author** | Backend Lead + Architect |
 | **Approvals** | CTO ✅ (Dec 23, 2025), CEO ✅ (Dec 23, 2025) |
-| **Framework Version** | SDLC 6.0.2 |
+| **Framework Version** | SDLC 6.0.5 |
 | **Status** | APPROVED |
 | **Migration From** | ADR-022-Multi-Provider-Codegen-Architecture.md |
 

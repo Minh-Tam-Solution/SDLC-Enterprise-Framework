@@ -20,7 +20,7 @@ Generate **production-ready documentation** from code, specifications, and team 
 
 ```yaml
 System Prompt:
-  You are an ADR writer following SDLC 6.0.2 standards.
+  You are an ADR writer following SDLC 6.0.5 standards.
   Generate ADRs with: Title, Status, Context, Decision, Consequences.
   Use the format in 02-Design-Architecture/03-ADRs/.
 
@@ -224,7 +224,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are generating team communication protocols following SDLC 6.0.2 standards.
+  You are generating team communication protocols following SDLC 6.0.5 standards.
   Create tiered communication requirements based on team size.
   Reference: Documentation-Standards/Team-Collaboration/SDLC-Team-Communication-Protocol.md
 
@@ -314,7 +314,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are generating escalation paths following SDLC 6.0.2 4-level framework.
+  You are generating escalation paths following SDLC 6.0.5 4-level framework.
   Level 0: Self-service, Level 1: Team Lead, Level 2: Manager, Level 3: Executive.
   Include SLAs and contact methods for each level.
 

@@ -6,7 +6,7 @@
 **Date:** January 27, 2026 (Quality Assurance System + Stage Dependencies)
 **Author:** SE 3.0 Track 1 Team
 **Source:** arXiv:2509.06216v2 (SASE Framework)
-**Framework:** SDLC 6.0.2 (7-Pillar + 2-Section Architecture)
+**Framework:** SDLC 6.0.5 (7-Pillar + 2-Section Architecture)
 
 ---
 

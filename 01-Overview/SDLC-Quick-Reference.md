@@ -1,9 +1,25 @@
-# SDLC Framework 6.0.4 Quick Reference Guide
+# SDLC Framework 6.0.5 Quick Reference Guide
 
-**Version**: 6.0.4
-**Date**: February 8, 2026
+**Version**: 6.0.5
+**Date**: February 13, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
+
+---
+
+## What's New in 6.0.5 (MINOR)
+
+### RFC-001: Legacy Document Organization Standard (MANDATORY)
+
+```yaml
+Key Changes:
+  - Eliminates 99-Legacy/ from active stages (00-09)
+  - Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
+  - BFlow validated: 57% size reduction (211MB→91MB)
+  - Migration script: migrate-legacy-to-archive.sh
+  - CI/CD blocks 99-Legacy/ reintroduction
+  - Adoption deadline: March 15, 2026
+```
 
 ---
 
@@ -204,7 +220,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.4 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.5 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -368,7 +384,7 @@ SDLC-Enterprise-Framework/
 
 ---
 
-## Quick Checklist: Is This 6.0.4 Compliant?
+## Quick Checklist: Is This 6.0.5 Compliant?
 
 ```yaml
 Specification:
@@ -398,7 +414,7 @@ Sprint Governance (3-Phase):
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: February 8, 2026
-**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
+**Last Updated**: February 13, 2026
+**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration + RFC-001)
 
-*Quick reference for SDLC Framework 6.0.4 - Keep this handy!*
+*Quick reference for SDLC Framework 6.0.5 - Keep this handy!*

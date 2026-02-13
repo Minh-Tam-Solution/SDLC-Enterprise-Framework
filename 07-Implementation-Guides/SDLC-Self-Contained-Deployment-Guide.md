@@ -1,6 +1,6 @@
 # SDLC 5.3.0 Self-Contained Deployment Guide
 
-**Version**: 6.0.2
+**Version**: 6.0.5
 **Date**: January 27, 2026
 **Status**: ACTIVE - CEO Requirement
 **Authority**: CEO + CTO Office
@@ -446,4 +446,4 @@ Projects must implement quality gates appropriate to their tier.
 **Document Owner**: CTO
 **Last Updated**: January 29, 2026
 **Next Review**: February 2026
-**Framework**: SDLC 6.0.2
+**Framework**: SDLC 6.0.5

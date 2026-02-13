@@ -1,10 +1,10 @@
 # 09 - Continuous Improvement
 
 **Stage**: 09 (Framework Folder, not Project Stage)
-**Version**: 6.0.4
+**Version**: 6.0.5
 **Date**: February 8, 2026
 **Status**: Active
-**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
+**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 **NEW in 6.0.4**: TDD Workflow Integration, 3-Phase Sprint Enhancement, Tier-Aware Coverage
 
@@ -43,4 +43,4 @@ Old continuous improvement documents are moved to `10-Archive/09-Legacy/` (per R
 ---
 
 **Last Updated**: February 8, 2026
-**Framework**: SDLC 6.0.4
+**Framework**: SDLC 6.0.5

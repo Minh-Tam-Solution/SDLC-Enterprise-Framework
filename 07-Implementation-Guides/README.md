@@ -1,8 +1,8 @@
-# SDLC 6.0.4 Implementation Guides
+# SDLC 6.0.5 Implementation Guides
 
-**Version**: 6.0.4 | **Status**: PRODUCTION READY | **Date**: February 8, 2026
+**Version**: 6.0.5 | **Status**: PRODUCTION READY | **Date**: February 8, 2026
 
-Practical how-to guides for implementing SDLC 6.0.4 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation**.
+Practical how-to guides for implementing SDLC 6.0.5 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation**.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 **NEW in 6.0.4**: TDD Workflow Integration + 3-Phase Sprint Lifecycle Enhanced + Tier-Aware TDD Coverage
@@ -12,7 +12,7 @@ Practical how-to guides for implementing SDLC 6.0.4 framework + Section 7 Qualit
 ## 🚀 Getting Started - Pick Your Path
 
 ### New Project (Greenfield)
-Start fresh with SDLC 6.0.4 from day one.
+Start fresh with SDLC 6.0.5 from day one.
 
 | Team Size | Time | Start Here |
 |-----------|------|------------|
@@ -22,7 +22,7 @@ Start fresh with SDLC 6.0.4 from day one.
 | 50+ people (ENTERPRISE) | 4 weeks | [Full Implementation](SDLC-Implementation-Guide.md) + [Self-Contained Deployment](SDLC-Self-Contained-Deployment-Guide.md) |
 
 ### Existing Project (Brownfield)
-Adopt SDLC 6.0.4 incrementally into running projects.
+Adopt SDLC 6.0.5 incrementally into running projects.
 
 | Phase | Focus | Time | Guide |
 |-------|-------|------|-------|
@@ -82,7 +82,7 @@ Adopt SDLC 6.0.4 incrementally into running projects.
 
 | Guide | Purpose | Use When |
 |-------|---------|----------|
-| **SDLC-Implementation-Guide.md** | Complete SDLC 6.0.4 deployment | Starting from scratch (greenfield) |
+| **SDLC-Implementation-Guide.md** | Complete SDLC 6.0.5 deployment | Starting from scratch (greenfield) |
 | **SDLC-Stage-Consistency-Validation-Guide.md** | 4-stage consistency validation | Preventing spec drift ⭐ NEW |
 | **SDLC-Self-Contained-Deployment-Guide.md** | Team folder deployment | Deploying to specific team |
 | **SDLC-Compliance-Enforcement-Guide.md** | Adopt SDLC in existing project | Brownfield migration |
@@ -134,7 +134,7 @@ mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
 # 99-legacy folders created as needed within each stage
 ```
 
-### Legacy/Archive Structure (SDLC 6.0.4)
+### Legacy/Archive Structure (SDLC 6.0.5)
 
 ```yaml
 Rules:
@@ -195,7 +195,7 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 | Script | Purpose |
 |--------|---------|
-| `compliance_sdlc_validator.py` | Validate SDLC 6.0.4 folder structure (7-Pillar + 2-Section + TDD) |
+| `compliance_sdlc_validator.py` | Validate SDLC 6.0.5 folder structure (7-Pillar + 2-Section + TDD) |
 | `compliance_sdlc_scanner.py` | Scan project for compliance |
 | `quickstart_solo_setup.py` | Setup for solo developer |
 

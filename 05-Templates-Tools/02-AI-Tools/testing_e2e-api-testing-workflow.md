@@ -1,7 +1,7 @@
 # E2E API Testing Workflow
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.0.2
+**Framework**: SDLC 6.0.5
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Last Updated**: February 2026
 

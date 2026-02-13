@@ -1,9 +1,26 @@
-# SDLC 6.0.4 Executive Summary
+# SDLC 6.0.5 Executive Summary
 
-**Version**: 6.0.4
-**Release Date**: February 8, 2026 (MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement)
+**Version**: 6.0.5
+**Release Date**: February 13, 2026 (MINOR: RFC-001 Legacy Document Organization Standard)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## What's New in 6.0.5 (MINOR RELEASE)
+
+### RFC-001: Legacy Document Organization Standard (MANDATORY)
+
+**The Problem**: Per-stage `99-Legacy/` folders in active SDLC stages (00-09) caused ~40% AI context pollution, inconsistent cross-project organization, and developer confusion.
+
+**The Solution**: Centralize all legacy content into `10-Archive/{NN}-Legacy/` with stage-aligned subdirectories. Production-validated on BFlow Platform: 57% size reduction (211MB→91MB), 34% file count reduction (6,500→4,294).
+
+**Key Changes**:
+- **MANDATORY standard**: All SDLC-compliant projects must adopt by March 15, 2026
+- **6 rules**: 4 MANDATORY + 2 RECOMMENDED for legacy document organization
+- **Migration script**: `migrate-legacy-to-archive.sh` with dry-run default
+- **CI/CD integration**: GitHub Actions workflow blocks `99-Legacy/` reintroduction
+- **AI-first design**: Eliminates context pollution, supports Software 3.0 premise
 
 ---
 
@@ -304,7 +321,7 @@ New comprehensive guide covering:
 
 ## Framework Overview
 
-**SDLC 6.0.4** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
+**SDLC 6.0.5** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
 
 ### 7 Core Pillars
 - **Pillar 0**: Design Thinking Foundation
@@ -327,7 +344,7 @@ New comprehensive guide covering:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.4 - 10 STAGES                           │
+│                    SDLC 6.0.5 - 10 STAGES                           │
 ├─────────────────────────────────────────────────────────────────────┤
 │  00 FOUNDATION  (WHY?)      Strategic Discovery & Validation        │
 │  01 PLANNING    (WHAT?)     Requirements & User Stories             │
@@ -558,10 +575,10 @@ SDLC 5.1.2 (Dec 2025) → Complete Lifecycle + SASE Integration
 SDLC 5.1.3 (Jan 2026) → Sprint Governance + AGENTS.md Migration
 SDLC 5.2.0 (Jan 2026) → Planning Mode + AI Agent Best Practices 2026
 SDLC 5.3.0 (Jan 2026) → Quality Assurance System (Section 7) + Stage Dependencies
-SDLC 6.0.0 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR RELEASE
-SDLC 6.0.2 (Feb 2026) → E2E API Testing Enhancement (MINOR)
-SDLC 6.0.3 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
-SDLC 6.0.4 (Feb 2026) → TDD Workflow Integration + 3-Phase Sprint Enhancement ⭐ CURRENT
+SDLC 6.0.5 (Jan 2026) → Unified Specification Standard (Section 8) ⭐ MAJOR RELEASE
+SDLC 6.0.5 (Feb 2026) → E2E API Testing Enhancement (MINOR)
+SDLC 6.0.5 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
+SDLC 6.0.5 (Feb 2026) → TDD Workflow Integration + 3-Phase Sprint Enhancement ⭐ CURRENT
 ```
 
 ---
@@ -626,4 +643,4 @@ SDLC 6.0.4 (Feb 2026) → TDD Workflow Integration + 3-Phase Sprint Enhancement 
 **Last Updated**: February 8, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
-**Version**: 6.0.4
+**Version**: 6.0.5

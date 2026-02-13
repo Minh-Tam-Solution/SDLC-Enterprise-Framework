@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Status**: DRAFT
 **Created**: February 1, 2026
-**Framework Version**: SDLC 6.0.1
+**Framework Version**: SDLC 6.0.5
 **Type**: Service Specification
 **Owner**: CTO Office + QA Team (BFlow)
 **Approval**: Pending
@@ -1073,7 +1073,7 @@ Tasks:
 
 **QA Team (BFlow)**: ✅ APPROVED (February 1, 2026)
 **CTO Office**: Pending
-**Framework Release**: SDLC 6.0.1 (Pending)
+**Framework Release**: SDLC 6.0.5 (Pending)
 
 ---
 

@@ -1,6 +1,6 @@
 # SDLC Naming Standards - Universal Framework
 
-**Version**: 6.0.2
+**Version**: 6.0.5
 **Date**: January 28, 2026
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
@@ -27,7 +27,7 @@
 
 ### Purpose
 
-This document consolidates **all naming and header standards** for SDLC 6.0.2 Framework:
+This document consolidates **all naming and header standards** for SDLC 6.0.5 Framework:
 - Code file naming (Python, TypeScript, migrations)
 - Document naming (markdown, documentation)
 - Folder structure (10 stages, legacy handling)
@@ -376,7 +376,7 @@ No Status Markers (version goes INSIDE):
 
 ## Part 4: Folder & Directory Standards
 
-### 4.1 Stage Folders (Level 1) - SDLC 6.0.2
+### 4.1 Stage Folders (Level 1) - SDLC 6.0.5
 
 **10 Stages (00-09)** - exactly 10 stages:
 
@@ -441,13 +441,13 @@ Examples:
 
 ### 5.1 Active Document Header
 
-Apply to **all active SDLC 6.0.2 documents**:
+Apply to **all active SDLC 6.0.5 documents**:
 
 ```markdown
 # [Document Title]
 ## [Subtitle - Purpose]
 
-**Version**: 6.0.2
+**Version**: 6.0.5
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Specific Status]
 **Authority**: [Who Approved]
@@ -598,7 +598,7 @@ Core Rules:
 Mapping Table Example:
   | Legacy Element | New Location | Status | Notes |
   |----------------|--------------|--------|-------|
-  | SDLC 6.0.2 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
+  | SDLC 6.0.5 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
 ```
 
 ### 6.3 Archival Anti-Patterns
@@ -706,7 +706,7 @@ Automation (Future):
 ```markdown
 # Document Title
 
-**Version**: 6.0.2
+**Version**: 6.0.5
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Context]
 **Authority**: [Owner]
@@ -776,7 +776,7 @@ DON'Ts ❌:
 ---
 
 **Document Status**: ACTIVE - MANDATORY ENFORCEMENT
-**Compliance**: Required for all SDLC 6.0.2 projects
+**Compliance**: Required for all SDLC 6.0.5 projects
 **Last Updated**: January 28, 2026
 **Owner**: CPO Office
 

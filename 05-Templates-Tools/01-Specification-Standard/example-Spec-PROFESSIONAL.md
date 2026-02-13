@@ -68,7 +68,7 @@ The governance engine automates quality assessment to reduce human bottlenecks w
 This specification builds on:
 - Sprint 111-113: Governance UI implementation (7,884 LOC)
 - ADR-035: Progressive Routing System
-- SDLC 6.0.2 Section 7: Quality Assurance System
+- SDLC 6.0.5 Section 7: Quality Assurance System
 
 ### 2.3 Stakeholders
 

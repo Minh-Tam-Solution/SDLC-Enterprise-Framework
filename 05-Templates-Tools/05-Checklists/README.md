@@ -1,6 +1,6 @@
 # 05-Checklists - Actionable Stage Transition Checklists
 
-**Framework**: SDLC 6.0.3
+**Framework**: SDLC 6.0.5
 **Last Updated**: January 28, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Provide ready-to-use checklists for stage transitions

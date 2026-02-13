@@ -1,9 +1,9 @@
 # 🔄 SDLC Continuous Improvement Guide
 ## How to Evolve the Framework Without Losing Battle-Tested Wisdom
 
-**Version**: 6.0.4
-**Date**: February 8, 2026
-**Status**: ACTIVE - ENHANCED WITH 6.0.3 → 6.0.4 TDD + SPEC CONVERTER UPGRADE
+**Version**: 6.0.5
+**Date**: February 13, 2026
+**Status**: ACTIVE - ENHANCED WITH RFC-001 LEGACY DOCUMENT ORGANIZATION (6.0.5)
 **Authority**: CEO + CPO + CTO Leadership
 **Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x → 5.2.0 → 6.0.x
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
@@ -149,6 +149,14 @@ SDLC 6.0.4 (February 8, 2026):
   → User Story → BDD → OpenSpec conversion chain
   → CLI integration: sdlcctl spec convert/validate commands
   → Format-agnostic specification handling
+
+SDLC 6.0.5 (February 13, 2026):
+  → RFC-001: Legacy Document Organization Standard (MANDATORY)
+  → Eliminates 99-Legacy/ from active stages (00-09)
+  → Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
+  → BFlow validated: 57% size reduction, 34% file reduction
+  → Migration script: migrate-legacy-to-archive.sh
+  → CI/CD: GitHub Actions blocks 99-Legacy/ reintroduction
 
 Pattern: Each version BUILDS ON previous learnings
 Strategy: 90% Preserve + 10% Enhance (Never rebuild)
@@ -1256,13 +1264,13 @@ Potential Transformations:
 ---
 
 **Document**: SDLC-Continuous-Improvement-Guide
-**Version**: 6.0.4
-**Date**: February 8, 2026
-**Status**: ACTIVE - ENHANCED WITH 6.0.3 → 6.0.4 TDD + SPEC CONVERTER UPGRADE
-**Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.4)
+**Version**: 6.0.5
+**Date**: February 13, 2026
+**Status**: ACTIVE - ENHANCED WITH RFC-001 LEGACY DOCUMENT ORGANIZATION
+**Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.5)
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 6.0.4 adds TDD Workflow Integration, 3-Phase Sprint Enhancement, and Spec Converter Methodology
-**Framework**: SDLC 6.0.4
+**Latest**: SDLC 6.0.5 adds RFC-001 Legacy Document Organization Standard (MANDATORY), centralizing 99-Legacy/ into 10-Archive/{NN}-Legacy/
+**Framework**: SDLC 6.0.5
 
 ***"Evolution without losing revolution."*** 🔄
 

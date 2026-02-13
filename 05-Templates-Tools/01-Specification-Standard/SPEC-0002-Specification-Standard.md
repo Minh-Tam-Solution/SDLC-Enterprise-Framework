@@ -414,7 +414,7 @@ THEN frontmatter MUST include all required fields:
   - last_updated (YYYY-MM-DD)
   - related_adrs (array, may be empty)
   - related_specs (array, may be empty)
-  - framework_version (e.g., SDLC 6.0.2)
+  - framework_version (e.g., SDLC 6.0.5)
   - machine_readable_spec (path to YAML/JSON, if exists)
   - tags (array of searchable keywords)
 ```

@@ -22,7 +22,7 @@ Generate structured UAT scripts for real users to validate:
 ## 📋 Universal AI Prompt
 
 ```
-You are an expert UX researcher for SDLC 6.0.2 Stage 04 (TEST - UAT). Create a User Acceptance Testing script for:
+You are an expert UX researcher for SDLC 6.0.5 Stage 04 (TEST - UAT). Create a User Acceptance Testing script for:
 
 **Feature**: [Feature name]
 **Target Users**: [User persona]

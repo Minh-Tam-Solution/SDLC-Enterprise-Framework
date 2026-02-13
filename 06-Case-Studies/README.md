@@ -1,11 +1,11 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 6.0.4
+**Version**: 6.0.5
 **Date**: February 8, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + TDD Integration)
+**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -462,7 +462,7 @@ SDLC 5.0.0 (December 2025):
   → AI-optimized folder structure (15 P0 Artifacts)
   → CTO+CPO Joint Approval (9.5/10 score)
 
-SDLC 6.0.4 (February 2026): ⭐ CURRENT
+SDLC 6.0.5 (February 2026): ⭐ CURRENT
   → TDD Workflow Integration (RED-GREEN-REFACTOR cycle)
   → 3-Phase Sprint Lifecycle Enhanced (PRE-SPRINT → EXECUTION → POST-SPRINT)
   → Spec Converter Methodology (SpecIR bidirectional conversion)
@@ -505,4 +505,4 @@ SDLC 6.0.4 (February 2026): ⭐ CURRENT
 
 ***"From 4.2 to 5.0.0 - Every upgrade earned through battle."*** ⚔️
 
-***"SDLC 6.0.4: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯
+***"SDLC 6.0.5: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯

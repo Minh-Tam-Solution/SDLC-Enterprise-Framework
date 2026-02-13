@@ -1,15 +1,15 @@
 # 03-Agent-Templates - AI Assistant Configurations
 
-**Version**: 6.0.3
+**Version**: 6.0.5
 **Date**: January 29, 2026
 **Status**: ACTIVE - Placeholder for Sprint 120+
-**Structure**: SDLC 6.0.3 (2-level maximum)
+**Structure**: SDLC 6.0.5 (2-level maximum)
 
 ---
 
 ## Overview
 
-Cross-platform AI agent templates for SDLC 6.0.3 compliance. This folder serves as the primary location for AI assistant configuration templates.
+Cross-platform AI agent templates for SDLC 6.0.5 compliance. This folder serves as the primary location for AI assistant configuration templates.
 
 ---
 
@@ -47,7 +47,7 @@ Tool-specific templates have been archived to:
 | ChatGPT | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` |
 | Gemini | `10-Archive/05-Legacy/tool-guides-2026/gemini/` |
 
-> **Note**: Tool-specific templates archived per SDLC 6.0.3 principle - Framework provides universal patterns, not tool-specific configs.
+> **Note**: Tool-specific templates archived per SDLC 6.0.5 principle - Framework provides universal patterns, not tool-specific configs.
 
 ---
 

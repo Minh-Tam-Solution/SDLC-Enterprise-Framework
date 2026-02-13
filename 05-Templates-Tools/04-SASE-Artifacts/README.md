@@ -1,18 +1,18 @@
 # SASE Artifact Templates
 ## Streamlined Templates for Human-Agent Collaboration
 
-**Version**: 6.0.3
+**Version**: 6.0.5
 **Date**: January 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Pillar**: 5 - SASE Integration
-**Framework**: SDLC 6.0.3 + SASE/SE 3.0 Integration
+**Framework**: SDLC 6.0.5 + SASE/SE 3.0 Integration
 **Reference**: arXiv:2509.06216v2 (Software Agentic Software Engineering)
 
 ---
 
 ## Overview
 
-**SASE (Software Agentic Software Engineering)** defines artifact templates for structured human-agent collaboration. As of SDLC 6.0.3, we use:
+**SASE (Software Agentic Software Engineering)** defines artifact templates for structured human-agent collaboration. As of SDLC 6.0.5, we use:
 
 - **AGENTS.md** - Industry standard for AI context (replaces BRS/MTS)
 - **3 Governance Artifacts** - CRP, MRP, VCR for oversight and audit
@@ -43,7 +43,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│               SASE WORKFLOW (SDLC 6.0.3)                            │
+│               SASE WORKFLOW (SDLC 6.0.5)                            │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │  Human                          Agent                               │

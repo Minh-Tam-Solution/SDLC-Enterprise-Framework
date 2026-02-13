@@ -648,7 +648,7 @@ def test_ac_001_1_app_blueprint_validation():
 
 ### Framework Documents
 
-- SDLC 6.0.2 Specification Standard
+- SDLC 6.0.5 Specification Standard
 - Section 7: Quality Assurance System
 - Pillar 4: Build & Implementation
 

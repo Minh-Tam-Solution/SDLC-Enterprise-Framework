@@ -4,7 +4,7 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define maturity levels for adopting agentic practices in software development
-**Framework:** SDLC 6.0.2 (7-Pillar + 2-Section Architecture)
+**Framework:** SDLC 6.0.5 (7-Pillar + 2-Section Architecture)
 **Version:** 6.0.2
 **Date:** February 2, 2026
 **Status:** ACTIVE - PRODUCTION READY
@@ -818,4 +818,4 @@ Level 3 Governance:
 
 **Document Status:** ACTIVE - PRODUCTION READY
 **Last Updated:** December 12, 2025
-**Framework Version:** SDLC 6.0.2
+**Framework Version:** SDLC 6.0.5

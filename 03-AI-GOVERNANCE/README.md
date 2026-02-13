@@ -1,6 +1,6 @@
 # AI Governance Principles
 
-**Version**: 6.0.4
+**Version**: 6.0.5
 **Status**: ACTIVE
 **Date**: February 8, 2026
 **Pillar**: Core AI Governance (Enhanced in 6.0.4 with TDD Integration)
@@ -105,4 +105,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 8, 2026
-**Framework**: SDLC 6.0.4
+**Framework**: SDLC 6.0.5

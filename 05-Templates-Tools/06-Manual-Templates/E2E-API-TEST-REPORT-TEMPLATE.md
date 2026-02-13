@@ -1,10 +1,10 @@
-# E2E API Test Report Template (SDLC 6.0.2)
+# E2E API Test Report Template (SDLC 6.0.5)
 
 **Version**: 1.0.0
 **Date**: [YYYY-MM-DD]
 **Status**: [DRAFT | IN REVIEW | APPROVED]
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.0.2
+**Framework**: SDLC 6.0.5
 **Location**: `docs/05-test/03-E2E-Testing/reports/E2E-API-REPORT-YYYY-MM-DD.md`
 
 ---
@@ -28,7 +28,7 @@
 | Tests Skipped | [N] | [X]% | - |
 | Security Issues Found | [N] | - | [✅/⚠️/🔴] |
 
-**Pass Rate Target**: ≥80% (SDLC 6.0.2 minimum)
+**Pass Rate Target**: ≥80% (SDLC 6.0.5 minimum)
 **Pass Rate Actual**: [X]%
 **Status**: [✅ PASS | 🔴 FAIL]
 
@@ -246,5 +246,5 @@ Resolution: [Steps taken or ticket created]
 **Document Status**: [DRAFT | APPROVED]
 **Created**: [YYYY-MM-DD]
 **Updated**: [YYYY-MM-DD]
-**Framework**: SDLC 6.0.2
+**Framework**: SDLC 6.0.5
 **Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/02-API-Specifications/)

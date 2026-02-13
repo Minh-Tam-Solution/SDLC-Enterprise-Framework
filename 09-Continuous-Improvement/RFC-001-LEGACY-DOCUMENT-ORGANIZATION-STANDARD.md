@@ -4,7 +4,7 @@
 **Status**: ACCEPTED (MANDATORY - SDLC 6.0.5)
 **Date**: February 13, 2026
 **Author**: BFlow Platform Team
-**Framework**: SDLC 6.0.4 (7-Pillar + 2-Section + 10-Stage Lifecycle)
+**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + 10-Stage Lifecycle)
 **Priority**: Medium (quality improvement, no breaking changes)
 
 ---
@@ -381,8 +381,8 @@ du -sh docs/
 | AI context quality per stage | ~60% relevant | **100% relevant** | **+67%** |
 
 ### Commits
-- `e8bbf5397` - `refactor(root): SDLC 6.0.4 root folder compliance cleanup`
-- `1abea7a0d` - `feat(sprint-163): Documentation consolidation + AC-16 governance + SDLC 6.0.4 upgrade`
+- `e8bbf5397` - `refactor(root): SDLC 6.0.5 root folder compliance cleanup`
+- `1abea7a0d` - `feat(sprint-163): Documentation consolidation + AC-16 governance + SDLC 6.0.5 upgrade`
 
 ---
 
