@@ -2,11 +2,11 @@
 
 **Stage**: 09 (Framework Folder, not Project Stage)
 **Version**: 6.0.5
-**Date**: February 8, 2026
+**Date**: February 14, 2026
 **Status**: Active
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration)
+**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD + RFC-001)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.0.4**: TDD Workflow Integration, 3-Phase Sprint Enhancement, Tier-Aware Coverage
+**NEW in 6.0.5**: RFC-001 Legacy Organization Standard, SPEC-0001 Anti-Vibecoding Alignment, 4 New Framework Templates
 
 ---
 
@@ -42,5 +42,5 @@ Old continuous improvement documents are moved to `10-Archive/09-Legacy/` (per R
 
 ---
 
-**Last Updated**: February 8, 2026
+**Last Updated**: February 14, 2026
 **Framework**: SDLC 6.0.5

@@ -1,8 +1,8 @@
 # SDLC 6.0.5 Core Methodology
 
 **Version**: 6.0.5
-**Date**: February 8, 2026
-**Status**: ACTIVE - TDD Workflow Integration + 3-Phase Sprint Enhancement (MINOR RELEASE)
+**Date**: February 14, 2026
+**Status**: ACTIVE - RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 + Framework Templates
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
@@ -631,26 +631,26 @@ AI tools produce "vibecoded" output - quick but unmaintainable code that:
 
 ### The Solution: Vibecoding Index (0-100)
 
-**5 Weighted Signals**:
+**5 Weighted Signals** (SPEC-0001):
 
 | Signal | Weight | What It Measures |
 |--------|--------|------------------|
-| Architectural Smell | 25% | God classes (>500 LOC), feature envy, shotgun surgery |
-| Abstraction Complexity | 15% | Inheritance depth >3, interface count, generic nesting |
-| AI Dependency Ratio | 20% | AI-generated lines / total lines, human modification % |
-| Change Surface Area | 20% | Files touched, modules affected, API contracts changed |
-| Drift Velocity | 20% | Codebase pattern drift over 7 days |
+| Intent Clarity Score | 30% | How clear is the requirement/ticket? (0-100) |
+| Code Ownership Confidence | 25% | Does the AI know who owns this code? (0-100) |
+| Context Completeness | 20% | How complete is the context provided to AI? (0-100) |
+| AI Attestation Rate | 15% | % of code changes with AI co-authorship declared |
+| Historical Rejection Rate | 10% | % of recent PRs rejected in code review |
 
-**Formula**: `Index = (arch_smell × 0.25) + (abstraction × 0.15) + (ai_dependency × 0.20) + (surface_area × 0.20) + (drift × 0.20)`
+**Formula**: `Vibecoding Index = 100 - ((Intent × 0.30) + (Ownership × 0.25) + (Context × 0.20) + (Attestation × 0.15) + (100 - Rejection) × 0.10)`
 
 ### Progressive Routing
 
-| Score | Category | Action | CEO Involvement |
+| Score | Category | Action | Review Required |
 |-------|----------|--------|-----------------|
-| 0-30 | 🟢 Green | Auto-approve | None |
-| 31-60 | 🟡 Yellow | Tech Lead review queue | Spot-check |
-| 61-80 | 🟠 Orange | CEO should review | Recommended |
-| 81-100 | 🔴 Red | CEO must review | Mandatory |
+| < 20 | 🟢 Green (Low Risk) | Auto-merge | 1+ approvals (automated OK) |
+| 20-40 | 🟡 Yellow (Medium Risk) | Human review required | 2+ human code reviews, coverage >= 80% |
+| 40-60 | 🟠 Orange (High Risk) | Senior review required | Senior engineer + Security lead sign-off |
+| >= 60 | 🔴 Red (Critical Risk) | Block or AI Council | CTO override required, mandatory human rewrite |
 
 ### Auto-Generation Layer
 
@@ -665,14 +665,15 @@ AI tools produce "vibecoded" output - quick but unmaintainable code that:
 
 ### Kill Switch Criteria
 
-Governance auto-rolls back to WARNING mode if:
+Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FULL enforcement):
 
-| Criteria | Threshold | Action |
-|----------|-----------|--------|
-| Rejection Rate | >80% | Rollback + investigate |
-| Latency P95 | >500ms | Rollback + optimize |
-| False Positive Rate | >20% | Rollback + retune |
-| Developer Complaints | >5/day | Rollback + survey |
+| Criteria | Threshold | Duration | Action |
+|----------|-----------|----------|--------|
+| Rejection Rate | >80% | 30 consecutive minutes | Disable AI codegen for 24h |
+| Latency P95 | >500ms | 15 consecutive minutes | Fallback to rule-based |
+| Security Scan Failures | >5 critical CVEs | Any occurrence | Immediate disable + alert CTO |
+
+**Recovery Conditions**: Manual CTO approval → Root cause analysis → Fix deployed → Gradual re-enable (10% → 50% → 100%)
 
 ### Governance Modes
 
@@ -721,7 +722,7 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Agentic-Maturity-Model.md](./SDLC-Agentic-Maturity-Model.md) - L0→L3 progression
 - [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) - User-centered approach
 
-### 6.0.0 NEW (Section 8 - Unified Specification Standard)
+### Section 8 - Unified Specification Standard (6.0.0+)
 - [SDLC-Specification-Standard.md](../05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
 - [DESIGN_DECISIONS.md](../05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) - ⭐ **Lightweight ADRs**
 - [SPEC_DELTA.md](../05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) - ⭐ **Version tracking**
@@ -753,6 +754,10 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.0.5** | **Feb 14, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
+| **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement** - RED-GREEN-REFACTOR cycle, tier-aware coverage (LITE 70% → ENT 95%), Spec Converter (SpecIR) |
+| **6.0.3** | **Feb 5, 2026** | **MINOR: Boris Cherny Best Practices Consolidation** - 5 RFCs → Framework structure, MCP Integration Guide, Git Workflow Patterns |
+| **6.0.2** | **Feb 3, 2026** | **MINOR: E2E API Testing Enhancement (RFC-SDLC-602)** - 6-phase testing workflow, Stage 03↔05 cross-reference, OWASP API Top 10 |
 | **6.0.1** | **Feb 1, 2026** | **MINOR: SPEC-0021 Stage Consistency Validation** - 4-stage consistency model, pre/post-implementation checklists, artifact integrity hashing, CLI validation commands |
 | **6.0.0** | **Jan 28, 2026** | **MAJOR: 7-Pillar + 2-Section Architecture, Unified Specification Standard** |
 | 5.3.0 | Jan 27, 2026 | Section 7 - Quality Assurance System + Stage Dependencies |
@@ -767,7 +772,7 @@ Quality Assurance Standards (5.3.0):
 
 ---
 
-**Last Updated**: January 28, 2026
+**Last Updated**: February 14, 2026
 **Maintained By**: Framework Team
 **Authority**: CTO Approved
 **Case Study**: [BFlow Sprint 86](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)

@@ -2,8 +2,8 @@
 
 **Version**: 6.0.5
 **Status**: ACTIVE
-**Date**: February 8, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.0.4 with TDD Integration)
+**Date**: February 14, 2026
+**Pillar**: Core AI Governance (Enhanced in 6.0.5 with SPEC-0001 Anti-Vibecoding Alignment)
 
 ---
 
@@ -104,5 +104,5 @@ A tool feature is promoted to Core when it meets ALL criteria:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 8, 2026
+**Last Updated**: February 14, 2026
 **Framework**: SDLC 6.0.5

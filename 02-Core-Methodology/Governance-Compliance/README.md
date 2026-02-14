@@ -1,13 +1,13 @@
 # Governance & Compliance Standards
 
 **Version**: 6.0.5
-**Date**: February 8, 2026
+**Date**: February 14, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
-**NEW in 6.0.4**: TDD Integration + 3-Phase Sprint Lifecycle + Tier-Aware Coverage
+**NEW in 6.0.5**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment
 
 ---
 
@@ -298,5 +298,5 @@ Security:
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for all SDLC projects
-**Last Updated**: February 8, 2026
+**Last Updated**: February 14, 2026
 **Owner**: CTO + CPO Office

@@ -1,7 +1,7 @@
 # SDLC Framework 6.0.5 Quick Reference Guide
 
 **Version**: 6.0.5
-**Date**: February 13, 2026
+**Date**: February 14, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
 
@@ -13,12 +13,30 @@
 
 ```yaml
 Key Changes:
-  - Eliminates 99-Legacy/ from active stages (00-09)
-  - Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
-  - BFlow validated: 57% size reduction (211MB→91MB)
-  - Migration script: migrate-legacy-to-archive.sh
-  - CI/CD blocks 99-Legacy/ reintroduction
-  - Adoption deadline: March 15, 2026
+  RFC-001 Legacy Document Organization:
+    - Eliminates 99-Legacy/ from active stages (00-09)
+    - Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
+    - BFlow validated: 57% size reduction (211MB→91MB)
+    - Migration script: migrate-legacy-to-archive.sh
+    - CI/CD blocks 99-Legacy/ reintroduction
+    - Adoption deadline: March 15, 2026
+
+  SPEC-0001 Anti-Vibecoding Alignment:
+    - Vibecoding Index signals updated (5 signals, SPEC-0001 authoritative)
+    - Progressive Routing thresholds: <20/20-40/40-60/>=60
+    - Kill Switch: rejection >80%, latency >500ms, CVEs >5
+    - Machine-readable controls in anti-vibecoding.yaml
+
+  4 New Framework Templates:
+    - deployment_go-live-readiness-checklist.md (100-item tactical)
+    - deployment_go-live-readiness-assessment.md (Go/No-Go scoring)
+    - governance_maturity-assessment-framework.md (per-stage 0-100%)
+    - governance_risk-register-analyzer.md (L×I scoring matrix)
+
+  sdlcctl CLI v1.7.0:
+    - Fuzzy P0 detection for legacy stage names
+    - 3-strategy resolution: exact → alternative → fuzzy
+    - Bflow: P0 0%→71.4%, NQH-Bot: P0 0%→64.3%
 ```
 
 ---
@@ -409,12 +427,17 @@ Sprint Governance (3-Phase):
   [ ] Pre-Sprint: Design docs validated, TDD strategy defined?
   [ ] Execution: TDD cycle followed per feature?
   [ ] Post-Sprint: Documentation completed within 24h?
+
+Legacy Organization (6.0.5 RFC-001):
+  [ ] No 99-Legacy/ folders in active stages (00-09)?
+  [ ] Legacy content in 10-Archive/{NN}-Legacy/?
+  [ ] CI/CD blocks 99-Legacy/ reintroduction?
 ```
 
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: February 13, 2026
+**Last Updated**: February 14, 2026
 **Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration + RFC-001)
 
 *Quick reference for SDLC Framework 6.0.5 - Keep this handy!*

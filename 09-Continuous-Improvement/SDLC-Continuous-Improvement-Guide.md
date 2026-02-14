@@ -119,9 +119,10 @@ SDLC 5.2.0 (January 22, 2026):
   → Specification Generation Workflow
   → Feedback Loop Closure mechanisms
 
-SDLC 6.0.2 (January 28, 2026):
+SDLC 6.0.0 (January 28, 2026):
+  → MAJOR: 7-Pillar + 2-Section Architecture
   → Section 7: Quality Assurance System (Anti-Vibecoding)
-  → Section 8: Progressive Routing (4-zone escalation)
+  → Section 8: Unified Specification Standard (YAML + BDD)
   → AI Governance Principles (7 principles for AI-Human collaboration)
   → Context Authority V2 methodology
   → SASE Simplified: AGENTS.md + CRP + MRP + VCR (deprecated BRS/LPS/MTS)
@@ -150,13 +151,17 @@ SDLC 6.0.4 (February 8, 2026):
   → CLI integration: sdlcctl spec convert/validate commands
   → Format-agnostic specification handling
 
-SDLC 6.0.5 (February 13, 2026):
+SDLC 6.0.5 (February 14, 2026):
   → RFC-001: Legacy Document Organization Standard (MANDATORY)
   → Eliminates 99-Legacy/ from active stages (00-09)
   → Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
   → BFlow validated: 57% size reduction, 34% file reduction
   → Migration script: migrate-legacy-to-archive.sh
   → CI/CD: GitHub Actions blocks 99-Legacy/ reintroduction
+  → SPEC-0001 Anti-Vibecoding alignment (5 signals, routing, kill switch)
+  → 4 new Framework templates (Go-Live ×2, Maturity, Risk Register)
+  → sdlcctl v1.7.0: Fuzzy P0 detection for legacy stage names
+  → Section 7 Vibecoding Index aligned with machine-readable SPEC-0001
 
 Pattern: Each version BUILDS ON previous learnings
 Strategy: 90% Preserve + 10% Enhance (Never rebuild)
@@ -1184,6 +1189,57 @@ Key Lesson:
   - 3-Circle Architecture respected
 ```
 
+### Success Story 4: 6.0.4 to 6.0.5 Upgrade (February 14, 2026)
+
+```yaml
+Context:
+  Previous Version: 6.0.4 (TDD + Spec Converter, Feb 8, 2026)
+  New Version: 6.0.5 (RFC-001 + SPEC-0001 + Templates, Feb 14, 2026)
+  Driver: Bflow Framework Assessment exposed 3 gaps + sdlcctl false negatives
+  Duration: 2 days (Phase 1: Framework templates, Phase 2: sdlcctl fuzzy P0)
+
+What Changed:
+  1. RFC-001 Legacy Document Organization (MANDATORY):
+     - 99-Legacy/ eliminated from active stages
+     - Centralized to 10-Archive/{NN}-Legacy/
+     - BFlow validated: 57% size reduction
+
+  2. SPEC-0001 Anti-Vibecoding Alignment:
+     - Section 7 signals aligned with machine-readable YAML controls
+     - 5 signals: Intent (30%), Ownership (25%), Context (20%),
+       Attestation (15%), Rejection (10%)
+     - Routing: <20 Green, 20-40 Yellow, 40-60 Orange, >=60 Red
+     - Kill Switch: 3 triggers with recovery conditions
+
+  3. 4 New Framework Templates:
+     - deployment_go-live-readiness-checklist.md (tactical 100-item)
+     - deployment_go-live-readiness-assessment.md (Go/No-Go scoring)
+     - governance_maturity-assessment-framework.md (per-stage 0-100%)
+     - governance_risk-register-analyzer.md (L×I scoring matrix)
+
+  4. sdlcctl v1.7.0 Fuzzy P0 Detection:
+     - 3-strategy resolution: exact → alternative → fuzzy stage path
+     - Stage path caching (10x performance improvement)
+     - Bflow: P0 0%→71.4%, compliance 40→68.6
+     - NQH-Bot: P0 0%→64.3%, compliance 40→65.7
+     - Zero regression on RFC-001 compliant projects
+
+Framework-First Compliance:
+  - Phase 1: Templates added to Framework submodule FIRST
+  - Phase 2: sdlcctl CLI upgraded in Orchestrator
+  - CTO approved with 5 required modifications (all implemented)
+
+3-Circle Architecture Compliance:
+  - Ring 1 (Core): Anti-Vibecoding signals (SPEC-0001)
+  - Ring 2 (Governance): RFC-001 legacy organization rules
+  - Ring 3 (Outer): Templates, CLI tooling
+
+Key Lesson:
+  "Framework Assessment on real projects reveals gaps invisible in theory"
+  - Bflow assessment found 3 template gaps + P0 false negatives
+  - Real-world validation > theoretical completeness
+```
+
 ### Lessons Applied: 6.0.3 → 6.0.4
 
 ```yaml
@@ -1216,41 +1272,43 @@ Key Lesson:
 
 ### Criteria for 6.1 Minor Update
 ```yaml
-Status: SDLC 6.0.4 COMPLETE (February 8, 2026)
+Status: SDLC 6.0.5 COMPLETE (February 14, 2026)
 Next Minor: 6.1.0
 
 Indicators:
   - 3-5 new AI Governance patterns validated
-  - Quality Assurance System refinements
+  - Quality Assurance System refinements (SPEC-0001 calibration)
   - Context Authority V2 enhancements
   - Spec Converter tooling maturity
   - TDD workflow adoption metrics
   - Success stories accumulated (5+ platforms using 6.0.x)
+  - RFC-001 adoption across all NQH projects
 
-Timeline: Q2-Q3 2026 (3-6 months from 6.0.4)
+Timeline: Q2-Q3 2026 (3-6 months from 6.0.5)
 
 Expected Additions:
   - Additional case studies (SDLC Orchestrator, Brownfield implementations)
   - Enhanced AI Governance metrics
   - Kill Switch automation patterns
-  - Vibecoding Index calibration updates
+  - Vibecoding Index calibration updates (SPEC-0001 refinement)
   - Spec Converter parser/renderer extensions
   - Additional format adapters (Notion, Confluence)
+  - RFC-001 migration automation (sdlcctl fix --naming)
 ```
 
 ### Criteria for 7.0 Major Update
 ```yaml
 Status: Planning (Q4 2026 - Q1 2027)
-Foundation: SDLC 6.0.2 (AI Governance + Quality Assurance) → SDLC 7.0 (Autonomous AI Development)
+Foundation: SDLC 6.0.5 (AI Governance + Quality Assurance + RFC-001) → SDLC 7.0 (Autonomous AI Development)
 
 Indicators:
   - Fundamental AI autonomy paradigm shift
   - New section(s) required (e.g., Autonomous Code Generation)
-  - 10+ platforms validated with 6.0.0 methodology
+  - 10+ platforms validated with 6.0.x methodology
   - Industry-wide AI governance pattern emergence
   - Enterprise-grade autonomous development standards
 
-Timeline: Q4 2026 - Q1 2027 (9-12 months from 6.0.0)
+Timeline: Q4 2026 - Q1 2027 (9-12 months from 6.0.5)
 
 Potential Transformations:
   - Autonomous Code Generation Framework
@@ -1265,11 +1323,11 @@ Potential Transformations:
 
 **Document**: SDLC-Continuous-Improvement-Guide
 **Version**: 6.0.5
-**Date**: February 13, 2026
-**Status**: ACTIVE - ENHANCED WITH RFC-001 LEGACY DOCUMENT ORGANIZATION
+**Date**: February 14, 2026
+**Status**: ACTIVE - ENHANCED WITH RFC-001 + SPEC-0001 + FRAMEWORK TEMPLATES
 **Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.5)
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 6.0.5 adds RFC-001 Legacy Document Organization Standard (MANDATORY), centralizing 99-Legacy/ into 10-Archive/{NN}-Legacy/
+**Latest**: SDLC 6.0.5 adds RFC-001 Legacy Organization, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
 **Framework**: SDLC 6.0.5
 
 ***"Evolution without losing revolution."*** 🔄

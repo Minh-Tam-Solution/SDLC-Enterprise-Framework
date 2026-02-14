@@ -70,7 +70,7 @@ SDLC 6.0.5 is a **7-Pillar AI+Human Excellence Framework** with:
 - **CLI Validation Commands**: `sdlcctl validate-consistency` for automated checking
 - **Tier-Specific Validation**: LITE (basic), STANDARD (moderate), PROFESSIONAL (deep), ENTERPRISE (comprehensive)
 
-**From 6.0.2 (Major Release)**:
+**From 6.0.0 (Major Release)**:
 - **Unified Specification Standard**: YAML frontmatter, BDD requirements (GIVEN-WHEN-THEN), tier-aware specs
 - **DESIGN_DECISIONS.md Template**: Lightweight ADR alternative for sprint-scoped decisions
 - **SPEC_DELTA.md Template**: Version change tracking with breaking change documentation
@@ -223,12 +223,12 @@ See [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standa
 The **Vibecoding Index** (0-100) measures risk that code lacks proper oversight:
 
 ```
-vibecoding_index = (
-    architectural_smell × 0.25 +    # God class, feature envy, shotgun surgery
-    abstraction_complexity × 0.15 + # Deep inheritance, interface proliferation
-    ai_dependency_ratio × 0.20 +    # AI lines / total lines
-    change_surface_area × 0.20 +    # Files, modules, API contracts touched
-    drift_velocity × 0.20           # New patterns, naming violations
+vibecoding_index = 100 - (
+    intent_clarity × 0.30 +         # Clear purpose for every code change
+    code_ownership × 0.25 +         # Developer understands generated code
+    context_completeness × 0.20 +   # Sufficient context for AI generation
+    ai_attestation_rate × 0.15 +    # AI outputs reviewed and attested
+    (100 - rejection_rate) × 0.10   # Historical acceptance quality
 )
 ```
 
@@ -236,10 +236,10 @@ vibecoding_index = (
 
 | Score | Category | Routing | Action |
 |-------|----------|---------|--------|
-| 0-30 | 🟢 Green | Auto-Approve | No CEO involvement |
-| 31-60 | 🟡 Yellow | Tech Lead | Spot-check recommended |
-| 61-80 | 🟠 Orange | CEO Optional | CEO should review |
-| 81-100 | 🔴 Red | CEO Mandatory | CEO must approve |
+| <20 | 🟢 Green | Auto-Approve | No CEO involvement |
+| 20-40 | 🟡 Yellow | Tech Lead | Spot-check recommended |
+| 40-60 | 🟠 Orange | CEO Optional | CEO should review |
+| >=60 | 🔴 Red | CEO Mandatory | CEO must approve |
 
 ### Auto-Generation Layer
 
@@ -508,6 +508,7 @@ SDLC-Enterprise-Framework/
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
+| **6.0.5** | **Feb 14, 2026** | **MINOR: RFC-001 + SPEC-0001 Anti-Vibecoding + Framework Templates** - RFC-001 Legacy Document Organization Standard (eliminates 99-Legacy/ from stages 00-09, centralizes to 10-Archive/{NN}-Legacy/). SPEC-0001 Anti-Vibecoding alignment (5 weighted signals: Intent Clarity 30%, Code Ownership 25%, Context Completeness 20%, AI Attestation Rate 15%, Historical Rejection Rate 10%). 4 new templates: Go-Live Readiness (Checklist + Assessment), Maturity Assessment Framework, Risk Register Analyzer. sdlcctl v1.7.0 with fuzzy P0 detection for legacy stage names. |
 | **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Integration + Sprint 3-Phase Model + Spec Converter** - TDD Workflow Integration proven through Sprint 154 (113 tests, 100% pass rate, RED-GREEN-REFACTOR validated). 3-Phase Sprint Lifecycle Model (PRE-SPRINT, EXECUTION, POST-SPRINT) with enhanced design doc validation. Spec Converter Methodology adds SpecIR intermediate representation, BDD ↔ OpenSpec bidirectional conversion, User Story → BDD chain, Jira/Linear import patterns. Tier-Aware TDD Requirements (LITE 70%, STANDARD 85%, PROFESSIONAL/ENTERPRISE 95%+). Sprint 154 Track 2 completion. |
 | **6.0.3** | **Feb 2, 2026** | **MINOR: Boris Cherny Consolidation (FINALIZED)** - Consolidated 5 RFC documents (603-607) into Framework structure following 3-Circle Architecture. **Created**: MCP Integration Guide (6x faster bug triage), Git Workflow Patterns (2.5x productivity via worktrees). **Enhanced**: Memory & Context Management (Continuous Learning Protocol), Sub-agent Orchestration (Research Delegation 3.3x faster), Visual Documentation Standards (4x faster onboarding). **Result**: -3 files (better organization), 0 methodology content loss, 100% Framework-First compliance. **Metrics preserved**: 6x, 2.5x, 3.3x, 4x productivity improvements. Tool-agnostic patterns work with Claude Code, Cursor, Copilot, GPT-4o, Gemini, Ollama. Sprint 143 Track 1 completion. |
 | **6.0.2** | **Feb 2, 2026** | **MINOR: E2E API Testing Enhancement** - RFC-SDLC-602 introduces standardized 6-phase E2E testing workflow, Stage Cross-Reference Matrix (Stage 03 ↔ 05 bidirectional traceability), OWASP API Security Top 10 checklist (2023), Testing Artifacts Structure (SDLC-compliant folders), sdlcctl E2E commands (validate, cross-reference, generate-report), OPA policy integration, 4 new Evidence types (e2e_test_report, security_test_report, api_coverage_report, cross_reference_validation). Addresses API testing gaps and SSOT validation. Sprint 139-141 completion. |

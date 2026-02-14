@@ -1,11 +1,11 @@
 # SDLC 6.0.5 Implementation Guides
 
-**Version**: 6.0.5 | **Status**: PRODUCTION READY | **Date**: February 8, 2026
+**Version**: 6.0.5 | **Status**: PRODUCTION READY | **Date**: February 14, 2026
 
-Practical how-to guides for implementing SDLC 6.0.5 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation**.
+Practical how-to guides for implementing SDLC 6.0.5 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation** + **RFC-001 Legacy Organization**.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.0.4**: TDD Workflow Integration + 3-Phase Sprint Lifecycle Enhanced + Tier-Aware TDD Coverage
+**NEW in 6.0.5**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment + 4 New Framework Templates + sdlcctl v1.7.0 Fuzzy P0 Detection
 
 ---
 
@@ -35,7 +35,20 @@ Adopt SDLC 6.0.5 incrementally into running projects.
 
 ---
 
-## What's New in 6.0.4 ⭐ LATEST
+## What's New in 6.0.5 ⭐ LATEST
+
+**RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding + Framework Templates + sdlcctl v1.7.0**
+
+| Feature | Description |
+|---------|-------------|
+| **RFC-001** | Legacy Document Organization Standard - eliminates 99-Legacy/ from stages 00-09, centralizes to 10-Archive/{NN}-Legacy/ |
+| **SPEC-0001 Alignment** | Anti-Vibecoding signals aligned: Intent Clarity 30%, Code Ownership 25%, Context Completeness 20%, AI Attestation 15%, Rejection Rate 10% |
+| **4 New Templates** | Go-Live Readiness (Checklist + Assessment), Maturity Assessment Framework, Risk Register Analyzer |
+| **sdlcctl v1.7.0** | Fuzzy P0 detection for legacy stage names (3-strategy resolution: exact → alternative → fuzzy) |
+
+---
+
+## What's New in 6.0.4
 
 **TDD Workflow Integration + 3-Phase Sprint Lifecycle Enhanced**
 
@@ -134,13 +147,16 @@ mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
 # 99-legacy folders created as needed within each stage
 ```
 
-### Legacy/Archive Structure (SDLC 6.0.5)
+### Legacy/Archive Structure (SDLC 6.0.5 - RFC-001)
 
 ```yaml
-Rules:
-  - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
-  - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
-  - Content in legacy/archive folders is never validated or upgraded
+Rules (RFC-001 - Effective 6.0.5):
+  - 10-archive: Centralized archive at docs root with stage-aligned subfolders
+    - Format: 10-Archive/{NN}-Legacy/ (e.g., 10-Archive/02-Legacy/)
+  - 99-legacy: ELIMINATED from active stages (00-09) per RFC-001
+    - Only permitted in non-stage folders (backend/, frontend/, tools/)
+  - Migration deadline: March 15, 2026
+  - Content in archive folders is never validated or upgraded
 ```
 
 ### SDLC Orchestrator CLI Integration
@@ -211,6 +227,6 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 ---
 
-**Last Updated**: February 8, 2026
+**Last Updated**: February 14, 2026
 **Authority**: CTO + CPO Office
-**Framework Version**: 6.0.4
+**Framework Version**: 6.0.5

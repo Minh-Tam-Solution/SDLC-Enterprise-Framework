@@ -1,11 +1,11 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
 **Version**: 6.0.5
-**Date**: February 8, 2026
+**Date**: February 14, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration)
+**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD + RFC-001)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -462,12 +462,19 @@ SDLC 5.0.0 (December 2025):
   → AI-optimized folder structure (15 P0 Artifacts)
   → CTO+CPO Joint Approval (9.5/10 score)
 
-SDLC 6.0.5 (February 2026): ⭐ CURRENT
+SDLC 6.0.4 (February 8, 2026):
   → TDD Workflow Integration (RED-GREEN-REFACTOR cycle)
   → 3-Phase Sprint Lifecycle Enhanced (PRE-SPRINT → EXECUTION → POST-SPRINT)
   → Spec Converter Methodology (SpecIR bidirectional conversion)
   → Tier-Aware TDD Coverage (LITE 70%, STANDARD 85%, PRO/ENT 95%)
   → Sprint 154 Validation: 113 tests, 100% pass rate
+
+SDLC 6.0.5 (February 14, 2026): ⭐ CURRENT
+  → RFC-001: Legacy Document Organization Standard (99-Legacy eliminated from stages)
+  → SPEC-0001: Anti-Vibecoding alignment (5 weighted signals)
+  → 4 New Framework Templates (Go-Live, Maturity Assessment, Risk Register)
+  → sdlcctl v1.7.0: Fuzzy P0 detection for legacy stage names
+  → Cross-document SPEC-0001 consistency enforcement
 ```
 
 ---
@@ -494,10 +501,10 @@ SDLC 6.0.5 (February 2026): ⭐ CURRENT
 
 ---
 
-**Last Updated**: February 8, 2026
+**Last Updated**: February 14, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework Version**: 6.0.4
+**Framework Version**: 6.0.5
 
 ---
 
