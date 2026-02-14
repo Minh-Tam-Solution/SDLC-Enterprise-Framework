@@ -20,7 +20,11 @@ SDLC 6.0.5 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Section 8**: Unified Specification Standard (+ Spec Converter)
 - **Section 9**: RFC-001 Legacy Document Organization Standard
 
-**NEW in 6.0.5 (Minor Release - February 13, 2026)**:
+**NEW in 6.0.5 (Minor Release - February 14, 2026)**:
+- **4 New AI Templates**: Go-Live Readiness (Checklist + Assessment), Maturity Assessment Framework, Risk Register Analyzer
+  - Based on Bflow Framework Assessment findings (Feb 2026)
+  - 4-tier support (LITE → ENTERPRISE), weighted scoring models, BFlow-proven patterns
+  - Templates: `05-Templates-Tools/02-AI-Tools/deployment_go-live-*.md`, `governance_maturity-*.md`, `governance_risk-*.md`
 - **RFC-001: Legacy Document Organization Standard**: Eliminates 99-Legacy/ from active stages (00-09)
   - Centralizes archived content into `10-Archive/{NN}-Legacy/` with stage alignment
   - Production-validated on BFlow Platform: 57% size reduction (211MB→91MB), 34% file count reduction

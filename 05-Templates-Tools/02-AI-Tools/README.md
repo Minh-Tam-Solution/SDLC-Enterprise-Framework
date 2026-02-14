@@ -16,6 +16,23 @@
 
 ## 🆕 What's New in SDLC 6.0.5 (February 2026)
 
+### Go-Live Readiness + Maturity Assessment + Risk Register (Feb 14, 2026)
+
+**SDLC 6.0.5** adds **4 new templates** based on Bflow Framework Assessment findings:
+
+| Template | Purpose | File |
+|----------|---------|------|
+| **Go-Live Readiness Checklist** | Tactical 100-item checklist by tier | `deployment_go-live-readiness-checklist.md` |
+| **Go-Live Readiness Assessment** | Strategic scoring + Go/No-Go framework | `deployment_go-live-readiness-assessment.md` |
+| **Maturity Assessment Framework** | Per-stage maturity scoring (0-100%) | `governance_maturity-assessment-framework.md` |
+| **Risk Register Analyzer** | Risk identification + L×I scoring | `governance_risk-register-analyzer.md` |
+
+**Key Features**:
+- **4-Tier Support**: LITE/STANDARD/PROFESSIONAL/ENTERPRISE requirements per template
+- **Weighted Scoring**: Category weights vary by tier for accurate assessment
+- **Go/No-Go Framework**: Decision rules, approval matrix, 8-week countdown timeline
+- **BFlow-Proven**: Based on real assessment data from Bflow Platform v3.2
+
 ### E2E API Testing Enhancement (RFC-SDLC-602)
 
 **SDLC 6.0.5** adds **standardized E2E API testing workflows** with OWASP security integration:
@@ -185,6 +202,8 @@ AI tools scale with your team size:
 │
 ├── deployment/                  # Stage 06 (DEPLOY)
 │   ├── deployment-checklist-generator.md # Pre/post deploy checks
+│   ├── go-live-readiness-checklist.md    # Tactical 100-item go-live checklist ⭐ NEW
+│   ├── go-live-readiness-assessment.md   # Strategic Go/No-Go scoring ⭐ NEW
 │   ├── rollback-plan-creator.md # Rollback procedures
 │   └── release-notes-writer.md  # Release documentation
 │
@@ -203,7 +222,9 @@ AI tools scale with your team size:
 ├── governance/                  # Stage 09 (GOVERN)
 │   ├── README.md                # Governance tools overview
 │   ├── compliance-checker.md    # SDLC, security, regulatory
-│   └── audit-report-generator.md # Compliance audit reports
+│   ├── audit-report-generator.md # Compliance audit reports
+│   ├── maturity-assessment-framework.md  # Per-stage maturity scoring ⭐ NEW
+│   └── risk-register-analyzer.md         # Risk identification + tracking ⭐ NEW
 │
 └── platform-examples/           # Real implementations
     ├── bflow-ai-patterns.md     # BFlow Platform patterns
@@ -286,6 +307,7 @@ ROI: 50x productivity increase
 | **05** | **E2E API Testing** | **3 hours** | **30 min** | **83%** ⭐ NEW |
 | **05** | **OWASP Security Check** | **4 hours** | **45 min** | **81%** ⭐ NEW |
 | 05 | Deployment Checklist | 4 hours | 36 min | **85%** |
+| **06** | **Go-Live Readiness** | **12 hours** | **2.5 hours** | **80%** ⭐ NEW |
 | 06 | Monitoring Setup | 8 hours | 1.2 hours | **85%** |
 | 06 | Post-Mortem | 4 hours | 24 min | **90%** |
 | 07 | API Contracts | 6 hours | 54 min | **85%** |
@@ -293,6 +315,8 @@ ROI: 50x productivity increase
 | 08 | Meeting Summaries | 30 min | 2 min | **95%** |
 | 09 | Compliance Check | 8 hours | 24 min | **95%** |
 | 09 | Audit Reports | 2 days | 2 hours | **85%** |
+| **09** | **Maturity Assessment** | **16 hours** | **2.5 hours** | **85%** ⭐ NEW |
+| **09** | **Risk Register** | **8 hours** | **1.5 hours** | **80%** ⭐ NEW |
 
 **Total Annual Savings**: $199,000 - $206,000 per team
 
@@ -429,7 +453,7 @@ Include:
 ✅ Rollback procedure"
 ```
 
-**Tools**: `deployment/*.md`
+**Tools**: `deployment_*.md` (checklist, rollback, release notes, go-live readiness)
 **BFlow Result**: Zero downtime, 10+ successful deploys
 
 ---
@@ -510,7 +534,7 @@ Check:
 Output: Score + violations + auto-fix commands"
 ```
 
-**Tools**: `governance/*.md`
+**Tools**: `governance_*.md` (compliance, audit, maturity assessment, risk register)
 **BFlow Result**: Zero compliance surprises, <5 min detection
 
 ---
@@ -569,7 +593,7 @@ Output: Score + violations + auto-fix commands"
 ---
 
 **Folder Status**: ACTIVE - SDLC 6.0.5 Complete
-**Last Updated**: February 2, 2026
+**Last Updated**: February 14, 2026
 **Owner**: CPO Office
 
 ***"AI automation for every stage of the lifecycle."*** 🚀
