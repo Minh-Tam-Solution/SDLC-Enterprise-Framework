@@ -1,12 +1,12 @@
-# SDLC Framework 6.0.0 - Quality Gates Definitions
+# SDLC Framework 6.0.5 - Quality Gates Definitions
 # Machine-readable gate requirements for G0-G4
 # Source: SDLC-Enterprise-Framework/02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md
 
 metadata:
-  version: "6.0.0"
+  version: "6.0.5"
   effective_date: "2026-01-28"
   schema_version: "1.0"
-  last_updated: "2026-01-28"
+  last_updated: "2026-02-14"
   source_document: "02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md"
 
 gates:

@@ -1,9 +1,9 @@
 # SDLC Agentic Core Principles
 ## Software Engineering 3.0 - SASE Integration
 
-**Version:** 6.0.0
+**Version:** 6.0.5
 **Status:** ACTIVE - PRODUCTION READY
-**Date:** January 27, 2026 (Quality Assurance System + Stage Dependencies)
+**Date:** February 14, 2026 (Quality Assurance System + Stage Dependencies + RFC-001)
 **Author:** SE 3.0 Track 1 Team
 **Source:** arXiv:2509.06216v2 (SASE Framework)
 **Framework:** SDLC 6.0.5 (7-Pillar + 2-Section Architecture)
@@ -38,7 +38,7 @@
 
 ## Document Purpose
 
-This document defines the core principles for integrating Software Agentic Software Engineering (SASE) into the SDLC 5.0.0 methodology. It establishes the distinction between SE4H (Software Engineering for Humans) and SE4A (Software Engineering for Agents) across all 10 SDLC stages.
+This document defines the core principles for integrating Software Agentic Software Engineering (SASE) into the SDLC 6.0.5 methodology. It establishes the distinction between SE4H (Software Engineering for Humans) and SE4A (Software Engineering for Agents) across all 10 SDLC stages.
 
 **Target Audience:**
 - Engineering Managers (Agent Coaches)
@@ -47,7 +47,7 @@ This document defines the core principles for integrating Software Agentic Softw
 - PM/POs (Project context authors)
 
 **Prerequisite Knowledge:**
-- SDLC 5.0.0 Complete Lifecycle (10 stages)
+- SDLC 6.0.5 Complete Lifecycle (10 stages)
 - Basic AI/LLM concepts (prompts, context, tokens)
 - Git workflow (branching, PRs, code review)
 - AGENTS.md format (recommended: see `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md`)
