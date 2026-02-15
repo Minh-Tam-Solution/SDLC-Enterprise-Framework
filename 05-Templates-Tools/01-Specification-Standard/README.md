@@ -10,7 +10,7 @@
 
 ## Overview
 
-This directory contains the **Section 8: Unified Specification Standard** for SDLC Framework: 6.0.3. All specifications in the SDLC ecosystem MUST follow this format to ensure AI-parseability, consistency, and tier-awareness.
+This directory contains the **Section 8: Unified Specification Standard** for SDLC Framework 6.0.5. All specifications in the SDLC ecosystem MUST follow this format to ensure AI-parseability, consistency, and tier-awareness.
 
 **Key Features**:
 - YAML frontmatter for metadata extraction (MANDATORY)
@@ -20,7 +20,7 @@ This directory contains the **Section 8: Unified Specification Standard** for SD
 
 ---
 
-## What's New in 6.0.1
+## What's New in 6.0.5
 
 **SPEC-0021: Stage Consistency Validation** - Ensures 4-stage alignment (Planning → Design → Integrate → Build)
 
@@ -49,7 +49,7 @@ This directory contains the **Section 8: Unified Specification Standard** for SD
 │   └── CONTEXT_AUTHORITY_METHODOLOGY.md  # Dynamic AGENTS.md patterns
 │
 ├── Governance Specifications/
-│   └── SPEC-0021-Stage-Consistency-Validation.md  # ⭐ NEW in 6.0.1
+│   └── SPEC-0021-Stage-Consistency-Validation.md  # ⭐ NEW in 6.0.5
 │
 └── examples/                           # Tier-specific examples
     ├── Example-Spec-LITE.md            # Minimal spec (1-2 people)

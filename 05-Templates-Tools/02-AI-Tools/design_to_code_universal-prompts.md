@@ -1,7 +1,7 @@
 # 🎨 Universal Design-to-Code Prompts
 ## Works with Any Design Tool → Any Framework
 
-**Version**: 5.2.0 | **Date**: January 22, 2026 | **Pillar**: 0-1 (Design Thinking → Lifecycle)
+**Version**: 6.0.5 | **Date**: February 14, 2026 | **Pillar**: 0-1 (Design Thinking → Lifecycle)
 **Status**: PRODUCTION-READY
 **Scope**: Universal - Any design tool, any framework
 **ROI**: 95% time savings (2-4 hours → 5-10 minutes)

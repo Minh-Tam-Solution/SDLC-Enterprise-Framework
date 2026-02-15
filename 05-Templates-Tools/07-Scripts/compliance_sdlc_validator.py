@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-SDLC 6.0.0 Complete Validator
+SDLC 6.0.5 Complete Validator
 Validates complete 10-stage lifecycle + 7-pillar architecture + SASE Framework compliance
 
-Version: 6.0.0
-Date: January 2026
+Version: 6.0.5
+Date: February 2026
 Status: ACTIVE - PRODUCTION READY
 Foundation: Proven validation across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
 Enhancement: 7-Pillar Architecture (Pillar 2: Sprint Planning Governance) + SASE Framework (SE 3.0)
-New in 6.0.0: AI Governance Principles, Concentric Circles Model, best-practices-2026 in 04-AI-TOOLS-LANDSCAPE/
+New in 6.0.5: AI Governance Principles, Concentric Circles Model, best-practices-2026 in 04-AI-TOOLS-LANDSCAPE/
 
-DOCUMENTATION vs CODE SEPARATION (SDLC 6.0.0):
+DOCUMENTATION vs CODE SEPARATION (SDLC 6.0.5):
 - Stage mapping applies ONLY to /docs folders (stages 00-09)
 - Code folders (backend/, frontend/, tools/, tests/) are NOT stage-mapped
 - Code folders are validated for PRESENCE, not stage compliance
@@ -32,7 +32,7 @@ Project Structure Validation (NOT stage-mapped):
 - Code folders: backend/, frontend/, tools/, tests/
 - Required files by tier: README.md, CLAUDE.md, .env.example, etc.
 
-Legacy/Archive Structure (SDLC 6.0.0+):
+Legacy/Archive Structure (SDLC 6.0.5+):
 - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated or upgraded
@@ -46,7 +46,7 @@ Legacy/Archive Structure (SDLC 6.0.0+):
 - Pillar 5: SASE Integration
 - Pillar 6: Documentation Permanence
 
-SASE Framework (Simplified in 6.0.0):
+SASE Framework (Simplified in 6.0.5):
 - AGENTS.md: Dynamic context for AI collaboration (industry standard)
 - CRP (Consultation-Readiness Proof): Human-AI consultation evidence
 - MRP (Merge-Readiness Proof): Merge readiness documentation
@@ -92,9 +92,9 @@ from typing import Dict, List, Tuple
 import re
 
 class SDLC60Validator:
-    """SDLC 6.0.0 Complete 7-Pillar + SASE Framework + Team Collaboration Validator
+    """SDLC 6.0.5 Complete 7-Pillar + SASE Framework + Team Collaboration Validator
 
-    7-Pillar Architecture (SDLC 6.0.0):
+    7-Pillar Architecture (SDLC 6.0.5):
     - Pillar 0: Design Thinking Foundation
     - Pillar 1: 10-Stage Lifecycle
     - Pillar 2: Sprint Planning Governance (NEW in 5.2.0)
@@ -157,8 +157,8 @@ class SDLC60Validator:
                 yield path
 
     def validate_all_pillars(self) -> Dict:
-        """Validate all 6 pillars of SDLC 6.0.0"""
-        print("🔍 SDLC 6.0.0 Complete Validation Starting...")
+        """Validate all 6 pillars of SDLC 6.0.5"""
+        print("🔍 SDLC 6.0.5 Complete Validation Starting...")
         print(f"📁 Project: {self.project_path}")
         print("=" * 80)
 
@@ -720,10 +720,10 @@ class SDLC60Validator:
 
     def check_sase_artifacts(self) -> int:
         """
-        Check for SASE Artifacts (SDLC 6.0.0 - Simplified)
+        Check for SASE Artifacts (SDLC 6.0.5 - Simplified)
         Returns score 0-30 based on presence of SASE artifacts
 
-        SASE 4 Artifacts (SDLC 6.0.0):
+        SASE 4 Artifacts (SDLC 6.0.5):
         - AGENTS.md: Dynamic context for AI collaboration (industry standard)
         - CRP (Consultation-Readiness Proof): Human-AI consultation evidence
         - MRP (Merge-Readiness Proof): Merge readiness documentation
@@ -734,9 +734,9 @@ class SDLC60Validator:
         """
         score = 0
 
-        # SASE Artifact patterns to look for (6.0.0 simplified)
+        # SASE Artifact patterns to look for (6.0.5 simplified)
         sase_patterns = [
-            # Primary 6.0.0 artifacts
+            # Primary 6.0.5 artifacts
             "AGENTS.md", "AGENTS",
             "CRP", "Consultation-Readiness",
             "MRP", "Merge-Readiness",
@@ -794,7 +794,7 @@ class SDLC60Validator:
                 found_patterns.append(pattern)
                 score += 5
 
-        # Check for specific SDLC 6.0.0 documents
+        # Check for specific SDLC 6.0.5 documents
         specific_docs = [
             "SDLC-Team-Communication-Protocol.md",
             "SDLC-Team-Collaboration-Protocol.md",
@@ -862,7 +862,7 @@ class SDLC60Validator:
         return False
 
     def calculate_overall_compliance(self):
-        """Calculate overall SDLC 6.0.0 compliance (7 pillars)"""
+        """Calculate overall SDLC 6.0.5 compliance (7 pillars)"""
         passed_count = sum(1 for p in self.results.values() if p["passed"])
         total_score = sum(p["score"] for p in self.results.values()) / 7  # 7 pillars
 
@@ -872,7 +872,7 @@ class SDLC60Validator:
     def print_results(self):
         """Print detailed validation results"""
         print("\n" + "=" * 80)
-        print("📊 SDLC 6.0.0 VALIDATION RESULTS")
+        print("📊 SDLC 6.0.5 VALIDATION RESULTS")
         print("=" * 80)
 
         for pillar_key, pillar_data in self.results.items():
@@ -885,7 +885,7 @@ class SDLC60Validator:
         print(f"Overall Score: {self.overall_score:.1f}%")
 
         if self.overall_compliant:
-            print("🎉 PROJECT IS SDLC 6.0.0 COMPLIANT!")
+            print("🎉 PROJECT IS SDLC 6.0.5 COMPLIANT!")
             print("✅ Ready for production deployment")
             print("✅ 7-Pillar Architecture validated")
             print("✅ Sprint Planning Governance validated (Pillar 2)")

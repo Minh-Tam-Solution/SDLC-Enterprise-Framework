@@ -832,7 +832,7 @@ Structured logs SHALL include:
 ### Phase 5: General Availability (Week 5)
 - Enable for all tiers (LITE: manual, STANDARD: CLI, PRO/ENT: full)
 - Announce in SDLC Framework release notes
-- Update documentation in Framework 6.0.2
+- Update documentation in Framework 6.0.5
 
 ---
 
@@ -864,7 +864,7 @@ Structured logs SHALL include:
 
 ### Related Specifications
 - **[SPEC-0001](./SPEC-0001-Anti-Vibecoding.md)**: Anti-Vibecoding (Vibecoding Index, Progressive Routing)
-- **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.0.2 format)
+- **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.0.5 format)
 - **[SPEC-0003](./SPEC-0003-AI-Context-Engine-Architecture.md)**: AI Context Engine (Stage-aware prompts)
 - **[SPEC-0017](./SPEC-0017-Feedback-Learning-Service.md)**: Feedback Learning Service (PR learning → hints)
 
@@ -887,7 +887,7 @@ Structured logs SHALL include:
 | **Author** | Backend Lead |
 | **Reviewer** | CTO |
 | **Last Updated** | 2026-01-29 |
-| **Framework Version** | 6.0.0 |
+| **Framework Version** | 6.0.5 |
 
 ---
 

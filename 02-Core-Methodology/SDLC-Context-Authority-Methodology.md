@@ -1,5 +1,5 @@
 # Context Authority Methodology
-## Framework 6.0.2 Dynamic AGENTS.md Patterns - Section 8
+## Framework 6.0.5 Dynamic AGENTS.md Patterns - Section 8
 
 **Version**: 6.0.5
 **Status**: ACTIVE - PRODUCTION READY

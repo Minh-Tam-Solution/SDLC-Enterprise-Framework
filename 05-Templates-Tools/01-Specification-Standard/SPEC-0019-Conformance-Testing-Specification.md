@@ -725,7 +725,7 @@ Test 8: GitHub Check integration
 | **Author** | Backend Lead |
 | **Reviewer** | CTO |
 | **Last Updated** | 2026-01-29 |
-| **Framework Version** | 6.0.0 |
+| **Framework Version** | 6.0.5 |
 
 ---
 

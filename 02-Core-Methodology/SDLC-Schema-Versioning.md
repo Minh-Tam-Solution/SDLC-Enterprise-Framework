@@ -39,7 +39,7 @@ MAJOR.MINOR.PATCH
 
 ### Current Version
 
-- **Framework Version**: 6.0.2 (Production)
+- **Framework Version**: 6.0.5 (Production)
 - **Release**: February 2, 2026
 - **Status**: ACTIVE
 

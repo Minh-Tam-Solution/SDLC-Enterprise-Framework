@@ -78,7 +78,7 @@ AI reviews should cover:
 - Test coverage >80%
 - Test quality
 - Edge cases covered
-- No mocks (SDLC 5.0)
+- No mocks (SDLC 6.0.5)
 
 ### Documentation (10 points)
 - Code comments

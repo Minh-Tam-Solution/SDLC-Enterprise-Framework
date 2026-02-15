@@ -819,4 +819,4 @@ Dynamic context is delivered via PR comments (not in this file).
 **SDLC 6.0.5 Framework | Sprint 80 | Stage 02 (DESIGN)**
 
 *Specification ID: SPEC-0007 | Version 1.0.0*
-*Framework Version: 6.0.2 (In Development)*
+*Framework Version: 6.0.5*

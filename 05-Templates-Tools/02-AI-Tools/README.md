@@ -253,9 +253,9 @@ ROI: 10x productivity increase
 ```yaml
 Setup:
   Stage 00-01: design-thinking/ (problem validation)
-  Stage 03: code-review/tier-2-ai-powered.md
-  Stage 04: testing/test-case-generator.md
-  Stage 05: deployment/deployment-checklist-generator.md
+  Stage 04: code-review/tier-2-ai-powered.md
+  Stage 05: testing/test-case-generator.md
+  Stage 06: deployment/deployment-checklist-generator.md
   Stage 08: collaboration/meeting-summarizer.md
 
 Time Investment: 1 day
@@ -268,9 +268,9 @@ ROI: 20x productivity increase
 ```yaml
 Setup:
   All STANDARD tools PLUS:
-  Stage 04: testing/uat-script-creator.md, performance-test-analyzer.md
-  Stage 06: operations/ (all tools)
-  Stage 07: integration/ (all tools)
+  Stage 05: testing/uat-script-creator.md, performance-test-analyzer.md
+  Stage 07: operations/ (all tools)
+  Stage 03: integration/ (all tools)
   Stage 08: collaboration/ (all tools including RACI)
   Stage 09: governance/compliance-checker.md
 
@@ -300,17 +300,17 @@ ROI: 50x productivity increase
 |-------|------|-------------|---------|---------|
 | 00-01 | Design Thinking | 26 hours | 1 hour | **96%** |
 | 02 | Design-to-Code | 2-4 hours | 5-10 min | **95%** |
-| 03 | Code Review | 30 min/PR | 10 min/PR | **67%** |
-| 04 | Test Cases | 8 hours | 45 min | **90%** |
-| 04 | UAT Scripts | 4 hours | 36 min | **85%** |
-| 04 | Performance Analysis | 6 hours | 1.2 hours | **80%** |
+| 04 | Code Review | 30 min/PR | 10 min/PR | **67%** |
+| 05 | Test Cases | 8 hours | 45 min | **90%** |
+| 05 | UAT Scripts | 4 hours | 36 min | **85%** |
+| 05 | Performance Analysis | 6 hours | 1.2 hours | **80%** |
 | **05** | **E2E API Testing** | **3 hours** | **30 min** | **83%** ⭐ NEW |
 | **05** | **OWASP Security Check** | **4 hours** | **45 min** | **81%** ⭐ NEW |
-| 05 | Deployment Checklist | 4 hours | 36 min | **85%** |
+| 06 | Deployment Checklist | 4 hours | 36 min | **85%** |
 | **06** | **Go-Live Readiness** | **12 hours** | **2.5 hours** | **80%** ⭐ NEW |
-| 06 | Monitoring Setup | 8 hours | 1.2 hours | **85%** |
-| 06 | Post-Mortem | 4 hours | 24 min | **90%** |
-| 07 | API Contracts | 6 hours | 54 min | **85%** |
+| 07 | Monitoring Setup | 8 hours | 1.2 hours | **85%** |
+| 07 | Post-Mortem | 4 hours | 24 min | **90%** |
+| 03 | API Contracts | 6 hours | 54 min | **85%** |
 | 08 | Documentation | 4 hours | 24 min | **90%** |
 | 08 | Meeting Summaries | 30 min | 2 min | **95%** |
 | 09 | Compliance Check | 8 hours | 24 min | **95%** |
@@ -380,7 +380,7 @@ AI Prompt Pattern:
 [paste code]
 
 Check:
-✅ 6 Pillars compliance
+✅ 7 Pillars compliance
 ✅ Security (OWASP Top 10)
 ✅ Performance (<50ms target)
 ✅ Test coverage (80%+)
@@ -435,7 +435,7 @@ Target: 80%+ pass rate, <30 min setup"
 
 ---
 
-### Stage 05: Release (DEPLOY)
+### Stage 06: Release (DEPLOY)
 
 **Purpose**: Zero-downtime deployments
 
@@ -458,7 +458,7 @@ Include:
 
 ---
 
-### Stage 06: Production (OPERATE)
+### Stage 07: Production (OPERATE)
 
 **Purpose**: Reliable operations with fast recovery
 
@@ -569,11 +569,11 @@ Output: Score + violations + auto-fix commands"
 ### Stage-Specific Guides
 - **Stage 00-01**: [design-thinking/](./design-thinking/)
 - **Stage 02**: [design-to-code/](./design-to-code/)
-- **Stage 03**: [code-review/](./code-review/)
-- **Stage 04**: [testing/](./testing/)
-- **Stage 05**: [deployment/](./deployment/)
-- **Stage 06**: [operations/](./operations/)
-- **Stage 07**: [integration/](./integration/)
+- **Stage 03**: [integration/](./integration/)
+- **Stage 04**: [code-review/](./code-review/)
+- **Stage 05**: [testing/](./testing/)
+- **Stage 06**: [deployment/](./deployment/)
+- **Stage 07**: [operations/](./operations/)
 - **Stage 08**: [collaboration/](./collaboration/)
 - **Stage 09**: [governance/](./governance/)
 

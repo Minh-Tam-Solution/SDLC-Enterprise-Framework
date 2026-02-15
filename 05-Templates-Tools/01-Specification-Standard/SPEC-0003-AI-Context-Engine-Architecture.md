@@ -528,7 +528,7 @@ class ContextEngine:
 **Date**: 2026-01-28
 
 **Changes**:
-- Migrated from legacy ADR format to Framework 6.0.2 specification standard
+- Migrated from legacy ADR format to Framework 6.0.5 specification standard
 - Added YAML frontmatter with tier classification
 - Converted requirements to BDD format (GIVEN-WHEN-THEN)
 - Added structured acceptance criteria table
@@ -646,7 +646,7 @@ class ContextEngine:
 | **CTO** | [CTO Name] | ✅ APPROVED | 2025-11-13 | Excellent cost/privacy balance with Ollama |
 | **CPO** | [CPO Name] | ✅ APPROVED | 2025-11-13 | AI = 20% of competitive moat, critical for UX |
 | **Security Lead** | [Security Name] | ✅ APPROVED | 2025-11-13 | On-premise option addresses data concerns |
-| **Framework 6.0 Migration** | AI Partner | ✅ MIGRATED | 2026-01-28 | Converted to Framework 6.0.2 standard |
+| **Framework 6.0 Migration** | AI Partner | ✅ MIGRATED | 2026-01-28 | Converted to Framework 6.0.5 standard |
 
 ---
 
@@ -693,5 +693,5 @@ class ContextEngine:
 
 ---
 
-*Framework 6.0.2 Migration - Sprint 117*
+*Framework 6.0.5 Migration - Sprint 117*
 *"Leverage internal AI infrastructure (Ollama) while maintaining cloud flexibility"* 🤖

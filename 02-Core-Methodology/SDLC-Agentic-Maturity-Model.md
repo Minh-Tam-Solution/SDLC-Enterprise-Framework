@@ -5,7 +5,7 @@
 
 **Purpose:** Define maturity levels for adopting agentic practices in software development
 **Framework:** SDLC 6.0.5 (7-Pillar + 2-Section Architecture)
-**Version:** 6.0.2
+**Version:** 6.0.5
 **Date:** February 2, 2026
 **Status:** ACTIVE - PRODUCTION READY
 

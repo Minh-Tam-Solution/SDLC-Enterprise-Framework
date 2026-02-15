@@ -695,7 +695,7 @@ THEN the system MUST:
 
 ### Related Specifications
 - **[SPEC-0001](./SPEC-0001-Anti-Vibecoding.md)**: Anti-Vibecoding quality assurance (4-tier classification)
-- **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.0.2 format)
+- **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.0.5 format)
 - **[SPEC-0004](./SPEC-0004-Policy-Guards-Design.md)**: OPA policy guards (enforcement engine)
 - **[SPEC-0009](./SPEC-0009-Codegen-Service-Specification.md)**: Codegen Service Specification
 - **[SPEC-0010](./SPEC-0010-IR-Processor-Specification.md)**: IR Processor Specification
@@ -749,7 +749,7 @@ THEN the system MUST:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2026-01-30 | Backend Lead + CTO | Initial Framework 6.0.2 migration from ADR-036 |
+| 1.0.0 | 2026-01-30 | Backend Lead + CTO | Initial Framework 6.0.5 migration from ADR-036 |
 
 ---
 
@@ -764,7 +764,7 @@ THEN the system MUST:
 ---
 
 **Document Status**: ✅ APPROVED - Ready for Implementation
-**Framework Compliance**: ✅ Framework 6.0.2 (YAML frontmatter, BDD requirements, tier-specific tables)
+**Framework Compliance**: ✅ Framework 6.0.5 (YAML frontmatter, BDD requirements, tier-specific tables)
 **Spec Migration**: ✅ Complete (ADR-036 → SPEC-0008)
 
 ---

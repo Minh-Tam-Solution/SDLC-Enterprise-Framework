@@ -1240,7 +1240,7 @@ THEN the system MUST:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2026-01-30 | Backend Lead + Architect | Initial Framework 6.0.2 migration from Codegen Service Specification |
+| 1.0.0 | 2026-01-30 | Backend Lead + Architect | Initial Framework 6.0.5 migration from Codegen Service Specification |
 
 ---
 
@@ -1255,7 +1255,7 @@ THEN the system MUST:
 ---
 
 **Document Status**: ✅ APPROVED - Ready for Implementation (Sprint 45 - Jan 6-17, 2026)
-**Framework Compliance**: ✅ Framework 6.0.2 (YAML frontmatter, BDD requirements, tier-specific tables)
+**Framework Compliance**: ✅ Framework 6.0.5 (YAML frontmatter, BDD requirements, tier-specific tables)
 **Spec Migration**: ✅ Complete (Codegen Service Specification → SPEC-0009)
 
 ---

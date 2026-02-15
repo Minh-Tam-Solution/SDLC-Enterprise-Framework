@@ -4,17 +4,17 @@ logger = logging.getLogger(__name__)
 
 """
 =========================================================================
-SDLC 6.0.0 Universal Framework Scanner
+SDLC 6.0.5 Universal Framework Scanner
 Lightweight wrapper for backward compatibility with enhanced validation
 
-Version: 6.0.0
-Date: January 2026
+Version: 6.0.5
+Date: February 2026
 Status: ACTIVE - PRODUCTION READY
 Authority: CPO Office + CTO Implementation
-Framework: SDLC 6.0.0 Complete Lifecycle (10 Stages: 00-09) + 7-Pillar Architecture + SASE/SE 3.0
+Framework: SDLC 6.0.5 Complete Lifecycle (10 Stages: 00-09) + 7-Pillar Architecture + SASE/SE 3.0
 Foundation: Battle-tested across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
 
-10 STAGES (SDLC 6.0.0):
+10 STAGES (SDLC 6.0.5):
 - Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
 - Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
 - Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
@@ -31,7 +31,7 @@ Legacy/Archive Structure:
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated or upgraded
 
-ENHANCED FEATURES (6.0.0):
+ENHANCED FEATURES (6.0.5):
 - SASE Framework validation (4 artifacts: AGENTS.md, CRP, MRP, VCR)
 - AI Collaboration workflow support (AGENTS.md industry standard)
 - Agentic Maturity Model (L0 → L3) detection
@@ -44,7 +44,7 @@ ENHANCED FEATURES (6.0.0):
 - Implementation authenticity verification
 - Backward compatibility with existing workflows
 
-SASE Framework (Simplified in 6.0.0):
+SASE Framework (Simplified in 6.0.5):
 - AGENTS.md: Dynamic context for AI collaboration (industry standard)
 - CRP (Consultation-Readiness Proof): Human-AI consultation evidence
 - MRP (Merge-Readiness Proof): Merge readiness documentation
@@ -58,8 +58,8 @@ while leveraging the SDLC 6.0 Validator for actual validation logic.
 For new implementations, use sdlc_validator.py directly.
 
 EVOLUTION HISTORY:
-- 6.0.0: AI Governance Principles, Concentric Circles Model
-- 6.0.0: SASE simplified (AGENTS.md + CRP + MRP + VCR), deprecated BRS/LPS/MTS
+- 6.0.5: AI Governance Principles, Concentric Circles Model
+- 6.0.5: SASE simplified (AGENTS.md + CRP + MRP + VCR), deprecated BRS/LPS/MTS
 - 5.2.0: Correct stage numbering + Legacy/Archive folder skip
 - 5.2.0: SASE Framework + SE 3.0 Integration
 - 5.2.0: Zero Mock Policy + Complete Lifecycle (10 Stages)
@@ -77,7 +77,7 @@ from datetime import datetime
 
 def run_universal_validator(project_path: str, project_scale: Optional[str] = None) -> Dict[str, Any]:
     """
-    Run SDLC 6.0.0 Universal Validator and return results in legacy format
+    Run SDLC 6.0.5 Universal Validator and return results in legacy format
 
     Args:
         project_path: Path to project directory
@@ -139,7 +139,7 @@ def run_universal_validator(project_path: str, project_scale: Optional[str] = No
             "scan_result": {
                 "project_path": project_path,
                 "scan_timestamp": datetime.now().isoformat(),
-                "sdlc_version": "6.0.0",
+                "sdlc_version": "6.0.5",
                 "framework_scale": project_scale_detected,
                 "facade_violations_count": facade_violations,
                 "authenticity_score": authenticity_score,
@@ -153,7 +153,7 @@ def run_universal_validator(project_path: str, project_scale: Optional[str] = No
         
     except Exception as e:
         return {
-            "error": f"Failed to run SDLC 6.0.0 Universal Validator: {str(e)}",
+            "error": f"Failed to run SDLC 6.0.5 Universal Validator: {str(e)}",
             "scan_result": None
         }
 
@@ -162,7 +162,7 @@ def main():
 
     # Parse command line arguments
     if len(sys.argv) < 2:
-        logger.info("SDLC 6.0.0 Universal Scanner - SASE Framework + Code Review Excellence")
+        logger.info("SDLC 6.0.5 Universal Scanner - SASE Framework + Code Review Excellence")
         logger.info("======================================================================")
         logger.info()
         logger.info("Usage: python sdlc_scanner.py <project_path> [project_scale]")
@@ -198,7 +198,7 @@ def main():
         logger.info(f"Error: Project path '{project_path}' does not exist")
         sys.exit(1)
     
-    logger.info("SDLC 6.0.0 Universal Scanner")
+    logger.info("SDLC 6.0.5 Universal Scanner")
     logger.info("============================")
     logger.info(f"Scanning project: {project_path}")
     if project_scale:

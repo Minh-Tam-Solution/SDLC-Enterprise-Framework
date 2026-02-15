@@ -656,7 +656,7 @@ def validate_document_name(filename):
 - [ ] Descriptive and permanent
 
 **For Document Headers:**
-- [ ] Version is 6.0.2 (or current)
+- [ ] Version is 6.0.5 (or current)
 - [ ] Date is current
 - [ ] Status clearly stated
 - [ ] Authority/ownership documented

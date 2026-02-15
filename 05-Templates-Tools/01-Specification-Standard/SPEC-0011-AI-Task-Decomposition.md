@@ -30,7 +30,7 @@ related_specs:
   - SPEC-0006
   - SPEC-0009
 stage: 02-DESIGN
-framework_version: 6.0.0
+framework_version: 6.0.5
 ```
 
 ---

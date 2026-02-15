@@ -694,5 +694,5 @@ def test_ac_001_1_app_blueprint_validation():
 
 ---
 
-*SDLC Framework 6.0.2 - Specification Standard Compliance*
+*SDLC Framework 6.0.5 - Specification Standard Compliance*
 *Sprint 46 (Jan 20-31, 2026) - EP-06 IR-Based Backend Scaffold Generation*

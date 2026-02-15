@@ -1004,5 +1004,5 @@ echo "PASS: No AGPL SDK imports"
 ---
 
 *SPEC-0006: Multi-Provider Codegen Architecture - Provider-agnostic IR-based code generation for Vietnam SME*
-*Framework 6.0.2 Specification Format - BDD Requirements + Tier Classification*
+*Framework 6.0.5 Specification Format - BDD Requirements + Tier Classification*
 *Sprint 117 Track 1 Day 3 - P1 Spec Migration*

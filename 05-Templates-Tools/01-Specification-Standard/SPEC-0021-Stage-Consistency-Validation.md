@@ -435,7 +435,7 @@ Artifacts to Hash:
 {
   "$schema": "./artifact-checksums-schema.json",
   "project_id": "sdlc-orchestrator",
-  "framework_version": "6.0.1",
+  "framework_version": "6.0.5",
   "recorded_at": "2026-02-01T10:00:00Z",
   "checksums": {
     "stage_01": {
@@ -1010,7 +1010,7 @@ GET /api/v1/stage-consistency/report/{project_id}
 Tasks:
   - [ ] Create SPEC-0021 (this document)
   - [ ] Update CONTENT-MAP.md
-  - [ ] Update Framework version to 6.0.1
+  - [ ] Update Framework version to 6.0.5
   - [ ] Create Stage Consistency Validation Guide
   - [ ] Get CTO + QA Team approval
 ```

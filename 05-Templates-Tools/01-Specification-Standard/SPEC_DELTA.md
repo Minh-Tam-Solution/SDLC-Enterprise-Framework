@@ -1,5 +1,5 @@
 # SPEC_DELTA.md Template
-## Framework 6.0.2 Specification Change Tracking - Section 8
+## Framework 6.0.5 Specification Change Tracking - Section 8
 
 **Version**: 6.0.5
 **Status**: ACTIVE - PRODUCTION READY

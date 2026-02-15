@@ -1017,9 +1017,9 @@ This framework provides **three equally valid approaches** to code review excell
 
 ---
 
-**Document Version**: 6.0.0
-**Last Updated**: January 29, 2026
-**Next Review**: February 2026
+**Document Version**: 6.0.5
+**Last Updated**: February 15, 2026
+**Next Review**: March 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **Framework**: SDLC 6.0.5
 
