@@ -96,10 +96,10 @@ EOF
 
 **Webhook Handling**:
 ```python
-# backend/app/api/v1/endpoints/mcp_slack.py
+# Example: Slack MCP webhook handler (Python/FastAPI)
 
 from fastapi import APIRouter, Request, HTTPException
-from app.services.mcp.slack_adapter import SlackMCPAdapter
+from services.mcp.slack_adapter import SlackMCPAdapter
 import hmac
 import hashlib
 
@@ -541,8 +541,8 @@ Every MCP action creates an Evidence artifact:
 ### Framework Documents
 
 - [Context Management](../03-AI-Governance/05-Context-Management.md) - AGENTS.md and context files
-- [Stage 07 (Operate)](../02-Core-Methodology/SDLC-Stage-07-Operate.md) - Operations and incident response
-- [Evidence Vault Standards](../02-Core-Methodology/Evidence-Vault-Standards.md) - Audit trail requirements
+- [Stage Exit Criteria](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Stage completion criteria including Stage 07 (Operate)
+- [Quality Security Gates](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Audit trail and quality gate requirements
 
 ### External Resources
 

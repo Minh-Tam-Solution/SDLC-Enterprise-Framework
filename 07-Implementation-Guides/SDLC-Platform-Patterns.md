@@ -659,7 +659,7 @@ Key Patterns:
 
 ---
 
-## 🎯 SDLC 5.0.0 Integration
+## 🎯 SDLC 6.0.5 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -733,7 +733,7 @@ ENTERPRISE Tier (Scale):
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Deployment-Guide.md](SDLC-Deployment-Guide.md) - Deployment patterns
@@ -750,6 +750,7 @@ ENTERPRISE Tier (Scale):
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar + AI Governance Principles |
 | 5.2.0 | Jan 22, 2026 | Planning Mode + AI Best Practices alignment |
 | 5.1.3 | Jan 2025 | 7-Pillar Architecture, Sprint Planning Governance |
 | 5.1.2 | Dec 24, 2025 | SDLC 5.1.2 alignment |

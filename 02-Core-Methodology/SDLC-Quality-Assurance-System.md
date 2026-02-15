@@ -311,7 +311,7 @@ LEVEL 4: Manual Entry (< 2 min developer time)
 rejection:
   what: "Missing ownership annotation"
   why: "Every file must have an owner for accountability"
-  how: "sdlc add-ownership --file backend/app/services/new_service.py"
+  how: "sdlc add-ownership --file services/new_service.py"
   docs: "https://docs.sdlc.dev/ownership-requirements"
 ```
 
@@ -533,7 +533,7 @@ for signal in signals:
 
 - [ ] Create this document (SDLC-Quality-Assurance-System.md)
 - [ ] Update CONTENT-MAP.md with new files
-- [ ] Update CHANGELOG.md for Framework 5.3.0
+- [ ] Update CHANGELOG.md for Framework 6.0.5
 - [ ] Create signal calibration templates
 
 ### 10.2 Orchestrator Implementation
@@ -560,10 +560,9 @@ for signal in signals:
 - [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md) - Stage transition rules
 - [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md) - AI Governance Principles
 
-**Orchestrator Implementation:**
-- `/docs/governance-v1/` - Governance System v1.0 implementation docs
-- `/docs/phase-0/` - Phase 0 technical deliverables
-- `/backend/app/services/governance/` - Service implementations
+**Reference Implementation:**
+- See your platform's governance service layer for implementation details
+- Example: SDLC Orchestrator implements this in its governance service module
 
 **Policies:**
 - CEO-WORKFLOW-CONTRACT.md - CEO time commitments
@@ -586,4 +585,4 @@ for signal in signals:
 **CPO Review**: ✅ APPROVED
 **CEO Review**: ✅ APPROVED (CEO Time Optimization focus)
 
-**Framework Release**: SDLC 5.3.0 (January 27, 2026)
+**Framework Release**: SDLC 6.0.5 (January 27, 2026)

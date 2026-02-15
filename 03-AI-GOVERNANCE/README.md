@@ -30,6 +30,35 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 6 | **Tool Evaluation** | Criteria to evaluate ANY new AI tool | [06-Tool-Evaluation-Criteria.md](06-Tool-Evaluation-Criteria.md) |
 | 7 | **Anti-Patterns** | What NOT to do with AI assistants | [07-Anti-Patterns.md](07-Anti-Patterns.md) |
 
+### Practical Enforcement Documents
+
+| # | Document | Purpose |
+|---|----------|---------|
+| 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
+| 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
+
+---
+
+## Relationship to SDLC Orchestrator
+
+These principles are **methodology** (Framework layer). The **Orchestrator** automates their enforcement:
+
+```
+Framework (this section)          Orchestrator (automation)
+═══════════════════════           ═══════════════════════
+Principle 1: Collaboration   →   Gate Engine (human review gates)
+Principle 2: Accountability  →   Evidence Vault (audit trail)
+Principle 3: Planning Mode   →   Risk classifier + planning artifact check
+Principle 4: Verification    →   TDD evidence + test coverage delta
+Principle 5: Context Mgmt    →   Context Authority service (AGENTS.md)
+Principle 6: Tool Evaluation →   Tool evaluation scorecard API
+Principle 7: Anti-Patterns   →   OPA policies (anti-pattern detection)
+Decision Matrix (doc 08)     →   compute_gate_actions() function
+Metrics (doc 09)             →   /api/v1/governance/metrics/* endpoints
+```
+
+**Key invariant**: Teams can follow these principles manually WITHOUT the Orchestrator. The Orchestrator makes enforcement automatic and auditable.
+
 ---
 
 ## Concentric Circles Model
@@ -104,5 +133,5 @@ A tool feature is promoted to Core when it meets ALL criteria:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 14, 2026
+**Last Updated**: February 15, 2026
 **Framework**: SDLC 6.0.5

@@ -77,7 +77,7 @@
 
 | Date | Change |
 |------|--------|
-| Jan 2026 | Initial matrix for SDLC Framework 5.2.0 |
+| Jan 2026 | Initial matrix for SDLC Framework 6.0.5 |
 
 ---
 

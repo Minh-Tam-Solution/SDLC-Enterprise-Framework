@@ -2,15 +2,24 @@
 
 **Version**: 6.0.5
 **Status**: ACTIVE - PRODUCTION READY
-**Date**: February 14, 2026
+**Date**: February 15, 2026
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
 **Framework**: SDLC 6.0.5
 
 ---
 
+> **MORATORIUM (Sprint 173, Feb 2026)**: No new SPEC documents until Sprint 175.
+> CTO approval required to create new SPECs before moratorium lifts.
+
+> **CLEANUP (Sprint 173)**: 16 Orchestrator-specific SPECs archived to `10-Archive/03-Legacy/sprint-173-orchestrator-specs/`.
+> Those SPECs describe platform implementation (codegen, AI engine, database models), not Framework methodology.
+> Only 5 methodology-level SPECs remain here: SPEC-0001, 0002, 0004, 0008, 0012.
+
 ## Overview
 
-This directory contains the **Section 8: Unified Specification Standard** for SDLC Framework 6.0.5. All specifications in the SDLC ecosystem MUST follow this format to ensure AI-parseability, consistency, and tier-awareness.
+This directory contains the **Section 8: Unified Specification Standard** — the format definition that ALL specifications in the SDLC ecosystem MUST follow.
+
+**This section defines the SPEC format itself (tool-agnostic). Individual product SPECs belong in their respective platform repos.**
 
 **Key Features**:
 - YAML frontmatter for metadata extraction (MANDATORY)
@@ -20,19 +29,20 @@ This directory contains the **Section 8: Unified Specification Standard** for SD
 
 ---
 
-## What's New in 6.0.5
+## Methodology SPECs (Retained)
 
-**SPEC-0021: Stage Consistency Validation** - Ensures 4-stage alignment (Planning → Design → Integrate → Build)
+| SPEC | Title | Scope |
+|------|-------|-------|
+| SPEC-0001 | Anti-Vibecoding QA System | Quality methodology principle |
+| SPEC-0002 | Specification Standard | SPEC format definition |
+| SPEC-0003 | Policy Guards Design | Policy enforcement pattern |
+| SPEC-0004 | 4-Tier Policy Enforcement | Tier governance model |
+| SPEC-0005 | Validation Pipeline Interface | Validation contract |
 
-| Feature | Description |
-|---------|-------------|
-| **4-Stage Model** | Stage 01 ↔ 02 ↔ 03 ↔ 04 consistency validation |
-| **Pre/Post Checklists** | Verify alignment before and after implementation |
-| **Artifact Hashing** | SHA256 checksums detect post-approval modifications |
-| **CLI Commands** | `sdlcctl validate-consistency` automation |
-| **CI/CD Integration** | GitHub Actions + GitLab examples |
+## Archived (Orchestrator-Specific)
 
-**Reference**: [SPEC-0021-Stage-Consistency-Validation.md](SPEC-0021-Stage-Consistency-Validation.md)
+16 SPECs that describe SDLC Orchestrator platform implementation have been moved to
+`10-Archive/03-Legacy/sprint-173-orchestrator-specs/`. See [archive README](../../10-Archive/03-Legacy/sprint-173-orchestrator-specs/README.md) for details and migration path.
 
 ---
 
@@ -45,11 +55,10 @@ This directory contains the **Section 8: Unified Specification Standard** for SD
 ├── Core Templates/
 │   ├── SDLC-Specification-Standard.md  # Core spec template (YAML + BDD)
 │   ├── DESIGN_DECISIONS.md             # Lightweight ADR template
-│   ├── SPEC_DELTA.md                   # Version change tracking
-│   └── CONTEXT_AUTHORITY_METHODOLOGY.md  # Dynamic AGENTS.md patterns
+│   └── SPEC_DELTA.md                   # Version change tracking
 │
 ├── Governance Specifications/
-│   └── SPEC-0021-Stage-Consistency-Validation.md  # ⭐ NEW in 6.0.5
+│   └── (SPEC-0021 moved to Orchestrator docs/05-test/)
 │
 └── examples/                           # Tier-specific examples
     ├── Example-Spec-LITE.md            # Minimal spec (1-2 people)
@@ -139,7 +148,7 @@ sdlcctl spec validate --fix your-spec.md
 | [SDLC-Specification-Standard.md](SDLC-Specification-Standard.md) | Main spec template | P0 | ALL |
 | [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md) | Lightweight ADR | P1 | STD+ |
 | [SPEC_DELTA.md](SPEC_DELTA.md) | Version tracking | P1 | PRO+ |
-| [CONTEXT_AUTHORITY_METHODOLOGY.md](CONTEXT_AUTHORITY_METHODOLOGY.md) | Dynamic AGENTS.md | P1 | ALL |
+| [SDLC-Context-Authority-Methodology.md](../../02-Core-Methodology/SDLC-Context-Authority-Methodology.md) | Dynamic AGENTS.md | P1 | ALL |
 
 ---
 

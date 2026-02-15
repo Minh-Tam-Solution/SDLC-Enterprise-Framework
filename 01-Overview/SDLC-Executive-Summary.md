@@ -197,7 +197,7 @@ Validation: TDD workflow proven effective for AI-assisted development
 - **Developer Experience**: Clear checklists reduce cognitive load
 
 **Resources**:
-- Specification: [SPEC-0021](../05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md)
+- Specification: SPEC-0021 Stage Consistency Validation (moved to Orchestrator `docs/05-test/`)
 - Implementation Guide: [SDLC-Stage-Consistency-Validation-Guide.md](../07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md)
 - Test-Fixing Skill: Updated to Framework 6.0.1 compliance (version 2.2.0)
 
@@ -356,7 +356,7 @@ New comprehensive guide covering:
 - **Pillar 6**: Documentation Permanence
 
 ### 2 Extension Sections
-- **Section 7**: Quality Assurance System (Anti-Vibecoding) - 5.3.0
+- **Section 7**: Quality Assurance System (Anti-Vibecoding) - Added in 5.3.0, current as of 6.0.5
 - **Section 8**: Unified Specification Standard (BDD + YAML) - 6.0.0+
 
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
@@ -420,7 +420,7 @@ New comprehensive guide covering:
 | **Decision Authority** | FINAL (veto power) | NONE (propose only) |
 | **Artifacts Created** | AGENTS.md, VCR | CRP, MRP |
 
-### SASE Artifacts (5.2.0)
+### SASE Artifacts (6.0.5)
 
 | # | Artifact | Purpose |
 |---|----------|---------|
@@ -429,7 +429,7 @@ New comprehensive guide covering:
 | 02 | **MRP** | Merge-Readiness Pack (5-point evidence) |
 | 03 | **VCR** | Version Controlled Resolution (approval record) |
 
-### Agentic Maturity Levels (Updated 5.2.0)
+### Agentic Maturity Levels (Updated 6.0.5)
 
 | Level | Name | Characteristic |
 |-------|------|----------------|
@@ -452,7 +452,7 @@ Pillar 0: Design Thinking Foundation
 Pillar 1: 10-Stage Lifecycle
   - Complete software development journey
   - Stage-appropriate governance
-  - Stage Dependency Matrix (5.3.0)
+  - Stage Dependency Matrix (Added in 5.3.0, current as of 6.0.5)
 
 Pillar 2: Sprint Planning Governance (6.0.4)
   - G-Sprint / G-Sprint-Close gates
@@ -464,7 +464,7 @@ Pillar 2: Sprint Planning Governance (6.0.4)
 Pillar 3: 4-Tier Classification
   - LITE → ENTERPRISE scaling
   - Team size-appropriate requirements
-  - Tier-specific stage exit criteria (5.3.0)
+  - Tier-specific stage exit criteria (Added in 5.3.0, current as of 6.0.5)
 
 Pillar 4: Quality Gates (Dual-Track)
   - Feature gates: G0.1 → G4
@@ -480,7 +480,7 @@ Pillar 6: Documentation Permanence
 
 # EXTENSION SECTIONS (Additive - New Capabilities)
 
-Section 7: Quality Assurance System (5.3.0)
+Section 7: Quality Assurance System (Added in 5.3.0, current as of 6.0.5)
   - Vibecoding Index (0-100, 5 weighted signals)
   - Progressive Routing (Green/Yellow/Orange/Red)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
@@ -621,7 +621,7 @@ SDLC 6.0.5 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Templates ⭐ CURRENT
 - [SPEC_DELTA.md](../05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md) ⭐ Version tracking
 - [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md) ⭐ Dynamic AGENTS.md
 
-**5.3.0 (Section 7 - Quality Assurance)**:
+**Section 7 - Quality Assurance (Added in 5.3.0, current as of 6.0.5)**:
 - [SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) - Anti-Vibecoding
 - [SDLC-Stage-Dependencies.md](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - ADR-041
 - [SDLC-Stage-Exit-Criteria.md](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Per-tier requirements

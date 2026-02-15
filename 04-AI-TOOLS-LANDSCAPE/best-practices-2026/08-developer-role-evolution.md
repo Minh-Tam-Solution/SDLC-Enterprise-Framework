@@ -298,7 +298,7 @@ Example:
 
 ---
 
-## Integration with SDLC 5.2.0
+## Integration with SDLC 6.0.5
 
 ### Sprint Governance (Pillar 2)
 

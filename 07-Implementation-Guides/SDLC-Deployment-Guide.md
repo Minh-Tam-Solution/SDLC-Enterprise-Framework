@@ -1,4 +1,4 @@
-# SDLC 5.3.0 Deployment Guide - From Zero to Production
+# SDLC 6.0.5 Deployment Guide - From Zero to Production
 
 **Version**: 6.0.5
 **Date**: January 27, 2026
@@ -43,7 +43,7 @@ Example: BFlow Phase 1 deployment
 ```yaml
 Week 1:
   - Crisis assessment if needed
-  - Team onboarding to SDLC 5.0.0
+  - Team onboarding to SDLC 6.0.5
   - Pattern implementation
 
 Week 2:
@@ -390,14 +390,14 @@ resource "aws_instance" "app" {
   instance_type = "t3.medium"
 
   tags = {
-    Name = "SDLC-5.0.0-App"
+    Name = "SDLC-6.0.5-App"
     Environment = "Production"
     ZeroMockPolicy = "Enforced"
   }
 
   user_data = <<-EOF
     #!/bin/bash
-    docker run -d -p 80:8000 myapp:5.0.0
+    docker run -d -p 80:8000 myapp:6.0.5
   EOF
 }
 ```
@@ -421,7 +421,7 @@ resource "aws_instance" "app" {
 
 ---
 
-## 🎯 SDLC 5.0.0 Integration
+## 🎯 SDLC 6.0.5 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -490,7 +490,7 @@ ENTERPRISE Tier Deployment:
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Platform-Patterns.md](SDLC-Platform-Patterns.md) - Platform patterns
@@ -507,6 +507,7 @@ ENTERPRISE Tier Deployment:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar + AI Governance Principles |
 | 5.2.0 | Jan 22, 2026 | Planning Mode + AI Best Practices alignment |
 | 5.1.3 | Jan 2025 | 7-Pillar Architecture, Sprint Planning Governance |
 | 5.1.2 | Dec 24, 2025 | SDLC 5.1.2 alignment |

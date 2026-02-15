@@ -1,4 +1,4 @@
-# SDLC 5.3.0 Pre-Commit Hooks - Battle-Tested Protection
+# SDLC 6.0.5 Pre-Commit Hooks - Battle-Tested Protection
 **Version**: 6.0.5
 **Date**: January 27, 2026
 **Status**: ACTIVE - INTEGRATED WITH UNIVERSAL CODE REVIEW FRAMEWORK
@@ -16,8 +16,8 @@
 **Pre-commit hooks are LAYER 1** of the Universal Code Review Framework:
 
 ```yaml
-Code Review Architecture (5.1.3 - Updated):
-  Layer 0: Sprint Context Check (NEW in 5.1.3)
+Code Review Architecture (6.0.5 - Updated):
+  Layer 0: Sprint Context Check (Added in 5.1.3, current as of 6.0.5)
     → Verify commit message references SPRINT-XXX
     → Validate backlog item linkage
     → Ensure G-Sprint approval
@@ -27,14 +27,14 @@ Code Review Architecture (5.1.3 - Updated):
     → Prevents issues BEFORE commit
     → Zero Mock Policy enforcement
     → Performance validation
-    → SDLC 5.1.3 compliance
+    → SDLC 6.0.5 compliance
 
   Layer 2: Code Review (Choose Your Tier)
     → Tier 1: Manual peer review + checklist
     → Tier 2: AI-powered review (Cursor/Claude)
     → Tier 3: CodeRabbit automated review
 
-  Layer 3: DoD Verification (NEW in 5.1.3)
+  Layer 3: DoD Verification (Added in 5.1.3, current as of 6.0.5)
     → Definition of Done checklist
     → Sprint Review readiness
     → Documentation updates
@@ -46,14 +46,12 @@ Code Review Architecture (5.1.3 - Updated):
 ```
 
 **See Also**:
-- [Universal Code Review Framework](SDLC-Universal-Code-Review-Framework.md) - Complete 3-tier overview
-- [Manual Code Review Playbook](SDLC-Manual-Code-Review-Playbook.md) - Tier 1 guide
-- [Subscription Code Review Guide](SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 guide
+- [Code Review Guide](SDLC-Code-Review-Guide.md) - Consolidated code review guide (Tier 1-3)
 - [CodeRabbit Integration Guide](SDLC-CodeRabbit-Integration-Guide.md) - Tier 3 guide
 
 ---
 
-## 🆕 Sprint Planning Governance Hook (NEW in 5.1.3)
+## 🆕 Sprint Planning Governance Hook (Added in 5.1.3, current as of 6.0.5)
 
 ### Priority 0: Sprint Context Validation
 ```bash
@@ -147,8 +145,8 @@ repos:
 
       # Priority 3: SDLC Header Compliance
       - id: sdlc-header-check
-        name: SDLC 5.0.0 Header Validation
-        entry: python scripts/sdlc_header_check.py --version 5.0.0
+        name: SDLC 6.0.5 Header Validation
+        entry: python scripts/sdlc_header_check.py --version 6.0.5
         language: system
         files: \.(py|js|ts|tsx)$
         pass_filenames: true
@@ -351,7 +349,7 @@ class MockDetectionAgent:
 #!/bin/bash
 # metrics.sh - Track protection effectiveness
 
-echo "=== SDLC 5.0.0 Pre-Commit Protection Metrics ==="
+echo "=== SDLC 6.0.5 Pre-Commit Protection Metrics ==="
 echo
 echo "Last 7 Days:"
 echo "  Mocks Blocked: $(git log --since='1 week ago' | grep -c 'mock-detection')"
@@ -408,7 +406,7 @@ After Pre-Commit Hooks:
 
 ---
 
-## 🎯 SDLC 5.0.0 Integration
+## 🎯 SDLC 6.0.5 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -449,7 +447,7 @@ After Pre-Commit Hooks:
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) - Complete 3-tier review
@@ -473,7 +471,7 @@ After Pre-Commit Hooks:
 
 ---
 
-**Document**: SDLC-5.2.0-PRE-COMMIT-HOOKS
+**Document**: SDLC-6.0.5-PRE-COMMIT-HOOKS
 **Version**: 6.0.5
 **Date**: January 27, 2026
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation

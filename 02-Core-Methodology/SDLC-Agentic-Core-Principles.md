@@ -157,14 +157,14 @@ This document defines the core principles for integrating Software Agentic Softw
 - Deployment checklist
 ```
 
-**SDLC 5.1.3 Enhancement:** Dynamic Context Engine
+**Dynamic Context Engine** (Added in 5.1.3, current as of 6.0.5)
 - AGENTS.md updates automatically based on gate status (Planning → Design → Build)
 - Gate-triggered context overlay (e.g., "Currently in BUILD stage, CRP escalation required for architecture changes")
 - This is our **TRUE MOAT** - no competitor has gate-aware dynamic context
 
 **See:** `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` for full template and validation CLI.
 
-### 1.4 Planning Mode Principle (NEW in 5.2.0)
+### 1.4 Planning Mode Principle (Added in 5.2.0, current as of 6.0.5)
 
 **Key Insight from Expert Workflow Analysis (Jan 2026):**
 
@@ -221,7 +221,7 @@ This document defines the core principles for integrating Software Agentic Softw
 3. **Human Oversight** - Approval gate before significant changes
 4. **Audit Trail** - Full traceability from plan → code → evidence
 
-### 1.5 Model Selection Matrix (NEW in 5.2.0)
+### 1.5 Model Selection Matrix (Added in 5.2.0, current as of 6.0.5)
 
 **Task-Appropriate Model Routing:**
 
@@ -243,7 +243,7 @@ This document defines the core principles for integrating Software Agentic Softw
 - Use **alternative providers** when primary model is stuck (different training = different insights)
 - Match context window to task scope (small context for focused edits, large for codebase analysis)
 
-### 1.6 Why SASE for SDLC 5.0.0?
+### 1.6 Why SASE for SDLC 6.0.5?
 
 **Problem:** Current SDLC methodologies assume human-only development
 - 60-70% feature waste (built features never used)
@@ -291,9 +291,9 @@ This document defines the core principles for integrating Software Agentic Softw
 | **Decision Authority** | NONE - agent proposes, human disposes |
 | **Accountability** | Must provide evidence for all work (MRP) |
 
-### 2.2 SE4H vs SE4A Across 10 SDLC 5.0.0 Stages
+### 2.2 SE4H vs SE4A Across 10 SDLC 6.0.5 Stages
 
-| Stage | SDLC 5.0.0 Name | SE4H (Agent Coach) | SE4A (Agent Executor) | Primary Artifacts |
+| Stage | SDLC 6.0.5 Name | SE4H (Agent Coach) | SE4A (Agent Executor) | Primary Artifacts |
 |-------|-----------------|--------------------|-----------------------|-------------------|
 | **00** | Foundation | Define vision, problem statement, business case | N/A (human-only stage) | PRD, BRD, Vision |
 | **01** | Planning | Create BriefingScript, prioritize backlog, define acceptance criteria | Receive briefs only (no autonomous action) | BriefingScript (BRS) |
@@ -400,7 +400,7 @@ deadline: 2025-12-15
 # MentorScript (MTS)
 id: MTS-2025-001
 title: Authentication Standards
-scope: backend/app/services/auth/
+scope: services/auth/
 
 coding_standards:
   language: Python 3.11+
@@ -564,11 +564,11 @@ crp_escalations:
   - CRP-2025-001: OAuth callback URL configuration (resolved)
 
 files:
-  - backend/app/services/auth_service.py (new)
-  - backend/app/api/routes/auth.py (new)
-  - backend/app/models/token.py (new)
-  - backend/app/tests/test_auth_service.py (new)
-  - backend/app/tests/test_auth_routes.py (new)
+  - services/auth_service.py (new)
+  - api/routes/auth.py (new)
+  - models/token.py (new)
+  - tests/test_auth_service.py (new)
+  - tests/test_auth_routes.py (new)
 
 commit_hash: abc123def
 branch: feature/auth-implementation
@@ -933,7 +933,7 @@ level_3_requirements:
 
 ---
 
-## 4. MAPPING SASE DISCIPLINES TO SDLC 5.0.0
+## 4. MAPPING SASE DISCIPLINES TO SDLC 6.0.5
 
 ### 4.1 SASE Disciplines Overview
 
@@ -946,11 +946,11 @@ level_3_requirements:
 | 5 | **ATLE** | Agentic Tool & Library Engineering | Building ACE/AEE infrastructure |
 | 6 | **ATIE** | Agentic Trustworthiness & Interpretability Engineering | Explainability + trust |
 
-### 4.2 SDLC 5.0.0 Stage Mapping
+### 4.2 SDLC 6.0.5 Stage Mapping
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    SASE DISCIPLINES × SDLC 5.0.0 STAGES                     │
+│                    SASE DISCIPLINES × SDLC 6.0.5 STAGES                     │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  Stage 00: Foundation                                                       │
@@ -1178,7 +1178,7 @@ level_3_requirements:
 2. Proactive suggestions (agent proposes improvements)
 3. Self-healing (agent detects and fixes own errors)
 4. Knowledge synthesis (agent updates AGENTS.md)
-5. **Dynamic Context Overlay** (SDLC 5.1.3 unique): AGENTS.md auto-updates based on gate status
+5. **Dynamic Context Overlay** (Added in 5.1.3, current as of 6.0.5): AGENTS.md auto-updates based on gate status
 
 ### 5.4 Common Pitfalls
 
@@ -1239,7 +1239,7 @@ level_3_requirements:
    - "Software Engineering for AI-Based Systems: A Survey"
    - Foundation for SE4H/SE4A distinction
 
-2. **SDLC 5.0.0 Complete Lifecycle**
+2. **SDLC 6.0.5 Complete Lifecycle**
    - SDLC-Enterprise-Framework/02-Core-Methodology/SDLC-Core-Methodology.md
    - 10-stage lifecycle definition
 
@@ -1302,4 +1302,4 @@ level_3_requirements:
 **Document Status:** ACTIVE - PRODUCTION READY
 **Last Updated:** January 28, 2026
 **Related:** [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Section 7 (Anti-Vibecoding)
-**Related:** [Framework 6.0 Templates](../05-Templates-Tools/Framework-6.0/) - Section 8 (Unified Specs)
+**Related:** [Specification Standard](../05-Templates-Tools/01-Specification-Standard/) - Section 8 (Unified Specs)

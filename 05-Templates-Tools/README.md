@@ -101,7 +101,7 @@ Business Value:
   - Enforces stage dependencies (ADR-041)
 ```
 
-**[NEW: SPEC-0021-Stage-Consistency-Validation.md](01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md)**
+**Note**: SPEC-0021 specification moved to Orchestrator `docs/05-test/`. See [Stage Consistency Validation Guide](../07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md) for methodology.
 
 ---
 

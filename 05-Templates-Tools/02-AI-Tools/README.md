@@ -12,6 +12,12 @@
 
 > **Version**: 6.0.5
 
+> **STATUS: FROZEN (Sprint 173, Feb 2026)**
+> 34 prompt templates preserved as methodology reference.
+> NOT integrated with Orchestrator code (confirmed Feb 2026 audit).
+> No new templates until existing ones are validated against real usage.
+> Reactivation: CPO approval + demonstrated Orchestrator integration.
+
 ---
 
 ## 🆕 What's New in SDLC 6.0.5 (February 2026)

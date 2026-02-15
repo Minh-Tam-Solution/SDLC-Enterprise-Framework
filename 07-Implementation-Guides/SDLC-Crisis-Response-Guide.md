@@ -499,7 +499,7 @@ Fix the cause, not just the symptom.
 
 ---
 
-## 🎯 SDLC 5.0.0 Integration
+## 🎯 SDLC 6.0.5 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -565,7 +565,7 @@ ENTERPRISE Tier Crisis Response:
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Classification.md](../../02-Core-Methodology/SDLC-Tier-Classification.md) - 4-tier requirements
+- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Compliance-Enforcement-Guide.md](SDLC-Compliance-Enforcement-Guide.md) - Prevention first
@@ -582,6 +582,7 @@ ENTERPRISE Tier Crisis Response:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar + AI Governance Principles |
 | 5.2.0 | Jan 22, 2026 | Planning Mode + AI Best Practices alignment |
 | 5.1.3 | Jan 2025 | 7-Pillar Architecture, Sprint Planning Governance |
 | 5.1.2 | Dec 24, 2025 | SDLC 5.1.2 alignment |

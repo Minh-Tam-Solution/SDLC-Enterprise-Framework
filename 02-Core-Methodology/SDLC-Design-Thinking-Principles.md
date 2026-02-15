@@ -2013,6 +2013,6 @@ Competitive Position:
 
 **"Ask the RIGHT questions in the RIGHT order. That's more valuable than having the RIGHT tools."**
 
-**SDLC 5.0.0 teaches: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.**
+**SDLC 6.0.5 teaches: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.**
 
 🚀

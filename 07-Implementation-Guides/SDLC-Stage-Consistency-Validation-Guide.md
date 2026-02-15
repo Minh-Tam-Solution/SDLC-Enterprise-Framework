@@ -4,7 +4,7 @@
 **Date**: February 1, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Framework**: SDLC 6.0.5
-**Specification**: [SPEC-0021](../05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md)
+**Specification**: SPEC-0021 Stage Consistency Validation (moved to Orchestrator `docs/05-test/`)
 **Target**: Developers, Tech Leads, QA Engineers implementing 4-stage consistency validation
 
 ---
@@ -1187,15 +1187,13 @@ Then update validation scripts to read this config.
 ## 🔗 Related Resources
 
 ### Framework Documentation
-- [SPEC-0021: Stage Consistency Validation](../05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md) - Full specification
+- SPEC-0021: Stage Consistency Validation - Full specification (moved to Orchestrator `docs/05-test/`)
 - [ADR-041: Stage Dependency Matrix](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - Stage prerequisites
 - [SDLC-Stage-Exit-Criteria.md](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Exit criteria per stage
 - [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - 24-hour documentation rule
 
 ### Related Specifications
-- [SPEC-0012: Validation Pipeline Interface](../05-Templates-Tools/01-Specification-Standard/SPEC-0012-Validation-Pipeline-Interface.md) - Retry logic, timeouts
-- [SPEC-0016: Evidence Vault](../05-Templates-Tools/01-Specification-Standard/SPEC-0016-AGENTS-MD-Integration.md) - Evidence artifact storage
-- [SPEC-0006: Multi-Provider Codegen](../05-Templates-Tools/01-Specification-Standard/SPEC-0006-Multi-Provider-Codegen-Architecture.md) - Exponential backoff
+- [SPEC-0005: Validation Pipeline Interface](../05-Templates-Tools/01-Specification-Standard/SPEC-0005-Validation-Pipeline-Interface.md) - Retry logic, timeouts
 
 ### Implementation Examples
 - [SPRINT-134-COMPLETION-SUMMARY.md](/docs/04-build/02-Sprint-Plans/SPRINT-134-COMPLETION-SUMMARY.md) - Real-world usage Sprint 128-129

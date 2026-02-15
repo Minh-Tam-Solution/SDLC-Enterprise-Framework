@@ -723,10 +723,10 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) - User-centered approach
 
 ### Section 8 - Unified Specification Standard (6.0.0+)
-- [SDLC-Specification-Standard.md](../05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
-- [DESIGN_DECISIONS.md](../05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) - ⭐ **Lightweight ADRs**
-- [SPEC_DELTA.md](../05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) - ⭐ **Version tracking**
-- [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/Framework-6.0/CONTEXT_AUTHORITY_METHODOLOGY.md) - ⭐ **Dynamic AGENTS.md**
+- [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
+- [DESIGN_DECISIONS.md](../05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md) - ⭐ **Lightweight ADRs**
+- [SPEC_DELTA.md](../05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md) - ⭐ **Version tracking**
+- [SDLC-Context-Authority-Methodology.md](./SDLC-Context-Authority-Methodology.md) - ⭐ **Dynamic AGENTS.md**
 
 ### 5.3.0 (Section 7 - Quality Assurance)
 - [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
@@ -777,5 +777,5 @@ Quality Assurance Standards (5.3.0):
 **Authority**: CTO Approved
 **Case Study**: [BFlow Sprint 86](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
 **Quality Assurance**: [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Section 7
-**Unified Specs**: [Framework 6.0 Templates](../05-Templates-Tools/Framework-6.0/) - Section 8
+**Unified Specs**: [Specification Standard](../05-Templates-Tools/01-Specification-Standard/) - Section 8
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

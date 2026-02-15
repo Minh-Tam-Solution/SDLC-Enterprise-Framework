@@ -22,7 +22,7 @@ When moving or deprecating a file, create a stub at the original location:
 ```markdown
 # [Original Title]
 
-> ⚠️ **MOVED** (SDLC 5.2.0, January 2026)
+> ⚠️ **MOVED** (SDLC 6.0.5, January 2026)
 >
 > This content has moved to: [NEW LOCATION](../path/to/new/file.md)
 >

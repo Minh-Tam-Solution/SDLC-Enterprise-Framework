@@ -12,7 +12,7 @@
 
 ---
 
-## Sprint Planning Governance Integration (5.2.0)
+## Sprint Planning Governance Integration (Added 5.2.0, current 6.0.5)
 
 **CodeRabbit can enforce Sprint Planning Governance automatically**:
 
@@ -202,7 +202,7 @@ Expected Result:
 Create in repository root:
 
 ```yaml
-# .coderabbit.yaml - SDLC 5.1.3 Configuration
+# .coderabbit.yaml - SDLC 6.0.5 Configuration
 
 # ==============================================================================
 # REVIEW SETTINGS
@@ -222,7 +222,7 @@ reviews:
 
   # Focus Areas (prioritize these in review)
   focus:
-    - sprint_governance  # NEW in 5.1.3
+    - sprint_governance  # Added in 5.1.3, current as of 6.0.5
     - security
     - performance
     - testing
@@ -230,12 +230,12 @@ reviews:
     - documentation
 
 # ==============================================================================
-# SDLC 5.3.0 CUSTOM RULES - 7-PILLAR ARCHITECTURE
+# SDLC 6.0.5 CUSTOM RULES - 7-PILLAR ARCHITECTURE
 # ==============================================================================
 
 rules:
   # ---------------------------------------------------------------------------
-  # SPRINT PLANNING GOVERNANCE (Pillar 2) - NEW in 5.1.3
+  # SPRINT PLANNING GOVERNANCE (Pillar 2) - Added in 5.1.3, current as of 6.0.5
   # ---------------------------------------------------------------------------
 
   - name: "Sprint Reference Required"
@@ -404,7 +404,7 @@ rules:
       - Add indexes to frequently queried fields
       - Use db_index=True or Meta.indexes
 
-      Target: <50ms database query response time (SDLC 5.0.0)
+      Target: <50ms database query response time (SDLC 6.0.5)
     severity: info
     applies_to:
       - "**/models.py"
@@ -418,7 +418,7 @@ rules:
       - Iterator (.iterator() for large querysets)
       - Chunking (batch processing)
 
-      Target: Support 1000+ concurrent users (SDLC 5.0.0)
+      Target: Support 1000+ concurrent users (SDLC 6.0.5)
     severity: warning
     applies_to:
       - "**/*.py"
@@ -441,7 +441,7 @@ rules:
     message: |
       Code Quality: File exceeds 300 lines.
       Consider splitting into multiple modules for better maintainability.
-      Target: <300 lines per file (SDLC 5.0.0)
+      Target: <300 lines per file (SDLC 6.0.5)
     severity: info
     applies_to:
       - "**/*.py"
@@ -472,7 +472,7 @@ rules:
   - name: "Missing Tests for New Feature"
     message: |
       Testing Reminder: New code should include tests.
-      SDLC 5.0.0 Target: 80%+ test coverage
+      SDLC 6.0.5 Target: 80%+ test coverage
 
       Required:
       - Unit tests for business logic
@@ -487,7 +487,7 @@ rules:
   - name: "Mock Usage Detection"
     pattern: "\\bmock\\.|Mock\\(|patch\\("
     message: |
-      SDLC 5.0.0 Zero Mock Policy:
+      SDLC 6.0.5 Zero Mock Policy:
       Mocks are ONLY allowed for:
       1. External APIs (third-party services)
       2. Time-dependent functions (datetime.now)
@@ -623,10 +623,10 @@ advanced:
 # VERSION & METADATA
 # ==============================================================================
 
-version: "5.0.0"
+version: "6.0.5"
 last_updated: "2025-12-06"
 owner: "CPO Office - taidt@mtsolution.com.vn"
-documentation: "docs/SDLC-5.0.0-CodeRabbit-Integration-Guide.md"
+documentation: "docs/SDLC-6.0.5-CodeRabbit-Integration-Guide.md"
 ```
 
 **Step 2.2: Test Custom Rules** (1 hour)
@@ -1176,7 +1176,7 @@ For complete tier comparison, see the SDLC Implementation Guide.
 
 ---
 
-## 🎯 SDLC 5.0.0 Integration
+## 🎯 SDLC 6.0.5 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -1216,9 +1216,8 @@ For complete tier comparison, see the SDLC Implementation Guide.
 
 ## 📚 Related Documents
 
-- [SDLC-Manual-Code-Review-Playbook.md](SDLC-Manual-Code-Review-Playbook.md) - Tier 1 (Free/Manual) baseline
-- [SDLC-Subscription-Powered-Code-Review-Guide.md](SDLC-Subscription-Powered-Code-Review-Guide.md) - Tier 2 alternative
-- [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) - Overall SDLC 5.0.0 implementation
+- [SDLC-Code-Review-Guide.md](SDLC-Code-Review-Guide.md) - Consolidated code review guide (Tier 1-3)
+- [SDLC-Implementation-Guide.md](SDLC-Implementation-Guide.md) - Overall SDLC 6.0.5 implementation
 - [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Pre-commit hook configuration
 
 ---
@@ -1227,12 +1226,13 @@ For complete tier comparison, see the SDLC Implementation Guide.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar Architecture + AI Governance Principles |
 | 5.0.0 | Dec 6, 2025 | SDLC 5.0.0 upgrade: 10-stage mapping, 4-tier classification, industry standards |
 | 4.9.0 | Nov 13, 2025 | Initial CodeRabbit integration guide |
 
 ---
 
-**Document Version**: 5.2.0
+**Document Version**: 6.0.5
 **Last Updated**: January 29, 2026
 **Next Review**: February 22, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)

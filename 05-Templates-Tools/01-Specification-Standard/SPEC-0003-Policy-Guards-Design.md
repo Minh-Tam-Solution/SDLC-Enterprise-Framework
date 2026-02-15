@@ -1,9 +1,9 @@
-# SPEC-0004: Policy Guards Design (OPA Integration)
+# SPEC-0003: Policy Guards Design (OPA Integration)
 
 ## Frontmatter
 
 ```yaml
-spec_id: SPEC-0004
+spec_id: SPEC-0003
 title: Policy Guards Design (OPA Integration)
 version: 1.0.0
 status: approved
@@ -20,7 +20,7 @@ tags:
 related_specs:
   - SPEC-0001  # Governance System
   - SPEC-0002  # Quality Gates
-  - SPEC-0008  # 4-Tier Policy Enforcement
+  - SPEC-0004  # 4-Tier Policy Enforcement
 epic: EP-03 Policy-as-Code Enforcement
 sprint: Sprint 43 (Jan 2026)
 ```
@@ -106,21 +106,21 @@ graph TB
 
 ### 2.2 Component Architecture
 
-**PolicyGuardValidator** (`backend/app/services/validators/policy_guard_validator.py`):
+**PolicyGuardValidator** (validation layer):
 - Implements `BaseValidator` interface
 - Prepares input data (files, diff, config) for OPA
 - Calls OPA server via `OPAPolicyService`
 - Aggregates results (pass/fail/warnings)
 - Returns `ValidatorResult` with violations
 
-**OPAPolicyService** (`backend/app/services/opa_policy_service.py`):
+**OPAPolicyService** (integration layer):
 - HTTP client for OPA REST API (network-only, AGPL-safe)
 - Policy loading (`PUT /v1/policies/{id}`)
 - Policy evaluation (`POST /v1/data/{package}/allow`)
 - Violation extraction (`POST /v1/data/{package}/violations`)
 - Policy caching (in-memory cache with TTL)
 
-**PolicyPackService** (`backend/app/services/policy_pack_service.py`):
+**PolicyPackService** (service layer):
 - CRUD operations for PolicyPack and PolicyRule
 - Policy pack lookup by project_id (Redis cached, TTL 5 min)
 - Permission checks (only Project Admin can manage)
@@ -142,7 +142,7 @@ graph TB
    {
      "files": [
        {
-         "path": "backend/app/services/user.py",
+         "path": "services/user.py",
          "content": "password = 'hardcoded'",
          "language": "python",
          "imports": ["sqlalchemy", "bcrypt"],
@@ -1177,5 +1177,5 @@ policy_evaluation_total = Counter(
 
 ---
 
-*SPEC-0004: Policy Guards Design - Framework 6.0.5 Format*
+*SPEC-0003: Policy Guards Design - Framework 6.0.5 Format*
 *SDLC Enterprise Framework - Policy-as-Code Enforcement*

@@ -19,7 +19,7 @@ Context Authority is a methodology for **dynamically managing AI coding assistan
 - **Context freshness tracking** (prevent stale context issues)
 - **Tiered authority levels** (who can update what)
 
-**Industry Standard**: AGENTS.md is the emerging standard for AI assistant configuration (60K+ repos). SDLC Orchestrator enhances this with **dynamic governance**.
+**Industry Standard**: AGENTS.md is the emerging standard for AI assistant configuration (60K+ repos). Context Authority extends this with **dynamic governance** — automated by any platform implementing the SDLC Framework.
 
 ---
 
@@ -54,7 +54,7 @@ Traditional AGENTS.md files are **static**:
 Context Authority adds **dynamic governance layer**:
 
 ```markdown
-# AGENTS.md (Dynamic - SDLC Orchestrator Enhanced)
+# AGENTS.md (Dynamic - Context Authority Enhanced)
 
 ## Project Guidelines
 - Use TypeScript
@@ -87,7 +87,7 @@ Last Updated: 2026-01-28T10:30:00Z
 
 | Level | Authority | Can Update | Example |
 |-------|-----------|------------|---------|
-| **System** | SDLC Orchestrator | Stage, gate status, restrictions | Gate pass → update stage |
+| **System** | Platform (automated) | Stage, gate status, restrictions | Gate pass → update stage |
 | **Project** | Tech Lead | Architecture, patterns, conventions | New ADR → update guidelines |
 | **Team** | Developers | Implementation notes, tips | Learned pattern → share |
 | **Session** | AI Assistant | Current task context | Working on feature X |
@@ -110,7 +110,7 @@ Last Updated: 2026-01-28T10:30:00Z
 ## Zone 3: Dynamic (System Updates)
 <!-- SDLC-CONTEXT-START -->
 [Gate status, governance mode, restrictions]
-[Updated by: SDLC Orchestrator]
+[Updated by: Governance Platform]
 [Frequency: Real-time on gate changes]
 <!-- SDLC-CONTEXT-END -->
 
@@ -256,7 +256,7 @@ Developer Impact: High - all PRs need proper context
 ```markdown
 <!-- KNOWN-ISSUES-START -->
 ⚠️ Known Issue: Auth service memory leak
-  - File: backend/app/services/auth_service.py
+  - File: services/auth_service.py
   - Lines: 145-160
   - Status: Under investigation
   - Action: Do not modify without consulting @backend-lead
@@ -286,7 +286,7 @@ Developer Impact: High - all PRs need proper context
 ## AI Coding Assistant Configuration
 
 <!--
-  SDLC Orchestrator Enhanced AGENTS.md
+  Context Authority Enhanced AGENTS.md
   Version: 2.0.0 (Context Authority)
   Last Updated: [AUTO-UPDATED]
 -->
@@ -592,33 +592,33 @@ When working with Context Authority:
 
 ---
 
-## 10. SDLC Orchestrator TRUE MOAT
+## 10. Static vs. Dynamic Context
 
-### 10.1 Industry Standard vs. SDLC Orchestrator
+### 10.1 Value of Dynamic Context Authority
 
-| Aspect | Static AGENTS.md | SDLC Orchestrator |
-|--------|------------------|-------------------|
-| Updates | Manual | Automatic |
+| Aspect | Static AGENTS.md | Dynamic Context Authority |
+|--------|------------------|---------------------------|
+| Updates | Manual | Automatic (via any platform) |
 | Gate Awareness | None | Full |
 | Governance | Guidance only | Enforcement |
 | Audit Trail | None | Complete |
 | Context Freshness | Unknown | Tracked |
-| Quality Gates | None | 4-Gate Pipeline |
+| Quality Gates | None | Integrated |
 
-### 10.2 Competitive Advantage
+### 10.2 Key Advantage
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    CONTEXT AUTHORITY MOAT                       │
+│          CONTEXT AUTHORITY: STATIC vs DYNAMIC               │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  Static AGENTS.md (Industry):                                   │
+│  Static AGENTS.md (Industry baseline):                          │
 │  ├── 60K+ repos use AGENTS.md                                  │
 │  ├── Manual updates                                             │
 │  └── Guidance only, no enforcement                             │
 │                                                                 │
-│  SDLC Orchestrator (Our Advantage):                            │
-│  ├── Dynamic context updates                                    │
+│  Dynamic Context Authority (SDLC Framework methodology):        │
+│  ├── Dynamic context updates (automated by any platform)        │
 │  ├── Gate-triggered changes                                    │
 │  ├── Governance enforcement                                     │
 │  ├── Vibecoding Index integration                              │
@@ -629,6 +629,8 @@ When working with Context Authority:
 │  "Static AGENTS.md is guidance.                                │
 │   Dynamic AGENTS.md is governance."                             │
 │                                                                 │
+│  Platforms implementing this: e.g., SDLC Orchestrator,          │
+│  custom CI/CD pipelines, or any governance tooling.             │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

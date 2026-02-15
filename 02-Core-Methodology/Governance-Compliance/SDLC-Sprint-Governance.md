@@ -595,7 +595,7 @@ tasks:
 
 set -e
 
-echo "🔍 SDLC 5.3.0 Sprint Consistency Validator"
+echo "🔍 SDLC 6.0.5 Sprint Consistency Validator"
 echo "==========================================="
 
 # Configuration

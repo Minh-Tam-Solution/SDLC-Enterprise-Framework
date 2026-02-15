@@ -649,7 +649,7 @@ Please help me:
 ---
 
 **Template**: Prototype-Test-Plan-Template
-**Part of**: SDLC 5.0 Design Thinking Framework
+**Part of**: SDLC 6.0.5 Design Thinking Framework
 **Phase**: PROTOTYPE → TEST (Stage 04 - BUILD)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

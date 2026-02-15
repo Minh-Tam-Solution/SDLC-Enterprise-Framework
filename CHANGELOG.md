@@ -237,9 +237,9 @@ All 5 RFCs follow **Framework-First Principle**:
 - ✅ **Track 1 (Methodology)**: Documentation-only, tool-agnostic patterns
 - ✅ **Tool-Agnostic**: Works with Claude Code, Cursor, Copilot, GPT-4o, Gemini, Ollama
 - ✅ **Vendor-Neutral**: No proprietary APIs, uses standard protocols (Git, MCP, ASCII, HTML)
-- ⏳ **Track 2 (Implementation)**: Orchestrator CLI automation deferred to Sprint 144 (conditional)
+- ⏳ **Track 2 (Implementation)**: Orchestrator CLI automation deferred (conditional on Track 1 success)
 
-### 🆕 SDLC Orchestrator Integration (Sprint 144 - Planned)
+### 🆕 Track 2: Automation Layer (Planned)
 
 **Future CLI Commands** (Track 2, conditional on Framework approval):
 ```bash

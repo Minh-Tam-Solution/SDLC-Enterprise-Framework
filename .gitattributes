@@ -1,0 +1,3 @@
+# Exclude Archive from language stats and diffs
+10-Archive/** linguist-vendored
+10-Archive/** -diff

@@ -1,9 +1,9 @@
-# SPEC-0012: Validation Pipeline Interface
+# SPEC-0005: Validation Pipeline Interface
 
 ## Frontmatter
 
 ```yaml
-spec_id: SPEC-0012
+spec_id: SPEC-0005
 title: Validation Pipeline Interface - AI Safety Layer for Code Quality
 version: 1.0.0
 status: approved
@@ -780,7 +780,7 @@ class ValidationContext:
 
 ---
 
-**Specification Complete** - SPEC-0012: Validation Pipeline Interface v1.0.0
+**Specification Complete** - SPEC-0005: Validation Pipeline Interface v1.0.0
 
 **Total**: ~700 LOC, 7 functional requirements, 40 acceptance criteria, 3 validators (Lint/Test/Coverage), Redis queue architecture, Prometheus metrics integration
 

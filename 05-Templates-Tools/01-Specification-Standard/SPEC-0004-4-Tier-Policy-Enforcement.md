@@ -1,9 +1,9 @@
-# SPEC-0008: 4-Tier Policy Enforcement
+# SPEC-0004: 4-Tier Policy Enforcement
 
 ## Frontmatter
 
 ```yaml
-spec_id: SPEC-0008
+spec_id: SPEC-0004
 title: 4-Tier Policy Enforcement (ADR-036)
 version: 1.0.0
 status: approved
@@ -20,7 +20,7 @@ tags:
 related_specs:
   - SPEC-0001  # Anti-Vibecoding
   - SPEC-0002  # Specification Standard
-  - SPEC-0004  # Policy Guards
+  - SPEC-0003  # Policy Guards
 epic: Foundation - 4-Tier Classification
 sprint: Sprint 102-104
 ```
@@ -29,7 +29,7 @@ sprint: Sprint 102-104
 
 ## Executive Summary
 
-**Problem**: SDLC Framework 5.2.0+ introduces 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE) for graduated governance. Different project sizes need different enforcement levels - startups need advisory guidance while enterprises require zero-tolerance enforcement. A one-size-fits-all policy system would either over-burden small teams or under-protect large teams.
+**Problem**: SDLC Framework introduced 4-Tier Classification in 5.2.0 (current as of 6.0.5) - (LITE/STANDARD/PROFESSIONAL/ENTERPRISE) for graduated governance. Different project sizes need different enforcement levels - startups need advisory guidance while enterprises require zero-tolerance enforcement. A one-size-fits-all policy system would either over-burden small teams or under-protect large teams.
 
 **Solution**: Implement **4-Tier Policy Enforcement** with graduated enforcement modes:
 - **LITE** (1-2 people): Advisory only, no blocking
@@ -294,13 +294,13 @@ THEN the system MUST provide PolicyEnforcementService with:
 - Logging: Structured logs with tier context for all evaluations
 ```
 
-**Service Location**: `backend/app/services/policy_enforcement_service.py`
+**Service**: PolicyEnforcementService (service layer)
 
 **Dependencies**:
-- `ProjectRepository` (retrieve project tier)
-- `OPAService` (execute policy checks via Open Policy Agent)
-- `RedisService` (cache policy pack configs)
-- `AuditLogService` (log all enforcement decisions)
+- Project repository (retrieve project tier)
+- OPA service (execute policy checks via Open Policy Agent)
+- Cache service (cache policy pack configs)
+- Audit log service (log all enforcement decisions)
 
 **Error Handling**:
 - Fallback to LITE tier if project tier is NULL (backward compatibility)
@@ -327,7 +327,7 @@ THEN the service MUST implement tier-specific logic for:
 5. VCR Check: Query code_reviews table, require N approvals based on tier
 ```
 
-**Service Location**: `backend/app/services/mrp_validation_service.py`
+**Service**: MRPValidationService (service layer)
 
 **Tier-Specific Logic**:
 ```python
@@ -696,28 +696,26 @@ THEN the system MUST:
 ### Related Specifications
 - **[SPEC-0001](./SPEC-0001-Anti-Vibecoding.md)**: Anti-Vibecoding quality assurance (4-tier classification)
 - **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.0.5 format)
-- **[SPEC-0004](./SPEC-0004-Policy-Guards-Design.md)**: OPA policy guards (enforcement engine)
-- **[SPEC-0009](./SPEC-0009-Codegen-Service-Specification.md)**: Codegen Service Specification
-- **[SPEC-0010](./SPEC-0010-IR-Processor-Specification.md)**: IR Processor Specification
+- **[SPEC-0003](./SPEC-0003-Policy-Guards-Design.md)**: OPA policy guards (enforcement engine)
 
 ### Framework Documents
-- **SDLC 5.2.0 - Section 02-GOVERN**: 4-Tier Classification methodology
-- **SDLC 5.3.0 - Section 7**: Quality Assurance System with tier-specific requirements
+- **SDLC 6.0.5 - Section 02-GOVERN**: 4-Tier Classification methodology
+- **SDLC 6.0.5 - Section 7**: Quality Assurance System with tier-specific requirements
 
-### Implementation Files
-- `backend/app/services/policy_enforcement_service.py`: PolicyEnforcementService implementation
-- `backend/app/services/mrp_validation_service.py`: MRP 5-point validation service
-- `backend/app/models/project.py`: Project model with policy_pack_tier column
-- `backend/app/api/routes/projects.py`: Tier upgrade API endpoint
-- `backend/alembic/versions/XXX_add_policy_pack_tier.py`: Database migration
+### Reference Implementation
+- PolicyEnforcementService: Tier-aware policy evaluation
+- MRPValidationService: MRP 5-point validation
+- Project model: Includes policy_pack_tier attribute
+- Tier upgrade API endpoint
+- Database migration for policy_pack_tier column
 
 ---
 
 ## 7. Dependencies
 
 ### Upstream Dependencies (Must Exist Before Implementation)
-- ✅ **SDLC Framework 5.2.0**: 4-Tier Classification methodology defined
-- ✅ **OPA Integration**: Policy evaluation engine (SPEC-0004)
+- ✅ **SDLC Framework 6.0.5**: 4-Tier Classification methodology defined
+- ✅ **OPA Integration**: Policy evaluation engine (SPEC-0003)
 - ✅ **Projects Table**: Database schema for project tier storage
 - ✅ **RBAC System**: Role-based access control for override approvals
 
@@ -732,7 +730,7 @@ THEN the system MUST:
 ## 8. Related Standards
 
 ### Industry Standards
-- **SDLC Framework 5.2.0**: 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
+- **SDLC Framework 6.0.5**: 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
 - **OWASP ASVS Level 2**: Security verification standards (PROFESSIONAL/ENTERPRISE tiers)
 - **SOC 2 Type II**: Audit compliance requirements (ENTERPRISE tier)
 - **HIPAA**: Healthcare data compliance (ENTERPRISE tier with 2-person rule)
@@ -765,8 +763,8 @@ THEN the system MUST:
 
 **Document Status**: ✅ APPROVED - Ready for Implementation
 **Framework Compliance**: ✅ Framework 6.0.5 (YAML frontmatter, BDD requirements, tier-specific tables)
-**Spec Migration**: ✅ Complete (ADR-036 → SPEC-0008)
+**Spec Migration**: ✅ Complete (ADR-036 → SPEC-0004)
 
 ---
 
-*SPEC-0008 - 4-Tier Policy Enforcement. Graduated governance from startups to enterprises. Zero Mock Policy compliant. Framework-First methodology.*
+*SPEC-0004 - 4-Tier Policy Enforcement. Graduated governance from startups to enterprises. Zero Mock Policy compliant. Framework-First methodology.*

@@ -526,7 +526,7 @@ This document has been **archived** and is **READ-ONLY**. For current active ver
 - Research on methodology origins
 
 **Do NOT Use This Archive For**:
-- New implementations (use active SDLC 5.3.0)
+- New implementations (use active SDLC 6.0.5)
 - Active projects (upgrade to current version)
 - Team training (use current materials)
 
@@ -760,6 +760,7 @@ DON'Ts ❌:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar + AI Governance Principles |
 | 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
 | 5.3.0 | Jan 28, 2026 | Consolidated from 4 files (Code, Document, Header, Archival) |
 | 5.0.0 | Dec 5, 2025 | Initial SDLC 5.0.0 versions |

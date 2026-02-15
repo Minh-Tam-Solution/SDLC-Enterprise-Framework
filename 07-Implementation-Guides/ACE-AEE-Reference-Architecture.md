@@ -1083,7 +1083,8 @@ SASE Kanban Board:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0.0 | 2025-12-16 | PM/PO + AI | Initial version |
-| 1.0.3 | 2026-01-22 | Framework Team | SDLC 5.2.0 alignment |
+| 1.1.0 | 2026-02-15 | Framework Team | SDLC 6.0.5 alignment |
+| 1.0.3 | 2026-01-22 | Framework Team | Added in 5.2.0, current as of 6.0.5 |
 
 ---
 

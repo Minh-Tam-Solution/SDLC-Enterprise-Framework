@@ -117,7 +117,7 @@ Before creating any new document, check if a canonical file already exists for t
 | **Design Decisions Template** | `05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md` | Lightweight ADR for sprint decisions | **NEW 6.0.2** |
 | **Spec Delta Template** | `05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md` | Version change tracking | **NEW 6.0.2** |
 | **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.2** |
-| **Stage Consistency Validation** | `05-Templates-Tools/01-Specification-Standard/SPEC-0021-Stage-Consistency-Validation.md` | 4-stage consistency validation service | **NEW 6.0.1** |
+| **Stage Consistency Validation** | `07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md` | 4-stage consistency validation (SPEC-0021 moved to Orchestrator) | **NEW 6.0.1** |
 
 ### E2E API Testing Templates (05-Templates-Tools/02-AI-Tools/) - NEW in 6.0.2
 
@@ -159,7 +159,7 @@ Before creating any new document, check if a canonical file already exists for t
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| Code Review Framework | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `02-AI-Tools/code-review/` (partial) | ACTIVE |
+| Code Review Guide (SSOT) | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Consolidated from 3 guides (Sprint 173) | ACTIVE |
 | Implementation Guide | `07-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
 | **MCP Integration Guide** | `07-Implementation-Guides/MCP-Integration-Guide.md` | RFC-SDLC-603 | **NEW 6.0.3** |
 
@@ -196,7 +196,7 @@ Before creating any new document, check if a canonical file already exists for t
 | AI Platform Deployment | `10-Archive/06-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
 
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
-> For 6.0.0 deployments, adapt the governance docs from 02-Core-Methodology/.
+> For 6.0.5 deployments, adapt the governance docs from 02-Core-Methodology/.
 
 ### Sprint 117 POC Documents (10-Archive/04-Legacy/Sprint-117-POC/)
 
@@ -219,6 +219,9 @@ Before creating any new document, check if a canonical file already exists for t
 | `docs/SPEC-FIRST-POC-VALIDATION.md` | `10-Archive/04-Legacy/Sprint-117-POC/` | Jan 29, 2026 | Jul 2026 |
 | `docs/02-design/01-ADRs/SPEC-0011-*.md` | `05-Templates-Tools/01-Specification-Standard/SPEC-0011-*.md` | Jan 29, 2026 | Jul 2026 |
 | `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
+| `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
+| `07-Implementation-Guides/SDLC-Manual-Code-Review-Playbook.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
+| `07-Implementation-Guides/SDLC-Subscription-Powered-Code-Review-Guide.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
 | `03-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/cursor/` | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/copilot/` | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
@@ -290,4 +293,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 13, 2026
+**Last Updated**: February 15, 2026

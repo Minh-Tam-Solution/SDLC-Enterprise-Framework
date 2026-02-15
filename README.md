@@ -1,8 +1,15 @@
 # SDLC 6.0.5 Universal Framework
 
-**Version**: 6.0.5 | **Status**: ACTIVE | **Date**: February 13, 2026
+**Version**: 6.0.5 | **Status**: ACTIVE | **Date**: February 15, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
+
+---
+
+> **IMPORTANT: This is a TOOL-AGNOSTIC methodology framework.**
+> It defines *what* teams should do (principles, processes, gates) — not *how* a specific tool implements it.
+> Any platform can implement this framework. SDLC Orchestrator is ONE such platform, not the only one.
+> See [Framework vs. Platform](#framework-vs-platform) for the architectural boundary.
 
 ---
 
@@ -20,77 +27,11 @@ SDLC 6.0.5 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Section 8**: Unified Specification Standard (+ Spec Converter)
 - **Section 9**: RFC-001 Legacy Document Organization Standard
 
-**NEW in 6.0.5 (Minor Release - February 14, 2026)**:
-- **4 New AI Templates**: Go-Live Readiness (Checklist + Assessment), Maturity Assessment Framework, Risk Register Analyzer
-  - Based on Bflow Framework Assessment findings (Feb 2026)
-  - 4-tier support (LITE → ENTERPRISE), weighted scoring models, BFlow-proven patterns
-  - Templates: `05-Templates-Tools/02-AI-Tools/deployment_go-live-*.md`, `governance_maturity-*.md`, `governance_risk-*.md`
-- **RFC-001: Legacy Document Organization Standard**: Eliminates 99-Legacy/ from active stages (00-09)
-  - Centralizes archived content into `10-Archive/{NN}-Legacy/` with stage alignment
-  - Production-validated on BFlow Platform: 57% size reduction (211MB→91MB), 34% file count reduction
-  - Mandatory framework standard: All SDLC-compliant projects must adopt by March 15, 2026
-  - Eliminates 40% AI context pollution, supports Software 3.0 premise of AI-first development
-  - Includes migration script (`migrate-legacy-to-archive.sh`) and BFF templates
-  - CI/CD integration: GitHub Actions workflow blocks 99-Legacy/ reintroduction in stages 00-09
-
-**From 6.0.4 (Minor Release - February 8, 2026)**:
-- **TDD Workflow Integration**: Test-Driven Development workflow proven effective through Sprint 154
-  - RED-GREEN-REFACTOR cycle documentation, 113 tests written FIRST, 100% pass rate
-- **3-Phase Sprint Lifecycle Model**: PRE-SPRINT → EXECUTION (TDD) → POST-SPRINT
-- **Spec Converter Methodology**: SpecIR, BDD ↔ OpenSpec bidirectional conversion, import patterns
-- **Tier-Aware TDD Requirements**: Tier-specific coverage targets (LITE 70% → ENTERPRISE 95%+)
-
-**From 6.0.3 (Minor Release - February 2, 2026)
-- **Created (2 new files)**:
-  - MCP Integration Guide: 6x faster bug triage via Model Context Protocol automation (Slack/GitHub/Jira)
-  - Git Workflow Patterns: 2.5x productivity via parallel AI development with git worktrees
-- **Enhanced (3 existing files)**:
-  - Memory & Context Management: Continuous Learning Protocol (zero repeated bugs, self-improving AI)
-  - Sub-agent Orchestration: Research Delegation Pattern (3.3x faster research phase)
-  - Visual Documentation Standards: Explanatory documentation with ASCII diagrams (4x faster onboarding)
-- **Consolidation Result**: -3 files (5 deleted - 2 created), 0 methodology content loss
-- **Metrics Preserved**: 6x, 2.5x, 3.3x, 4x productivity improvements
-- **3-Circle Architecture**: Ring 1 (Core standards), Ring 2 (Best practices), Ring 3 (Implementation guides)
-- **Tool-Agnostic**: All patterns work with Claude Code, Cursor, Copilot, GPT-4o, Gemini, Ollama
-- **Framework-First**: Track 1 methodology complete, Track 2 implementation deferred to Sprint 144 (Orchestrator automation)
-
-**From 6.0.2 (Minor Release - February 2, 2026)**:
-- **RFC-SDLC-602: E2E API Testing Enhancement**: Standardized 6-phase E2E testing workflow
-- **Stage Cross-Reference Matrix**: Bidirectional Stage 03 ↔ 05 traceability
-- **OWASP API Top 10 Checklist**: Complete API security testing coverage (2023)
-- **Testing Artifacts Structure**: SDLC-compliant folder layout for test outputs
-- **sdlcctl E2E Commands**: `sdlcctl e2e validate`, `sdlcctl e2e cross-reference`, `sdlcctl e2e generate-report`
-- **OPA Policy Integration**: e2e_testing_compliance, stage_cross_reference policies
-- **4 New Evidence Types**: e2e_test_report, security_test_report, api_coverage_report, cross_reference_validation
-
-**From 6.0.1 (Minor Release)**:
-- **SPEC-0021: Stage Consistency Validation**: Formalized 4-stage consistency validation workflow
-- **Pre/Post-Implementation Checklists**: Actionable checklists for stage transitions
-- **Artifact Integrity Hashing**: SHA256 checksums for post-approval modification detection
-- **CLI Validation Commands**: `sdlcctl validate-consistency` for automated checking
-- **Tier-Specific Validation**: LITE (basic), STANDARD (moderate), PROFESSIONAL (deep), ENTERPRISE (comprehensive)
-
-**From 6.0.0 (Major Release)**:
-- **Unified Specification Standard**: YAML frontmatter, BDD requirements (GIVEN-WHEN-THEN), tier-aware specs
-- **DESIGN_DECISIONS.md Template**: Lightweight ADR alternative for sprint-scoped decisions
-- **SPEC_DELTA.md Template**: Version change tracking with breaking change documentation
-- **Context Authority Methodology**: Dynamic AGENTS.md patterns with 4 zones (Static → Ephemeral)
-- **OpenSpec Alignment**: Industry-standard spec-driven development compatibility
-- **20 Priority Spec Migration**: Structured migration plan for existing specifications
-
-**From 5.3.0**:
-- Stage Dependency Matrix (ADR-041)
-- Stage Exit Criteria per tier
-- Sprint-Stage Integration
-- Quality Assurance System (Vibecoding Index, Progressive Routing)
-
-**From 5.2.0**:
-- AI Governance Principles (7 timeless principles)
-- Risk-Based Planning Mode
-- Concentric Circles Model
-- AI Agent Best Practices 2026
+**Key capabilities**: Tool-agnostic AI governance, 4-tier classification (LITE→ENTERPRISE), TDD integration, anti-vibecoding quality gates, evidence-based development.
 
 **Proven**: BFlow ($43M, 827:1 ROI), NQH-Bot (₫15B+), MTEP (<30 min PaaS)
+
+> For detailed version history, see [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -139,7 +80,7 @@ SDLC 6.0.5 is a **7-Pillar AI+Human Excellence Framework** with:
 
 ---
 
-## Stage Dependencies (NEW in 5.3.0)
+## Stage Dependencies (added 5.3.0)
 
 ### Explicit Prerequisites (ADR-041)
 
@@ -216,7 +157,7 @@ See [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standa
 
 ---
 
-## Quality Assurance System (NEW in 5.3.0 - Section 7)
+## Quality Assurance System (Section 7, added 5.3.0)
 
 ### Vibecoding Index
 
@@ -263,7 +204,7 @@ Reduces compliance friction from 30 min → <5 min per PR:
 
 ---
 
-## Unified Specification Standard (NEW in 6.0.0 - Section 8)
+## Unified Specification Standard (Section 8, added 6.0.0)
 
 ### SDLC-Specification-Standard.md
 
@@ -323,16 +264,17 @@ Track changes between specification versions:
 
 ### Context Authority (Dynamic AGENTS.md)
 
-SDLC Orchestrator's TRUE MOAT - dynamic context vs static files:
+The Context Authority pattern defines 4 zones of AI context with different update authorities:
 
 | Zone | Authority | Trigger | Example |
-|------|-----------|---------|---------|
+|------|-----------|---------|----------|
 | **Static** | Tech Lead | ADR approval | Architecture, conventions |
 | **Semi-Dynamic** | PM/Tech Lead | Sprint planning | Phase, goals, assignments |
-| **Dynamic** | System | Gate pass/fail | Stage, restrictions, mode |
+| **Dynamic** | System (any platform) | Gate pass/fail | Stage, restrictions, mode |
 | **Ephemeral** | AI Assistant | Session start | Task context |
 
 > **Key Insight**: "Static AGENTS.md is guidance. Dynamic AGENTS.md is governance."
+> Any platform implementing this framework can automate the Dynamic zone (e.g., SDLC Orchestrator, custom CI/CD, other tools).
 
 ---
 
@@ -369,55 +311,67 @@ Framework content is organized by stability:
 
 ```
 SDLC-Enterprise-Framework/
-├── 01-Overview/                  # Executive Summary
-├── 02-Core-Methodology/          # CORE CONTENT
+├── 01-Overview/                  # Executive Summary + Quick Reference
+├── 02-Core-Methodology/          # CORE CONTENT (Ring 1)
 │   ├── SDLC-Core-Methodology.md
 │   ├── SDLC-Agentic-Core-Principles.md
-│   ├── SDLC-Stage-Dependencies.md       # NEW 5.3.0 (ADR-041)
-│   ├── SDLC-Stage-Exit-Criteria.md      # NEW 5.3.0
-│   ├── SDLC-Quality-Assurance-System.md # NEW 5.3.0 (Section 7)
+│   ├── SDLC-Stage-Dependencies.md       # Stage prerequisite matrix
+│   ├── SDLC-Stage-Exit-Criteria.md      # Exit criteria per stage
+│   ├── SDLC-Quality-Assurance-System.md # Section 7 Anti-Vibecoding
+│   ├── SDLC-Context-Authority-Methodology.md
+│   ├── SDLC-Design-Thinking-Principles.md
 │   ├── Documentation-Standards/
-│   │   └── SDLC-Tier-Stage-Requirements.md  # NEW 5.3.0
+│   │   ├── SDLC-Tier-Stage-Requirements.md  # LITE/PRO/ENTERPRISE
+│   │   ├── SDLC-Naming-Standards.md
+│   │   └── SDLC-Project-Structure-Standard.md
 │   └── Governance-Compliance/
-│       └── SDLC-Stage-Sprint-Integration.md # NEW 5.3.0
-├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (5.2.0)
+│       ├── SDLC-Sprint-Governance.md    # Sprint-stage coordination
+│       ├── SDLC-Quality-Security-Gates.md
+│       └── SDLC-Observability-Checklist.md
+├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (Ring 1)
 │   ├── 01-AI-Human-Collaboration.md
 │   ├── 02-Agent-Accountability.md
 │   ├── 03-Planning-Mode-Principle.md
 │   ├── 04-Verification-Principle.md
 │   ├── 05-Context-Management.md
 │   ├── 06-Tool-Evaluation-Criteria.md
-│   └── 07-Anti-Patterns.md
-├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (5.2.0 - Outer Ring)
+│   ├── 07-Anti-Patterns.md
+│   ├── 08-Governance-Decision-Matrix.md # Sprint 173
+│   └── 09-Governance-Metrics.md         # Sprint 173
+├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (Ring 2)
 │   ├── tool-profiles/            # Claude Code, Cursor, Copilot profiles
+│   ├── best-practices-2026/      # 8 best practice guides
 │   ├── integration-guides/       # MCP integration specs
 │   ├── capability-matrix.md      # Tool comparison
 │   └── trend-watch/              # Monthly tool evolution updates
-├── 05-Templates-Tools/           # Templates & Automation
-│   ├── SASE-Artifacts/           # CRP, MRP, VCR, AGENTS.md template
-│   ├── Framework: 6.0.3** Unified Spec Standard
+├── 05-Templates-Tools/           # Templates & Automation (Ring 2)
+│   ├── 01-Specification-Standard/  # 5 SPECs + examples + schema
+│   │   ├── SPEC-0001 to SPEC-0005
 │   │   ├── SDLC-Specification-Standard.md
-│   │   ├── DESIGN_DECISIONS.md
-│   │   ├── SPEC_DELTA.md
-│   │   ├── CONTEXT_AUTHORITY_METHODOLOGY.md
-│   │   ├── OpenSpec-Analysis.md
-│   │   └── MIGRATION-PLAN-20-SPECS.md
-│   ├── 1-AI-Tools/               # AI prompts by stage
-│   ├── 2-Checklists/
-│   │   └── Stage-Transition-Checklist.md # NEW 5.3.0
-│   └── 3-Manual-Templates/
-├── 06-Case-Studies/              # BFlow, NQH-Bot examples
-├── 07-Implementation-Guides/     # Rollout guides
-├── 08-Training-Materials/
-├── 09-Continuous-Improvement/
-├── 10-Archive/                   # Centralized legacy archive (RFC-001, SDLC 6.0.5)
-│   ├── 00-Legacy/               # Foundation archives (version evolution)
-│   ├── 02-Legacy/               # Design archives (validation, deprecated specs)
-│   ├── 05-Legacy/               # Templates archives (tool guides, SASE)
-│   ├── 06-Legacy/               # Deploy archives (deployment guides)
-│   └── 09-Legacy/               # Govern archives (deprecated RFCs, scripts)
-├── CONTENT-MAP.md                # Topic → file mapping (5.2.0)
-└── DEPRECATION-POLICY.md         # Redirect rules (5.2.0)
+│   │   └── DESIGN_DECISIONS.md / SPEC_DELTA.md
+│   ├── 02-AI-Tools/              # 23 AI prompts by stage (FROZEN)
+│   ├── 03-Agent-Templates/       # CLAUDE.md template
+│   ├── 04-SASE-Artifacts/        # CRP, MRP, VCR, AGENTS.md
+│   ├── 05-Checklists/            # Stage transition + compliance
+│   ├── 06-Manual-Templates/      # Design Thinking + API templates
+│   ├── 07-Scripts/               # Validation scripts
+│   └── 08-Project-Templates/     # Planning hierarchy templates
+├── 06-Case-Studies/              # BFlow, MTEP, NQH-Bot examples (Ring 2)
+├── 07-Implementation-Guides/     # Rollout guides (Ring 3)
+├── 08-Training-Materials/        # Quick start + training (Ring 3)
+├── 09-Continuous-Improvement/    # RFCs + improvement guide (Ring 3)
+├── 10-Archive/                   # Centralized legacy archive
+│   ├── 00-Legacy/               # Foundation archives (SDLC 1.x-5.0)
+│   ├── 01-Legacy/               # Early version scripts
+│   ├── 02-Legacy/               # Deprecated guides + code review originals
+│   ├── 03-Legacy/               # Sprint 173 orchestrator specs
+│   ├── 04-Legacy/               # Sprint 117 POC
+│   ├── 05-Legacy/               # Tool guides, OpenSpec, SASE deprecated
+│   ├── 06-Legacy/               # Deployment guides v5.1.3
+│   └── 09-Legacy/               # Deprecated RFCs, scripts
+├── CONTENT-MAP.md                # Topic → file mapping
+├── DEPRECATION-POLICY.md         # Redirect rules
+└── CHANGELOG.md                  # Version history
 ```
 
 ---
@@ -430,9 +384,9 @@ SDLC-Enterprise-Framework/
 3. [SASE Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - Agentic workflow
 
 ### Path 2: Implement (3 hours)
-1. Download [AI Tools](./05-Templates-Tools/1-AI-Tools/) or [Manual Templates](./05-Templates-Tools/3-Manual-Templates/)
+1. Download [Templates](./05-Templates-Tools/) or [Checklists](./05-Templates-Tools/05-Checklists/)
 2. Run 1 feature through 10-stage methodology
-3. Setup [Code Review Tier](./07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
+3. Setup [Code Review](./07-Implementation-Guides/SDLC-Code-Review-Guide.md)
 
 ### Path 3: Full Rollout (2-3 weeks)
 1. Week 1: Team training + framework setup
@@ -449,43 +403,37 @@ SDLC-Enterprise-Framework/
 - [SDLC-Agentic-Core-Principles.md](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
 - [AI Governance Principles](./03-AI-GOVERNANCE/) - 7 timeless principles (5.2.0)
 
-**NEW in 5.3.0 (Stage Governance)**:
-- [SDLC-Stage-Dependencies.md](./02-Core-Methodology/SDLC-Stage-Dependencies.md) - ADR-041, explicit stage prerequisites
+**Stage Governance** (added 5.3.0, current as of 6.0.5):
+- [SDLC-Stage-Dependencies.md](./02-Core-Methodology/SDLC-Stage-Dependencies.md) - Explicit stage prerequisites
 - [SDLC-Stage-Exit-Criteria.md](./02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Documentation, evidence, signoff requirements
-- [SDLC-Stage-Sprint-Integration.md](./02-Core-Methodology/Governance-Compliance/SDLC-Stage-Sprint-Integration.md) - Multi-stage sprint handling
+- [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Sprint-stage coordination
 - [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - LITE/PRO/ENTERPRISE guidance
-- [Stage-Transition-Checklist.md](./05-Templates-Tools/2-Checklists/Stage-Transition-Checklist.md) - Actionable transition checklists
+- [Stage-Transition-Checklist.md](./05-Templates-Tools/05-Checklists/Stage-Transition-Checklist.md) - Actionable transition checklists
 
-**NEW in 5.3.0 (Quality Assurance)**:
+**Quality Assurance** (added 5.3.0, current as of 6.0.5):
 - [SDLC-Quality-Assurance-System.md](./02-Core-Methodology/SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
   - Vibecoding Index (0-100 composite score)
   - Progressive Routing (Auto-approve Green → CEO mandatory Red)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms, etc.)
 
-**NEW in 6.0.2 (Unified Specification Standard)**:
-- [SDLC-Specification-Standard.md](./05-Templates-Tools/Framework-6.0/SDLC-Specification-Standard.md) - **Section 8: Unified Spec Format**
+**Unified Specification Standard** (added 6.0.2, current as of 6.0.5):
+- [SDLC-Specification-Standard.md](./05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - **Section 8: Unified Spec Format**
   - YAML frontmatter (spec_id, tier, stage, category)
   - BDD requirements format (GIVEN-WHEN-THEN)
   - Acceptance criteria tables
   - ADR linking requirements
-- [DESIGN_DECISIONS.md](./05-Templates-Tools/Framework-6.0/DESIGN_DECISIONS.md) - Lightweight ADR alternative
+- [DESIGN_DECISIONS.md](./05-Templates-Tools/01-Specification-Standard/DESIGN_DECISIONS.md) - Lightweight ADR alternative
   - Sprint-scoped decisions
   - Options analysis (pros/cons/effort)
   - Escalation rules to full ADR
-- [SPEC_DELTA.md](./05-Templates-Tools/Framework-6.0/SPEC_DELTA.md) - Version change tracking
+- [SPEC_DELTA.md](./05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md) - Version change tracking
   - Breaking change documentation
   - Migration guides
   - CI/CD integration patterns
-- [CONTEXT_AUTHORITY_METHODOLOGY.md](./05-Templates-Tools/Framework-6.0/CONTEXT_AUTHORITY_METHODOLOGY.md) - Dynamic AGENTS.md
-  - 4 context zones (Static → Ephemeral)
-  - Gate-triggered updates
-  - Governance mode injection
-- [OpenSpec-Analysis.md](./05-Templates-Tools/Framework-6.0/OpenSpec-Analysis.md) - Week 8 Gate recommendation
-- [MIGRATION-PLAN-20-SPECS.md](./05-Templates-Tools/Framework-6.0/MIGRATION-PLAN-20-SPECS.md) - 20 priority specs for migration
 
 **AI Tools (Outer Ring)**:
-- [AI Tools Landscape](./04-AI-TOOLS-LANDSCAPE/) - Tool tracking for Orchestrator (5.2.0)
+- [AI Tools Landscape](./04-AI-TOOLS-LANDSCAPE/) - Tool-agnostic AI assistant best practices
 
 **Standards**:
 - [SDLC-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md) - Naming + Headers
@@ -494,34 +442,59 @@ SDLC-Enterprise-Framework/
 - [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2
 
 **Templates**:
-- [AGENTS.md Template](./05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
-- [SASE Artifacts](./05-Templates-Tools/SASE-Artifacts/) - CRP, MRP, VCR _(MTS/BRS/LPS deprecated)_
-- [AI Tools](./05-Templates-Tools/1-AI-Tools/) - AI prompts
+- [AGENTS.md Template](./05-Templates-Tools/04-SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
+- [SASE Artifacts](./05-Templates-Tools/04-SASE-Artifacts/) - CRP, MRP, VCR _(MTS/BRS/LPS deprecated)_
+- [Checklists](./05-Templates-Tools/05-Checklists/) - Stage transitions, SSOT compliance
 
 **Implementation**:
 - [SDLC-Implementation-Guide.md](./07-Implementation-Guides/SDLC-Implementation-Guide.md)
-- [SDLC-Universal-Code-Review-Framework.md](./07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md)
+- [SDLC-Code-Review-Guide.md](./07-Implementation-Guides/SDLC-Code-Review-Guide.md) - Unified 3-Tier SSOT
+
+---
+
+## Framework vs. Platform
+
+This Framework is **tool-agnostic policy**. Any platform can implement it:
+
+```
+┌───────────────────────────────────────────────────────────┐
+│             SDLC 6.0.5 Framework (THIS REPO)             │
+│      Methodology • Principles • Gates • Governance        │
+│                  (TOOL-AGNOSTIC)                         │
+└─────────────┬──────────────────┬─────────────────┬─────────────┘
+              │                  │                 │
+    ┌─────────┴────┐   ┌───────┴─────┐   ┌─────┴───────┐
+    │ SDLC Orchestrator│   │ Custom CI/CD │   │ Other Tools │
+    │ (one platform)   │   │ (scripts)    │   │ (future)    │
+    └──────────────────┘   └─────────────┘   └────────────┘
+```
+
+**Key architectural boundary**:
+- **Framework** defines: *what* (principles, stages, gates, evidence requirements)
+- **Platform** implements: *how* (APIs, database, UI, CLI that automates Framework rules)
+- **Relationship**: 1:N — one Framework, many possible platform implementations
+- **Invariant**: Teams can follow this Framework manually without ANY tool. Platforms make enforcement automatic.
+
+> **Rule**: Documents in this repo MUST NOT assume a specific platform.
+> When referencing a platform implementation, use "e.g., SDLC Orchestrator" — not as THE implementation.
 
 ---
 
 ## Version History
 
-| Version | Date | Key Changes |
-|---------|------|-------------|
-| **6.0.5** | **Feb 14, 2026** | **MINOR: RFC-001 + SPEC-0001 Anti-Vibecoding + Framework Templates** - RFC-001 Legacy Document Organization Standard (eliminates 99-Legacy/ from stages 00-09, centralizes to 10-Archive/{NN}-Legacy/). SPEC-0001 Anti-Vibecoding alignment (5 weighted signals: Intent Clarity 30%, Code Ownership 25%, Context Completeness 20%, AI Attestation Rate 15%, Historical Rejection Rate 10%). 4 new templates: Go-Live Readiness (Checklist + Assessment), Maturity Assessment Framework, Risk Register Analyzer. sdlcctl v1.7.0 with fuzzy P0 detection for legacy stage names. |
-| **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Integration + Sprint 3-Phase Model + Spec Converter** - TDD Workflow Integration proven through Sprint 154 (113 tests, 100% pass rate, RED-GREEN-REFACTOR validated). 3-Phase Sprint Lifecycle Model (PRE-SPRINT, EXECUTION, POST-SPRINT) with enhanced design doc validation. Spec Converter Methodology adds SpecIR intermediate representation, BDD ↔ OpenSpec bidirectional conversion, User Story → BDD chain, Jira/Linear import patterns. Tier-Aware TDD Requirements (LITE 70%, STANDARD 85%, PROFESSIONAL/ENTERPRISE 95%+). Sprint 154 Track 2 completion. |
-| **6.0.3** | **Feb 2, 2026** | **MINOR: Boris Cherny Consolidation (FINALIZED)** - Consolidated 5 RFC documents (603-607) into Framework structure following 3-Circle Architecture. **Created**: MCP Integration Guide (6x faster bug triage), Git Workflow Patterns (2.5x productivity via worktrees). **Enhanced**: Memory & Context Management (Continuous Learning Protocol), Sub-agent Orchestration (Research Delegation 3.3x faster), Visual Documentation Standards (4x faster onboarding). **Result**: -3 files (better organization), 0 methodology content loss, 100% Framework-First compliance. **Metrics preserved**: 6x, 2.5x, 3.3x, 4x productivity improvements. Tool-agnostic patterns work with Claude Code, Cursor, Copilot, GPT-4o, Gemini, Ollama. Sprint 143 Track 1 completion. |
-| **6.0.2** | **Feb 2, 2026** | **MINOR: E2E API Testing Enhancement** - RFC-SDLC-602 introduces standardized 6-phase E2E testing workflow, Stage Cross-Reference Matrix (Stage 03 ↔ 05 bidirectional traceability), OWASP API Security Top 10 checklist (2023), Testing Artifacts Structure (SDLC-compliant folders), sdlcctl E2E commands (validate, cross-reference, generate-report), OPA policy integration, 4 new Evidence types (e2e_test_report, security_test_report, api_coverage_report, cross_reference_validation). Addresses API testing gaps and SSOT validation. Sprint 139-141 completion. |
-| **6.0.1** | **Feb 1, 2026** | **MINOR: Stage Consistency Validation** - SPEC-0021 formalizes proven 4-stage consistency validation workflow (Stage 01 PLANNING ↔ Stage 02 DESIGN ↔ Stage 03 INTEGRATE ↔ Stage 04 BUILD). Includes pre/post-implementation checklists, artifact integrity hashing (SHA256), CLI validation commands, CI/CD integration patterns, tier-specific validation depths. Addresses "spec drift" where implementation diverges from approved designs. Sprint 134 completion. |
-| **6.0.0** | **Jan 28, 2026** | **MAJOR: Unified Specification Standard (Section 8)** - YAML frontmatter requirement, BDD requirements format, DESIGN_DECISIONS.md template (lightweight ADRs), SPEC_DELTA.md template (version tracking), Context Authority Methodology (dynamic AGENTS.md with 4 zones), OpenSpec alignment analysis, 20 priority spec migration plan. Breaking: All new specs must use unified format. |
-| 5.3.0 | Jan 28, 2026 | **Stage Dependency Matrix + Quality Assurance System** - Explicit stage dependencies (ADR-041), Stage Exit Criteria, Sprint-Stage Integration, Tier-Specific Requirements, Stage Transition Checklists, Quality Assurance System (Section 7 - Anti-Vibecoding: Vibecoding Index, Progressive Routing, Auto-Generation Layer, Kill Switch) |
-| 5.2.0 | Jan 22, 2026 | **Principle-Centric Restructuring** - AI Governance Principles, Risk-Based Planning, Concentric Circles Model, CONTENT-MAP.md, DEPRECATION-POLICY.md |
-| 5.1.3 | Jan 18, 2026 | **Sprint Planning Governance** - G-Sprint/G-Sprint-Close gates, Roadmap Change Control, 10 Golden Rules |
-| 5.1.2 | Dec 24, 2025 | Quality Gates enhancement, Change Management update |
-| 5.1.1 | Dec 12, 2025 | Correct stage numbering, Legacy/Archive folder skip |
-| 5.1.0 | Dec 11, 2025 | SASE integration, Stage 03 INTEGRATE repositioned |
-| 5.0.0 | Dec 5, 2025 | 4-Tier Classification, Governance standards |
-| 4.9.0 | Nov 13, 2025 | 10-Stage lifecycle |
+For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
+
+| Version | Date | Summary |
+|---------|------|----------|
+| **6.0.5** | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup |
+| 6.0.4 | Feb 8, 2026 | TDD Integration + Sprint 3-Phase Model + Spec Converter |
+| 6.0.3 | Feb 2, 2026 | Boris Cherny Consolidation, MCP Integration Guide |
+| 6.0.2 | Feb 2, 2026 | E2E API Testing Enhancement |
+| 6.0.1 | Feb 1, 2026 | Stage Consistency Validation |
+| 6.0.0 | Jan 28, 2026 | Unified Specification Standard (Section 8) |
+| 5.3.0 | Jan 28, 2026 | Stage Dependencies + Quality Assurance System |
+| 5.2.0 | Jan 22, 2026 | AI Governance Principles + Concentric Circles |
+| 5.0.0 | Dec 5, 2025 | 4-Tier Classification |
 | 4.8.0 | Nov 7, 2025 | Design Thinking foundation |
 
 ---

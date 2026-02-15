@@ -654,7 +654,7 @@ Please help me:
 ---
 
 **Template**: User-Journey-Map-Template
-**Part of**: SDLC 5.0 Design Thinking Framework
+**Part of**: SDLC 6.0.5 Design Thinking Framework
 **Phase**: EMPATHIZE (Stage 00 - WHY?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

@@ -19,8 +19,7 @@ tags:
   - progressive-routing
 related_specs:
   - SPEC-0002  # Specification Standard
-  - SPEC-0003  # AI Context Engine
-  - SPEC-0004  # Policy Guards
+  - SPEC-0003  # Policy Guards
 epic: Foundation - Quality Assurance
 sprint: Sprint 114-116 (Jan 2026)
 ```
@@ -135,19 +134,19 @@ graph TB
 
 ### 2.2 Component Architecture
 
-**Vibecoding Index Calculator** (`backend/app/services/vibecoding_index.py`):
+**Vibecoding Index Calculator** (service layer):
 - Fetches 5 signal values from Evidence Vault
 - Applies weighted formula (30% Intent, 25% Ownership, 20% Context, 15% Attestation, 10% Rejection)
 - Returns index (0-100) with zone classification (Green/Yellow/Orange/Red)
 - Performance: <500ms p95 for index calculation
 
-**Progressive Router** (`backend/app/services/progressive_router.py`):
+**Progressive Router** (service layer):
 - Routes submissions based on vibecoding index
 - Enforces zone-specific review requirements (1 approval → 2 reviews → senior → council)
 - Blocks Red zone submissions (SOFT mode) or escalates to AI Council
 - Integrates with GitHub/GitLab APIs for PR status updates
 
-**Kill Switch Monitor** (`backend/app/services/kill_switch_monitor.py`):
+**Kill Switch Monitor** (service layer):
 - Monitors 3 metrics: Rejection rate, Latency p95, Security CVEs
 - Triggers disable on: 80% rejection (30min), 500ms latency (15min), 5+ CVEs (immediate)
 - Disables AI codegen for 24 hours (gradual re-enable: 10% → 50% → 100%)
@@ -766,7 +765,7 @@ kill_switch_trigger_total = Counter(
 
 **Internal Dependencies**:
 - SPEC-0002: Quality-Gates-Codegen (4-Gate pipeline integration)
-- SPEC-0004: Policy-Guards-Design (OPA policy enforcement)
+- SPEC-0003: Policy-Guards-Design (OPA policy enforcement)
 - Evidence Vault API (signal fetching, evidence storage)
 - AI Council Service (Red zone escalation)
 

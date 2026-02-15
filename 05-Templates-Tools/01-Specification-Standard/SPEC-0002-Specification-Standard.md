@@ -19,7 +19,7 @@ tags:
   - framework-6.0
 related_specs:
   - SPEC-0001  # Anti-Vibecoding
-  - SPEC-0003  # AI Context Engine
+  - SPEC-0003  # Policy Guards
 epic: Foundation - Framework 6.0
 sprint: Sprint 114-117 (Jan 2026)
 ```
@@ -827,7 +827,7 @@ All acceptance criteria must pass before specification standard is considered AP
 **Deliverables**:
 1. **Migrate existing specs to Framework 6.0.5 format**:
    - SPEC-0020-Quality-Gates-Codegen.md ✅
-   - SPEC-0004-Policy-Guards-Design.md ✅
+   - SPEC-0003-Policy-Guards-Design.md ✅
    - SPEC-0005-System-Architecture-Document.md ✅
    - (15+ additional specs completed)
 
@@ -937,8 +937,7 @@ All acceptance criteria must pass before specification standard is considered AP
 ### Related Specifications
 
 - **[SPEC-0001: Anti-Vibecoding](./SPEC-0001-Anti-Vibecoding.md)** - Quality governance specification following Framework 6.0.5 format
-- **[SPEC-0003: AI Context Engine Architecture](./SPEC-0003-AI-Context-Engine-Architecture.md)** - Context engine specification following Framework 6.0.5 format
-- **[SPEC-0004: Policy Guards Design](./SPEC-0004-Policy-Guards-Design.md)** - Policy enforcement specification following Framework 6.0.5 format
+- **[SPEC-0003: Policy Guards Design](./SPEC-0003-Policy-Guards-Design.md)** - Policy enforcement specification following Framework 6.0.5 format
 
 ### Machine-Readable Specifications
 

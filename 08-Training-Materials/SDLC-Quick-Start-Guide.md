@@ -581,7 +581,7 @@ Continuous Improvement:
 1. **[Executive Summary](../01-Overview/SDLC-Executive-Summary.md)** - Overview
 2. **[Core Methodology](../02-Core-Methodology/SDLC-Core-Methodology.md)** - Complete 10-stage guide
 3. **[Design Thinking Principles](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md)** - Complete 5-phase guide
-4. **[Code File Naming Standards](../02-Core-Methodology/Documentation-Standards/SDLC-Code-File-Naming-Standards.md)** - File naming conventions
+4. **[Naming Standards](../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md)** - File naming conventions
 5. **[AI-Tools (PRIMARY)](../05-Templates-Tools/AI-Tools/)** - Design Thinking, design-to-code, code review (96% time savings)
 6. **[Agent-Templates](../05-Templates-Tools/Agent-Templates/)** - Configure Claude Code, Cursor, Copilot, etc.
 7. **[Manual-Templates (BACKUP)](../05-Templates-Tools/Manual-Templates/)** - Traditional templates when AI unavailable
@@ -590,8 +590,7 @@ Continuous Improvement:
 10. **[Training Materials](./SDLC-Training-Materials.md)** - 8-hour comprehensive training
 
 ### Code Review Tier Guides
-- **Tier 1**: [Manual Code Review Playbook](../07-Implementation-Guides/SDLC-Manual-Code-Review-Playbook.md)
-- **Tier 2**: [Subscription-Powered Guide](../07-Implementation-Guides/SDLC-Subscription-Powered-Code-Review-Guide.md)
+- **All Tiers**: [Code Review Guide](../07-Implementation-Guides/SDLC-Code-Review-Guide.md) - Consolidated guide (Tier 1-3)
 - **Tier 3**: [CodeRabbit Integration Guide](../07-Implementation-Guides/SDLC-CodeRabbit-Integration-Guide.md)
 
 ### Quick AI Prompts

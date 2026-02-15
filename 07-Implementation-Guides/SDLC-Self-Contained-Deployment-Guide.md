@@ -1,4 +1,4 @@
-# SDLC 5.3.0 Self-Contained Deployment Guide
+# SDLC 6.0.5 Self-Contained Deployment Guide
 
 **Version**: 6.0.5
 **Date**: January 27, 2026
@@ -29,7 +29,7 @@
 ```
 docs/08-Team-Management/03-SDLC-Compliance/
 ├── README.md                           ← Start here
-├── Core-Methodology/                   ← What is SDLC 5.1?
+├── Core-Methodology/                   ← What is SDLC 6.0.5?
 ├── SASE-Artifacts/                     ← How to work with AI agents?
 ├── Governance-Compliance/              ← What are the rules?
 ├── Documentation-Standards/            ← How to document?
@@ -203,7 +203,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Step 2: Add Project Header**
 ```markdown
 ---
-**SDLC Version**: 5.1.3
+**SDLC Version**: 6.0.5
 **Project**: [Your Project Name]
 **Team Tier**: PROFESSIONAL | STANDARD | LITE | ENTERPRISE
 **Adapted**: [Date]
@@ -272,7 +272,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Purpose**: Every team member starts here
 
 ```markdown
-# SDLC 5.1 Compliance - [Project Name]
+# SDLC 6.0.5 Compliance - [Project Name]
 
 ## 🚀 I want to...
 
@@ -300,7 +300,7 @@ cp /path/to/SDLC-Framework/source.md \
 
 ## 📚 Folders
 
-- **Core-Methodology/** - What is SDLC 5.1?
+- **Core-Methodology/** - What is SDLC 6.0.5?
 - **SASE-Artifacts/** - How to work with AI agents?
 - **Governance-Compliance/** - What are the rules?
 - **Documentation-Standards/** - How to document?
@@ -316,7 +316,7 @@ cp /path/to/SDLC-Framework/source.md \
 - **Team**: 11 members (6 Remote + 5 Local)
 - **Tier**: PROFESSIONAL
 - **Tech**: Python 3.11+, FastAPI, PostgreSQL, React
-- **Timeline**: Sprint 48-50 (Jan-Feb 2026)
+- **Timeline**: Jan-Feb 2026
 
 ### BFlow Adaptation Example
 
@@ -414,7 +414,7 @@ Projects must implement quality gates appropriate to their tier.
 - Refine quick reference based on FAQs
 
 ### Quarterly Update
-- Sync with SDLC Framework updates (5.2, 5.3...)
+- Sync with SDLC Framework updates (6.0.x, 6.1...)
 - Add lessons learned
 - Archive outdated content
 
@@ -429,7 +429,7 @@ Projects must implement quality gates appropriate to their tier.
 
 - **SDLC Framework**: https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework
 - **SDLC Deployment Guide**: `07-Implementation-Guides/SDLC-Deployment-Guide.md`
-- **Tier Classification**: `01-Overview/SDLC-Tier-Classification.md`
+- **Tier Classification**: `02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md`
 
 ---
 

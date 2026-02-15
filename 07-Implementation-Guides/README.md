@@ -58,7 +58,7 @@ Adopt SDLC 6.0.5 incrementally into running projects.
 | **3-Phase Sprint** | PRE-SPRINT → EXECUTION → POST-SPRINT (enhanced with TDD) |
 | **Tier-Aware TDD Coverage** | LITE 70%, STANDARD 85%, PROFESSIONAL/ENTERPRISE 95% |
 | **Spec Converter** | SpecIR for OpenSpec ↔ SDLC 6.0 bidirectional conversion |
-| **Sprint 154 Validation** | 113 tests written with TDD, 100% pass rate |
+| **Validation Results** | 113 tests written with TDD, 100% pass rate |
 
 ---
 
@@ -105,8 +105,7 @@ Adopt SDLC 6.0.5 incrementally into running projects.
 | Guide | Tier | Team Size | Cost |
 |-------|------|-----------|------|
 | **SDLC-Universal-Code-Review-Framework.md** | Overview | All | - |
-| **SDLC-Manual-Code-Review-Playbook.md** | Tier 1 | 1-5 | $0 |
-| **SDLC-Subscription-Powered-Code-Review-Guide.md** | Tier 2 | 5-20 | $0* |
+| **SDLC-Code-Review-Guide.md** | All Tiers | All | Consolidated |
 | **SDLC-CodeRabbit-Integration-Guide.md** | Tier 3 | 15-100+ | $12-15/seat |
 
 *Uses existing AI subscriptions

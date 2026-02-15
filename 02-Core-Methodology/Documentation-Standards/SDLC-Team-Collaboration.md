@@ -961,6 +961,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar + AI Governance Principles |
 | 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
 | 5.3.0 | Jan 28, 2026 | Consolidated from 4 files (Collaboration, Communication, Escalation, README) |
 | 5.2.0 | Jan 22, 2026 | Added AI Governance alignment |

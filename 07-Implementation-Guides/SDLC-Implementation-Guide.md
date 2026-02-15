@@ -47,7 +47,7 @@ Is this a NEW project?
 │         └── Pick Tier → Follow Quick Start → Done
 │
 └── NO → Already have code/docs?
-          ├── YES, using SDLC 5.x → Version Migration Path
+          ├── YES, using SDLC 5.x/6.x → Version Migration Path
           │         └── Run compatibility check → Fix gaps → Done
           │
           └── YES, but NO SDLC yet → Brownfield Path
@@ -108,7 +108,7 @@ pip install pre-commit  # or npm install husky
 **Step 3: Code Review Setup (30 min)**
 - Solo developer? → Self-review checklist
 - 2 people? → Cross-review PRs
-- See: `SDLC-Manual-Code-Review-Playbook.md`
+- See: `SDLC-Code-Review-Guide.md`
 
 ### Afternoon (4 hours): First Feature
 
@@ -909,9 +909,9 @@ Phase 4 Adds:
 
 ---
 
-## ⬆️ Version Migration (5.x → 6.0)
+## ⬆️ Version Migration (5.x → 6.0.5)
 
-**For teams already using SDLC 5.x who want to upgrade to 6.0.0.**
+**For teams already using SDLC 5.x who want to upgrade to 6.0.5.**
 
 ### What Changed in 6.0.0?
 
@@ -1134,7 +1134,7 @@ For teams new to SDLC 6.0.5, the BFlow "stealth pilot" approach reduces risk by 
 
 ### Core Reading (Start Here)
 - `SDLC-PRE-COMMIT-HOOKS.md` - Setup quality gates
-- `SDLC-Manual-Code-Review-Playbook.md` - Free code review
+- `SDLC-Code-Review-Guide.md` - Code review (all tiers)
 - `../05-Templates-Tools/SASE-Artifacts/` - SASE templates
 
 ### By Need

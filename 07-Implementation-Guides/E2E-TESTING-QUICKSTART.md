@@ -82,7 +82,7 @@ cat > docs/05-test/03-E2E-Testing/README.md << 'EOF'
 | API Document (Stage 03) | Test Report (Stage 05) |
 |-------------------------|------------------------|
 | [openapi.json](../../03-integrate/02-API-Specifications/openapi.json) | [Latest Report](reports/) |
-| [API Endpoint Reference](../../03-integrate/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md) | [Test Coverage](reports/) |
+| API Endpoint Reference (see project's API docs) | [Test Coverage](reports/) |
 EOF
 ```
 
@@ -213,7 +213,7 @@ sdlcctl e2e generate-report \
 
 ### Getting Help
 
-- **RFC**: [RFC-SDLC-602-E2E-API-TESTING.md](../09-Continuous-Improvement/RFC/RFC-SDLC-602-E2E-API-TESTING.md)
+- **RFC**: RFC-SDLC-602-E2E-API-TESTING (see Orchestrator `docs/` for implementation details)
 - **SDLC Orchestrator Team**: Slack #sdlc-orchestrator
 - **FAQ**: See below
 

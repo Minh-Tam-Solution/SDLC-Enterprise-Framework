@@ -3,7 +3,7 @@
 **Framework**: SDLC 6.0.5
 **Last Updated**: January 28, 2026
 **Status**: PRODUCTION-READY
-**Related**: [ADR-041 Stage Dependency Matrix](../ADR-041-Stage-Dependency-Matrix.md), [Stage Exit Criteria](../SDLC-Stage-Exit-Criteria.md)
+**Related**: [Stage Dependencies](../SDLC-Stage-Dependencies.md), [Stage Exit Criteria](../SDLC-Stage-Exit-Criteria.md)
 
 ---
 
@@ -493,10 +493,10 @@ Project: Instagram Clone (LITE Tier)
 
 ## Related Documents
 
-- [ADR-041: Stage Dependency Matrix](../ADR-041-Stage-Dependency-Matrix.md) - Stage dependencies
+- [SDLC-Stage-Dependencies.md](../SDLC-Stage-Dependencies.md) - Stage dependencies
 - [SDLC-Stage-Exit-Criteria.md](../SDLC-Stage-Exit-Criteria.md) - Stage completion criteria
-- [SDLC-Stage-Sprint-Integration.md](../Governance-Compliance/SDLC-Stage-Sprint-Integration.md) - Sprint-stage coordination
-- [Stage-Transition-Checklist.md](../../05-Templates-Tools/2-Checklists/Stage-Transition-Checklist.md) - Stage transition checklists
+- [SDLC-Sprint-Governance.md](../Governance-Compliance/SDLC-Sprint-Governance.md) - Sprint-stage coordination
+- [Stage-Transition-Checklist.md](../../05-Templates-Tools/05-Checklists/Stage-Transition-Checklist.md) - Stage transition checklists
 - [AI Governance Principles](../SDLC-Agentic-Core-Principles.md) - AI/ML governance requirements
 
 ---

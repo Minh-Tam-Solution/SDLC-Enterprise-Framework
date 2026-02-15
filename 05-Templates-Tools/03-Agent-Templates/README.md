@@ -31,7 +31,7 @@ This folder will expand with **Context Authority V2** implementation:
 | Agent persona templates | 121 | Architect, Debugger, Optimizer |
 | Multi-agent coordination | 122 | Cross-agent communication patterns |
 
-**Reference**: See [SPEC-0007](../01-Specification-Standard/SPEC-0007-AGENTS-MD-Technical-Design.md) for Context Authority roadmap.
+**Reference**: See [AGENTS-MD-Template.md](../04-SASE-Artifacts/AGENTS-MD-Template.md) for the industry-standard AGENTS.md template.
 
 ---
 
