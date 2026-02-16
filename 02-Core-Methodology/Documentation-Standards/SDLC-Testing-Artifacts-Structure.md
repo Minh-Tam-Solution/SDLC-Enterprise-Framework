@@ -362,8 +362,8 @@ EOF
 
 ### Validate Structure
 ```bash
-# Using sdlcctl
-sdlcctl validate-structure --stage 05
+# Using SDLC CLI
+[SDLC CLI] validate-structure --stage 05
 
 # Manual check
 ls -la docs/05-Testing-Quality/03-E2E-Testing/artifacts/openapi.json

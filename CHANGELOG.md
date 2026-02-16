@@ -51,10 +51,29 @@ All 3 documents sit in the **Core Ring** (timeless methodology):
 ## 🚀 Version 6.0.5 - February 15, 2026 (MINOR RELEASE)
 
 **Release Date**: February 15, 2026
-**Type**: MINOR RELEASE - Governance Loop + Sprint 173 Cleanup
+**Type**: MINOR RELEASE - RFC-001 Legacy Org + SPEC-0001 Alignment + Governance Loop + Sprint 173 Cleanup
 **Status**: PRODUCTION-READY
 **Breaking Changes**: No (additive only)
 **Supersedes**: SDLC 6.0.4 TDD Workflow + Spec Converter Integration
+
+### Key Enhancements
+
+| Enhancement | Description | Key Benefit |
+|-------------|-------------|-------------|
+| **RFC-001 Legacy Document Organization** | Centralize 99-Legacy/ → 10-Archive/{NN}-Legacy/ | 57% size reduction, eliminates AI context pollution |
+| **SPEC-0001 Anti-Vibecoding Alignment** | 5 Vibecoding Index signals machine-readable | Progressive Routing: <20/20-40/40-60/>=60 |
+| **4 New Framework Templates** | Go-Live Checklist, Go-Live Assessment, Maturity Framework, Risk Register | ~80-85% time savings per template |
+| **Governance Loop Simplification** | Code review consolidation (3 guides → 1) | Reduced maintenance burden |
+| **SDLC CLI Fuzzy P0 Detection** | 3-strategy resolution for legacy stage names | P0 detection: 0% → 64-71% |
+
+### Files Created/Enhanced
+
+1. **09-Continuous-Improvement/RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md** - MANDATORY standard
+2. **05-Templates-Tools/02-AI-Tools/deployment_go-live-readiness-checklist.md** - 100-item tactical checklist
+3. **05-Templates-Tools/02-AI-Tools/deployment_go-live-readiness-assessment.md** - Go/No-Go scoring
+4. **05-Templates-Tools/02-AI-Tools/governance_maturity-assessment-framework.md** - Per-stage 0-100%
+5. **05-Templates-Tools/02-AI-Tools/governance_risk-register-analyzer.md** - L×I scoring matrix
+6. **07-Implementation-Guides/SDLC-Code-Review-Guide.md** - Unified (consolidated from 3 guides)
 
 ---
 

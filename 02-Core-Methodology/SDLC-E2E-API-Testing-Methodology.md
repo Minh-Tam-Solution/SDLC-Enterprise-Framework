@@ -115,8 +115,8 @@ Phase 3: Report → Phase 4: Update Docs → Phase 5: Cross-Ref
 
 **Generate from OpenAPI**:
 ```bash
-# Using sdlcctl
-sdlcctl e2e parse-openapi \
+# Using SDLC CLI tool
+[SDLC CLI] e2e parse-openapi \
   docs/03-integrate/02-API-Specifications/openapi.json \
   --generate-tests \
   --test-output tests/e2e/
@@ -255,7 +255,7 @@ git commit -m "docs(Stage 03): Update API spec based on E2E test findings"
 
 3. **SSOT Compliance** (no duplicates):
    ```bash
-   sdlcctl e2e cross-reference \
+   [SDLC CLI] e2e cross-reference \
      --stage-03 docs/03-integrate \
      --stage-05 docs/05-test
 
@@ -332,7 +332,7 @@ THEN:
 - oasdiff (breaking change detection)
 
 **Test Generation**:
-- sdlcctl e2e parse-openapi (SDLC Orchestrator CLI)
+- SDLC CLI e2e parse-openapi (compliance validator tool)
 - Schemathesis (Python auto-generation)
 - Portman (Postman collection generator)
 
@@ -412,7 +412,7 @@ Before merging, ensure:
 - [ ] E2E test report created in Stage 05
 - [ ] Stage 03 README links to test report
 - [ ] Stage 05 README links to openapi.json
-- [ ] `sdlcctl e2e cross-reference` validation passes
+- [ ] SDLC E2E cross-reference validation passes
 ```
 
 ---

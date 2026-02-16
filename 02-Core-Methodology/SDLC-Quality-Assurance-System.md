@@ -560,6 +560,11 @@ for signal in signals:
 - [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md) - Stage transition rules
 - [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md) - AI Governance Principles
 
+**AI Governance (6.0.6):**
+- [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - Autonomous Codegen with Quality Gates (4-Gate Pipeline applies Section 7 principles to AI code generation)
+- [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - CLAUDE.md Standard (structured AI context improves Intent Clarity and Context Completeness signals)
+- [SDLC-MRP-Template.md](./SDLC-MRP-Template.md) - Merge-Readiness Package Template (evidence-based merge approval)
+
 **Reference Implementation:**
 - See your platform's governance service layer for implementation details
 - Example: SDLC Orchestrator implements this in its governance service module
@@ -575,6 +580,7 @@ for signal in signals:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.0.1 | 2026-02-16 | Added cross-references to 6.0.6 Autonomous Codegen Patterns, CLAUDE.md Standard, and MRP Template | Framework Team |
 | 1.0.0 | 2026-01-27 | Initial version - Anti-Vibecoding Governance | CTO (Tai) |
 
 ---

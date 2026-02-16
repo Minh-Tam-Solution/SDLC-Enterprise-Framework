@@ -139,7 +139,7 @@ Not all tiers need the same rigor. Targets scale with tier:
 ### Sprint Summary (Weekly)
 
 ```
-Sprint 173 — Governance Summary
+Sprint N — Governance Summary
 ═══════════════════════════════
 
   Vibecoding Index (avg):  34  ██████████░░░░░░░░░░  YELLOW

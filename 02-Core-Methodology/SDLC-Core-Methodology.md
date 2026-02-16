@@ -1,8 +1,8 @@
 # SDLC 6.0.6 Core Methodology
 
 **Version**: 6.0.6
-**Date**: February 14, 2026
-**Status**: ACTIVE - RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 + Framework Templates
+**Date**: February 16, 2026
+**Status**: ACTIVE - Anthropic Best Practices Integration + RFC-001 Legacy Organization + SPEC-0001
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
@@ -233,7 +233,7 @@ SDLC 6.0.6 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 ### Why Sprint Governance is a Core Pillar
 
-**The Incident That Changed Everything** (BFlow Sprint 86, January 18, 2026):
+**The Incident That Changed Everything** (production platform incident, January 2026):
 - 27-day documentation lag
 - 4+ documents with inconsistent sprint references
 - Sprint started without formal approval
@@ -721,6 +721,11 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md) - SASE/SE 3.0 principles
 - [SDLC-Agentic-Maturity-Model.md](./SDLC-Agentic-Maturity-Model.md) - L0→L3 progression
 - [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) - User-centered approach
+- [SDLC-MRP-Template.md](./SDLC-MRP-Template.md) - **Merge-Readiness Package (5-section template, 6.0.6)**
+
+### AI Governance (6.0.6)
+- [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - **CLAUDE.md Standard for AI-Assisted Development (3-Tier)**
+- [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - **Autonomous Codegen with Quality Gates (Two-Agent Pattern)**
 
 ### Section 8 - Unified Specification Standard (6.0.0+)
 - [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
@@ -746,7 +751,7 @@ Quality Assurance Standards (5.3.0):
 - [When-Planning-Sprint.md](./Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - Sprint planning guide
 
 ### Case Studies
-- [BFlow Sprint 86 Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Incident that triggered Pillar 2
+- [Sprint Direction Confusion Case Study](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Incident that triggered Pillar 2
 
 ---
 
@@ -754,7 +759,8 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.0.6** | **Feb 14, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
+| **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** -- 3 new docs: CLAUDE.md Standard (3-Tier), Autonomous Codegen Patterns (4-Gate Pipeline), MRP Template (5-section). See [10-CLAUDE-MD-STANDARD](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md), [11-AUTONOMOUS-CODEGEN-PATTERNS](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md), [SDLC-MRP-Template](./SDLC-MRP-Template.md) |
+| **6.0.5** | **Feb 15, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
 | **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement** - RED-GREEN-REFACTOR cycle, tier-aware coverage (LITE 70% → ENT 95%), Spec Converter (SpecIR) |
 | **6.0.3** | **Feb 5, 2026** | **MINOR: Boris Cherny Best Practices Consolidation** - 5 RFCs → Framework structure, MCP Integration Guide, Git Workflow Patterns |
 | **6.0.2** | **Feb 3, 2026** | **MINOR: E2E API Testing Enhancement (RFC-SDLC-602)** - 6-phase testing workflow, Stage 03↔05 cross-reference, OWASP API Top 10 |
@@ -772,10 +778,10 @@ Quality Assurance Standards (5.3.0):
 
 ---
 
-**Last Updated**: February 14, 2026
+**Last Updated**: February 16, 2026
 **Maintained By**: Framework Team
 **Authority**: CTO Approved
-**Case Study**: [BFlow Sprint 86](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
+**Case Study**: [Sprint Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
 **Quality Assurance**: [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Section 7
 **Unified Specs**: [Specification Standard](../05-Templates-Tools/01-Specification-Standard/) - Section 8
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

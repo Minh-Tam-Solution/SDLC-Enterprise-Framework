@@ -1,11 +1,11 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
 **Version**: 6.0.6
-**Date**: February 14, 2026
+**Date**: February 16, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD + RFC-001)
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -469,12 +469,18 @@ SDLC 6.0.4 (February 8, 2026):
   → Tier-Aware TDD Coverage (LITE 70%, STANDARD 85%, PRO/ENT 95%)
   → Sprint 154 Validation: 113 tests, 100% pass rate
 
-SDLC 6.0.6 (February 14, 2026): ⭐ CURRENT
+SDLC 6.0.5 (February 15, 2026):
   → RFC-001: Legacy Document Organization Standard (99-Legacy eliminated from stages)
   → SPEC-0001: Anti-Vibecoding alignment (5 weighted signals)
   → 4 New Framework Templates (Go-Live, Maturity Assessment, Risk Register)
   → sdlcctl v1.7.0: Fuzzy P0 detection for legacy stage names
   → Cross-document SPEC-0001 consistency enforcement
+
+SDLC 6.0.6 (February 16, 2026): ⭐ CURRENT
+  → Sprint 174: Anthropic Best Practices Integration
+  → 3-Tier CLAUDE.md Standard (LITE/PRO/ENTERPRISE) - doc 10
+  → Two-Agent Autonomous Codegen Patterns - doc 11
+  → MRP 5-Section Template (Merge-Readiness Package)
 ```
 
 ---
@@ -501,7 +507,7 @@ SDLC 6.0.6 (February 14, 2026): ⭐ CURRENT
 
 ---
 
-**Last Updated**: February 14, 2026
+**Last Updated**: February 16, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **Framework Version**: 6.0.6

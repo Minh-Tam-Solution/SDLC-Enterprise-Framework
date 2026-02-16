@@ -59,7 +59,7 @@ These anti-patterns come from production failures and expert experience.
    AI creates mocks for unknown dependencies
    "I'll implement the real version later"
    Mocks hide integration issues
-   78% production failure rate (NQH-Bot case)
+   78% production failure rate (AI chatbot project case)
 
 ✅ SOLUTION:
    Zero Mock Policy

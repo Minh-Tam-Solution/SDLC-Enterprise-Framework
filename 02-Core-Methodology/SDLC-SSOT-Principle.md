@@ -40,7 +40,7 @@ project/
 - ❌ **Client Breakage**: SDK generated from wrong version → production bugs
 
 **Real-World Impact**:
-> "We spent 6 hours debugging a test failure, only to discover frontend was using openapi.json v1.1.0 while backend was v1.2.0. The API worked fine, but tests failed because schemas didn't match." — NQH-Bot Crisis (2024)
+> "We spent 6 hours debugging a test failure, only to discover frontend was using openapi.json v1.1.0 while backend was v1.2.0. The API worked fine, but tests failed because schemas didn't match." -- Production incident from an AI chatbot project (2024)
 
 ### Solution: With SSOT
 
@@ -459,7 +459,7 @@ DATABASE_URL = getenv("DATABASE_URL")  # References .env.example structure
 **Measurement**:
 ```bash
 # Run SSOT validator
-sdlcctl validate --ssot
+[SDLC CLI] validate --ssot
 
 # Expected:
 # ✅ openapi.json: 1 canonical, 0 duplicates

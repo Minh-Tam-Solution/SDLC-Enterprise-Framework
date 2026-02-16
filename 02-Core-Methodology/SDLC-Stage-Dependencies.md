@@ -26,9 +26,9 @@ SDLC Framework 6.0.6 defines a **10-stage lifecycle** (00-FOUNDATION through 09-
 - Implicit knowledge ("you can't deploy before testing")
 
 **Business Impact**:
-- Sprint planning confusion (Sprint 106 crossed Stages 02 → 03 → 04 with no transition documentation)
+- Sprint planning confusion (a sprint crossed Stages 02 → 03 → 04 with no transition documentation)
 - Stage skip decisions ambiguous (LITE tier: "Stage 03 optional" but no guidance on consequences)
-- Tooling gaps (`sdlcctl` cannot validate stage prerequisites)
+- Tooling gaps (SDLC CLI tools cannot validate stage prerequisites)
 - Onboarding friction (new teams guess stage sequencing)
 
 ### Forces
@@ -42,7 +42,7 @@ SDLC Framework 6.0.6 defines a **10-stage lifecycle** (00-FOUNDATION through 09-
 | **Safety** | Enforce prerequisites | Can't deploy untested code |
 | **Speed** | Enable early starts | Stage 09 (GOVERN) can start at Stage 01 for regulated industries |
 | **Simplicity** | Avoid over-prescription | Not every project needs all 10 stages |
-| **Tooling** | Machine-readable format | `sdlcctl` needs to parse dependencies |
+| **Tooling** | Machine-readable format | SDLC CLI tools need to parse dependencies |
 
 ---
 
@@ -341,7 +341,7 @@ flowchart TD
 ### Benefits
 
 ✅ **Clarity**: Explicit dependencies remove ambiguity for stage transitions  
-✅ **Tooling**: `sdlcctl` can validate stage prerequisites automatically  
+✅ **Tooling**: SDLC CLI tools can validate stage prerequisites automatically
 ✅ **Flexibility**: `parallel_ok` and `early_start_triggers` enable complex workflows  
 ✅ **Safety**: Prerequisite gates prevent unsafe transitions (deploy before testing)  
 ✅ **Guidance**: Skip conditions and risk levels help LITE tier decisions  
@@ -366,17 +366,17 @@ flowchart TD
 3. Update CHANGELOG.md for SDLC 6.0.6 release
 4. Create Stage-Exit-Criteria.md (separate document, references this ADR)
 
-**Orchestrator (SDLC-Orchestrator)**:
-1. `sdlcctl` validator: Add stage prerequisite validation
+**Orchestrator (Automation Layer)**:
+1. SDLC CLI validator: Add stage prerequisite validation
 2. Sprint planning templates: Include stage transition tracking
-3. CURRENT-SPRINT.md: Add stage tracking fields
+3. Current sprint plan: Add stage tracking fields
 
 **Tooling**:
 ```bash
-# Future sdlcctl commands
-sdlcctl validate --stage-transition 02 03  # Validate Stage 02 → 03 transition
-sdlcctl show-dependencies --stage 04       # Show Stage 04 prerequisites
-sdlcctl check-skip-safe --stage 05 --tier LITE  # Check if safe to skip Stage 05
+# Example SDLC CLI commands (implementation-specific)
+[SDLC CLI] validate --stage-transition 02 03  # Validate Stage 02 → 03 transition
+[SDLC CLI] show-dependencies --stage 04       # Show Stage 04 prerequisites
+[SDLC CLI] check-skip-safe --stage 05 --tier LITE  # Check if safe to skip Stage 05
 ```
 
 ---
@@ -390,7 +390,7 @@ sdlcctl check-skip-safe --stage 05 --tier LITE  # Check if safe to skip Stage 05
 - [SDLC-Tier-Stage-Requirements.md](../Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - LITE tier guidance (NEW)
 
 **Orchestrator**:
-- [Sprint 106 Completion Summary](../../../docs/04-build/02-Sprint-Plans/SPRINT-106-COMPLETION-SUMMARY.md) - Real example of multi-stage sprint
+- Orchestrator sprint completion summaries - Real examples of multi-stage sprints
 
 **Quality Gates**:
 - G0.1, G0.2: Foundation gates

@@ -6,6 +6,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.0.6**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
 
+**What's New in 6.0.6 (February 16, 2026) - MINOR RELEASE**:
+- ✅ **CLAUDE.md Standard** - 3-tier structure (LITE/PRO/ENTERPRISE) with validation criteria
+- ✅ **Autonomous Codegen Patterns** - Two-agent pattern + 4-Gate Quality Pipeline methodology
+- ✅ **MRP Template** - 5-section Merge-Readiness Package for Gate G4
+- ✅ **Anthropic Best Practices Integration** - Source: 10 teams, 5 quickstarts analysis
+
+**What's New in 6.0.5 (February 15, 2026) - MINOR RELEASE**:
+- ✅ **RFC-001 Legacy Document Organization** - Centralized archive standard
+- ✅ **Anti-Vibecoding Alignment** - SPEC-0001 updated with Quality Assurance System
+
+**What's New in 6.0.4 (February 8, 2026) - MINOR RELEASE**:
+- ✅ **TDD Workflow Integration** - 3-Phase Sprint Enhancement with Spec Converter (SpecIR)
+- ✅ **Tier-Aware TDD Coverage** - Coverage targets per classification tier
+
+**What's New in 6.0.3 (February 2, 2026) - MINOR RELEASE**:
+- ✅ **Boris Cherny Best Practices Consolidation** - 3-Circle Architecture (Core → Governance → Outer Ring)
+- ✅ **Visual Documentation Standards** - Diagram conventions and tooling
+
 **What's New in 6.0.2 (February 2, 2026) - MINOR RELEASE (RFC-SDLC-602)**:
 - ✅ **E2E API Testing Workflow** - 6-phase standardized testing workflow with Stage 03 ↔ 05 cross-reference
 - ✅ **OWASP API Top 10 Checklist** - Complete API security testing coverage (2023 edition)
@@ -20,7 +38,7 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 - ✅ **Artifact Integrity Hashing** - SHA256 checksums for post-approval modification detection
 - ✅ **CLI Validation Commands** - `sdlcctl validate-consistency` for automated checking
 
-**What's New in 6.0.2 (January 28, 2026) - MAJOR RELEASE**:
+**What's New in 6.0.0 (January 28, 2026) - MAJOR RELEASE**:
 - ✅ **Unified Specification Standard (Section 8)** - YAML frontmatter required, BDD requirements format
 - ✅ **DESIGN_DECISIONS.md Template** - Lightweight ADR alternative for sprint-scoped decisions
 - ✅ **SPEC_DELTA.md Template** - Version change tracking with breaking change documentation
@@ -408,17 +426,17 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ## Development Workflow
 
 ### When Working with Framework Documentation
-1. **Check current version**: Framework is at **SDLC 5.1.3** (January 2026)
+1. **Check current version**: Framework is at **SDLC 6.0.6** (February 2026)
 2. **Apply 7-Pillar Architecture**: Design Thinking + 10-Stage + Sprint Governance + 4-Tier + Quality Gates + SASE + Documentation
 3. **Stage mapping for docs only**: Only `/docs` folders are stage-mapped
 4. **Use English only**: All technical content must be in English
 5. **Follow code file naming**: Python snake_case, TypeScript camelCase, React PascalCase
-6. **Maintain version consistency**: Update to 5.1.3 across related documents
+6. **Maintain version consistency**: Update to 6.0.6 across related documents
 
 ### When Updating Framework Content
 1. **Review CHANGELOG.md**: Check version history
 2. **Check 02-Core-Methodology/**: Core principles and 7-Pillar Architecture
-3. **Update consistently**: Version 5.1.3, dates January 2026
+3. **Update consistently**: Version 6.0.6, dates February 2026
 4. **Preserve legacy**: Use 10-Archive/{NN}-Legacy/ for superseded content (RFC-001)
 5. **Apply code file naming**: All new files must follow naming standards
 6. **Respect documentation vs code separation**: Stage mapping only for `/docs`
@@ -433,7 +451,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 
 ## Framework Compliance Standards
 
-### Required Compliance Metrics (SDLC 4.9.1)
+### Required Compliance Metrics (SDLC 6.0.6)
 - **10-Stage Lifecycle Applied**: All 10 stages considered
 - **Code File Naming**: Python snake_case, TypeScript camelCase, React PascalCase
 - **Design Thinking Applied**: 5-phase methodology for all new features
@@ -443,7 +461,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 - **Test Coverage**: >90% with real services only
 - **Performance**: <50ms response time target
 
-### Quality Gates (SDLC 4.9.1)
+### Quality Gates (SDLC 6.0.6)
 - **Pre-Design Thinking**: User validation before coding starts
 - **Pre-commit hooks**: Block commits with mock instances
 - **Code file naming validation**: Enforce naming standards
@@ -475,6 +493,20 @@ SDLC 5.1.2 (December 24, 2025)
   ↓ Project Structure Standard + Quality Gates Enhancement
 SDLC 5.1.3 (January 2026)
   ↓ 7-Pillar Architecture + Sprint Planning Governance (Pillar 2)
+SDLC 5.2.0 (January 22, 2026)
+  ↓ AI Governance Principles + Risk-Based Planning + Concentric Circles
+SDLC 5.3.0 (January 2026)
+  ↓ Stage Dependencies + Quality Assurance System (Section 7)
+SDLC 6.0.0 (January 28, 2026)
+  ↓ Unified Specification Standard (Section 8) + YAML Frontmatter
+SDLC 6.0.3 (February 2, 2026)
+  ↓ Boris Cherny Consolidation + Visual Documentation Standards
+SDLC 6.0.4 (February 8, 2026)
+  ↓ TDD Workflow Integration + 3-Phase Sprint Enhancement
+SDLC 6.0.5 (February 15, 2026)
+  ↓ RFC-001 Legacy Organization + Anti-Vibecoding Alignment
+SDLC 6.0.6 (February 16, 2026) ← CURRENT
+  ↓ Anthropic Best Practices: CLAUDE.md Standard + Autonomous Codegen + MRP Template
 ```
 
 ## Proven ROI (SDLC 5.0.0)
@@ -494,10 +526,16 @@ SDLC 5.1.3 (January 2026)
 - Implementation Guide: [07-Implementation-Guides/SDLC-Implementation-Guide.md](07-Implementation-Guides/SDLC-Implementation-Guide.md)
 - Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md)
 
-**NEW in 5.3.0**:
+**NEW in 6.0.6**:
+- CLAUDE.md Standard: 3-tier (LITE/PRO/ENTERPRISE) with validation criteria
+- Autonomous Codegen Patterns: Two-agent + 4-Gate Quality Pipeline methodology
+- MRP Template: 5-section Merge-Readiness Package for Gate G4
+
+**Added in 5.3.0-6.0.5**:
 - Document Consolidation: Governance-Compliance (7→4), Documentation-Standards (13→7)
-- Quality Assurance System (Pillar 7): Anti-Vibecoding, Vibecoding Index
+- Quality Assurance System (Section 7): Anti-Vibecoding, Vibecoding Index
 - Stage Dependencies: Explicit stage prerequisites and exit criteria
+- Unified Specification Standard (Section 8): YAML frontmatter + BDD requirements
 - Sprint Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md)
 - Quality+Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md)
 - Team Collaboration: [02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md](02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md)
@@ -508,8 +546,8 @@ SDLC 5.1.3 (January 2026)
 
 ---
 
-The framework represents not theory but battle-tested patterns from 7 months of real platform development. With SDLC 5.1.3, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, clear documentation vs code separation, governance & compliance standards, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.0.6, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: January 29, 2026
+**Last Updated**: February 16, 2026
 **Framework Version**: SDLC 6.0.6
 **Status**: PRODUCTION READY - 7-Pillar Architecture + Section 7 Quality Assurance System + AI Governance Principles

@@ -2,7 +2,7 @@
 
 **Version**: 6.0.6
 **Status**: ACTIVE
-**Date**: February 13, 2026
+**Date**: February 16, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
 
 ---
@@ -79,6 +79,8 @@ Before creating any new document, check if a canonical file already exists for t
 | Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `02-AI-Tools/ai-agent-best-practices-2026/06-memory-context-management.md` | ACTIVE |
 | Tool Evaluation Criteria | `03-AI-GOVERNANCE/06-Tool-Evaluation-Criteria.md` | — | ACTIVE |
 | AI Anti-Patterns | `03-AI-GOVERNANCE/07-Anti-Patterns.md` | — | ACTIVE |
+| **CLAUDE.md Standard (3-Tier)** | `03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md` | — | **NEW 6.0.6** |
+| **Autonomous Codegen Patterns** | `03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md` | — | **NEW 6.0.6** |
 
 ### Core Methodology (02-Core-Methodology/)
 
@@ -96,6 +98,7 @@ Before creating any new document, check if a canonical file already exists for t
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
 | **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
+| **MRP Template** | `02-Core-Methodology/SDLC-MRP-Template.md` | — | **NEW 6.0.6** |
 
 ### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 
@@ -136,7 +139,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Week 8 Gate Decision Brief | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
 | Week 8 Gate Comparison Matrix | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
 
-> **Note**: Framework 6.0.2 introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
+> **Note**: Framework 6.0.0+ introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
 
 ### AI Agent Best Practices (04-AI-TOOLS-LANDSCAPE/best-practices-2026/) - MOVED
 
@@ -293,4 +296,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 15, 2026
+**Last Updated**: February 16, 2026

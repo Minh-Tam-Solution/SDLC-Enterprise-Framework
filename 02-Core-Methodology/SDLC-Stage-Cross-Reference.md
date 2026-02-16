@@ -194,7 +194,7 @@ Cross-Reference Validation:
 
 ```bash
 # Validate cross-references
-sdlcctl validate-cross-reference \
+[SDLC CLI] validate-cross-reference \
   --stage-03 docs/03-Integration-APIs \
   --stage-05 docs/05-Testing-Quality
 
@@ -279,7 +279,7 @@ Migration Checklist:
   - [ ] Consolidate to Stage 03 (SSOT)
   - [ ] Replace duplicates with symlinks
   - [ ] Add Cross-Reference sections to docs
-  - [ ] Validate with sdlcctl validate-cross-reference
+  - [ ] Validate with SDLC CLI cross-reference validator
 ```
 
 ---

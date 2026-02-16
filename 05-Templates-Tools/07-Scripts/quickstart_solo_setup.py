@@ -129,7 +129,13 @@ class SoloSetup:
             # Step 6: Configure performance targets
             self._configure_performance()
 
-            # Step 7: Save configuration
+            # Step 7: Create CLAUDE.md template (SDLC 6.0.6 AI context)
+            self._create_claude_md_template()
+
+            # Step 8: Create MRP template (Merge-Readiness Proof)
+            self._create_mrp_template()
+
+            # Step 9: Save configuration
             self._save_configuration()
 
             # Success!
@@ -270,6 +276,44 @@ class SoloSetup:
         logger.info("   • Zero Mock Policy: Enforced")
         logger.info("")
 
+    def _create_claude_md_template(self):
+        """Create CLAUDE.md template for AI assistant context (SDLC 6.0.6)"""
+        logger.info("🤖 Step 7: Creating CLAUDE.md Template (AI Context)")
+        logger.info("-" * 60)
+
+        claude_md_content = self._get_claude_md_template()
+        claude_md_path = self.project_path / 'CLAUDE.md'
+
+        if claude_md_path.exists():
+            logger.info("⚠️  CLAUDE.md already exists - skipping (won't overwrite)")
+        else:
+            claude_md_path.write_text(claude_md_content)
+            logger.info("✅ Created: CLAUDE.md (AI assistant context)")
+
+        logger.info("   Purpose: Provides project context to Claude Code and other AI tools")
+        logger.info("   Standard: SDLC 6.0.6 CLAUDE.md / AGENTS.md industry standard")
+        logger.info("")
+
+    def _create_mrp_template(self):
+        """Create MRP (Merge-Readiness Proof) template (SDLC 6.0.6 SASE)"""
+        logger.info("📋 Step 8: Creating MRP Template (Merge-Readiness Proof)")
+        logger.info("-" * 60)
+
+        mrp_content = self._get_mrp_template()
+        mrp_dir = self.project_path / '.sdlc/templates'
+        mrp_dir.mkdir(parents=True, exist_ok=True)
+        mrp_path = mrp_dir / 'MRP-TEMPLATE.md'
+
+        if mrp_path.exists():
+            logger.info("⚠️  MRP template already exists - skipping (won't overwrite)")
+        else:
+            mrp_path.write_text(mrp_content)
+            logger.info("✅ Created: .sdlc/templates/MRP-TEMPLATE.md")
+
+        logger.info("   Purpose: Evidence that code is ready to merge")
+        logger.info("   SASE: Merge-Readiness Proof (replaces legacy merge checklists)")
+        logger.info("")
+
     def _save_configuration(self):
         """Save setup configuration"""
         config_path = self.project_path / '.sdlc/config.json'
@@ -290,6 +334,8 @@ class SoloSetup:
         logger.info("   • AI development environment")
         logger.info("   • Performance targets (<50ms)")
         logger.info("   • SDLC 6.0.6 validators installed")
+        logger.info("   • CLAUDE.md template (AI assistant context)")
+        logger.info("   • MRP template (Merge-Readiness Proof)")
         logger.info("")
         logger.info("🚀 Next Steps (2-Day Timeline):")
         logger.info("")
@@ -328,6 +374,150 @@ class SoloSetup:
         logger.info("")
 
     # Template creation methods
+
+    def _get_claude_md_template(self) -> str:
+        return """# CLAUDE.md - AI Assistant Context
+## SDLC 6.0.6 Project Configuration
+
+**Project**: [PROJECT_NAME]
+**Version**: 0.1.0
+**Framework**: SDLC 6.0.6 (7-Pillar + Section 7 QA + Section 8 Spec Standard)
+**Tier**: LITE (Solo Developer)
+**Created**: [DATE]
+
+---
+
+## Project Overview
+
+[Brief description of what this project does and why it exists]
+
+**Tech Stack**: [e.g., Python FastAPI, React, PostgreSQL]
+**Target Users**: [Who uses this]
+
+---
+
+## AI Governance Principles (SDLC 6.0.6)
+
+1. **Human Accountability** - Developer reviews all AI output
+2. **Brief-First Development** - Plan before coding (risk-based)
+3. **Evidence-Based MRP** - Merge-Readiness Proof for all changes
+4. **Progressive Autonomy** - Start manual, automate as trust builds
+5. **Context Preservation** - This file IS the context
+6. **Kill Switch** - Revert if quality drops
+7. **Continuous Learning** - Update this file with lessons learned
+
+---
+
+## Development Guidelines
+
+### Code Standards
+- **Python**: snake_case, max 50 chars, type hints required
+- **TypeScript**: camelCase (files), PascalCase (React components)
+- **Zero Mock Policy**: No TODO/placeholder/mock code
+- **Testing**: 80%+ coverage target
+
+### Architecture
+- [Describe key architectural decisions]
+- [List key dependencies]
+
+### Quality Gates
+- Pre-commit: Linting + formatting
+- Tests must pass before merge
+- MRP template completed for PRs
+
+---
+
+## 3-Ring Architecture Context
+
+- **Core** (timeless): [Core business logic description]
+- **Governance** (stable): SDLC 6.0.6 compliance, quality gates
+- **Outer Ring** (tools): AI tools, CI/CD, deployment
+
+---
+
+## Key Files & Patterns
+
+- `docs/` - SDLC stage-mapped documentation (00-09)
+- `.sdlc/` - Framework configuration and templates
+- `tests/` - Unit and integration tests
+
+---
+
+## When In Doubt
+
+1. Is this production-ready or a placeholder? -> Rewrite if placeholder
+2. Does this follow Zero Mock Policy? -> No TODOs, no mocks
+3. Have I measured performance? -> Add benchmarks if unsure
+4. Would this pass code review? -> Refactor if not
+
+---
+
+*Generated by SDLC 6.0.6 Solo Setup. Update this file as the project evolves.*
+"""
+
+    def _get_mrp_template(self) -> str:
+        return """# MRP - Merge-Readiness Proof
+## SDLC 6.0.6 SASE Artifact
+
+**PR/Branch**: [branch-name]
+**Author**: [name]
+**Date**: [date]
+**Tier**: LITE
+
+---
+
+## Change Summary
+
+**What changed**: [Brief description]
+**Why**: [Business/technical justification]
+**Risk Level**: [Low / Medium / High]
+
+---
+
+## Quality Checklist
+
+### Code Quality
+- [ ] Zero Mock Policy: No TODO/placeholder/mock/stub code
+- [ ] Type hints present (Python) or TypeScript strict mode
+- [ ] Error handling implemented (no bare except blocks)
+- [ ] Code file naming standards followed
+
+### Testing
+- [ ] Unit tests added/updated
+- [ ] Tests pass locally
+- [ ] Coverage >= 80% for changed code
+
+### Security
+- [ ] No hardcoded secrets
+- [ ] Input validation present
+- [ ] No SQL injection risks
+
+### Performance
+- [ ] No N+1 query patterns introduced
+- [ ] API response < 50ms target considered
+
+---
+
+## Evidence
+
+- **Tests**: `pytest` output or test results
+- **Linting**: Clean `ruff` / `eslint` output
+- **Manual Testing**: [What was manually verified]
+
+---
+
+## AI Governance Attestation (SDLC 6.0.6)
+
+- [ ] Human reviewed all AI-generated code
+- [ ] AI changes are within approved scope
+- [ ] Context file (CLAUDE.md) is up to date
+
+---
+
+*Template: SDLC 6.0.6 MRP (Merge-Readiness Proof)*
+*Reference: 05-Templates-Tools/04-SASE-Artifacts/*
+"""
+
     def _create_empathy_template(self) -> str:
         return """# Empathize Phase - User Research
 
@@ -525,13 +715,13 @@ Validate:
 ## Run Before Commit
 ```bash
 # SDLC 6.0.6 validator
-python3 path/to/sdlc_4_8_validator.py .
+python3 path/to/sdlc_validator.py .
 
 # Tests
 pytest  # or npm test
 
 # Linting
-flake8  # or eslint
+ruff check .  # or eslint
 ```
 
 ## Upgrade Path

@@ -3,7 +3,7 @@
 
 **Version**: 6.0.6
 **Status**: ACTIVE - PRODUCTION READY
-**Date**: January 28, 2026
+**Date**: February 16, 2026
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) (7 Principles)
 **Foundation**: Tools proven on BFlow, NQH-Bot, MTEP platforms
@@ -36,12 +36,33 @@
 | **Section 7** | Quality Assurance | Vibecoding Index, Progressive Routing |
 | **Section 8** | Spec Standard | YAML frontmatter, BDD format |
 
-### Section 8: Unified Specification Standard (NEW)
+### Section 8: Unified Specification Standard
 
 Scripts now validate Section 8 compliance:
-- **YAML frontmatter**: Mandatory metadata
+- **YAML frontmatter**: Mandatory metadata (`spec_id`, `tier`, `stage`, `status`)
 - **BDD requirements**: GIVEN-WHEN-THEN format
 - **Tier-awareness**: LITE/STANDARD/PROFESSIONAL/ENTERPRISE
+
+### CLAUDE.md Standard (NEW in 6.0.6)
+
+- **CLAUDE.md detection**: Validates presence of AI assistant context file at project root
+- **AGENTS.md support**: Industry-standard AI collaboration context
+- **AI Governance Principles**: 7 principles checked (Human Accountability through Continuous Learning)
+- **Solo setup creates template**: `quickstart_solo_setup.py` generates CLAUDE.md automatically
+
+### 3-Ring Architecture (Concentric Circles Model)
+
+Validation aligns with the 3-Ring Architecture:
+- **Core Ring** (timeless): Business logic, domain models - validated for stability
+- **Governance Ring** (stable): Quality gates, SDLC compliance - enforced by validators
+- **Outer Ring** (tools/changing): AI tools, CI/CD - configuration files checked
+
+### MRP (Merge-Readiness Proof) Validation
+
+- **MRP template detection**: Checks for MRP templates in `.sdlc/templates/`
+- **SASE artifact awareness**: CRP, MRP, VCR artifact presence validated
+- **Solo setup creates template**: `quickstart_solo_setup.py` generates MRP-TEMPLATE.md
+- **Deprecated artifacts**: BRS, LPS, MTS no longer validated (replaced by AGENTS.md)
 
 ---
 
@@ -90,10 +111,13 @@ python3 compliance_sdlc_validator.py /path/to/project
 
 # What it checks:
 # - 7 Pillars (Design Thinking → Documentation)
-# - Section 7 (Quality Assurance System)
-# - Section 8 (Specification Standard)
-# - SASE Artifacts (CRP, MRP, VCR)
+# - Section 7 (Quality Assurance System - Vibecoding Index)
+# - Section 8 (Specification Standard - YAML frontmatter, BDD)
+# - SASE Artifacts (CRP, MRP, VCR, AGENTS.md)
+# - CLAUDE.md / AGENTS.md presence (AI Governance)
+# - 3-Ring Architecture alignment (Core → Governance → Outer)
 # - Code File Naming Standards
+# - MRP template availability
 # - Legacy/Archive folders excluded
 
 # Output example:
@@ -101,6 +125,8 @@ python3 compliance_sdlc_validator.py /path/to/project
 ✅ Section 7 (Quality Assurance): COMPLIANT
 ✅ Section 8 (Spec Standard): COMPLIANT
 ✅ SASE Artifacts: DETECTED
+✅ CLAUDE.md: PRESENT
+✅ MRP Template: AVAILABLE
 ✅ File Naming Standards: COMPLIANT
 🎉 SDLC 6.0.6 FULLY COMPLIANT
 ```
@@ -119,6 +145,7 @@ python3 compliance_design_thinking_validator.py /path/to/project
 # - Phase 3 (Ideate): Solution generation evidence
 # - Phase 4 (Prototype): Rapid validation performed
 # - Phase 5 (Test): User testing completed
+# - AI Governance: CLAUDE.md, AGENTS.md, 7 Principles awareness
 
 # Output example:
 ✅ Phase 1 (Empathize): User research documented
@@ -126,6 +153,7 @@ python3 compliance_design_thinking_validator.py /path/to/project
 ✅ Phase 3 (Ideate): 15 solutions generated
 ✅ Phase 4 (Prototype): Rapid prototype created
 ✅ Phase 5 (Test): User validation completed
+✅ AI Governance (6.0.6): Principles awareness detected
 📊 Design Thinking Score: 96% (NQH-Bot level)
 ```
 
@@ -141,9 +169,11 @@ python3 quickstart_solo_setup.py /path/to/project
 # 1. Creates SDLC 6.0.6 complete structure
 # 2. Installs compliance validators
 # 3. Sets up Design Thinking templates
-# 4. Creates SASE Artifacts templates
-# 5. Configures Code Review Tier 1
+# 4. Configures Code Review Tier 1
+# 5. Creates AI development environment
 # 6. Sets performance targets (<50ms)
+# 7. Creates CLAUDE.md template (AI assistant context)
+# 8. Creates MRP template (Merge-Readiness Proof)
 ```
 
 ---

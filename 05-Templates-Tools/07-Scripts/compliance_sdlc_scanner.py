@@ -164,40 +164,42 @@ def main():
     if len(sys.argv) < 2:
         logger.info("SDLC 6.0.6 Universal Scanner - SASE Framework + Code Review Excellence")
         logger.info("======================================================================")
-        logger.info()
+        logger.info("")
         logger.info("Usage: python sdlc_scanner.py <project_path> [project_scale]")
-        logger.info()
+        logger.info("")
         logger.info("Project scales:")
         logger.info("  solo       - 1 developer + AI (10x productivity)")
         logger.info("  small      - 2-5 developers (startup)")
         logger.info("  medium     - 6-15 developers (growth)")
         logger.info("  enterprise - 16+ developers (enterprise)")
         logger.info("  auto       - Auto-detect (default)")
-        logger.info()
+        logger.info("")
         logger.info("Examples:")
         logger.info("  python sdlc_scanner.py /path/to/project")
         logger.info("  python sdlc_scanner.py /path/to/project enterprise")
         logger.info("  python sdlc_scanner.py . auto")
-        logger.info()
+        logger.info("")
         logger.info("Features:")
-        logger.info("  ✅ SASE Framework validation (SE 3.0, 6 artifacts)")
+        logger.info("  ✅ SASE Framework validation (AGENTS.md, CRP, MRP, VCR)")
         logger.info("  ✅ Design Thinking validation (Pillar 0)")
         logger.info("  ✅ Code Review tier detection (3-tier framework)")
         logger.info("  ✅ Zero Mock Policy enforcement (679→0 proven)")
-        logger.info("  ✅ 6-pillar architecture validation")
+        logger.info("  ✅ 7-Pillar + Section 7 + Section 8 architecture validation")
+        logger.info("  ✅ AI Governance Principles (CLAUDE.md, AGENTS.md)")
+        logger.info("  ✅ 3-Ring Architecture (Core → Governance → Outer Ring)")
         logger.info()
         logger.info("Note: This is a compatibility wrapper around sdlc_validator.py")
         logger.info("For new implementations, use sdlc_validator.py directly")
         sys.exit(1)
-    
+
     project_path = sys.argv[1]
     project_scale = sys.argv[2] if len(sys.argv) > 2 and sys.argv[2] != "auto" else None
-    
+
     # Validate project path
     if not os.path.exists(project_path):
         logger.info(f"Error: Project path '{project_path}' does not exist")
         sys.exit(1)
-    
+
     logger.info("SDLC 6.0.6 Universal Scanner")
     logger.info("============================")
     logger.info(f"Scanning project: {project_path}")
@@ -205,7 +207,7 @@ def main():
         logger.info(f"Project scale: {project_scale}")
     else:
         logger.info("Project scale: Auto-detect")
-    logger.info()
+    logger.info("")
     
     # Run validation
     result = run_universal_validator(project_path, project_scale)
@@ -225,8 +227,8 @@ def main():
     logger.info(f"Authenticity: {scan_result['authenticity_score']:.2f}")
     logger.info(f"Business Risk: {scan_result['business_risk_level'].upper()}")
     logger.info(f"Facade Violations: {scan_result['facade_violations_count']}")
-    logger.info()
-    
+    logger.info("")
+
     # Display raw validator output
     logger.info("📋 DETAILED VALIDATION REPORT")
     logger.info("=============================")

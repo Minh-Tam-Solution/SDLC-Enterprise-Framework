@@ -45,7 +45,7 @@ Stage 02 (DESIGN):
 - ✅ `docs/00-foundation/04-Personas/` contains primary user personas (minimum 2)
 - ✅ Design Thinking workshops documented (if applicable)
 
-**Evidence Requirements** (NEW - Sprint 106+):
+**Evidence Requirements**:
 - 📄 User interview recordings/transcripts (if available, not mandatory for LITE tier)
 - 📄 Business case approval email/screenshot from CEO/CPO
 - 📄 Problem validation evidence (user feedback, market research)
@@ -223,7 +223,7 @@ Stage 02 (DESIGN):
 
 **Failure Recovery**: If code quality insufficient → Refactor, address code review feedback
 
-**Multi-Stage Sprint Consideration**: Sprint 106 example - BUILD stage crossed with INTEGRATE stage (parallel execution allowed per ADR-041)
+**Multi-Stage Sprint Consideration**: BUILD stage may cross with INTEGRATE stage (parallel execution allowed per ADR-041)
 
 ---
 
@@ -495,20 +495,20 @@ Stage 02 (DESIGN) - LITE:
 
 ## Automation Hooks (Future)
 
-**Planned `sdlcctl` commands**:
+**Planned SDLC CLI commands**:
 
 ```bash
 # Validate stage exit criteria
-sdlcctl validate --stage-exit 02  # Check if Stage 02 exit criteria met
+[SDLC CLI] validate --stage-exit 02  # Check if Stage 02 exit criteria met
 
 # Show exit criteria checklist
-sdlcctl show-exit-criteria --stage 05 --tier LITE
+[SDLC CLI] show-exit-criteria --stage 05 --tier LITE
 
 # Generate exit criteria report
-sdlcctl report --stage-exit 00-09 --format markdown
+[SDLC CLI] report --stage-exit 00-09 --format markdown
 
 # Validate artifact integrity
-sdlcctl verify-integrity --stage 02 --artifact ADR-041.md
+[SDLC CLI] verify-integrity --stage 02 --artifact ADR-041.md
 ```
 
 ---

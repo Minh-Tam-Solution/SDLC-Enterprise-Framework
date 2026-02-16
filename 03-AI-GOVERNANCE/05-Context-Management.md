@@ -149,7 +149,7 @@ Delivery: PR comments, CLI overlay, IDE extension
 | Channel | Description | Use Case |
 |---------|-------------|----------|
 | PR Comments | Auto-posted on PR open | Gate status, known issues |
-| CLI Overlay | `sdlcctl context pull` | CI/CD integration |
+| CLI Overlay | `[SDLC CLI] context pull` | CI/CD integration |
 | IDE Extension | Inject into chat | IDE users |
 
 Example dynamic context (PR comment):

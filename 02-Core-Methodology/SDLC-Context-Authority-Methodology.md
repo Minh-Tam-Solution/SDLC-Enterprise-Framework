@@ -382,7 +382,7 @@ No known issues at this time.
 
 Last Full Refresh: 2026-01-28T10:30:00Z
 Next Scheduled: 2026-01-29T10:30:00Z
-Refresh Command: `sdlcctl context refresh`
+Refresh Command: `[SDLC CLI] context refresh`
 ```
 
 ### 5.2 CLAUDE.md Integration
@@ -417,7 +417,7 @@ For Claude-specific projects, extend with CLAUDE.md:
 
 <!-- CLAUDE-CONTEXT-START -->
 Session: Active development
-Focus: Sprint 115 templates
+Focus: Current sprint templates
 Priority: DESIGN_DECISIONS.md completion
 Constraints:
   - Zero Mock Policy enforced
@@ -489,22 +489,22 @@ Events:
 
 ```bash
 # Refresh project context
-sdlcctl context refresh [--force]
+[SDLC CLI] context refresh [--force]
 
 # View current context
-sdlcctl context show
+[SDLC CLI] context show
 
 # Validate AGENTS.md format
-sdlcctl context validate
+[SDLC CLI] context validate
 
 # Generate AGENTS.md from template
-sdlcctl context init --tier PROFESSIONAL
+[SDLC CLI] context init --tier PROFESSIONAL
 
 # Check context freshness
-sdlcctl context freshness
+[SDLC CLI] context freshness
 
 # Subscribe to context updates (dev mode)
-sdlcctl context watch
+[SDLC CLI] context watch
 ```
 
 ---

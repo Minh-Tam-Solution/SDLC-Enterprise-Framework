@@ -3,7 +3,7 @@
 
 **Version:** 6.0.6
 **Status:** ACTIVE - PRODUCTION READY
-**Date:** February 14, 2026 (Quality Assurance System + Stage Dependencies + RFC-001)
+**Date:** February 16, 2026 (Anthropic Best Practices Integration + RFC-001 + SPEC-0001)
 **Author:** SE 3.0 Track 1 Team
 **Source:** arXiv:2509.06216v2 (SASE Framework)
 **Framework:** SDLC 6.0.6 (7-Pillar + 2-Section Architecture)
@@ -874,7 +874,7 @@ thresholds:
 │  │                       │   │                       │     │
 │  │ - Web Dashboard       │   │ - Docker Sandbox      │     │
 │  │ - VS Code Extension   │   │ - Test Runner         │     │
-│  │ - CLI (sdlcctl)       │   │ - Security Scanner    │     │
+│  │ - CLI (SDLC CLI)      │   │ - Security Scanner    │     │
 │  │ - Mobile App          │   │ - Coverage Tool       │     │
 │  │                       │   │ - Evidence Collector  │     │
 │  │ Authentication: OAuth │   │ Authentication: JWT   │     │
@@ -1133,8 +1133,8 @@ level_3_requirements:
 **Week 1: Foundation**
 - [ ] Read this document fully
 - [ ] Identify first pilot project (small, low-risk)
-- [ ] Create AGENTS.md for pilot project (use `sdlcctl agents init`)
-- [ ] Validate AGENTS.md structure (`sdlcctl agents validate`)
+- [ ] Create AGENTS.md for pilot project (use SDLC CLI agents init or manual template)
+- [ ] Validate AGENTS.md structure (use SDLC CLI agents validate or manual review)
 
 **Week 2: First Execution**
 - [ ] Agent reads AGENTS.md (native IDE support)
@@ -1284,13 +1284,17 @@ level_3_requirements:
 | 5.2.0 | Jan 2026 | SE 3.0 Team | Planning Mode + Model Selection Matrix |
 | 5.3.0 | Jan 2026 | SE 3.0 Team | Quality Assurance System + Stage Dependencies |
 | **6.0.0** | **Jan 28, 2026** | **SE 3.0 Team** | **MAJOR: Unified Specification Standard (Section 8)** |
+| **6.0.5** | **Feb 15, 2026** | **SE 3.0 Team** | **RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding alignment** |
+| **6.0.6** | **Feb 16, 2026** | **SE 3.0 Team** | **Anthropic Best Practices Integration: CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template** |
 
 **Review Schedule:**
 - CTO Review: December 20, 2025 (3pm) - APPROVED
 - AGENTS.md Update: January 22, 2026 - COMPLETE
 - 5.3.0 Update: January 27, 2026 - Quality Assurance System integration
 - 6.0.0 Update: January 28, 2026 - Unified Specification Standard (MAJOR)
-- Next Revision: Phase 2-Pilot feedback (Feb 2026)
+- 6.0.5 Update: February 15, 2026 - RFC-001 + SPEC-0001 alignment
+- 6.0.6 Update: February 16, 2026 - Anthropic Best Practices Integration
+- Next Revision: Post-integration feedback
 
 **Change Management:**
 - Minor changes: PM/PO approval
@@ -1300,6 +1304,9 @@ level_3_requirements:
 ---
 
 **Document Status:** ACTIVE - PRODUCTION READY
-**Last Updated:** January 28, 2026
+**Last Updated:** February 16, 2026
 **Related:** [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Section 7 (Anti-Vibecoding)
 **Related:** [Specification Standard](../05-Templates-Tools/01-Specification-Standard/) - Section 8 (Unified Specs)
+**Related:** [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - CLAUDE.md Standard for AI-Assisted Development (6.0.6)
+**Related:** [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - Autonomous Codegen with Quality Gates (6.0.6)
+**Related:** [SDLC-MRP-Template.md](./SDLC-MRP-Template.md) - Merge-Readiness Package Template (6.0.6)

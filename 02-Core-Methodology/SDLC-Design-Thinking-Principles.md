@@ -57,7 +57,7 @@ User empathy → Define real problem → Prototype → Test → Iterate → Ship
 - **Stage 08 (COLLABORATE)**: Cross-team empathy, stakeholder alignment
 - **Stage 09 (GOVERN)**: User data governance, privacy-first compliance
 
-**BFlow Platform Validation** (52 Days, Nov 1 - Dec 20, 2025):
+**Production Platform Validation** (52 Days):
 - ✅ 90% user approval before building (Stage 01 prototypes)
 - ✅ 94% UAT satisfaction (Stage 04 testing)
 - ✅ 99.95% uptime (Stage 06 operations)
@@ -204,7 +204,7 @@ Total Pain Points: N (H priority)
 Impact: Revenue/Time/Quality loss
 ```
 
-**Example (NQH-Bot Attendance)**:
+**Example (AI Attendance System)**:
 ```
 Current Journey: Daily Attendance Tracking
 ───────────────────────────────────────────
@@ -287,10 +287,10 @@ because [INSIGHT from empathy phase]
 We will know we succeeded when [MEASURABLE OUTCOME]
 ```
 
-**Example (NQH-Bot)**:
+**Example (AI Attendance System)**:
 ```
 Restaurant managers need a way to verify staff attendance automatically
-because manual tracking causes 60 hours/month waste + ₫15B revenue at risk
+because manual tracking causes 60 hours/month waste + significant revenue at risk
 
 We will know we succeeded when:
 - Attendance accuracy ≥95%
@@ -311,7 +311,7 @@ We will know we succeeded when:
 which causes [NEGATIVE IMPACT]
 ```
 
-**Example (BFlow Platform)**:
+**Example (SME Workflow Platform)**:
 ```
 Vietnamese SME owners need to automate workflows but
 current tools require coding skills,
@@ -337,7 +337,7 @@ which causes 6+ month implementation time and $50K+ consulting costs
 - "How might we help [user] achieve [goal] without [constraint]?"
 - "How might we make [process] feel like [positive analogy]?"
 
-**Example (NQH-Bot)**:
+**Example (AI Attendance System)**:
 ```
 HMW Questions (Generated 23, selected top 3):
 
@@ -644,7 +644,7 @@ Test: Does solution actually work?
 - ❌ Edge cases
 - ❌ Polish and animations
 
-**Example (NQH-Bot Attendance MVP)**:
+**Example (AI Attendance System MVP)**:
 ```
 Include:
 ✅ Staff can take photo for check-in
@@ -926,7 +926,7 @@ Are users able to complete core task?
 
 **Check Against Original Goals** (from Define phase):
 ```
-Original Goal (NQH-Bot):
+Original Goal (AI Attendance System):
 "We will know we succeeded when:
 - Attendance accuracy ≥95%
 - Tracking time <5 minutes/day
@@ -1089,7 +1089,7 @@ Together:
 
 ---
 
-## 📊 Case Study: Design Thinking Applied (NQH-Bot)
+## 📊 Case Study: Design Thinking Applied (AI Attendance System)
 
 ### Phase 1: EMPATHIZE (Week 1)
 

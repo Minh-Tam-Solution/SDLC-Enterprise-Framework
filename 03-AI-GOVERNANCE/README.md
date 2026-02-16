@@ -2,8 +2,8 @@
 
 **Version**: 6.0.6
 **Status**: ACTIVE
-**Date**: February 14, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.0.6 with SPEC-0001 Anti-Vibecoding Alignment)
+**Date**: February 16, 2026
+**Pillar**: Core AI Governance (Enhanced in 6.0.6 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
 
 ---
 
@@ -36,6 +36,13 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 |---|----------|---------|
 | 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
 | 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
+
+### Anthropic Patterns Integration (6.0.6)
+
+| # | Document | Purpose |
+|---|----------|---------|
+| 10 | [CLAUDE.md Standard (3-Tier)](10-CLAUDE-MD-STANDARD.md) | LITE/PRO/ENTERPRISE tiered AI context document standard |
+| 11 | [Autonomous Codegen Patterns](11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
 
 ---
 
@@ -95,7 +102,7 @@ These principles sit in the **Core** ring of the Framework:
 | Principle | Origin | Promoted | Rationale |
 |-----------|--------|----------|-----------|
 | AI-Human Collaboration | SE 3.0 SASE | v5.1.0 | Fundamental to all AI work |
-| Agent Accountability | BFlow lessons | v5.0.0 | Legal/compliance requirement |
+| Agent Accountability | Production platform lessons | v5.0.0 | Legal/compliance requirement |
 | Planning Mode | 2026 Best Practices | v5.2.0 | Universal pattern, proven effective |
 | Verification-First | TDD movement | v5.0.0 → v6.0.4 | Quality foundation + Tier-aware coverage |
 | Context Management | AGENTS.md standard | v5.2.0 | 60K+ repos use pattern |
@@ -133,5 +140,5 @@ A tool feature is promoted to Core when it meets ALL criteria:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 15, 2026
+**Last Updated**: February 16, 2026
 **Framework**: SDLC 6.0.6

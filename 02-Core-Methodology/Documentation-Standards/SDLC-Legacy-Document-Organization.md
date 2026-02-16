@@ -7,7 +7,7 @@ date: "2026-02-13"
 rfc: "RFC-001"
 framework: "SDLC 6.0.6"
 replaces: "99-Legacy/ folder pattern (deprecated)"
-adopted-by: "BFlow Platform (3 live customers)"
+adopted-by: "Production platform (3 live customers)"
 author: "CTO Office"
 ---
 
@@ -25,7 +25,7 @@ author: "CTO Office"
 RFC-001 establishes a **mandatory framework standard** for organizing archived and deprecated documentation across SDLC-compliant projects. The standard eliminates distributed `99-Legacy/` folders from active development stages (00-09) and centralizes all legacy content into a single `10-Archive/` directory with stage-aligned subdirectories.
 
 **Business Impact**: 
-- **57% reduction** in documentation size (211MB → 91MB on BFlow Platform)
+- **57% reduction** in documentation size (211MB → 91MB on production platform)
 - **34% reduction** in file count (6,500 → 4,294 files)
 - **40% reduction** in AI context pollution (from 40% noise → <5% noise)
 - **Production-validated**: 3 live customers, zero breaking changes
@@ -36,7 +36,7 @@ RFC-001 establishes a **mandatory framework standard** for organizing archived a
 
 ### Issue 1: AI Context Pollution
 When each SDLC stage (00-09) contains a `99-Legacy/` subfolder, AI assistants reading stage documentation encounter both current AND deprecated content simultaneously:
-- **40% of content** processed by AI is irrelevant (40% of BFlow docs were 99-Legacy content)
+- **40% of content** processed by AI is irrelevant (40% of production platform docs were 99-Legacy content)
 - **Result**: Inconsistent suggestions, hallucinated recommendations, confusion between versions
 
 ### Issue 2: Human Cognitive Load
@@ -54,7 +54,7 @@ Each stage's `99-Legacy/` grows independently with no standard organization:
 ### Issue 4: Inflated Directory Trees
 Legacy content inflates file and directory counts, making active content harder to find:
 
-**BFlow Platform metrics (before RFC-001)**:
+**Production platform metrics (before RFC-001)**:
 - Total size: 211 MB
 - Total files: ~6,500
 - 99-Legacy size: 34 MB + 1,654 files (26% of total)
@@ -116,7 +116,7 @@ All rules are **MANDATORY** unless explicitly marked RECOMMENDED.
 
 **Enforcement**:
 - CI/CD workflow enforces: `rfc001-legacy-check.yml` blocks merges if `99-Legacy/` detected in stages
-- sdlcctl validation: `sdlcctl validate` reports WARNING if `99-Legacy/` found
+- SDLC CLI validation: compliance validator reports WARNING if `99-Legacy/` found
 
 **Timeline**:
 - February 13, 2026: RFC-001 approved as MANDATORY
@@ -231,12 +231,12 @@ For SDLC-Enterprise-Framework self-application:
 - Update ref stubs and cross-references
 - Run full validation suite
 
-### Phase 4: sdlcctl Alignment (Mar 1-7)
-- Update `init.py`: Stop creating `99-Legacy/` per stage
-- Update `fix.py`: Create `10-Archive/{NN}-Legacy/` instead
-- Update `engine.py`: Validate new pattern, warn on 99-Legacy found
+### Phase 4: SDLC CLI Alignment (Mar 1-7)
+- Update CLI init: Stop creating `99-Legacy/` per stage
+- Update CLI fix: Create `10-Archive/{NN}-Legacy/` instead
+- Update validation engine: Validate new pattern, warn on 99-Legacy found
 - Update tests to reflect new pattern
-- Deployment: Release in next sdlcctl patch version
+- Deployment: Release in next SDLC CLI patch version
 
 ### Phase 5: Enforcement (Mar 8-15)
 - Enable GitHub Actions `rfc001-legacy-check.yml`
@@ -266,8 +266,8 @@ find docs/10-archive -type f | wc -l
 grep -r "99-Legacy" docs/ --include="*.md" | grep -v "historical\|deprecated"
 # Expected: 0 matches (only found in historical context if any)
 
-# ✓ sdlcctl validation
-sdlcctl validate docs/
+# ✓ SDLC compliance validation
+[SDLC CLI] validate docs/
 # Should report: ✓ RFC-001 compliance verified
 ```
 
@@ -302,7 +302,7 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 - **Content Map**: [CONTENT-MAP.md](../../../CONTENT-MAP.md)
 - **Migration Script**: [migrate-legacy-to-archive.sh](../07-Scripts/migrate-legacy-to-archive.sh)
 - **CI Enforcement**: `rfc001-legacy-check.yml` (GitHub Actions)
-- **Command**: `sdlcctl validate --stage 10-archive`
+- **Command**: SDLC CLI validate --stage 10-archive
 
 ---
 
@@ -321,7 +321,7 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 
 ## Production Validation
 
-**Evidence**: BFlow Platform (3 live customers, production-validated Dec 2025)
+**Evidence**: Production platform (3 live customers, production-validated Dec 2025)
 
 | Metric | Before | After | Improvement |
 |--------|--------|---------|-------------|

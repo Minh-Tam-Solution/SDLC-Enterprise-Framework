@@ -1,7 +1,7 @@
 # SDLC Framework 6.0.6 Quick Reference Guide
 
 **Version**: 6.0.6
-**Date**: February 14, 2026
+**Date**: February 16, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
 
@@ -9,14 +9,43 @@
 
 ## What's New in 6.0.6 (MINOR)
 
-### RFC-001: Legacy Document Organization Standard (MANDATORY)
+### Anthropic Best Practices Integration
+
+```yaml
+Key Changes:
+  3 New AI Governance Methodology Documents:
+    - 03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md
+        CLAUDE.md 3-tier structure: LITE (500-1K lines), PRO (1.5K-3K), ENTERPRISE (2K+)
+        Content principles: Constraints first, file paths > descriptions, commands > explanations
+        Anti-patterns: Information dump, stale docs, abstract philosophy, copy-paste README
+
+    - 03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md
+        Two-agent pattern: Initializer Agent → Coding Agent loop → Quality Gates
+        4-Gate Pipeline: G1 (Spec Review) → G2 (Security) → G3 (Tests) → G4 (Human Review)
+        Retry logic: max_retries=3 with deterministic feedback, escalation path
+
+    - 02-Core-Methodology/SDLC-MRP-Template.md
+        5-section Merge-Readiness Package: Change Summary, Evidence Refs, Rollback, Tests, Deploy
+        Gate G4 requires MRP for PRs >100 LOC at STANDARD+ tier
+
+  3-Ring Compliance:
+    - All 3 documents are Core Ring (tool-agnostic, vendor-neutral)
+    - Source: Anthropic Data Infrastructure team + claude-quickstarts
+    - Framework-First: Methodology created before any platform automation
+```
+
+---
+
+## What's New in 6.0.5 (MINOR)
+
+### RFC-001 + Governance Loop + Cleanup
 
 ```yaml
 Key Changes:
   RFC-001 Legacy Document Organization:
     - Eliminates 99-Legacy/ from active stages (00-09)
     - Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
-    - BFlow validated: 57% size reduction (211MB→91MB)
+    - Production-validated: 57% size reduction (211MB→91MB)
     - Migration script: migrate-legacy-to-archive.sh
     - CI/CD blocks 99-Legacy/ reintroduction
     - Adoption deadline: March 15, 2026
@@ -33,10 +62,15 @@ Key Changes:
     - governance_maturity-assessment-framework.md (per-stage 0-100%)
     - governance_risk-register-analyzer.md (L×I scoring matrix)
 
-  sdlcctl CLI v1.7.0:
+  Governance Loop + Cleanup:
+    - Code review consolidation (3 guides → 1 unified)
+    - Simplified overengineered modules
+    - Framework scripts upgraded
+
+  SDLC CLI Enhancements:
     - Fuzzy P0 detection for legacy stage names
     - 3-strategy resolution: exact → alternative → fuzzy
-    - Bflow: P0 0%→71.4%, NQH-Bot: P0 0%→64.3%
+    - Production-validated: P0 detection improved from 0% to 64-71%
 ```
 
 ---
@@ -46,7 +80,7 @@ Key Changes:
 ### TDD Workflow Integration + 3-Phase Sprint Enhancement
 
 ```yaml
-Sprint 154 Validation:
+Production Validation:
   Total Tests: 113 (all written FIRST per TDD)
   Pass Rate: 100% on first implementation
   Coverage: Exceeds tier requirements
@@ -80,8 +114,8 @@ Tier-Aware TDD Coverage Targets:
 
 Spec Converter Methodology (Section 8 Enhancement):
   - SpecIR: Format-agnostic intermediate representation
-  - OpenSpec → SDLC 6.0 conversion: sdlcctl spec convert
-  - SDLC 6.0 → OpenSpec export: sdlcctl spec export
+  - OpenSpec → SDLC 6.0 conversion: SDLC CLI spec convert
+  - SDLC 6.0 → OpenSpec export: SDLC CLI spec export
   - BDD ↔ API mapping: Automatic test generation
 
 Key Files Updated:
@@ -90,7 +124,7 @@ Key Files Updated:
   - SDLC-Continuous-Improvement-Guide.md (+6.0.4 Success Story)
 ```
 
-**Rationale**: TDD proven effective for AI-assisted development in Sprint 154. 3-Phase Sprint Model enhanced with explicit TDD integration. Spec Converter enables format interoperability.
+**Rationale**: TDD proven effective for AI-assisted development through production validation. 3-Phase Sprint Model enhanced with explicit TDD integration. Spec Converter enables format interoperability.
 
 **References**:
 - [CHANGELOG.md (6.0.4)](../CHANGELOG.md)
@@ -169,10 +203,10 @@ Key Features:
   - Testing artifacts folder structure (SDLC-compliant)
   - SSOT principle for openapi.json (single source in Stage 03)
 
-SDLC Orchestrator Integration:
-  - sdlcctl e2e validate         # Validate E2E compliance
-  - sdlcctl e2e cross-reference  # Validate Stage 03 ↔ 05 links
-  - sdlcctl e2e generate-report  # Generate E2E test report
+Automation Integration:
+  - [SDLC CLI] e2e validate         # Validate E2E compliance
+  - [SDLC CLI] e2e cross-reference  # Validate Stage 03 ↔ 05 links
+  - [SDLC CLI] e2e generate-report  # Generate E2E test report
   - 4 new evidence artifact types
   - 2 new OPA policies (e2e_testing_compliance, stage_cross_reference)
 
@@ -200,12 +234,12 @@ New Specification:
 Key Features:
   - Pre/Post-implementation checklists
   - Artifact integrity hashing (SHA256 checksums)
-  - CLI validation commands (sdlcctl validate-consistency)
+  - CLI validation commands (SDLC compliance validator)
   - CI/CD integration examples (GitHub Actions, GitLab)
   - Tier-specific validation depths
 
 Historical Context:
-  - Sprint 128-129: Backend 100%, Frontend 0% (classic drift)
+  - Historical example: Backend 100%, Frontend 0% (classic drift)
   - Solution: Mandatory stage alignment validation
 ```
 
@@ -213,7 +247,7 @@ Historical Context:
 
 ---
 
-## What's New in 6.0.2 (MAJOR)
+## What's New in 6.0.0 (MAJOR)
 
 ### Section 8: Unified Specification Standard (MAJOR)
 
@@ -353,7 +387,8 @@ THEN [expected outcome]
 ### 3. Validate
 
 ```bash
-sdlcctl spec validate your-spec.md
+# Run SDLC compliance validation on your specification
+[SDLC CLI] spec validate your-spec.md
 ```
 
 ---
@@ -387,7 +422,7 @@ SDLC-Enterprise-Framework/
 2. **Add Frontmatter**: Add YAML metadata to all specs
 3. **Convert to BDD**: Rewrite requirements as GIVEN-WHEN-THEN
 4. **Declare Tier**: Add tier field (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
-5. **Validate**: Run `sdlcctl spec validate --fix`
+5. **Validate**: Run SDLC compliance validation with auto-fix
 
 ---
 
@@ -437,7 +472,7 @@ Legacy Organization (6.0.6 RFC-001):
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: February 14, 2026
-**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD Integration + RFC-001)
+**Last Updated**: February 16, 2026
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
 *Quick reference for SDLC Framework 6.0.6 - Keep this handy!*

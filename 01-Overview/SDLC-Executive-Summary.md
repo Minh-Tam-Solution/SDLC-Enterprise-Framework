@@ -1,7 +1,7 @@
 # SDLC 6.0.6 Executive Summary
 
 **Version**: 6.0.6
-**Release Date**: February 14, 2026 (MINOR: RFC-001 + SPEC-0001 Anti-Vibecoding + Framework Templates)
+**Release Date**: February 16, 2026 (MINOR: Anthropic Patterns Integration + RFC-001 + SPEC-0001 + Templates)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
@@ -9,11 +9,31 @@
 
 ## What's New in 6.0.6 (MINOR RELEASE)
 
+### Anthropic Best Practices Integration
+
+**The Problem**: Anthropic's internal Claude Code practices (10 teams, 5 quickstarts) revealed 12 high-impact patterns for AI-assisted development that had no Framework-level methodology equivalent.
+
+**The Solution**: CTO analysis identified 3 highest-ROI patterns and codified them as tool-agnostic Framework methodology documents, following Framework-First (Section 3.2).
+
+| New Document | Location | Key Benefit |
+|-------------|----------|-------------|
+| **CLAUDE.md Standard (3-Tier)** | [03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) | Structured AI context docs: LITE (500-1K lines), PRO (1.5K-3K), ENTERPRISE (2K+) |
+| **Autonomous Codegen Patterns** | [03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
+| **MRP Template (5-Section)** | [02-Core-Methodology/SDLC-MRP-Template.md](../02-Core-Methodology/SDLC-MRP-Template.md) | Merge-Readiness Package: Change Summary, Evidence Refs, Rollback, Tests, Deploy |
+
+**3-Ring Compliance**: All 3 documents sit in the Core Ring (timeless, tool-agnostic, vendor-neutral).
+
+**Source**: Derived from Anthropic Data Infrastructure team practices, `claude-quickstarts/autonomous-coding/`, and Data Science team end-of-session documentation.
+
+---
+
+## What's New in 6.0.5 (MINOR RELEASE)
+
 ### RFC-001: Legacy Document Organization Standard (MANDATORY)
 
 **The Problem**: Per-stage `99-Legacy/` folders in active SDLC stages (00-09) caused ~40% AI context pollution, inconsistent cross-project organization, and developer confusion.
 
-**The Solution**: Centralize all legacy content into `10-Archive/{NN}-Legacy/` with stage-aligned subdirectories. Production-validated on BFlow Platform: 57% size reduction (211MB→91MB), 34% file count reduction (6,500→4,294).
+**The Solution**: Centralize all legacy content into `10-Archive/{NN}-Legacy/` with stage-aligned subdirectories. Production-validated: 57% size reduction (211MB→91MB), 34% file count reduction (6,500→4,294).
 
 **Key Changes**:
 - **MANDATORY standard**: All SDLC-compliant projects must adopt by March 15, 2026
@@ -33,6 +53,12 @@ Section 7 Vibecoding Index signals aligned with machine-readable SPEC-0001 contr
 | Context Completeness | 20% | How complete is the context provided to AI? |
 | AI Attestation Rate | 15% | % of code changes with AI co-authorship declared |
 | Historical Rejection Rate | 10% | % of recent PRs rejected in code review |
+
+### Governance Loop + Cleanup
+
+- Simplified overengineered modules from previous sprints
+- Code review consolidation (3 guides → 1 unified SDLC-Code-Review-Guide.md)
+- Framework scripts upgraded to 6.0.5
 
 ### 4 New Framework Templates
 
@@ -62,7 +88,7 @@ Section 7 Vibecoding Index signals aligned with machine-readable SPEC-0001 contr
 | **Tier-Aware Coverage** | Coverage targets per tier | LITE 70%, STANDARD 85%, PRO/ENT 95% |
 | **Spec Converter** | Format-agnostic SpecIR | OpenSpec ↔ SDLC 6.0 bidirectional conversion |
 
-**Sprint 154 Validation Results**:
+**Production Validation Results**:
 ```yaml
 TDD Excellence Metrics:
   Total Tests: 113 (all written FIRST)
@@ -165,7 +191,7 @@ Validation: TDD workflow proven effective for AI-assisted development
 **Resources**:
 - RFC: [RFC-SDLC-602-E2E-API-TESTING.md](../09-Continuous-Improvement/RFC/RFC-SDLC-602-E2E-API-TESTING.md)
 - Templates: [05-Templates-Tools/02-AI-Tools/](../05-Templates-Tools/02-AI-Tools/)
-- CLI Commands: `sdlcctl e2e validate`, `sdlcctl e2e cross-reference`
+- CLI Commands: SDLC CLI e2e validate, SDLC CLI e2e cross-reference
 
 ---
 
@@ -175,7 +201,7 @@ Validation: TDD workflow proven effective for AI-assisted development
 
 **The Problem**: "Spec drift" - implementation diverges from approved designs, causing rework and quality issues.
 
-**Historical Example** (Sprint 128-129):
+**Historical Example** (production incident):
 - Stage 01 (Planning): ✅ Team Invitations API spec complete
 - Stage 02 (Design): ✅ ADR-043 approved
 - Stage 03 (Integration): ✅ API contracts validated
@@ -228,7 +254,7 @@ Validation: TDD workflow proven effective for AI-assisted development
 **OpenSpec Alignment** (CEO APPROVED: EXTEND):
 - OpenSpec for fast planning (speed)
 - SDLC 6.0 for governance (quality)
-- `sdlcctl spec convert` bridges both workflows
+- SDLC CLI spec convert bridges both workflows
 
 ### Breaking Changes in 6.0.0
 
@@ -537,7 +563,7 @@ Section 8: Unified Specification Standard (6.0.4) ⭐ ENHANCED
 
 ## Proven Results
 
-### BFlow Platform Journey (52 days)
+### Flagship Platform Journey (52 days)
 
 ```yaml
 Investment: $90,200
@@ -603,7 +629,8 @@ SDLC 6.0.1 (Feb 2026) → Stage Consistency Validation SPEC-0021 (MINOR)
 SDLC 6.0.2 (Feb 2026) → E2E API Testing Enhancement RFC-602 (MINOR)
 SDLC 6.0.3 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
 SDLC 6.0.4 (Feb 2026) → TDD Workflow + 3-Phase Sprint + Spec Converter (MINOR)
-SDLC 6.0.6 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Templates ⭐ CURRENT
+SDLC 6.0.5 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Governance Loop (MINOR)
+SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP ⭐ CURRENT
 ```
 
 ---
@@ -630,6 +657,11 @@ SDLC 6.0.6 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Templates ⭐ CURRENT
 - [AI Agent Best Practices 2026](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md)
 - [Planning Mode Guide](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md)
 - [Model Selection Matrix](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md)
+
+**AI Governance (6.0.6 - Anthropic Patterns)**:
+- [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - 3-Tier CLAUDE.md structure
+- [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - Two-agent + 4-Gate Pipeline
+- [SDLC-MRP-Template.md](../02-Core-Methodology/SDLC-MRP-Template.md) - Merge-Readiness Package (5-section)
 
 **Governance**:
 - [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2
@@ -665,7 +697,7 @@ SDLC 6.0.6 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Templates ⭐ CURRENT
 
 ---
 
-**Last Updated**: February 14, 2026
+**Last Updated**: February 16, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
 **Version**: 6.0.6

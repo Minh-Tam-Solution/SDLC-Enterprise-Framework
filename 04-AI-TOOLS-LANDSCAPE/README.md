@@ -274,11 +274,11 @@ These patterns proved universal and were promoted to [03-AI-GOVERNANCE/](../03-A
 - [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) - Timeless principles (Core)
 - [06-Tool-Evaluation-Criteria.md](../03-AI-GOVERNANCE/06-Tool-Evaluation-Criteria.md) - How to evaluate
 - [CONTENT-MAP.md](../CONTENT-MAP.md) - Topic → file mapping
-- [99-ARCHIVE/tool-guides-2026/](../99-ARCHIVE/tool-guides-2026/) - Archived tool templates
+- [10-Archive/05-Legacy/tool-guides-2026/](../10-Archive/05-Legacy/tool-guides-2026/) - Archived tool templates
 
 ---
 
 **Document Status**: ACTIVE - OUTER RING
 **Owner**: CTO Office
-**Last Updated**: February 14, 2026
+**Last Updated**: February 16, 2026
 **Framework**: SDLC 6.0.6

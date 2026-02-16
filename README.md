@@ -337,7 +337,9 @@ SDLC-Enterprise-Framework/
 │   ├── 06-Tool-Evaluation-Criteria.md
 │   ├── 07-Anti-Patterns.md
 │   ├── 08-Governance-Decision-Matrix.md # Sprint 173
-│   └── 09-Governance-Metrics.md         # Sprint 173
+│   ├── 09-Governance-Metrics.md         # Sprint 173
+│   ├── 10-CLAUDE-MD-STANDARD.md         # Sprint 174 (6.0.6)
+│   └── 11-AUTONOMOUS-CODEGEN-PATTERNS.md # Sprint 174 (6.0.6)
 ├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (Ring 2)
 │   ├── tool-profiles/            # Claude Code, Cursor, Copilot profiles
 │   ├── best-practices-2026/      # 8 best practice guides
@@ -486,7 +488,8 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.0.6** | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup |
+| **6.0.6** | Feb 16, 2026 | Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
+| 6.0.5 | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup + Governance Loop |
 | 6.0.4 | Feb 8, 2026 | TDD Integration + Sprint 3-Phase Model + Spec Converter |
 | 6.0.3 | Feb 2, 2026 | Boris Cherny Consolidation, MCP Integration Guide |
 | 6.0.2 | Feb 2, 2026 | E2E API Testing Enhancement |

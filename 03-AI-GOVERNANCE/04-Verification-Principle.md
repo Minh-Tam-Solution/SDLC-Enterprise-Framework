@@ -140,7 +140,7 @@ For critical code, use parallel verification:
 
 ## Zero Mock Policy
 
-From NQH-Bot lessons (679 mocks → 78% production failure):
+From production lessons (679 mocks → 78% production failure in an AI chatbot project):
 
 | Policy | Rationale |
 |--------|-----------|

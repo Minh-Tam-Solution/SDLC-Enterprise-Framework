@@ -125,6 +125,10 @@ class SDLC60Validator:
             "pillar_4": {"name": "Quality Gates (Dual-Track)", "passed": False, "score": 0, "details": []},
             "pillar_5": {"name": "SASE Integration", "passed": False, "score": 0, "details": []},
             "pillar_6": {"name": "Documentation Permanence", "passed": False, "score": 0, "details": []},
+            "section_7": {"name": "Section 7: Quality Assurance", "passed": False, "score": 0, "details": []},
+            "section_8": {"name": "Section 8: Specification Standard", "passed": False, "score": 0, "details": []},
+            "three_ring": {"name": "3-Ring Architecture", "passed": False, "score": 0, "details": []},
+            "claude_md": {"name": "CLAUDE.md Standard", "passed": False, "score": 0, "details": []},
         }
         self.overall_compliant = False
 
@@ -170,6 +174,13 @@ class SDLC60Validator:
         self.validate_pillar_4_quality_gates()
         self.validate_pillar_5_sase_integration()
         self.validate_pillar_6_documentation()
+
+        # SDLC 6.0.6: Section 7 + Section 8 validation
+        self.validate_section_7_quality_assurance()
+        self.validate_section_8_spec_standard()
+
+        # SDLC 6.0.6: 3-Ring Architecture validation
+        self.validate_three_ring_architecture()
 
         # Calculate overall compliance
         self.calculate_overall_compliance()
@@ -861,12 +872,659 @@ class SDLC60Validator:
                 return True
         return False
 
-    def calculate_overall_compliance(self):
-        """Calculate overall SDLC 6.0.6 compliance (7 pillars)"""
-        passed_count = sum(1 for p in self.results.values() if p["passed"])
-        total_score = sum(p["score"] for p in self.results.values()) / 7  # 7 pillars
+    # ──────────────────────────────────────────────────────────────────
+    # SDLC 6.0.6 NEW: CLAUDE.md Standard, 3-Ring, MRP, Codegen Checks
+    # ──────────────────────────────────────────────────────────────────
 
-        self.overall_compliant = passed_count >= 5  # At least 5/7 pillars must pass
+    def check_claude_md_standard(self) -> dict:
+        """Validate CLAUDE.md against the SDLC 6.0.6 3-tier standard.
+
+        Tiers:
+        - LITE (1-2 people): 500-1K lines, basic sections
+        - PRO (3-15 people): 1.5K-3K lines, module zones, debugging patterns
+        - ENTERPRISE (15+ people): 2K+ lines, compliance checklists, runbooks
+
+        Returns:
+            dict with keys: exists, tier, line_count, score (0-100), details
+        """
+        result = {"exists": False, "tier": None, "line_count": 0, "score": 0, "details": []}
+        claude_md = self.project_path / "CLAUDE.md"
+
+        if not claude_md.exists():
+            result["details"].append("❌ CLAUDE.md not found at project root")
+            return result
+
+        result["exists"] = True
+        try:
+            content = claude_md.read_text(encoding='utf-8')
+        except Exception:
+            result["details"].append("⚠️  CLAUDE.md exists but could not be read")
+            result["score"] = 10
+            return result
+
+        lines = content.split('\n')
+        result["line_count"] = len(lines)
+        content_lower = content.lower()
+        score = 0
+
+        # Detect tier from line count
+        if len(lines) >= 2000:
+            result["tier"] = "ENTERPRISE"
+        elif len(lines) >= 1500:
+            result["tier"] = "PRO"
+        elif len(lines) >= 500:
+            result["tier"] = "LITE"
+        else:
+            result["tier"] = "MINIMAL"
+            result["details"].append(f"⚠️  CLAUDE.md is {len(lines)} lines (LITE minimum: 500)")
+
+        # LITE required sections
+        lite_sections = {
+            "project overview": ["project overview", "what is", "## overview"],
+            "tech stack": ["tech stack", "technology stack", "## technology"],
+            "quick start": ["quick start", "getting started"],
+            "architecture": ["architecture", "system design", "5-layer"],
+            "constraints": ["constraints", "critical constraints", "policies"],
+        }
+
+        for section_name, patterns in lite_sections.items():
+            if any(p in content_lower for p in patterns):
+                score += 10
+                result["details"].append(f"✅ {section_name.title()}")
+            else:
+                result["details"].append(f"⚠️  Missing: {section_name.title()}")
+
+        # PRO additional sections
+        if result["tier"] in ("PRO", "ENTERPRISE"):
+            pro_sections = {
+                "module zones": ["module zone", "module-specific", "## gate engine", "## evidence vault"],
+                "debugging patterns": ["debugging", "debug", "common issues"],
+                "test commands": ["test command", "pytest", "npm test", "testing standards"],
+                "onboarding": ["onboarding", "getting started", "setup guide"],
+            }
+
+            for section_name, patterns in pro_sections.items():
+                if any(p in content_lower for p in patterns):
+                    score += 5
+                    result["details"].append(f"✅ PRO: {section_name.title()}")
+                else:
+                    result["details"].append(f"⚠️  PRO missing: {section_name.title()}")
+
+        # ENTERPRISE additional sections
+        if result["tier"] == "ENTERPRISE":
+            enterprise_sections = {
+                "compliance checklists": ["compliance", "owasp", "asvs"],
+                "runbook": ["runbook", "operations", "incident response"],
+                "security boundary": ["security", "rbac", "authentication"],
+            }
+
+            for section_name, patterns in enterprise_sections.items():
+                if any(p in content_lower for p in patterns):
+                    score += 5
+                    result["details"].append(f"✅ ENTERPRISE: {section_name.title()}")
+                else:
+                    result["details"].append(f"⚠️  ENTERPRISE missing: {section_name.title()}")
+
+        # Content principles check
+        # Constraints should appear early (top 30% of file)
+        constraints_pos = content_lower.find("constraints")
+        if constraints_pos >= 0 and constraints_pos < len(content) * 0.3:
+            score += 5
+            result["details"].append("✅ Constraints appear early (progressive disclosure)")
+        elif constraints_pos >= 0:
+            result["details"].append("⚠️  Constraints found but not early in file")
+
+        # File paths (real references to code)
+        file_path_patterns = [r'[\w/]+\.py', r'[\w/]+\.ts', r'[\w/]+\.tsx']
+        file_ref_count = 0
+        for pattern in file_path_patterns:
+            file_ref_count += len(re.findall(pattern, content))
+        if file_ref_count >= 10:
+            score += 5
+            result["details"].append(f"✅ {file_ref_count} file path references (file paths > descriptions)")
+        elif file_ref_count > 0:
+            score += 2
+            result["details"].append(f"⚠️  Only {file_ref_count} file path references")
+
+        # Anti-pattern: stale (check last_updated)
+        last_updated_match = re.search(r'[Ll]ast [Uu]pdated.*?(\d{4}-\d{2}-\d{2})', content)
+        if last_updated_match:
+            result["details"].append(f"✅ Last updated: {last_updated_match.group(1)}")
+        else:
+            result["details"].append("⚠️  No last_updated date found")
+
+        result["score"] = min(score, 100)
+        return result
+
+    def check_three_ring_architecture(self) -> dict:
+        """Validate 3-Ring Architecture compliance for Framework documents.
+
+        Core ring docs must be 100% tool-agnostic (no sdlcctl, no kubectl, no platform URLs).
+        Governance ring docs must be stable (no sprint-specific content).
+
+        Returns:
+            dict with keys: score (0-100), violations (list), details (list)
+        """
+        result = {"score": 100, "violations": [], "details": []}
+
+        # Only check Framework docs if present
+        framework_path = self.project_path / "SDLC-Enterprise-Framework"
+        if not framework_path.exists():
+            result["details"].append("⚠️  SDLC-Enterprise-Framework not found (skipping 3-Ring check)")
+            result["score"] = 0
+            return result
+
+        # Violation patterns for Core ring
+        violation_patterns = [
+            (r'\bsdlcctl\b', "sdlcctl CLI reference"),
+            (r'\bkubectl\b', "kubectl CLI reference"),
+            (r'api\.sdlc\.dev', "platform URL"),
+            (r'redis\.sdlc\.svc', "infrastructure URL"),
+            (r'\bEP-06\b', "Orchestrator-specific EP reference"),
+            (r'from minio import', "AGPL import"),
+            (r'from opa import', "OPA import"),
+            (r'from grafana_client import', "Grafana import"),
+        ]
+
+        # Core ring paths (methodology documents)
+        core_paths = [
+            framework_path / "01-Foundation",
+            framework_path / "02-Core-Methodology",
+        ]
+
+        # Governance ring paths
+        governance_paths = [
+            framework_path / "03-AI-GOVERNANCE",
+            framework_path / "04-Quality-Governance",
+        ]
+
+        violation_count = 0
+
+        # Check Core ring
+        for core_path in core_paths:
+            if not core_path.exists():
+                continue
+            for md_file in core_path.rglob("*.md"):
+                if self._is_legacy_or_archive(md_file):
+                    continue
+                try:
+                    content = md_file.read_text(encoding='utf-8')
+                    for pattern, desc in violation_patterns:
+                        matches = re.findall(pattern, content)
+                        if matches:
+                            violation_count += len(matches)
+                            rel_path = md_file.relative_to(self.project_path)
+                            result["violations"].append(f"Core ring: {rel_path} — {desc} ({len(matches)}x)")
+                except Exception:
+                    continue
+
+        # Check Governance ring (less strict — vendor comparisons acceptable)
+        for gov_path in governance_paths:
+            if not gov_path.exists():
+                continue
+            for md_file in gov_path.rglob("*.md"):
+                if self._is_legacy_or_archive(md_file):
+                    continue
+                try:
+                    content = md_file.read_text(encoding='utf-8')
+                    # Only check for direct tool dependencies, not comparisons
+                    strict_patterns = [
+                        (r'from minio import', "AGPL import"),
+                        (r'from grafana_client import', "Grafana import"),
+                        (r'redis\.sdlc\.svc', "infrastructure URL"),
+                    ]
+                    for pattern, desc in strict_patterns:
+                        matches = re.findall(pattern, content)
+                        if matches:
+                            violation_count += len(matches)
+                            rel_path = md_file.relative_to(self.project_path)
+                            result["violations"].append(f"Governance ring: {rel_path} — {desc} ({len(matches)}x)")
+                except Exception:
+                    continue
+
+        # Score: start at 100, deduct per violation
+        result["score"] = max(0, 100 - (violation_count * 10))
+
+        if violation_count == 0:
+            result["details"].append("✅ 3-Ring Architecture: No violations found")
+        else:
+            result["details"].append(f"⚠️  3-Ring Architecture: {violation_count} violations in {len(result['violations'])} locations")
+
+        return result
+
+    def check_mrp_template(self) -> dict:
+        """Validate MRP (Merge-Readiness Package) presence and completeness.
+
+        MRP 5-Section Structure:
+        1. Change Summary (what, why, impact scope)
+        2. Evidence Vault References (gate-by-gate evidence IDs)
+        3. Rollback Plan (trigger, steps, data migration, time, verification)
+        4. Testing Evidence (unit, integration, manual QA, performance)
+        5. Deployment Notes (config, order, post-deploy validation, flags)
+
+        Returns:
+            dict with keys: found, score (0-100), details
+        """
+        result = {"found": False, "score": 0, "details": []}
+
+        # Look for MRP documents
+        mrp_patterns = ["MRP", "Merge-Readiness", "merge-readiness", "mrp-template"]
+        mrp_files = []
+
+        for pattern in mrp_patterns:
+            matches = list(self._rglob_skip_legacy(f"*{pattern}*"))
+            mrp_files.extend(matches)
+
+        if not mrp_files:
+            result["details"].append("⚠️  No MRP documents found")
+            return result
+
+        result["found"] = True
+        result["details"].append(f"✅ MRP documents found: {len(mrp_files)}")
+        score = 30
+
+        # Check for 5-section completeness in any MRP file
+        mrp_sections = {
+            "change summary": ["change summary", "what changed", "## summary", "## 1."],
+            "evidence vault": ["evidence vault", "evidence id", "EVD-", "## 2."],
+            "rollback plan": ["rollback", "rollback plan", "## 3."],
+            "testing evidence": ["testing evidence", "test results", "## 4."],
+            "deployment notes": ["deployment", "deploy notes", "## 5."],
+        }
+
+        for mrp_file in mrp_files:
+            try:
+                content = mrp_file.read_text(encoding='utf-8').lower()
+                for section_name, patterns in mrp_sections.items():
+                    if any(p in content for p in patterns):
+                        score += 14
+                        result["details"].append(f"✅ MRP Section: {section_name.title()}")
+                        break  # Only count once
+            except Exception:
+                continue
+
+        result["score"] = min(score, 100)
+        return result
+
+    def check_autonomous_codegen_gates(self) -> dict:
+        """Validate Autonomous Codegen 4-Gate Pipeline presence.
+
+        4-Gate Pipeline:
+        - G1: Specification Review
+        - G2: Security Scan (SAST)
+        - G3: Test Validation
+        - G4: Human Review (>500 LOC)
+
+        Also checks: Two-agent pattern, retry logic, evidence lifecycle.
+
+        Returns:
+            dict with keys: found, score (0-100), details
+        """
+        result = {"found": False, "score": 0, "details": []}
+
+        # Look for codegen pipeline
+        codegen_paths = [
+            self.project_path / "backend" / "app" / "services" / "codegen",
+            self.project_path / "backend" / "services" / "codegen",
+            self.project_path / "src" / "codegen",
+        ]
+
+        codegen_dir = None
+        for path in codegen_paths:
+            if path.exists():
+                codegen_dir = path
+                break
+
+        if not codegen_dir:
+            # Also check for codegen patterns in any Python file
+            codegen_files = list(self._rglob_skip_legacy("*codegen*"))
+            if codegen_files:
+                result["found"] = True
+                result["score"] = 20
+                result["details"].append(f"✅ Codegen files found: {len(codegen_files)}")
+            else:
+                result["details"].append("⚠️  No codegen pipeline found (optional for non-codegen projects)")
+                return result
+        else:
+            result["found"] = True
+            result["score"] = 30
+            result["details"].append(f"✅ Codegen pipeline directory: {codegen_dir.relative_to(self.project_path)}")
+
+        # Check for 4-Gate pipeline indicators
+        gate_patterns = {
+            "G1 (Spec Review)": ["specification", "spec_review", "gate_1", "g1_"],
+            "G2 (Security)": ["security", "sast", "semgrep", "gate_2", "g2_"],
+            "G3 (Test)": ["test_validation", "coverage", "gate_3", "g3_"],
+            "G4 (Human Review)": ["human_review", "code_review", "gate_4", "g4_"],
+        }
+
+        for gate_name, patterns in gate_patterns.items():
+            gate_found = False
+            for py_file in self._rglob_skip_legacy("*.py"):
+                try:
+                    content = py_file.read_text(encoding='utf-8').lower()
+                    if any(p in content for p in patterns):
+                        gate_found = True
+                        break
+                except Exception:
+                    continue
+
+            if gate_found:
+                result["score"] += 10
+                result["details"].append(f"✅ {gate_name} gate detected")
+            else:
+                result["details"].append(f"⚠️  {gate_name} gate not detected")
+
+        # Check for retry logic
+        retry_found = False
+        for py_file in self._rglob_skip_legacy("*.py"):
+            try:
+                content = py_file.read_text(encoding='utf-8').lower()
+                if "max_retries" in content or "retry" in content:
+                    retry_found = True
+                    break
+            except Exception:
+                continue
+
+        if retry_found:
+            result["score"] += 10
+            result["details"].append("✅ Retry logic detected (max_retries)")
+        else:
+            result["details"].append("⚠️  No retry logic detected")
+
+        # Check for evidence lifecycle
+        evidence_states = ["generated", "validating", "retrying", "escalated",
+                          "evidence_locked", "awaiting_vcr", "merged", "aborted"]
+        evidence_found = 0
+        for py_file in self._rglob_skip_legacy("*.py"):
+            try:
+                content = py_file.read_text(encoding='utf-8').lower()
+                for state in evidence_states:
+                    if state in content:
+                        evidence_found += 1
+            except Exception:
+                continue
+
+        if evidence_found >= 4:
+            result["score"] += 10
+            result["details"].append(f"✅ Evidence lifecycle states detected ({evidence_found}/8)")
+        elif evidence_found > 0:
+            result["score"] += 5
+            result["details"].append(f"⚠️  Partial evidence lifecycle ({evidence_found}/8 states)")
+
+        result["score"] = min(result["score"], 100)
+        return result
+
+    def check_section_7_quality_assurance(self) -> dict:
+        """Validate Section 7 Quality Assurance System presence.
+
+        Checks for:
+        - Vibecoding Index (5 weighted signals)
+        - Progressive Routing (Green/Yellow/Orange/Red)
+        - Kill Switch Criteria
+        - Auto-Generation Layer
+
+        Returns:
+            dict with keys: score (0-100), details
+        """
+        result = {"score": 0, "details": []}
+
+        # Check for Vibecoding Index indicators
+        vibecoding_patterns = ["vibecoding", "vibe_index", "vibecoding_index",
+                               "context_deficit", "specification_gap", "validation_bypass",
+                               "knowledge_decay", "ownership_void"]
+        vibecoding_found = False
+        for pattern in vibecoding_patterns:
+            matches = list(self._rglob_skip_legacy(f"*{pattern}*"))
+            if matches:
+                vibecoding_found = True
+                break
+            # Also check file contents
+            for py_file in self._rglob_skip_legacy("*.py"):
+                try:
+                    content = py_file.read_text(encoding='utf-8').lower()
+                    if pattern in content:
+                        vibecoding_found = True
+                        break
+                except Exception:
+                    continue
+            if vibecoding_found:
+                break
+
+        if vibecoding_found:
+            result["score"] += 30
+            result["details"].append("✅ Vibecoding Index detection found")
+        else:
+            result["details"].append("⚠️  Vibecoding Index not implemented")
+
+        # Check for Progressive Routing
+        routing_patterns = ["progressive_routing", "green.*yellow.*orange.*red",
+                           "auto.?approve", "peer.?review", "senior.?review"]
+        routing_found = False
+        for py_file in self._rglob_skip_legacy("*.py"):
+            try:
+                content = py_file.read_text(encoding='utf-8').lower()
+                if any(re.search(p, content) for p in routing_patterns):
+                    routing_found = True
+                    break
+            except Exception:
+                continue
+
+        if routing_found:
+            result["score"] += 25
+            result["details"].append("✅ Progressive Routing detected")
+        else:
+            result["details"].append("⚠️  Progressive Routing not implemented")
+
+        # Check for Kill Switch
+        kill_switch_patterns = ["kill_switch", "killswitch", "circuit_breaker",
+                               "rejection_rate", "max_rejection"]
+        kill_found = False
+        for py_file in self._rglob_skip_legacy("*.py"):
+            try:
+                content = py_file.read_text(encoding='utf-8').lower()
+                if any(p in content for p in kill_switch_patterns):
+                    kill_found = True
+                    break
+            except Exception:
+                continue
+
+        if kill_found:
+            result["score"] += 25
+            result["details"].append("✅ Kill Switch / Circuit Breaker detected")
+        else:
+            result["details"].append("⚠️  Kill Switch not implemented")
+
+        # Check for Quality Assurance documentation
+        qa_docs = list(self._rglob_skip_legacy("*quality*assurance*"))
+        qa_docs.extend(list(self._rglob_skip_legacy("*vibecoding*")))
+        if qa_docs:
+            result["score"] += 20
+            result["details"].append(f"✅ QA documentation found ({len(qa_docs)} files)")
+        else:
+            result["details"].append("⚠️  No Section 7 QA documentation found")
+
+        result["score"] = min(result["score"], 100)
+        return result
+
+    def check_section_8_spec_standard(self) -> dict:
+        """Validate Section 8 Unified Specification Standard.
+
+        Checks:
+        - YAML frontmatter presence (spec_id, title, version, status, tier, owner, last_updated)
+        - BDD format (GIVEN-WHEN-THEN)
+        - Tier declaration validity
+
+        Returns:
+            dict with keys: score (0-100), frontmatter_rate, bdd_rate, details
+        """
+        result = {"score": 0, "frontmatter_rate": 0, "bdd_rate": 0, "details": []}
+
+        # Required frontmatter fields
+        required_fields = ["spec_id", "title", "version", "status", "tier", "owner", "last_updated"]
+        valid_statuses = ["DRAFT", "REVIEW", "APPROVED", "ACTIVE", "DEPRECATED"]
+        valid_tiers = ["LITE", "STANDARD", "PROFESSIONAL", "ENTERPRISE"]
+
+        # Scan specification files
+        spec_files = []
+        spec_dirs = [
+            self.project_path / "docs",
+            self.project_path / "specifications",
+            self.project_path / "specs",
+        ]
+
+        for spec_dir in spec_dirs:
+            if spec_dir.exists():
+                for md_file in spec_dir.rglob("*.md"):
+                    if not self._is_legacy_or_archive(md_file):
+                        spec_files.append(md_file)
+
+        if not spec_files:
+            result["details"].append("⚠️  No specification files found in docs/")
+            return result
+
+        # Check frontmatter
+        files_with_frontmatter = 0
+        files_with_bdd = 0
+        total_checked = 0
+
+        for spec_file in spec_files[:50]:  # Cap at 50 files for performance
+            try:
+                content = spec_file.read_text(encoding='utf-8')
+                total_checked += 1
+            except Exception:
+                continue
+
+            # Check YAML frontmatter
+            if content.startswith('---'):
+                end_idx = content.find('---', 3)
+                if end_idx > 0:
+                    frontmatter = content[3:end_idx].lower()
+                    has_required = sum(1 for f in required_fields if f in frontmatter)
+                    if has_required >= 4:  # At least 4 of 7 required fields
+                        files_with_frontmatter += 1
+
+            # Check BDD format
+            content_lower = content.lower()
+            if ('given' in content_lower and 'when' in content_lower and 'then' in content_lower):
+                files_with_bdd += 1
+
+        if total_checked > 0:
+            result["frontmatter_rate"] = (files_with_frontmatter / total_checked) * 100
+            result["bdd_rate"] = (files_with_bdd / total_checked) * 100
+
+            if result["frontmatter_rate"] >= 80:
+                result["score"] += 40
+                result["details"].append(f"✅ YAML frontmatter: {result['frontmatter_rate']:.0f}% ({files_with_frontmatter}/{total_checked})")
+            elif result["frontmatter_rate"] >= 50:
+                result["score"] += 20
+                result["details"].append(f"⚠️  YAML frontmatter: {result['frontmatter_rate']:.0f}% ({files_with_frontmatter}/{total_checked})")
+            else:
+                result["details"].append(f"❌ YAML frontmatter: {result['frontmatter_rate']:.0f}% ({files_with_frontmatter}/{total_checked})")
+
+            if result["bdd_rate"] >= 50:
+                result["score"] += 40
+                result["details"].append(f"✅ BDD format: {result['bdd_rate']:.0f}% ({files_with_bdd}/{total_checked})")
+            elif result["bdd_rate"] >= 20:
+                result["score"] += 20
+                result["details"].append(f"⚠️  BDD format: {result['bdd_rate']:.0f}% ({files_with_bdd}/{total_checked})")
+            else:
+                result["details"].append(f"❌ BDD format: {result['bdd_rate']:.0f}% ({files_with_bdd}/{total_checked})")
+        else:
+            result["details"].append("⚠️  No specification files could be read")
+
+        # Bonus: check for spec validation scripts
+        if list(self._rglob_skip_legacy("*spec*validator*")) or list(self._rglob_skip_legacy("*frontmatter*validator*")):
+            result["score"] += 20
+            result["details"].append("✅ Spec validation tooling found")
+
+        result["score"] = min(result["score"], 100)
+        return result
+
+    def validate_section_7_quality_assurance(self):
+        """Section 7: Quality Assurance System (SDLC 6.0.6)"""
+        print("\n🛡️  Validating Section 7: Quality Assurance System...")
+
+        section = self.results["section_7"]
+        qa_result = self.check_section_7_quality_assurance()
+
+        section["score"] = qa_result["score"]
+        section["details"] = qa_result["details"]
+        section["passed"] = qa_result["score"] >= 25  # Lower threshold — many projects won't have all
+
+        status = "✅ PASSED" if section["passed"] else "⚠️  PARTIAL"
+        print(f"   {status} - Score: {section['score']}%")
+
+    def validate_section_8_spec_standard(self):
+        """Section 8: Unified Specification Standard (SDLC 6.0.6)"""
+        print("\n📋 Validating Section 8: Specification Standard...")
+
+        section = self.results["section_8"]
+        spec_result = self.check_section_8_spec_standard()
+
+        section["score"] = spec_result["score"]
+        section["details"] = spec_result["details"]
+        section["passed"] = spec_result["score"] >= 30
+
+        status = "✅ PASSED" if section["passed"] else "⚠️  PARTIAL"
+        print(f"   {status} - Score: {section['score']}%")
+
+    def validate_three_ring_architecture(self):
+        """3-Ring Architecture Compliance (SDLC 6.0.6)"""
+        print("\n🔵 Validating 3-Ring Architecture...")
+
+        section = self.results["three_ring"]
+        ring_result = self.check_three_ring_architecture()
+
+        section["score"] = ring_result["score"]
+        section["details"] = ring_result["details"]
+        if ring_result["violations"]:
+            for v in ring_result["violations"][:5]:  # Show top 5
+                section["details"].append(f"   ⚠️  {v}")
+        section["passed"] = ring_result["score"] >= 70  # 70% minimum (some violations acceptable)
+
+        # Also validate CLAUDE.md Standard
+        print("\n📝 Validating CLAUDE.md Standard...")
+        claude_section = self.results["claude_md"]
+        claude_result = self.check_claude_md_standard()
+
+        claude_section["score"] = claude_result["score"]
+        claude_section["details"] = claude_result["details"]
+        claude_section["passed"] = claude_result["exists"] and claude_result["score"] >= 30
+
+        # Also check MRP and Codegen (add to pillar 5 details)
+        mrp_result = self.check_mrp_template()
+        codegen_result = self.check_autonomous_codegen_gates()
+
+        pillar5 = self.results["pillar_5"]
+        if mrp_result["found"]:
+            pillar5["details"].append(f"✅ MRP Template: {mrp_result['score']}%")
+            pillar5["score"] = min(pillar5["score"] + 5, 100)
+        if codegen_result["found"]:
+            pillar5["details"].append(f"✅ Codegen 4-Gate Pipeline: {codegen_result['score']}%")
+            pillar5["score"] = min(pillar5["score"] + 5, 100)
+
+        status = "✅ PASSED" if section["passed"] else "⚠️  PARTIAL"
+        print(f"   3-Ring: {status} - Score: {section['score']}%")
+        claude_status = "✅ PASSED" if claude_section["passed"] else "⚠️  PARTIAL"
+        print(f"   CLAUDE.md: {claude_status} - Score: {claude_section['score']}%")
+
+    def calculate_overall_compliance(self):
+        """Calculate overall SDLC 6.0.6 compliance (7 pillars + 2 sections + extras)"""
+        # Core: 7 pillars
+        pillar_keys = [f"pillar_{i}" for i in range(7)]
+        pillar_passed = sum(1 for k in pillar_keys if self.results[k]["passed"])
+        pillar_score = sum(self.results[k]["score"] for k in pillar_keys) / 7
+
+        # Extensions: Section 7, Section 8, 3-Ring, CLAUDE.md
+        extension_keys = ["section_7", "section_8", "three_ring", "claude_md"]
+        extension_score = sum(self.results[k]["score"] for k in extension_keys) / len(extension_keys)
+
+        # Overall: 70% pillars + 30% extensions
+        total_score = (pillar_score * 0.7) + (extension_score * 0.3)
+
+        # Must pass at least 5/7 pillars AND have extensions > 20%
+        self.overall_compliant = pillar_passed >= 5 and extension_score >= 20
         self.overall_score = total_score
 
     def print_results(self):
@@ -888,13 +1546,17 @@ class SDLC60Validator:
             print("🎉 PROJECT IS SDLC 6.0.6 COMPLIANT!")
             print("✅ Ready for production deployment")
             print("✅ 7-Pillar Architecture validated")
-            print("✅ Sprint Planning Governance validated (Pillar 2)")
-            print("✅ SASE Framework validated (Pillar 5)")
+            print("✅ Section 7 Quality Assurance checked")
+            print("✅ Section 8 Specification Standard checked")
+            print("✅ 3-Ring Architecture validated")
+            print("✅ CLAUDE.md Standard validated")
             print("✅ Legacy/Archive folders excluded from validation")
         else:
             print("⚠️  PROJECT NEEDS IMPROVEMENT")
             print("💡 Address failed pillars before production deployment")
-            print("💡 Check Sprint Planning Governance (Pillar 2)")
+            print("💡 Check Section 7 (Quality Assurance) and Section 8 (Spec Standard)")
+            print("💡 Check 3-Ring Architecture compliance")
+            print("💡 Check CLAUDE.md against 3-tier standard (LITE/PRO/ENTERPRISE)")
             print("💡 Check SASE Artifacts (AGENTS.md, CRP, MRP, VCR)")
             print("💡 See: SDLC-Enterprise-Framework/05-Templates-Tools/")
             print("💡 Note: Legacy/Archive folders (99-legacy, 10-archive) are excluded")

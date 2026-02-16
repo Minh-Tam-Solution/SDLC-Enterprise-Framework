@@ -34,13 +34,13 @@ Principle:
   - Cancelled sprints keep their number (marked CANCELLED, not reused)
 
 Exceptions (require CTO approval):
-  - Sprint merge: Create new number (e.g., Sprint 86+87 → Sprint 88)
-  - Sprint split: Use suffix (e.g., Sprint 86 → Sprint 86A, 86B)
+  - Sprint merge: Create new number (e.g., Sprint N+N+1 → Sprint N+2)
+  - Sprint split: Use suffix (e.g., Sprint N → Sprint NA, NB)
   - Sprint cancel: Mark as CANCELLED, next sprint uses next number
 
 Example:
-  ❌ Wrong: Sprint 87-90 renamed to Sprint 83-86
-  ✅ Correct: Sprint 83-86 completed, Sprint 87-90 is next
+  ❌ Wrong: Later sprints renamed to fill gaps in numbering
+  ✅ Correct: Completed sprints keep their numbers, next sprint uses next sequential number
 ```
 
 ### Rule 2: Post-Sprint Documentation Within 24 Business Hours
@@ -191,7 +191,7 @@ Validation:
 Example:
   Roadmap Goal: "Launch CGF V2.2 by March 2026"
   └── Phase 4 Objective: "Complete Multi-Industry Support"
-      └── Sprint 87 Goal: "Implement F&B vertical"
+      └── Sprint N Goal: "Implement F&B vertical"
           └── Backlog: User stories, tasks, bugs
 
 Validation Question:
@@ -220,8 +220,8 @@ P2 (Nice-to-Have / Could Have):
   - Example: UI polish, analytics
 
 Anti-Pattern:
-  ❌ "Sprint 86 Options: Mobile OR Analytics OR CGF Prep"
-  ✅ "Sprint 86: CGF V2.2 Preparation (P0), Analytics (P2 if capacity)"
+  ❌ "Sprint N Options: Mobile OR Analytics OR Feature Prep"
+  ✅ "Sprint N: Feature Preparation (P0), Analytics (P2 if capacity)"
 
 Enforcement:
   - Sprint plan must list priorities explicitly
@@ -428,12 +428,12 @@ G-Sprint-Close Passed When:
 
 **Scenario 1: Sprint Spans Multiple Stages**
 
-Example: Sprint 106 (App Builder Integration)
+Example: Multi-Stage Sprint (App Builder Integration)
 - **Stages Affected**: 02-DESIGN, 03-INTEGRATE, 04-BUILD
 - **Duration**: 4 days (Day 0-3)
 - **Challenge**: Must track stage transitions within sprint
 
-**Sprint 106 Timeline**:
+**Example Timeline**:
 
 | Day | Stage | Deliverable | Gate |
 |-----|-------|-------------|------|
@@ -446,7 +446,7 @@ Example: Sprint 106 (App Builder Integration)
 **Documentation Requirements**:
 
 ```yaml
-SPRINT-106.md:
+SPRINT-NNN.md:
   metadata:
     stages_affected: [02-DESIGN, 03-INTEGRATE, 04-BUILD]
     primary_stage: 04-BUILD
@@ -479,12 +479,12 @@ SPRINT-106.md:
 
 **Scenario 2: Sprint Entirely Within One Stage**
 
-Example: Sprint 105 (Quality Pipeline Enhancement)
+Example: Single-Stage Sprint (Quality Pipeline Enhancement)
 - **Stage**: 04-BUILD (entire sprint)
 - **Challenge**: None (simple scenario)
 
 ```yaml
-SPRINT-105.md:
+SPRINT-NNN.md:
   metadata:
     stages_affected: [04-BUILD]
     primary_stage: 04-BUILD
@@ -493,23 +493,23 @@ SPRINT-105.md:
 
 **Scenario 3: Sprint Starts Mid-Stage**
 
-Example: Sprint 107 (Quality Gates Integration)
+Example: Continuation Sprint (Quality Gates Integration)
 - **Stage**: 04-BUILD (already in progress)
-- **Previous Sprint**: Sprint 106 completed Stage 04 partially
+- **Previous Sprint**: Previous sprint completed Stage 04 partially
 - **Challenge**: Track stage continuation, not stage entry
 
 ```yaml
-SPRINT-107.md:
+SPRINT-NNN.md:
   metadata:
     stages_affected: [04-BUILD]
     primary_stage: 04-BUILD
     stage_status: IN_PROGRESS
-    previous_sprint: SPRINT-106
+    previous_sprint: SPRINT-{N-1}
 
   stage_continuation:
     stage_04:
-      entry_date: 2026-01-27 (Sprint 106)
-      continuation_date: 2026-01-30 (Sprint 107)
+      entry_date: {date of previous sprint}
+      continuation_date: {date of current sprint}
       progress: 60%
       remaining: Quality Gates integration
 ```

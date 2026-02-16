@@ -194,7 +194,7 @@ Every MRP must contain exactly 5 sections. Sections can be partially auto-genera
 **Steps**:
 1. Rollback deployment:
    ```bash
-   kubectl rollback deployment/[service-name] --to-revision=[N]
+   [container orchestrator] rollback deployment/[service-name] --to-revision=[N]
    ```
 2. Clear corrupted cache:
    ```bash
@@ -327,7 +327,7 @@ curl https://[api-host]/api/v1/health
 
 **Deployment Order**:
 1. Ensure cache is available: `redis-cli -h [cache-host] PING` → PONG
-2. Deploy service: `kubectl apply -f k8s/[service].yaml`
+2. Deploy service: `[container orchestrator] apply -f k8s/[service].yaml`
 3. Run smoke test: verify health endpoint returns "healthy"
 
 **Post-Deployment Validation**:
@@ -439,7 +439,7 @@ DRAFT → REVIEW → APPROVED → ARCHIVED
 | **Rollback success rate** | >95% (clear instructions prevent mistakes) | Post-incident review |
 | **Merge confidence** | >90% team survey: "confident merging with MRP" | Quarterly developer survey |
 | **Audit readiness** | 100% of MRPs retrievable from Evidence Vault | Automated audit check |
-| **Auto-generation accuracy** | >80% sections correctly pre-filled (Sprint 175+) | Manual review sampling |
+| **Auto-generation accuracy** | >80% sections correctly pre-filled (future enhancement) | Manual review sampling |
 
 ---
 

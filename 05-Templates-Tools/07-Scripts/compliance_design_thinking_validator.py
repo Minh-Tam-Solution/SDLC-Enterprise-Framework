@@ -85,6 +85,7 @@ class DesignThinkingValidator:
             'phase_3_ideate': {'score': 0, 'evidence': [], 'status': 'NOT_FOUND'},
             'phase_4_prototype': {'score': 0, 'evidence': [], 'status': 'NOT_FOUND'},
             'phase_5_test': {'score': 0, 'evidence': [], 'status': 'NOT_FOUND'},
+            'ai_governance': {'score': 0, 'evidence': [], 'status': 'NOT_FOUND'},
             'overall_score': 0,
             'compliance_level': 'NONE'
         }
@@ -137,6 +138,20 @@ class DesignThinkingValidator:
             ]
         }
 
+        # AI Governance Principles detection (SDLC 6.0.6 - 7 Principles)
+        self.ai_governance_patterns = [
+            r'human[\s-]+accountab',       # Principle 1: Human Accountability
+            r'brief[\s-]+first',           # Principle 2: Brief-First Development
+            r'evidence[\s-]+based',        # Principle 3: Evidence-Based MRP
+            r'progressive[\s-]+autonom',   # Principle 4: Progressive Autonomy
+            r'context[\s-]+preserv',       # Principle 5: Context Preservation
+            r'kill[\s-]+switch',           # Principle 6: Kill Switch
+            r'continuous[\s-]+learning',   # Principle 7: Continuous Learning
+            r'ai[\s-]+governance',         # General AI governance reference
+            r'agents\.md',                 # AGENTS.md standard
+            r'vibecoding[\s-]+index',      # Section 7 awareness
+        ]
+
         # Documentation locations to search
         self.doc_locations = [
             'docs',
@@ -174,6 +189,9 @@ class DesignThinkingValidator:
         self._validate_phase_3_ideate()
         self._validate_phase_4_prototype()
         self._validate_phase_5_test()
+
+        # Validate AI Governance Principles awareness (SDLC 6.0.6)
+        self._validate_ai_governance_principles()
 
         # Calculate overall score
         self._calculate_overall_score()
@@ -303,6 +321,65 @@ class DesignThinkingValidator:
 
         logger.info("")
 
+    def _validate_ai_governance_principles(self):
+        """Validate AI Governance Principles awareness (SDLC 6.0.6 - 7 Principles)"""
+        logger.info("🤖 AI Governance Principles (SDLC 6.0.6)")
+        logger.info("-" * 60)
+
+        evidence = self._search_ai_governance_evidence()
+
+        if evidence:
+            score = min(100, len(evidence) * 15)  # 15 points per evidence, max 100
+            self.results['ai_governance'] = {
+                'score': score,
+                'evidence': evidence,
+                'status': 'COMPLIANT' if score >= 60 else 'PARTIAL'
+            }
+            logger.info(f"✅ Found {len(evidence)} AI governance evidence items")
+            for item in evidence[:5]:
+                logger.info(f"   • {item}")
+            logger.info(f"Score: {score}/100")
+        else:
+            logger.info("⚠️  No AI Governance Principles evidence found")
+            logger.info("   Consider: AGENTS.md, CLAUDE.md, MRP templates")
+            logger.info("   Reference: 7 AI Governance Principles (SDLC 6.0.6)")
+
+        logger.info("")
+
+    def _search_ai_governance_evidence(self) -> List[str]:
+        """Search for AI Governance Principles evidence in project files"""
+        evidence = []
+
+        # Check for AGENTS.md and CLAUDE.md at project root
+        for ai_file in ['AGENTS.md', 'CLAUDE.md']:
+            ai_path = self.project_path / ai_file
+            if ai_path.exists():
+                evidence.append(f"{ai_file}: AI collaboration context file present")
+
+        # Search documentation for AI governance patterns
+        for doc_dir in self.doc_locations:
+            doc_path = self.project_path / doc_dir
+            if not doc_path.exists():
+                continue
+
+            for md_file in doc_path.rglob('*.md'):
+                if self._is_legacy_or_archive(md_file):
+                    continue
+
+                try:
+                    content = md_file.read_text(encoding='utf-8', errors='ignore')
+                    content_lower = content.lower()
+
+                    for pattern in self.ai_governance_patterns:
+                        if re.search(pattern, content_lower):
+                            relative_path = md_file.relative_to(self.project_path)
+                            evidence.append(f"{relative_path}: {pattern}")
+                            break  # One evidence per file
+                except Exception:
+                    continue
+
+        return list(set(evidence))
+
     def _search_for_patterns(self, phase: str) -> List[str]:
         """
         Search project for evidence of specific Design Thinking phase
@@ -344,7 +421,7 @@ class DesignThinkingValidator:
         return list(set(evidence))  # Remove duplicates
 
     def _calculate_overall_score(self):
-        """Calculate overall Design Thinking compliance score"""
+        """Calculate overall Design Thinking compliance score (5 phases + AI governance bonus)"""
         phase_scores = [
             self.results['phase_1_empathize']['score'],
             self.results['phase_2_define']['score'],
@@ -353,7 +430,14 @@ class DesignThinkingValidator:
             self.results['phase_5_test']['score']
         ]
 
-        self.results['overall_score'] = sum(phase_scores) / 5
+        # Base score from 5 DT phases
+        base_score = sum(phase_scores) / 5
+
+        # AI Governance bonus (up to +10 points, SDLC 6.0.6)
+        ai_gov_score = self.results['ai_governance']['score']
+        ai_bonus = min(10, ai_gov_score / 10)
+
+        self.results['overall_score'] = min(100, base_score + ai_bonus)
 
         # Determine compliance level
         score = self.results['overall_score']
@@ -378,7 +462,8 @@ class DesignThinkingValidator:
             ('Phase 2 (Define)', 'phase_2_define'),
             ('Phase 3 (Ideate)', 'phase_3_ideate'),
             ('Phase 4 (Prototype)', 'phase_4_prototype'),
-            ('Phase 5 (Test)', 'phase_5_test')
+            ('Phase 5 (Test)', 'phase_5_test'),
+            ('AI Governance (6.0.6)', 'ai_governance')
         ]
 
         for phase_name, phase_key in phases:
@@ -409,7 +494,9 @@ class DesignThinkingValidator:
         logger.info("")
         logger.info("📚 Resources:")
         logger.info("   • SDLC 6.0.6 Design Thinking Guide: /00-foundation/")
+        logger.info("   • AI Governance Principles: /03-AI-GOVERNANCE/")
         logger.info("   • AI Tools: /05-Templates-Tools/02-AI-Tools/design-thinking/")
+        logger.info("   • CLAUDE.md Standard: Project root context for AI assistants")
         logger.info("   • Case Study: NQH-Bot 96% time savings")
         logger.info("   • Note: Legacy/Archive folders (99-legacy, 10-archive) excluded")
         logger.info("")

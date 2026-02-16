@@ -178,7 +178,7 @@ All diagrams must reference Evidence artifacts:
 ## Evidence Artifacts Referenced
 
 - EVD-2026-01-042: ADR-041 Progressive Routing decision
-- EVD-2026-02-015: Sprint 141 E2E Testing completion
+- EVD-2026-02-015: E2E Testing completion evidence
 - EVD-2026-03-001: User auth implementation plan
 
 ## Approval

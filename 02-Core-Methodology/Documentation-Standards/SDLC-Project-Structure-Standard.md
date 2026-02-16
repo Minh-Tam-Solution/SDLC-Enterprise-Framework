@@ -474,7 +474,7 @@ my-project/
 
 ## 10. Migration Guide
 
-### 10.1 From SDLC 4.x/5.x to 6.0.0
+### 10.1 From SDLC 4.x/5.x to 6.0.6
 
 If your project uses old stage names (WHY, WHAT, HOW, BUILD, etc.):
 
@@ -492,17 +492,17 @@ If your project uses old stage names (WHY, WHAT, HOW, BUILD, etc.):
 
 ### 10.2 Automated Migration
 
-Use `sdlcctl migrate` command:
+Use the SDLC CLI migration tool:
 
 ```bash
 # Analyze current structure
-sdlcctl validate --tier standard
+[SDLC CLI] validate --tier standard
 
 # Generate migration plan
-sdlcctl migrate --from 5.x --to 6.0.0 --dry-run
+[SDLC CLI] migrate --from 5.x --to 6.0.6 --dry-run
 
 # Execute migration
-sdlcctl migrate --from 5.x --to 6.0.0
+[SDLC CLI] migrate --from 5.x --to 6.0.6
 ```
 
 ---
@@ -545,7 +545,7 @@ docs/
 
 ### 11.4 Sprint Plan Validation
 
-Sprint plans MUST contain (validated by `sdlcctl`):
+Sprint plans MUST contain (validated by SDLC compliance tools):
 
 ```markdown
 ## Required Sections
@@ -578,7 +578,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 
 ## 12. Related Documents
 
-- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture definition
+- [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 7-Pillar Architecture definition
 - [SDLC-Naming-Standards.md](./SDLC-Naming-Standards.md) - File and document naming rules
 - [SDLC-Team-Collaboration.md](./SDLC-Team-Collaboration.md) - Team communication and escalation
 - [SDLC-Sprint-Governance.md](../Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 governance
@@ -603,7 +603,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 - Updated all SDLC version references to 6.0.0
 - Aligned with 8-Pillar Architecture (Pillar 7: Quality Assurance System)
 
-### v5.1.3 (January 2025)
+### v5.1.3 (January 2026)
 - Added Section 9: Sprint Documentation Structure (Pillar 2 Integration)
 - Added Sprint folder standard location under `docs/04-build/sprints/`
 - Added Sprint document naming conventions

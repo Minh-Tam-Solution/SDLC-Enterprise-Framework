@@ -1,12 +1,13 @@
 # 📝 SDLC Documentation Standards - Pillar 6: Documentation Permanence
 
 **Version**: 6.0.6
-**Date**: February 14, 2026
+**Date**: February 16, 2026
 **Status**: ACTIVE - Production Standards
 **Authority**: CPO Office
 **Pillar**: 6 of 8 - Documentation Permanence (8-Pillar Architecture with Pillar 7: Quality Assurance System)
 **AI Governance**: Aligned with 03-AI-GOVERNANCE/05-Context-Management principles
-**NEW in 6.0.6**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment
+**NEW in 6.0.6**: Anthropic Best Practices Integration — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template
+**NEW in 6.0.5**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment
 
 ---
 
@@ -170,7 +171,7 @@ docs/
 **Lines**: ~550 lines comprehensive guide (enhanced in 6.0.4)
 **Compliance**: RECOMMENDED for STANDARD+ tiers
 
-**Sprint 154 Validation**: TDD workflow validated with 113 tests, 100% pass rate
+**Production Validation**: TDD workflow validated with 113 tests, 100% pass rate
 
 > **SDLC 6.0.6**: Enhanced with 3-Phase Sprint Lifecycle Model and TDD Workflow Integration. Originally in `Situation-Specific-Guides/When-Planning-Sprint.md`.
 
@@ -347,7 +348,7 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 - [SDLC-Quality-Security-Gates.md](../Governance-Compliance/SDLC-Quality-Security-Gates.md) - Quality + Security gates
 
 ### Case Studies
-- [BFlow Sprint 86 Direction Confusion](../../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Why Pillar 2 & 6 matter
+- [Sprint Direction Confusion Case Study](../../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Why Pillar 2 & 6 matter
 
 ---
 
@@ -370,6 +371,8 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.0.6** | **Feb 16, 2026** | **Anthropic Best Practices Integration** — CLAUDE.md Standard, Autonomous Codegen, MRP Template |
+| **6.0.5** | **Feb 15, 2026** | **RFC-001 Legacy Organization** + SPEC-0001 Anti-Vibecoding Alignment + 4 templates |
 | **6.0.4** | **Feb 8, 2026** | **TDD Workflow Integration**, 3-Phase Sprint Enhancement, Spec Converter |
 | 6.0.3 | Feb 2, 2026 | Boris Cherny Best Practices Consolidation |
 | 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
@@ -385,5 +388,5 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 **Sprint Governance Integration**: *"24h documentation is not bureaucracy—it's incident prevention"* ⏰
 
-**Last Updated**: February 14, 2026
+**Last Updated**: February 16, 2026
 **Owner**: CPO Office

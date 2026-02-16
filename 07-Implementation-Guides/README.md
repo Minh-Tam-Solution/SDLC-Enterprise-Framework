@@ -1,11 +1,12 @@
 # SDLC 6.0.6 Implementation Guides
 
-**Version**: 6.0.6 | **Status**: PRODUCTION READY | **Date**: February 14, 2026
+**Version**: 6.0.6 | **Status**: PRODUCTION READY | **Date**: February 16, 2026
 
-Practical how-to guides for implementing SDLC 6.0.6 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation** + **RFC-001 Legacy Organization**.
+Practical how-to guides for implementing SDLC 6.0.6 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation** + **RFC-001 Legacy Organization** + **Anthropic Best Practices**.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.0.6**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment + 4 New Framework Templates + sdlcctl v1.7.0 Fuzzy P0 Detection
+**NEW in 6.0.5**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment + 4 New Framework Templates + sdlcctl v1.7.0 Fuzzy P0 Detection
+**NEW in 6.0.6**: Anthropic Best Practices Integration (3-Tier CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template)
 
 ---
 
@@ -226,6 +227,6 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 ---
 
-**Last Updated**: February 14, 2026
+**Last Updated**: February 16, 2026
 **Authority**: CTO + CPO Office
 **Framework Version**: 6.0.6
