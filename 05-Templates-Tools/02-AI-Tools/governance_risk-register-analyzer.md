@@ -1,18 +1,18 @@
 # 🛡️ Risk Register Analyzer - Stage 00 + 09 (FOUNDATION + GOVERN)
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Stage**: 00 - FOUNDATION + 09 - GOVERN
 **Pillar**: 1 (10-Stage Lifecycle) + 4 (Quality Gates)
 **Time Savings**: 80% (8 hours → 1.5 hours)
 **Authority**: CTO Office
-**Origin**: Bflow SDLC 6.0.5 Framework Assessment (Feb 2026)
+**Origin**: Bflow SDLC 6.0.6 Framework Assessment (Feb 2026)
 
 ---
 
 ## Purpose
 
-**Risk identification, assessment, and tracking** for SDLC 6.0.5 projects. Covers Technical, Operational, Business, Security, and Compliance risk categories with Likelihood × Impact scoring matrix. Supports risk ownership, mitigation planning, and review cadence by tier.
+**Risk identification, assessment, and tracking** for SDLC 6.0.6 projects. Covers Technical, Operational, Business, Security, and Compliance risk categories with Likelihood × Impact scoring matrix. Supports risk ownership, mitigation planning, and review cadence by tier.
 
 ---
 
@@ -33,7 +33,7 @@
 
 ```yaml
 System Prompt:
-  You are analyzing and managing a Risk Register for SDLC 6.0.5.
+  You are analyzing and managing a Risk Register for SDLC 6.0.6.
   Identify risks across 5 categories (Technical, Operational, Business, Security, Compliance).
   Score each risk using Likelihood × Impact matrix (1-4 scale).
   Assign risk owners and generate mitigation plans.

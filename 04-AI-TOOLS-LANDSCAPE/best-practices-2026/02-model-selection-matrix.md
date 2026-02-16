@@ -1,7 +1,7 @@
 # Model Selection Matrix
 ## Task-Appropriate Model Routing for AI Agents
 
-**Version:** 6.0.5
+**Version:** 6.0.6
 **Status:** ACTIVE
 **Date:** January 27, 2026
 

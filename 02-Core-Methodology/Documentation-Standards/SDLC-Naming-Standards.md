@@ -1,6 +1,6 @@
 # SDLC Naming Standards - Universal Framework
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: January 28, 2026
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
@@ -27,7 +27,7 @@
 
 ### Purpose
 
-This document consolidates **all naming and header standards** for SDLC 6.0.5 Framework:
+This document consolidates **all naming and header standards** for SDLC 6.0.6 Framework:
 - Code file naming (Python, TypeScript, migrations)
 - Document naming (markdown, documentation)
 - Folder structure (10 stages, legacy handling)
@@ -376,7 +376,7 @@ No Status Markers (version goes INSIDE):
 
 ## Part 4: Folder & Directory Standards
 
-### 4.1 Stage Folders (Level 1) - SDLC 6.0.5
+### 4.1 Stage Folders (Level 1) - SDLC 6.0.6
 
 **10 Stages (00-09)** - exactly 10 stages:
 
@@ -441,13 +441,13 @@ Examples:
 
 ### 5.1 Active Document Header
 
-Apply to **all active SDLC 6.0.5 documents**:
+Apply to **all active SDLC 6.0.6 documents**:
 
 ```markdown
 # [Document Title]
 ## [Subtitle - Purpose]
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Specific Status]
 **Authority**: [Who Approved]
@@ -526,7 +526,7 @@ This document has been **archived** and is **READ-ONLY**. For current active ver
 - Research on methodology origins
 
 **Do NOT Use This Archive For**:
-- New implementations (use active SDLC 6.0.5)
+- New implementations (use active SDLC 6.0.6)
 - Active projects (upgrade to current version)
 - Team training (use current materials)
 
@@ -598,7 +598,7 @@ Core Rules:
 Mapping Table Example:
   | Legacy Element | New Location | Status | Notes |
   |----------------|--------------|--------|-------|
-  | SDLC 6.0.5 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
+  | SDLC 6.0.6 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
 ```
 
 ### 6.3 Archival Anti-Patterns
@@ -656,7 +656,7 @@ def validate_document_name(filename):
 - [ ] Descriptive and permanent
 
 **For Document Headers:**
-- [ ] Version is 6.0.5 (or current)
+- [ ] Version is 6.0.6 (or current)
 - [ ] Date is current
 - [ ] Status clearly stated
 - [ ] Authority/ownership documented
@@ -706,7 +706,7 @@ Automation (Future):
 ```markdown
 # Document Title
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Context]
 **Authority**: [Owner]
@@ -760,7 +760,7 @@ DON'Ts ❌:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 6.0.5 | Feb 2026 | SDLC 6.0.5 alignment, 7-Pillar + AI Governance Principles |
+| 6.0.6 | Feb 2026 | SDLC 6.0.6 alignment, 7-Pillar + AI Governance Principles |
 | 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
 | 5.3.0 | Jan 28, 2026 | Consolidated from 4 files (Code, Document, Header, Archival) |
 | 5.0.0 | Dec 5, 2025 | Initial SDLC 5.0.0 versions |
@@ -777,7 +777,7 @@ DON'Ts ❌:
 ---
 
 **Document Status**: ACTIVE - MANDATORY ENFORCEMENT
-**Compliance**: Required for all SDLC 6.0.5 projects
+**Compliance**: Required for all SDLC 6.0.6 projects
 **Last Updated**: January 28, 2026
 **Owner**: CPO Office
 

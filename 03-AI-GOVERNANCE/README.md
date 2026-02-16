@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Status**: ACTIVE
 **Date**: February 14, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.0.5 with SPEC-0001 Anti-Vibecoding Alignment)
+**Pillar**: Core AI Governance (Enhanced in 6.0.6 with SPEC-0001 Anti-Vibecoding Alignment)
 
 ---
 
@@ -134,4 +134,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 15, 2026
-**Framework**: SDLC 6.0.5
+**Framework**: SDLC 6.0.6

@@ -1,7 +1,7 @@
 # Memory & Context Management
 ## CLAUDE.md Patterns and Best Practices
 
-**Version:** 6.0.5
+**Version:** 6.0.6
 **Status:** ACTIVE
 **Date:** January 27, 2026
 

@@ -5,7 +5,7 @@ status: "ACTIVE"
 version: "1.0.0"
 date: "2026-02-13"
 rfc: "RFC-001"
-framework: "SDLC 6.0.5"
+framework: "SDLC 6.0.6"
 replaces: "99-Legacy/ folder pattern (deprecated)"
 adopted-by: "BFlow Platform (3 live customers)"
 author: "CTO Office"
@@ -14,7 +14,7 @@ author: "CTO Office"
 # SDLC Legacy Document Organization Standard (RFC-001)
 
 **Effective Date**: February 13, 2026  
-**Framework Version**: SDLC 6.0.5+  
+**Framework Version**: SDLC 6.0.6+  
 **Status**: MANDATORY for all SDLC-compliant projects  
 **Deadline**: March 15, 2026 (adoption requirement)
 
@@ -224,7 +224,7 @@ For SDLC-Enterprise-Framework self-application:
 - Create `10-Archive/` directory structure
 - Execute migration: `migrate-legacy-to-archive.sh`
 - Fix stale references in all .md files
-- Commit: `feat(SDLC 6.0.5): RFC-001 Legacy Document Organization`
+- Commit: `feat(SDLC 6.0.6): RFC-001 Legacy Document Organization`
 
 ### Phase 3: Orchestrator Migration (Feb 20-28)
 - Migrate `docs/0[0-9]-*/99-Legacy/` → `docs/10-archive/{NN}-Legacy/`
@@ -336,6 +336,6 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 ---
 
 **Status**: MANDATORY Framework Standard  
-**Framework Version**: SDLC 6.0.5+  
+**Framework Version**: SDLC 6.0.6+  
 **Last Updated**: February 13, 2026  
 **Owner**: CTO Office

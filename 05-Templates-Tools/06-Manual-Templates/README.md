@@ -1,19 +1,19 @@
 # 📋 3-Manual-Templates - Traditional Process Templates
-## Backup Templates for SDLC 6.0.5 (Use When AI Unavailable)
+## Backup Templates for SDLC 6.0.6 (Use When AI Unavailable)
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: January 28, 2026
 **Priority**: ⭐⭐ (BACKUP)
 **Pillar**: 0 - Design Thinking Foundation (Manual Templates)
 **Purpose**: Manual templates for when AI tools are unavailable or for training
 **Status**: COMPLETE (9 templates for Stage 00-01)
-**Structure**: SDLC 6.0.5 (2-level maximum, files prefixed by category)
+**Structure**: SDLC 6.0.6 (2-level maximum, files prefixed by category)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 **Recommendation**: Use [/02-AI-Tools/](../02-AI-Tools/) first (96% faster)
 
 ---
 
-## 🎯 SDLC 6.0.5 Integration
+## 🎯 SDLC 6.0.6 Integration
 
 ### Stage Mapping
 
@@ -69,7 +69,7 @@ Manual templates primarily cover **Stage 00-01** (Design Thinking / Foundation):
 
 ---
 
-## 📂 Directory Structure (SDLC 6.0.5 Flattened)
+## 📂 Directory Structure (SDLC 6.0.6 Flattened)
 
 ```
 06-Manual-Templates/
@@ -553,7 +553,7 @@ Result: Team knows methodology + productivity tools
 ### Reference
 
 - **Core Methodology**: [/02-Core-Methodology/](../../02-Core-Methodology/)
-- **SDLC 6.0.5 Overview**: [/01-Overview/](../../01-Overview/)
+- **SDLC 6.0.6 Overview**: [/01-Overview/](../../01-Overview/)
 
 ---
 
@@ -571,7 +571,7 @@ Result: Team knows methodology + productivity tools
 
 ---
 
-**Folder Status**: BACKUP - SDLC 6.0.5 Complete
+**Folder Status**: BACKUP - SDLC 6.0.6 Complete
 **Last Updated**: January 22, 2026
 **Owner**: CPO Office
 

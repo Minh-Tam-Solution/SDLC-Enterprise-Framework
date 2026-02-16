@@ -1,19 +1,19 @@
 # Governance & Compliance Standards
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
-**NEW in 6.0.5**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment
+**NEW in 6.0.6**: RFC-001 Legacy Organization + SPEC-0001 Anti-Vibecoding Alignment
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.5**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.0.6**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|

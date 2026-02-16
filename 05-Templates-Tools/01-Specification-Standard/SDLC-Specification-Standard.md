@@ -1,13 +1,13 @@
 # SDLC Specification Standard v1.1
-## Framework 6.0.5 Unified Specification Template - Section 8
+## Framework 6.0.6 Unified Specification Template - Section 8
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Last Updated**: February 14, 2026
 **Author**: PM/PJM Team
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section)
-**Inspiration**: OpenSpec best practices + SDLC 6.0.5 evolution
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section)
+**Inspiration**: OpenSpec best practices + SDLC 6.0.6 evolution
 **Architecture**: Section 8: Unified Specification Standard
 **NEW in 6.0.4**: Spec Converter Methodology (SpecIR, BDD↔OpenSpec conversion)
 
@@ -731,7 +731,7 @@ See [Example-Spec-Professional.md](./examples/Example-Spec-Professional.md) for 
 
 ## 7. Migration Guide
 
-### 7.1 From SDLC 6.0.5 Specs
+### 7.1 From SDLC 6.0.6 Specs
 
 **Steps to migrate existing specifications:**
 
@@ -866,7 +866,7 @@ Parsers extract structured data from source formats into SpecIR:
 **OpenSpec Parser Example**:
 
 ```python
-# Parses SDLC 6.0.5 specification format
+# Parses SDLC 6.0.6 specification format
 async def parse(content: str) -> SpecIR:
     # 1. Extract YAML frontmatter
     frontmatter = extract_frontmatter(content)
@@ -904,7 +904,7 @@ Renderers transform SpecIR back to target formats:
 **OpenSpec Renderer Example**:
 
 ```python
-# Renders to SDLC 6.0.5 specification format
+# Renders to SDLC 6.0.6 specification format
 async def render(ir: SpecIR) -> str:
     lines = []
 
@@ -1006,16 +1006,16 @@ TDD Metrics (Sprint 154):
 | Field | Value |
 |-------|-------|
 | **Document ID** | SDLC-SPEC-STD-001 |
-| **Version** | 6.0.5 |
+| **Version** | 6.0.6 |
 | **Status** | ACTIVE - PRODUCTION READY |
 | **Created** | January 28, 2026 |
 | **Last Updated** | February 8, 2026 |
 | **Author** | PM/PJM Team |
 | **Reviewers** | CTO, Tech Lead |
 | **Approver** | CTO |
-| **Framework** | SDLC 6.0.5 (7-Pillar + 2-Section) |
+| **Framework** | SDLC 6.0.6 (7-Pillar + 2-Section) |
 | **Section** | Section 8: Unified Specification Standard |
-| **Inspiration** | OpenSpec, SDLC 6.0.5, Sprint 154 TDD Validation |
+| **Inspiration** | OpenSpec, SDLC 6.0.6, Sprint 154 TDD Validation |
 
 ---
 
@@ -1027,7 +1027,7 @@ TDD Metrics (Sprint 154):
 | CTO | ✅ APPROVED | January 28, 2026 |
 | CTO (6.0.4 Spec Converter) | ✅ APPROVED | February 8, 2026 |
 
-*This specification standard is APPROVED and ACTIVE for SDLC Framework 6.0.5.*
+*This specification standard is APPROVED and ACTIVE for SDLC Framework 6.0.6.*
 
 ---
 
@@ -1035,6 +1035,6 @@ TDD Metrics (Sprint 154):
 **Last Updated**: February 14, 2026
 **Owner**: CTO + CPO Office
 
-*SDLC Enterprise Framework 6.0.5 - Section 8: Unified Specification Standard*
+*SDLC Enterprise Framework 6.0.6 - Section 8: Unified Specification Standard*
 
 ***"Consistent specifications enable consistent quality."***

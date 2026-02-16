@@ -1,6 +1,6 @@
-# SDLC 6.0.5 Universal Framework
+# SDLC 6.0.6 Universal Framework
 
-**Version**: 6.0.5 | **Status**: ACTIVE | **Date**: February 15, 2026
+**Version**: 6.0.6 | **Status**: ACTIVE | **Date**: February 16, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -15,7 +15,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.5 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.0.6 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -403,21 +403,21 @@ SDLC-Enterprise-Framework/
 - [SDLC-Agentic-Core-Principles.md](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
 - [AI Governance Principles](./03-AI-GOVERNANCE/) - 7 timeless principles (5.2.0)
 
-**Stage Governance** (added 5.3.0, current as of 6.0.5):
+**Stage Governance** (added 5.3.0, current as of 6.0.6):
 - [SDLC-Stage-Dependencies.md](./02-Core-Methodology/SDLC-Stage-Dependencies.md) - Explicit stage prerequisites
 - [SDLC-Stage-Exit-Criteria.md](./02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Documentation, evidence, signoff requirements
 - [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Sprint-stage coordination
 - [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - LITE/PRO/ENTERPRISE guidance
 - [Stage-Transition-Checklist.md](./05-Templates-Tools/05-Checklists/Stage-Transition-Checklist.md) - Actionable transition checklists
 
-**Quality Assurance** (added 5.3.0, current as of 6.0.5):
+**Quality Assurance** (added 5.3.0, current as of 6.0.6):
 - [SDLC-Quality-Assurance-System.md](./02-Core-Methodology/SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
   - Vibecoding Index (0-100 composite score)
   - Progressive Routing (Auto-approve Green → CEO mandatory Red)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms, etc.)
 
-**Unified Specification Standard** (added 6.0.2, current as of 6.0.5):
+**Unified Specification Standard** (added 6.0.2, current as of 6.0.6):
 - [SDLC-Specification-Standard.md](./05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - **Section 8: Unified Spec Format**
   - YAML frontmatter (spec_id, tier, stage, category)
   - BDD requirements format (GIVEN-WHEN-THEN)
@@ -458,7 +458,7 @@ This Framework is **tool-agnostic policy**. Any platform can implement it:
 
 ```
 ┌───────────────────────────────────────────────────────────┐
-│             SDLC 6.0.5 Framework (THIS REPO)             │
+│             SDLC 6.0.6 Framework (THIS REPO)             │
 │      Methodology • Principles • Gates • Governance        │
 │                  (TOOL-AGNOSTIC)                         │
 └─────────────┬──────────────────┬─────────────────┬─────────────┘
@@ -486,7 +486,7 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.0.5** | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup |
+| **6.0.6** | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup |
 | 6.0.4 | Feb 8, 2026 | TDD Integration + Sprint 3-Phase Model + Spec Converter |
 | 6.0.3 | Feb 2, 2026 | Boris Cherny Consolidation, MCP Integration Guide |
 | 6.0.2 | Feb 2, 2026 | E2E API Testing Enhancement |

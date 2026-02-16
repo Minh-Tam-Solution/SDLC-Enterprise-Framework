@@ -1,9 +1,9 @@
-# SSOT Principle (Single Source of Truth) - SDLC 6.0.5
+# SSOT Principle (Single Source of Truth) - SDLC 6.0.6
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.0.5
+**Framework**: SDLC 6.0.6
 **Purpose**: Define and enforce Single Source of Truth across all SDLC stages
 
 ---
@@ -489,6 +489,6 @@ sdlcctl validate --ssot
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.0.5
+**Framework**: SDLC 6.0.6
 **Owner**: Architecture + Engineering Teams
 **Approval**: CTO @nqh ✅

@@ -1,6 +1,6 @@
 # 💡 Ideation & Brainstorming Template
 
-**Version**: 6.0.5 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.0.6 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Generate diverse solution ideas through structured creativity techniques
 **When to Use**: IDEATE phase (SDLC Stage 02 - HOW?)
 **Time Required**: 60-90 minutes
@@ -550,7 +550,7 @@ Please help me:
 ---
 
 **Template**: Ideation-Brainstorming-Template
-**Part of**: SDLC 6.0.5 Design Thinking Framework
+**Part of**: SDLC 6.0.6 Design Thinking Framework
 **Phase**: IDEATE (Stage 02 - HOW?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

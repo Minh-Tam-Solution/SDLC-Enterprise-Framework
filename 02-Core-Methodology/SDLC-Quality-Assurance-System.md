@@ -2,7 +2,7 @@
 ## Anti-Vibecoding Governance Framework
 
 **Version**: 1.0.0
-**Framework Version**: SDLC 6.0.5
+**Framework Version**: SDLC 6.0.6
 **Status**: APPROVED
 **Date**: January 27, 2026
 **Authority**: CTO + CPO + CEO Approved
@@ -533,7 +533,7 @@ for signal in signals:
 
 - [ ] Create this document (SDLC-Quality-Assurance-System.md)
 - [ ] Update CONTENT-MAP.md with new files
-- [ ] Update CHANGELOG.md for Framework 6.0.5
+- [ ] Update CHANGELOG.md for Framework 6.0.6
 - [ ] Create signal calibration templates
 
 ### 10.2 Orchestrator Implementation
@@ -585,4 +585,4 @@ for signal in signals:
 **CPO Review**: ✅ APPROVED
 **CEO Review**: ✅ APPROVED (CEO Time Optimization focus)
 
-**Framework Release**: SDLC 6.0.5 (January 27, 2026)
+**Framework Release**: SDLC 6.0.6 (January 27, 2026)

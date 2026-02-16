@@ -1,6 +1,6 @@
 # 10-Archive: Centralized Legacy Content
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Status**: AI-NEVER-READ
 **Date**: February 13, 2026
 **Standard**: RFC-001 Legacy Document Organization

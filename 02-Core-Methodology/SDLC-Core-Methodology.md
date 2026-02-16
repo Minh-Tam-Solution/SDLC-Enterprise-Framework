@@ -1,6 +1,6 @@
-# SDLC 6.0.5 Core Methodology
+# SDLC 6.0.6 Core Methodology
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Status**: ACTIVE - RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 + Framework Templates
 **Authority**: Chairman + CEO + CPO + CTO Approved
@@ -9,13 +9,13 @@
 
 ## Executive Summary
 
-SDLC 6.0.5 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
+SDLC 6.0.6 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
 
 ### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.5 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.6 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
@@ -153,7 +153,7 @@ SDLC 6.0.5 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.5 - 10 STAGES                              │
+│                    SDLC 6.0.6 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -460,7 +460,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 6.0.5 has TWO parallel gate tracks:
+SDLC 6.0.6 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -690,7 +690,7 @@ Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FU
 
 ## Industry Standards Integration
 
-SDLC 6.0.5 maps to industry standards:
+SDLC 6.0.6 maps to industry standards:
 
 ```yaml
 Standards Mapped:
@@ -754,7 +754,7 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.0.5** | **Feb 14, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
+| **6.0.6** | **Feb 14, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
 | **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement** - RED-GREEN-REFACTOR cycle, tier-aware coverage (LITE 70% → ENT 95%), Spec Converter (SpecIR) |
 | **6.0.3** | **Feb 5, 2026** | **MINOR: Boris Cherny Best Practices Consolidation** - 5 RFCs → Framework structure, MCP Integration Guide, Git Workflow Patterns |
 | **6.0.2** | **Feb 3, 2026** | **MINOR: E2E API Testing Enhancement (RFC-SDLC-602)** - 6-phase testing workflow, Stage 03↔05 cross-reference, OWASP API Top 10 |

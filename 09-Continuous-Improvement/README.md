@@ -1,12 +1,12 @@
 # 09 - Continuous Improvement
 
 **Stage**: 09 (Framework Folder, not Project Stage)
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Status**: Active
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD + RFC-001)
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD + RFC-001)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.0.5**: RFC-001 Legacy Organization Standard, SPEC-0001 Anti-Vibecoding Alignment, 4 New Framework Templates
+**NEW in 6.0.6**: RFC-001 Legacy Organization Standard, SPEC-0001 Anti-Vibecoding Alignment, 4 New Framework Templates
 
 ---
 
@@ -21,7 +21,7 @@ This folder contains guides and processes for evolving the SDLC Framework while 
 | Document | Purpose | Status |
 |----------|---------|--------|
 | [SDLC-Continuous-Improvement-Guide.md](SDLC-Continuous-Improvement-Guide.md) | How to upgrade SDLC versions safely | Active |
-| [RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md](RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md) | Eliminate 99-Legacy from stages 00-09, centralize in 10-Archive | ACCEPTED (6.0.5) |
+| [RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md](RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md) | Eliminate 99-Legacy from stages 00-09, centralize in 10-Archive | ACCEPTED (6.0.6) |
 
 ---
 
@@ -43,4 +43,4 @@ Old continuous improvement documents are moved to `10-Archive/09-Legacy/` (per R
 ---
 
 **Last Updated**: February 14, 2026
-**Framework**: SDLC 6.0.5
+**Framework**: SDLC 6.0.6

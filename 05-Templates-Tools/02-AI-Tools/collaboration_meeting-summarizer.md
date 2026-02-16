@@ -1,6 +1,6 @@
 # 📝 AI Meeting Summarizer - Stage 08 (COLLABORATE)
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Stage**: 08 - COLLABORATE (Team Management & Documentation)
 **Time Savings**: 95%
@@ -59,7 +59,7 @@ Output Format:
 
 ```yaml
 System Prompt:
-  You are a sprint planning summarizer following SDLC 6.0.5 standards.
+  You are a sprint planning summarizer following SDLC 6.0.6 standards.
   Extract: Sprint goal, committed stories, capacity, risks.
   Calculate velocity and highlight scope changes.
 

@@ -4,7 +4,7 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define the dual workbench architecture for human-agent collaboration
-**Framework:** SDLC 6.0.5 (7-Pillar + Section 7 Quality Assurance System)
+**Framework:** SDLC 6.0.6 (7-Pillar + Section 7 Quality Assurance System)
 **Version:** 1.1.0
 **Created:** December 2025
 **Updated:** January 29, 2026
@@ -1083,11 +1083,11 @@ SASE Kanban Board:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0.0 | 2025-12-16 | PM/PO + AI | Initial version |
-| 1.1.0 | 2026-02-15 | Framework Team | SDLC 6.0.5 alignment |
-| 1.0.3 | 2026-01-22 | Framework Team | Added in 5.2.0, current as of 6.0.5 |
+| 1.1.0 | 2026-02-15 | Framework Team | SDLC 6.0.6 alignment |
+| 1.0.3 | 2026-01-22 | Framework Team | Added in 5.2.0, current as of 6.0.6 |
 
 ---
 
 **Document Status:** Phase 1-Spec (SE 3.0 Track 1)
 **Next Review:** CTO Final Review (Q1 2026)
-**Framework Version:** SDLC 6.0.5 (7-Pillar Architecture + Section 7 Quality Assurance System)
+**Framework Version:** SDLC 6.0.6 (7-Pillar Architecture + Section 7 Quality Assurance System)

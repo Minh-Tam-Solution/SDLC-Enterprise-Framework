@@ -1,12 +1,12 @@
 # SDLC Agentic Core Principles
 ## Software Engineering 3.0 - SASE Integration
 
-**Version:** 6.0.5
+**Version:** 6.0.6
 **Status:** ACTIVE - PRODUCTION READY
 **Date:** February 14, 2026 (Quality Assurance System + Stage Dependencies + RFC-001)
 **Author:** SE 3.0 Track 1 Team
 **Source:** arXiv:2509.06216v2 (SASE Framework)
-**Framework:** SDLC 6.0.5 (7-Pillar + 2-Section Architecture)
+**Framework:** SDLC 6.0.6 (7-Pillar + 2-Section Architecture)
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## Document Purpose
 
-This document defines the core principles for integrating Software Agentic Software Engineering (SASE) into the SDLC 6.0.5 methodology. It establishes the distinction between SE4H (Software Engineering for Humans) and SE4A (Software Engineering for Agents) across all 10 SDLC stages.
+This document defines the core principles for integrating Software Agentic Software Engineering (SASE) into the SDLC 6.0.6 methodology. It establishes the distinction between SE4H (Software Engineering for Humans) and SE4A (Software Engineering for Agents) across all 10 SDLC stages.
 
 **Target Audience:**
 - Engineering Managers (Agent Coaches)
@@ -47,7 +47,7 @@ This document defines the core principles for integrating Software Agentic Softw
 - PM/POs (Project context authors)
 
 **Prerequisite Knowledge:**
-- SDLC 6.0.5 Complete Lifecycle (10 stages)
+- SDLC 6.0.6 Complete Lifecycle (10 stages)
 - Basic AI/LLM concepts (prompts, context, tokens)
 - Git workflow (branching, PRs, code review)
 - AGENTS.md format (recommended: see `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md`)
@@ -157,14 +157,14 @@ This document defines the core principles for integrating Software Agentic Softw
 - Deployment checklist
 ```
 
-**Dynamic Context Engine** (Added in 5.1.3, current as of 6.0.5)
+**Dynamic Context Engine** (Added in 5.1.3, current as of 6.0.6)
 - AGENTS.md updates automatically based on gate status (Planning → Design → Build)
 - Gate-triggered context overlay (e.g., "Currently in BUILD stage, CRP escalation required for architecture changes")
 - This is our **TRUE MOAT** - no competitor has gate-aware dynamic context
 
 **See:** `05-Templates-Tools/SASE-Artifacts/AGENTS-MD-Template.md` for full template and validation CLI.
 
-### 1.4 Planning Mode Principle (Added in 5.2.0, current as of 6.0.5)
+### 1.4 Planning Mode Principle (Added in 5.2.0, current as of 6.0.6)
 
 **Key Insight from Expert Workflow Analysis (Jan 2026):**
 
@@ -221,7 +221,7 @@ This document defines the core principles for integrating Software Agentic Softw
 3. **Human Oversight** - Approval gate before significant changes
 4. **Audit Trail** - Full traceability from plan → code → evidence
 
-### 1.5 Model Selection Matrix (Added in 5.2.0, current as of 6.0.5)
+### 1.5 Model Selection Matrix (Added in 5.2.0, current as of 6.0.6)
 
 **Task-Appropriate Model Routing:**
 
@@ -243,7 +243,7 @@ This document defines the core principles for integrating Software Agentic Softw
 - Use **alternative providers** when primary model is stuck (different training = different insights)
 - Match context window to task scope (small context for focused edits, large for codebase analysis)
 
-### 1.6 Why SASE for SDLC 6.0.5?
+### 1.6 Why SASE for SDLC 6.0.6?
 
 **Problem:** Current SDLC methodologies assume human-only development
 - 60-70% feature waste (built features never used)
@@ -291,9 +291,9 @@ This document defines the core principles for integrating Software Agentic Softw
 | **Decision Authority** | NONE - agent proposes, human disposes |
 | **Accountability** | Must provide evidence for all work (MRP) |
 
-### 2.2 SE4H vs SE4A Across 10 SDLC 6.0.5 Stages
+### 2.2 SE4H vs SE4A Across 10 SDLC 6.0.6 Stages
 
-| Stage | SDLC 6.0.5 Name | SE4H (Agent Coach) | SE4A (Agent Executor) | Primary Artifacts |
+| Stage | SDLC 6.0.6 Name | SE4H (Agent Coach) | SE4A (Agent Executor) | Primary Artifacts |
 |-------|-----------------|--------------------|-----------------------|-------------------|
 | **00** | Foundation | Define vision, problem statement, business case | N/A (human-only stage) | PRD, BRD, Vision |
 | **01** | Planning | Create BriefingScript, prioritize backlog, define acceptance criteria | Receive briefs only (no autonomous action) | BriefingScript (BRS) |
@@ -933,7 +933,7 @@ level_3_requirements:
 
 ---
 
-## 4. MAPPING SASE DISCIPLINES TO SDLC 6.0.5
+## 4. MAPPING SASE DISCIPLINES TO SDLC 6.0.6
 
 ### 4.1 SASE Disciplines Overview
 
@@ -946,11 +946,11 @@ level_3_requirements:
 | 5 | **ATLE** | Agentic Tool & Library Engineering | Building ACE/AEE infrastructure |
 | 6 | **ATIE** | Agentic Trustworthiness & Interpretability Engineering | Explainability + trust |
 
-### 4.2 SDLC 6.0.5 Stage Mapping
+### 4.2 SDLC 6.0.6 Stage Mapping
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    SASE DISCIPLINES × SDLC 6.0.5 STAGES                     │
+│                    SASE DISCIPLINES × SDLC 6.0.6 STAGES                     │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │  Stage 00: Foundation                                                       │
@@ -1178,7 +1178,7 @@ level_3_requirements:
 2. Proactive suggestions (agent proposes improvements)
 3. Self-healing (agent detects and fixes own errors)
 4. Knowledge synthesis (agent updates AGENTS.md)
-5. **Dynamic Context Overlay** (Added in 5.1.3, current as of 6.0.5): AGENTS.md auto-updates based on gate status
+5. **Dynamic Context Overlay** (Added in 5.1.3, current as of 6.0.6): AGENTS.md auto-updates based on gate status
 
 ### 5.4 Common Pitfalls
 
@@ -1239,7 +1239,7 @@ level_3_requirements:
    - "Software Engineering for AI-Based Systems: A Survey"
    - Foundation for SE4H/SE4A distinction
 
-2. **SDLC 6.0.5 Complete Lifecycle**
+2. **SDLC 6.0.6 Complete Lifecycle**
    - SDLC-Enterprise-Framework/02-Core-Methodology/SDLC-Core-Methodology.md
    - 10-stage lifecycle definition
 

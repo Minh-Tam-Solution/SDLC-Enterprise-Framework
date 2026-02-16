@@ -1,7 +1,7 @@
 # OWASP API Security Top 10 Testing Checklist
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.0.5
+**Framework**: SDLC 6.0.6
 **Standard**: OWASP API Security Top 10 (2023)
 **Last Updated**: February 2026
 

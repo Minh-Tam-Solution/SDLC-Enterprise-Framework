@@ -1,5 +1,5 @@
 # 🔍 AI Post-Mortem Analyzer - Stage 07 (OPERATE)
-**Version**: 6.0.5 | **Date**: February 14, 2026 | **Time Savings**: 90% | **Pillar**: 1 (10-Stage Lifecycle)  
+**Version**: 6.0.6 | **Date**: February 14, 2026 | **Time Savings**: 90% | **Pillar**: 1 (10-Stage Lifecycle)  
 
 ## AI Prompt
 Generate blameless post-mortem from incident data:

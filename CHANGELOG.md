@@ -2,9 +2,59 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.0.4 Enterprise Framework - TDD Workflow + Spec Converter Integration
+**Framework**: SDLC 6.0.6 Enterprise Framework - Anthropic Patterns Integration
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: February 8, 2026 (SDLC 6.0.4 TDD + Spec Converter Release)
+**Last Updated**: February 16, 2026 (SDLC 6.0.6 Anthropic Patterns Release)
+
+---
+
+## 🚀 Version 6.0.6 - February 16, 2026 (MINOR RELEASE)
+
+**Release Date**: February 16, 2026
+**Type**: MINOR RELEASE - Anthropic Best Practices Integration (Sprint 174)
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No (additive only)
+**Supersedes**: SDLC 6.0.5 Sprint 173 Governance Loop
+**Achievement**: 3 new AI Governance methodology documents from Anthropic patterns analysis
+
+### Key Enhancements: Anthropic Patterns Integration (Sprint 174)
+
+**THE CHANGE**: CTO analysis of Anthropic's internal Claude Code practices (10 teams, 5 quickstarts) identified 12 patterns. Three highest-ROI patterns were codified as tool-agnostic Framework methodology documents.
+
+| Enhancement | Description | Key Benefit |
+|-------------|-------------|-------------|
+| **CLAUDE.md Standard (3-Tier)** | LITE/PRO/ENTERPRISE tiered AI context docs | Structured AI onboarding for any project |
+| **Autonomous Codegen Patterns** | Two-agent pattern + 4-Gate Quality Pipeline | Governed AI code generation methodology |
+| **MRP Template** | Merge-Readiness Package (5-section structure) | Evidence-based merge approval process |
+
+### Files Created (3 documents)
+
+1. **03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md** - 3-tier CLAUDE.md structure (LITE: 500-1K lines, PRO: 1.5K-3K, ENTERPRISE: 2K+)
+2. **03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md** - Two-agent pattern with 4-Gate validation, OPA policy integration, Evidence State Machine
+3. **02-Core-Methodology/SDLC-MRP-Template.md** - 5-section Merge-Readiness Package (Change Summary, Evidence Refs, Rollback, Tests, Deploy)
+
+### 3-Ring Architecture Compliance
+
+All 3 documents sit in the **Core Ring** (timeless methodology):
+- Tool-agnostic: No references to specific platforms (Claude, GPT, Orchestrator)
+- Vendor-neutral: Works with any AI coding tool or governance platform
+- Framework-First: Created before any platform automation (SDLC 6.0.6 Section 3.2)
+
+### Source Attribution
+
+- **CLAUDE.md Standard**: Derived from Anthropic Data Infrastructure team practices (PDF p. 2-3)
+- **Autonomous Codegen**: Derived from `claude-quickstarts/autonomous-coding/` two-agent pattern
+- **MRP Template**: Derived from Anthropic Data Science team end-of-session documentation (PDF p. 10-11)
+
+---
+
+## 🚀 Version 6.0.5 - February 15, 2026 (MINOR RELEASE)
+
+**Release Date**: February 15, 2026
+**Type**: MINOR RELEASE - Governance Loop + Sprint 173 Cleanup
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No (additive only)
+**Supersedes**: SDLC 6.0.4 TDD Workflow + Spec Converter Integration
 
 ---
 

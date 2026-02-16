@@ -1,6 +1,6 @@
 # SDLC Sprint Governance
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: January 28, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 2 - Sprint Planning Governance (Core Pillar)
@@ -591,11 +591,11 @@ tasks:
 ```bash
 #!/bin/bash
 # tools/validate-sprint-consistency.sh
-# SDLC 6.0.5 - Sprint Consistency Validator
+# SDLC 6.0.6 - Sprint Consistency Validator
 
 set -e
 
-echo "🔍 SDLC 6.0.5 Sprint Consistency Validator"
+echo "🔍 SDLC 6.0.6 Sprint Consistency Validator"
 echo "==========================================="
 
 # Configuration
@@ -1055,6 +1055,6 @@ Weekly Escalation (in roadmap review):
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for PROFESSIONAL+ tiers
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Last Updated**: January 28, 2026
 **Owner**: CTO Office

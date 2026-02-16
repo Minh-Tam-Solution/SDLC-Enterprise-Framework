@@ -1,7 +1,7 @@
-# SDLC 6.0.5 Framework Scripts & Automation Tools
+# SDLC 6.0.6 Framework Scripts & Automation Tools
 ## Battle-Tested Automation from Real Platform Experience
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Status**: ACTIVE - PRODUCTION READY
 **Date**: January 28, 2026
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
@@ -9,16 +9,16 @@
 **Foundation**: Tools proven on BFlow, NQH-Bot, MTEP platforms
 **Philosophy**: Build when needed + AI tools for flexibility
 
-**7 Pillars + 2 Sections (SDLC 6.0.5)**:
+**7 Pillars + 2 Sections (SDLC 6.0.6)**:
 - **Pillars 0-6**: Design Thinking → Documentation Permanence
 - **Section 7**: Quality Assurance System (Vibecoding Index, Kill Switch)
 - **Section 8**: Unified Specification Standard (YAML frontmatter, BDD)
 
-**Legacy/Archive Policy**: Content in 10-Archive/{NN}-Legacy folders is never validated (RFC-001, SDLC 6.0.5).
+**Legacy/Archive Policy**: Content in 10-Archive/{NN}-Legacy folders is never validated (RFC-001, SDLC 6.0.6).
 
 ---
 
-## What's New in SDLC 6.0.5
+## What's New in SDLC 6.0.6
 
 ### 7-Pillar + 2-Section Architecture Validation
 
@@ -63,7 +63,7 @@ Scripts now validate Section 8 compliance:
 ### Essential Commands
 
 ```bash
-# 1. SDLC 6.0.5 Complete Validation (7 Pillars + 2 Sections)
+# 1. SDLC 6.0.6 Complete Validation (7 Pillars + 2 Sections)
 python3 compliance_sdlc_validator.py /path/to/project
 
 # 2. Design Thinking Compliance (Pillar 0)
@@ -80,7 +80,7 @@ python3 quickstart_solo_setup.py /path/to/project
 
 ## Key Scripts Explained
 
-### SDLC 6.0.5 Complete Validator
+### SDLC 6.0.6 Complete Validator
 
 **Validates complete 7-Pillar + 2-Section architecture**
 
@@ -102,7 +102,7 @@ python3 compliance_sdlc_validator.py /path/to/project
 ✅ Section 8 (Spec Standard): COMPLIANT
 ✅ SASE Artifacts: DETECTED
 ✅ File Naming Standards: COMPLIANT
-🎉 SDLC 6.0.5 FULLY COMPLIANT
+🎉 SDLC 6.0.6 FULLY COMPLIANT
 ```
 
 ### Design Thinking Validator
@@ -138,7 +138,7 @@ python3 compliance_design_thinking_validator.py /path/to/project
 python3 quickstart_solo_setup.py /path/to/project
 
 # What it does:
-# 1. Creates SDLC 6.0.5 complete structure
+# 1. Creates SDLC 6.0.6 complete structure
 # 2. Installs compliance validators
 # 3. Sets up Design Thinking templates
 # 4. Creates SASE Artifacts templates
@@ -195,7 +195,7 @@ Validation adapts based on project tier:
 ---
 
 **Status**: PRODUCTION READY
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section)
 **Philosophy**: Build when needed + AI for flexibility = Optimal balance
 
 ***"Validate with code, automate with AI."***

@@ -1,6 +1,6 @@
 # SDLC Universal Code Review Framework
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Last Updated**: January 27, 2026
 **Status**: PRODUCTION READY
 **Stage**: 04 (BUILD) - Code Review Excellence
@@ -1017,11 +1017,11 @@ This framework provides **three equally valid approaches** to code review excell
 
 ---
 
-**Document Version**: 6.0.5
+**Document Version**: 6.0.6
 **Last Updated**: February 15, 2026
 **Next Review**: March 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework**: SDLC 6.0.5
+**Framework**: SDLC 6.0.6
 
 ---
 
@@ -1033,6 +1033,6 @@ This framework provides **three equally valid approaches** to code review excell
 
 ---
 
-**SDLC 6.0.5 Universal Code Review Framework**
+**SDLC 6.0.6 Universal Code Review Framework**
 *Excellence at Every Scale - From LITE to ENTERPRISE*
 *Stage 04: BUILD - Code Review Excellence*

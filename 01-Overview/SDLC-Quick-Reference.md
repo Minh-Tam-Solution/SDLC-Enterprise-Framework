@@ -1,13 +1,13 @@
-# SDLC Framework 6.0.5 Quick Reference Guide
+# SDLC Framework 6.0.6 Quick Reference Guide
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
 
 ---
 
-## What's New in 6.0.5 (MINOR)
+## What's New in 6.0.6 (MINOR)
 
 ### RFC-001: Legacy Document Organization Standard (MANDATORY)
 
@@ -238,7 +238,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.5 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.0.6 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -372,7 +372,7 @@ SDLC-Enterprise-Framework/
 ├── 07-Implementation-Guides/ # How-to guides
 ├── 08-Training-Materials/    # Learning resources
 ├── 09-Continuous-Improvement/
-├── 10-Archive/               # Centralized legacy archive (RFC-001, 6.0.5)
+├── 10-Archive/               # Centralized legacy archive (RFC-001, 6.0.6)
 ├── CHANGELOG.md              # Version history
 ├── CONTENT-MAP.md            # Topic → file mapping
 ├── DEPRECATION-POLICY.md     # Redirect rules
@@ -402,7 +402,7 @@ SDLC-Enterprise-Framework/
 
 ---
 
-## Quick Checklist: Is This 6.0.5 Compliant?
+## Quick Checklist: Is This 6.0.6 Compliant?
 
 ```yaml
 Specification:
@@ -428,7 +428,7 @@ Sprint Governance (3-Phase):
   [ ] Execution: TDD cycle followed per feature?
   [ ] Post-Sprint: Documentation completed within 24h?
 
-Legacy Organization (6.0.5 RFC-001):
+Legacy Organization (6.0.6 RFC-001):
   [ ] No 99-Legacy/ folders in active stages (00-09)?
   [ ] Legacy content in 10-Archive/{NN}-Legacy/?
   [ ] CI/CD blocks 99-Legacy/ reintroduction?
@@ -438,6 +438,6 @@ Legacy Organization (6.0.5 RFC-001):
 
 **Document Status**: ACTIVE
 **Last Updated**: February 14, 2026
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD Integration + RFC-001)
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD Integration + RFC-001)
 
-*Quick reference for SDLC Framework 6.0.5 - Keep this handy!*
+*Quick reference for SDLC Framework 6.0.6 - Keep this handy!*

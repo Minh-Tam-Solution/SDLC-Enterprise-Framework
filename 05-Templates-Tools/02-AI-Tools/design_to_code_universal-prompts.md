@@ -1,7 +1,7 @@
 # 🎨 Universal Design-to-Code Prompts
 ## Works with Any Design Tool → Any Framework
 
-**Version**: 6.0.5 | **Date**: February 14, 2026 | **Pillar**: 0-1 (Design Thinking → Lifecycle)
+**Version**: 6.0.6 | **Date**: February 14, 2026 | **Pillar**: 0-1 (Design Thinking → Lifecycle)
 **Status**: PRODUCTION-READY
 **Scope**: Universal - Any design tool, any framework
 **ROI**: 95% time savings (2-4 hours → 5-10 minutes)
@@ -21,7 +21,7 @@ Target Framework: [React/Vue/Angular/Svelte/etc.]
 Location: [target directory path]
 
 Requirements:
-✅ SDLC 6.0.5 compliant (Zero Mock Policy)
+✅ SDLC 6.0.6 compliant (Zero Mock Policy)
 ✅ Complete test suite (80%+ coverage)
 ✅ Performance optimized (<50ms target)
 ✅ Accessibility (WCAG 2.1 AA)
@@ -53,7 +53,7 @@ Styling: styled-components
 Location: src/components/ProductCard/
 
 Requirements:
-✅ SDLC 6.0.5 compliant
+✅ SDLC 6.0.6 compliant
 ✅ Design tokens from theme
 ✅ Variants: default, hover, selected
 ✅ Props: product (object), onClick (function)
@@ -82,7 +82,7 @@ Styling: CSS Modules
 Location: src/components/UserProfile/
 
 Requirements:
-✅ SDLC 6.0.5 compliant
+✅ SDLC 6.0.6 compliant
 ✅ Composition API with <script setup>
 ✅ Props validation with TypeScript
 ✅ Emits: @update, @delete
@@ -105,7 +105,7 @@ Styling: SCSS with BEM methodology
 Location: src/app/components/dashboard-card/
 
 Requirements:
-✅ SDLC 6.0.5 compliant
+✅ SDLC 6.0.6 compliant
 ✅ Standalone component
 ✅ Input/Output properties typed
 ✅ OnPush change detection
@@ -135,7 +135,7 @@ Styling: Svelte scoped styles
 Location: src/lib/components/ArticleCard/
 
 Requirements:
-✅ SDLC 6.0.5 compliant
+✅ SDLC 6.0.6 compliant
 ✅ Reactive props
 ✅ Event dispatchers
 ✅ Test suite (Vitest + Testing Library)
@@ -570,7 +570,7 @@ When requesting design-to-code conversion, always include:
 - ✅ Target framework and version
 - ✅ Component name
 - ✅ Location in project structure
-- ✅ SDLC 6.0.5 compliance requirement
+- ✅ SDLC 6.0.6 compliance requirement
 
 ### Quality Requirements
 - ✅ Test suite with coverage target (80%+)

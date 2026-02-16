@@ -1,6 +1,6 @@
-# SDLC Framework 6.0.5 Content Map
+# SDLC Framework 6.0.6 Content Map
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Status**: ACTIVE
 **Date**: February 13, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
@@ -196,7 +196,7 @@ Before creating any new document, check if a canonical file already exists for t
 | AI Platform Deployment | `10-Archive/06-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
 
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
-> For 6.0.5 deployments, adapt the governance docs from 02-Core-Methodology/.
+> For 6.0.6 deployments, adapt the governance docs from 02-Core-Methodology/.
 
 ### Sprint 117 POC Documents (10-Archive/04-Legacy/Sprint-117-POC/)
 
@@ -281,7 +281,7 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 3. Update all internal links
 4. Run CI link checker
 
-### When Archiving (RFC-001, SDLC 6.0.5)
+### When Archiving (RFC-001, SDLC 6.0.6)
 
 1. Move file to `10-Archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
 2. Create redirect stub at original location

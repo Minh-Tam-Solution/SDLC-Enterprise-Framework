@@ -1,12 +1,12 @@
 # 🚀 Go-Live Readiness Checklist - Stage 06 (DEPLOY)
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Stage**: 06 - DEPLOY (Deployment & Release)
 **Pillar**: 1 (10-Stage Lifecycle) + 4 (Quality Gates)
 **Time Savings**: 75% (8 hours → 2 hours)
 **Authority**: CTO Office
-**Origin**: Bflow SDLC 6.0.5 Framework Assessment (Feb 2026)
+**Origin**: Bflow SDLC 6.0.6 Framework Assessment (Feb 2026)
 
 ---
 
@@ -36,7 +36,7 @@
 
 ```yaml
 System Prompt:
-  You are generating a Go-Live Readiness Checklist for SDLC 6.0.5 Stage 06.
+  You are generating a Go-Live Readiness Checklist for SDLC 6.0.6 Stage 06.
   Apply tier-appropriate requirements (LITE/STANDARD/PROFESSIONAL/ENTERPRISE).
   Each item must be verifiable (yes/no) with evidence reference.
   Flag blocking items (P0) vs advisory items (P1/P2).

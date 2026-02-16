@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 =========================================================================
-SDLC 6.0.5 Solo Developer Quick Setup
+SDLC 6.0.6 Solo Developer Quick Setup
 Get to 10x productivity with Complete 10-Stage Lifecycle + AI in 2 days
 
-Version: 6.0.5
+Version: 6.0.6
 Date: February 2026
 Status: ACTIVE - PRODUCTION READY
 Profile: Solo Developer (1 developer + AI)
@@ -13,7 +13,7 @@ Target: Individual developers building startups or side projects
 Architecture: 7-Pillar Framework (Design Thinking → Documentation Permanence)
 
 WHAT THIS SCRIPT DOES:
-1. Sets up SDLC 6.0.5 complete 10-stage framework (00-09) for solo development
+1. Sets up SDLC 6.0.6 complete 10-stage framework (00-09) for solo development
 2. Configures Design Thinking lightweight workflow
 3. Sets up Code Review Tier 1 (Manual checklist)
 4. Installs essential compliance validators (including file naming)
@@ -21,7 +21,7 @@ WHAT THIS SCRIPT DOES:
 6. Configures performance targets (<50ms)
 7. Validates code file naming standards (Python/TypeScript/React)
 
-10 STAGES (SDLC 6.0.5):
+10 STAGES (SDLC 6.0.6):
 - Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
 - Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
 - Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
@@ -33,7 +33,7 @@ WHAT THIS SCRIPT DOES:
 - Stage 08 (COLLABORATE): Team Coordination & Knowledge
 - Stage 09 (GOVERN): Compliance & Strategic Oversight
 
-Legacy/Archive Structure (SDLC 6.0.5):
+Legacy/Archive Structure (SDLC 6.0.6):
 - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 
@@ -79,7 +79,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class SoloSetup:
-    """SDLC 6.0.5 setup for solo developers"""
+    """SDLC 6.0.6 setup for solo developers"""
 
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
@@ -87,7 +87,7 @@ class SoloSetup:
             'profile': 'solo',
             'team_size': 1,
             'setup_date': datetime.now().isoformat(),
-            'sdlc_version': '6.0.5',
+            'sdlc_version': '6.0.6',
             'code_review_tier': 1,
             'design_thinking': 'lightweight',
             'productivity_target': '10x',
@@ -101,7 +101,7 @@ class SoloSetup:
 
     def run(self):
         """Execute complete solo setup"""
-        logger.info("🚀 SDLC 6.0.5 SOLO DEVELOPER SETUP")
+        logger.info("🚀 SDLC 6.0.6 SOLO DEVELOPER SETUP")
         logger.info("=" * 60)
         logger.info("Profile: Solo Developer (1 dev + AI)")
         logger.info("Timeline: 2 days to 10x productivity")
@@ -114,7 +114,7 @@ class SoloSetup:
             # Step 1: Create directory structure
             self._create_directory_structure()
 
-            # Step 2: Install SDLC 6.0.5 validators
+            # Step 2: Install SDLC 6.0.6 validators
             self._install_validators()
 
             # Step 3: Setup Design Thinking lightweight workflow
@@ -140,8 +140,8 @@ class SoloSetup:
             sys.exit(1)
 
     def _create_directory_structure(self):
-        """Create SDLC 6.0.5 directory structure for solo projects (10 stages: 00-09)"""
-        logger.info("📁 Step 1: Creating SDLC 6.0.5 Directory Structure")
+        """Create SDLC 6.0.6 directory structure for solo projects (10 stages: 00-09)"""
+        logger.info("📁 Step 1: Creating SDLC 6.0.6 Directory Structure")
         logger.info("-" * 60)
 
         directories = [
@@ -164,8 +164,8 @@ class SoloSetup:
         logger.info("")
 
     def _install_validators(self):
-        """Install SDLC 6.0.5 compliance validators"""
-        logger.info("🔍 Step 2: Installing SDLC 6.0.5 Validators")
+        """Install SDLC 6.0.6 compliance validators"""
+        logger.info("🔍 Step 2: Installing SDLC 6.0.6 Validators")
         logger.info("-" * 60)
 
         validators = [
@@ -174,7 +174,7 @@ class SoloSetup:
             'sdlc_scanner.py'
         ]
 
-        logger.info("✅ SDLC 6.0.5 validators available:")
+        logger.info("✅ SDLC 6.0.6 validators available:")
         for validator in validators:
             logger.info(f"   • {validator}")
 
@@ -280,7 +280,7 @@ class SoloSetup:
     def _display_success_message(self):
         """Display success message with next steps"""
         logger.info("=" * 60)
-        logger.info("🎉 SDLC 6.0.5 SOLO SETUP COMPLETE!")
+        logger.info("🎉 SDLC 6.0.6 SOLO SETUP COMPLETE!")
         logger.info("=" * 60)
         logger.info("")
         logger.info("✅ What's Ready:")
@@ -289,7 +289,7 @@ class SoloSetup:
         logger.info("   • Code Review Tier 1 checklist (FREE)")
         logger.info("   • AI development environment")
         logger.info("   • Performance targets (<50ms)")
-        logger.info("   • SDLC 6.0.5 validators installed")
+        logger.info("   • SDLC 6.0.6 validators installed")
         logger.info("")
         logger.info("🚀 Next Steps (2-Day Timeline):")
         logger.info("")
@@ -319,7 +319,7 @@ class SoloSetup:
         logger.info("   • Upgrade to Tier 3 Code Review when budget allows")
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 6.0.5 Docs: /00-Overview/")
+        logger.info("   • SDLC 6.0.6 Docs: /00-Overview/")
         logger.info("   • AI Tools: /05-Templates-Tools/02-AI-Tools/")
         logger.info("   • Case Studies: /07-Case-Studies/")
         logger.info("   • Support: taidt@mtsolution.com.vn")
@@ -477,11 +477,11 @@ Validate:
 """
 
     def _create_code_review_checklist(self) -> str:
-        return """# Code Review Checklist - SDLC 6.0.5 (Tier 1)
+        return """# Code Review Checklist - SDLC 6.0.6 (Tier 1)
 
 ## Before Commit - Check ALL Items
 
-### SDLC 6.0.5 Compliance
+### SDLC 6.0.6 Compliance
 - [ ] Zero Mock Policy: No mock/stub/fake/dummy code
 - [ ] Design Thinking: Feature has DT documentation
 - [ ] Performance: <50ms API response target
@@ -524,7 +524,7 @@ Validate:
 
 ## Run Before Commit
 ```bash
-# SDLC 6.0.5 validator
+# SDLC 6.0.6 validator
 python3 path/to/sdlc_4_8_validator.py .
 
 # Tests
@@ -547,7 +547,7 @@ Component: [Name]
 Location: [path]
 
 Requirements:
-✅ SDLC 6.0.5 compliant
+✅ SDLC 6.0.6 compliant
 ✅ English-only comments
 ✅ Test suite (80%+ coverage)
 ✅ Performance <50ms
@@ -560,7 +560,7 @@ Goal: [what trying to achieve]
 
 Generate actionable output for [Phase]""",
 
-            'code_review': """Review this code for SDLC 6.0.5:
+            'code_review': """Review this code for SDLC 6.0.6:
 [paste code]
 
 Check:
@@ -574,7 +574,7 @@ Check:
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        logger.info("SDLC 6.0.5 Solo Developer Setup")
+        logger.info("SDLC 6.0.6 Solo Developer Setup")
         logger.info("=" * 60)
         logger.info("")
         logger.info("Usage: python solo_setup.py <project_path>")

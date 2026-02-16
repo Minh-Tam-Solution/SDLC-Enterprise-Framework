@@ -1,18 +1,18 @@
 # 📈 Maturity Assessment Framework - Stage 09 (GOVERN)
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Stage**: 09 - GOVERN (with all-stage evaluation)
 **Pillar**: 1 (10-Stage Lifecycle) + 3 (4-Tier Classification) + 4 (Quality Gates)
 **Time Savings**: 85% (16 hours → 2.5 hours)
 **Authority**: CTO Office
-**Origin**: Bflow SDLC 6.0.5 Framework Assessment (Feb 2026)
+**Origin**: Bflow SDLC 6.0.6 Framework Assessment (Feb 2026)
 
 ---
 
 ## Purpose
 
-**Evidence-based maturity assessment** for SDLC 6.0.5 projects. Evaluates each stage (00-09) using weighted category scoring, produces gap analysis with P0/P1/P2 prioritization, and generates action plans with timelines. Based on Bflow's assessment methodology.
+**Evidence-based maturity assessment** for SDLC 6.0.6 projects. Evaluates each stage (00-09) using weighted category scoring, produces gap analysis with P0/P1/P2 prioritization, and generates action plans with timelines. Based on Bflow's assessment methodology.
 
 ---
 
@@ -20,7 +20,7 @@
 
 ```yaml
 System Prompt:
-  You are conducting an SDLC 6.0.5 Maturity Assessment.
+  You are conducting an SDLC 6.0.6 Maturity Assessment.
   Evaluate all 10 stages (00-09) with weighted category scoring.
   Produce maturity percentages with color coding (Red/Yellow/Green).
   Generate prioritized gap analysis (P0/P1/P2) and action plans.
@@ -207,7 +207,7 @@ User Prompt Template:
 ## Overall Summary Template
 
 ```markdown
-# SDLC 6.0.5 Maturity Assessment Summary
+# SDLC 6.0.6 Maturity Assessment Summary
 
 **Project**: [Name]
 **Tier**: [Tier]

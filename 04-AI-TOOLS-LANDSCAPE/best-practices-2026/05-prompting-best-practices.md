@@ -1,7 +1,7 @@
 # Prompting Best Practices
 ## Effective Communication with AI Coding Agents
 
-**Version:** 6.0.5
+**Version:** 6.0.6
 **Status:** ACTIVE
 **Date:** January 27, 2026
 

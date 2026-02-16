@@ -1,18 +1,18 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 6.0.5
+**Version**: 6.0.6
 **Date**: February 14, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.0.5 (7-Pillar + 2-Section + TDD + RFC-001)
+**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD + RFC-001)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
 ## 🎯 What You'll Find Here
 
-This directory contains **real case studies** from three production platforms that shaped SDLC 6.0.5, plus **historical case studies** documenting framework evolution from 4.2 to 6.0.
+This directory contains **real case studies** from three production platforms that shaped SDLC 6.0.6, plus **historical case studies** documenting framework evolution from 4.2 to 6.0.
 
 ---
 
@@ -101,7 +101,7 @@ This directory contains **real case studies** from three production platforms th
 
 ---
 
-## Active Case Studies (SDLC 6.0.5)
+## Active Case Studies (SDLC 6.0.6)
 
 ### 2. Design Thinking Success - NQH-Bot Platform
 **File**: [SDLC-Design-Thinking-Case-Study-NQH-Bot.md](SDLC-Design-Thinking-Case-Study-NQH-Bot.md)
@@ -469,7 +469,7 @@ SDLC 6.0.4 (February 8, 2026):
   → Tier-Aware TDD Coverage (LITE 70%, STANDARD 85%, PRO/ENT 95%)
   → Sprint 154 Validation: 113 tests, 100% pass rate
 
-SDLC 6.0.5 (February 14, 2026): ⭐ CURRENT
+SDLC 6.0.6 (February 14, 2026): ⭐ CURRENT
   → RFC-001: Legacy Document Organization Standard (99-Legacy eliminated from stages)
   → SPEC-0001: Anti-Vibecoding alignment (5 weighted signals)
   → 4 New Framework Templates (Go-Live, Maturity Assessment, Risk Register)
@@ -483,7 +483,7 @@ SDLC 6.0.5 (February 14, 2026): ⭐ CURRENT
 
 **Q1 2026**:
 - Complete BFlow Platform transformation journey (V7 → V9)
-- Multi-platform SDLC 6.0.5 adoption case study
+- Multi-platform SDLC 6.0.6 adoption case study
 - Enterprise-scale implementation (50+ developers)
 - CodeRabbit integration success stories
 
@@ -494,7 +494,7 @@ SDLC 6.0.5 (February 14, 2026): ⭐ CURRENT
 - Revenue achievement case studies
 
 **Contribute Your Case Study**:
-- Document your SDLC 6.0.5 implementation
+- Document your SDLC 6.0.6 implementation
 - Measure and report success metrics
 - Share learnings with community
 - Contact: CPO Office (taidt@mtsolution.com.vn)
@@ -504,7 +504,7 @@ SDLC 6.0.5 (February 14, 2026): ⭐ CURRENT
 **Last Updated**: February 14, 2026
 **Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
-**Framework Version**: 6.0.5
+**Framework Version**: 6.0.6
 
 ---
 
@@ -512,4 +512,4 @@ SDLC 6.0.5 (February 14, 2026): ⭐ CURRENT
 
 ***"From 4.2 to 5.0.0 - Every upgrade earned through battle."*** ⚔️
 
-***"SDLC 6.0.5: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯
+***"SDLC 6.0.6: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯
