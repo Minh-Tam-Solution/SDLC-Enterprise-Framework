@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
 =========================================================================
-SDLC 6.0.6 Design Thinking Validator
+SDLC 6.1.0 Design Thinking Validator
 Validates Design Thinking 5-phase methodology compliance (Pillar 0)
 
-Version: 6.0.6
+Version: 6.1.0
 Date: February 2026
 Status: ACTIVE - PRODUCTION READY
 Authority: CPO Office + Design Thinking Excellence
 Foundation: Battle-tested on NQH-Bot (96% time savings proven)
 Pillar: 0 - Design Thinking Foundation (7-Pillar Architecture)
 
-Legacy/Archive Structure (SDLC 6.0.6):
+Legacy/Archive Structure (SDLC 6.1.0):
 - 10-archive: ONLY at docs root (not a stage)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated
@@ -57,7 +57,7 @@ logger = logging.getLogger(__name__)
 
 class DesignThinkingValidator:
     """
-    Validates Design Thinking methodology compliance in projects (SDLC 6.0.6)
+    Validates Design Thinking methodology compliance in projects (SDLC 6.1.0)
 
     Checks for evidence of Stanford d.school 5-phase approach:
     1. Empathize (user research)
@@ -138,7 +138,7 @@ class DesignThinkingValidator:
             ]
         }
 
-        # AI Governance Principles detection (SDLC 6.0.6 - 7 Principles)
+        # AI Governance Principles detection (SDLC 6.1.0 - 7 Principles)
         self.ai_governance_patterns = [
             r'human[\s-]+accountab',       # Principle 1: Human Accountability
             r'brief[\s-]+first',           # Principle 2: Brief-First Development
@@ -172,12 +172,12 @@ class DesignThinkingValidator:
 
     def validate(self) -> Dict[str, Any]:
         """
-        Run complete Design Thinking validation (SDLC 6.0.6)
+        Run complete Design Thinking validation (SDLC 6.1.0)
 
         Returns:
             Dict with validation results for all 5 phases
         """
-        logger.info("🎨 SDLC 6.0.6 Design Thinking Validator")
+        logger.info("🎨 SDLC 6.1.0 Design Thinking Validator")
         logger.info("=" * 60)
         logger.info(f"Project: {self.project_path}")
         logger.info(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -190,7 +190,7 @@ class DesignThinkingValidator:
         self._validate_phase_4_prototype()
         self._validate_phase_5_test()
 
-        # Validate AI Governance Principles awareness (SDLC 6.0.6)
+        # Validate AI Governance Principles awareness (SDLC 6.1.0)
         self._validate_ai_governance_principles()
 
         # Calculate overall score
@@ -322,8 +322,8 @@ class DesignThinkingValidator:
         logger.info("")
 
     def _validate_ai_governance_principles(self):
-        """Validate AI Governance Principles awareness (SDLC 6.0.6 - 7 Principles)"""
-        logger.info("🤖 AI Governance Principles (SDLC 6.0.6)")
+        """Validate AI Governance Principles awareness (SDLC 6.1.0 - 7 Principles)"""
+        logger.info("🤖 AI Governance Principles (SDLC 6.1.0)")
         logger.info("-" * 60)
 
         evidence = self._search_ai_governance_evidence()
@@ -342,7 +342,7 @@ class DesignThinkingValidator:
         else:
             logger.info("⚠️  No AI Governance Principles evidence found")
             logger.info("   Consider: AGENTS.md, CLAUDE.md, MRP templates")
-            logger.info("   Reference: 7 AI Governance Principles (SDLC 6.0.6)")
+            logger.info("   Reference: 7 AI Governance Principles (SDLC 6.1.0)")
 
         logger.info("")
 
@@ -383,7 +383,7 @@ class DesignThinkingValidator:
     def _search_for_patterns(self, phase: str) -> List[str]:
         """
         Search project for evidence of specific Design Thinking phase
-        (Excludes legacy/archive folders per SDLC 6.0.6)
+        (Excludes legacy/archive folders per SDLC 6.1.0)
 
         Args:
             phase: Phase name (empathize, define, ideate, prototype, test)
@@ -433,7 +433,7 @@ class DesignThinkingValidator:
         # Base score from 5 DT phases
         base_score = sum(phase_scores) / 5
 
-        # AI Governance bonus (up to +10 points, SDLC 6.0.6)
+        # AI Governance bonus (up to +10 points, SDLC 6.1.0)
         ai_gov_score = self.results['ai_governance']['score']
         ai_bonus = min(10, ai_gov_score / 10)
 
@@ -463,7 +463,7 @@ class DesignThinkingValidator:
             ('Phase 3 (Ideate)', 'phase_3_ideate'),
             ('Phase 4 (Prototype)', 'phase_4_prototype'),
             ('Phase 5 (Test)', 'phase_5_test'),
-            ('AI Governance (6.0.6)', 'ai_governance')
+            ('AI Governance (6.1.0)', 'ai_governance')
         ]
 
         for phase_name, phase_key in phases:
@@ -493,7 +493,7 @@ class DesignThinkingValidator:
 
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 6.0.6 Design Thinking Guide: /00-foundation/")
+        logger.info("   • SDLC 6.1.0 Design Thinking Guide: /00-foundation/")
         logger.info("   • AI Governance Principles: /03-AI-GOVERNANCE/")
         logger.info("   • AI Tools: /05-Templates-Tools/02-AI-Tools/design-thinking/")
         logger.info("   • CLAUDE.md Standard: Project root context for AI assistants")
@@ -504,7 +504,7 @@ class DesignThinkingValidator:
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        logger.info("SDLC 6.0.6 Design Thinking Validator")
+        logger.info("SDLC 6.1.0 Design Thinking Validator")
         logger.info("=" * 60)
         logger.info("")
         logger.info("Usage: python design_thinking_validator.py <project_path>")

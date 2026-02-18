@@ -1,18 +1,18 @@
 # SASE Artifact Templates
 ## Streamlined Templates for Human-Agent Collaboration
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 14, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Pillar**: 5 - SASE Integration
-**Framework**: SDLC 6.0.6 + SASE/SE 3.0 Integration
+**Framework**: SDLC 6.1.0 + SASE/SE 3.0 Integration
 **Reference**: arXiv:2509.06216v2 (Software Agentic Software Engineering)
 
 ---
 
 ## Overview
 
-**SASE (Software Agentic Software Engineering)** defines artifact templates for structured human-agent collaboration. As of SDLC 6.0.6, we use:
+**SASE (Software Agentic Software Engineering)** defines artifact templates for structured human-agent collaboration. As of SDLC 6.1.0, we use:
 
 - **AGENTS.md** - Industry standard for AI context (replaces BRS/MTS)
 - **3 Governance Artifacts** - CRP, MRP, VCR for oversight and audit
@@ -43,7 +43,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│               SASE WORKFLOW (SDLC 6.0.6)                            │
+│               SASE WORKFLOW (SDLC 6.1.0)                            │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │  Human                          Agent                               │
@@ -211,12 +211,12 @@ Date and time of decision
 
 ## Related Documents
 
-- [SDLC-Agentic-Core-Principles](../../02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
-- [SDLC-Agentic-Maturity-Model](../../02-Core-Methodology/SDLC-Agentic-Maturity-Model.md)
+- [SDLC-Agentic-Core-Principles](../../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
+- [SDLC-Agentic-Maturity-Model](../../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md)
 - [AI Agent Best Practices 2026](../../04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md)
 
 ---
 
 **Document Status**: ACTIVE - PRODUCTION READY
 **Last Updated**: February 14, 2026
-**Framework Version**: 6.0.6
+**Framework Version**: 6.1.0

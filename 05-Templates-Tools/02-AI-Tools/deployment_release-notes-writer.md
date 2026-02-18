@@ -1,5 +1,5 @@
 # 📝 AI Release Notes Writer - Stage 06 (DEPLOY)
-**Version**: 6.0.6 | **Date**: February 14, 2026 | **Time Savings**: 95% | **Pillar**: 1 (10-Stage Lifecycle)  
+**Version**: 6.1.0 | **Date**: February 14, 2026 | **Time Savings**: 95% | **Pillar**: 1 (10-Stage Lifecycle)  
 
 ## AI Prompt
 Generate user-friendly release notes:

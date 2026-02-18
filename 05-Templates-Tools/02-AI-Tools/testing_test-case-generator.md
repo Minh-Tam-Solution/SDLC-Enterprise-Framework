@@ -1,7 +1,7 @@
 # 🧪 AI Test Case Generator - Stage 05 (TEST)
 ## Automated Test Case Generation for Quality Assurance
 
-**Version**: 6.0.6 | **Date**: February 14, 2026 | **Pillar**: 4 (Quality Gates)
+**Version**: 6.1.0 | **Date**: February 14, 2026 | **Pillar**: 4 (Quality Gates)
 **Stage**: 05 - TEST (Quality Assurance & Validation)
 **Time Savings**: 90% (8 hours → 45 minutes)  
 **BFlow Validation**: 150+ test cases generated, 98% pass rate
@@ -30,7 +30,7 @@ Tech Stack: [Backend/Frontend technologies]
 
 ### AI Prompt
 ```
-You are an expert QA engineer for SDLC 6.0.6 Stage 05 (TEST). Generate comprehensive test cases for the following feature:
+You are an expert QA engineer for SDLC 6.1.0 Stage 05 (TEST). Generate comprehensive test cases for the following feature:
 
 **Feature**: [Feature name]
 **Functionality**: [Brief description]
@@ -116,7 +116,7 @@ Tech Stack: Python/Django backend, React frontend, PostgreSQL database
 
 ---
 
-## 🎯 Quality Gates (SDLC 6.0.6 Stage 05)
+## 🎯 Quality Gates (SDLC 6.1.0 Stage 05)
 
 Before moving to Stage 06 (DEPLOY), ensure:
 

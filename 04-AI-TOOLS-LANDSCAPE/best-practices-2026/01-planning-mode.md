@@ -1,7 +1,7 @@
 # Planning Mode Guide
 ## Pre-Implementation Pattern Extraction for AI Agents
 
-**Version:** 6.0.6
+**Version:** 6.1.0
 **Status:** ACTIVE
 **Date:** January 27, 2026
 **Core Principle:** [03-AI-GOVERNANCE/03-Planning-Mode-Principle.md](../../03-AI-GOVERNANCE/03-Planning-Mode-Principle.md)
@@ -13,7 +13,7 @@
 Planning Mode is a **RISK-BASED** workflow for AI agents. The key insight: **Planning is triggered by RISK, not just lines of code.**
 
 > "LOC is a heuristic. Risk factors are the real criteria."
-> — SDLC 6.0.6 Core Principle
+> — SDLC 6.1.0 Core Principle
 
 ---
 
@@ -29,7 +29,7 @@ When AI agents make risky changes, **architectural drift** becomes a significant
 
 > "Khi không dùng planning mode, codebase dễ bị architectural drift. Planning mode spawns explore sub-agents → extract patterns → build on them. This prevents drift."
 
-**Important (Added in 5.3.0, current as of 6.0.6)**: The old ">15 LOC" rule was **gameable** (split 100 LOC into 7 commits of 14 LOC each). Risk-based triggers are **intent-based** and cannot be gamed.
+**Important (Added in 5.3.0, current as of 6.1.0)**: The old ">15 LOC" rule was **gameable** (split 100 LOC into 7 commits of 14 LOC each). Risk-based triggers are **intent-based** and cannot be gamed.
 
 ---
 
@@ -279,7 +279,7 @@ Similar Implementations Found:
   3. backend/middleware/rate_limit_middleware.py (65% similar)
 
 Architecture Constraints:
-  - JWT tokens with 15min expiry (per ADR-002)
+  - JWT tokens with 15min expiry (implementation-specific security policy)
   - OAuth 2.0 support required
   - Multi-provider fallback for AI operations
 
@@ -370,5 +370,7 @@ Planning Mode integrates with:
 
 ---
 
+**Doctrine**: [Planning Mode Principle](../../03-AI-GOVERNANCE/03-Planning-Mode-Principle.md) — risk-based triggers and formal decision framework (this doc = practice, doctrine = principle).
+
 **Document Status:** ACTIVE
-**Last Updated:** January 22, 2026
+**Last Updated:** February 18, 2026

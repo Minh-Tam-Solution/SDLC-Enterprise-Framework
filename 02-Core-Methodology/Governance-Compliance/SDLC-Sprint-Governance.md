@@ -1,6 +1,6 @@
 # SDLC Sprint Governance
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: January 28, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 2 - Sprint Planning Governance (Core Pillar)
@@ -437,7 +437,7 @@ Example: Multi-Stage Sprint (App Builder Integration)
 
 | Day | Stage | Deliverable | Gate |
 |-----|-------|-------------|------|
-| **Day 0** | 02-DESIGN | ADR-040, ADR-041 | G2 (Architecture) |
+| **Day 0** | 02-DESIGN | Architecture decisions | G2 (Architecture) |
 | **Day 1** | 03-INTEGRATE | TemplateBlueprint schema | G2 (Integration) |
 | **Day 1-2** | 04-BUILD | 5 templates (4,811 LOC) | G3 (Code) |
 | **Day 2** | 04-BUILD | AppBuilderProvider, tests (1,088 LOC) | G3 (Code) |
@@ -591,11 +591,11 @@ tasks:
 ```bash
 #!/bin/bash
 # tools/validate-sprint-consistency.sh
-# SDLC 6.0.6 - Sprint Consistency Validator
+# SDLC 6.1.0 - Sprint Consistency Validator
 
 set -e
 
-echo "🔍 SDLC 6.0.6 Sprint Consistency Validator"
+echo "🔍 SDLC 6.1.0 Sprint Consistency Validator"
 echo "==========================================="
 
 # Configuration
@@ -1055,6 +1055,6 @@ Weekly Escalation (in roadmap review):
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for PROFESSIONAL+ tiers
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Last Updated**: January 28, 2026
 **Owner**: CTO Office

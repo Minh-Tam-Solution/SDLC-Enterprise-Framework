@@ -1,19 +1,19 @@
 # Planning Hierarchy Templates
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: January 22, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy)
 **Status**: ACTIVE - Production Templates
 **Authority**: CPO Office
-**Framework**: SDLC 6.0.6 (7-Pillar Architecture)
+**Framework**: SDLC 6.1.0 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---
 
 ## Purpose
 
-This folder contains templates for the **4-Level Planning Hierarchy** defined in ADR-013. These templates ensure consistent planning structure from strategic vision to daily execution.
+This folder contains templates for the **4-Level Planning Hierarchy** defined in the SDLC Sprint Planning Guide. These templates ensure consistent planning structure from strategic vision to daily execution.
 
 ---
 
@@ -91,7 +91,7 @@ ENTERPRISE (50+ people, $1M+):
 
 ### Step 2: Copy Templates
 ```bash
-# For PROFESSIONAL+ tier (SDLC 6.0.6 folder structure)
+# For PROFESSIONAL+ tier (SDLC 6.1.0 folder structure)
 # Note: Only /docs folders are stage-mapped, code folders are organizational units
 cp ROADMAP-TEMPLATE.md /your-project/docs/00-foundation/
 cp PHASE-TEMPLATE.md /your-project/docs/04-build/02-Sprint-Plans/
@@ -123,7 +123,7 @@ Example:
 
 ## Related Documents
 
-- [ADR-013: 4-Level Planning Hierarchy](../../../02-Design-Architecture/ADRs/)
+- [4-Level Planning Hierarchy](../../../02-Core-Methodology/SDLC-Sprint-Planning-Guide.md)
 - [SDLC-Team-Collaboration-Standards.md](../../../08-Documentation-Standards/Team-Collaboration/)
 
 ---

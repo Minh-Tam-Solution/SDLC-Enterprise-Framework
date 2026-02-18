@@ -1,6 +1,6 @@
-# SDLC 6.0.6 Implementation Guide - From Zero to Production
+# SDLC 6.1.0 Implementation Guide - From Zero to Production
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: January 29, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Target**: Any team, any size, any experience level
@@ -11,7 +11,7 @@
 
 ## 🎯 30-Second Overview
 
-**What is SDLC 6.0.6?**
+**What is SDLC 6.1.0?**
 - A **10-stage lifecycle** framework (WHY → GOVERN)
 - With **7-Pillar Architecture** + **Section 7 Quality Assurance System**
 - With **SASE** for human-AI collaboration (AGENTS.md + 3 artifacts)
@@ -383,7 +383,7 @@ Stage 09: GOVERN - Compliance, audits, governance
 
 ### Standard `/docs` Structure (10-Stage Aligned)
 
-Every SDLC 6.0.6 compliant project **MUST** have this documentation structure using **shortened folder names**:
+Every SDLC 6.1.0 compliant project **MUST** have this documentation structure using **shortened folder names**:
 
 ```
 your-project/
@@ -456,7 +456,7 @@ your-project/
 
 ### Folder Naming Convention
 
-**SDLC 6.0.6 uses shortened folder names** (not long descriptive names):
+**SDLC 6.1.0 uses shortened folder names** (not long descriptive names):
 
 | Stage | Folder Name | NOT |
 |-------|-------------|-----|
@@ -628,7 +628,7 @@ docs/02-design/14-Technical-Specs/SPEC-0001-*.md
 
 ### Purpose
 
-Every project implementing SDLC 6.0.6 should have an **SDLC Compliance folder** containing:
+Every project implementing SDLC 6.1.0 should have an **SDLC Compliance folder** containing:
 - Project-specific summary of the Framework
 - AI context files (CLAUDE.md, AGENTS.md)
 - Quick reference for team members (human + AI)
@@ -644,7 +644,7 @@ docs/08-collaborate/
     ├── AGENTS.md                     # Agent guidelines & boundaries
     ├── PROJECT-CONTEXT.md            # Human-readable quick reference
     ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
-    └── FRAMEWORK-SUMMARY.md          # SDLC 6.0.6 summary (optional)
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.1.0 summary (optional)
 ```
 
 ### Why 08-collaborate (Not 09-govern)?
@@ -688,7 +688,7 @@ your-project/
 | `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
 | `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
 | `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
-| `FRAMEWORK-SUMMARY.md` | SDLC 6.0.6 quick reference | Optional |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.1.0 quick reference | Optional |
 
 ### Migration for Existing Projects
 
@@ -713,7 +713,7 @@ python3 path/to/sdlc_validator.py /your/project
 
 ## 🤖 SASE Quick Reference (AI Teams)
 
-### SDLC 6.0.6 Simplified Artifacts
+### SDLC 6.1.0 Simplified Artifacts
 
 | # | Artifact | Created By | Purpose |
 |---|----------|------------|---------|
@@ -811,7 +811,7 @@ Agent: MRP → Human: VCR
 
 ## 🔄 Brownfield Implementation (Existing Projects)
 
-**For teams with existing codebases that want to adopt SDLC 6.0.6 incrementally.**
+**For teams with existing codebases that want to adopt SDLC 6.1.0 incrementally.**
 
 ### Philosophy: Don't Disrupt, Enhance
 
@@ -909,9 +909,9 @@ Phase 4 Adds:
 
 ---
 
-## ⬆️ Version Migration (5.x → 6.0.6)
+## ⬆️ Version Migration (5.x → 6.1.0)
 
-**For teams already using SDLC 5.x who want to upgrade to 6.0.6.**
+**For teams already using SDLC 5.x who want to upgrade to 6.1.0.**
 
 ### What Changed in 6.0.0?
 
@@ -1076,13 +1076,13 @@ Philosophy: "Validate before rollout"
 Week 1-4 (Sprint 122-123):
   - CTO creates all templates
   - CTO sets up validation tooling
-  - Team allocation: 0% SDLC 6.0.6 work
+  - Team allocation: 0% SDLC 6.1.0 work
 
 Week 5-8 (Sprint 124-125):
   - CTO converts 2 specs as "stealth pilots"
   - Validates templates work in practice
   - Measures actual conversion velocity
-  - Team allocation: Still 0% SDLC 6.0.6 work
+  - Team allocation: Still 0% SDLC 6.1.0 work
 
 Week 9-10 (Sprint 126):
   - Training materials finalized
@@ -1112,7 +1112,7 @@ Week 9-10 (Sprint 126):
    - Final confirmation (Apr 12): "Sprint 127 starts Apr 15"
 
 **Recommendation:**
-For teams new to SDLC 6.0.6, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
+For teams new to SDLC 6.1.0, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
 - Team has never migrated SDLC versions before
 - High-stakes production system (can't afford migration failures)
 - CTO/Tech Lead capacity available for preparation work
@@ -1146,8 +1146,8 @@ For teams new to SDLC 6.0.6, the BFlow "stealth pilot" approach reduces risk by 
 
 ### Reference
 - `../02-Core-Methodology/SDLC-Core-Methodology.md` - Full 10-stage theory
-- `../02-Core-Methodology/SDLC-Agentic-Core-Principles.md` - SASE details
-- `../02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` - L0→L3 progression
+- `../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` - SASE details
+- `../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` - L0→L3 progression
 
 ---
 
@@ -1175,7 +1175,7 @@ For teams new to SDLC 6.0.6, the BFlow "stealth pilot" approach reduces risk by 
 ## 🎯 One Page Summary
 
 ```
-SDLC 6.0.6 = 10 Stages + 7 Pillars + Section 7 (QA) + 4 Tiers
+SDLC 6.1.0 = 10 Stages + 7 Pillars + Section 7 (QA) + 4 Tiers
 
 Pick Your Path:
   Greenfield (new project)   → This guide's Quick Starts
@@ -1203,11 +1203,11 @@ ROI = 10-50x improvement (tier dependent)
 
 ---
 
-**Document Version**: 6.0.6
+**Document Version**: 6.1.0
 **Last Updated**: February 14, 2026
 **Owner**: CPO Office
 **Next Review**: March 2026
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 
 ---
 

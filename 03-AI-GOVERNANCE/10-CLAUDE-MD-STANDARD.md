@@ -1,7 +1,8 @@
 ---
-sdlc_version: "6.0.6"
+sdlc_version: "6.1.0"
 document_type: "Framework Standard"
-stage: "03 - AI GOVERNANCE"
+section: "03-AI-GOVERNANCE"
+ring: "Core"
 status: "APPROVED"
 owner: "CTO"
 last_updated: "2026-02-17"
@@ -14,7 +15,7 @@ sprint: "174"
 
 # CLAUDE.md Standard for AI-Assisted Development
 
-**Framework Version**: SDLC 6.0.6
+**Framework Version**: SDLC 6.1.0
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (Methodology Standard — affects all adopters)
 **Effective Date**: February 17, 2026
@@ -36,7 +37,7 @@ Traditional codebases rely on README.md for human onboarding. In the Software 3.
 
 ### 1.2 Industry Adoption Context
 
-As of Q1 2026, CLAUDE.md and AGENTS.md are emerging as industry standards across 60K+ repositories. Leading AI-native teams use CLAUDE.md as a **living data catalog** — not just documentation, but a navigation system for complex codebases. However, most implementations are **static** — updated manually and rarely maintained. SDLC 6.0.6 formalizes CLAUDE.md as a **living artifact** with tier-specific requirements and validation criteria.
+As of Q1 2026, CLAUDE.md and AGENTS.md are emerging as industry standards across 60K+ repositories. Leading AI-native teams use CLAUDE.md as a **living data catalog** — not just documentation, but a navigation system for complex codebases. However, most implementations are **static** — updated manually and rarely maintained. SDLC 6.1.0 formalizes CLAUDE.md as a **living artifact** with tier-specific requirements and validation criteria.
 
 ---
 
@@ -318,7 +319,7 @@ Is your team >100 members OR in a regulated industry?
          └── NO → LITE tier
 ```
 
-### Tier Mapping to SDLC 6.0.6 Project Classification
+### Tier Mapping to SDLC 6.1.0 Project Classification
 
 | SDLC Tier | CLAUDE.md Tier | Rationale |
 |-----------|---------------|-----------|
@@ -331,7 +332,7 @@ Is your team >100 members OR in a regulated industry?
 
 ## 5. Platform Automation Opportunities
 
-Any platform implementing SDLC 6.0.6 can automate CLAUDE.md management:
+Any platform implementing SDLC 6.1.0 can automate CLAUDE.md management:
 
 ### 5.1 Template Generation
 
@@ -419,7 +420,7 @@ Platforms may auto-update CLAUDE.md sections based on lifecycle events:
 
 ## 9. References
 
-- **SDLC 6.0.6**: Section 8 (Specification Standard)
+- **SDLC 6.1.0**: Section 8 (Specification Standard)
 - **Industry Context**: 60K+ repositories with CLAUDE.md/AGENTS.md as of Q1 2026
 - **AI-Native Team Practices**: Multiple AI-first organizations use CLAUDE.md as living data catalogs (Q1 2026)
 

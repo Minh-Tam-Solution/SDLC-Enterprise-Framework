@@ -1,12 +1,12 @@
 # Phase Template
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: January 22, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy - Level 2)
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---

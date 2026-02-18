@@ -1,8 +1,8 @@
-# SDLC Framework 6.0.6 Content Map
+# SDLC Framework 6.1.0 Content Map
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Status**: ACTIVE
-**Date**: February 16, 2026
+**Date**: February 18, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
 
 ---
@@ -81,6 +81,9 @@ Before creating any new document, check if a canonical file already exists for t
 | AI Anti-Patterns | `03-AI-GOVERNANCE/07-Anti-Patterns.md` | — | ACTIVE |
 | **CLAUDE.md Standard (3-Tier)** | `03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md` | — | **NEW 6.0.6** |
 | **Autonomous Codegen Patterns** | `03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md` | — | **NEW 6.0.6** |
+| **Multi-Agent Patterns** | `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` | — | **NEW 6.1.0** |
+| **Agentic Core Principles** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | **MOVED 6.1.0** |
+| **Agentic Maturity Model** | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | **MOVED 6.1.0** |
 
 ### Core Methodology (02-Core-Methodology/)
 
@@ -88,17 +91,20 @@ Before creating any new document, check if a canonical file already exists for t
 |-------|---------------|----------------|--------|
 | 10-Stage Lifecycle | `02-Core-Methodology/SDLC-Core-Methodology.md` | Legacy versions in 10-Archive/02-Legacy/ | ACTIVE |
 | Design Thinking | `02-Core-Methodology/SDLC-Design-Thinking-Principles.md` | Multiple legacy versions in 10-Archive/02-Legacy/ | ACTIVE |
-| Agentic Principles | `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | — | ACTIVE |
+| Agentic Principles | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/` in 6.1.0 | ACTIVE |
 | Sprint Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md` | Consolidated from Sprint-Planning + Stage-Integration + Change-Management | ACTIVE |
 | Quality + Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md` | Consolidated from Quality-Gates + Security-Gates | ACTIVE |
 | Observability Checklist | `02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md` | — | ACTIVE |
 | Naming Standards | `02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md` | Consolidated from Code-File-Naming + Document-Naming + Header-Templates | ACTIVE |
 | Team Collaboration | `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
 | **Visual Documentation Standards** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | RFC-SDLC-607 | **NEW 6.0.3** |
-| **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Renamed from ADR-041 | **NEW 5.3.0** |
+| **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Stage prerequisite matrix | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
 | **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
-| **MRP Template** | `02-Core-Methodology/SDLC-MRP-Template.md` | — | **NEW 6.0.6** |
+| **System Thinking Foundation** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | — | **NEW 6.1.0** |
+| **Crisis-to-Pattern Methodology** | `02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
+| **Design Thinking Templates** | `02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
+| **MRP Template** | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Moved from `02-Core-Methodology/` in 6.1.0 | **NEW 6.0.6** |
 
 ### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 
@@ -127,6 +133,8 @@ Before creating any new document, check if a canonical file already exists for t
 | Topic | Canonical File | Purpose | Status |
 |-------|---------------|---------|--------|
 | **E2E API Testing Workflow** | `05-Templates-Tools/02-AI-Tools/testing_e2e-api-testing-workflow.md` | 6-phase standardized E2E testing workflow | **NEW 6.0.2** |
+| **E2E Testing Quickstart** | `07-Implementation-Guides/E2E-TESTING-QUICKSTART.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
+| **E2E API Testing Methodology** | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
 | **Security Testing Checklist** | `05-Templates-Tools/02-AI-Tools/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **NEW 6.0.2** |
 | **Stage Cross-Reference Matrix** | `02-Core-Methodology/SDLC-Stage-Cross-Reference.md` | Bidirectional Stage 03 ↔ 05 traceability | **NEW 6.0.2** |
 | **Testing Artifacts Structure** | `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | SDLC-compliant test folder layout | **NEW 6.0.2** |
@@ -199,7 +207,7 @@ Before creating any new document, check if a canonical file already exists for t
 | AI Platform Deployment | `10-Archive/06-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
 
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
-> For 6.0.6 deployments, adapt the governance docs from 02-Core-Methodology/.
+> For 6.1.0 deployments, adapt the governance docs from 02-Core-Methodology/.
 
 ### Sprint 117 POC Documents (10-Archive/04-Legacy/Sprint-117-POC/)
 
@@ -225,6 +233,11 @@ Before creating any new document, check if a canonical file already exists for t
 | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
 | `07-Implementation-Guides/SDLC-Manual-Code-Review-Playbook.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
 | `07-Implementation-Guides/SDLC-Subscription-Powered-Code-Review-Guide.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
+| `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Feb 2026 | Aug 2026 |
+| `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` | Feb 2026 | Aug 2026 |
+| `02-Core-Methodology/SDLC-MRP-Template.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Feb 2026 | Aug 2026 |
+| `05-Templates-Tools/02-AI-Tools/E2E-TESTING-QUICKSTART.md` | `07-Implementation-Guides/E2E-TESTING-QUICKSTART.md` | Feb 2026 | Aug 2026 |
+| `05-Templates-Tools/02-AI-Tools/SDLC-E2E-API-Testing-Methodology.md` | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Feb 2026 | Aug 2026 |
 | `03-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/cursor/` | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/copilot/` | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
@@ -240,6 +253,22 @@ Before creating any new document, check if a canonical file already exists for t
 | BRS (BriefingScript) | DEPRECATED | AGENTS.md "## Task Brief" | July 2026 |
 | MTS (MentorScript) | DEPRECATED | AGENTS.md "## Conventions" | July 2026 |
 | LPS (LoopScript) | DEPRECATED | AI generates own plans | July 2026 |
+
+### 6.1.0 Consolidation (February 18, 2026)
+
+| Action | Source | Target | Net Effect |
+|--------|--------|--------|------------|
+| **Slim + Extract** | `SDLC-Design-Thinking-Principles.md` (2,018 lines) | Hub (364 lines) + Templates (572 lines) + Crisis-to-Pattern (280 lines) | −802 lines, 3 focused docs |
+| **Slim + Move** | `SDLC-Agentic-Core-Principles.md` (1,313 lines) | `03-AI-GOVERNANCE/13-...` (293 lines) | −1,020 lines, correct ring |
+| **Rewrite** | `SDLC-Agentic-Maturity-Model.md` | `03-AI-GOVERNANCE/14-...` (817 lines) | BRS/MTS/LPS → AGENTS.md |
+| **Create** | — | `SDLC-System-Thinking-Foundation.md` (230 lines) | New foundational doc |
+| **Create** | — | `12-MULTI-AGENT-PATTERNS.md` (450 lines) | Multi-agent collaboration patterns |
+| **Move** | `02-Core-Methodology/SDLC-MRP-Template.md` | `05-Templates-Tools/06-Manual-Templates/` | Correct ring |
+| **Move** | `05-Templates-Tools/02-AI-Tools/E2E-*` | `07-Implementation-Guides/` | Correct ring |
+| **Terminology** | BRS/MTS/LPS refs across SASE templates, Maturity Model | AGENTS.md terminology | 0 stale refs |
+| **Version** | 636 stale `6.0.6` references | Updated to `6.1.0` | Consistent versioning |
+
+**Net result**: −1,822 lines from Ring 1 monoliths, +960 lines in focused docs, 0 BRS/MTS/LPS stale refs.
 
 ### Boris Cherny Consolidation (6.0.3 - Feb 2, 2026)
 
@@ -284,7 +313,7 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 3. Update all internal links
 4. Run CI link checker
 
-### When Archiving (RFC-001, SDLC 6.0.6)
+### When Archiving (RFC-001, SDLC 6.1.0)
 
 1. Move file to `10-Archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
 2. Create redirect stub at original location
@@ -296,4 +325,4 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 16, 2026
+**Last Updated**: February 18, 2026

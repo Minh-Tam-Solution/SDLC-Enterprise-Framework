@@ -8,7 +8,7 @@
 **Consumer:** SE4H (Software Engineering for Humans - Agent Coach) for VCR decision
 
 **Version:** 1.2.0
-**Framework:** SDLC 6.0.6 (7-Pillar Architecture)
+**Framework:** SDLC 6.1.0 (7-Pillar Architecture)
 **Created:** December 2025
 **Updated:** January 22, 2026
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
@@ -30,13 +30,13 @@
 
 | Reference | ID | Link |
 |-----------|------|------|
-| **Source BRS** | BRS-YYYY-NNN | [Link to BriefingScript] |
-| **Executed LPS** | LPS-YYYY-NNN | [Link to LoopScript] |
+| **Source AGENTS.md** | [Link] | [Link to AGENTS.md task brief] |
+| **Execution Context** | [Link] | [Link to PR / Issue / Session] |
 | **Project** | PRJ-XXX | [Link to Project] |
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **Branch** | feature/xxx | [Link to Branch] |
 
-### Sprint Planning Governance (SDLC 6.0.6)
+### Sprint Planning Governance (SDLC 6.1.0)
 
 | Reference | ID | Status |
 |-----------|------|--------|
@@ -47,7 +47,7 @@
 
 ---
 
-## ✅ DEFINITION OF DONE (DoD) VERIFICATION (SDLC 6.0.6)
+## ✅ DEFINITION OF DONE (DoD) VERIFICATION (SDLC 6.1.0)
 
 | Criterion | Status | Evidence |
 |-----------|--------|----------|
@@ -68,9 +68,9 @@
 
 | Req ID | Description | Status | Evidence |
 |--------|-------------|--------|----------|
-| F1 | [Requirement from BRS] | ✅ PASS \| ❌ FAIL \| ⚠️ PARTIAL | [How verified] |
-| F2 | [Requirement from BRS] | ✅ PASS \| ❌ FAIL \| ⚠️ PARTIAL | [How verified] |
-| F3 | [Requirement from BRS] | ✅ PASS \| ❌ FAIL \| ⚠️ PARTIAL | [How verified] |
+| F1 | [Requirement from AGENTS.md] | ✅ PASS \| ❌ FAIL \| ⚠️ PARTIAL | [How verified] |
+| F2 | [Requirement from AGENTS.md] | ✅ PASS \| ❌ FAIL \| ⚠️ PARTIAL | [How verified] |
+| F3 | [Requirement from AGENTS.md] | ✅ PASS \| ❌ FAIL \| ⚠️ PARTIAL | [How verified] |
 
 ### Feature Summary
 
@@ -367,7 +367,7 @@ CREATE INDEX idx_resources_created_at ON resources(created_at);
 
 ## 📊 EXECUTION METRICS
 
-### LPS Execution Summary
+### Execution Summary
 
 | Metric | Value |
 |--------|-------|
@@ -394,11 +394,11 @@ CREATE INDEX idx_resources_created_at ON resources(created_at);
 
 I, the AI agent (SE4A), attest that:
 
-- [x] All functional requirements from BRS have been addressed
+- [x] All functional requirements from AGENTS.md have been addressed
 - [x] All tests pass with required coverage
 - [x] No security vulnerabilities detected (SAST/dependency scan)
 - [x] Performance targets met (p95 < 100ms)
-- [x] Code follows project standards (MentorScript)
+- [x] Code follows project standards (AGENTS.md conventions)
 - [x] Documentation is complete and accurate
 - [x] No known issues or technical debt introduced
 - [x] Ready for human review (VCR)
@@ -462,7 +462,7 @@ I, the AI agent (SE4A), attest that:
 ### MRP Quality Checklist
 
 Before submitting MRP:
-- [ ] All BRS requirements addressed
+- [ ] All AGENTS.md requirements addressed
 - [ ] All tests passing (unit, integration, E2E)
 - [ ] Coverage meets threshold (90%+)
 - [ ] Security scans clean (0 critical/high)
@@ -486,6 +486,6 @@ DRAFT → SUBMITTED → IN_REVIEW → APPROVED/REJECTED/REVISION_REQUIRED
 | Coverage Report | ✅ | HTML |
 | Security Scan | ✅ | JSON/SARIF |
 | Performance Benchmark | ✅ | JSON |
-| LPS Execution Log | ✅ | YAML |
+| Execution Log | ✅ | YAML |
 
-**Reference:** SDLC-Agentic-Core-Principles.md
+**Reference:** 03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md

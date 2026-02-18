@@ -1,6 +1,6 @@
 # 🤝 AI Team Protocol Generator - Stage 08 (COLLABORATE)
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 14, 2026
 **Stage**: 08 - COLLABORATE (Team Management & Documentation)
 **Time Savings**: 80%
@@ -10,7 +10,7 @@
 
 ## Purpose
 
-Generate **comprehensive team protocols** for multi-team coordination following SDLC 6.0.6 standards. Covers governance structure, team roles, handoff procedures, and escalation paths.
+Generate **comprehensive team protocols** for multi-team coordination following SDLC 6.1.0 standards. Covers governance structure, team roles, handoff procedures, and escalation paths.
 
 ---
 
@@ -20,7 +20,7 @@ Generate **comprehensive team protocols** for multi-team coordination following 
 
 ```yaml
 System Prompt:
-  You are generating multi-team collaboration protocols following SDLC 6.0.6 standards.
+  You are generating multi-team collaboration protocols following SDLC 6.1.0 standards.
   Create governance structure, team definitions, RACI matrices, and handoff procedures.
   Reference: Documentation-Standards/Team-Collaboration/SDLC-Team-Collaboration-Protocol.md
 
@@ -132,7 +132,7 @@ Output Format:
   ---
 
   ## Escalation Path
-  [4-level escalation following SDLC 6.0.6 standards]
+  [4-level escalation following SDLC 6.1.0 standards]
 ```
 
 ### 2. Remote/Hybrid Work Protocol

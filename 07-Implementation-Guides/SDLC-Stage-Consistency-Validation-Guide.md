@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Date**: February 1, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 **Specification**: SPEC-0021 Stage Consistency Validation (moved to Orchestrator `docs/05-test/`)
 **Target**: Developers, Tech Leads, QA Engineers implementing 4-stage consistency validation
 
@@ -1188,7 +1188,7 @@ Then update validation scripts to read this config.
 
 ### Framework Documentation
 - SPEC-0021: Stage Consistency Validation - Full specification (moved to Orchestrator `docs/05-test/`)
-- [ADR-041: Stage Dependency Matrix](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - Stage prerequisites
+- [Stage Dependency Matrix](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - Stage prerequisites
 - [SDLC-Stage-Exit-Criteria.md](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Exit criteria per stage
 - [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - 24-hour documentation rule
 
@@ -1230,7 +1230,7 @@ Found a better validation pattern? Share it!
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 1, 2026
-**Framework Version**: SDLC 6.0.6
+**Framework Version**: SDLC 6.1.0
 **Specification**: SPEC-0021 v1.0.0
 
 ---

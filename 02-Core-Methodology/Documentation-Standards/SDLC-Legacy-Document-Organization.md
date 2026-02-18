@@ -4,17 +4,16 @@ type: "framework-standard"
 status: "ACTIVE"
 version: "1.0.0"
 date: "2026-02-13"
-rfc: "RFC-001"
-framework: "SDLC 6.0.6"
+framework: "SDLC 6.1.0"
 replaces: "99-Legacy/ folder pattern (deprecated)"
 adopted-by: "Production platform (3 live customers)"
 author: "CTO Office"
 ---
 
-# SDLC Legacy Document Organization Standard (RFC-001)
+# SDLC Legacy Document Organization Standard
 
 **Effective Date**: February 13, 2026  
-**Framework Version**: SDLC 6.0.6+  
+**Framework Version**: SDLC 6.1.0+  
 **Status**: MANDATORY for all SDLC-compliant projects  
 **Deadline**: March 15, 2026 (adoption requirement)
 
@@ -22,7 +21,7 @@ author: "CTO Office"
 
 ## Executive Summary
 
-RFC-001 establishes a **mandatory framework standard** for organizing archived and deprecated documentation across SDLC-compliant projects. The standard eliminates distributed `99-Legacy/` folders from active development stages (00-09) and centralizes all legacy content into a single `10-Archive/` directory with stage-aligned subdirectories.
+This standard establishes a **mandatory framework rule** for organizing archived and deprecated documentation across SDLC-compliant projects. The standard eliminates distributed `99-Legacy/` folders from active development stages (00-09) and centralizes all legacy content into a single `10-Archive/` directory with stage-aligned subdirectories.
 
 **Business Impact**: 
 - **57% reduction** in documentation size (211MB → 91MB on production platform)
@@ -32,7 +31,7 @@ RFC-001 establishes a **mandatory framework standard** for organizing archived a
 
 ---
 
-## Problem Statement (RFC-001)
+## Problem Statement
 
 ### Issue 1: AI Context Pollution
 When each SDLC stage (00-09) contains a `99-Legacy/` subfolder, AI assistants reading stage documentation encounter both current AND deprecated content simultaneously:
@@ -54,7 +53,7 @@ Each stage's `99-Legacy/` grows independently with no standard organization:
 ### Issue 4: Inflated Directory Trees
 Legacy content inflates file and directory counts, making active content harder to find:
 
-**Production platform metrics (before RFC-001)**:
+**Production platform metrics (before this standard)**:
 - Total size: 211 MB
 - Total files: ~6,500
 - 99-Legacy size: 34 MB + 1,654 files (26% of total)
@@ -62,7 +61,7 @@ Legacy content inflates file and directory counts, making active content harder 
 
 ---
 
-## Proposed Solution (RFC-001)
+## Solution
 
 Replace distributed `99-Legacy/` folders with a centralized, stage-aligned archive pattern:
 
@@ -84,7 +83,7 @@ docs/
     └── 99-Legacy/  ← Mixed with active stage
 
 
-AFTER (RFC-001 Solution):
+AFTER (Centralized Archive Solution):
 docs/
 ├── 00-Foundation/
 │   └── [active content only]
@@ -106,7 +105,7 @@ docs/
 
 ---
 
-## RFC-001 Rules
+## Rules
 
 All rules are **MANDATORY** unless explicitly marked RECOMMENDED.
 
@@ -119,7 +118,7 @@ All rules are **MANDATORY** unless explicitly marked RECOMMENDED.
 - SDLC CLI validation: compliance validator reports WARNING if `99-Legacy/` found
 
 **Timeline**:
-- February 13, 2026: RFC-001 approved as MANDATORY
+- February 13, 2026: Standard approved as MANDATORY
 - March 15, 2026: All active projects must comply
 - After March 15: CI/CD will BLOCK merges violating this rule
 
@@ -217,14 +216,14 @@ For SDLC-Enterprise-Framework self-application:
 - ✅ Update CONTENT-MAP.md (archive references)
 - ✅ Update README.md (version history)
 - ✅ Create migration script
-- ✅ Add RFC-001 standard document (this file)
-- ✅ Update RFC-001 status to ACCEPTED
+- ✅ Add standard document (this file)
+- ✅ Update status to ACCEPTED
 
 ### Phase 2: Framework Self-Application (Feb 15)
 - Create `10-Archive/` directory structure
 - Execute migration: `migrate-legacy-to-archive.sh`
 - Fix stale references in all .md files
-- Commit: `feat(SDLC 6.0.6): RFC-001 Legacy Document Organization`
+- Commit: `feat(SDLC 6.1.0): Legacy Document Organization Standard`
 
 ### Phase 3: Orchestrator Migration (Feb 20-28)
 - Migrate `docs/0[0-9]-*/99-Legacy/` → `docs/10-archive/{NN}-Legacy/`
@@ -268,7 +267,7 @@ grep -r "99-Legacy" docs/ --include="*.md" | grep -v "historical\|deprecated"
 
 # ✓ SDLC compliance validation
 [SDLC CLI] validate docs/
-# Should report: ✓ RFC-001 compliance verified
+# Should report: ✓ Legacy organization compliance verified
 ```
 
 ---
@@ -279,10 +278,10 @@ grep -r "99-Legacy" docs/ --include="*.md" | grep -v "historical\|deprecated"
 A: No action required. The standard applies to all SDLC-compliant projects going forward. If 99-Legacy/ exists, migrate it. If it doesn't exist, ensure it's never created.
 
 **Q2: Can I keep 99-Legacy/ if I rename it?**  
-A: No. The rule is specifically about the `99-Legacy/` folder name AND its function. Even renamed legacy folders should follow the RFC-001 pattern.
+A: No. The rule is specifically about the `99-Legacy/` folder name AND its function. Even renamed legacy folders should follow this standard's centralized archive pattern.
 
 **Q3: What about stage 10 (Archive)? Can it have 99-Legacy/?**  
-A: Stage 10 is itself the archive layer. The rule prevents 99-Legacy/ only in stages 00-09 (active development). Stage 10 can have `{NN}-Legacy/` subdirs per RFC-001.
+A: Stage 10 is itself the archive layer. The rule prevents 99-Legacy/ only in stages 00-09 (active development). Stage 10 can have `{NN}-Legacy/` subdirs per this standard.
 
 **Q4: Do I need to keep redirect stubs?**  
 A: Yes. If code/documentation links to old 99-Legacy paths, create redirect stubs at those original locations pointing to the new 10-Archive paths. See DEPRECATION-POLICY.md.
@@ -297,7 +296,6 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 
 ## References
 
-- **RFC**: [RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md](../../../09-Continuous-Improvement/RFC-001-LEGACY-DOCUMENT-ORGANIZATION-STANDARD.md)
 - **Policy**: [DEPRECATION-POLICY.md](../../../DEPRECATION-POLICY.md)
 - **Content Map**: [CONTENT-MAP.md](../../../CONTENT-MAP.md)
 - **Migration Script**: [migrate-legacy-to-archive.sh](../07-Scripts/migrate-legacy-to-archive.sh)
@@ -310,7 +308,7 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 
 | Date | Phase | Requirement |
 |------|-------|-------------|
-| Feb 13, 2026 | RFC Approval | RFC-001 approved as MANDATORY |
+| Feb 13, 2026 | Standard Approval | Approved as MANDATORY |
 | Feb 14-28, 2026 | Framework Adoption | Framework-First self-application (Phases 1-2) |
 | Feb 28 - Mar 7, 2026 | Cascade to Projects | SDLC-Orchestrator and team projects apply (Phases 3-4) |
 | Mar 8-15, 2026 | Enforcement | CI/CD blocks any new 99-Legacy/ in stages 00-09 |
@@ -331,11 +329,11 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 | Deployment time | 5.2 min | 4.8 min | 7.7% faster |
 | Developer lookup speed | 3.2 s avg | 1.8 s avg | 43% faster |
 
-**Conclusion**: RFC-001 pattern proven effective in production. Zero issues, zero breaking changes, measurable improvement in AI context quality and developer experience.
+**Conclusion**: Legacy Organization Standard proven effective in production. Zero issues, zero breaking changes, measurable improvement in AI context quality and developer experience.
 
 ---
 
 **Status**: MANDATORY Framework Standard  
-**Framework Version**: SDLC 6.0.6+  
+**Framework Version**: SDLC 6.1.0+  
 **Last Updated**: February 13, 2026  
 **Owner**: CTO Office

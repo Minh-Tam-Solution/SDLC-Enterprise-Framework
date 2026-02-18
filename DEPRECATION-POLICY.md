@@ -1,10 +1,10 @@
 # SDLC Framework Deprecation Policy
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Status**: ACTIVE
 **Date**: February 13, 2026
 **Purpose**: Define redirect rules and deprecation procedures
-**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + RFC-001)
+**Framework**: SDLC 6.1.0 (7-Pillar + 2-Section + RFC-001)
 
 ---
 
@@ -22,7 +22,7 @@ When moving or deprecating a file, create a stub at the original location:
 ```markdown
 # [Original Title]
 
-> ⚠️ **MOVED** (SDLC 6.0.6, January 2026)
+> ⚠️ **MOVED** (SDLC 6.1.0, January 2026)
 >
 > This content has moved to: [NEW LOCATION](../path/to/new/file.md)
 >
@@ -50,7 +50,7 @@ When moving or deprecating a file, create a stub at the original location:
 
 ---
 
-## Archive Naming Convention (RFC-001, SDLC 6.0.6)
+## Archive Naming Convention (RFC-001, SDLC 6.1.0)
 
 All legacy content is centralized into **`10-Archive/`** with stage-aligned subdirectories:
 
@@ -181,7 +181,7 @@ Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 
 ---
 
-## Legacy Document Organization (RFC-001, SDLC 6.0.6)
+## Legacy Document Organization (RFC-001, SDLC 6.1.0)
 
 See dedicated standard document: [SDLC-Legacy-Document-Organization.md](../02-Core-Methodology/Documentation-Standards/SDLC-Legacy-Document-Organization.md)
 

@@ -8,7 +8,7 @@
 **Consumer:** SE4H (Software Engineering for Humans - Agent Coach)
 
 **Version:** 1.2.0
-**Framework:** SDLC 6.0.6 (7-Pillar Architecture)
+**Framework:** SDLC 6.1.0 (7-Pillar Architecture)
 **Created:** December 2025
 **Updated:** January 22, 2026
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
@@ -31,13 +31,13 @@
 
 | Reference | ID | Description |
 |-----------|------|-------------|
-| **Source BRS** | BRS-YYYY-NNN | The BriefingScript being executed |
-| **Source LPS** | LPS-YYYY-NNN | The LoopScript in progress |
+| **Source AGENTS.md** | [Link] | The AGENTS.md task brief being executed |
+| **Source Context** | [Link] | Execution context (PR, issue, session) |
 | **Blocked Step** | STEP-X.Y | Specific step that is blocked |
 | **Project** | PRJ-XXX | Project identifier |
 | **Agent Session** | SESSION-XXXXX | Current execution session |
 
-### Sprint Planning Governance (SDLC 6.0.6)
+### Sprint Planning Governance (SDLC 6.1.0)
 
 | Governance | Value |
 |------------|-------|
@@ -68,7 +68,7 @@
 
 ```
 Example:
-The BRS specifies "implement user authentication" but does not clarify:
+The AGENTS.md specifies "implement user authentication" but does not clarify:
 1. Should we use JWT tokens or session-based authentication?
 2. Is OAuth integration required for social login?
 3. What should be the token expiration policy?
@@ -99,7 +99,7 @@ Without this clarification, I cannot proceed with STEP-2.2 (Implement auth servi
    - Why it failed: [Explanation]
 
 3. **Research Conducted:**
-   - Checked MentorScript for guidance: [Found/Not found]
+   - Checked AGENTS.md conventions for guidance: [Found/Not found]
    - Searched codebase for patterns: [Results]
    - Reviewed related ADRs: [Relevant findings]
 
@@ -183,8 +183,8 @@ This is a DECISION request because:
 ### Rationale
 
 [Explain why this option is recommended based on:]
-- Alignment with BRS requirements
-- Consistency with MentorScript patterns
+- Alignment with AGENTS.md requirements
+- Consistency with project conventions
 - Risk/effort trade-offs
 - Long-term maintainability
 
@@ -287,8 +287,8 @@ def authenticate_user(username: str, password: str):
 ### Related Documents
 
 - [Link to relevant ADR]
-- [Link to related BRS section]
-- [Link to MentorScript section]
+- [Link to related AGENTS.md section]
+- [Link to project conventions]
 
 ---
 
@@ -308,9 +308,9 @@ def authenticate_user(username: str, password: str):
 
 ### Follow-up Actions
 
-- [ ] Update MentorScript with new guidance
+- [ ] Update AGENTS.md with new guidance
 - [ ] Create ADR for architectural decision
-- [ ] Update BRS for future clarity
+- [ ] Update task brief for future clarity
 - [ ] No follow-up needed
 
 ### Lessons Learned
@@ -343,7 +343,7 @@ def authenticate_user(username: str, password: str):
 - Potential scope creep detected
 
 **DON'T create CRP for:**
-- Issues covered in MentorScript
+- Issues covered in AGENTS.md conventions
 - Standard coding decisions
 - Obvious next steps
 - Performance optimizations within tolerance
@@ -368,11 +368,11 @@ CREATED → OPEN → IN_REVIEW → RESOLVED
 ### Quality Checklist
 
 Before submitting CRP:
-- [ ] Checked MentorScript for existing guidance
+- [ ] Checked AGENTS.md conventions for existing guidance
 - [ ] Searched codebase for similar patterns
 - [ ] Reviewed relevant ADRs
 - [ ] Provided at least 2 options
 - [ ] Included recommendation with rationale
 - [ ] Specified impact of delay
 
-**Reference:** SDLC-Agentic-Core-Principles.md
+**Reference:** 03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md

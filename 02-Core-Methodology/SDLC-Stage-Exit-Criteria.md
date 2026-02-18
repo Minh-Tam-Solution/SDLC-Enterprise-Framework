@@ -1,9 +1,9 @@
 # SDLC Stage Exit Criteria
 
-**Framework**: SDLC 6.0.6  
+**Framework**: SDLC 6.1.0  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
-**Related**: [ADR-041 Stage Dependency Matrix](./ADR-041-Stage-Dependency-Matrix.md), Quality Gates
+**Related**: [Stage Dependency Matrix](./SDLC-Stage-Dependencies.md), Quality Gates
 
 ---
 
@@ -28,7 +28,7 @@ Stage 02 (DESIGN):
     - Sprint closed in CURRENT-SPRINT.md ✅
 ```
 
-**Relationship to Dependencies**: See [ADR-041](./ADR-041-Stage-Dependency-Matrix.md) for stage prerequisites and enables relationships.
+**Relationship to Dependencies**: See [Stage Dependency Matrix](./SDLC-Stage-Dependencies.md) for stage prerequisites and enables relationships.
 
 ---
 
@@ -223,7 +223,7 @@ Stage 02 (DESIGN):
 
 **Failure Recovery**: If code quality insufficient → Refactor, address code review feedback
 
-**Multi-Stage Sprint Consideration**: BUILD stage may cross with INTEGRATE stage (parallel execution allowed per ADR-041)
+**Multi-Stage Sprint Consideration**: BUILD stage may cross with INTEGRATE stage (parallel execution allowed per Stage Dependency Matrix)
 
 ---
 
@@ -390,7 +390,7 @@ Stage 02 (DESIGN):
 ### Stage 09: GOVERN (Compliance & Governance)
 
 **Gate Requirement**: G4 passed (standard start post-deployment)  
-**Early Start**: Can start at Stage 01 for regulated industries (see ADR-041)
+**Early Start**: Can start at Stage 01 for regulated industries (see Stage Dependency Matrix)
 
 **Documentation Requirements**:
 - ✅ `docs/09-govern/01-Compliance-Reports/` contains audit reports
@@ -515,7 +515,7 @@ Stage 02 (DESIGN) - LITE:
 
 ## Related Documents
 
-- [ADR-041: Stage Dependency Matrix](./ADR-041-Stage-Dependency-Matrix.md) - Stage dependencies and prerequisites
+- [Stage Dependency Matrix](./SDLC-Stage-Dependencies.md) - Stage dependencies and prerequisites
 - [SDLC-Stage-Sprint-Integration.md](./Governance-Compliance/SDLC-Stage-Sprint-Integration.md) - Sprint-stage coordination
 - [SDLC-Tier-Stage-Requirements.md](./Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - Tier-specific guidance
 - [Stage-Transition-Checklist.md](../../05-Templates-Tools/2-Checklists/Stage-Transition-Checklist.md) - Actionable checklists
@@ -531,5 +531,5 @@ Stage 02 (DESIGN) - LITE:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.0.6  
+**Framework Version**: SDLC 6.1.0  
 **Status**: PRODUCTION-READY

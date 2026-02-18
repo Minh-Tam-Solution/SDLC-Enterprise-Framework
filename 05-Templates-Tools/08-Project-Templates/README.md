@@ -1,12 +1,12 @@
 # Project Templates
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: January 22, 2026
 **Stage**: 05 - TEMPLATES & TOOLS
 **Pillar**: 2 - Sprint Planning Governance (Planning Templates)
 **Status**: ACTIVE - Production Templates
 **Authority**: CTO + CPO Office
-**Framework**: SDLC 6.0.6 (7-Pillar Architecture)
+**Framework**: SDLC 6.1.0 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
 ---
@@ -91,7 +91,7 @@ Standardized CLAUDE.md template for AI assistant onboarding.
 
 ### PLANNING-HIERARCHY-TEMPLATE/
 
-4-level planning hierarchy templates based on ADR-013.
+4-level planning hierarchy templates based on 4-Level Planning Hierarchy.
 
 | Level | Template | Duration |
 |-------|----------|----------|
@@ -152,11 +152,11 @@ Before using templates, verify:
 
 - [SDLC-Team-Collaboration-Standards.md](../../08-Documentation-Standards/Team-Collaboration/)
 - [SDLC-Document-Naming-Standards.md](../../08-Documentation-Standards/)
-- [ADR-013: Planning Hierarchy](../../02-Design-Architecture/ADRs/)
+- [4-Level Planning Hierarchy](../../02-Core-Methodology/SDLC-Sprint-Planning-Guide.md)
 
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 6.0.6 projects
+**Compliance**: Templates RECOMMENDED for all SDLC 6.1.0 projects
 **Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office

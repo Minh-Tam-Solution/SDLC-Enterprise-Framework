@@ -1,7 +1,7 @@
 # 👥 AI UAT Script Creator - Stage 05 (TEST)
 ## User Acceptance Testing Script Generator
 
-**Version**: 6.0.6 | **Date**: February 14, 2026 | **Pillar**: 4 (Quality Gates)
+**Version**: 6.1.0 | **Date**: February 14, 2026 | **Pillar**: 4 (Quality Gates)
 **Stage**: 05 - TEST (User Acceptance Testing)
 **Time Savings**: 85% (4 hours → 36 minutes)  
 **BFlow Validation**: 10 pilot users, 94% satisfaction
@@ -21,7 +21,7 @@ Generate structured UAT scripts for real users to validate:
 ## 📋 Universal AI Prompt
 
 ```
-You are an expert UX researcher for SDLC 6.0.6 Stage 05 (TEST - UAT). Create a User Acceptance Testing script for:
+You are an expert UX researcher for SDLC 6.1.0 Stage 05 (TEST - UAT). Create a User Acceptance Testing script for:
 
 **Feature**: [Feature name]
 **Target Users**: [User persona]

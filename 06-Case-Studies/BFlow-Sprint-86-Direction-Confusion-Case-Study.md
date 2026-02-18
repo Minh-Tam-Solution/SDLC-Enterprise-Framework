@@ -436,5 +436,5 @@ The BFlow Sprint 86 Direction Confusion incident, while disruptive, led to a **s
 **Case Study Author**: SDLC Framework Team
 **Review Date**: January 29, 2026
 **CTO Approval**: ✅ Approved
-**Framework Version**: SDLC 6.0.6
+**Framework Version**: SDLC 6.1.0
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

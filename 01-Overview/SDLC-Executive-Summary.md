@@ -1,9 +1,32 @@
-# SDLC 6.0.6 Executive Summary
+# SDLC 6.1.0 Executive Summary
 
-**Version**: 6.0.6
-**Release Date**: February 16, 2026 (MINOR: Anthropic Patterns Integration + RFC-001 + SPEC-0001 + Templates)
+**Version**: 6.1.0
+**Release Date**: February 18, 2026 (CONSOLIDATION: Ring 1 Slim + Multi-Agent Patterns + Dedicated Foundation Docs)
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## What's New in 6.1.0 (CONSOLIDATION RELEASE)
+
+### Ring 1 Monolith Slim + Dedicated Foundation Documents
+
+**The Problem**: Ring 1 Core documents had grown too large (Design Thinking: 2,018 lines, Agentic Principles: 1,313 lines), mixing principles with execution templates. The two core thinking models (System Thinking + Design Thinking, present since SDLC 4.0) deserved dedicated standalone documents. Multi-agent collaboration patterns needed codification as reusable methodology.
+
+**The Solution**: Consolidation release that slims Ring 1 through targeted extraction, promotes core concepts to dedicated documents, and reorganizes agentic docs to their correct AI-GOVERNANCE home.
+
+| Change | Detail |
+|--------|--------|
+| **Ring 1 Slim** | Design Thinking 2,018→364 lines (82% reduction), Agentic Principles 1,313→293 lines |
+| **System Thinking Foundation** | Dedicated standalone doc for core concept (since SDLC 4.0): 4-Layer Iceberg Model, 6 Mental Models |
+| **Crisis-to-Pattern Methodology** | Extracted from Design Thinking as dedicated doc (formalizes Mental Model #5) |
+| **Multi-Agent Patterns** | New AI-GOVERNANCE doc #12: 10 battle-tested multi-agent collaboration patterns (lane queues, failover, snapshots) |
+| **Design Thinking Templates** | 9 templates extracted to Documentation-Standards (Empathy Map, Journey Map, etc.) |
+| **Agentic Docs → 03-AI-GOVERNANCE** | Moved Agentic Core Principles (#13) + Maturity Model (#14) to correct ring |
+| **BRS/MTS/LPS → AGENTS.md** | Terminology cleanup: deprecated artifacts replaced with industry-standard AGENTS.md |
+| **Version Alignment** | 636 stale version refs updated to 6.1.0 |
+
+**Breaking Changes**: NONE — additive consolidation with internal reorganization only.
 
 ---
 
@@ -19,7 +42,7 @@
 |-------------|----------|-------------|
 | **CLAUDE.md Standard (3-Tier)** | [03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) | Structured AI context docs: LITE (500-1K lines), PRO (1.5K-3K), ENTERPRISE (2K+) |
 | **Autonomous Codegen Patterns** | [03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
-| **MRP Template (5-Section)** | [02-Core-Methodology/SDLC-MRP-Template.md](../02-Core-Methodology/SDLC-MRP-Template.md) | Merge-Readiness Package: Change Summary, Evidence Refs, Rollback, Tests, Deploy |
+| **MRP Template (5-Section)** | [02-Core-Methodology/SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) | Merge-Readiness Package: Change Summary, Evidence Refs, Rollback, Tests, Deploy |
 
 **3-Ring Compliance**: All 3 documents sit in the Core Ring (timeless, tool-agnostic, vendor-neutral).
 
@@ -370,7 +393,7 @@ New comprehensive guide covering:
 
 ## Framework Overview
 
-**SDLC 6.0.6** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
+**SDLC 6.1.0** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
 
 ### 7 Core Pillars
 - **Pillar 0**: Design Thinking Foundation
@@ -382,7 +405,7 @@ New comprehensive guide covering:
 - **Pillar 6**: Documentation Permanence
 
 ### 2 Extension Sections
-- **Section 7**: Quality Assurance System (Anti-Vibecoding) - Added in 5.3.0, current as of 6.0.6
+- **Section 7**: Quality Assurance System (Anti-Vibecoding) - Added in 5.3.0, current as of 6.1.0
 - **Section 8**: Unified Specification Standard (BDD + YAML) - 6.0.0+
 
 **Heritage**: Built BY AI+Human Teams FOR AI+Human Teams
@@ -393,7 +416,7 @@ New comprehensive guide covering:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.6 - 10 STAGES                           │
+│                    SDLC 6.1.0 - 10 STAGES                           │
 ├─────────────────────────────────────────────────────────────────────┤
 │  00 FOUNDATION  (WHY?)      Strategic Discovery & Validation        │
 │  01 PLANNING    (WHAT?)     Requirements & User Stories             │
@@ -446,7 +469,7 @@ New comprehensive guide covering:
 | **Decision Authority** | FINAL (veto power) | NONE (propose only) |
 | **Artifacts Created** | AGENTS.md, VCR | CRP, MRP |
 
-### SASE Artifacts (6.0.6)
+### SASE Artifacts (6.1.0)
 
 | # | Artifact | Purpose |
 |---|----------|---------|
@@ -455,7 +478,7 @@ New comprehensive guide covering:
 | 02 | **MRP** | Merge-Readiness Pack (5-point evidence) |
 | 03 | **VCR** | Version Controlled Resolution (approval record) |
 
-### Agentic Maturity Levels (Updated 6.0.6)
+### Agentic Maturity Levels (Updated 6.1.0)
 
 | Level | Name | Characteristic |
 |-------|------|----------------|
@@ -478,7 +501,7 @@ Pillar 0: Design Thinking Foundation
 Pillar 1: 10-Stage Lifecycle
   - Complete software development journey
   - Stage-appropriate governance
-  - Stage Dependency Matrix (Added in 5.3.0, current as of 6.0.6)
+  - Stage Dependency Matrix (Added in 5.3.0, current as of 6.1.0)
 
 Pillar 2: Sprint Planning Governance (6.0.4)
   - G-Sprint / G-Sprint-Close gates
@@ -490,7 +513,7 @@ Pillar 2: Sprint Planning Governance (6.0.4)
 Pillar 3: 4-Tier Classification
   - LITE → ENTERPRISE scaling
   - Team size-appropriate requirements
-  - Tier-specific stage exit criteria (Added in 5.3.0, current as of 6.0.6)
+  - Tier-specific stage exit criteria (Added in 5.3.0, current as of 6.1.0)
 
 Pillar 4: Quality Gates (Dual-Track)
   - Feature gates: G0.1 → G4
@@ -506,7 +529,7 @@ Pillar 6: Documentation Permanence
 
 # EXTENSION SECTIONS (Additive - New Capabilities)
 
-Section 7: Quality Assurance System (Added in 5.3.0, current as of 6.0.6)
+Section 7: Quality Assurance System (Added in 5.3.0, current as of 6.1.0)
   - Vibecoding Index (0-100, 5 weighted signals)
   - Progressive Routing (Green/Yellow/Orange/Red)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
@@ -630,7 +653,8 @@ SDLC 6.0.2 (Feb 2026) → E2E API Testing Enhancement RFC-602 (MINOR)
 SDLC 6.0.3 (Feb 2026) → Boris Cherny Best Practices Consolidation (MINOR)
 SDLC 6.0.4 (Feb 2026) → TDD Workflow + 3-Phase Sprint + Spec Converter (MINOR)
 SDLC 6.0.5 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Governance Loop (MINOR)
-SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP ⭐ CURRENT
+SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP (MINOR)
+SDLC 6.1.0 (Feb 2026) → Consolidation: Ring 1 Slim + Multi-Agent Patterns + System Thinking ⭐ CURRENT
 ```
 
 ---
@@ -639,7 +663,7 @@ SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP
 
 **Core Methodology**:
 - [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-Stage lifecycle
-- [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - SASE principles
+- [SDLC-Agentic-Core-Principles.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) - SASE principles
 - [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - Pillar 0
 
 **Section 8 - Unified Specification Standard (6.0.0+)**:
@@ -648,9 +672,9 @@ SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP
 - [SPEC_DELTA.md](../05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md) ⭐ Version tracking
 - [CONTEXT_AUTHORITY_METHODOLOGY.md](../05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md) ⭐ Dynamic AGENTS.md
 
-**Section 7 - Quality Assurance (Added in 5.3.0, current as of 6.0.6)**:
+**Section 7 - Quality Assurance (Added in 5.3.0, current as of 6.1.0)**:
 - [SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) - Anti-Vibecoding
-- [SDLC-Stage-Dependencies.md](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - ADR-041
+- [SDLC-Stage-Dependencies.md](../02-Core-Methodology/SDLC-Stage-Dependencies.md) - Stage Dependency Matrix
 - [SDLC-Stage-Exit-Criteria.md](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Per-tier requirements
 
 **AI Agent Best Practices 2026**:
@@ -658,10 +682,10 @@ SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP
 - [Planning Mode Guide](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md)
 - [Model Selection Matrix](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/02-model-selection-matrix.md)
 
-**AI Governance (6.0.6 - Anthropic Patterns)**:
+**AI Governance (6.1.0 - Anthropic Patterns)**:
 - [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - 3-Tier CLAUDE.md structure
 - [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - Two-agent + 4-Gate Pipeline
-- [SDLC-MRP-Template.md](../02-Core-Methodology/SDLC-MRP-Template.md) - Merge-Readiness Package (5-section)
+- [SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) - Merge-Readiness Package (5-section)
 
 **Governance**:
 - [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2
@@ -700,4 +724,4 @@ SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP
 **Last Updated**: February 16, 2026
 **Authority**: CTO Approved
 **Status**: ACTIVE
-**Version**: 6.0.6
+**Version**: 6.1.0

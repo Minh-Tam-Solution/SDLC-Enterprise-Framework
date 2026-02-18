@@ -8,7 +8,7 @@
 **Consumer:** SE4A (for revision) + Git History (permanent record)
 
 **Version:** 1.2.0
-**Framework:** SDLC 6.0.6 (7-Pillar Architecture)
+**Framework:** SDLC 6.1.0 (7-Pillar Architecture)
 **Created:** December 2025
 **Updated:** January 22, 2026
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
@@ -31,17 +31,17 @@
 | Reference | ID | Link |
 |-----------|------|------|
 | **Source MRP** | MRP-YYYY-NNN | [Link to Merge-Readiness Pack] |
-| **Source BRS** | BRS-YYYY-NNN | [Link to BriefingScript] |
-| **Source LPS** | LPS-YYYY-NNN | [Link to LoopScript] |
+| **Source AGENTS.md** | [Link] | [Link to AGENTS.md task brief] |
+| **Execution Context** | [Link] | [Link to PR / Issue / Session] |
 | **Project** | PRJ-XXX | [Link to Project] |
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **SDLC Gate** | G0.1 \| G1 \| G2 \| G3 \| G4 \| G-Sprint \| G-Sprint-Close | Gate this work supports |
 
-### Sprint Planning Governance Verification (SDLC 6.0.6)
+### Sprint Planning Governance Verification (SDLC 6.1.0)
 
 | Criterion | Verified | Notes |
 |-----------|----------|-------|
-| **Sprint Reference** | ✅ / ❌ | SPRINT-XXX present in BRS/PR |
+| **Sprint Reference** | ✅ / ❌ | SPRINT-XXX present in AGENTS.md/PR |
 | **Backlog Item Linked** | ✅ / ❌ | US-XXX / BUG-XXX / TT-XXX traced |
 | **Sprint Goal Alignment** | ✅ / ❌ | Work supports sprint goal |
 | **G-Sprint Approved** | ✅ / ❌ | Work started after gate approval |
@@ -85,7 +85,7 @@
 
 ```
 Example (APPROVED):
-The MRP demonstrates complete implementation of all BRS requirements.
+The MRP demonstrates complete implementation of all AGENTS.md requirements.
 Sprint Governance verified: SPRINT-086 context present, US-456 linked.
 DoD complete: all 6 criteria met. Test coverage exceeds threshold 
 (95% vs 90% required). Security scan is clean. Performance meets 
@@ -143,7 +143,7 @@ Minor fixes required before approval.
 | Maintainability | ⭐⭐⭐⭐ | Good separation of concerns |
 | Test Quality | ⭐⭐⭐⭐⭐ | Comprehensive test cases |
 | Documentation | ⭐⭐⭐⭐ | Minor gaps in docstrings |
-| Patterns Adherence | ⭐⭐⭐⭐⭐ | Follows MentorScript |
+| Patterns Adherence | ⭐⭐⭐⭐⭐ | Follows AGENTS.md conventions |
 
 **Code Quality Notes:**
 - [Note 1]
@@ -278,8 +278,8 @@ Example:
 This implementation cannot be salvaged due to fundamental architecture
 violations. Please:
 
-1. Start fresh with a new BRS that clarifies the AGPL containment requirement
-2. Review MentorScript Section 3.3 (AGPL Containment) before implementation
+1. Start fresh with a new task brief that clarifies the AGPL containment requirement
+2. Review AGENTS.md Section on AGPL Containment before implementation
 3. Schedule architecture review before coding begins
 4. Consider reaching out via CRP for guidance on storage integration
 ```
@@ -287,7 +287,7 @@ violations. Please:
 ### Re-attempt Allowed?
 
 - [ ] **Yes** - New MRP can be submitted after addressing issues
-- [ ] **No** - Requires new BRS and LPS
+- [ ] **No** - Requires new task brief and execution plan
 - [ ] **Escalated** - Decision to be made by [Role]
 
 ---
@@ -346,7 +346,7 @@ git merge --no-ff feature/xxx -m "Merge PR #NNN: [Description]
 
 VCR: VCR-YYYY-NNN
 MRP: MRP-YYYY-NNN
-BRS: BRS-YYYY-NNN
+Task: [AGENTS.md task reference]
 
 Reviewed-by: [Name] <email@company.com>
 
@@ -429,7 +429,7 @@ MRP Submitted → VCR Created → Review → Decision
                             ↓             ↓             ↓
                         APPROVED    REVISION      REJECTED
                             ↓             ↓             ↓
-                         Merge    New MRP cycle   New BRS needed
+                         Merge    New MRP cycle   New task brief needed
 ```
 
 ### Reviewer Responsibilities
@@ -440,4 +440,4 @@ MRP Submitted → VCR Created → Review → Decision
 - Provide constructive feedback
 - Make timely decisions (< 24h for P1 items)
 
-**Reference:** SDLC-Agentic-Core-Principles.md
+**Reference:** 03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md

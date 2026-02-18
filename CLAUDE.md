@@ -1,10 +1,20 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.0.6
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.1.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.0.6**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.1.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+
+**What's New in 6.1.0 (February 18, 2026) - CONSOLIDATION RELEASE**:
+- ✅ **Ring 1 Monolith Slim** - Design Thinking 2,018→364 lines, Agentic Principles 1,313→293 lines
+- ✅ **Agentic Docs → 03-AI-GOVERNANCE** - Moved Agentic Core Principles (#13) + Maturity Model (#14) to correct ring
+- ✅ **Multi-Agent Patterns** - New doc #12 with 10 collaboration patterns (lane queues, failover, snapshots)
+- ✅ **System Thinking Foundation** - Dedicated doc for core concept (since SDLC 4.0): 4-Layer Iceberg, 6 Mental Models
+- ✅ **Crisis-to-Pattern Methodology** - Extracted from Design Thinking as dedicated doc (formalizes Mental Model #5)
+- ✅ **Design Thinking Templates** - 9 templates extracted to Documentation-Standards
+- ✅ **BRS/MTS/LPS → AGENTS.md** - Terminology cleanup across SASE templates + Maturity Model
+- ✅ **Version Alignment** - 636 stale version refs updated to 6.1.0
 
 **What's New in 6.0.6 (February 16, 2026) - MINOR RELEASE**:
 - ✅ **CLAUDE.md Standard** - 3-tier structure (LITE/PRO/ENTERPRISE) with validation criteria
@@ -53,7 +63,7 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 - ⚠️ Tier declaration REQUIRED for all specifications
 
 **What's in 5.3.0 (January 2026) - ARCHIVED**:
-- ✅ **Stage Dependency Matrix (ADR-041)** - Explicit stage prerequisites, parallel execution rules, early start triggers
+- ✅ **Stage Dependency Matrix** - Explicit stage prerequisites, parallel execution rules, early start triggers
 - ✅ **Stage Exit Criteria** - Documentation, evidence, artifact integrity requirements per tier (LITE/PRO/ENTERPRISE)
 - ✅ **Sprint-Stage Integration** - Multi-stage sprint handling, G-Sprint gate integration with stage validation
 - ✅ **Quality Assurance System (Section 7)** - Anti-Vibecoding governance with Vibecoding Index (0-100)
@@ -77,7 +87,7 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 - ✅ **24h Documentation Enforcement** - Sprint-related docs within 24 hours of completion
 - ✅ **Code Review Sprint Integration** - 4-Layer system with Sprint Context Check
 - ✅ **AI Agent Best Practices (2026)** - Planning Mode, Model Selection Matrix, Sub-agents Guidelines
-- ✅ **ADR-034** - Planning Sub-agent Orchestration (EP-10) for expert workflow alignment
+- ✅ **Planning Sub-agent Orchestration** - Expert workflow alignment for AI-assisted development
 
 **What's in 5.1.2 (December 24, 2025)**:
 - ✅ **Project Structure Standard** - Clear separation between documentation stage mapping and code folder organization
@@ -178,7 +188,7 @@ Documentation Files:
 
 **Pillar 1: 10-Stage Lifecycle (Enhanced in 5.3.0)**
 - Complete lifecycle: WHY → GOVERN (Stages 00-09)
-- **Explicit Stage Dependencies** (ADR-041) - Prerequisites, parallel rules, early start triggers
+- **Explicit Stage Dependencies** - Prerequisites, parallel rules, early start triggers
 - **Stage Exit Criteria** - Documentation, evidence, signoff per tier
 - Archive management (10-Archive/{NN}-Legacy per RFC-001)
 
@@ -230,7 +240,7 @@ Documentation Files:
 
 ## AI Agent Best Practices (2026)
 
-Based on expert AI coding workflow analysis (January 2026), these practices maximize AI-assisted development effectiveness. See [ADR-034](02-Core-Methodology/03-ADRs/ADR-034-Planning-Subagent-Orchestration.md) for full specification.
+Based on expert AI coding workflow analysis (January 2026), these practices maximize AI-assisted development effectiveness.
 
 ### Planning Mode (RISK-BASED - Updated in 5.2.0)
 
@@ -373,70 +383,84 @@ Continuous Improvement:
 
 ## Repository Structure
 
-### Core Documentation Structure (SDLC 5.0.0)
+### Core Documentation Structure (SDLC 6.1.0)
 ```
 SDLC-Orchestrator/SDLC-Enterprise-Framework/
-├── README.md                      # Main framework documentation (5.0.0)
+├── README.md                      # Main framework documentation
 ├── CHANGELOG.md                   # Complete version history
 ├── CLAUDE.md                      # This file - AI assistant guidelines
+├── CONTENT-MAP.md                 # Topic → canonical file mapping
+├── DEPRECATION-POLICY.md          # Redirect rules
 │
 ├── 01-Overview/                   # Strategic overview
 │   └── SDLC-Executive-Summary.md  # Complete 10-stage overview
 │
-├── 02-Core-Methodology/           # Core principles
-│   ├── SDLC-Core-Methodology.md   # Complete 10-stage framework
-│   ├── SDLC-Design-Thinking-Principles.md
-│   ├── SDLC-Agentic-Core-Principles.md
-│   ├── Documentation-Standards/   # ⭐ MOVED HERE
-│   │   ├── SDLC-Document-Naming-Standards.md
-│   │   ├── SDLC-Code-File-Naming-Standards.md
-│   │   └── Team-Collaboration/
-│   ├── Governance-Compliance/     # ⭐ NEW IN 5.0
-│   │   ├── SDLC-Quality-Gates.md
-│   │   ├── SDLC-Security-Gates.md
-│   │   ├── SDLC-Observability-Checklist.md
-│   │   └── SDLC-Change-Management-Standard.md
-│   └── 03-ADRs/                   # ⭐ NEW IN 5.1.3
-│       └── ADR-034-Planning-Subagent-Orchestration.md
+├── 02-Core-Methodology/           # Core principles (Ring 1)
+│   ├── SDLC-Core-Methodology.md   # Complete 10-stage framework hub
+│   ├── SDLC-Design-Thinking-Principles.md  # Slim hub (364 lines)
+│   ├── SDLC-System-Thinking-Foundation.md  # NEW 6.1.0
+│   ├── SDLC-Crisis-To-Pattern-Methodology.md # NEW 6.1.0
+│   ├── SDLC-Stage-Dependencies.md
+│   ├── SDLC-Stage-Exit-Criteria.md
+│   ├── SDLC-Quality-Assurance-System.md
+│   ├── SDLC-Context-Authority-Methodology.md
+│   ├── Documentation-Standards/
+│   │   ├── SDLC-Design-Thinking-Templates.md # NEW 6.1.0
+│   │   ├── SDLC-Tier-Stage-Requirements.md
+│   │   ├── SDLC-Naming-Standards.md
+│   │   └── SDLC-Project-Structure-Standard.md
+│   └── Governance-Compliance/
+│       ├── SDLC-Sprint-Governance.md
+│       ├── SDLC-Quality-Security-Gates.md
+│       └── SDLC-Observability-Checklist.md
 │
-├── 05-Templates-Tools/            # ⭐ REORGANIZED
-│   ├── 1-AI-Tools/                # PRIMARY: 96% time savings
-│   ├── 2-Agent-Templates/         # 17 AI agents configured
-│   ├── 3-Manual-Templates/        # Backup templates
-│   └── 4-Scripts/                 # Validators + automation
+├── 03-AI-GOVERNANCE/              # AI Governance (Ring 1)
+│   ├── 01 to 09: AI principles + governance
+│   ├── 10-CLAUDE-MD-STANDARD.md
+│   ├── 11-AUTONOMOUS-CODEGEN-PATTERNS.md
+│   ├── 12-MULTI-AGENT-PATTERNS.md       # NEW 6.1.0
+│   ├── 13-AGENTIC-CORE-PRINCIPLES.md    # MOVED 6.1.0
+│   └── 14-AGENTIC-MATURITY-MODEL.md     # MOVED 6.1.0
 │
-├── 06-Case-Studies/               # Case studies
-│   ├── BFlow-52-Day-Journey-Case-Study.md  # 827:1 ROI
-│   └── SDLC-Design-Thinking-Case-Study-NQH-Bot.md
+├── 04-AI-TOOLS-LANDSCAPE/        # AI Tools (Ring 2)
+│   ├── tool-profiles/             # Claude, Cursor, Copilot
+│   ├── best-practices-2026/       # 8 best practice guides
+│   └── integration-guides/        # MCP integration
 │
-├── 07-Implementation-Guides/      # Practical guides
-│   ├── SDLC-Implementation-Guide.md
-│   ├── SDLC-Universal-Code-Review-Framework.md
-│   └── SDLC-Platform-Patterns.md
+├── 05-Templates-Tools/            # Templates (Ring 2)
+│   ├── 01-Specification-Standard/ # YAML + BDD specs
+│   ├── 02-AI-Tools/               # AI prompts by stage
+│   ├── 04-SASE-Artifacts/         # AGENTS.md, CRP, MRP, VCR
+│   ├── 05-Checklists/             # Stage transition checklists
+│   ├── 06-Manual-Templates/       # Design Thinking + MRP templates
+│   └── 08-Project-Templates/      # Planning hierarchy templates
 │
-├── 08-Training-Materials/         # Training resources
-├── 07-Deployment-Toolkit/         # Deployment tools
-├── 08-Continuous-Improvement/     # Improvement processes
-├── 09-Version-History/            # Version history
+├── 06-Case-Studies/               # Case studies (Ring 2)
+├── 07-Implementation-Guides/      # Guides (Ring 3)
+│   ├── E2E-TESTING-QUICKSTART.md  # MOVED 6.1.0
+│   ├── SDLC-E2E-API-Testing-Methodology.md # MOVED 6.1.0
+│   └── ... (code review, deployment, etc.)
+├── 08-Training-Materials/         # Training (Ring 3)
+├── 09-Continuous-Improvement/     # RFCs + improvement (Ring 3)
 │
-└── 10-Archive/                    # Centralized legacy archive (RFC-001)
-    └── SDLC-4.9-Upgrade-Archive/  # 4.9 upgrade documents
+└── 10-Archive/                    # Centralized legacy archive
+    └── {NN}-Legacy/               # Stage-aligned archives
 ```
 
 ## Development Workflow
 
 ### When Working with Framework Documentation
-1. **Check current version**: Framework is at **SDLC 6.0.6** (February 2026)
+1. **Check current version**: Framework is at **SDLC 6.1.0** (February 2026)
 2. **Apply 7-Pillar Architecture**: Design Thinking + 10-Stage + Sprint Governance + 4-Tier + Quality Gates + SASE + Documentation
 3. **Stage mapping for docs only**: Only `/docs` folders are stage-mapped
 4. **Use English only**: All technical content must be in English
 5. **Follow code file naming**: Python snake_case, TypeScript camelCase, React PascalCase
-6. **Maintain version consistency**: Update to 6.0.6 across related documents
+6. **Maintain version consistency**: Update to 6.1.0 across related documents
 
 ### When Updating Framework Content
 1. **Review CHANGELOG.md**: Check version history
 2. **Check 02-Core-Methodology/**: Core principles and 7-Pillar Architecture
-3. **Update consistently**: Version 6.0.6, dates February 2026
+3. **Update consistently**: Version 6.1.0, dates February 2026
 4. **Preserve legacy**: Use 10-Archive/{NN}-Legacy/ for superseded content (RFC-001)
 5. **Apply code file naming**: All new files must follow naming standards
 6. **Respect documentation vs code separation**: Stage mapping only for `/docs`
@@ -451,7 +475,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 
 ## Framework Compliance Standards
 
-### Required Compliance Metrics (SDLC 6.0.6)
+### Required Compliance Metrics (SDLC 6.1.0)
 - **10-Stage Lifecycle Applied**: All 10 stages considered
 - **Code File Naming**: Python snake_case, TypeScript camelCase, React PascalCase
 - **Design Thinking Applied**: 5-phase methodology for all new features
@@ -461,7 +485,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 - **Test Coverage**: >90% with real services only
 - **Performance**: <50ms response time target
 
-### Quality Gates (SDLC 6.0.6)
+### Quality Gates (SDLC 6.1.0)
 - **Pre-Design Thinking**: User validation before coding starts
 - **Pre-commit hooks**: Block commits with mock instances
 - **Code file naming validation**: Enforce naming standards
@@ -505,8 +529,10 @@ SDLC 6.0.4 (February 8, 2026)
   ↓ TDD Workflow Integration + 3-Phase Sprint Enhancement
 SDLC 6.0.5 (February 15, 2026)
   ↓ RFC-001 Legacy Organization + Anti-Vibecoding Alignment
-SDLC 6.0.6 (February 16, 2026) ← CURRENT
+SDLC 6.0.6 (February 16, 2026)
   ↓ Anthropic Best Practices: CLAUDE.md Standard + Autonomous Codegen + MRP Template
+SDLC 6.1.0 (February 18, 2026) ← CURRENT
+  ↓ Consolidation: Ring 1 slim, agentic→AI-GOV move, BRS/MTS/LPS→AGENTS.md, Multi-Agent Patterns
 ```
 
 ## Proven ROI (SDLC 5.0.0)
@@ -525,6 +551,14 @@ SDLC 6.0.6 (February 16, 2026) ← CURRENT
 - Core Methodology: [02-Core-Methodology/SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md)
 - Implementation Guide: [07-Implementation-Guides/SDLC-Implementation-Guide.md](07-Implementation-Guides/SDLC-Implementation-Guide.md)
 - Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md)
+
+**NEW in 6.1.0**:
+- Multi-Agent Patterns: [03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md](03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md)
+- Agentic Core Principles (moved): [03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md](03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
+- Agentic Maturity Model (moved): [03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md](03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md)
+- System Thinking: [02-Core-Methodology/SDLC-System-Thinking-Foundation.md](02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
+- Crisis-to-Pattern: [02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md](02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md)
+- Design Thinking Templates: [02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md](02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md)
 
 **NEW in 6.0.6**:
 - CLAUDE.md Standard: 3-tier (LITE/PRO/ENTERPRISE) with validation criteria
@@ -546,8 +580,8 @@ SDLC 6.0.6 (February 16, 2026) ← CURRENT
 
 ---
 
-The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.0.6, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.0, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
 **Last Updated**: February 16, 2026
-**Framework Version**: SDLC 6.0.6
+**Framework Version**: SDLC 6.1.0
 **Status**: PRODUCTION READY - 7-Pillar Architecture + Section 7 Quality Assurance System + AI Governance Principles

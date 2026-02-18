@@ -2,9 +2,52 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.0.6 Enterprise Framework - Anthropic Patterns Integration
+**Framework**: SDLC 6.1.0 Enterprise Framework - Consolidation Release
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: February 16, 2026 (SDLC 6.0.6 Anthropic Patterns Release)
+**Last Updated**: February 18, 2026 (SDLC 6.1.0 Consolidation Release)
+
+---
+
+## 🚀 Version 6.1.0 - February 18, 2026 (CONSOLIDATION RELEASE)
+
+**Release Date**: February 18, 2026
+**Type**: CONSOLIDATION RELEASE - Ring 1 Slim + Multi-Agent Patterns + System Thinking
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No (additive consolidation with internal reorganization)
+**Supersedes**: SDLC 6.0.6 Anthropic Patterns Integration
+**Achievement**: Ring 1 monolith slimming (82% reduction), dedicated foundation documents, agentic docs reorganized
+
+### Key Enhancements: Ring 1 Consolidation + Dedicated Foundation Documents
+
+**THE CHANGE**: Ring 1 Core documents had grown too large, mixing principles with execution templates. The two core thinking models (System Thinking + Design Thinking, present since SDLC 4.0) deserved dedicated standalone documents. Multi-agent collaboration patterns needed codification as reusable methodology. This release slims Ring 1 through targeted extraction and promotes core concepts to dedicated documents.
+
+| Enhancement | Description | Key Benefit |
+|-------------|-------------|-------------|
+| **Ring 1 Monolith Slim** | Design Thinking 2,018→364 lines, Agentic Core 1,313→293 lines | Cleaner separation of principles vs. templates |
+| **System Thinking Foundation** | Dedicated doc for core concept (since SDLC 4.0): 4-Layer Iceberg Model, 6 Mental Models | Standalone reference for foundational thinking model |
+| **Crisis-to-Pattern Methodology** | Extracted from Design Thinking (formalizes Mental Model #5): 5-step pipeline | Standalone reference for crisis-to-pattern process |
+| **Multi-Agent Patterns** | NEW: 10 battle-tested multi-agent collaboration patterns | Lane queues, failover chains, snapshot precedence |
+| **Agentic Docs Reorganization** | Moved to 03-AI-GOVERNANCE (#13, #14) | Correct ring placement for AI governance content |
+| **Terminology Cleanup** | BRS/MTS/LPS deprecated → AGENTS.md | Industry-standard artifact naming |
+
+### Files Created (3 dedicated documents)
+
+1. **02-Core-Methodology/SDLC-System-Thinking-Foundation.md** - Dedicated doc for core concept (since SDLC 4.0): 4-Layer Iceberg, 6 Mental Models
+2. **02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md** - Extracted from Design Thinking: 5-step crisis-to-pattern pipeline (Mental Model #5)
+3. **03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md** - NEW: 10 multi-agent collaboration patterns
+
+### Files Extracted/Moved
+
+4. **02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md** - 9 templates extracted from Design Thinking Principles
+5. **03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md** - Moved from 02-Core-Methodology (was SDLC-Agentic-Core-Principles.md)
+6. **03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md** - Moved from 02-Core-Methodology (was SDLC-Agentic-Maturity-Model.md)
+
+### Version Alignment
+
+- 636 stale version references updated to 6.1.0 across all directories
+- All README headers updated with "NEW in 6.1.0" entries
+- Machine-readable configs (gates.yaml, anti-vibecoding.yaml) version bumped
+- Scanner scripts updated to 6.1.0
 
 ---
 
@@ -31,7 +74,7 @@
 
 1. **03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md** - 3-tier CLAUDE.md structure (LITE: 500-1K lines, PRO: 1.5K-3K, ENTERPRISE: 2K+)
 2. **03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md** - Two-agent pattern with 4-Gate validation, OPA policy integration, Evidence State Machine
-3. **02-Core-Methodology/SDLC-MRP-Template.md** - 5-section Merge-Readiness Package (Change Summary, Evidence Refs, Rollback, Tests, Deploy)
+3. **05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md** - 5-section Merge-Readiness Package (Change Summary, Evidence Refs, Rollback, Tests, Deploy)
 
 ### 3-Ring Architecture Compliance
 

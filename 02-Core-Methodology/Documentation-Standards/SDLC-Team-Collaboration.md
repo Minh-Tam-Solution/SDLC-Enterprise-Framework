@@ -1,6 +1,6 @@
 # SDLC Team Collaboration Standards - Universal Framework
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: January 28, 2026
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
@@ -961,7 +961,7 @@ Per **Pillar 2: Sprint Planning Governance**:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 6.0.6 | Feb 2026 | SDLC 6.0.6 alignment, 7-Pillar + AI Governance Principles |
+| 6.0.6 | Feb 2026 | SDLC 6.1.0 alignment, 7-Pillar + AI Governance Principles |
 | 6.0.0 | Jan 28, 2026 | Folder flattening (remove layer 3), version upgrade |
 | 5.3.0 | Jan 28, 2026 | Consolidated from 4 files (Collaboration, Communication, Escalation, README) |
 | 5.2.0 | Jan 22, 2026 | Added AI Governance alignment |

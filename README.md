@@ -1,6 +1,6 @@
-# SDLC 6.0.6 Universal Framework
+# SDLC 6.1.0 Universal Framework
 
-**Version**: 6.0.6 | **Status**: ACTIVE | **Date**: February 16, 2026
+**Version**: 6.1.0 | **Status**: ACTIVE | **Date**: February 18, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -15,7 +15,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.0.6 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.1.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -25,7 +25,7 @@ SDLC 6.0.6 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 6**: Documentation Permanence
 - **Section 7**: Quality Assurance System (Anti-Vibecoding)
 - **Section 8**: Unified Specification Standard (+ Spec Converter)
-- **Section 9**: RFC-001 Legacy Document Organization Standard
+- **Section 9**: Legacy Document Organization Standard
 
 **Key capabilities**: Tool-agnostic AI governance, 4-tier classification (LITE→ENTERPRISE), TDD integration, anti-vibecoding quality gates, evidence-based development.
 
@@ -82,7 +82,7 @@ SDLC 6.0.6 is a **7-Pillar AI+Human Excellence Framework** with:
 
 ## Stage Dependencies (added 5.3.0)
 
-### Explicit Prerequisites (ADR-041)
+### Explicit Prerequisites
 
 | Stage | Requires | Prerequisite Gate | Parallel OK |
 |-------|----------|-------------------|-------------|
@@ -123,7 +123,7 @@ See [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standa
 | **Decision** | FINAL (veto power) | NONE (propose only) |
 | **Artifacts** | **AGENTS.md**, VCR | CRP, MRP |
 
-> **⚠️ DEPRECATION NOTICE (ADR-029, Jan 2026)**
+> **⚠️ DEPRECATION NOTICE (Jan 2026)**
 >
 > **MTS (MentorScript)**, **BRS (BriefingScript)**, and **LPS (LearnedPatternsScript)** are **DEPRECATED**.
 >
@@ -314,13 +314,15 @@ SDLC-Enterprise-Framework/
 ├── 01-Overview/                  # Executive Summary + Quick Reference
 ├── 02-Core-Methodology/          # CORE CONTENT (Ring 1)
 │   ├── SDLC-Core-Methodology.md
-│   ├── SDLC-Agentic-Core-Principles.md
+│   ├── SDLC-Design-Thinking-Principles.md  # Slim hub (364 lines)
+│   ├── SDLC-System-Thinking-Foundation.md  # NEW 6.1.0
+│   ├── SDLC-Crisis-To-Pattern-Methodology.md # NEW 6.1.0
 │   ├── SDLC-Stage-Dependencies.md       # Stage prerequisite matrix
 │   ├── SDLC-Stage-Exit-Criteria.md      # Exit criteria per stage
 │   ├── SDLC-Quality-Assurance-System.md # Section 7 Anti-Vibecoding
 │   ├── SDLC-Context-Authority-Methodology.md
-│   ├── SDLC-Design-Thinking-Principles.md
 │   ├── Documentation-Standards/
+│   │   ├── SDLC-Design-Thinking-Templates.md # NEW 6.1.0 (extracted)
 │   │   ├── SDLC-Tier-Stage-Requirements.md  # LITE/PRO/ENTERPRISE
 │   │   ├── SDLC-Naming-Standards.md
 │   │   └── SDLC-Project-Structure-Standard.md
@@ -339,7 +341,10 @@ SDLC-Enterprise-Framework/
 │   ├── 08-Governance-Decision-Matrix.md # Sprint 173
 │   ├── 09-Governance-Metrics.md         # Sprint 173
 │   ├── 10-CLAUDE-MD-STANDARD.md         # Sprint 174 (6.0.6)
-│   └── 11-AUTONOMOUS-CODEGEN-PATTERNS.md # Sprint 174 (6.0.6)
+│   ├── 11-AUTONOMOUS-CODEGEN-PATTERNS.md # Sprint 174 (6.0.6)
+│   ├── 12-MULTI-AGENT-PATTERNS.md       # NEW 6.1.0
+│   ├── 13-AGENTIC-CORE-PRINCIPLES.md    # MOVED 6.1.0 (from 02-Core)
+│   └── 14-AGENTIC-MATURITY-MODEL.md     # MOVED 6.1.0 (from 02-Core)
 ├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (Ring 2)
 │   ├── tool-profiles/            # Claude Code, Cursor, Copilot profiles
 │   ├── best-practices-2026/      # 8 best practice guides
@@ -383,7 +388,7 @@ SDLC-Enterprise-Framework/
 ### Path 1: Understand (30 min)
 1. [Executive Summary](./01-Overview/SDLC-Executive-Summary.md) - Overview
 2. [Core Methodology](./02-Core-Methodology/SDLC-Core-Methodology.md) - 10 stages
-3. [SASE Principles](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - Agentic workflow
+3. [SASE Principles](./03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) - Agentic workflow
 
 ### Path 2: Implement (3 hours)
 1. Download [Templates](./05-Templates-Tools/) or [Checklists](./05-Templates-Tools/05-Checklists/)
@@ -402,24 +407,24 @@ SDLC-Enterprise-Framework/
 **Core**:
 - [SDLC-Executive-Summary.md](./01-Overview/SDLC-Executive-Summary.md)
 - [SDLC-Core-Methodology.md](./02-Core-Methodology/SDLC-Core-Methodology.md)
-- [SDLC-Agentic-Core-Principles.md](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
+- [SDLC-Agentic-Core-Principles.md](./03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
 - [AI Governance Principles](./03-AI-GOVERNANCE/) - 7 timeless principles (5.2.0)
 
-**Stage Governance** (added 5.3.0, current as of 6.0.6):
+**Stage Governance** (added 5.3.0, current as of 6.1.0):
 - [SDLC-Stage-Dependencies.md](./02-Core-Methodology/SDLC-Stage-Dependencies.md) - Explicit stage prerequisites
 - [SDLC-Stage-Exit-Criteria.md](./02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Documentation, evidence, signoff requirements
 - [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Sprint-stage coordination
 - [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - LITE/PRO/ENTERPRISE guidance
 - [Stage-Transition-Checklist.md](./05-Templates-Tools/05-Checklists/Stage-Transition-Checklist.md) - Actionable transition checklists
 
-**Quality Assurance** (added 5.3.0, current as of 6.0.6):
+**Quality Assurance** (added 5.3.0, current as of 6.1.0):
 - [SDLC-Quality-Assurance-System.md](./02-Core-Methodology/SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
   - Vibecoding Index (0-100 composite score)
   - Progressive Routing (Auto-approve Green → CEO mandatory Red)
   - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
   - Kill Switch Criteria (rejection >80%, latency >500ms, etc.)
 
-**Unified Specification Standard** (added 6.0.2, current as of 6.0.6):
+**Unified Specification Standard** (added 6.0.2, current as of 6.1.0):
 - [SDLC-Specification-Standard.md](./05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - **Section 8: Unified Spec Format**
   - YAML frontmatter (spec_id, tier, stage, category)
   - BDD requirements format (GIVEN-WHEN-THEN)
@@ -460,7 +465,7 @@ This Framework is **tool-agnostic policy**. Any platform can implement it:
 
 ```
 ┌───────────────────────────────────────────────────────────┐
-│             SDLC 6.0.6 Framework (THIS REPO)             │
+│             SDLC 6.1.0 Framework (THIS REPO)             │
 │      Methodology • Principles • Gates • Governance        │
 │                  (TOOL-AGNOSTIC)                         │
 └─────────────┬──────────────────┬─────────────────┬─────────────┘
@@ -488,7 +493,8 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.0.6** | Feb 16, 2026 | Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
+| **6.1.0** | **Feb 18, 2026** | **Consolidation Release**: Ring 1 monolith slim (Design Thinking 2K→364, Agentic Principles 1.3K→293), moved agentic docs to 03-AI-GOVERNANCE, new System Thinking + Crisis-to-Pattern + Multi-Agent Patterns docs, BRS/MTS/LPS→AGENTS.md terminology cleanup, version alignment (636 refs) |
+| 6.0.6 | Feb 16, 2026 | Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
 | 6.0.5 | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup + Governance Loop |
 | 6.0.4 | Feb 8, 2026 | TDD Integration + Sprint 3-Phase Model + Spec Converter |
 | 6.0.3 | Feb 2, 2026 | Boris Cherny Consolidation, MCP Integration Guide |

@@ -1,6 +1,6 @@
 # Principle 3: Planning Mode (Risk-Based)
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Status**: ACTIVE
 **Date**: January 28, 2026
 
@@ -139,7 +139,9 @@ This principle works with ANY AI coding tool:
 - [04-Verification-Principle](04-Verification-Principle.md) - Verify after execute
 - [05-Context-Management](05-Context-Management.md) - Context for planning
 
+**Companion**: [Planning Mode Best Practices (2026)](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/01-planning-mode.md) — practical workflows and tool-specific patterns (this doc = doctrine, companion = practice).
+
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: January 22, 2026
+**Last Updated**: February 18, 2026

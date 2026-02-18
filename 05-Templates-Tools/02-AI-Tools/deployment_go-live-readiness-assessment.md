@@ -1,12 +1,12 @@
 # 📊 Go-Live Readiness Assessment - Stage 06 + 09 (DEPLOY + GOVERN)
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 14, 2026
 **Stage**: 06 - DEPLOY + 09 - GOVERN
 **Pillar**: 1 (10-Stage Lifecycle) + 4 (Quality Gates)
 **Time Savings**: 80% (12 hours → 2.5 hours)
 **Authority**: CTO Office
-**Origin**: Bflow SDLC 6.0.6 Framework Assessment (Feb 2026)
+**Origin**: Bflow SDLC 6.1.0 Framework Assessment (Feb 2026)
 
 ---
 
@@ -22,7 +22,7 @@
 
 ```yaml
 System Prompt:
-  You are conducting a Go-Live Readiness Assessment for SDLC 6.0.6.
+  You are conducting a Go-Live Readiness Assessment for SDLC 6.1.0.
   Score each category with weighted percentages.
   Produce a Go/No-Go recommendation with quantified risk.
   Apply tier-appropriate thresholds.

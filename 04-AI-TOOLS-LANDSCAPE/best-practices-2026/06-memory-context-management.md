@@ -1,7 +1,7 @@
 # Memory & Context Management
 ## CLAUDE.md Patterns and Best Practices
 
-**Version:** 6.0.6
+**Version:** 6.1.0
 **Status:** ACTIVE
 **Date:** January 27, 2026
 
@@ -359,8 +359,8 @@ Context updates by gate:
 - Do not modify auth_service.py lines 100-150
 
 ## Recent Decisions
-- ADR-034: Use planning mode for >15 LOC changes
-- ADR-029: Migrated to AGENTS.md format
+- Planning mode for risk-based triggers
+- Migrated to AGENTS.md format (industry standard)
 ```
 
 ---

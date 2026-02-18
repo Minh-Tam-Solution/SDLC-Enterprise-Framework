@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Status**: ACTIVE
 **Date**: February 16, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.0.6 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
+**Pillar**: Core AI Governance (Enhanced in 6.1.0 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
 
 ---
 
@@ -37,7 +37,7 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
 | 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
 
-### Anthropic Patterns Integration (6.0.6)
+### Anthropic Patterns Integration (6.1.0)
 
 | # | Document | Purpose |
 |---|----------|---------|
@@ -133,7 +133,7 @@ A tool feature is promoted to Core when it meets ALL criteria:
 
 - [CONTENT-MAP.md](../CONTENT-MAP.md) - Topic → canonical file mapping
 - [DEPRECATION-POLICY.md](../DEPRECATION-POLICY.md) - Redirect rules
-- [SDLC-Agentic-Core-Principles.md](../02-Core-Methodology/SDLC-Agentic-Core-Principles.md) - SE4H/SE4A model
+- [SDLC-Agentic-Core-Principles.md](./13-AGENTIC-CORE-PRINCIPLES.md) - SE4H/SE4A model
 - [best-practices-2026/](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/) - Tool-specific guides
 
 ---
@@ -141,4 +141,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0

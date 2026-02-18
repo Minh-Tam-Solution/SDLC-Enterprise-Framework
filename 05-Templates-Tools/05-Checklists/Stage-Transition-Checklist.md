@@ -1,9 +1,9 @@
 # Stage Transition Checklist
 
-**Framework**: SDLC 6.0.6  
+**Framework**: SDLC 6.1.0  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
-**Related**: [ADR-041 Stage Dependency Matrix](../../02-Core-Methodology/ADR-041-Stage-Dependency-Matrix.md), [Stage Exit Criteria](../../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md)
+**Related**: [Stage Dependency Matrix](../../02-Core-Methodology/SDLC-Stage-Dependencies.md), [Stage Exit Criteria](../../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md)
 
 ---
 
@@ -568,7 +568,7 @@ If early start triggered:
 - [ ] Policy documents drafted
 
 #### Parallel Execution
-- [ ] Stage 09 runs **parallel** to Stages 02, 04, 06, 07 (per ADR-041)
+- [ ] Stage 09 runs **parallel** to Stages 02, 04, 06, 07 (per Stage Dependency Matrix)
 - [ ] Document parallel execution in `CURRENT-SPRINT.md`
 
 ### Stage 09 Standard Start (at Stage 06)
@@ -687,7 +687,7 @@ tasks:
 
 ## Related Documents
 
-- [ADR-041: Stage Dependency Matrix](../../02-Core-Methodology/ADR-041-Stage-Dependency-Matrix.md) - Stage dependencies
+- [Stage Dependency Matrix](../../02-Core-Methodology/SDLC-Stage-Dependencies.md) - Stage dependencies
 - [SDLC-Stage-Exit-Criteria.md](../../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Stage completion criteria
 - [SDLC-Stage-Sprint-Integration.md](../../02-Core-Methodology/Governance-Compliance/SDLC-Stage-Sprint-Integration.md) - Sprint-stage coordination
 - [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - Tier-specific guidance
@@ -703,5 +703,5 @@ tasks:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.0.6  
+**Framework Version**: SDLC 6.1.0  
 **Status**: PRODUCTION-READY

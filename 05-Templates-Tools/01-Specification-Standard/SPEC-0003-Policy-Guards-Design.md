@@ -1170,12 +1170,12 @@ policy_evaluation_total = Counter(
 ---
 
 **Document Control**:
-- **Template**: Framework 6.0.6 Unified Specification Standard
+- **Template**: Framework 6.1.0 Unified Specification Standard
 - **Last Review**: 2026-01-28
 - **Next Review**: Q2 2026 (after Sprint 117 completion)
 - **Related Work**: Sprint 43 (OPA integration delivery)
 
 ---
 
-*SPEC-0003: Policy Guards Design - Framework 6.0.6 Format*
+*SPEC-0003: Policy Guards Design - Framework 6.1.0 Format*
 *SDLC Enterprise Framework - Policy-as-Code Enforcement*

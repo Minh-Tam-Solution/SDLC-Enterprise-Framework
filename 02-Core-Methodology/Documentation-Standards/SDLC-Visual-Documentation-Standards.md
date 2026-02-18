@@ -1,9 +1,9 @@
 # SDLC Visual Documentation Standards
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 **Ring**: 1 (Core - Timeless Standards)
 **Source**: Consolidated from RFC-SDLC-607 (Boris Cherny Tactic #5)
 
@@ -37,7 +37,7 @@ Technical documentation is typically **text-heavy markdown** without visual aids
 
 ```
 ┌──────────────────────────────────────────┐
-│   Progressive Routing Zones (ADR-041)    │
+│   Progressive Routing Zones              │
 ├──────────────────────────────────────────┤
 │ 🟢 GREEN (0-30)  - Auto-approve          │
 │ 🟡 YELLOW (30-60) - Quick review         │
@@ -157,7 +157,7 @@ Every diagram should include:
 ## Authentication Flow
 
 **Format**: ASCII Sequence Diagram
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: 2026-02-02
 **Source**: Design specification (SPEC-042)
 **Evidence**: EVD-2026-02-042
@@ -177,7 +177,7 @@ All diagrams must reference Evidence artifacts:
 ```markdown
 ## Evidence Artifacts Referenced
 
-- EVD-2026-01-042: ADR-041 Progressive Routing decision
+- EVD-2026-01-042: Progressive Routing assessment decision
 - EVD-2026-02-015: E2E Testing completion evidence
 - EVD-2026-03-001: User auth implementation plan
 
@@ -329,7 +329,7 @@ All diagrams must reference Evidence artifacts:
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 **Ring**: 1 (Core - Timeless Standards)
 **Source**: Consolidated from RFC-SDLC-607 (Boris Cherny Tactic #5)
 **Owner**: Engineering + Documentation Team

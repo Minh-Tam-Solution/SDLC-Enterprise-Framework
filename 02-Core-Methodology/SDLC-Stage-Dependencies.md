@@ -1,10 +1,10 @@
-# ADR-041: SDLC Stage Dependency Matrix
+# SDLC Stage Dependency Matrix
 
-**Status**: APPROVED  
-**Date**: January 28, 2026  
-**Framework Version**: SDLC 6.0.6  
-**Deciders**: CTO (Tai), CPO, Framework Maintainers  
-**Related**: SDLC Core Methodology, 10-Stage Lifecycle, Quality Gates  
+**Status**: APPROVED
+**Date**: January 28, 2026
+**Framework Version**: SDLC 6.1.0
+**Deciders**: CTO (Tai), CPO, Framework Maintainers
+**Related**: SDLC Core Methodology, 10-Stage Lifecycle, Quality Gates
 **Supersedes**: Implicit stage dependencies (inferred from gates only)
 
 ---
@@ -13,7 +13,7 @@
 
 ### Problem Statement
 
-SDLC Framework 6.0.6 defines a **10-stage lifecycle** (00-FOUNDATION through 09-GOVERN) with **quality gates** (G0.1, G0.2, G1, G2, G3, G4) but lacks **explicit documentation** of:
+SDLC Framework 6.1.0 defines a **10-stage lifecycle** (00-FOUNDATION through 09-GOVERN) with **quality gates** (G0.1, G0.2, G1, G2, G3, G4) but lacks **explicit documentation** of:
 
 1. **Stage dependencies** - Which stages must complete before others can start?
 2. **Parallel execution rules** - Which stages can run concurrently?
@@ -53,7 +53,7 @@ SDLC Framework 6.0.6 defines a **10-stage lifecycle** (00-FOUNDATION through 09-
 **Format**: Structured YAML for both human readability and tool parsing.
 
 ```yaml
-# SDLC 6.0.6 Stage Dependency Matrix
+# SDLC 6.1.0 Stage Dependency Matrix
 # Each stage defines: requires, enables, gates, parallel rules, triggers
 
 stages:
@@ -356,14 +356,14 @@ flowchart TD
    - *Mitigation*: `parallel_ok` and `early_start_triggers` provide flexibility
 
 ⚠️ **Maintenance**: Dependency matrix must stay synchronized with Framework updates  
-   - *Mitigation*: ADR-041 is canonical reference, auto-validated by CI
+   - *Mitigation*: This document is canonical reference, auto-validated by CI
 
 ### Implementation Requirements
 
 **Framework (SDLC-Enterprise-Framework)**:
-1. Create this ADR (ADR-041) as canonical reference
+1. Create this document as canonical reference
 2. Update CONTENT-MAP.md with canonical entry
-3. Update CHANGELOG.md for SDLC 6.0.6 release
+3. Update CHANGELOG.md for SDLC 6.1.0 release
 4. Create Stage-Exit-Criteria.md (separate document, references this ADR)
 
 **Orchestrator (Automation Layer)**:
@@ -415,4 +415,4 @@ flowchart TD
 **CPO Review**: ⏳ Pending  
 **Framework Maintainers**: ⏳ Pending  
 
-**Release**: SDLC 6.0.6 (January 28, 2026)
+**Release**: SDLC 6.1.0 (January 28, 2026)

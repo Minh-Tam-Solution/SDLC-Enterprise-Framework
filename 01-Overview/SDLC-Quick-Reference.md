@@ -1,9 +1,39 @@
-# SDLC Framework 6.0.6 Quick Reference Guide
+# SDLC Framework 6.1.0 Quick Reference Guide
 
-**Version**: 6.0.6
-**Date**: February 16, 2026
+**Version**: 6.1.0
+**Date**: February 18, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Purpose**: Fast lookup for key SDLC 6.0 concepts, navigation, and breaking changes
+**Purpose**: Fast lookup for key SDLC 6.1.0 concepts, navigation, and breaking changes
+
+---
+
+## What's New in 6.1.0 (CONSOLIDATION)
+
+### Ring 1 Monolith Slim + Dedicated Foundation Documents
+
+```yaml
+Key Changes:
+  Ring 1 Monolith Slim:
+    - Design Thinking Principles: 2,018→364 lines (82% reduction)
+    - Agentic Core Principles: 1,313→293 lines (moved to 03-AI-GOVERNANCE)
+    - 9 Design Thinking templates extracted to Documentation-Standards/
+
+  Dedicated Foundation Documents:
+    - 02-Core-Methodology/SDLC-System-Thinking-Foundation.md
+        Standalone doc for core concept (since SDLC 4.0): 4-Layer Iceberg Model, 6 Mental Models
+    - 02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md
+        Extracted from Design Thinking (formalizes Mental Model #5): 5-step pipeline
+    - 03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md
+        NEW: 10 multi-agent collaboration patterns (lane queues, failover, snapshots, @mention routing)
+
+  Structural Reorganization:
+    - 03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md (moved from 02-Core)
+    - 03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md (moved from 02-Core)
+    - BRS/MTS/LPS deprecated → use AGENTS.md (industry standard)
+
+  Version Alignment: 636 stale refs updated to 6.1.0
+  Breaking Changes: NONE (additive consolidation)
+```
 
 ---
 
@@ -24,7 +54,7 @@ Key Changes:
         4-Gate Pipeline: G1 (Spec Review) → G2 (Security) → G3 (Tests) → G4 (Human Review)
         Retry logic: max_retries=3 with deterministic feedback, escalation path
 
-    - 02-Core-Methodology/SDLC-MRP-Template.md
+    - 05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md
         5-section Merge-Readiness Package: Change Summary, Evidence Refs, Rollback, Tests, Deploy
         Gate G4 requires MRP for PRs >100 LOC at STANDARD+ tier
 
@@ -272,7 +302,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.6 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.1.0 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -437,7 +467,7 @@ SDLC-Enterprise-Framework/
 
 ---
 
-## Quick Checklist: Is This 6.0.6 Compliant?
+## Quick Checklist: Is This 6.1.0 Compliant?
 
 ```yaml
 Specification:
@@ -463,7 +493,7 @@ Sprint Governance (3-Phase):
   [ ] Execution: TDD cycle followed per feature?
   [ ] Post-Sprint: Documentation completed within 24h?
 
-Legacy Organization (6.0.6 RFC-001):
+Legacy Organization (6.1.0 RFC-001):
   [ ] No 99-Legacy/ folders in active stages (00-09)?
   [ ] Legacy content in 10-Archive/{NN}-Legacy/?
   [ ] CI/CD blocks 99-Legacy/ reintroduction?
@@ -473,6 +503,6 @@ Legacy Organization (6.0.6 RFC-001):
 
 **Document Status**: ACTIVE
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
+**Framework**: SDLC 6.1.0 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
-*Quick reference for SDLC Framework 6.0.6 - Keep this handy!*
+*Quick reference for SDLC Framework 6.1.0 - Keep this handy!*

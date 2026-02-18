@@ -1,9 +1,9 @@
 # Git Workflow Patterns for AI Development
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 **Ring**: 2 (Governance - Best Practices)
 **Source**: Consolidated from RFC-SDLC-604 (Boris Cherny Tactic #2)
 
@@ -567,7 +567,7 @@ Each worktree PR creates Evidence artifacts:
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.0.6
+**Framework**: SDLC 6.1.0
 **Ring**: 2 (Governance - Best Practices)
 **Source**: Consolidated from RFC-SDLC-604 (Boris Cherny Tactic #2)
 **Owner**: Engineering + Tech Leads

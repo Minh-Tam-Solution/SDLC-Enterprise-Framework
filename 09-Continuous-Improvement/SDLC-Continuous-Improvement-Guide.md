@@ -1,9 +1,9 @@
 # 🔄 SDLC Continuous Improvement Guide
 ## How to Evolve the Framework Without Losing Battle-Tested Wisdom
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 16, 2026
-**Status**: ACTIVE - ENHANCED WITH RFC-001 LEGACY DOCUMENT ORGANIZATION (6.0.5) + ANTHROPIC PATTERNS INTEGRATION (6.0.6)
+**Status**: ACTIVE - ENHANCED WITH LEGACY DOCUMENT ORGANIZATION STANDARD (6.0.5) + ANTHROPIC PATTERNS INTEGRATION (6.1.0)
 **Authority**: CEO + CPO + CTO Leadership
 **Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x → 5.2.0 → 6.0.x
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
@@ -152,7 +152,7 @@ SDLC 6.0.4 (February 8, 2026):
   → Format-agnostic specification handling
 
 SDLC 6.0.5 (February 15, 2026):
-  → RFC-001: Legacy Document Organization Standard (MANDATORY)
+  → Legacy Document Organization Standard (MANDATORY)
   → Eliminates 99-Legacy/ from active stages (00-09)
   → Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
   → BFlow validated: 57% size reduction, 34% file reduction
@@ -165,7 +165,7 @@ SDLC 6.0.5 (February 15, 2026):
   → Governance Loop simplification (3 code review guides → 1)
   → Sprint 173 cleanup
 
-SDLC 6.0.6 (February 16, 2026):
+SDLC 6.1.0 (February 16, 2026):
   → Anthropic Best Practices Integration (Sprint 174)
   → 3 new AI Governance methodology documents from Anthropic patterns analysis
   → 10-CLAUDE-MD-STANDARD.md: 3-tier AI context document standard (LITE/PRO/ENTERPRISE)
@@ -224,7 +224,7 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
 
 ```yaml
 1. Create Comprehensive Legacy Archive:
-   Structure (RFC-001, SDLC 6.0.6):
+   Structure (SDLC 6.1.0):
      10-Archive/
        {NN}-Legacy/
          SDLC-[old-version]-Archive/
@@ -849,7 +849,7 @@ Document the Journey:
 ### 5. Preserve Wisdom
 ```yaml
 Never Lose Lessons:
-  - Archive don't delete (10-Archive/{NN}-Legacy structure per RFC-001)
+  - Archive don't delete (10-Archive/{NN}-Legacy structure per Legacy Document Organization Standard)
   - Reference past solutions (cross-links)
   - Build on foundations (evolutionary approach)
   - Honor the journey (complete history)
@@ -1282,7 +1282,7 @@ Key Lesson:
 
 ### Criteria for 6.1 Minor Update
 ```yaml
-Status: SDLC 6.0.6 COMPLETE (February 16, 2026)
+Status: SDLC 6.1.0 COMPLETE (February 16, 2026)
 Next Minor: 6.1.0
 
 Indicators:
@@ -1294,7 +1294,7 @@ Indicators:
   - Success stories accumulated (5+ platforms using 6.0.x)
   - RFC-001 adoption across all NQH projects
 
-Timeline: Q2-Q3 2026 (3-6 months from 6.0.6)
+Timeline: Q2-Q3 2026 (3-6 months from 6.1.0)
 
 Expected Additions:
   - Additional case studies (SDLC Orchestrator, Brownfield implementations)
@@ -1309,7 +1309,7 @@ Expected Additions:
 ### Criteria for 7.0 Major Update
 ```yaml
 Status: Planning (Q4 2026 - Q1 2027)
-Foundation: SDLC 6.0.6 (AI Governance + Quality Assurance + RFC-001 + Anthropic Patterns) → SDLC 7.0 (Autonomous AI Development)
+Foundation: SDLC 6.1.0 (AI Governance + Quality Assurance + RFC-001 + Anthropic Patterns) → SDLC 7.0 (Autonomous AI Development)
 
 Indicators:
   - Fundamental AI autonomy paradigm shift
@@ -1318,7 +1318,7 @@ Indicators:
   - Industry-wide AI governance pattern emergence
   - Enterprise-grade autonomous development standards
 
-Timeline: Q4 2026 - Q1 2027 (9-12 months from 6.0.6)
+Timeline: Q4 2026 - Q1 2027 (9-12 months from 6.1.0)
 
 Potential Transformations:
   - Autonomous Code Generation Framework
@@ -1332,13 +1332,13 @@ Potential Transformations:
 ---
 
 **Document**: SDLC-Continuous-Improvement-Guide
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Date**: February 16, 2026
-**Status**: ACTIVE - ENHANCED WITH RFC-001 + SPEC-0001 + ANTHROPIC PATTERNS INTEGRATION
+**Status**: ACTIVE - ENHANCED WITH LEGACY ORG STANDARD + SPEC-0001 + ANTHROPIC PATTERNS INTEGRATION
 **Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.6)
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 6.0.6 adds Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template. SDLC 6.0.5 added RFC-001 Legacy Organization, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
-**Framework**: SDLC 6.0.6
+**Latest**: SDLC 6.1.0 adds Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template. SDLC 6.0.5 added Legacy Document Organization Standard, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
+**Framework**: SDLC 6.1.0
 
 ***"Evolution without losing revolution."*** 🔄
 

@@ -1,21 +1,21 @@
-# SDLC 6.0.6 Core Methodology
+# SDLC 6.1.0 Core Methodology
 
-**Version**: 6.0.6
-**Date**: February 16, 2026
-**Status**: ACTIVE - Anthropic Best Practices Integration + RFC-001 Legacy Organization + SPEC-0001
+**Version**: 6.1.0
+**Date**: February 18, 2026
+**Status**: ACTIVE - Consolidation Release (Ring 1 slimming, foundational docs, cross-reference cleanup)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
 ## Executive Summary
 
-SDLC 6.0.6 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
+SDLC 6.1.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
 
 ### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.0.6 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.1.0 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
@@ -145,6 +145,10 @@ SDLC 6.0.6 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 **Reference**: [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md)
 
+**Foundational Thinking Models**:
+- [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, 6 mental models for root-cause analysis
+- [Crisis-to-Pattern Methodology](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step pipeline: Diagnose → Policy → Automate → Enforce → Document
+
 ---
 
 ## Pillar 1: 10-Stage Lifecycle
@@ -153,7 +157,7 @@ SDLC 6.0.6 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.0.6 - 10 STAGES                              │
+│                    SDLC 6.1.0 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -460,7 +464,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 6.0.6 has TWO parallel gate tracks:
+SDLC 6.1.0 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -536,7 +540,7 @@ Feature: User Authentication (G0 → G4)
 |--------|-------------------|----------------------|
 | **Role** | Guide & supervise AI agents | Implement human-specified intent |
 | **Primary Skills** | Intent specification, validation | Code generation, consistency |
-| **Artifacts Created** | BRS, MTS, VCR | LPS, CRP, MRP |
+| **Artifacts Created** | AGENTS.md, VCR, policies | CRP, MRP, code |
 | **Decision Authority** | FINAL (veto power) | NONE (propose only) |
 
 ### Agentic Maturity Levels
@@ -550,30 +554,30 @@ Feature: User Authentication (G0 → G4)
 
 ### 7 Agentic Principles
 
-1. **Brief-First** - BriefingScript before any agent work
-2. **Evidence-Based MRP** - 5-point evidence for every merge
-3. **Human Accountability** - Human responsible for shipped code
-4. **Consultation Protocol** - CRP when agent uncertain
-5. **Mentorship-as-Code** - Standards in MentorScript
-6. **Dual Workbenches** - ACE for humans, AEE for agents
-7. **Gradual Autonomy** - Trust earned from L0→L3
+1. **AGENTS.md First** — Shared context file before any agent work
+2. **Evidence-Based MRP** — 5-point evidence for every merge
+3. **Human Accountability** — Human responsible for shipped code (VCR)
+4. **Consultation Protocol** — CRP when agent uncertain
+5. **Mentorship-as-Code** — Standards encoded in AGENTS.md
+6. **Dual Workbenches** — ACE for humans, AEE for agents
+7. **Gradual Autonomy** — Trust earned from L0→L3
 
 ### SASE × SDLC Stage Mapping
 
 | Stage | SASE Discipline | Primary Activity |
 |-------|-----------------|------------------|
 | 00 Foundation | None | Human-only strategic work |
-| 01 Planning | BriefingEng | Create BRS for features |
-| 02 Design | ALE + ATIE | Design LPS, MTS |
+| 01 Planning | BriefingEng | Create AGENTS.md, define specs |
+| 02 Design | ALE + ATIE | Design execution plans, architecture |
 | 03 Integrate | ATME + ATIE | CRP generation, API contracts |
 | 04 Build | ATLE | Build ACE/AEE, **sprint execution** |
-| 05 Test | ALE + ATME | Execute LPS, generate MRP |
+| 05 Test | ALE + ATME | Execute plans, generate MRP |
 | 06 Deploy | ATME | Validation, coverage |
-| 07 Operate | ATME + AGE | Monitoring, verification |
+| 07 Operate | ATME + AGE | Monitoring, CRP on anomalies |
 | 08 Collaborate | ATIE + AGE | Code review, team coordination |
 | 09 Govern | AGE | Policy, audit, **sprint governance reports** |
 
-**Reference**: [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md)
+**Reference**: [SDLC-Agentic-Core-Principles.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
 
 ---
 
@@ -690,7 +694,7 @@ Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FU
 
 ## Industry Standards Integration
 
-SDLC 6.0.6 maps to industry standards:
+SDLC 6.1.0 maps to industry standards:
 
 ```yaml
 Standards Mapped:
@@ -718,14 +722,18 @@ Quality Assurance Standards (5.3.0):
 ## Related Documents
 
 ### Core Methodology
-- [SDLC-Agentic-Core-Principles.md](./SDLC-Agentic-Core-Principles.md) - SASE/SE 3.0 principles
-- [SDLC-Agentic-Maturity-Model.md](./SDLC-Agentic-Maturity-Model.md) - L0→L3 progression
-- [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) - User-centered approach
-- [SDLC-MRP-Template.md](./SDLC-MRP-Template.md) - **Merge-Readiness Package (5-section template, 6.0.6)**
+- [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) — User-centered approach (Pillar 0 hub)
+- [SDLC-Design-Thinking-Templates.md](./Documentation-Standards/SDLC-Design-Thinking-Templates.md) — Templates, case study, workshop (extracted from Pillar 0)
+- [SDLC-System-Thinking-Foundation.md](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, 6 mental models
+- [SDLC-Crisis-To-Pattern-Methodology.md](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step crisis-to-pattern pipeline
+- [SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) — Merge-Readiness Package (5-section template)
 
-### AI Governance (6.0.6)
-- [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - **CLAUDE.md Standard for AI-Assisted Development (3-Tier)**
-- [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - **Autonomous Codegen with Quality Gates (Two-Agent Pattern)**
+### AI Governance (6.1.0)
+- [13-AGENTIC-CORE-PRINCIPLES.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE/SE 3.0 principles, 7 Agentic Principles
+- [14-AGENTIC-MATURITY-MODEL.md](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
+- [12-MULTI-AGENT-PATTERNS.md](../03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md) — Multi-agent team collaboration patterns
+- [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) — Autonomous codegen with quality gates
+- [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) — CLAUDE.md Standard for AI-assisted development
 
 ### Section 8 - Unified Specification Standard (6.0.0+)
 - [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
@@ -759,7 +767,8 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** -- 3 new docs: CLAUDE.md Standard (3-Tier), Autonomous Codegen Patterns (4-Gate Pipeline), MRP Template (5-section). See [10-CLAUDE-MD-STANDARD](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md), [11-AUTONOMOUS-CODEGEN-PATTERNS](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md), [SDLC-MRP-Template](./SDLC-MRP-Template.md) |
+| **6.1.0** | **Feb 18, 2026** | **MINOR: Consolidation Release** — Ring 1 slimming (Design Thinking 2K→364+572, Agentic Core 1.3K→293), new foundational docs (System Thinking, Crisis-to-Pattern), agentic files moved to 03-AI-GOV, BRS/MTS→AGENTS.md terminology cleanup, Multi-Agent Patterns (12) added |
+| **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
 | **6.0.5** | **Feb 15, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
 | **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement** - RED-GREEN-REFACTOR cycle, tier-aware coverage (LITE 70% → ENT 95%), Spec Converter (SpecIR) |
 | **6.0.3** | **Feb 5, 2026** | **MINOR: Boris Cherny Best Practices Consolidation** - 5 RFCs → Framework structure, MCP Integration Guide, Git Workflow Patterns |
@@ -778,7 +787,7 @@ Quality Assurance Standards (5.3.0):
 
 ---
 
-**Last Updated**: February 16, 2026
+**Last Updated**: February 18, 2026
 **Maintained By**: Framework Team
 **Authority**: CTO Approved
 **Case Study**: [Sprint Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)

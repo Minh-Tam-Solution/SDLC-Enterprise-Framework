@@ -1,7 +1,7 @@
 # Developer Role Evolution
 ## Software Engineering 3.0 Responsibilities
 
-**Version:** 6.0.6
+**Version:** 6.1.0
 **Status:** ACTIVE
 **Date:** January 27, 2026
 
@@ -298,7 +298,7 @@ Example:
 
 ---
 
-## Integration with SDLC 6.0.6
+## Integration with SDLC 6.1.0
 
 ### Sprint Governance (Pillar 2)
 

@@ -1,11 +1,11 @@
 # DESIGN_DECISIONS.md Template
-## Framework 6.0.6 Lightweight Decision Records - Section 8
+## Framework 6.1.0 Lightweight Decision Records - Section 8
 
-**Version**: 6.0.6
+**Version**: 6.1.0
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Author**: PM/PJM Team
-**Framework**: SDLC 6.0.6 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.1.0 (7-Pillar + 2-Section)
 **Section**: Section 8: Unified Specification Standard
 
 ---
@@ -430,7 +430,7 @@ note: "HIGH impact - consider escalating to ADR"
 | **Created** | January 28, 2026 |
 | **Author** | PM/PJM Team |
 | **Reviewers** | CTO, Tech Lead |
-| **Framework** | SDLC 6.0.6 |
+| **Framework** | SDLC 6.1.0 |
 
 ---
 
@@ -442,5 +442,5 @@ note: "HIGH impact - consider escalating to ADR"
 
 ---
 
-*SDLC Enterprise Framework 6.0.6 - Design Decisions Template*
+*SDLC Enterprise Framework 6.1.0 - Design Decisions Template*
 *"Document decisions while they're fresh. Lightweight by design."*
