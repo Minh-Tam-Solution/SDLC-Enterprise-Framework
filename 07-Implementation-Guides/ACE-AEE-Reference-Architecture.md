@@ -338,7 +338,7 @@ Purpose: Unified interface to AI providers
 Supported Providers:
   Primary: Ollama (local, cost-effective)
     - Endpoint: http://api.nqh.vn/ollama
-    - Models: qwen2.5:14b, llama3.1:70b
+    - Models: qwen3:32b, llama3.1:70b
     - Latency: <100ms (local)
     - Cost: ~$50/month
 

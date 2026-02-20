@@ -40,7 +40,7 @@ Requirements: SDLC 6.1.0, Vietnamese i18n, <50ms performance
 
 **Stack**:
 - Infrastructure: 192.168.0.223 (internal network)
-- Models: qwen2.5:14b-instruct (Vietnamese), qwen2.5-coder:14b, gpt-oss:20b
+- Models: qwen3:32b (Vietnamese), qwen3-coder:30b, gpt-oss:20b
 - Performance: 2-6s response times
 - Accuracy: 96.4% Vietnamese Cultural Intelligence
 

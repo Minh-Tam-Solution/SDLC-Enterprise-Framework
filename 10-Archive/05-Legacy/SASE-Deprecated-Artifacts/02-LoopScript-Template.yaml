@@ -36,7 +36,7 @@ metadata:
   # Execution context
   agent:
     provider: "ollama | claude | gpt-4 | gemini"
-    model: "qwen2.5:14b | claude-3-opus | gpt-4o"
+    model: "qwen3:32b | claude-3-opus | gpt-4o"
     session_id: "SESSION-XXXXX"
 
   # Timing
