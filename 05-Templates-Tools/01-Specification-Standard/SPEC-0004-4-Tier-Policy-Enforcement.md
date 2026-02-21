@@ -29,7 +29,7 @@ sprint: Sprint 102-104
 
 ## Executive Summary
 
-**Problem**: SDLC Framework introduced 4-Tier Classification in 5.2.0 (current as of 6.1.0) - (LITE/STANDARD/PROFESSIONAL/ENTERPRISE) for graduated governance. Different project sizes need different enforcement levels - startups need advisory guidance while enterprises require zero-tolerance enforcement. A one-size-fits-all policy system would either over-burden small teams or under-protect large teams.
+**Problem**: SDLC Framework introduced 4-Tier Classification in 5.2.0 (current as of 6.1.1) - (LITE/STANDARD/PROFESSIONAL/ENTERPRISE) for graduated governance. Different project sizes need different enforcement levels - startups need advisory guidance while enterprises require zero-tolerance enforcement. A one-size-fits-all policy system would either over-burden small teams or under-protect large teams.
 
 **Solution**: Implement **4-Tier Policy Enforcement** with graduated enforcement modes:
 - **LITE** (1-2 people): Advisory only, no blocking
@@ -695,12 +695,12 @@ THEN the system MUST:
 
 ### Related Specifications
 - **[SPEC-0001](./SPEC-0001-Anti-Vibecoding.md)**: Anti-Vibecoding quality assurance (4-tier classification)
-- **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.1.0 format)
+- **[SPEC-0002](./SPEC-0002-Specification-Standard.md)**: Specification Standard (Framework 6.1.1 format)
 - **[SPEC-0003](./SPEC-0003-Policy-Guards-Design.md)**: OPA policy guards (enforcement engine)
 
 ### Framework Documents
-- **SDLC 6.1.0 - Section 02-GOVERN**: 4-Tier Classification methodology
-- **SDLC 6.1.0 - Section 7**: Quality Assurance System with tier-specific requirements
+- **SDLC 6.1.1 - Section 02-GOVERN**: 4-Tier Classification methodology
+- **SDLC 6.1.1 - Section 7**: Quality Assurance System with tier-specific requirements
 
 ### Reference Implementation
 - PolicyEnforcementService: Tier-aware policy evaluation
@@ -714,7 +714,7 @@ THEN the system MUST:
 ## 7. Dependencies
 
 ### Upstream Dependencies (Must Exist Before Implementation)
-- ✅ **SDLC Framework 6.1.0**: 4-Tier Classification methodology defined
+- ✅ **SDLC Framework 6.1.1**: 4-Tier Classification methodology defined
 - ✅ **OPA Integration**: Policy evaluation engine (SPEC-0003)
 - ✅ **Projects Table**: Database schema for project tier storage
 - ✅ **RBAC System**: Role-based access control for override approvals
@@ -730,7 +730,7 @@ THEN the system MUST:
 ## 8. Related Standards
 
 ### Industry Standards
-- **SDLC Framework 6.1.0**: 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
+- **SDLC Framework 6.1.1**: 4-Tier Classification (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
 - **OWASP ASVS Level 2**: Security verification standards (PROFESSIONAL/ENTERPRISE tiers)
 - **SOC 2 Type II**: Audit compliance requirements (ENTERPRISE tier)
 - **HIPAA**: Healthcare data compliance (ENTERPRISE tier with 2-person rule)
@@ -762,7 +762,7 @@ THEN the system MUST:
 ---
 
 **Document Status**: ✅ APPROVED - Ready for Implementation
-**Framework Compliance**: ✅ Framework 6.1.0 (YAML frontmatter, BDD requirements, tier-specific tables)
+**Framework Compliance**: ✅ Framework 6.1.1 (YAML frontmatter, BDD requirements, tier-specific tables)
 **Spec Migration**: ✅ Complete (ADR-036 → SPEC-0004)
 
 ---

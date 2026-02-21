@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.1.0
+**Version**: 6.1.1
 **Status**: ACTIVE
 **Date**: February 16, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.1.0 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
+**Pillar**: Core AI Governance (Enhanced in 6.1.1 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
 
 ---
 
@@ -37,12 +37,21 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
 | 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
 
-### Anthropic Patterns Integration (6.1.0)
+### Anthropic Patterns Integration (6.1.1)
 
 | # | Document | Purpose |
 |---|----------|---------|
 | 10 | [CLAUDE.md Standard (3-Tier)](10-CLAUDE-MD-STANDARD.md) | LITE/PRO/ENTERPRISE tiered AI context document standard |
 | 11 | [Autonomous Codegen Patterns](11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
+
+### Multi-Agent & Agentic Governance (6.1.1+)
+
+| # | Document | Purpose |
+|---|----------|---------|
+| 12 | [Multi-Agent Patterns](12-MULTI-AGENT-PATTERNS.md) | 10 collaboration patterns for multi-agent teams |
+| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, SASE artifact workflow |
+| 14 | [Agentic Maturity Model](14-AGENTIC-MATURITY-MODEL.md) | L0-L3 maturity levels, AGENTS.md standard |
+| 15 | [Conversation-First Governance](15-CONVERSATION-FIRST-GOVERNANCE.md) | Governance-via-conversation patterns (OTT/CLI primary) |
 
 ---
 
@@ -141,4 +150,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1

@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-DESIGN-THINKING-PRINCIPLES"
 title: "Design Thinking Principles — Build the RIGHT Thing"
-version: "6.1.0"
+version: "6.1.1"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -355,10 +355,10 @@ Design Thinking integrates with the SDLC Quality Gate system through 5 gates tha
 ---
 
 **Document**: SDLC Design Thinking Principles
-**Version**: SDLC 6.1.0
+**Version**: SDLC 6.1.1
 **Status**: ACTIVE — Ready for Implementation
 **Last Updated**: February 18, 2026
 
 > *"Ask the RIGHT questions in the RIGHT order. That's more valuable than having the RIGHT tools."*
 >
-> — SDLC 6.1.0: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.
+> — SDLC 6.1.1: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.

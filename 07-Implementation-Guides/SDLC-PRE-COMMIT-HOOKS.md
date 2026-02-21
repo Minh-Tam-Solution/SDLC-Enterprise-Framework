@@ -1,5 +1,5 @@
-# SDLC 6.1.0 Pre-Commit Hooks - Battle-Tested Protection
-**Version**: 6.1.0
+# SDLC 6.1.1 Pre-Commit Hooks - Battle-Tested Protection
+**Version**: 6.1.1
 **Date**: January 27, 2026
 **Status**: ACTIVE - INTEGRATED WITH UNIVERSAL CODE REVIEW FRAMEWORK
 **Foundation**: Lessons from 679 mock crisis and 3 platforms
@@ -16,8 +16,8 @@
 **Pre-commit hooks are LAYER 1** of the Universal Code Review Framework:
 
 ```yaml
-Code Review Architecture (6.1.0 - Updated):
-  Layer 0: Sprint Context Check (Added in 5.1.3, current as of 6.1.0)
+Code Review Architecture (6.1.1 - Updated):
+  Layer 0: Sprint Context Check (Added in 5.1.3, current as of 6.1.1)
     → Verify commit message references SPRINT-XXX
     → Validate backlog item linkage
     → Ensure G-Sprint approval
@@ -27,14 +27,14 @@ Code Review Architecture (6.1.0 - Updated):
     → Prevents issues BEFORE commit
     → Zero Mock Policy enforcement
     → Performance validation
-    → SDLC 6.1.0 compliance
+    → SDLC 6.1.1 compliance
 
   Layer 2: Code Review (Choose Your Tier)
     → Tier 1: Manual peer review + checklist
     → Tier 2: AI-powered review (Cursor/Claude)
     → Tier 3: CodeRabbit automated review
 
-  Layer 3: DoD Verification (Added in 5.1.3, current as of 6.1.0)
+  Layer 3: DoD Verification (Added in 5.1.3, current as of 6.1.1)
     → Definition of Done checklist
     → Sprint Review readiness
     → Documentation updates
@@ -51,7 +51,7 @@ Code Review Architecture (6.1.0 - Updated):
 
 ---
 
-## 🆕 Sprint Planning Governance Hook (Added in 5.1.3, current as of 6.1.0)
+## 🆕 Sprint Planning Governance Hook (Added in 5.1.3, current as of 6.1.1)
 
 ### Priority 0: Sprint Context Validation
 ```bash
@@ -145,8 +145,8 @@ repos:
 
       # Priority 3: SDLC Header Compliance
       - id: sdlc-header-check
-        name: SDLC 6.1.0 Header Validation
-        entry: python scripts/sdlc_header_check.py --version 6.1.0
+        name: SDLC 6.1.1 Header Validation
+        entry: python scripts/sdlc_header_check.py --version 6.1.1
         language: system
         files: \.(py|js|ts|tsx)$
         pass_filenames: true
@@ -349,7 +349,7 @@ class MockDetectionAgent:
 #!/bin/bash
 # metrics.sh - Track protection effectiveness
 
-echo "=== SDLC 6.1.0 Pre-Commit Protection Metrics ==="
+echo "=== SDLC 6.1.1 Pre-Commit Protection Metrics ==="
 echo
 echo "Last 7 Days:"
 echo "  Mocks Blocked: $(git log --since='1 week ago' | grep -c 'mock-detection')"
@@ -406,7 +406,7 @@ After Pre-Commit Hooks:
 
 ---
 
-## 🎯 SDLC 6.1.0 Integration
+## 🎯 SDLC 6.1.1 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -471,15 +471,15 @@ After Pre-Commit Hooks:
 
 ---
 
-**Document**: SDLC-6.1.0-PRE-COMMIT-HOOKS
-**Version**: 6.1.0
+**Document**: SDLC-6.1.1-PRE-COMMIT-HOOKS
+**Version**: 6.1.1
 **Date**: January 27, 2026
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Tier**: ALL TIERS (Mandatory)
 **Status**: ENHANCED WITH BFLOW BATTLE-TESTED PATTERNS
 **Coverage**: 6 Mandatory Hooks, 20+ Detection Patterns
 **Achievement**: 679 → 0 mocks, proven protection
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1
 
 ***"Every pattern here prevented a real crisis at BFlow"***
 ***"Install these hooks. Sleep better at night."***

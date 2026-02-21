@@ -2,7 +2,7 @@
 ## Anti-Vibecoding Governance Framework
 
 **Version**: 1.0.0
-**Framework Version**: SDLC 6.1.0
+**Framework Version**: SDLC 6.1.1
 **Status**: APPROVED
 **Date**: January 27, 2026
 **Authority**: CTO + CPO + CEO Approved
@@ -533,7 +533,7 @@ for signal in signals:
 
 - [ ] Create this document (SDLC-Quality-Assurance-System.md)
 - [ ] Update CONTENT-MAP.md with new files
-- [ ] Update CHANGELOG.md for Framework 6.1.0
+- [ ] Update CHANGELOG.md for Framework 6.1.1
 - [ ] Create signal calibration templates
 
 ### 10.2 Orchestrator Implementation
@@ -560,7 +560,7 @@ for signal in signals:
 - [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md) - Stage transition rules
 - [SDLC-Agentic-Core-Principles.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) - AI Governance Principles
 
-**AI Governance (6.1.0):**
+**AI Governance (6.1.1):**
 - [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) - Autonomous Codegen with Quality Gates (4-Gate Pipeline applies Section 7 principles to AI code generation)
 - [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) - CLAUDE.md Standard (structured AI context improves Intent Clarity and Context Completeness signals)
 - [SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) - Merge-Readiness Package Template (evidence-based merge approval)
@@ -591,4 +591,4 @@ for signal in signals:
 **CPO Review**: ✅ APPROVED
 **CEO Review**: ✅ APPROVED (CEO Time Optimization focus)
 
-**Framework Release**: SDLC 6.1.0 (January 27, 2026)
+**Framework Release**: SDLC 6.1.1 (January 27, 2026)

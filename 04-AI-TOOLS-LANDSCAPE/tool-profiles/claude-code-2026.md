@@ -2,7 +2,10 @@
 
 **Last Updated**: January 2026
 **Version Tracked**: Claude Code 1.x
-**Status**: PRIMARY TOOL (SDLC Orchestrator)
+**Status**: REFERENCE PROFILE
+
+> **Framework Independence**: SDLC methodology does not depend on any specific tool.
+> These are Ring 2 reference profiles. Governance principles in `03-AI-GOVERNANCE/` apply regardless.
 
 ---
 

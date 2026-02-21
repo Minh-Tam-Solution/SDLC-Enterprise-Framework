@@ -1,7 +1,7 @@
 # Permissions & Security
 ## Safe AI Execution Patterns
 
-**Version:** 6.1.0
+**Version:** 6.1.1
 **Status:** ACTIVE
 **Date:** January 27, 2026
 

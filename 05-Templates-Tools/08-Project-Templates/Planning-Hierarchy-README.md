@@ -1,12 +1,12 @@
 # Planning Hierarchy Templates
 
-**Version**: 6.1.0
+**Version**: 6.1.1
 **Date**: January 22, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy)
 **Status**: ACTIVE - Production Templates
 **Authority**: CPO Office
-**Framework**: SDLC 6.1.0 (7-Pillar Architecture)
+**Framework**: SDLC 6.1.1 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---
@@ -91,7 +91,7 @@ ENTERPRISE (50+ people, $1M+):
 
 ### Step 2: Copy Templates
 ```bash
-# For PROFESSIONAL+ tier (SDLC 6.1.0 folder structure)
+# For PROFESSIONAL+ tier (SDLC 6.1.1 folder structure)
 # Note: Only /docs folders are stage-mapped, code folders are organizational units
 cp ROADMAP-TEMPLATE.md /your-project/docs/00-foundation/
 cp PHASE-TEMPLATE.md /your-project/docs/04-build/02-Sprint-Plans/

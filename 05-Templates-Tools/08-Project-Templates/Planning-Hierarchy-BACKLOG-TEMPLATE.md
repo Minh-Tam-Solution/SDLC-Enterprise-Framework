@@ -1,12 +1,12 @@
 # Backlog Template
 
-**Version**: 6.1.0
+**Version**: 6.1.1
 **Date**: January 22, 2026
 **Stage**: 04 - BUILD
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy - Level 4)
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---

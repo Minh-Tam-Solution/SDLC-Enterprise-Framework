@@ -1,6 +1,6 @@
 # SDLC Code Review Guide — Unified 3-Tier Framework
 
-**Version**: 6.1.0
+**Version**: 6.1.1
 **Last Updated**: February 15, 2026
 **Status**: PRODUCTION READY (Consolidated SSOT — Feb 2026)
 **Stage**: 04 (BUILD) — Code Review Excellence
@@ -27,7 +27,7 @@
 | **Tier 2: Subscription** | 5-20 devs, cost-conscious | Cursor, Copilot, Claude Max | $50-100 | 85-95% | 2 hours |
 | **Tier 3: CodeRabbit** | 15+ devs, 50+ PRs/month | CodeRabbit Pro | $12-45/seat | 90-98% | 8 hours |
 
-### SDLC 6.1.0 4-Tier Classification Mapping
+### SDLC 6.1.1 4-Tier Classification Mapping
 
 | SDLC Tier | Team Size | Budget | Recommended Code Review | Rationale |
 |-----------|-----------|--------|-------------------------|-----------|
@@ -100,7 +100,7 @@ Every PR must be reviewed against these criteria regardless of tier:
 - [ ] Database queries optimized (no N+1)
 - [ ] Proper indexes used/added
 - [ ] Async/await used correctly
-- [ ] Response time <100ms expected (SDLC 6.1.0 target)
+- [ ] Response time <100ms expected (SDLC 6.1.1 target)
 
 #### Testing (Stage 05)
 
@@ -220,7 +220,7 @@ npx husky add .husky/pre-commit "npx lint-staged"
 ### Review Comment Format
 
 ```markdown
-## Code Review — SDLC 6.1.0 Checklist
+## Code Review — SDLC 6.1.1 Checklist
 
 ### ✅ Strengths
 - [What was done well]
@@ -275,7 +275,7 @@ Layer 3: POST-MERGE LEARNING (Pattern Extraction)
 ### Cursor IDE Configuration (.cursorrules)
 
 ```markdown
-# SDLC 6.1.0 Code Review Rules
+# SDLC 6.1.1 Code Review Rules
 
 ## Sprint Planning Governance (Pillar 2)
 - PRs MUST reference SPRINT-XXX
@@ -386,7 +386,7 @@ Best For: Scale-ups (15-100+ devs), enterprises, multi-team orgs
 
 ---
 
-## 6. SDLC 6.1.0 Integration
+## 6. SDLC 6.1.1 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -431,7 +431,7 @@ Best For: Scale-ups (15-100+ devs), enterprises, multi-team orgs
 
 ### GitHub
 
-- **PR Template**: `.github/PULL_REQUEST_TEMPLATE.md` with SDLC 6.1.0 checklist
+- **PR Template**: `.github/PULL_REQUEST_TEMPLATE.md` with SDLC 6.1.1 checklist
 - **Branch Protection**: Require 2+ approvers, CI pass, coverage threshold
 - **Auto-assignment**: Round-robin or CODEOWNERS file
 - **Labels**: `needs-review`, `approved`, `changes-requested`
@@ -528,7 +528,7 @@ Team Health:
 
 **Document Status**: ACTIVE (SSOT)
 **Owner**: CPO Office
-**Framework**: SDLC 6.1.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.1.1 (7-Pillar + 2-Section)
 
 **Consolidation History (Feb 2026)**:
 - Merged from 3 guides (3,536 LOC) → 1 SSOT (~450 LOC)

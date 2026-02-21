@@ -2,9 +2,32 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.1.0 Enterprise Framework - Consolidation Release
+**Framework**: SDLC 6.1.1 Enterprise Framework - Post-Cleanup Patch
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: February 18, 2026 (SDLC 6.1.0 Consolidation Release)
+**Last Updated**: February 21, 2026 (SDLC 6.1.1 Post-Cleanup Patch)
+
+---
+
+## 🔧 Version 6.1.1 - February 21, 2026 (POST-CLEANUP PATCH)
+
+**Release Date**: February 21, 2026
+**Type**: PATCH RELEASE - Stale reference cleanup, frozen content archive, conversation-first methodology
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No
+**Supersedes**: SDLC 6.1.0 Consolidation Release
+**Trigger**: Sprint 189 Chat-First COMPLETE (CTO 9.4/10), Sprint 190 CEO APPROVED (~21K LOC deletion)
+**CTO Review**: 8.7/10 APPROVED with 4 corrections incorporated
+
+### Changes
+
+| Change | Description | Files |
+|--------|-------------|-------|
+| **"AI Council" → "Senior Review Board"** | Tool-agnostic terminology after AI Council service deletion | 5 active docs |
+| **Archive 36 FROZEN templates** | Sprint 173 frozen AI prompt templates archived | 36 files → `10-Archive/05-Legacy/` |
+| **Conversation-First Governance (#15)** | New methodology: governance-via-conversation patterns | `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` |
+| **Tool profile disclaimers** | All profiles marked REFERENCE PROFILE | 3 tool profiles |
+| **README #14 gap fixed** | Docs #12-#15 listed in AI Governance README | `03-AI-GOVERNANCE/README.md` |
+| **CONTENT-MAP + DEPRECATION-POLICY** | Archive entries, broken paths fixed | 2 governance docs |
 
 ---
 

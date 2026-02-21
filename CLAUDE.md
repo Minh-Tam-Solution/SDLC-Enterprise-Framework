@@ -1,10 +1,17 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.1.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.1.1
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.1.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.1.1**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+
+**What's New in 6.1.1 (February 21, 2026) - POST-CLEANUP PATCH**:
+- ✅ **"AI Council" → "Senior Review Board"** - Tool-agnostic terminology in 5 active docs
+- ✅ **36 FROZEN templates archived** - Sprint 173 AI prompt templates → `10-Archive/05-Legacy/`
+- ✅ **Conversation-First Governance (#15)** - New methodology doc for OTT/CLI-first governance
+- ✅ **Tool profile disclaimers** - All profiles marked REFERENCE PROFILE with independence note
+- ✅ **AI Governance README gap fixed** - Docs #12-#15 now listed in table
 
 **What's New in 6.1.0 (February 18, 2026) - CONSOLIDATION RELEASE**:
 - ✅ **Ring 1 Monolith Slim** - Design Thinking 2,018→364 lines, Agentic Principles 1,313→293 lines

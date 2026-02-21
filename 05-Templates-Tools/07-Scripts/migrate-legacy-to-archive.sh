@@ -206,7 +206,7 @@ See [SDLC-Legacy-Document-Organization.md](../../02-Core-Methodology/Documentati
 
 **Created**: $(date +'%Y-%m-%d')
 **RFC**: RFC-001 Legacy Document Organization Standard
-**Framework**: SDLC 6.1.0+
+**Framework**: SDLC 6.1.1+
 EOF
     
     log_success "Created: $readme_path"

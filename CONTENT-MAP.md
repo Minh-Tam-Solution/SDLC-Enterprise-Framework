@@ -84,6 +84,7 @@ Before creating any new document, check if a canonical file already exists for t
 | **Multi-Agent Patterns** | `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` | — | **NEW 6.1.0** |
 | **Agentic Core Principles** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | **MOVED 6.1.0** |
 | **Agentic Maturity Model** | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | **MOVED 6.1.0** |
+| **Conversation-First Governance** | `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.1** |
 
 ### Core Methodology (02-Core-Methodology/)
 
@@ -128,18 +129,20 @@ Before creating any new document, check if a canonical file already exists for t
 | **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.2** |
 | **Stage Consistency Validation** | `07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md` | 4-stage consistency validation (SPEC-0021 moved to Orchestrator) | **NEW 6.0.1** |
 
-### E2E API Testing Templates (05-Templates-Tools/02-AI-Tools/) - NEW in 6.0.2
+### E2E API Testing Templates — ARCHIVED in 6.1.1
+
+> **ARCHIVED (6.1.1)**: 36 AI prompt templates from `05-Templates-Tools/02-AI-Tools/` moved to `10-Archive/05-Legacy/ai-tools-templates-sprint173/`. FROZEN since Sprint 173, not integrated. See redirect stub at `05-Templates-Tools/02-AI-Tools/README.md`.
 
 | Topic | Canonical File | Purpose | Status |
 |-------|---------------|---------|--------|
-| **E2E API Testing Workflow** | `05-Templates-Tools/02-AI-Tools/testing_e2e-api-testing-workflow.md` | 6-phase standardized E2E testing workflow | **NEW 6.0.2** |
+| **E2E API Testing Workflow** | `10-Archive/05-Legacy/ai-tools-templates-sprint173/testing_e2e-api-testing-workflow.md` | 6-phase standardized E2E testing workflow | **ARCHIVED 6.1.1** |
 | **E2E Testing Quickstart** | `07-Implementation-Guides/E2E-TESTING-QUICKSTART.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
 | **E2E API Testing Methodology** | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
-| **Security Testing Checklist** | `05-Templates-Tools/02-AI-Tools/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **NEW 6.0.2** |
+| **Security Testing Checklist** | `10-Archive/05-Legacy/ai-tools-templates-sprint173/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **ARCHIVED 6.1.1** |
 | **Stage Cross-Reference Matrix** | `02-Core-Methodology/SDLC-Stage-Cross-Reference.md` | Bidirectional Stage 03 ↔ 05 traceability | **NEW 6.0.2** |
 | **Testing Artifacts Structure** | `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | SDLC-compliant test folder layout | **NEW 6.0.2** |
 
-> **Note**: RFC-SDLC-602 introduces standardized E2E API testing with OWASP security integration and cross-stage traceability.
+> **Note**: RFC-SDLC-602 templates archived in 6.1.1 (Sprint 173 freeze). Active testing guidance remains in `07-Implementation-Guides/`.
 
 | OpenSpec Analysis | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
 | Migration Plan (20 Specs) | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
@@ -179,15 +182,23 @@ Before creating any new document, check if a canonical file already exists for t
 | Topic | Canonical File | Purpose | Status |
 |-------|---------------|---------|--------|
 | AI Tools Overview | `04-AI-TOOLS-LANDSCAPE/README.md` | Tool landscape for Orchestrator | ACTIVE |
-| Claude Code Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/claude-code-2026.md` | Primary tool integration | ACTIVE |
-| Cursor Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/cursor-2026.md` | Secondary tool (IDE-native) | ACTIVE |
-| Copilot Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/copilot-2026.md` | Limited-use assistant | ACTIVE |
+| Claude Code Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/claude-code-2026.md` | Reference profile (CLI-based) | ACTIVE |
+| Cursor Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/cursor-2026.md` | Reference profile (IDE-native) | ACTIVE |
+| Copilot Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/copilot-2026.md` | Reference profile (inline assist) | ACTIVE |
 | Capability Matrix | `04-AI-TOOLS-LANDSCAPE/capability-matrix.md` | Tool comparison | ACTIVE |
 | MCP Integration Guide | `04-AI-TOOLS-LANDSCAPE/integration-guides/mcp-integration.md` | Protocol onboarding steps | ACTIVE |
 | Trend Watch | `04-AI-TOOLS-LANDSCAPE/trend-watch/` | Monthly updates (starting with 2026-01-trends.md) | ACTIVE |
 
 > **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
 > Tool-specific knowledge enables Orchestrator to enforce Core principles.
+
+### AI Prompt Templates (10-Archive/05-Legacy/ai-tools-templates-sprint173/) — ARCHIVED 6.1.1
+
+| Topic | Archive Location | Original Location | Status |
+|-------|-----------------|-------------------|--------|
+| 36 AI Prompt Templates | `10-Archive/05-Legacy/ai-tools-templates-sprint173/` | `05-Templates-Tools/02-AI-Tools/` | **ARCHIVED 6.1.1** |
+
+> **Reason**: FROZEN since Sprint 173 (Feb 2026). Not integrated with Orchestrator. 36 files, ~320 KB. Reactivation requires CPO approval.
 
 ### Tool-Specific Content (10-Archive/05-Legacy/tool-guides-2026/)
 
@@ -238,6 +249,7 @@ Before creating any new document, check if a canonical file already exists for t
 | `02-Core-Methodology/SDLC-MRP-Template.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Feb 2026 | Aug 2026 |
 | `05-Templates-Tools/02-AI-Tools/E2E-TESTING-QUICKSTART.md` | `07-Implementation-Guides/E2E-TESTING-QUICKSTART.md` | Feb 2026 | Aug 2026 |
 | `05-Templates-Tools/02-AI-Tools/SDLC-E2E-API-Testing-Methodology.md` | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Feb 2026 | Aug 2026 |
+| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-Archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
 | `03-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/cursor/` | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
 | `03-Agent-Templates/copilot/` | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |

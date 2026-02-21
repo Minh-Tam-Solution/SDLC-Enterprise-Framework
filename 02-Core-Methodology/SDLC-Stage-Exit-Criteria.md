@@ -1,6 +1,6 @@
 # SDLC Stage Exit Criteria
 
-**Framework**: SDLC 6.1.0  
+**Framework**: SDLC 6.1.1  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
 **Related**: [Stage Dependency Matrix](./SDLC-Stage-Dependencies.md), Quality Gates
@@ -531,5 +531,5 @@ Stage 02 (DESIGN) - LITE:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.1.0  
+**Framework Version**: SDLC 6.1.1  
 **Status**: PRODUCTION-READY

@@ -1,10 +1,10 @@
-# OpenAPI Specification Quality Checklist (SDLC 6.1.0)
+# OpenAPI Specification Quality Checklist (SDLC 6.1.1)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1
 **Purpose**: Ensure high-quality OpenAPI specifications for E2E testing
 
 ---
@@ -443,6 +443,6 @@ sdlcctl e2e parse-openapi \
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Owner**: Engineering Teams

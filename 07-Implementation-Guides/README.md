@@ -1,11 +1,11 @@
-# SDLC 6.1.0 Implementation Guides
+# SDLC 6.1.1 Implementation Guides
 
-**Version**: 6.1.0 | **Status**: PRODUCTION READY | **Date**: February 18, 2026
+**Version**: 6.1.1 | **Status**: PRODUCTION READY | **Date**: February 18, 2026
 
-Practical how-to guides for implementing SDLC 6.1.0 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation** + **RFC-001 Legacy Organization** + **Anthropic Best Practices**.
+Practical how-to guides for implementing SDLC 6.1.1 framework + Section 7 Quality Assurance System + **TDD Integration** + **SPEC-0021 Stage Consistency Validation** + **RFC-001 Legacy Organization** + **Anthropic Best Practices**.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.1.0**: Consolidation Release — Ring 1 Slim, Multi-Agent Patterns, System Thinking + Crisis-to-Pattern foundations
+**NEW in 6.1.1**: Consolidation Release — Ring 1 Slim, Multi-Agent Patterns, System Thinking + Crisis-to-Pattern foundations
 **NEW in 6.0.6**: Anthropic Best Practices Integration (3-Tier CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template)
 
 ---
@@ -13,7 +13,7 @@ Practical how-to guides for implementing SDLC 6.1.0 framework + Section 7 Qualit
 ## 🚀 Getting Started - Pick Your Path
 
 ### New Project (Greenfield)
-Start fresh with SDLC 6.1.0 from day one.
+Start fresh with SDLC 6.1.1 from day one.
 
 | Team Size | Time | Start Here |
 |-----------|------|------------|
@@ -23,7 +23,7 @@ Start fresh with SDLC 6.1.0 from day one.
 | 50+ people (ENTERPRISE) | 4 weeks | [Full Implementation](SDLC-Implementation-Guide.md) + [Self-Contained Deployment](SDLC-Self-Contained-Deployment-Guide.md) |
 
 ### Existing Project (Brownfield)
-Adopt SDLC 6.1.0 incrementally into running projects.
+Adopt SDLC 6.1.1 incrementally into running projects.
 
 | Phase | Focus | Time | Guide |
 |-------|-------|------|-------|
@@ -96,7 +96,7 @@ Adopt SDLC 6.1.0 incrementally into running projects.
 
 | Guide | Purpose | Use When |
 |-------|---------|----------|
-| **SDLC-Implementation-Guide.md** | Complete SDLC 6.1.0 deployment | Starting from scratch (greenfield) |
+| **SDLC-Implementation-Guide.md** | Complete SDLC 6.1.1 deployment | Starting from scratch (greenfield) |
 | **SDLC-Stage-Consistency-Validation-Guide.md** | 4-stage consistency validation | Preventing spec drift ⭐ NEW |
 | **SDLC-Self-Contained-Deployment-Guide.md** | Team folder deployment | Deploying to specific team |
 | **SDLC-Compliance-Enforcement-Guide.md** | Adopt SDLC in existing project | Brownfield migration |
@@ -147,10 +147,10 @@ mkdir -p docs/10-archive  # Project-level archive (NOT a stage)
 # 99-legacy folders created as needed within each stage
 ```
 
-### Legacy/Archive Structure (SDLC 6.1.0 - RFC-001)
+### Legacy/Archive Structure (SDLC 6.1.1 - RFC-001)
 
 ```yaml
-Rules (RFC-001 - Effective 6.1.0):
+Rules (RFC-001 - Effective 6.1.1):
   - 10-archive: Centralized archive at docs root with stage-aligned subfolders
     - Format: 10-Archive/{NN}-Legacy/ (e.g., 10-Archive/02-Legacy/)
   - 99-legacy: ELIMINATED from active stages (00-09) per RFC-001
@@ -211,7 +211,7 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 | Script | Purpose |
 |--------|---------|
-| `compliance_sdlc_validator.py` | Validate SDLC 6.1.0 folder structure (7-Pillar + 2-Section + TDD) |
+| `compliance_sdlc_validator.py` | Validate SDLC 6.1.1 folder structure (7-Pillar + 2-Section + TDD) |
 | `compliance_sdlc_scanner.py` | Scan project for compliance |
 | `quickstart_solo_setup.py` | Setup for solo developer |
 
@@ -229,4 +229,4 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 **Last Updated**: February 16, 2026
 **Authority**: CTO + CPO Office
-**Framework Version**: 6.1.0
+**Framework Version**: 6.1.1

@@ -1,6 +1,6 @@
 # 🎯 POV (Point of View) Statement Template
 
-**Version**: 6.1.0 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.1.1 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Synthesize user + need + insight into actionable design perspective
 **When to Use**: DEFINE phase (SDLC Stage 01 - WHAT?)
 **Time Required**: 15-30 minutes
@@ -484,7 +484,7 @@ Please help me:
 ---
 
 **Template**: POV-Statement-Template
-**Part of**: SDLC 6.1.0 Design Thinking Framework
+**Part of**: SDLC 6.1.1 Design Thinking Framework
 **Phase**: DEFINE (Stage 01 - WHAT?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

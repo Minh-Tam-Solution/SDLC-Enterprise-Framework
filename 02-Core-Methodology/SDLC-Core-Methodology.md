@@ -1,6 +1,6 @@
-# SDLC 6.1.0 Core Methodology
+# SDLC 6.1.1 Core Methodology
 
-**Version**: 6.1.0
+**Version**: 6.1.1
 **Date**: February 18, 2026
 **Status**: ACTIVE - Consolidation Release (Ring 1 slimming, foundational docs, cross-reference cleanup)
 **Authority**: Chairman + CEO + CPO + CTO Approved
@@ -9,13 +9,13 @@
 
 ## Executive Summary
 
-SDLC 6.1.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
+SDLC 6.1.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
 
 ### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.1.0 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.1.1 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
@@ -157,7 +157,7 @@ SDLC 6.1.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.1.0 - 10 STAGES                              │
+│                    SDLC 6.1.1 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -464,7 +464,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 6.1.0 has TWO parallel gate tracks:
+SDLC 6.1.1 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -654,7 +654,7 @@ AI tools produce "vibecoded" output - quick but unmaintainable code that:
 | < 20 | 🟢 Green (Low Risk) | Auto-merge | 1+ approvals (automated OK) |
 | 20-40 | 🟡 Yellow (Medium Risk) | Human review required | 2+ human code reviews, coverage >= 80% |
 | 40-60 | 🟠 Orange (High Risk) | Senior review required | Senior engineer + Security lead sign-off |
-| >= 60 | 🔴 Red (Critical Risk) | Block or AI Council | CTO override required, mandatory human rewrite |
+| >= 60 | 🔴 Red (Critical Risk) | Block or Senior Review Board | CTO override required, mandatory human rewrite |
 
 ### Auto-Generation Layer
 
@@ -694,7 +694,7 @@ Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FU
 
 ## Industry Standards Integration
 
-SDLC 6.1.0 maps to industry standards:
+SDLC 6.1.1 maps to industry standards:
 
 ```yaml
 Standards Mapped:
@@ -728,7 +728,7 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Crisis-To-Pattern-Methodology.md](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step crisis-to-pattern pipeline
 - [SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) — Merge-Readiness Package (5-section template)
 
-### AI Governance (6.1.0)
+### AI Governance (6.1.1)
 - [13-AGENTIC-CORE-PRINCIPLES.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE/SE 3.0 principles, 7 Agentic Principles
 - [14-AGENTIC-MATURITY-MODEL.md](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
 - [12-MULTI-AGENT-PATTERNS.md](../03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md) — Multi-agent team collaboration patterns
@@ -767,6 +767,7 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
+| **6.1.1** | **Feb 21, 2026** | **PATCH: Post-Cleanup** — "AI Council" → "Senior Review Board" (5 docs), 36 FROZEN templates archived, Conversation-First Governance doc #15, tool profile disclaimers, version bump |
 | **6.1.0** | **Feb 18, 2026** | **MINOR: Consolidation Release** — Ring 1 slimming (Design Thinking 2K→364+572, Agentic Core 1.3K→293), new foundational docs (System Thinking, Crisis-to-Pattern), agentic files moved to 03-AI-GOV, BRS/MTS→AGENTS.md terminology cleanup, Multi-Agent Patterns (12) added |
 | **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
 | **6.0.5** | **Feb 15, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |

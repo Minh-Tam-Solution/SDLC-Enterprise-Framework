@@ -1,5 +1,5 @@
 ---
-version: "6.1.0"
+version: "6.1.1"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -15,7 +15,7 @@ sprint: "176"
 
 # Multi-Agent Collaboration Patterns
 
-**Framework Version**: SDLC 6.1.0
+**Framework Version**: SDLC 6.1.1
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (New Methodology — requires ADR)
 **Effective Date**: February 18, 2026
@@ -611,7 +611,7 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 ## 17. References
 
 1. SASE Framework — arXiv:2509.06216v2 (SE4H, SE4A classification)
-2. SDLC 6.1.0 Quality Assurance System — Section 7
+2. SDLC 6.1.1 Quality Assurance System — Section 7
 3. SDLC Quality Gates — G0.1 through G4
 4. AI Governance Principles — Documents 01-11 (this section)
 5. Autonomous Codegen Patterns — Document 11 (two-agent pattern)
@@ -621,4 +621,4 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 **Document Status**: APPROVED
 **Owner**: CTO Office
 **Last Updated**: February 18, 2026
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1

@@ -165,6 +165,7 @@ Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 | Original Location | New Location | Created | Expires |
 |------------------|--------------|---------|---------|
 | `2-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-Archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
 
 ---
 

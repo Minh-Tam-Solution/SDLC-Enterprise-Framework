@@ -2,7 +2,10 @@
 
 **Last Updated**: January 2026  
 **Version Tracked**: Copilot Chat + Copilot CLI (2026.1)  
-**Status**: LIMITED USE (SDLC Orchestrator)
+**Status**: REFERENCE PROFILE
+
+> **Framework Independence**: SDLC methodology does not depend on any specific tool.
+> These are Ring 2 reference profiles. Governance principles in `03-AI-GOVERNANCE/` apply regardless.
 
 ---
 

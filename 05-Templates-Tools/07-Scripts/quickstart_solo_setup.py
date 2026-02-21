@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 =========================================================================
-SDLC 6.1.0 Solo Developer Quick Setup
+SDLC 6.1.1 Solo Developer Quick Setup
 Get to 10x productivity with Complete 10-Stage Lifecycle + AI in 2 days
 
-Version: 6.1.0
+Version: 6.1.1
 Date: February 2026
 Status: ACTIVE - PRODUCTION READY
 Profile: Solo Developer (1 developer + AI)
@@ -13,7 +13,7 @@ Target: Individual developers building startups or side projects
 Architecture: 7-Pillar Framework (Design Thinking → Documentation Permanence)
 
 WHAT THIS SCRIPT DOES:
-1. Sets up SDLC 6.1.0 complete 10-stage framework (00-09) for solo development
+1. Sets up SDLC 6.1.1 complete 10-stage framework (00-09) for solo development
 2. Configures Design Thinking lightweight workflow
 3. Sets up Code Review Tier 1 (Manual checklist)
 4. Installs essential compliance validators (including file naming)
@@ -21,7 +21,7 @@ WHAT THIS SCRIPT DOES:
 6. Configures performance targets (<50ms)
 7. Validates code file naming standards (Python/TypeScript/React)
 
-10 STAGES (SDLC 6.1.0):
+10 STAGES (SDLC 6.1.1):
 - Stage 00 (FOUNDATION): Strategic Discovery & Validation (WHY?)
 - Stage 01 (PLANNING): Requirements & User Stories (WHAT?)
 - Stage 02 (DESIGN): Architecture & Technical Design (HOW?)
@@ -33,7 +33,7 @@ WHAT THIS SCRIPT DOES:
 - Stage 08 (COLLABORATE): Team Coordination & Knowledge
 - Stage 09 (GOVERN): Compliance & Strategic Oversight
 
-Legacy/Archive Structure (SDLC 6.1.0):
+Legacy/Archive Structure (SDLC 6.1.1):
 - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 
@@ -79,7 +79,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class SoloSetup:
-    """SDLC 6.1.0 setup for solo developers"""
+    """SDLC 6.1.1 setup for solo developers"""
 
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
@@ -87,7 +87,7 @@ class SoloSetup:
             'profile': 'solo',
             'team_size': 1,
             'setup_date': datetime.now().isoformat(),
-            'sdlc_version': '6.1.0',
+            'sdlc_version': '6.1.1',
             'code_review_tier': 1,
             'design_thinking': 'lightweight',
             'productivity_target': '10x',
@@ -101,7 +101,7 @@ class SoloSetup:
 
     def run(self):
         """Execute complete solo setup"""
-        logger.info("🚀 SDLC 6.1.0 SOLO DEVELOPER SETUP")
+        logger.info("🚀 SDLC 6.1.1 SOLO DEVELOPER SETUP")
         logger.info("=" * 60)
         logger.info("Profile: Solo Developer (1 dev + AI)")
         logger.info("Timeline: 2 days to 10x productivity")
@@ -114,7 +114,7 @@ class SoloSetup:
             # Step 1: Create directory structure
             self._create_directory_structure()
 
-            # Step 2: Install SDLC 6.1.0 validators
+            # Step 2: Install SDLC 6.1.1 validators
             self._install_validators()
 
             # Step 3: Setup Design Thinking lightweight workflow
@@ -129,7 +129,7 @@ class SoloSetup:
             # Step 6: Configure performance targets
             self._configure_performance()
 
-            # Step 7: Create CLAUDE.md template (SDLC 6.1.0 AI context)
+            # Step 7: Create CLAUDE.md template (SDLC 6.1.1 AI context)
             self._create_claude_md_template()
 
             # Step 8: Create MRP template (Merge-Readiness Proof)
@@ -146,8 +146,8 @@ class SoloSetup:
             sys.exit(1)
 
     def _create_directory_structure(self):
-        """Create SDLC 6.1.0 directory structure for solo projects (10 stages: 00-09)"""
-        logger.info("📁 Step 1: Creating SDLC 6.1.0 Directory Structure")
+        """Create SDLC 6.1.1 directory structure for solo projects (10 stages: 00-09)"""
+        logger.info("📁 Step 1: Creating SDLC 6.1.1 Directory Structure")
         logger.info("-" * 60)
 
         directories = [
@@ -170,8 +170,8 @@ class SoloSetup:
         logger.info("")
 
     def _install_validators(self):
-        """Install SDLC 6.1.0 compliance validators"""
-        logger.info("🔍 Step 2: Installing SDLC 6.1.0 Validators")
+        """Install SDLC 6.1.1 compliance validators"""
+        logger.info("🔍 Step 2: Installing SDLC 6.1.1 Validators")
         logger.info("-" * 60)
 
         validators = [
@@ -180,7 +180,7 @@ class SoloSetup:
             'sdlc_scanner.py'
         ]
 
-        logger.info("✅ SDLC 6.1.0 validators available:")
+        logger.info("✅ SDLC 6.1.1 validators available:")
         for validator in validators:
             logger.info(f"   • {validator}")
 
@@ -277,7 +277,7 @@ class SoloSetup:
         logger.info("")
 
     def _create_claude_md_template(self):
-        """Create CLAUDE.md template for AI assistant context (SDLC 6.1.0)"""
+        """Create CLAUDE.md template for AI assistant context (SDLC 6.1.1)"""
         logger.info("🤖 Step 7: Creating CLAUDE.md Template (AI Context)")
         logger.info("-" * 60)
 
@@ -291,11 +291,11 @@ class SoloSetup:
             logger.info("✅ Created: CLAUDE.md (AI assistant context)")
 
         logger.info("   Purpose: Provides project context to Claude Code and other AI tools")
-        logger.info("   Standard: SDLC 6.1.0 CLAUDE.md / AGENTS.md industry standard")
+        logger.info("   Standard: SDLC 6.1.1 CLAUDE.md / AGENTS.md industry standard")
         logger.info("")
 
     def _create_mrp_template(self):
-        """Create MRP (Merge-Readiness Proof) template (SDLC 6.1.0 SASE)"""
+        """Create MRP (Merge-Readiness Proof) template (SDLC 6.1.1 SASE)"""
         logger.info("📋 Step 8: Creating MRP Template (Merge-Readiness Proof)")
         logger.info("-" * 60)
 
@@ -324,7 +324,7 @@ class SoloSetup:
     def _display_success_message(self):
         """Display success message with next steps"""
         logger.info("=" * 60)
-        logger.info("🎉 SDLC 6.1.0 SOLO SETUP COMPLETE!")
+        logger.info("🎉 SDLC 6.1.1 SOLO SETUP COMPLETE!")
         logger.info("=" * 60)
         logger.info("")
         logger.info("✅ What's Ready:")
@@ -333,7 +333,7 @@ class SoloSetup:
         logger.info("   • Code Review Tier 1 checklist (FREE)")
         logger.info("   • AI development environment")
         logger.info("   • Performance targets (<50ms)")
-        logger.info("   • SDLC 6.1.0 validators installed")
+        logger.info("   • SDLC 6.1.1 validators installed")
         logger.info("   • CLAUDE.md template (AI assistant context)")
         logger.info("   • MRP template (Merge-Readiness Proof)")
         logger.info("")
@@ -365,7 +365,7 @@ class SoloSetup:
         logger.info("   • Upgrade to Tier 3 Code Review when budget allows")
         logger.info("")
         logger.info("📚 Resources:")
-        logger.info("   • SDLC 6.1.0 Docs: /00-Overview/")
+        logger.info("   • SDLC 6.1.1 Docs: /00-Overview/")
         logger.info("   • AI Tools: /05-Templates-Tools/02-AI-Tools/")
         logger.info("   • Case Studies: /07-Case-Studies/")
         logger.info("   • Support: taidt@mtsolution.com.vn")
@@ -377,11 +377,11 @@ class SoloSetup:
 
     def _get_claude_md_template(self) -> str:
         return """# CLAUDE.md - AI Assistant Context
-## SDLC 6.1.0 Project Configuration
+## SDLC 6.1.1 Project Configuration
 
 **Project**: [PROJECT_NAME]
 **Version**: 0.1.0
-**Framework**: SDLC 6.1.0 (7-Pillar + Section 7 QA + Section 8 Spec Standard)
+**Framework**: SDLC 6.1.1 (7-Pillar + Section 7 QA + Section 8 Spec Standard)
 **Tier**: LITE (Solo Developer)
 **Created**: [DATE]
 
@@ -396,7 +396,7 @@ class SoloSetup:
 
 ---
 
-## AI Governance Principles (SDLC 6.1.0)
+## AI Governance Principles (SDLC 6.1.1)
 
 1. **Human Accountability** - Developer reviews all AI output
 2. **Brief-First Development** - Plan before coding (risk-based)
@@ -430,7 +430,7 @@ class SoloSetup:
 ## 3-Ring Architecture Context
 
 - **Core** (timeless): [Core business logic description]
-- **Governance** (stable): SDLC 6.1.0 compliance, quality gates
+- **Governance** (stable): SDLC 6.1.1 compliance, quality gates
 - **Outer Ring** (tools): AI tools, CI/CD, deployment
 
 ---
@@ -452,12 +452,12 @@ class SoloSetup:
 
 ---
 
-*Generated by SDLC 6.1.0 Solo Setup. Update this file as the project evolves.*
+*Generated by SDLC 6.1.1 Solo Setup. Update this file as the project evolves.*
 """
 
     def _get_mrp_template(self) -> str:
         return """# MRP - Merge-Readiness Proof
-## SDLC 6.1.0 SASE Artifact
+## SDLC 6.1.1 SASE Artifact
 
 **PR/Branch**: [branch-name]
 **Author**: [name]
@@ -506,7 +506,7 @@ class SoloSetup:
 
 ---
 
-## AI Governance Attestation (SDLC 6.1.0)
+## AI Governance Attestation (SDLC 6.1.1)
 
 - [ ] Human reviewed all AI-generated code
 - [ ] AI changes are within approved scope
@@ -514,7 +514,7 @@ class SoloSetup:
 
 ---
 
-*Template: SDLC 6.1.0 MRP (Merge-Readiness Proof)*
+*Template: SDLC 6.1.1 MRP (Merge-Readiness Proof)*
 *Reference: 05-Templates-Tools/04-SASE-Artifacts/*
 """
 
@@ -667,11 +667,11 @@ Validate:
 """
 
     def _create_code_review_checklist(self) -> str:
-        return """# Code Review Checklist - SDLC 6.1.0 (Tier 1)
+        return """# Code Review Checklist - SDLC 6.1.1 (Tier 1)
 
 ## Before Commit - Check ALL Items
 
-### SDLC 6.1.0 Compliance
+### SDLC 6.1.1 Compliance
 - [ ] Zero Mock Policy: No mock/stub/fake/dummy code
 - [ ] Design Thinking: Feature has DT documentation
 - [ ] Performance: <50ms API response target
@@ -714,7 +714,7 @@ Validate:
 
 ## Run Before Commit
 ```bash
-# SDLC 6.1.0 validator
+# SDLC 6.1.1 validator
 python3 path/to/sdlc_validator.py .
 
 # Tests
@@ -737,7 +737,7 @@ Component: [Name]
 Location: [path]
 
 Requirements:
-✅ SDLC 6.1.0 compliant
+✅ SDLC 6.1.1 compliant
 ✅ English-only comments
 ✅ Test suite (80%+ coverage)
 ✅ Performance <50ms
@@ -750,7 +750,7 @@ Goal: [what trying to achieve]
 
 Generate actionable output for [Phase]""",
 
-            'code_review': """Review this code for SDLC 6.1.0:
+            'code_review': """Review this code for SDLC 6.1.1:
 [paste code]
 
 Check:
@@ -764,7 +764,7 @@ Check:
 def main():
     """Main execution function"""
     if len(sys.argv) < 2:
-        logger.info("SDLC 6.1.0 Solo Developer Setup")
+        logger.info("SDLC 6.1.1 Solo Developer Setup")
         logger.info("=" * 60)
         logger.info("")
         logger.info("Usage: python solo_setup.py <project_path>")

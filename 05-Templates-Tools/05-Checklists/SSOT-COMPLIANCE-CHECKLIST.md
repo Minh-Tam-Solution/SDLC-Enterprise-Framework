@@ -1,10 +1,10 @@
-# SSOT Compliance Checklist (SDLC 6.1.0)
+# SSOT Compliance Checklist (SDLC 6.1.1)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1
 **Purpose**: Validate Single Source of Truth principle compliance
 
 ---
@@ -25,7 +25,7 @@
 
 ### Phase 0: Locate Canonical Source
 
-**Canonical Location** (SDLC 6.1.0):
+**Canonical Location** (SDLC 6.1.1):
 ```
 docs/03-integrate/02-API-Specifications/openapi.json
 ```
@@ -307,6 +307,6 @@ echo "backend/openapi.json" >> .gitignore
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.0
+**Framework**: SDLC 6.1.1
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Owner**: Engineering + QA Teams

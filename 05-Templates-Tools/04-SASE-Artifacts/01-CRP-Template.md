@@ -8,7 +8,7 @@
 **Consumer:** SE4H (Software Engineering for Humans - Agent Coach)
 
 **Version:** 1.2.0
-**Framework:** SDLC 6.1.0 (7-Pillar Architecture)
+**Framework:** SDLC 6.1.1 (7-Pillar Architecture)
 **Created:** December 2025
 **Updated:** January 22, 2026
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
@@ -37,7 +37,7 @@
 | **Project** | PRJ-XXX | Project identifier |
 | **Agent Session** | SESSION-XXXXX | Current execution session |
 
-### Sprint Planning Governance (SDLC 6.1.0)
+### Sprint Planning Governance (SDLC 6.1.1)
 
 | Governance | Value |
 |------------|-------|

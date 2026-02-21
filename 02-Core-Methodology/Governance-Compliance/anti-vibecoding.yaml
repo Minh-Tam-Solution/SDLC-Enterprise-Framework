@@ -1,4 +1,4 @@
-# SDLC Framework 6.1.0 - Anti-Vibecoding Control Definitions
+# SDLC Framework 6.1.1 - Anti-Vibecoding Control Definitions
 # Machine-readable controls from SPEC-0001
 # Source: SDLC-Enterprise-Framework/05-Templates-Tools/01-Specification-Standard/SPEC-0001-Anti-Vibecoding.md
 
@@ -141,12 +141,12 @@ controls:
 
       RED:
         label: "Critical Risk (>= 60)"
-        action: "BLOCK_OR_COUNCIL"
+        action: "BLOCK_OR_SENIOR_REVIEW"
         conditions:
           - "PR blocked by default (SOFT mode)"
-          - "Escalate to AI Council"
+          - "Escalate to Senior Review Board"
           - "CTO override required (FULL mode)"
-          - "Mandatory human rewrite if council rejects"
+          - "Mandatory human rewrite if review board rejects"
 
   - id: AVC-003
     title: "Kill Switch Activation"

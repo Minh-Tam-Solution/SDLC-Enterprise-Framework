@@ -2,7 +2,10 @@
 
 **Last Updated**: January 2026  
 **Version Tracked**: Cursor IDE 0.45+  
-**Status**: SECONDARY TOOL (SDLC Orchestrator)
+**Status**: REFERENCE PROFILE
+
+> **Framework Independence**: SDLC methodology does not depend on any specific tool.
+> These are Ring 2 reference profiles. Governance principles in `03-AI-GOVERNANCE/` apply regardless.
 
 ---
 

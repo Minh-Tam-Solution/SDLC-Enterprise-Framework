@@ -31,7 +31,7 @@ sprint: Sprint 114-116 (Jan 2026)
 **Owner**: CTO + Quality Lead
 **Created**: 2026-01-28
 **Last Updated**: 2026-01-29
-**Framework Version**: SDLC 6.1.0
+**Framework Version**: SDLC 6.1.1
 **Machine-Readable Spec**: [spec/controls/anti-vibecoding.yaml](../../spec/controls/anti-vibecoding.yaml)
 
 ## 1. Overview
@@ -81,13 +81,13 @@ Vibecoding Index = 100 - (
 )
 ```
 
-**Result**: Low index (<20) = auto-merge, High index (>60) = block/council review
+**Result**: Low index (<20) = auto-merge, High index (>60) = block/senior review
 
 **Stakeholders**:
 - **CTO**: Define kill switch criteria, approve recovery from disable
 - **Quality Lead**: Monitor vibecoding trends, adjust thresholds
 - **Developers**: Improve requirements/context to lower vibecoding index
-- **AI Council**: Review high-risk submissions (Red zone)
+- **Senior Review Board**: Review high-risk submissions (Red zone)
 
 ---
 
@@ -113,7 +113,7 @@ graph TB
         ROUTER --> GREEN[Green Zone: Auto-Merge]
         ROUTER --> YELLOW[Yellow Zone: 2+ Reviews]
         ROUTER --> ORANGE[Orange Zone: Senior Review]
-        ROUTER --> RED[Red Zone: Block/Council]
+        ROUTER --> RED[Red Zone: Block/Review Board]
 
         VI --> KS[Kill Switch Monitor]
         KS --> DISABLE[Disable AI Codegen]
@@ -128,8 +128,8 @@ graph TB
     GREEN --> MERGE[Merge to Main]
     YELLOW --> MERGE
     ORANGE --> MERGE
-    RED --> COUNCIL[AI Council Review]
-    COUNCIL --> MERGE
+    RED --> REVIEW_BOARD[Senior Review Board]
+    REVIEW_BOARD --> MERGE
 ```
 
 ### 2.2 Component Architecture
@@ -142,8 +142,8 @@ graph TB
 
 **Progressive Router** (service layer):
 - Routes submissions based on vibecoding index
-- Enforces zone-specific review requirements (1 approval → 2 reviews → senior → council)
-- Blocks Red zone submissions (SOFT mode) or escalates to AI Council
+- Enforces zone-specific review requirements (1 approval → 2 reviews → senior → review board)
+- Blocks Red zone submissions (SOFT mode) or escalates to Senior Review Board
 - Integrates with GitHub/GitLab APIs for PR status updates
 
 **Kill Switch Monitor** (service layer):
@@ -269,8 +269,8 @@ THEN in PROFESSIONAL tier (WARNING mode):
   - Notification sent to Tech Lead for awareness
 THEN in ENTERPRISE tier (SOFT mode):
   - PR is blocked by default
-  - Escalated to AI Council for review
-  - AI Council can approve (unanimous vote) or reject
+  - Escalated to Senior Review Board for review
+  - Senior Review Board can approve (unanimous vote) or reject
   - If rejected, mandatory human rewrite required
 THEN in ENTERPRISE tier (FULL mode):
   - PR is hard-blocked (cannot merge)
@@ -435,7 +435,7 @@ THEN AI codegen is disabled immediately (no grace period)
 **Rationale**:
 - **Graduated enforcement**: Medium-risk code (Yellow) needs human review, not blocking
 - **Senior expertise**: High-risk code (Orange) benefits from senior engineer experience
-- **Council escalation**: Critical-risk code (Red) requires collective decision (AI Council)
+- **Review board escalation**: Critical-risk code (Red) requires collective decision (Senior Review Board)
 - **Developer experience**: Binary blocking frustrates developers; progressive routing is educational
 
 **Alternatives Considered**:
@@ -614,9 +614,9 @@ def calculate_vibecoding_index(signals: dict[str, float]) -> float:
 - **Review Time**: <48 hours (senior review)
 
 **Red Zone (Index >=60)**:
-- **Action**: BLOCK_OR_COUNCIL
+- **Action**: BLOCK_OR_SENIOR_REVIEW
 - **PROFESSIONAL tier**: Warning only (not blocked)
-- **ENTERPRISE tier (SOFT)**: Blocked, escalate to AI Council
+- **ENTERPRISE tier (SOFT)**: Blocked, escalate to Senior Review Board
 - **ENTERPRISE tier (FULL)**: Hard-blocked, CTO override required
 
 ---
@@ -670,14 +670,14 @@ def calculate_vibecoding_index(signals: dict[str, float]) -> float:
 **Features**:
 - ✅ All PROFESSIONAL features
 - ✅ Red Zone: Blocked (SOFT) or hard-blocked (FULL)
-- ✅ AI Council escalation (Red zone)
+- ✅ Senior Review Board escalation (Red zone)
 - ✅ Kill Switch: All 3 triggers (rejection, latency, CVEs)
 - ✅ Evidence Vault: 1-year retention for kill switch events
 - ✅ CTO approval required for kill switch recovery
 
 **Routing Behavior**:
 - Green/Yellow/Orange: Same as PROFESSIONAL
-- Red (SOFT mode): Blocked, escalate to AI Council (can approve with unanimous vote)
+- Red (SOFT mode): Blocked, escalate to Senior Review Board (can approve with unanimous vote)
 - Red (FULL mode): Hard-blocked, CTO override required
 
 **Kill Switch Triggers**:
@@ -713,7 +713,7 @@ def calculate_vibecoding_index(signals: dict[str, float]) -> float:
 - `test_yellow_zone_human_review`: Submit PR with index 20-40, verify 2 reviews required
 - `test_orange_zone_senior_review`: Submit PR with index 40-60, verify senior + security approvals
 - `test_red_zone_block_professional`: Submit Red PR in PROFESSIONAL tier, verify warning only
-- `test_red_zone_block_enterprise`: Submit Red PR in ENTERPRISE tier (SOFT), verify blocked + council escalation
+- `test_red_zone_block_enterprise`: Submit Red PR in ENTERPRISE tier (SOFT), verify blocked + review board escalation
 - `test_kill_switch_rejection_rate`: Simulate 80% rejection for 30 min, verify disable
 - `test_kill_switch_latency`: Inject 500ms latency for 15 min, verify fallback
 - `test_kill_switch_cves`: Submit code with 5 critical CVEs, verify immediate disable
@@ -767,7 +767,7 @@ kill_switch_trigger_total = Counter(
 - SPEC-0002: Quality-Gates-Codegen (4-Gate pipeline integration)
 - SPEC-0003: Policy-Guards-Design (OPA policy enforcement)
 - Evidence Vault API (signal fetching, evidence storage)
-- AI Council Service (Red zone escalation)
+- Senior Review Board Service (Red zone escalation)
 
 **External Dependencies**:
 - GitHub/GitLab API (PR status, commit metadata, code review outcomes)
@@ -838,12 +838,12 @@ kill_switch_trigger_total = Counter(
 ---
 
 **Document Control**:
-- **Template**: Framework 6.1.0 Unified Specification Standard
+- **Template**: Framework 6.1.1 Unified Specification Standard
 - **Machine-Readable Spec**: `../../spec/controls/anti-vibecoding.yaml`
 - **Last Review**: 2026-01-29
 - **Next Review**: Q2 2026 (after ENTERPRISE tier pilot)
 
 ---
 
-*SPEC-0001: Anti-Vibecoding Quality Assurance System - Framework 6.1.0 Format*
+*SPEC-0001: Anti-Vibecoding Quality Assurance System - Framework 6.1.1 Format*
 *SDLC Enterprise Framework - Preventing Low-Quality AI-Generated Code*

@@ -1,5 +1,5 @@
 ---
-sdlc_version: "6.1.0"
+sdlc_version: "6.1.1"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -9,13 +9,13 @@ last_updated: "2026-02-18"
 context_zone: "Core"
 update_frequency: "Per major version (quarterly)"
 priority: "P1"
-source: "Industry autonomous coding patterns + SDLC 6.1.0 Quality Gates"
+source: "Industry autonomous coding patterns + SDLC 6.1.1 Quality Gates"
 sprint: "174"
 ---
 
 # Autonomous Codegen with Quality Gates
 
-**Framework Version**: SDLC 6.1.0
+**Framework Version**: SDLC 6.1.1
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (New Methodology — requires ADR)
 **Effective Date**: February 18, 2026
@@ -84,7 +84,7 @@ ALLOWED_COMMANDS = [
 
 ### 3.1 Improvement Over Anthropic Pattern
 
-SDLC 6.1.0 adds **Quality Gates** to catch issues BEFORE merge, transforming the autonomous coding loop from "generate and hope" to "generate, validate, and verify."
+SDLC 6.1.1 adds **Quality Gates** to catch issues BEFORE merge, transforming the autonomous coding loop from "generate and hope" to "generate, validate, and verify."
 
 | Stage | Anthropic Pattern | SDLC Enhancement |
 |-------|-------------------|------------------|
@@ -291,7 +291,7 @@ Platform implementations should map these states to their evidence storage syste
 
 ## 9. Comparison with Industry Approaches
 
-| Aspect | Devin | SWE-Agent | Anthropic Quickstart | SDLC 6.1.0 |
+| Aspect | Devin | SWE-Agent | Anthropic Quickstart | SDLC 6.1.1 |
 |--------|-------|-----------|---------------------|------------|
 | **Quality Gates** | None | None | Command allowlist | 4-Gate Pipeline |
 | **Security** | Black box | Sandboxed | Bash allowlist | Policy-as-Code + SAST + Evidence |
@@ -304,7 +304,7 @@ Platform implementations should map these states to their evidence storage syste
 
 ## 10. AI Governance Principles Alignment
 
-This methodology aligns with SDLC 6.1.0 AI Governance Principles:
+This methodology aligns with SDLC 6.1.1 AI Governance Principles:
 
 | Principle | How This Methodology Complies |
 |-----------|-------------------------------|
@@ -320,7 +320,7 @@ This methodology aligns with SDLC 6.1.0 AI Governance Principles:
 
 ## 11. References
 
-- **SDLC 6.1.0**: Section 7 (Quality Assurance System), AI Governance Principles
+- **SDLC 6.1.1**: Section 7 (Quality Assurance System), AI Governance Principles
 - **Industry**: Open-source autonomous coding agent patterns (two-agent, JSON persistence)
 - **Security**: OWASP Top 10, CWE Top 25 for AI-generated code validation
 
