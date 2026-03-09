@@ -1,15 +1,15 @@
 # 03-Agent-Templates - AI Assistant Configurations
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 29, 2026
 **Status**: ACTIVE - Placeholder for Sprint 120+
-**Structure**: SDLC 6.1.1 (2-level maximum)
+**Structure**: SDLC 6.1.2 (2-level maximum)
 
 ---
 
 ## Overview
 
-Cross-platform AI agent templates for SDLC 6.1.1 compliance. This folder serves as the primary location for AI assistant configuration templates.
+Cross-platform AI agent templates for SDLC 6.1.2 compliance. This folder serves as the primary location for AI assistant configuration templates.
 
 ---
 
@@ -41,13 +41,15 @@ Tool-specific templates have been archived to:
 
 | Tool | Archive Location |
 |------|------------------|
-| Claude Code | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` |
-| Cursor | `10-Archive/05-Legacy/tool-guides-2026/cursor/` |
-| GitHub Copilot | `10-Archive/05-Legacy/tool-guides-2026/copilot/` |
-| ChatGPT | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` |
-| Gemini | `10-Archive/05-Legacy/tool-guides-2026/gemini/` |
+| Claude Code | `10-archive/05-Legacy/tool-guides-2026/claude-code/` |
+| Cursor | `10-archive/05-Legacy/tool-guides-2026/cursor/` |
+| GitHub Copilot | `10-archive/05-Legacy/tool-guides-2026/copilot/` |
+| ChatGPT | `10-archive/05-Legacy/tool-guides-2026/chatgpt/` |
+| Gemini | `10-archive/05-Legacy/tool-guides-2026/gemini/` |
 
-> **Note**: Tool-specific templates archived per SDLC 6.1.1 principle - Framework provides universal patterns, not tool-specific configs.
+> **Note**: Tool-specific templates archived per SDLC 6.1.2 principle - Framework provides universal patterns, not tool-specific configs.
+
+> **Note**: For SASE role-specific persona templates (SOULs), see [../04-SASE-Artifacts/souls/](../04-SASE-Artifacts/souls/). CLAUDE.md templates (workspace context) and SOUL templates (role personas) serve different purposes and complement each other.
 
 ---
 
@@ -63,4 +65,4 @@ For current AI governance guidance:
 
 **Folder Status**: ACTIVE (Placeholder for Context Authority V2)
 **Last Updated**: January 29, 2026
-**Archive Location**: `10-Archive/05-Legacy/tool-guides-2026/`
+**Archive Location**: `10-archive/05-Legacy/tool-guides-2026/`

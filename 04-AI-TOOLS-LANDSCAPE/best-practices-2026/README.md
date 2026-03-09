@@ -1,11 +1,11 @@
 # AI Agent Best Practices 2026
-## SDLC 6.1.1 - Software Engineering 3.0
+## SDLC 6.1.2 - Software Engineering 3.0
 
-**Version:** 6.1.1
+**Version:** 6.1.2
 **Status:** ACTIVE - PRODUCTION READY
 **Date:** February 2, 2026
 **Source:** Expert workflow analysis, Claude Code best practices, expert workflow learnings, Boris Cherny 10 Tactics
-**Framework:** SDLC 6.1.1 (7-Pillar + 2-Section Architecture)
+**Framework:** SDLC 6.1.2 (7-Pillar + 2-Section Architecture)
 
 ---
 
@@ -155,7 +155,7 @@ Use the auth patterns from @src/auth/legacy.js"
 
 ---
 
-## Integration with SDLC 6.1.1
+## Integration with SDLC 6.1.2
 
 ### Sprint Planning Governance (Pillar 2)
 
@@ -203,4 +203,4 @@ All AI-generated code requires:
 
 **Document Status:** ACTIVE - PRODUCTION READY
 **Last Updated:** February 2, 2026
-**Framework:** SDLC 6.1.1
+**Framework:** SDLC 6.1.2

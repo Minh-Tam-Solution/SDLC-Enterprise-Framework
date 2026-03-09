@@ -1,6 +1,6 @@
 # SDLC Team Collaboration Standards - Universal Framework
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 28, 2026
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office
@@ -459,7 +459,7 @@ Handoff: Team A (Design) → Team B (Implementation)
 
 Trigger:
   - Design marked "Ready for Review" in project board
-  - All design documents in /docs/02-Design-Architecture/
+  - All design documents in /docs/02-design/
 
 Acceptance Criteria (DoD):
   - [ ] ADR(s) documented for major decisions

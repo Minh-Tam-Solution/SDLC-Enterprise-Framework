@@ -66,7 +66,7 @@ ABSOLUTELY FORBIDDEN:
 ## ✅ REQUIRED - Document Naming Patterns
 
 ### 1. Design Documents
-**Location**: `/docs/02-Design-Architecture/[subdomain]/`
+**Location**: `/docs/02-design/[subdomain]/`
 
 ```yaml
 Correct Naming Pattern:
@@ -128,7 +128,7 @@ Incorrect Examples:
 ```
 
 ### 4. Sprint Documents (EXCEPTION)
-**Location**: `/docs/08-Team-Management/04-Sprint-Management/`
+**Location**: `/docs/08-collaborate/04-sprint-management/`
 
 ```yaml
 ONLY HERE can sprint references be used:
@@ -237,11 +237,11 @@ Version/Status goes INSIDE document:
 Pattern: NN-Descriptive-Name/
 
 Examples:
-  00-Project-Foundation/
-  01-Planning-Analysis/
-  02-Design-Architecture/
+  00-foundation/
+  01-planning/
+  02-design/
   03-Development-Implementation/
-  08-Team-Management/
+  08-collaborate/
   99-Legacy/
 ```
 
@@ -250,9 +250,9 @@ Examples:
 Pattern: NN-Feature-Category/
 
 Examples:
-  01-System-Architecture/
+  01-system-architecture/
   02-Database-Design/
-  03-API-Design/
+  03-api-design/
   04-UI-UX-Design/
   99-legacy/  (lowercase for archive)
 ```

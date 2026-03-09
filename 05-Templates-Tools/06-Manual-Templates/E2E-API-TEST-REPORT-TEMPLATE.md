@@ -1,11 +1,11 @@
-# E2E API Test Report Template (SDLC 6.1.1)
+# E2E API Test Report Template (SDLC 6.1.2)
 
 **Version**: 1.0.0
 **Date**: [YYYY-MM-DD]
 **Status**: [DRAFT | IN REVIEW | APPROVED]
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.1
-**Location**: `docs/05-test/03-E2E-Testing/reports/E2E-API-REPORT-YYYY-MM-DD.md`
+**Framework**: SDLC 6.1.2
+**Location**: `docs/05-test/03-e2e-testing/reports/E2E-API-REPORT-YYYY-MM-DD.md`
 
 ---
 
@@ -28,7 +28,7 @@
 | Tests Skipped | [N] | [X]% | - |
 | Security Issues Found | [N] | - | [✅/⚠️/🔴] |
 
-**Pass Rate Target**: ≥80% (SDLC 6.1.1 minimum)
+**Pass Rate Target**: ≥80% (SDLC 6.1.2 minimum)
 **Pass Rate Actual**: [X]%
 **Status**: [✅ PASS | 🔴 FAIL]
 
@@ -38,7 +38,7 @@
 
 **SSOT Validation** (Single Source of Truth):
 
-- [ ] ✅ openapi.json exists in Stage 03 (`docs/03-integrate/02-API-Specifications/openapi.json`)
+- [ ] ✅ openapi.json exists in Stage 03 (`docs/03-integrate/01-api-specifications/openapi.json`)
 - [ ] ✅ No duplicate openapi.json files in codebase
 - [ ] ✅ OpenAPI version: 3.0.x or 3.1.x
 - [ ] ✅ API version matches deployment ([e.g., 1.2.0])
@@ -51,8 +51,8 @@
 ```
 
 **Cross-Reference**:
-- Stage 03 API Spec: [Link to openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
-- COMPLETE-API-ENDPOINT-REFERENCE.md: [Link](../../03-integrate/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
+- Stage 03 API Spec: [Link to openapi.json](../../03-integrate/01-api-specifications/openapi.json)
+- COMPLETE-API-ENDPOINT-REFERENCE.md: [Link](../../03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
 
 ---
 
@@ -190,7 +190,7 @@ sdlcctl e2e cross-reference \
 
 **API Base URL**: [e.g., https://api.example.com/v1]
 **Test Framework**: [e.g., pytest + httpx | Postman/Newman | curl scripts]
-**Test Data**: [Link to fixtures in `docs/05-test/03-E2E-Testing/artifacts/`]
+**Test Data**: [Link to fixtures in `docs/05-test/03-e2e-testing/artifacts/`]
 
 **Environment Variables**:
 ```bash
@@ -246,5 +246,5 @@ Resolution: [Steps taken or ticket created]
 **Document Status**: [DRAFT | APPROVED]
 **Created**: [YYYY-MM-DD]
 **Updated**: [YYYY-MM-DD]
-**Framework**: SDLC 6.1.1
-**Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/02-API-Specifications/)
+**Framework**: SDLC 6.1.2
+**Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/01-api-specifications/)

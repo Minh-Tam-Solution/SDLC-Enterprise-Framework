@@ -1,6 +1,6 @@
 # 💡 HMW (How Might We) Questions Worksheet
 
-**Version**: 6.1.1 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.1.2 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Transform problems into opportunities through generative questions
 **When to Use**: DEFINE → IDEATE transition (SDLC Stage 01-02 - WHAT? → HOW?)
 **Time Required**: 30-60 minutes
@@ -536,7 +536,7 @@ Then cluster HMWs into themes and prioritize by impact × feasibility.
 ---
 
 **Template**: HMW-Questions-Worksheet
-**Part of**: SDLC 6.1.1 Design Thinking Framework
+**Part of**: SDLC 6.1.2 Design Thinking Framework
 **Phase**: DEFINE → IDEATE transition (Stage 01-02)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

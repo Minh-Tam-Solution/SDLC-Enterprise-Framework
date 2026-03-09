@@ -35,8 +35,8 @@ Current SDLC Framework 6.0.1 has gaps in:
 **Project**: SOP Generator (Feb 1-2, 2026)
 **Testing Coverage**: 58 endpoints, 84.5% pass rate
 **Artifacts Created**:
-- `docs/03-Integration-APIs/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`
-- `docs/05-Testing-Quality/03-E2E-Testing/reports/E2E-API-REPORT-{DATE}.md`
+- `docs/03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`
+- `docs/05-test/03-e2e-testing/reports/E2E-API-REPORT-{DATE}.md`
 - `e2e-api-testing` skill v1.1.0 (with Security & GraphQL modes)
 
 ---
@@ -133,16 +133,16 @@ Z-Axis (Maturity Level):
 
 **Stage 03 (Integration)**:
 ```
-docs/03-Integration-APIs/
-└── 02-API-Specifications/
+docs/03-integrate/
+└── 01-api-specifications/
     ├── COMPLETE-API-ENDPOINT-REFERENCE.md  ← 58 endpoints documented
     └── openapi.json                         ← Source spec
 ```
 
 **Stage 05 (Testing)**:
 ```
-docs/05-Testing-Quality/
-└── 03-E2E-Testing/
+docs/05-test/
+└── 03-e2e-testing/
     ├── reports/
     │   └── E2E-API-REPORT-2026-02-01.md     ← Detailed results
     ├── scripts/
@@ -267,14 +267,14 @@ Phases:
 **Content**:
 ```yaml
 Stage 03 → Stage 05 Traceability:
-  docs/03-Integration-APIs/:
-    - 02-API-Specifications/
+  docs/03-integrate/:
+    - 01-api-specifications/
         - COMPLETE-API-ENDPOINT-REFERENCE.md  # Links to test report
         - openapi.json                        # Source for testing
     - README.md                               # Links to both docs
 
-  docs/05-Testing-Quality/:
-    - 03-E2E-Testing/
+  docs/05-test/:
+    - 03-e2e-testing/
         - reports/E2E-API-REPORT-{DATE}.md    # Links to API ref
         - scripts/test_all_endpoints.py
         - artifacts/auth_token.txt
@@ -326,13 +326,13 @@ Security Testing Modes:
 **Content**:
 ```
 <PROJECT_ROOT>/docs/
-├── 03-Integration-APIs/
-│   └── 02-API-Specifications/
+├── 03-integrate/
+│   └── 01-api-specifications/
 │       ├── COMPLETE-API-ENDPOINT-REFERENCE.md  # Stage 03
 │       └── openapi.json
 
-└── 05-Testing-Quality/
-    ├── 03-E2E-Testing/
+└── 05-test/
+    ├── 03-e2e-testing/
     │   ├── reports/                    # Test reports
     │   │   └── E2E-API-REPORT-{DATE}.md
     │   ├── scripts/                    # Test scripts
@@ -343,7 +343,7 @@ Security Testing Modes:
     │   └── changelogs/
     │       └── CHANGELOG-{DATE}.md
     │
-    └── 04-Integration-Testing/
+    └── 04-integration-testing/
         ├── reports/
         └── scripts/
 ```

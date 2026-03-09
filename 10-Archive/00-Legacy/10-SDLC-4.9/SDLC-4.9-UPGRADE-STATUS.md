@@ -343,7 +343,7 @@ Other implementation guides to be identified and migrated:
 - ✅ `SDLC-Executive-Summary.md` (version 4.9.0 inside document - GOOD)
 
 **Feature-Based Naming** (Describe WHAT, not WHEN):
-- ❌ `SPRINT-32-Deployment-Plan.md` (temporal - BAD, except in /08-Team-Management/04-Sprint-Management/)
+- ❌ `SPRINT-32-Deployment-Plan.md` (temporal - BAD, except in /08-collaborate/04-sprint-management/)
 - ✅ `Deployment-Plan-Production-Golive.md` (feature-based - GOOD)
 
 **Kebab-Case Format**:

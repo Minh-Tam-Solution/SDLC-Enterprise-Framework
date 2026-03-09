@@ -23,7 +23,7 @@ Verify API documentation exists and is complete before testing begins.
 ```yaml
 Phase 0 Tasks:
   - [ ] Locate COMPLETE-API-ENDPOINT-REFERENCE.md in Stage 03
-  - [ ] Verify openapi.json exists (SSOT location: docs/03-Integration-APIs/02-API-Specifications/)
+  - [ ] Verify openapi.json exists (SSOT location: docs/03-integrate/01-api-specifications/)
   - [ ] Check API documentation completeness (all endpoints documented)
   - [ ] Identify undocumented endpoints for later documentation
   - [ ] Note authentication requirements
@@ -62,8 +62,8 @@ Phase 1 Tasks:
   - [ ] Verify token validity
 
 Folder Structure:
-  docs/05-Testing-Quality/
-  └── 03-E2E-Testing/
+  docs/05-test/
+  └── 03-e2e-testing/
       ├── reports/           # Test reports go here
       ├── scripts/           # Test scripts
       ├── artifacts/         # Runtime artifacts (gitignored)
@@ -136,7 +136,7 @@ import json
 
 def load_openapi_spec():
     """Load OpenAPI spec from Stage 03 (SSOT)"""
-    spec_path = Path("docs/03-Integration-APIs/02-API-Specifications/openapi.json")
+    spec_path = Path("docs/03-integrate/01-api-specifications/openapi.json")
     return json.loads(spec_path.read_text())
 
 def execute_endpoint_tests(spec, auth_token):
@@ -209,8 +209,8 @@ Generate comprehensive E2E test report with actionable findings.
 
 ## Cross-Reference
 
-- **API Documentation**: [Stage 03 API Reference](../../../03-Integration-APIs/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
-- **OpenAPI Spec**: [openapi.json](../../../03-Integration-APIs/02-API-Specifications/openapi.json)
+- **API Documentation**: [Stage 03 API Reference](../../../03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
+- **OpenAPI Spec**: [openapi.json](../../../03-integrate/01-api-specifications/openapi.json)
 
 ## Appendix
 
@@ -222,7 +222,7 @@ Generate comprehensive E2E test report with actionable findings.
 
 ### Report Location
 ```
-docs/05-Testing-Quality/03-E2E-Testing/reports/E2E-API-REPORT-{YYYY-MM-DD}.md
+docs/05-test/03-e2e-testing/reports/E2E-API-REPORT-{YYYY-MM-DD}.md
 ```
 
 ### Exit Criteria
@@ -263,7 +263,7 @@ Updates to API Reference:
 
 - **Test Status**: PASS
 - **Last Tested**: 2026-02-15
-- **Test Report**: [E2E Report 2026-02-15](../../05-Testing-Quality/03-E2E-Testing/reports/E2E-API-REPORT-2026-02-15.md#users)
+- **Test Report**: [E2E Report 2026-02-15](../../05-test/03-e2e-testing/reports/E2E-API-REPORT-2026-02-15.md#users)
 
 #### Real Example (from E2E test)
 ```json
@@ -300,7 +300,7 @@ Ensure bidirectional traceability between Stage 03 and Stage 05.
 
 ```yaml
 Stage 03 → Stage 05:
-  docs/03-Integration-APIs/02-API-Specifications/:
+  docs/03-integrate/01-api-specifications/:
     COMPLETE-API-ENDPOINT-REFERENCE.md:
       - Links to: E2E-API-REPORT-{DATE}.md
       - Per endpoint: Test status, last tested date
@@ -314,7 +314,7 @@ Stage 03 → Stage 05:
       - Lists related test reports
 
 Stage 05 → Stage 03:
-  docs/05-Testing-Quality/03-E2E-Testing/:
+  docs/05-test/03-e2e-testing/:
     reports/E2E-API-REPORT-{DATE}.md:
       - Links to: COMPLETE-API-ENDPOINT-REFERENCE.md
       - References: openapi.json (via relative path)
@@ -390,10 +390,10 @@ Validation Rules:
 sdlcctl validate-e2e --project-path . --min-pass-rate 80
 
 # Validate cross-references
-sdlcctl validate-cross-reference --stage-03 docs/03-Integration-APIs --stage-05 docs/05-Testing-Quality
+sdlcctl validate-cross-reference --stage-03 docs/03-integrate --stage-05 docs/05-test
 
 # Generate report from test results
-sdlcctl generate-e2e-report --results test_results.json --output docs/05-Testing-Quality/03-E2E-Testing/reports/
+sdlcctl generate-e2e-report --results test_results.json --output docs/05-test/03-e2e-testing/reports/
 ```
 
 ---

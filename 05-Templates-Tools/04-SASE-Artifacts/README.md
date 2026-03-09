@@ -1,18 +1,18 @@
 # SASE Artifact Templates
 ## Streamlined Templates for Human-Agent Collaboration
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 14, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Pillar**: 5 - SASE Integration
-**Framework**: SDLC 6.1.1 + SASE/SE 3.0 Integration
+**Framework**: SDLC 6.1.2 + SASE/SE 3.0 Integration
 **Reference**: arXiv:2509.06216v2 (Software Agentic Software Engineering)
 
 ---
 
 ## Overview
 
-**SASE (Software Agentic Software Engineering)** defines artifact templates for structured human-agent collaboration. As of SDLC 6.1.1, we use:
+**SASE (Software Agentic Software Engineering)** defines artifact templates for structured human-agent collaboration. As of SDLC 6.1.2, we use:
 
 - **AGENTS.md** - Industry standard for AI context (replaces BRS/MTS)
 - **3 Governance Artifacts** - CRP, MRP, VCR for oversight and audit
@@ -43,7 +43,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│               SASE WORKFLOW (SDLC 6.1.1)                            │
+│               SASE WORKFLOW (SDLC 6.1.2)                            │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
 │  Human                          Agent                               │
@@ -181,6 +181,27 @@ Date and time of decision
 
 ---
 
+### SOUL Role Templates (NEW 6.1.2)
+
+17 SASE role-specific personas for AI agents:
+- 8 SE4A executors: coder, tester, architect, pm, pjm, devops, fullstack, reviewer
+- 3 SE4H advisors: ceo, cto, cpo
+- 1 Router: assistant
+- 1 SE4A support: researcher
+- 4 Optional (non-SDLC): writer, sales, cs, itadmin
+
+See [souls/README.md](souls/README.md) for full index and tier availability matrix.
+
+### TEAM Charters (NEW 6.1.2)
+
+10 team composition templates:
+- 7 SDLC function teams: dev, qa, design, executive, fullstack, ops, planning
+- 3 Organizational teams: advisory, business, engineering
+
+See [teams/](teams/) directory.
+
+---
+
 ## Agentic Maturity Levels (Updated for 5.2.0)
 
 | Level | Name | Artifacts Used |
@@ -219,4 +240,4 @@ Date and time of decision
 
 **Document Status**: ACTIVE - PRODUCTION READY
 **Last Updated**: February 14, 2026
-**Framework Version**: 6.1.1
+**Framework Version**: 6.1.2

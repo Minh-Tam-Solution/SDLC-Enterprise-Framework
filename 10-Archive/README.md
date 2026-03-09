@@ -1,4 +1,4 @@
-# 10-Archive: Centralized Legacy Content
+# 10-archive: Centralized Legacy Content
 
 **Version**: 6.0.6
 **Status**: AI-NEVER-READ
@@ -24,7 +24,7 @@ exception: User explicitly requests historical information
 Stage-aligned subdirectories preserve lineage to original SDLC stages:
 
 ```
-10-Archive/
+10-archive/
 ├── README.md           # This file (AI-NEVER-READ)
 ├── 00-Legacy/          # From Stage 00 (Foundation) - Version evolution
 ├── 01-Legacy/          # From Stage 01 (Planning) - Implementation scripts

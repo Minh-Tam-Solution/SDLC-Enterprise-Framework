@@ -118,12 +118,12 @@ This became the catalyst for **SDLC 4.9 enhancement** - expanding from 4 stages 
 ┌────────────────────────────────────────────────────────────────────────┐
 │ Business Question → SDLC Stage → /docs Structure (BFlow Example)      │
 ├────────────────────────────────────────────────────────────────────────┤
-│ 1. WHY?          → Stage 00: Foundation      → 00-Project-Foundation/  │
-│    Tại sao làm?     Why, Vision, Strategy      - 01-Vision/           │
+│ 1. WHY?          → Stage 00: Foundation      → 00-foundation/  │
+│    Tại sao làm?     Why, Vision, Strategy      - 01-vision/           │
 │                                                 - 02-Strategy/          │
-│                                                 - 03-Roadmap/           │
+│                                                 - 03-roadmap/           │
 │                                                                         │
-│ 2. WHAT?         → Stage 01: Planning        → 01-Planning-Analysis/   │
+│ 2. WHAT?         → Stage 01: Planning        → 01-planning/   │
 │    Làm cái gì?      Requirements, Analysis      - 01-Business-Case/    │
 │                                                 - 02-Requirements/      │
 │                                                 - 06-Project-Planning/  │
@@ -131,7 +131,7 @@ This became the catalyst for **SDLC 4.9 enhancement** - expanding from 4 stages 
 │ 3. HOW?          → Stage 02: Design          → 02-Architecture-Design/ │
 │    Làm thế nào?     Architecture, Design        - 01-System-Arch/      │
 │                                                 - 02-Technical-Design/  │
-│                                                 - 03-API-Design/        │
+│                                                 - 03-api-design/        │
 │                                                                         │
 │ 4. BUILD         → Stage 03: Development     → 03-Development/         │
 │    Xây dựng         Code, Implementation        - 01-Backend/          │
@@ -139,7 +139,7 @@ This became the catalyst for **SDLC 4.9 enhancement** - expanding from 4 stages 
 │                                                 - 03-Integration/       │
 │                                                                         │
 │ 5. TEST          → Stage 04: Quality         → 04-Quality-Assurance/   │
-│    Kiểm thử         QA, Validation              - 01-Test-Strategy/    │
+│    Kiểm thử         QA, Validation              - 01-test-plans/    │
 │                                                 - 02-Test-Cases/        │
 │                                                 - 03-Test-Reports/      │
 │                                                                         │
@@ -158,12 +158,12 @@ This became the catalyst for **SDLC 4.9 enhancement** - expanding from 4 stages 
 │                                                 - 02-3rd-Party/         │
 │                                                 - 03-Data-Flow/         │
 │                                                                         │
-│ 9. COLLABORATE   → Stage 08: Team Mgmt       → 08-Team-Management/     │
+│ 9. COLLABORATE   → Stage 08: Team Mgmt       → 08-collaborate/     │
 │    Cộng tác         Team, Sprint, Coordination  - 01-Team-Structure/   │
 │                                                 - 02-Roles-Responsibilities/│
-│                                                 - 04-Sprint-Management/ │
+│                                                 - 04-sprint-management/ │
 │                                                                         │
-│ 10. GOVERN       → Stage 09: Governance      → 09-Executive-Reports/   │
+│ 10. GOVERN       → Stage 09: Governance      → 09-govern/   │
 │     Quản trị        Reports, Compliance         - 01-Status-Reports/   │
 │                                                 - 02-Risk-Management/   │
 │                                                 - 03-Compliance/        │
@@ -231,7 +231,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Root cause analysis (5 Whys to get to core issues)
    - Systemic pattern identification
 
-**BFlow Example**: `/docs/00-Project-Foundation/`
+**BFlow Example**: `/docs/00-foundation/`
 - Vision: BFlow 2.0 Pure V9.0 (conversation-first microservices)
 - Problem: Vietnamese SMEs need affordable, compliant ERP
 - Value: $4.7M disaster prevention + market advantage
@@ -271,7 +271,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Timeline and milestones
    - Risk assessment (initial)
 
-**BFlow Example**: `/docs/01-Planning-Analysis/`
+**BFlow Example**: `/docs/01-planning/`
 - Requirements: 15 P0 Methods (BHXH, VAT, FIFO, PIT)
 - Plan: Sprint 27-32 (6 sprints to production)
 - Value: $3.8M feature parity (9.3% → 37%)
@@ -780,7 +780,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Integration checkpoints (weekly)
    - Go-live coordination (war room 24/7)
 
-**BFlow Example**: `/docs/08-Team-Management/`
+**BFlow Example**: `/docs/08-collaborate/`
 - Team: Remote (6) + Local (5) unified execution
 - Communication: Daily standup 100% attendance
 - Sprint Velocity: A+ ratings both teams (Remote 103%, Local 100%)
@@ -890,7 +890,7 @@ Status: COMPLETE ENTERPRISE FRAMEWORK
    - Go/No-Go Decision:
      * Tech Leads + PM → CTO → CEO (formal review meeting)
 
-**BFlow Example**: `/docs/09-Executive-Reports/`
+**BFlow Example**: `/docs/09-govern/`
 - ROI: 827:1 (82,700% return Sprint 26-33)
 - Budget: $52K spent, $43.03M value delivered
 - Compliance: 100% Vietnamese regulations
@@ -980,19 +980,19 @@ Detailed Flow:
 
 ```yaml
 00. FOUNDATION (WHY?) - Sprint 26 (Nov 1-3):
-   Document: /docs/00-Project-Foundation/03-Roadmap/PLATFORM-ROADMAP.md
+   Document: /docs/00-foundation/03-roadmap/PLATFORM-ROADMAP.md
    Deliverable: BFlow 2.0 Pure V9.0 Strategic Roadmap
    Value: $4.7M (disaster prevention + market advantage)
    Design Thinking: EMPATHIZE (CEO vision → user pain validation)
 
 01. PLANNING (WHAT?) - Sprint 27 (Nov 3-16):
-   Document: /docs/01-Planning-Analysis/06-Project-Planning/PROJECT-IMPLEMENTATION-PLAN.md
+   Document: /docs/01-planning/06-Project-Planning/PROJECT-IMPLEMENTATION-PLAN.md
    Deliverable: 15 P0 Methods Implementation Plan
    Value: $3.8M (feature parity 9.3% → 37%)
    Design Thinking: DEFINE + IDEATE (100+ solution ideas → Top 3 concepts)
 
 02. DESIGN (HOW?) - Sprint 28 (Nov 4-16):
-   Document: /docs/02-Architecture-Design/01-System-Architecture/MICROSERVICES-ARCHITECTURE.md
+   Document: /docs/02-Architecture-Design/01-system-architecture/MICROSERVICES-ARCHITECTURE.md
    Deliverable: 8 Microservices Architecture (OAuth2 + 7 business services)
    Value: Methods 16-19 stable (72-hour monitoring A+ 98.5%)
    Design Thinking: IDEATE complete (technical approach finalized)
@@ -1028,13 +1028,13 @@ Detailed Flow:
    Achievement: Multi-tenant isolation 100% (zero cross-tenant leaks)
 
 08. COLLABORATION (COLLABORATE) - Sprint 31-32 (dual team):
-   Document: /docs/08-Team-Management/04-Sprint-Management/SPRINT-31-32-COORDINATION.md
+   Document: /docs/08-collaborate/04-sprint-management/SPRINT-31-32-COORDINATION.md
    Deliverable: Remote Team (6) + Local Team (5) unified execution
    Value: A+ ratings both teams (Remote 103%, Local 100%)
    Success: Daily standup 100% attendance, sprint goals 100% achieved
 
 09. GOVERNANCE (GOVERN) - Sprint 32 (go-live gate):
-   Document: /docs/09-Executive-Reports/DECEMBER-PRODUCTION-READINESS-99.5-PERCENT.md
+   Document: /docs/09-govern/DECEMBER-PRODUCTION-READINESS-99.5-PERCENT.md
    Deliverable: Risk assessment (85% → 90% confidence), CEO authorization
    Value: $43.03M total platform value (Sprint 26-33)
    Compliance: Vietnamese regulations 100% (BHXH, VAT, FIFO, PIT)

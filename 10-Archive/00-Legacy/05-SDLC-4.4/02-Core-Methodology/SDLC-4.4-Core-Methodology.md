@@ -48,7 +48,7 @@ Provide the authoritative operational methodology for SDLC 4.4.1 Adaptive Govern
 Mandatory_Headers:
   
   Code_Files:
-    design_reference: "DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md"
+    design_reference: "DESIGN: docs/02-design/[module]/[feature]-design.md"
     approval_status: "APPROVED: [YYYY-MM-DD] by [CPO/CTO/CEO]"
     sdlc_compliance: "SDLC: 4.4 Design-First & Document-First"
     
@@ -58,7 +58,7 @@ Mandatory_Headers:
     coverage_target: "COVERAGE: [X]% minimum"
     
   Cultural_Context_Files:
-    cultural_design: "CULTURAL-DESIGN: docs/02-Design-Architecture/Cultural/[feature]-cultural-design.md"
+    cultural_design: "CULTURAL-DESIGN: docs/02-design/Cultural/[feature]-cultural-design.md"
     cultural_approval: "CULTURAL-APPROVED: [YYYY-MM-DD] by [CPO/Cultural-Advisor]"
     market_validation: "MARKET-VALIDATED: [YYYY-MM-DD] by [CPO]"
 ```
@@ -391,7 +391,7 @@ Design-First Gate enforces immutability of ordering: NO implementation evaluatio
 
 ### 18.2 Tri-Pillar Mapping (BFlow Context Override)
 
-> Source Reference: `docs/00-Project-Foundation/01-Vision/BFLOW-UNIFIED-VISION-V7.7.md` — In BFlow's strategic framing, AI carries the foundational WHY (strategic intent intelligence), BPM operationalizes the HOW (process embodiment), and ERP manifests the WHAT (execution & transactional realization). This inverts conventional enterprise ordering and is **authoritative for BFlow**.
+> Source Reference: `docs/00-foundation/01-vision/BFLOW-UNIFIED-VISION-V7.7.md` — In BFlow's strategic framing, AI carries the foundational WHY (strategic intent intelligence), BPM operationalizes the HOW (process embodiment), and ERP manifests the WHAT (execution & transactional realization). This inverts conventional enterprise ordering and is **authoritative for BFlow**.
 
 | Pillar | WHY/HOW/WHAT Emphasis | Governance Anchor | Adaptive Levers | Representative Artifacts | Trace Tags |
 |--------|-----------------------|-------------------|----------------|-------------------------|------------|

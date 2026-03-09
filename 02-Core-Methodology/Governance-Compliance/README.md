@@ -1,20 +1,20 @@
 # Governance & Compliance Standards
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 18, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
-**NEW in 6.1.1**: Agentic docs moved to 03-AI-GOVERNANCE (#13, #14) + Multi-Agent Patterns (#12) + BRS/MTS→AGENTS.md
+**NEW in 6.1.2**: Agentic docs moved to 03-AI-GOVERNANCE (#13, #14) + Multi-Agent Patterns (#12) + BRS/MTS→AGENTS.md
 **NEW in 6.0.6**: Anthropic Best Practices Integration — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.1.1**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.1.2**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
@@ -41,7 +41,7 @@ The following documents were consolidated for clarity:
 | **SDLC-Sprint-Governance.md** | SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md |
 | **SDLC-Quality-Security-Gates.md** | SDLC-Quality-Gates.md + SDLC-Security-Gates.md |
 
-Previous versions moved to `10-Archive/02-Legacy/5.2.0-Deprecated/`
+Previous versions moved to `10-archive/02-Legacy/5.2.0-Deprecated/`
 
 ---
 

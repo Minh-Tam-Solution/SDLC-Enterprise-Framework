@@ -1,9 +1,9 @@
 # 🔄 SDLC Continuous Improvement Guide
 ## How to Evolve the Framework Without Losing Battle-Tested Wisdom
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 16, 2026
-**Status**: ACTIVE - ENHANCED WITH LEGACY DOCUMENT ORGANIZATION STANDARD (6.0.5) + ANTHROPIC PATTERNS INTEGRATION (6.1.1)
+**Status**: ACTIVE - ENHANCED WITH LEGACY DOCUMENT ORGANIZATION STANDARD (6.0.5) + ANTHROPIC PATTERNS INTEGRATION (6.1.2)
 **Authority**: CEO + CPO + CTO Leadership
 **Learning**: Systematic upgrade process validated across 4.6 → 4.7 → 4.8 → 4.9 → 5.0 → 5.1.x → 5.2.0 → 6.0.x
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
@@ -98,7 +98,7 @@ SDLC 5.0 (December 5, 2025):
 SDLC 5.1.0 (December 11, 2025):
   → SASE (Software Agentic Software Engineering) integration
   → 6 SASE artifact templates for AI-Human collaboration
-  → Shortened folder naming convention (00-foundation vs 00-Project-Foundation)
+  → Shortened folder naming convention (00-foundation vs 00-foundation)
   → Framework-First Principle enforcement (Framework = Methodology, Orchestrator = Tool)
 
 SDLC 5.1.3 (January 2026):
@@ -154,7 +154,7 @@ SDLC 6.0.4 (February 8, 2026):
 SDLC 6.0.5 (February 15, 2026):
   → Legacy Document Organization Standard (MANDATORY)
   → Eliminates 99-Legacy/ from active stages (00-09)
-  → Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
+  → Centralizes to 10-archive/{NN}-Legacy/ with stage alignment
   → BFlow validated: 57% size reduction, 34% file reduction
   → Migration script: migrate-legacy-to-archive.sh
   → CI/CD: GitHub Actions blocks 99-Legacy/ reintroduction
@@ -224,8 +224,8 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
 
 ```yaml
 1. Create Comprehensive Legacy Archive:
-   Structure (SDLC 6.1.1):
-     10-Archive/
+   Structure (SDLC 6.1.2):
+     10-archive/
        {NN}-Legacy/
          SDLC-[old-version]-Archive/
            01-Overview/
@@ -233,7 +233,7 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
            ... (mirror main structure)
 
    Example from 4.8:
-     10-Archive/09-Legacy/SDLC-4.7-Archive/ - 27 files preserved
+     10-archive/09-Legacy/SDLC-4.7-Archive/ - 27 files preserved
      Complete directory structure maintained
      All operational documents archived
 
@@ -338,7 +338,7 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
 ```yaml
 1. Version Alignment Verification:
    Automated Check:
-     find . -name "*.md" -not -path "*/10-Archive/*" | xargs grep "4.7"
+     find . -name "*.md" -not -path "*/10-archive/*" | xargs grep "4.7"
 
    Manual Verify:
      - All active files show 4.8
@@ -849,7 +849,7 @@ Document the Journey:
 ### 5. Preserve Wisdom
 ```yaml
 Never Lose Lessons:
-  - Archive don't delete (10-Archive/{NN}-Legacy structure per Legacy Document Organization Standard)
+  - Archive don't delete (10-archive/{NN}-Legacy structure per Legacy Document Organization Standard)
   - Reference past solutions (cross-links)
   - Build on foundations (evolutionary approach)
   - Honor the journey (complete history)
@@ -875,7 +875,7 @@ Never Lose Lessons:
 - [ ] Success criteria defined
 
 ### During Upgrade Execution
-- [ ] Legacy archive structure created (10-Archive/{NN}-Legacy/SDLC-X.X-Archive/)
+- [ ] Legacy archive structure created (10-archive/{NN}-Legacy/SDLC-X.X-Archive/)
 - [ ] All operational files systematically archived (complete inventory)
 - [ ] Archive README comprehensive (purpose, inventory, migration)
 - [ ] Core documents transformed (README, Executive Summary, Core Methodology)
@@ -909,9 +909,9 @@ Never Lose Lessons:
 
 ```yaml
 SDLC Version Archives:
-  - 10-Archive/09-Legacy/SDLC-4.7-Archive/ (27 files, September 2025)
-  - 10-Archive/09-Legacy/Core-Methodology-Archive/ (framework evolution)
-  - 10-Archive/09-Legacy/CodeRabbit-Pilot-Oct2025/ (16 files, pilot evaluation)
+  - 10-archive/09-Legacy/SDLC-4.7-Archive/ (27 files, September 2025)
+  - 10-archive/09-Legacy/Core-Methodology-Archive/ (framework evolution)
+  - 10-archive/09-Legacy/CodeRabbit-Pilot-Oct2025/ (16 files, pilot evaluation)
 
 Archive Structure Best Practices:
   - Mirror main directory structure
@@ -925,13 +925,13 @@ Archive Structure Best Practices:
 
 ```bash
 # Scan for files that should be archived
-find . -name "*-4.7*" -not -path "*/10-Archive/*"
+find . -name "*-4.7*" -not -path "*/10-archive/*"
 
 # Verify version consistency in active files
-grep -r "4.7" --include="*.md" --exclude-dir="10-Archive"
+grep -r "4.7" --include="*.md" --exclude-dir="10-archive"
 
 # Check archive completeness
-ls -la 10-Archive/00-Legacy/08-SDLC-4.7/*/*.md | wc -l
+ls -la 10-archive/00-Legacy/08-SDLC-4.7/*/*.md | wc -l
 
 # Validate internal links
 # (Use link checker tool)
@@ -1010,7 +1010,7 @@ Positioning Achievement:
    - Enhancement decided: ADDITIVE (90% preserve + 10% enhance)
 
 2. Systematic Preservation Executed: ✅
-   - Complete archive structure (10-Archive/{NN}-Legacy/SDLC-4.8-Archive/)
+   - Complete archive structure (10-archive/{NN}-Legacy/SDLC-4.8-Archive/)
    - Comprehensive README with migration tracking
    - SDLC-4.9-UPGRADE-STATUS.md for progress tracking
    - Historical continuity maintained (review before upgrade)
@@ -1211,7 +1211,7 @@ Context:
 What Changed:
   1. RFC-001 Legacy Document Organization (MANDATORY):
      - 99-Legacy/ eliminated from active stages
-     - Centralized to 10-Archive/{NN}-Legacy/
+     - Centralized to 10-archive/{NN}-Legacy/
      - BFlow validated: 57% size reduction
 
   2. SPEC-0001 Anti-Vibecoding Alignment:
@@ -1283,7 +1283,7 @@ Key Lesson:
 ### Criteria for 6.1 Minor Update
 ```yaml
 Status: SDLC 6.1.0 COMPLETE (February 18, 2026)
-Next Patch: 6.1.1 COMPLETE (February 21, 2026)
+Next Patch: 6.1.2 COMPLETE (February 21, 2026)
 
 Indicators:
   - 3-5 new AI Governance patterns validated
@@ -1332,13 +1332,13 @@ Potential Transformations:
 ---
 
 **Document**: SDLC-Continuous-Improvement-Guide
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 16, 2026
 **Status**: ACTIVE - ENHANCED WITH LEGACY ORG STANDARD + SPEC-0001 + ANTHROPIC PATTERNS INTEGRATION
 **Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.6)
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 6.1.1 adds Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template. SDLC 6.0.5 added Legacy Document Organization Standard, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
-**Framework**: SDLC 6.1.1
+**Latest**: SDLC 6.1.2 adds Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template. SDLC 6.0.5 added Legacy Document Organization Standard, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
+**Framework**: SDLC 6.1.2
 
 ***"Evolution without losing revolution."*** 🔄
 

@@ -64,7 +64,7 @@ Universal_Header_Template:
 #!/usr/bin/env python3
 """
 SDLC: 4.5 Enhanced Oversight + Zero Facade Tolerance
-DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md
+DESIGN: docs/02-design/[module]/[feature]-design.md
 APPROVAL: APPROVED [YYYY-MM-DD] by [CPO/CTO/CEO]
 AUTHENTICITY: Database-backed functionality - Zero facade tolerance
 IMPLEMENTATION: Real business logic - No mock/fake/dummy patterns
@@ -108,7 +108,7 @@ class AuthenticImplementation:
 ```javascript
 /**
  * SDLC: 4.5 Enhanced Oversight + Zero Facade Tolerance
- * DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md
+ * DESIGN: docs/02-design/[module]/[feature]-design.md
  * APPROVAL: APPROVED [YYYY-MM-DD] by [CPO/CTO/CEO]
  * AUTHENTICITY: Database-backed functionality - Zero facade tolerance
  * IMPLEMENTATION: Real business logic - No mock/fake/dummy patterns
@@ -312,7 +312,7 @@ Architecture_Documentation_Headers:
 **Configuration File Header Template**:
 ```yaml
 # SDLC 4.6 Enhanced Oversight Configuration
-# DESIGN: docs/02-Design-Architecture/[module]/[feature]-config-design.md
+# DESIGN: docs/02-design/[module]/[feature]-config-design.md
 # APPROVAL: APPROVED [YYYY-MM-DD] by [DevOps-Lead/CTO]
 # AUTHENTICITY: Real environment configuration - No mock settings
 # IMPLEMENTATION: Production-ready configuration - No placeholder values
@@ -481,7 +481,7 @@ class UniversalDocumentationValidationFramework:
 #!/usr/bin/env python3
 """
 SDLC: 4.5 Enhanced Oversight + Zero Facade Tolerance
-DESIGN: docs/02-Design-Architecture/api/user-management-design.md
+DESIGN: docs/02-design/api/user-management-design.md
 APPROVAL: APPROVED 2025-09-21 by CPO
 AUTHENTICITY: PostgreSQL-backed user operations - Zero facade tolerance
 IMPLEMENTATION: Real authentication logic - No mock security
@@ -504,7 +504,7 @@ class AuthenticUser(AbstractUser):
 ```javascript
 /**
  * SDLC: 4.5 Enhanced Oversight + Zero Facade Tolerance
- * DESIGN: docs/02-Design-Architecture/frontend/dashboard-design.md
+ * DESIGN: docs/02-design/frontend/dashboard-design.md
  * APPROVAL: APPROVED 2025-09-21 by CTO
  * AUTHENTICITY: API-backed dashboard - Zero facade tolerance
  * IMPLEMENTATION: Real data visualization - No mock charts
@@ -539,7 +539,7 @@ const AuthenticDashboard = () => {
 ```java
 /**
  * SDLC: 4.5 Enhanced Oversight + Zero Facade Tolerance
- * DESIGN: docs/02-Design-Architecture/service/business-logic-design.md
+ * DESIGN: docs/02-design/service/business-logic-design.md
  * APPROVAL: APPROVED 2025-09-21 by CTO
  * AUTHENTICITY: JPA-backed business operations - Zero facade tolerance
  * IMPLEMENTATION: Real business calculations - No mock logic

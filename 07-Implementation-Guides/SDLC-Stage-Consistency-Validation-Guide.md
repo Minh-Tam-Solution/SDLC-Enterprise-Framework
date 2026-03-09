@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Date**: February 1, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Specification**: SPEC-0021 Stage Consistency Validation (moved to Orchestrator `docs/05-test/`)
 **Target**: Developers, Tech Leads, QA Engineers implementing 4-stage consistency validation
 
@@ -390,7 +390,7 @@ vim .sdlc/checklists/pre-implementation.md
 # 2. For current feature, validate each stage:
 
 # Stage 01 (Planning): Does specification exist?
-ls docs/01-planning/03-Functional-Requirements/ | grep -i "feature-name"
+ls docs/01-planning/04-functional-requirements/ | grep -i "feature-name"
 # ✅ If yes: Check box
 # ❌ If no: Create requirement document first
 
@@ -1230,7 +1230,7 @@ Found a better validation pattern? Share it!
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 1, 2026
-**Framework Version**: SDLC 6.1.1
+**Framework Version**: SDLC 6.1.2
 **Specification**: SPEC-0021 v1.0.0
 
 ---

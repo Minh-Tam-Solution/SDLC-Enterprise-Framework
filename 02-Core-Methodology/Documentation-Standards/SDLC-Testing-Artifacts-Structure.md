@@ -1,7 +1,7 @@
 # Testing Artifacts Folder Structure
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Last Updated**: February 2026
 
@@ -18,12 +18,12 @@ This document defines the standardized folder structure for testing artifacts in
 ```
 <PROJECT_ROOT>/docs/
 │
-├── 03-Integration-APIs/                    # Stage 03 - Integration & APIs
+├── 03-integrate/                    # Stage 03 - Integration & APIs
 │   ├── 01-API-Contracts/
 │   │   ├── README.md                       # Links to integration tests
 │   │   └── api-contracts/
 │   │
-│   ├── 02-API-Specifications/              # SSOT for API documentation
+│   ├── 01-api-specifications/              # SSOT for API documentation
 │   │   ├── COMPLETE-API-ENDPOINT-REFERENCE.md   # Main API docs
 │   │   │   └── [Links to Stage 05 test reports]
 │   │   ├── openapi.json                    # SINGLE SOURCE (SSOT)
@@ -33,9 +33,9 @@ This document defines the standardized folder structure for testing artifacts in
 │   └── 03-Integration-Guides/
 │       └── README.md
 │
-└── 05-Testing-Quality/                     # Stage 05 - Testing & Quality
+└── 05-test/                     # Stage 05 - Testing & Quality
     │
-    ├── 01-Test-Strategy/
+    ├── 01-test-plans/
     │   └── TEST-STRATEGY.md
     │
     ├── 02-Unit-Testing/
@@ -43,7 +43,7 @@ This document defines the standardized folder structure for testing artifacts in
     │   │   └── coverage-report.html
     │   └── README.md
     │
-    ├── 03-E2E-Testing/                     # E2E API Testing
+    ├── 03-e2e-testing/                     # E2E API Testing
     │   ├── reports/                        # Test reports (committed)
     │   │   ├── E2E-API-REPORT-2026-02-15.md
     │   │   ├── E2E-API-REPORT-2026-02-01.md
@@ -67,7 +67,7 @@ This document defines the standardized folder structure for testing artifacts in
     │   │
     │   └── README.md                       # Links to Stage 03
     │
-    ├── 04-Integration-Testing/
+    ├── 04-integration-testing/
     │   ├── reports/
     │   ├── scripts/
     │   └── README.md
@@ -104,7 +104,7 @@ This document defines the standardized folder structure for testing artifacts in
 
 #### Location
 ```
-docs/03-Integration-APIs/02-API-Specifications/
+docs/03-integrate/01-api-specifications/
 ```
 
 #### Files
@@ -118,10 +118,10 @@ docs/03-Integration-APIs/02-API-Specifications/
 #### SSOT Rules
 ```yaml
 openapi.json:
-  Location: docs/03-Integration-APIs/02-API-Specifications/openapi.json
+  Location: docs/03-integrate/01-api-specifications/openapi.json
   Rule: This is the ONLY location for openapi.json
   Access from Stage 05:
-    - Symlink: artifacts/openapi.json -> ../../../03-Integration-APIs/...
+    - Symlink: artifacts/openapi.json -> ../../../03-integrate/...
     - OR relative path in scripts
   Prohibited:
     - Copying to Stage 05
@@ -135,7 +135,7 @@ openapi.json:
 
 #### Location
 ```
-docs/05-Testing-Quality/03-E2E-Testing/
+docs/05-test/03-e2e-testing/
 ```
 
 #### Subfolders
@@ -214,7 +214,7 @@ Format:
 
 #### Location
 ```
-docs/05-Testing-Quality/05-Security-Testing/
+docs/05-test/05-Security-Testing/
 ```
 
 #### Subfolders
@@ -256,18 +256,18 @@ Report Requirements:
 ### Project Root .gitignore
 ```gitignore
 # Testing artifacts - ephemeral files
-docs/05-Testing-Quality/*/artifacts/auth_token.txt
-docs/05-Testing-Quality/*/artifacts/*.json
+docs/05-test/*/artifacts/auth_token.txt
+docs/05-test/*/artifacts/*.json
 
 # Keep README files
-!docs/05-Testing-Quality/*/artifacts/README.md
-!docs/05-Testing-Quality/*/artifacts/.gitignore
+!docs/05-test/*/artifacts/README.md
+!docs/05-test/*/artifacts/.gitignore
 
 # Coverage reports (if large/binary)
-docs/05-Testing-Quality/02-Unit-Testing/coverage/*.html
+docs/05-test/02-Unit-Testing/coverage/*.html
 
 # Security testing sensitive data
-docs/05-Testing-Quality/05-Security-Testing/*/credentials/
+docs/05-test/05-Security-Testing/*/credentials/
 ```
 
 ### artifacts/.gitignore
@@ -288,15 +288,15 @@ docs/05-Testing-Quality/05-Security-Testing/*/credentials/
 
 #### Stage 03 README
 ```markdown
-# docs/03-Integration-APIs/README.md
+# docs/03-integrate/README.md
 
 ## Testing & Validation
 
 The APIs documented in this stage are tested in Stage 05:
 
-- **E2E Testing**: [docs/05-Testing-Quality/03-E2E-Testing/](../05-Testing-Quality/03-E2E-Testing/)
-- **Security Testing**: [docs/05-Testing-Quality/05-Security-Testing/](../05-Testing-Quality/05-Security-Testing/)
-- **Latest E2E Report**: [Latest Report](../05-Testing-Quality/03-E2E-Testing/reports/)
+- **E2E Testing**: [docs/05-test/03-e2e-testing/](../05-test/03-e2e-testing/)
+- **Security Testing**: [docs/05-test/05-Security-Testing/](../05-test/05-Security-Testing/)
+- **Latest E2E Report**: [Latest Report](../05-test/03-e2e-testing/reports/)
 
 ## SSOT
 
@@ -306,14 +306,14 @@ Stage 05 should reference this file via symlink or relative path.
 
 #### Stage 05 README
 ```markdown
-# docs/05-Testing-Quality/03-E2E-Testing/README.md
+# docs/05-test/03-e2e-testing/README.md
 
 ## API Specifications
 
 Tests in this folder validate the APIs documented in Stage 03:
 
-- **API Reference**: [docs/03-Integration-APIs/02-API-Specifications/](../../03-Integration-APIs/02-API-Specifications/)
-- **OpenAPI Spec**: [openapi.json](../../03-Integration-APIs/02-API-Specifications/openapi.json)
+- **API Reference**: [docs/03-integrate/01-api-specifications/](../../03-integrate/01-api-specifications/)
+- **OpenAPI Spec**: [openapi.json](../../03-integrate/01-api-specifications/openapi.json)
 
 ## SSOT Note
 
@@ -328,14 +328,14 @@ The `artifacts/openapi.json` in this folder is a symlink, not a copy.
 ### Create Structure
 ```bash
 # Create Stage 05 E2E testing folders
-mkdir -p docs/05-Testing-Quality/03-E2E-Testing/{reports,scripts,artifacts,changelogs}
+mkdir -p docs/05-test/03-e2e-testing/{reports,scripts,artifacts,changelogs}
 
 # Create Security testing folders
-mkdir -p docs/05-Testing-Quality/05-Security-Testing/{owasp-top10/findings,penetration,scripts}
+mkdir -p docs/05-test/05-Security-Testing/{owasp-top10/findings,penetration,scripts}
 
 # Create symlink to Stage 03 openapi.json
-cd docs/05-Testing-Quality/03-E2E-Testing/artifacts
-ln -s ../../../03-Integration-APIs/02-API-Specifications/openapi.json openapi.json
+cd docs/05-test/03-e2e-testing/artifacts
+ln -s ../../../03-integrate/01-api-specifications/openapi.json openapi.json
 
 # Create .gitignore for artifacts
 echo -e "*\n!.gitignore\n!README.md" > .gitignore
@@ -354,7 +354,7 @@ This folder contains ephemeral testing artifacts that are NOT committed to git.
 ## SSOT
 
 The `openapi.json` here is a SYMLINK to:
-`docs/03-Integration-APIs/02-API-Specifications/openapi.json`
+`docs/03-integrate/01-api-specifications/openapi.json`
 
 Do NOT copy the file - always use the symlink.
 EOF
@@ -366,8 +366,8 @@ EOF
 [SDLC CLI] validate-structure --stage 05
 
 # Manual check
-ls -la docs/05-Testing-Quality/03-E2E-Testing/artifacts/openapi.json
-# Should show: openapi.json -> ../../../03-Integration-APIs/...
+ls -la docs/05-test/03-e2e-testing/artifacts/openapi.json
+# Should show: openapi.json -> ../../../03-integrate/...
 ```
 
 ---
@@ -377,20 +377,20 @@ ls -la docs/05-Testing-Quality/03-E2E-Testing/artifacts/openapi.json
 ### For New Projects
 ```yaml
 Stage 03:
-  - [ ] docs/03-Integration-APIs/02-API-Specifications/ exists
+  - [ ] docs/03-integrate/01-api-specifications/ exists
   - [ ] openapi.json present (SSOT)
   - [ ] COMPLETE-API-ENDPOINT-REFERENCE.md present
   - [ ] README.md links to Stage 05
 
 Stage 05 - E2E:
-  - [ ] docs/05-Testing-Quality/03-E2E-Testing/ exists
+  - [ ] docs/05-test/03-e2e-testing/ exists
   - [ ] reports/, scripts/, artifacts/, changelogs/ subfolders
   - [ ] artifacts/.gitignore configured
   - [ ] artifacts/openapi.json is SYMLINK (not copy)
   - [ ] README.md links to Stage 03
 
 Stage 05 - Security:
-  - [ ] docs/05-Testing-Quality/05-Security-Testing/ exists
+  - [ ] docs/05-test/05-Security-Testing/ exists
   - [ ] owasp-top10/ subfolder for OWASP reports
   - [ ] README.md with links
 

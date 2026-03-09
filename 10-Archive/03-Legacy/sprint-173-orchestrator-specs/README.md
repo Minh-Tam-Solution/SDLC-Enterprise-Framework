@@ -27,10 +27,10 @@ The SDLC Framework follows a **3-ring Concentric Circles architecture**:
 | SPEC-0015 | 02-DESIGN | `docs/02-design/14-Technical-Specs/` |
 | SPEC-0016 | 03-INTEGRATE | `docs/03-integrate/03-Integration-Guides/` |
 | SPEC-0017 | 02-DESIGN | `docs/02-design/14-Technical-Specs/` |
-| SPEC-0018 | 04-BUILD | `docs/04-build/01-Development-Standards/` |
-| SPEC-0019 | 05-TEST | `docs/05-test/01-Test-Strategy/` |
+| SPEC-0018 | 04-BUILD | `docs/04-build/01-development-standards/` |
+| SPEC-0019 | 05-TEST | `docs/05-test/01-test-plans/` |
 | SPEC-0020 | 02-DESIGN | `docs/02-design/14-Technical-Specs/` |
-| SPEC-0021 | 05-TEST | `docs/05-test/01-Test-Strategy/` |
+| SPEC-0021 | 05-TEST | `docs/05-test/01-test-plans/` |
 
 ## Methodology SPECs Retained in Framework
 

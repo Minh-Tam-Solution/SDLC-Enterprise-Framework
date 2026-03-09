@@ -1,19 +1,19 @@
 # SDLC Sprint Planning Guide
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 8, 2026
 **Type**: Sprint Planning Guide (Pillar 2 Compliance)
 **Status**: ACTIVE
 **Authority**: CTO Office
 **AI Governance**: Aligns with Planning Mode Principle (Risk-Based triggers)
-**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.1.1 flattened)
+**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.1.2 flattened)
 **NEW in 6.0.4**: 3-Phase Sprint Lifecycle Model + TDD Workflow Integration
 
 ---
 
 ## Overview
 
-This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.1.1 Sprint Planning Governance.
+This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.1.2 Sprint Planning Governance.
 
 **When to use this guide**:
 - Starting a new sprint
@@ -532,4 +532,4 @@ Documentation:
 **Document Status**: ACTIVE
 **Last Updated**: February 8, 2026
 **Owner**: CTO Office
-**Version**: 6.1.1 (3-Phase Sprint Model + TDD Integration)
+**Version**: 6.1.2 (3-Phase Sprint Model + TDD Integration)

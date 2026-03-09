@@ -157,7 +157,7 @@
 - `/05-Deployment/` → Stage 05 (DEPLOY)
 - `/06-Operations/` → Stage 06 (OPERATE)
 - `/07-Integration/` → Stage 07 (INTEGRATE)
-- `/08-Team-Management/` → Stage 08 (COLLABORATE)
+- `/08-collaborate/` → Stage 08 (COLLABORATE)
 - `/09-Governance/` → Stage 09 (GOVERN)
 
 **Impact**: Systematic, AI-parseable, discoverable structure

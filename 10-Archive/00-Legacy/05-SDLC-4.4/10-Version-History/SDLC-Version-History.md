@@ -30,12 +30,12 @@
 ### Required File Headers
 ```yaml
 Code_Files:
-  - "DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md"
+  - "DESIGN: docs/02-design/[module]/[feature]-design.md"
   - "APPROVED: [YYYY-MM-DD] by [CPO/CTO/CEO]"
   - "SDLC: 4.4 Design-First & Document-First"
 
 Cultural_Context_Files:
-  - "CULTURAL-DESIGN: docs/02-Design-Architecture/Cultural/[feature]-cultural-design.md"
+  - "CULTURAL-DESIGN: docs/02-design/Cultural/[feature]-cultural-design.md"
   - "CULTURAL-APPROVED: [YYYY-MM-DD] by [CPO/Cultural-Advisor]"
   - "MARKET-VALIDATED: [YYYY-MM-DD] by [CPO]"
 ```

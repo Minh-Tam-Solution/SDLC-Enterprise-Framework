@@ -1,4 +1,4 @@
-# E2E API Testing Quick Start (SDLC 6.1.1)
+# E2E API Testing Quick Start (SDLC 6.1.2)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
@@ -10,7 +10,7 @@
 
 ## Overview
 
-This guide helps you set up standardized E2E API testing in under 30 minutes using SDLC 6.1.1 templates and workflows.
+This guide helps you set up standardized E2E API testing in under 30 minutes using SDLC 6.1.2 templates and workflows.
 
 **Time Savings**: 3 hours (manual) → 30 minutes (with templates)
 
@@ -18,7 +18,7 @@ This guide helps you set up standardized E2E API testing in under 30 minutes usi
 
 ## Prerequisites
 
-- [ ] OpenAPI 3.0+ specification (Stage 03: `docs/03-integrate/02-API-Specifications/openapi.json`)
+- [ ] OpenAPI 3.0+ specification (Stage 03: `docs/03-integrate/01-api-specifications/openapi.json`)
 - [ ] Test credentials (API keys, OAuth tokens)
 - [ ] e2e-api-testing skill v1.2.0+ (Claude Code skill)
 - [ ] sdlcctl CLI installed (optional, for automation)
@@ -36,13 +36,13 @@ This guide helps you set up standardized E2E API testing in under 30 minutes usi
 ```bash
 # Check API documentation exists (SSOT compliance)
 find . -name "openapi.json" -type f
-# Expected: EXACTLY ONE file at docs/03-integrate/02-API-Specifications/openapi.json
+# Expected: EXACTLY ONE file at docs/03-integrate/01-api-specifications/openapi.json
 
 # Validate OpenAPI spec quality
 sdlcctl validate --stage 03 --check api-docs
 
 # Expected output:
-# ✅ openapi.json found at docs/03-integrate/02-API-Specifications/openapi.json
+# ✅ openapi.json found at docs/03-integrate/01-api-specifications/openapi.json
 # ✅ SSOT Compliance: PASS (no duplicates)
 # ✅ 58 endpoints defined
 # ✅ Schema validation PASSED
@@ -53,16 +53,16 @@ sdlcctl validate --stage 03 --check api-docs
 ### Step 2: Create Testing Folder Structure (Stage 05 Setup)
 
 ```bash
-# Create SDLC 6.1.1 compliant folder structure
-mkdir -p docs/05-test/03-E2E-Testing/{reports,scripts,artifacts,security-tests}
+# Create SDLC 6.1.2 compliant folder structure
+mkdir -p docs/05-test/03-e2e-testing/{reports,scripts,artifacts,security-tests}
 
 # Initialize README with SSOT cross-reference
-cat > docs/05-test/03-E2E-Testing/README.md << 'EOF'
+cat > docs/05-test/03-e2e-testing/README.md << 'EOF'
 # E2E API Testing
 
 **Stage**: 05-TEST
-**Framework**: SDLC 6.1.1
-**Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/02-API-Specifications/)
+**Framework**: SDLC 6.1.2
+**Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/01-api-specifications/)
 
 ## Contents
 
@@ -73,7 +73,7 @@ cat > docs/05-test/03-E2E-Testing/README.md << 'EOF'
 
 ## SSOT Principle
 
-**Canonical API Spec**: [openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
+**Canonical API Spec**: [openapi.json](../../03-integrate/01-api-specifications/openapi.json)
 
 **DO NOT COPY** - Always reference Stage 03 canonical source. Use symlinks if needed.
 
@@ -81,7 +81,7 @@ cat > docs/05-test/03-E2E-Testing/README.md << 'EOF'
 
 | API Document (Stage 03) | Test Report (Stage 05) |
 |-------------------------|------------------------|
-| [openapi.json](../../03-integrate/02-API-Specifications/openapi.json) | [Latest Report](reports/) |
+| [openapi.json](../../03-integrate/01-api-specifications/openapi.json) | [Latest Report](reports/) |
 | API Endpoint Reference (see project's API docs) | [Test Coverage](reports/) |
 EOF
 ```
@@ -92,11 +92,11 @@ EOF
 
 ```bash
 # Option 1: Using e2e-api-testing skill (Claude Code)
-/e2e-api-testing --openapi docs/03-integrate/02-API-Specifications/openapi.json
+/e2e-api-testing --openapi docs/03-integrate/01-api-specifications/openapi.json
 
 # Option 2: Using sdlcctl CLI (automated)
 sdlcctl e2e validate \
-  --openapi docs/03-integrate/02-API-Specifications/openapi.json \
+  --openapi docs/03-integrate/01-api-specifications/openapi.json \
   --min-pass-rate 80
 
 # Option 3: Manual testing (curl/Postman)
@@ -184,8 +184,8 @@ sdlcctl e2e cross-reference \
 
 # Check specific files
 sdlcctl e2e cross-reference \
-  --openapi docs/03-Integration-APIs/openapi.json \
-  --test-report docs/05-Testing-Quality/03-E2E-Testing/reports/latest.md
+  --openapi docs/03-integrate/openapi.json \
+  --test-report docs/05-test/03-e2e-testing/reports/latest.md
 ```
 
 ### Report Generation
@@ -195,7 +195,7 @@ sdlcctl e2e cross-reference \
 sdlcctl e2e generate-report \
   --results test-results.json \
   --output reports/ \
-  --openapi docs/03-Integration-APIs/openapi.json
+  --openapi docs/03-integrate/openapi.json
 ```
 
 ---
@@ -206,7 +206,7 @@ sdlcctl e2e generate-report \
 
 | Issue | Solution |
 |-------|----------|
-| `openapi.json not found` | Ensure file is at `docs/03-Integration-APIs/02-API-Specifications/openapi.json` |
+| `openapi.json not found` | Ensure file is at `docs/03-integrate/01-api-specifications/openapi.json` |
 | `Cross-reference FAILED` | Add links in Stage 05 README pointing to Stage 03 |
 | `SSOT violation` | Remove duplicate openapi.json from Stage 05 (only keep in Stage 03) |
 | `Pass rate below threshold` | Fix failing tests or adjust `--min-pass-rate` |

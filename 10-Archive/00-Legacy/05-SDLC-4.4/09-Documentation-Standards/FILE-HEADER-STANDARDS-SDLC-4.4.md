@@ -25,7 +25,7 @@ Required_Header_Elements:
     - Creation/modification dates
     
   Design_First_Requirements:
-    - "DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md"
+    - "DESIGN: docs/02-design/[module]/[feature]-design.md"
     - "APPROVED: [YYYY-MM-DD] by [CPO/CTO/CEO]"
     - "SDLC: 4.4 Design-First & Document-First"
     
@@ -48,7 +48,7 @@ VERSION: [Version number]
 DATE: [YYYY-MM-DD]
 COMPLIANCE: SDLC 4.4 Adaptive Governance Framework
 
-DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md
+DESIGN: docs/02-design/[module]/[feature]-design.md
 APPROVED: [YYYY-MM-DD] by [CPO/CTO/CEO]
 SDLC: 4.4 Design-First & Document-First
 
@@ -86,7 +86,7 @@ Test_File_Headers:
 Cultural_Context_Headers:
   
   Additional_Requirements:
-    - "CULTURAL-DESIGN: docs/02-Design-Architecture/Cultural/[feature]-cultural-design.md"
+    - "CULTURAL-DESIGN: docs/02-design/Cultural/[feature]-cultural-design.md"
     - "CULTURAL-APPROVED: [YYYY-MM-DD] by [CPO/Cultural-Advisor]"
     - "MARKET-VALIDATED: [YYYY-MM-DD] by [CPO]"
     

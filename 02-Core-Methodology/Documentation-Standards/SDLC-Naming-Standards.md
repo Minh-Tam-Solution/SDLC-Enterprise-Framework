@@ -1,6 +1,6 @@
 # SDLC Naming Standards - Universal Framework
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 28, 2026
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
@@ -27,7 +27,7 @@
 
 ### Purpose
 
-This document consolidates **all naming and header standards** for SDLC 6.1.1 Framework:
+This document consolidates **all naming and header standards** for SDLC 6.1.2 Framework:
 - Code file naming (Python, TypeScript, migrations)
 - Document naming (markdown, documentation)
 - Folder structure (10 stages, legacy handling)
@@ -294,7 +294,7 @@ Person Names:
 ### 3.3 Document Naming Patterns
 
 #### Design Documents
-**Location**: `/docs/02-Design-Architecture/[subdomain]/`
+**Location**: `/docs/02-design/[subdomain]/`
 
 ```yaml
 Pattern: Feature-Component-Type.md
@@ -376,7 +376,7 @@ No Status Markers (version goes INSIDE):
 
 ## Part 4: Folder & Directory Standards
 
-### 4.1 Stage Folders (Level 1) - SDLC 6.1.1
+### 4.1 Stage Folders (Level 1) - SDLC 6.1.2
 
 **10 Stages (00-09)** - exactly 10 stages:
 
@@ -428,9 +428,9 @@ Rules:
 Pattern: NN-Feature-Category/
 
 Examples:
-  01-System-Architecture/
+  01-system-architecture/
   02-Database-Design/
-  03-API-Design/
+  03-api-design/
   04-UI-UX-Design/
   99-legacy/  (lowercase for archive)
 ```
@@ -441,13 +441,13 @@ Examples:
 
 ### 5.1 Active Document Header
 
-Apply to **all active SDLC 6.1.1 documents**:
+Apply to **all active SDLC 6.1.2 documents**:
 
 ```markdown
 # [Document Title]
 ## [Subtitle - Purpose]
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Specific Status]
 **Authority**: [Who Approved]
@@ -526,7 +526,7 @@ This document has been **archived** and is **READ-ONLY**. For current active ver
 - Research on methodology origins
 
 **Do NOT Use This Archive For**:
-- New implementations (use active SDLC 6.1.1)
+- New implementations (use active SDLC 6.1.2)
 - Active projects (upgrade to current version)
 - Team training (use current materials)
 
@@ -598,7 +598,7 @@ Core Rules:
 Mapping Table Example:
   | Legacy Element | New Location | Status | Notes |
   |----------------|--------------|--------|-------|
-  | SDLC 6.1.1 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
+  | SDLC 6.1.2 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
 ```
 
 ### 6.3 Archival Anti-Patterns
@@ -656,7 +656,7 @@ def validate_document_name(filename):
 - [ ] Descriptive and permanent
 
 **For Document Headers:**
-- [ ] Version is 6.1.1 (or current)
+- [ ] Version is 6.1.2 (or current)
 - [ ] Date is current
 - [ ] Status clearly stated
 - [ ] Authority/ownership documented
@@ -706,7 +706,7 @@ Automation (Future):
 ```markdown
 # Document Title
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Context]
 **Authority**: [Owner]
@@ -777,7 +777,7 @@ DON'Ts ❌:
 ---
 
 **Document Status**: ACTIVE - MANDATORY ENFORCEMENT
-**Compliance**: Required for all SDLC 6.1.1 projects
+**Compliance**: Required for all SDLC 6.1.2 projects
 **Last Updated**: January 28, 2026
 **Owner**: CPO Office
 

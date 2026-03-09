@@ -327,18 +327,18 @@ State Management Documentation:
 ```
 docs/
 ├── README.md                        # Documentation overview
-├── 00-Project-Foundation/           # Project foundation documents
-│   ├── 01-Vision/                   # Project vision and strategy
-│   ├── 02-Charter/                  # Project charter
-│   ├── 03-Roadmap/                  # Development roadmap
+├── 00-foundation/           # Project foundation documents
+│   ├── 01-vision/                   # Project vision and strategy
+│   ├── 02-charter/                  # Project charter
+│   ├── 03-roadmap/                  # Development roadmap
 │   └── 04-Stakeholders/            # Stakeholder information
-├── 01-Planning-Analysis/            # Planning and analysis documents
+├── 01-planning/            # Planning and analysis documents
 │   ├── 01-Requirements/             # Requirements documentation
 │   ├── 02-Analysis/                 # System analysis
 │   ├── 03-Research/                 # Research and investigation
 │   └── 04-Vietnamese-Business/      # Vietnamese business requirements
-├── 02-Design-Architecture/          # Design and architecture
-│   ├── 01-System-Architecture/      # System architecture
+├── 02-design/          # Design and architecture
+│   ├── 01-system-architecture/      # System architecture
 │   ├── 02-API-Design/              # API design specifications
 │   ├── 03-Database-Design/         # Database design
 │   ├── 04-UI-UX-Design/            # User interface design
@@ -370,12 +370,12 @@ docs/
 │   ├── 02-Integration-Guides/     # Integration procedures
 │   ├── 03-Third-Party/           # Third-party integrations
 │   └── 04-Vietnamese-APIs/       # Vietnamese business APIs
-├── 08-Team-Management/            # Team and project management
+├── 08-collaborate/            # Team and project management
 │   ├── 01-Team-Structure/         # Team organization
 │   ├── 02-Processes/             # Development processes
 │   ├── 03-Communication/         # Communication guidelines
 │   └── 04-Training/              # Training materials
-└── 09-Executive-Reports/          # Executive and stakeholder reports
+└── 09-govern/          # Executive and stakeholder reports
     ├── 01-Status-Reports/         # Project status reports
     ├── 02-Quality-Reports/        # Quality assurance reports
     ├── 03-Performance-Reports/    # Performance reports

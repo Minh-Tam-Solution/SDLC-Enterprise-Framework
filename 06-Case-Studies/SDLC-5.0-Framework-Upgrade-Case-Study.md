@@ -1,7 +1,7 @@
 # SDLC 5.0.0 Framework Upgrade Case Study
 ## From 4.9.1 to 5.0.0: Enterprise-Grade Framework Transformation with Team Collaboration
 
-**Version**: 6.1.1 (Document Version)
+**Version**: 6.1.2 (Document Version)
 **Date**: January 22, 2026
 **Status**: HISTORICAL CASE STUDY - Framework Transformation Complete
 **Authority**: CEO + CPO + CTO Approved (Strategic Score: 9.5/10)
@@ -63,7 +63,7 @@ Onboarding Time:
 
 ### Strategic Context
 
-**Plan Reference**: `docs/09-Executive-Reports/04-Strategic-Updates/2025-12-05-SDLC-5.0-UPGRADE-PLAN-APPROVED.md`
+**Plan Reference**: `docs/09-govern/04-Strategic-Updates/2025-12-05-SDLC-5.0-UPGRADE-PLAN-APPROVED.md`
 
 **CTO + CPO Joint Decision**:
 ```yaml
@@ -280,7 +280,7 @@ Quality Gates:
   - Automated validation where possible
 
 Security Gates:
-  - SECURITY-GATES.md (02-Design-Architecture/)
+  - SECURITY-GATES.md (02-design/)
   - SECURITY-GATES.md (03-Development-Implementation/)
   - OWASP Top 10 integration
   - Dependency vulnerability checks
@@ -713,10 +713,10 @@ Medium-term (Sprint 30-31):
 
 ```yaml
 Strategic Planning:
-  - docs/09-Executive-Reports/04-Strategic-Updates/2025-12-05-SDLC-5.0-UPGRADE-PLAN-APPROVED.md
-  - docs/09-Executive-Reports/01-CTO-Reports/2025-12-05-CTO-INDUSTRY-BEST-PRACTICES-ASSESSMENT.md
-  - docs/09-Executive-Reports/01-CTO-Reports/2025-12-05-CTO-EXECUTION-PLAN-FINAL.md
-  - docs/09-Executive-Reports/02-CPO-Reports/2025-12-05-CPO-PLAN-REVIEW-FINAL-v2.md
+  - docs/09-govern/04-Strategic-Updates/2025-12-05-SDLC-5.0-UPGRADE-PLAN-APPROVED.md
+  - docs/09-govern/01-CTO-Reports/2025-12-05-CTO-INDUSTRY-BEST-PRACTICES-ASSESSMENT.md
+  - docs/09-govern/01-CTO-Reports/2025-12-05-CTO-EXECUTION-PLAN-FINAL.md
+  - docs/09-govern/02-CPO-Reports/2025-12-05-CPO-PLAN-REVIEW-FINAL-v2.md
 
 Framework:
   - SDLC-Enterprise-Framework/02-Core-Methodology/SDLC-Core-Methodology.md

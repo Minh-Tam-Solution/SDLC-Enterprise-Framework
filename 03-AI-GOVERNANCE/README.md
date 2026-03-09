@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Status**: ACTIVE
 **Date**: February 16, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.1.1 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
+**Pillar**: Core AI Governance (Enhanced in 6.1.2 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
 
 ---
 
@@ -37,14 +37,14 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
 | 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
 
-### Anthropic Patterns Integration (6.1.1)
+### Anthropic Patterns Integration (6.1.2)
 
 | # | Document | Purpose |
 |---|----------|---------|
 | 10 | [CLAUDE.md Standard (3-Tier)](10-CLAUDE-MD-STANDARD.md) | LITE/PRO/ENTERPRISE tiered AI context document standard |
 | 11 | [Autonomous Codegen Patterns](11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
 
-### Multi-Agent & Agentic Governance (6.1.1+)
+### Multi-Agent & Agentic Governance (6.1.2+)
 
 | # | Document | Purpose |
 |---|----------|---------|
@@ -150,4 +150,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2

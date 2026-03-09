@@ -4,7 +4,7 @@ type: "framework-standard"
 status: "ACTIVE"
 version: "1.0.0"
 date: "2026-02-13"
-framework: "SDLC 6.1.1"
+framework: "SDLC 6.1.2"
 replaces: "99-Legacy/ folder pattern (deprecated)"
 adopted-by: "Production platform (3 live customers)"
 author: "CTO Office"
@@ -13,7 +13,7 @@ author: "CTO Office"
 # SDLC Legacy Document Organization Standard
 
 **Effective Date**: February 13, 2026  
-**Framework Version**: SDLC 6.1.1+  
+**Framework Version**: SDLC 6.1.2+  
 **Status**: MANDATORY for all SDLC-compliant projects  
 **Deadline**: March 15, 2026 (adoption requirement)
 
@@ -21,7 +21,7 @@ author: "CTO Office"
 
 ## Executive Summary
 
-This standard establishes a **mandatory framework rule** for organizing archived and deprecated documentation across SDLC-compliant projects. The standard eliminates distributed `99-Legacy/` folders from active development stages (00-09) and centralizes all legacy content into a single `10-Archive/` directory with stage-aligned subdirectories.
+This standard establishes a **mandatory framework rule** for organizing archived and deprecated documentation across SDLC-compliant projects. The standard eliminates distributed `99-Legacy/` folders from active development stages (00-09) and centralizes all legacy content into a single `10-archive/` directory with stage-aligned subdirectories.
 
 **Business Impact**: 
 - **57% reduction** in documentation size (211MB → 91MB on production platform)
@@ -94,7 +94,7 @@ docs/
 ├── ...
 ├── 09-Govern/
 │   └── [active content only]
-└── 10-Archive/  ← Centralized, stage-aligned
+└── 10-archive/  ← Centralized, stage-aligned
     ├── README.md  ← AI-NEVER-READ directive
     ├── 00-Legacy/  ← From Foundation stage
     ├── 01-Legacy/  ← From Planning stage
@@ -124,15 +124,15 @@ All rules are **MANDATORY** unless explicitly marked RECOMMENDED.
 
 ---
 
-### RULE-002 (MANDATORY): Centralize Archive in 10-Archive
+### RULE-002 (MANDATORY): Centralize Archive in 10-archive
 
-**Statement**: All legacy/archived content from stages 00-09 migrates to `10-Archive/{NN}-Legacy/` where `{NN}` is the original stage number.
+**Statement**: All legacy/archived content from stages 00-09 migrates to `10-archive/{NN}-Legacy/` where `{NN}` is the original stage number.
 
 **Pattern**:
 ```
-Content from 02-Design/99-Legacy/ → 10-Archive/02-Legacy/
-Content from 04-Build/99-Legacy/ → 10-Archive/04-Legacy/
-Content from 09-Govern/99-Legacy/ → 10-Archive/09-Legacy/
+Content from 02-Design/99-Legacy/ → 10-archive/02-Legacy/
+Content from 04-Build/99-Legacy/ → 10-archive/04-Legacy/
+Content from 09-Govern/99-Legacy/ → 10-archive/09-Legacy/
 ```
 
 **Rationale**:
@@ -144,11 +144,11 @@ Content from 09-Govern/99-Legacy/ → 10-Archive/09-Legacy/
 
 ### RULE-003 (RECOMMENDED): Archive README with AI Directive
 
-**Statement**: Create `10-Archive/README.md` with explicit AI avoidance directive.
+**Statement**: Create `10-archive/README.md` with explicit AI avoidance directive.
 
 **Template**:
 ```markdown
-# 10-Archive: Legacy Documentation
+# 10-archive: Legacy Documentation
 
 **AI Directive**: 🤖 **NEVER READ** - This folder contains outdated and archived 
 content that should not inform current development.
@@ -172,7 +172,7 @@ content that should not inform current development.
 - **Validation**: Compares file counts before/after
 - **Progress tracking**: Reports per-stage migration status
 - **Error handling**: Rolls back on any copy/delete failure
-- **Archive setup**: Auto-creates `10-Archive/` and `{NN}-Legacy/` subdirs
+- **Archive setup**: Auto-creates `10-archive/` and `{NN}-Legacy/` subdirs
 
 **Usage**:
 ```bash
@@ -193,19 +193,19 @@ cd docs/
 
 For SDLC-Enterprise-Framework self-application:
 
-| Source (99-Legacy/) | Destination (10-Archive/) | Content |
+| Source (99-Legacy/) | Destination (10-archive/) | Content |
 |-----|-----|-----|
-| `99-Legacy/00-Version-Evolution/` | `10-Archive/00-Legacy/` | Framework version history |
-| `99-Legacy/01-Implementation-Scripts/` | `10-Archive/01-Legacy/` | Legacy planning scripts |
-| `99-Legacy/02-Validation-Tools/` + `5.2.0-Deprecated/` + `v5.3.0-Archive/` | `10-Archive/02-Legacy/` | Old design validator tools, deprecated framework versions |
-| `99-Legacy/deprecated-best-practices/` | `10-Archive/02-Legacy/deprecated-best-practices/` | Old design patterns |
-| `99-Legacy/Sprint-117-POC/` | `10-Archive/04-Legacy/Sprint-117-POC/` | Build POC artifacts |
-| `99-Legacy/tool-guides-2026/` | `10-Archive/05-Legacy/tool-guides-2026/` | Tool-specific templates (Claude Code, Cursor, etc) |
-| `99-Legacy/SASE-Deprecated-Artifacts/` | `10-Archive/05-Legacy/SASE-Deprecated-Artifacts/` | Deprecated SASE artifacts |
-| `99-Legacy/OpenSpec-Analysis-2026/` | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/` | Legacy spec analysis |
-| `99-Legacy/deployment-guides-5.1.3/` | `10-Archive/06-Legacy/deployment-guides-5.1.3/` | Old deployment procedures |
-| `99-Legacy/RFCs-Deprecated/` | `10-Archive/09-Legacy/RFCs-Deprecated/` | Deprecated RFCs |
-| `99-Legacy/scripts/` | `10-Archive/09-Legacy/scripts/` | Utility scripts |
+| `99-Legacy/00-Version-Evolution/` | `10-archive/00-Legacy/` | Framework version history |
+| `99-Legacy/01-Implementation-Scripts/` | `10-archive/01-Legacy/` | Legacy planning scripts |
+| `99-Legacy/02-Validation-Tools/` + `5.2.0-Deprecated/` + `v5.3.0-Archive/` | `10-archive/02-Legacy/` | Old design validator tools, deprecated framework versions |
+| `99-Legacy/deprecated-best-practices/` | `10-archive/02-Legacy/deprecated-best-practices/` | Old design patterns |
+| `99-Legacy/Sprint-117-POC/` | `10-archive/04-Legacy/Sprint-117-POC/` | Build POC artifacts |
+| `99-Legacy/tool-guides-2026/` | `10-archive/05-Legacy/tool-guides-2026/` | Tool-specific templates (Claude Code, Cursor, etc) |
+| `99-Legacy/SASE-Deprecated-Artifacts/` | `10-archive/05-Legacy/SASE-Deprecated-Artifacts/` | Deprecated SASE artifacts |
+| `99-Legacy/OpenSpec-Analysis-2026/` | `10-archive/05-Legacy/OpenSpec-Analysis-2026/` | Legacy spec analysis |
+| `99-Legacy/deployment-guides-5.1.3/` | `10-archive/06-Legacy/deployment-guides-5.1.3/` | Old deployment procedures |
+| `99-Legacy/RFCs-Deprecated/` | `10-archive/09-Legacy/RFCs-Deprecated/` | Deprecated RFCs |
+| `99-Legacy/scripts/` | `10-archive/09-Legacy/scripts/` | Utility scripts |
 
 ---
 
@@ -220,10 +220,10 @@ For SDLC-Enterprise-Framework self-application:
 - ✅ Update status to ACCEPTED
 
 ### Phase 2: Framework Self-Application (Feb 15)
-- Create `10-Archive/` directory structure
+- Create `10-archive/` directory structure
 - Execute migration: `migrate-legacy-to-archive.sh`
 - Fix stale references in all .md files
-- Commit: `feat(SDLC 6.1.1): Legacy Document Organization Standard`
+- Commit: `feat(SDLC 6.1.2): Legacy Document Organization Standard`
 
 ### Phase 3: Orchestrator Migration (Feb 20-28)
 - Migrate `docs/0[0-9]-*/99-Legacy/` → `docs/10-archive/{NN}-Legacy/`
@@ -232,7 +232,7 @@ For SDLC-Enterprise-Framework self-application:
 
 ### Phase 4: SDLC CLI Alignment (Mar 1-7)
 - Update CLI init: Stop creating `99-Legacy/` per stage
-- Update CLI fix: Create `10-Archive/{NN}-Legacy/` instead
+- Update CLI fix: Create `10-archive/{NN}-Legacy/` instead
 - Update validation engine: Validate new pattern, warn on 99-Legacy found
 - Update tests to reflect new pattern
 - Deployment: Release in next SDLC CLI patch version
@@ -284,13 +284,13 @@ A: No. The rule is specifically about the `99-Legacy/` folder name AND its funct
 A: Stage 10 is itself the archive layer. The rule prevents 99-Legacy/ only in stages 00-09 (active development). Stage 10 can have `{NN}-Legacy/` subdirs per this standard.
 
 **Q4: Do I need to keep redirect stubs?**  
-A: Yes. If code/documentation links to old 99-Legacy paths, create redirect stubs at those original locations pointing to the new 10-Archive paths. See DEPRECATION-POLICY.md.
+A: Yes. If code/documentation links to old 99-Legacy paths, create redirect stubs at those original locations pointing to the new 10-archive paths. See DEPRECATION-POLICY.md.
 
 **Q5: What's the retention policy for archived content?**  
-A: Default is 12 months. After 12 months, archive content can be evaluated for permanent deletion. Update retention policy in 10-Archive/README.md as needed.
+A: Default is 12 months. After 12 months, archive content can be evaluated for permanent deletion. Update retention policy in 10-archive/README.md as needed.
 
-**Q6: Can I archive 10-Archive content?**  
-A: No. Content in 10-Archive/ is already archived. If you need to reference it from current documentation, move it back to active stages. Otherwise, archive retention policies apply (see Q5).
+**Q6: Can I archive 10-archive content?**  
+A: No. Content in 10-archive/ is already archived. If you need to reference it from current documentation, move it back to active stages. Otherwise, archive retention policies apply (see Q5).
 
 ---
 
@@ -334,6 +334,6 @@ A: No. Content in 10-Archive/ is already archived. If you need to reference it f
 ---
 
 **Status**: MANDATORY Framework Standard  
-**Framework Version**: SDLC 6.1.1+  
+**Framework Version**: SDLC 6.1.2+  
 **Last Updated**: February 13, 2026  
 **Owner**: CTO Office

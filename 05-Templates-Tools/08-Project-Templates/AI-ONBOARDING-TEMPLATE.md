@@ -1,12 +1,12 @@
 # AI Onboarding Template (CLAUDE.md)
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 22, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 6 - Documentation Permanence (AI Context)
 **Status**: ACTIVE - Production Template
 **Authority**: CTO Office
-**Framework**: SDLC 6.1.1 (7-Pillar Architecture)
+**Framework**: SDLC 6.1.2 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
 ---

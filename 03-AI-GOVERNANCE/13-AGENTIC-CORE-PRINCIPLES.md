@@ -1,6 +1,6 @@
 ---
 title: "Agentic Core Principles"
-version: "6.1.1"
+version: "6.1.2"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"
@@ -12,7 +12,7 @@ origin: "arXiv:2509.06216v2 (SASE Framework)"
 
 # AGENTIC CORE PRINCIPLES
 
-> **SDLC 6.1.1** — Software Agentic Software Engineering (SASE) Integration
+> **SDLC 6.1.2** — Software Agentic Software Engineering (SASE) Integration
 >
 > This document defines the **7 Agentic Principles** and the **SE4H/SE4A framework**
 > that govern how humans and AI agents collaborate within the SDLC lifecycle.
@@ -270,7 +270,7 @@ The SASE framework defines 6 engineering disciplines. Each maps to primary SDLC 
 
 ### Primary Sources
 1. **SASE Framework** — arXiv:2509.06216v2 ("Software Engineering for AI-Based Systems")
-2. **SDLC 6.1.1 Core Methodology** — [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md)
+2. **SDLC 6.1.2 Core Methodology** — [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md)
 3. **AGENTS.md Standard** — 60,000+ GitHub projects, native support in Cursor/Copilot/Claude Code
 
 ### SASE Artifact Templates
@@ -289,5 +289,5 @@ The SASE framework defines 6 engineering disciplines. Each maps to primary SDLC 
 ---
 
 **Document Status:** ACTIVE — PRODUCTION READY
-**Version:** 6.1.1 | **Last Updated:** February 18, 2026
-**Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.1.1
+**Version:** 6.1.2 | **Last Updated:** February 18, 2026
+**Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.1.2

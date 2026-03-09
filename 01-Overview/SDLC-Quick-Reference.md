@@ -1,23 +1,23 @@
-# SDLC Framework 6.1.1 Quick Reference Guide
+# SDLC Framework 6.1.2 Quick Reference Guide
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 21, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Purpose**: Fast lookup for key SDLC 6.1.1 concepts, navigation, and breaking changes
+**Purpose**: Fast lookup for key SDLC 6.1.2 concepts, navigation, and breaking changes
 
 ---
 
-## What's New in 6.1.1 (POST-CLEANUP PATCH)
+## What's New in 6.1.2 (POST-CLEANUP PATCH)
 
 ### Stale Reference Cleanup + Conversation-First Governance
 
 ```yaml
-Key Changes (6.1.1 — Feb 21, 2026):
+Key Changes (6.1.2 — Feb 21, 2026):
   Terminology: "AI Council" → "Senior Review Board" in 5 active docs
-  Archive: 36 FROZEN AI prompt templates → 10-Archive/05-Legacy/
+  Archive: 36 FROZEN AI prompt templates → 10-archive/05-Legacy/
   New Doc: 03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md
   Tool Profiles: All 3 marked REFERENCE PROFILE + disclaimer
-  Version Bump: 547 refs updated from 6.1.0 → 6.1.1
+  Version Bump: 547 refs updated from 6.1.0 → 6.1.2
   Breaking Changes: NONE
 ```
 
@@ -88,7 +88,7 @@ Key Changes:
 Key Changes:
   RFC-001 Legacy Document Organization:
     - Eliminates 99-Legacy/ from active stages (00-09)
-    - Centralizes to 10-Archive/{NN}-Legacy/ with stage alignment
+    - Centralizes to 10-archive/{NN}-Legacy/ with stage alignment
     - Production-validated: 57% size reduction (211MB→91MB)
     - Migration script: migrate-legacy-to-archive.sh
     - CI/CD blocks 99-Legacy/ reintroduction
@@ -316,7 +316,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.1.1 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.1.2 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -349,7 +349,7 @@ New Templates:
 | Use AI governance | [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) |
 | Find a topic | [CONTENT-MAP.md](../CONTENT-MAP.md) |
 | Understand changes | [CHANGELOG.md](../CHANGELOG.md) |
-| Migrate from 5.3.0 | [10-Archive/02-Legacy/v5.3.0-Archive/](../10-Archive/02-Legacy/v5.3.0-Archive/) |
+| Migrate from 5.3.0 | [10-archive/02-Legacy/v5.3.0-Archive/](../10-archive/02-Legacy/v5.3.0-Archive/) |
 
 ---
 
@@ -451,7 +451,7 @@ SDLC-Enterprise-Framework/
 ├── 07-Implementation-Guides/ # How-to guides
 ├── 08-Training-Materials/    # Learning resources
 ├── 09-Continuous-Improvement/
-├── 10-Archive/               # Centralized legacy archive (RFC-001, 6.0.6)
+├── 10-archive/               # Centralized legacy archive (RFC-001, 6.0.6)
 ├── CHANGELOG.md              # Version history
 ├── CONTENT-MAP.md            # Topic → file mapping
 ├── DEPRECATION-POLICY.md     # Redirect rules
@@ -462,7 +462,7 @@ SDLC-Enterprise-Framework/
 
 ## Migration from 5.3.0
 
-1. **Archive Reference**: Old 5.3.0 docs at [10-Archive/02-Legacy/v5.3.0-Archive/](../10-Archive/02-Legacy/v5.3.0-Archive/)
+1. **Archive Reference**: Old 5.3.0 docs at [10-archive/02-Legacy/v5.3.0-Archive/](../10-archive/02-Legacy/v5.3.0-Archive/)
 2. **Add Frontmatter**: Add YAML metadata to all specs
 3. **Convert to BDD**: Rewrite requirements as GIVEN-WHEN-THEN
 4. **Declare Tier**: Add tier field (LITE/STANDARD/PROFESSIONAL/ENTERPRISE)
@@ -481,7 +481,7 @@ SDLC-Enterprise-Framework/
 
 ---
 
-## Quick Checklist: Is This 6.1.1 Compliant?
+## Quick Checklist: Is This 6.1.2 Compliant?
 
 ```yaml
 Specification:
@@ -507,9 +507,9 @@ Sprint Governance (3-Phase):
   [ ] Execution: TDD cycle followed per feature?
   [ ] Post-Sprint: Documentation completed within 24h?
 
-Legacy Organization (6.1.1 RFC-001):
+Legacy Organization (6.1.2 RFC-001):
   [ ] No 99-Legacy/ folders in active stages (00-09)?
-  [ ] Legacy content in 10-Archive/{NN}-Legacy/?
+  [ ] Legacy content in 10-archive/{NN}-Legacy/?
   [ ] CI/CD blocks 99-Legacy/ reintroduction?
 ```
 
@@ -517,6 +517,6 @@ Legacy Organization (6.1.1 RFC-001):
 
 **Document Status**: ACTIVE
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.1.1 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
+**Framework**: SDLC 6.1.2 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
-*Quick reference for SDLC Framework 6.1.1 - Keep this handy!*
+*Quick reference for SDLC Framework 6.1.2 - Keep this handy!*

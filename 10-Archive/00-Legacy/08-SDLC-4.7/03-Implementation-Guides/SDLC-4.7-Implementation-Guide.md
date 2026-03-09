@@ -252,7 +252,7 @@ CTO Responsibilities:
     - Crisis response leadership
 
   Documentation:
-    - Architecture in /docs/02-Design-Architecture/
+    - Architecture in /docs/02-design/
     - Technical decisions in /docs/03-Development-Implementation/
     - Performance reports in /docs/03-Development-Implementation/04-Performance/
     - Crisis patterns in /docs/emergency/
@@ -266,10 +266,10 @@ CPO Responsibilities:
     - Vietnamese market validation
 
   Documentation:
-    - Product specs in /docs/01-Planning-Analysis/
+    - Product specs in /docs/01-planning/
     - User stories in /docs/04-Testing-QA/
-    - Roadmap in /docs/00-Project-Foundation/03-Roadmap/
-    - Market analysis in /docs/01-Planning-Analysis/02-Market-Analysis/
+    - Roadmap in /docs/00-foundation/03-roadmap/
+    - Market analysis in /docs/01-planning/02-Market-Analysis/
 ```
 
 ### Real Service Testing Infrastructure
@@ -480,15 +480,15 @@ curl http://localhost:8000/api/health/
 ### Sprint Document Organization
 ```bash
 # Organize sprint documents
-mkdir -p docs/08-Team-Management/04-Sprint-Management/
+mkdir -p docs/08-collaborate/04-sprint-management/
 
 # Move sprint documents
 for sprint_doc in $(find docs -name "*SPRINT*"); do
-    mv "$sprint_doc" docs/08-Team-Management/04-Sprint-Management/
+    mv "$sprint_doc" docs/08-collaborate/04-sprint-management/
 done
 
 # Create sprint template
-cat > docs/08-Team-Management/04-Sprint-Management/SPRINT-TEMPLATE.md << EOF
+cat > docs/08-collaborate/04-sprint-management/SPRINT-TEMPLATE.md << EOF
 # Sprint [NUMBER] - [THEME]
 **Duration**: [Start] - [End]
 **Goal**: [Sprint Goal]
@@ -817,7 +817,7 @@ responsibilities:
 ```python
 # Solution: Tune detection patterns
 WHITELIST_PATTERNS = [
-    r'docs/08-Team-Management/04-Sprint-Management/SPRINT-\d+',  # Sprint docs OK here
+    r'docs/08-collaborate/04-sprint-management/SPRINT-\d+',  # Sprint docs OK here
     r'tests/.*/test-run-\d{4}-\d{2}-\d{2}\.log'  # Test logs OK with dates
 ]
 ```

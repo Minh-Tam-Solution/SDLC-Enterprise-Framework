@@ -1,6 +1,6 @@
 # SDLC Stage Exit Criteria
 
-**Framework**: SDLC 6.1.1  
+**Framework**: SDLC 6.1.2  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
 **Related**: [Stage Dependency Matrix](./SDLC-Stage-Dependencies.md), Quality Gates
@@ -232,7 +232,7 @@ Stage 02 (DESIGN):
 **Gate Requirement**: G3 passed (same as Stage 04, validates test coverage)
 
 **Documentation Requirements**:
-- ✅ `docs/05-test/01-Test-Plans/` contains test strategy
+- ✅ `docs/05-test/01-test-plans/` contains test strategy
 - ✅ Test results documented (unit, integration, E2E)
 - ✅ Bug tracking log (if bugs found)
 - ✅ Performance test results (if applicable)
@@ -531,5 +531,5 @@ Stage 02 (DESIGN) - LITE:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.1.1  
+**Framework Version**: SDLC 6.1.2  
 **Status**: PRODUCTION-READY

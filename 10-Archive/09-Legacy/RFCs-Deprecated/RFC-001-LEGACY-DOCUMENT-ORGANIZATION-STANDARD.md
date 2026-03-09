@@ -11,7 +11,7 @@
 
 ## Summary
 
-The BFlow Platform team has implemented and validated a **Legacy Document Organization pattern** that eliminates `99-Legacy/` folders from active SDLC stages (00-09) and centralizes all archived content into `10-Archive/`. This RFC proposes adopting this as a **Framework standard** for all SDLC-compliant projects.
+The BFlow Platform team has implemented and validated a **Legacy Document Organization pattern** that eliminates `99-Legacy/` folders from active SDLC stages (00-09) and centralizes all archived content into `10-archive/`. This RFC proposes adopting this as a **Framework standard** for all SDLC-compliant projects.
 
 ---
 
@@ -20,7 +20,7 @@ The BFlow Platform team has implemented and validated a **Legacy Document Organi
 When each SDLC stage (00-09) contains a `99-Legacy/` subfolder, it creates several issues:
 
 ### 1. AI Context Pollution
-AI assistants (Claude Code, GPT, Copilot) reading stage documentation get confused by legacy/outdated content mixed with current content. When an AI scans `docs/02-Design-Architecture/`, it processes both the latest architecture AND deprecated v5.x designs, leading to inconsistent or hallucinated suggestions.
+AI assistants (Claude Code, GPT, Copilot) reading stage documentation get confused by legacy/outdated content mixed with current content. When an AI scans `docs/02-design/`, it processes both the latest architecture AND deprecated v5.x designs, leading to inconsistent or hallucinated suggestions.
 
 ### 2. Human Cognitive Load
 Developers browsing a stage folder must mentally filter out `99-Legacy/` and its contents. This adds friction to every documentation lookup.
@@ -37,17 +37,17 @@ Legacy content inflates file counts per stage. In BFlow Platform, `99-Legacy/` f
 
 ```
 docs/
-├── 00-Project-Foundation/
+├── 00-foundation/
 │   ├── [active files]
 │   └── 99-Legacy/              ← Mixed with active content
-├── 01-Planning-Analysis/
+├── 01-planning/
 │   ├── [active files]
 │   └── 99-Legacy/              ← Mixed with active content
 ├── ...
-├── 09-Executive-Reports/
+├── 09-govern/
 │   ├── [active files]
 │   └── 99-Legacy/              ← Mixed with active content
-└── 10-Archive/
+└── 10-archive/
     └── [unstructured legacy]   ← No stage alignment
 ```
 
@@ -61,31 +61,31 @@ docs/
 
 ### Rule: Centralized Archive at Stage 10
 
-All `99-Legacy/` content from stages 00-09 moves into `10-Archive/` with **stage-aligned subdirectories**:
+All `99-Legacy/` content from stages 00-09 moves into `10-archive/` with **stage-aligned subdirectories**:
 
 ```
 docs/
-├── 00-Project-Foundation/        ← CLEAN: Only current, active docs
-├── 01-Planning-Analysis/         ← CLEAN: Only current, active docs
-├── 02-Design-Architecture/       ← CLEAN: Only current, active docs
-├── 03-Integration-APIs/          ← CLEAN: Only current, active docs
-├── 04-Development-Implementation/← CLEAN: Only current, active docs
-├── 05-Testing-Quality/           ← CLEAN: Only current, active docs
-├── 06-Deployment-Release/        ← CLEAN: Only current, active docs
+├── 00-foundation/        ← CLEAN: Only current, active docs
+├── 01-planning/         ← CLEAN: Only current, active docs
+├── 02-design/       ← CLEAN: Only current, active docs
+├── 03-integrate/          ← CLEAN: Only current, active docs
+├── 04-build/← CLEAN: Only current, active docs
+├── 05-test/           ← CLEAN: Only current, active docs
+├── 06-deploy/        ← CLEAN: Only current, active docs
 ├── 07-Operations-Maintenance/    ← CLEAN: Only current, active docs
-├── 08-Team-Management/           ← CLEAN: Only current, active docs
-├── 09-Executive-Reports/         ← CLEAN: Only current, active docs
-└── 10-Archive/                   ← ALL legacy content centralized
-    ├── 00-Legacy/                ← From 00-Project-Foundation/99-Legacy/
-    ├── 01-Legacy/                ← From 01-Planning-Analysis/99-Legacy/
-    ├── 02-Legacy/                ← From 02-Design-Architecture/99-Legacy/
-    ├── 03-Legacy/                ← From 03-Integration-APIs/99-Legacy/
+├── 08-collaborate/           ← CLEAN: Only current, active docs
+├── 09-govern/         ← CLEAN: Only current, active docs
+└── 10-archive/                   ← ALL legacy content centralized
+    ├── 00-Legacy/                ← From 00-foundation/99-Legacy/
+    ├── 01-Legacy/                ← From 01-planning/99-Legacy/
+    ├── 02-Legacy/                ← From 02-design/99-Legacy/
+    ├── 03-Legacy/                ← From 03-integrate/99-Legacy/
     ├── 04-Legacy/                ← From 04-Development/99-Legacy/
-    ├── 05-Legacy/                ← From 05-Testing-Quality/99-Legacy/
-    ├── 06-Legacy/                ← From 06-Deployment-Release/99-Legacy/
+    ├── 05-Legacy/                ← From 05-test/99-Legacy/
+    ├── 06-Legacy/                ← From 06-deploy/99-Legacy/
     ├── 07-Legacy/                ← From 07-Operations/99-Legacy/
-    ├── 08-Legacy/                ← From 08-Team-Management/99-Legacy/
-    └── 09-Legacy/                ← From 09-Executive-Reports/99-Legacy/
+    ├── 08-Legacy/                ← From 08-collaborate/99-Legacy/
+    └── 09-Legacy/                ← From 09-govern/99-Legacy/
 ```
 
 **Measured impact (BFlow Platform after cleanup)**:
@@ -107,12 +107,12 @@ docs/
 
 ### For Human Developers
 - **Clean navigation**: Each stage folder shows only what matters NOW
-- **Clear separation**: `docs/02-Design-Architecture/` = current, `docs/10-Archive/02-Legacy/` = old
-- **Easy reference**: Need historical context? Always check `10-Archive/{NN}-Legacy/`
+- **Clear separation**: `docs/02-design/` = current, `docs/10-archive/02-Legacy/` = old
+- **Easy reference**: Need historical context? Always check `10-archive/{NN}-Legacy/`
 
 ### For CI/CD & Tooling
 - SDLC compliance scanners only validate stages 00-09 (active content)
-- Linters/validators can exclude `10-Archive/` from analysis
+- Linters/validators can exclude `10-archive/` from analysis
 - Smaller active tree = faster CI/CD doc validation
 
 ---
@@ -124,9 +124,9 @@ docs/
 | # | Rule | Type |
 |---|------|------|
 | 1 | Stages 00-09 **MUST NOT** contain `99-Legacy/` subdirectories | MANDATORY |
-| 2 | All legacy/deprecated documents **MUST** be moved to `10-Archive/{NN}-Legacy/` | MANDATORY |
-| 3 | `10-Archive/` subdirectories **MUST** follow the pattern `{stage-number}-Legacy/` | MANDATORY |
-| 4 | When deprecating a document, move it to the corresponding `10-Archive/{NN}-Legacy/` | RECOMMENDED |
+| 2 | All legacy/deprecated documents **MUST** be moved to `10-archive/{NN}-Legacy/` | MANDATORY |
+| 3 | `10-archive/` subdirectories **MUST** follow the pattern `{stage-number}-Legacy/` | MANDATORY |
+| 4 | When deprecating a document, move it to the corresponding `10-archive/{NN}-Legacy/` | RECOMMENDED |
 | 5 | Leave a redirect stub at the original location for 6 months (per DEPRECATION-POLICY.md) | RECOMMENDED |
 | 6 | After migration, fix all stale `99-Legacy` references in active code/docs | MANDATORY |
 
@@ -134,7 +134,7 @@ docs/
 
 This RFC **extends** (not replaces) the existing deprecation policy:
 - Redirect stubs still apply (6-month grace period)
-- The only change: destination is `10-Archive/{NN}-Legacy/` instead of `99-Legacy/`
+- The only change: destination is `10-archive/{NN}-Legacy/` instead of `99-Legacy/`
 
 ---
 
@@ -145,7 +145,7 @@ For projects adopting this standard:
 ```bash
 #!/bin/bash
 # migrate-legacy-to-archive.sh
-# Migrates 99-Legacy/ folders from stages 00-09 to 10-Archive/
+# Migrates 99-Legacy/ folders from stages 00-09 to 10-archive/
 
 set -e
 
@@ -153,19 +153,19 @@ DOCS_DIR="${1:-docs}"
 
 # Create archive directories
 for stage in 00 01 02 03 04 05 06 07 08 09; do
-  mkdir -p "${DOCS_DIR}/10-Archive/${stage}-Legacy"
+  mkdir -p "${DOCS_DIR}/10-archive/${stage}-Legacy"
 done
 
-# Move content from 99-Legacy to 10-Archive
+# Move content from 99-Legacy to 10-archive
 for stage_dir in "${DOCS_DIR}"/[0-9][0-9]-*/; do
   stage_num=$(basename "$stage_dir" | grep -oP '^\d{2}')
   legacy_dir="${stage_dir}99-Legacy"
 
   if [ -d "$legacy_dir" ]; then
-    echo "Moving: ${legacy_dir} → ${DOCS_DIR}/10-Archive/${stage_num}-Legacy/"
-    cp -r "${legacy_dir}"/* "${DOCS_DIR}/10-Archive/${stage_num}-Legacy/" 2>/dev/null || true
+    echo "Moving: ${legacy_dir} → ${DOCS_DIR}/10-archive/${stage_num}-Legacy/"
+    cp -r "${legacy_dir}"/* "${DOCS_DIR}/10-archive/${stage_num}-Legacy/" 2>/dev/null || true
     rm -rf "$legacy_dir"
-    echo "  Done: $(find "${DOCS_DIR}/10-Archive/${stage_num}-Legacy" -type f | wc -l) files"
+    echo "  Done: $(find "${DOCS_DIR}/10-archive/${stage_num}-Legacy" -type f | wc -l) files"
   fi
 done
 
@@ -205,7 +205,7 @@ grep -rn "99-Legacy" --include="*.md" --include="*.py" --include="*.ts" --includ
 > Fix these AFTER migration, not before (you need to know the new paths first).
 
 **BP-03: Check for Cross-Repository Dependencies**
-If your project has sub-repos or submodules, check if they reference paths in the main repo's `99-Legacy/` folders. In BFlow, the `conversation-service` had hardcoded paths to `docs/09-Executive-Reports/99-Legacy/`.
+If your project has sub-repos or submodules, check if they reference paths in the main repo's `99-Legacy/` folders. In BFlow, the `conversation-service` had hardcoded paths to `docs/09-govern/99-Legacy/`.
 
 ---
 
@@ -214,20 +214,20 @@ If your project has sub-repos or submodules, check if they reference paths in th
 **BP-04: Use `cp -r` then `rm -rf`, NOT `mv` for Cross-Directory Merges**
 ```bash
 # SAFE: Copy first, verify, then delete source
-cp -r docs/02-Design-Architecture/99-Legacy/* docs/10-Archive/02-Legacy/
+cp -r docs/02-design/99-Legacy/* docs/10-archive/02-Legacy/
 # Verify count matches
-ls docs/10-Archive/02-Legacy/ | wc -l
+ls docs/10-archive/02-Legacy/ | wc -l
 # Only then delete source
-rm -rf docs/02-Design-Architecture/99-Legacy/
+rm -rf docs/02-design/99-Legacy/
 ```
 > `mv` can fail mid-operation on large directories or across filesystems.
 > `cp` + `rm` gives you a verification checkpoint.
 
 **BP-05: Merge Misc Archive Folders into Stage-Aligned Directories**
-Don't just move `99-Legacy/` - also consolidate any loose archive folders that accumulated in `10-Archive/`:
+Don't just move `99-Legacy/` - also consolidate any loose archive folders that accumulated in `10-archive/`:
 ```
-# Before (messy 10-Archive):
-10-Archive/
+# Before (messy 10-archive):
+10-archive/
 ├── 01-Sprint-Reports/      ← Should be in 08-Legacy (Team Management)
 ├── Admin/                   ← Should be in 09-Legacy (Executive)
 ├── Business-Operations/     ← Should be in 01-Legacy (Planning)
@@ -235,7 +235,7 @@ Don't just move `99-Legacy/` - also consolidate any loose archive folders that a
 └── Urgent-Actions/          ← Should be in 09-Legacy
 
 # After (clean, stage-aligned):
-10-Archive/
+10-archive/
 ├── 00-Legacy/
 ├── 01-Legacy/    ← Includes Business-Operations content
 ├── ...
@@ -247,11 +247,11 @@ Don't just move `99-Legacy/` - also consolidate any loose archive folders that a
 When merging, keep the original subfolder structure intact:
 ```bash
 # GOOD: Preserves subfolder context
-cp -r docs/08-Team-Management/99-Legacy/* docs/10-Archive/08-Legacy/
+cp -r docs/08-collaborate/99-Legacy/* docs/10-archive/08-Legacy/
 # Result: 08-Legacy/Sprint-Plans/, 08-Legacy/SDLC-Compliance/, etc.
 
 # BAD: Flattening loses context
-cp docs/08-Team-Management/99-Legacy/*/* docs/10-Archive/08-Legacy/
+cp docs/08-collaborate/99-Legacy/*/* docs/10-archive/08-Legacy/
 ```
 
 ---
@@ -263,7 +263,7 @@ Root folder often accumulates non-SDLC-compliant files over sprints. Clean them 
 
 | File Type | Proper Location | Example |
 |-----------|----------------|---------|
-| Loose Sprint reports (`SPRINT-*.md`) | `docs/10-Archive/09-Legacy/` | `SPRINT-158-FINAL-ANALYSIS.md` |
+| Loose Sprint reports (`SPRINT-*.md`) | `docs/10-archive/09-Legacy/` | `SPRINT-158-FINAL-ANALYSIS.md` |
 | Shell scripts (`.sh`) | `scripts/` | `debug-nginx-bflow.sh` |
 | Test scripts (`.py`) | `scripts/` or `tests/` | `verify-sprint160-admin-tab.py` |
 | SQL initialization files | `infrastructure/database/` | `init-staging-db.sql` |
@@ -290,11 +290,11 @@ ln -s infrastructure/docker/frontend.Dockerfile Dockerfile.frontend
 Infrastructure folders often accumulate one-time activation scripts and their result files:
 ```bash
 # These are historical artifacts, not operational infrastructure:
-infrastructure/cmcsisg_enterprise_activation_results_v7_7.json   # → 10-Archive
-infrastructure/galaxy_holdings_activation_report_v7_7.txt         # → 10-Archive
-infrastructure/final_system_integration_v7_7.py                   # → 10-Archive
+infrastructure/cmcsisg_enterprise_activation_results_v7_7.json   # → 10-archive
+infrastructure/galaxy_holdings_activation_report_v7_7.txt         # → 10-archive
+infrastructure/final_system_integration_v7_7.py                   # → 10-archive
 ```
-> Move to `10-Archive/06-Legacy/` (Deployment stage) since they relate to deployment history.
+> Move to `10-archive/06-Legacy/` (Deployment stage) since they relate to deployment history.
 
 **BP-10: Delete Ephemeral Files, Not Just Archive Them**
 Some files should be deleted, not archived:
@@ -341,8 +341,8 @@ done
 echo "Active docs (stages 00-09):"
 find docs/0[0-9]-* -type f | wc -l
 
-echo "Archived docs (10-Archive):"
-find docs/10-Archive -type f | wc -l
+echo "Archived docs (10-archive):"
+find docs/10-archive -type f | wc -l
 
 echo "Total size:"
 du -sh docs/
@@ -358,7 +358,7 @@ du -sh docs/
 | BP-02 | Identify stale references before migration | Assessment | Plan reference fixes |
 | BP-03 | Check cross-repo dependencies | Assessment | Prevent broken links |
 | BP-04 | Use `cp -r` + `rm -rf`, not `mv` | Execution | Safe migration |
-| BP-05 | Merge misc archives into stage-aligned dirs | Execution | Clean 10-Archive |
+| BP-05 | Merge misc archives into stage-aligned dirs | Execution | Clean 10-archive |
 | BP-06 | Preserve internal folder structure | Execution | Maintain context |
 | BP-07 | Clean root folder in the same pass | Root | SDLC compliance |
 | BP-08 | Use symlinks for build-required root files | Root | Build compatibility |
@@ -392,7 +392,7 @@ du -sh docs/
 - [ ] **Update** `02-Core-Methodology/` with the Legacy Document Organization standard
 - [ ] **Add** migration script to `05-Templates-Tools/`
 - [ ] **Apply** the same pattern to the Framework repo itself (current `99-Legacy/` at root)
-- [ ] **Update** `DEPRECATION-POLICY.md` to reference the `10-Archive/{NN}-Legacy/` pattern
+- [ ] **Update** `DEPRECATION-POLICY.md` to reference the `10-archive/{NN}-Legacy/` pattern
 - [ ] **Notify** SDLC Orchestrator team if adopted (for tooling alignment)
 
 ---

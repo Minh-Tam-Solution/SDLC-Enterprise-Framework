@@ -17,7 +17,7 @@ Core enhancement: **NO CODE WITHOUT APPROVED DESIGN** with automated enforcement
 
 ### BFlow Context Override (Tri-Pillar Inversion)
 
-In BFlow strategic framing (ref: `docs/00-Project-Foundation/01-Vision/BFLOW-UNIFIED-VISION-V7.7.md`):
+In BFlow strategic framing (ref: `docs/00-foundation/01-vision/BFLOW-UNIFIED-VISION-V7.7.md`):
 
 - AI = WHY (strategic intent intelligence, leverage discovery)
 - BPM = HOW (operational flow embodiment)

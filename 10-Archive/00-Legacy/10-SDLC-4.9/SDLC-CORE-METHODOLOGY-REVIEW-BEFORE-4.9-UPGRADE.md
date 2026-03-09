@@ -575,10 +575,10 @@ Lesson Learned:
 5. **Perfect /docs Alignment** (NEW):
    ```
    10 SDLC Stages → 10 /docs Folders (00-09)
-   - Stage 00 (WHY) → 00-Project-Foundation/
-   - Stage 01 (WHAT) → 01-Planning-Analysis/
+   - Stage 00 (WHY) → 00-foundation/
+   - Stage 01 (WHAT) → 01-planning/
    - ... (complete mapping)
-   - Stage 09 (GOVERN) → 09-Executive-Reports/
+   - Stage 09 (GOVERN) → 09-govern/
    ```
 
 ---

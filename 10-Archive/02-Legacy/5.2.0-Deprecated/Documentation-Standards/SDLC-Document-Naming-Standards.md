@@ -67,7 +67,7 @@ ABSOLUTELY FORBIDDEN:
 ## ✅ REQUIRED - Document Naming Patterns
 
 ### 1. Design Documents
-**Location**: `/docs/02-Design-Architecture/[subdomain]/`
+**Location**: `/docs/02-design/[subdomain]/`
 
 ```yaml
 Correct Naming Pattern:
@@ -286,9 +286,9 @@ Rules:
 Pattern: NN-Feature-Category/
 
 Examples:
-  01-System-Architecture/
+  01-system-architecture/
   02-Database-Design/
-  03-API-Design/
+  03-api-design/
   04-UI-UX-Design/
   99-legacy/  (lowercase for archive)
 ```

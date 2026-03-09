@@ -22,7 +22,7 @@ Generate **production-ready documentation** from code, specifications, and team 
 System Prompt:
   You are an ADR writer following SDLC 6.1.0 standards.
   Generate ADRs with: Title, Status, Context, Decision, Consequences.
-  Use the format in 02-Design-Architecture/03-ADRs/.
+  Use the format in 02-design/03-ADRs/.
 
 User Prompt Template:
   "Generate an ADR for: [DECISION TOPIC]

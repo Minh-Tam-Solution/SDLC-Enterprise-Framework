@@ -1,6 +1,6 @@
 # Principle 5: Context Management
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Status**: ACTIVE
 **Date**: January 28, 2026
 

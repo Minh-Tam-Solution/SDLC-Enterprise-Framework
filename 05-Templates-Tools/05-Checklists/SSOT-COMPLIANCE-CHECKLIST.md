@@ -1,10 +1,10 @@
-# SSOT Compliance Checklist (SDLC 6.1.1)
+# SSOT Compliance Checklist (SDLC 6.1.2)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Purpose**: Validate Single Source of Truth principle compliance
 
 ---
@@ -25,9 +25,9 @@
 
 ### Phase 0: Locate Canonical Source
 
-**Canonical Location** (SDLC 6.1.1):
+**Canonical Location** (SDLC 6.1.2):
 ```
-docs/03-integrate/02-API-Specifications/openapi.json
+docs/03-integrate/01-api-specifications/openapi.json
 ```
 
 - [ ] ✅ openapi.json exists in Stage 03 Integration folder
@@ -38,13 +38,13 @@ docs/03-integrate/02-API-Specifications/openapi.json
 **Validation Command**:
 ```bash
 # Check file exists
-test -f docs/03-integrate/02-API-Specifications/openapi.json && echo "✅ Found" || echo "🔴 Missing"
+test -f docs/03-integrate/01-api-specifications/openapi.json && echo "✅ Found" || echo "🔴 Missing"
 
 # Validate JSON syntax
-python3 -c "import json; json.load(open('docs/03-integrate/02-API-Specifications/openapi.json'))" && echo "✅ Valid JSON" || echo "🔴 Invalid JSON"
+python3 -c "import json; json.load(open('docs/03-integrate/01-api-specifications/openapi.json'))" && echo "✅ Valid JSON" || echo "🔴 Invalid JSON"
 
 # Check OpenAPI version
-jq -r '.openapi' docs/03-integrate/02-API-Specifications/openapi.json
+jq -r '.openapi' docs/03-integrate/01-api-specifications/openapi.json
 ```
 
 ---
@@ -64,7 +64,7 @@ jq -r '.openapi' docs/03-integrate/02-API-Specifications/openapi.json
 find . -name "openapi.json" -type f 2>/dev/null
 
 # Expected output: EXACTLY ONE file
-# ✅ ./docs/03-integrate/02-API-Specifications/openapi.json
+# ✅ ./docs/03-integrate/01-api-specifications/openapi.json
 
 # If more than 1 file found → SSOT VIOLATION
 ```
@@ -76,7 +76,7 @@ sdlcctl e2e cross-reference --check-ssot
 
 # Expected output:
 # ✅ SSOT Compliance: PASS
-# ✅ openapi.json canonical source: docs/03-integrate/02-API-Specifications/openapi.json
+# ✅ openapi.json canonical source: docs/03-integrate/01-api-specifications/openapi.json
 # ✅ No duplicates found
 ```
 
@@ -89,11 +89,11 @@ sdlcctl e2e cross-reference --check-ssot
 ```bash
 # Example: docs/05-test/api/ needs openapi.json
 cd docs/05-test/api/
-ln -sf ../../../03-integrate/02-API-Specifications/openapi.json openapi.json
+ln -sf ../../../03-integrate/01-api-specifications/openapi.json openapi.json
 
 # Verify symlink
 ls -la openapi.json
-# Expected: openapi.json -> ../../../03-integrate/02-API-Specifications/openapi.json
+# Expected: openapi.json -> ../../../03-integrate/01-api-specifications/openapi.json
 ```
 
 **Symlink Validation**:
@@ -115,7 +115,7 @@ find . -type l -name "openapi.json" -ls
 **Git Tracking Check**:
 ```bash
 # Verify canonical source is tracked
-git log --oneline docs/03-integrate/02-API-Specifications/openapi.json | head -5
+git log --oneline docs/03-integrate/01-api-specifications/openapi.json | head -5
 
 # Check for accidentally committed duplicates (should return empty)
 git log --all --full-history -- "**/openapi.json" | grep -v "03-integrate/02-API-Specifications"
@@ -127,7 +127,7 @@ git log --all --full-history -- "**/openapi.json" | grep -v "03-integrate/02-API
 backend/openapi.json
 frontend/openapi.json
 **/openapi.json
-!docs/03-integrate/02-API-Specifications/openapi.json  # Allow canonical source only
+!docs/03-integrate/01-api-specifications/openapi.json  # Allow canonical source only
 ```
 
 - [ ] ✅ .gitignore prevents duplicate commits
@@ -140,11 +140,11 @@ frontend/openapi.json
 
 **Stage 03 → Stage 05 Link**:
 
-In `docs/05-test/03-E2E-Testing/README.md`:
+In `docs/05-test/03-e2e-testing/README.md`:
 ```markdown
 ## API Specification
 
-**Canonical Source**: [openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
+**Canonical Source**: [openapi.json](../../03-integrate/01-api-specifications/openapi.json)
 
 **DO NOT COPY** - Always reference the Stage 03 canonical source.
 ```
@@ -155,7 +155,7 @@ In `docs/01-planning/05-API-Design/API-Specification.md`:
 ```markdown
 ## OpenAPI Specification
 
-**Canonical Source**: [openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
+**Canonical Source**: [openapi.json](../../03-integrate/01-api-specifications/openapi.json)
 
 **Implementation Notes**: Design decisions documented here, but OpenAPI spec lives in Stage 03.
 ```
@@ -180,7 +180,7 @@ duplicates=$(find . -name "openapi.json" -type f | grep -v "03-integrate/02-API-
 
 if [ "$duplicates" -gt 0 ]; then
   echo "🔴 SSOT VIOLATION: Duplicate openapi.json files found"
-  echo "Only docs/03-integrate/02-API-Specifications/openapi.json is allowed"
+  echo "Only docs/03-integrate/01-api-specifications/openapi.json is allowed"
   find . -name "openapi.json" -type f | grep -v "03-integrate/02-API-Specifications"
   exit 1
 fi
@@ -235,7 +235,7 @@ jobs:
 
 ### API Endpoint List
 
-**Canonical Source**: `docs/03-integrate/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`
+**Canonical Source**: `docs/03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`
 
 - [ ] ✅ Auto-generated from openapi.json (SSOT)
 - [ ] ✅ No manually maintained endpoint lists
@@ -250,11 +250,11 @@ jobs:
 **Step 1: Determine Which is Canonical**
 ```bash
 # Compare file sizes and modification times
-ls -lh docs/03-integrate/02-API-Specifications/openapi.json
+ls -lh docs/03-integrate/01-api-specifications/openapi.json
 ls -lh backend/openapi.json  # Duplicate found
 
 # Check which has more recent changes
-git log --oneline docs/03-integrate/02-API-Specifications/openapi.json | head -1
+git log --oneline docs/03-integrate/01-api-specifications/openapi.json | head -1
 git log --oneline backend/openapi.json | head -1
 ```
 
@@ -275,7 +275,7 @@ echo "backend/openapi.json" >> .gitignore
 # If code imports backend/openapi.json, update to reference Stage 03
 # Example: Python script
 # OLD: spec = json.load(open("backend/openapi.json"))
-# NEW: spec = json.load(open("docs/03-integrate/02-API-Specifications/openapi.json"))
+# NEW: spec = json.load(open("docs/03-integrate/01-api-specifications/openapi.json"))
 ```
 
 **Step 4: Document in PR**
@@ -307,6 +307,6 @@ echo "backend/openapi.json" >> .gitignore
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Owner**: Engineering + QA Teams

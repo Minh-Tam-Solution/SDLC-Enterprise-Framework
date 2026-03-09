@@ -1,10 +1,10 @@
-# OpenAPI Specification Quality Checklist (SDLC 6.1.1)
+# OpenAPI Specification Quality Checklist (SDLC 6.1.2)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Purpose**: Ensure high-quality OpenAPI specifications for E2E testing
 
 ---
@@ -271,13 +271,13 @@ requestBody:
 **Tools**:
 ```bash
 # 1. JSON Schema validation
-npx @stoplight/spectral lint docs/03-integrate/02-API-Specifications/openapi.json
+npx @stoplight/spectral lint docs/03-integrate/01-api-specifications/openapi.json
 
 # 2. OpenAPI 3.1 spec validation
-docker run --rm -v ${PWD}:/spec redocly/cli lint /spec/docs/03-integrate/02-API-Specifications/openapi.json
+docker run --rm -v ${PWD}:/spec redocly/cli lint /spec/docs/03-integrate/01-api-specifications/openapi.json
 
 # 3. Breaking change detection
-oasdiff breaking docs/03-integrate/02-API-Specifications/openapi.v1.json docs/03-integrate/02-API-Specifications/openapi.json
+oasdiff breaking docs/03-integrate/01-api-specifications/openapi.v1.json docs/03-integrate/01-api-specifications/openapi.json
 ```
 
 **Checklist**:
@@ -325,7 +325,7 @@ jq '.components.securitySchemes | keys' openapi.json
 **Test Generation Command**:
 ```bash
 sdlcctl e2e parse-openapi \
-  docs/03-integrate/02-API-Specifications/openapi.json \
+  docs/03-integrate/01-api-specifications/openapi.json \
   --generate-tests \
   --test-output tests/e2e/
 ```
@@ -426,7 +426,7 @@ responses:
 **Calculation Tool**:
 ```bash
 sdlcctl e2e parse-openapi \
-  docs/03-integrate/02-API-Specifications/openapi.json \
+  docs/03-integrate/01-api-specifications/openapi.json \
   --quality-report
 ```
 
@@ -443,6 +443,6 @@ sdlcctl e2e parse-openapi \
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Owner**: Engineering Teams

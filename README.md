@@ -1,6 +1,6 @@
-# SDLC 6.1.1 Universal Framework
+# SDLC 6.1.2 Universal Framework
 
-**Version**: 6.1.1 | **Status**: ACTIVE | **Date**: February 21, 2026
+**Version**: 6.1.2 | **Status**: ACTIVE | **Date**: March 9, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -15,7 +15,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.1.1 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.1.2 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -358,7 +358,7 @@ SDLC-Enterprise-Framework/
 │   │   └── DESIGN_DECISIONS.md / SPEC_DELTA.md
 │   ├── 02-AI-Tools/              # 23 AI prompts by stage (FROZEN)
 │   ├── 03-Agent-Templates/       # CLAUDE.md template
-│   ├── 04-SASE-Artifacts/        # CRP, MRP, VCR, AGENTS.md
+│   ├── 04-SASE-Artifacts/        # CRP, MRP, VCR, AGENTS.md, souls/, teams/
 │   ├── 05-Checklists/            # Stage transition + compliance
 │   ├── 06-Manual-Templates/      # Design Thinking + API templates
 │   ├── 07-Scripts/               # Validation scripts
@@ -367,7 +367,7 @@ SDLC-Enterprise-Framework/
 ├── 07-Implementation-Guides/     # Rollout guides (Ring 3)
 ├── 08-Training-Materials/        # Quick start + training (Ring 3)
 ├── 09-Continuous-Improvement/    # RFCs + improvement guide (Ring 3)
-├── 10-Archive/                   # Centralized legacy archive
+├── 10-archive/                   # Centralized legacy archive
 │   ├── 00-Legacy/               # Foundation archives (SDLC 1.x-5.0)
 │   ├── 01-Legacy/               # Early version scripts
 │   ├── 02-Legacy/               # Deprecated guides + code review originals
@@ -450,7 +450,7 @@ SDLC-Enterprise-Framework/
 
 **Templates**:
 - [AGENTS.md Template](./05-Templates-Tools/04-SASE-Artifacts/AGENTS-MD-Template.md) - **RECOMMENDED** (replaces MTS/BRS/LPS)
-- [SASE Artifacts](./05-Templates-Tools/04-SASE-Artifacts/) - CRP, MRP, VCR _(MTS/BRS/LPS deprecated)_
+- [SASE Artifacts](./05-Templates-Tools/04-SASE-Artifacts/) - CRP, MRP, VCR, [SOULs](./05-Templates-Tools/04-SASE-Artifacts/souls/), [TEAMs](./05-Templates-Tools/04-SASE-Artifacts/teams/)
 - [Checklists](./05-Templates-Tools/05-Checklists/) - Stage transitions, SSOT compliance
 
 **Implementation**:

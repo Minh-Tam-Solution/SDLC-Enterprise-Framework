@@ -1,5 +1,5 @@
 ---
-version: "6.1.1"
+version: "6.1.2"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -15,7 +15,7 @@ sprint: "176"
 
 # Multi-Agent Collaboration Patterns
 
-**Framework Version**: SDLC 6.1.1
+**Framework Version**: SDLC 6.1.2
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (New Methodology — requires ADR)
 **Effective Date**: February 18, 2026
@@ -431,6 +431,8 @@ The `assistant` role is a **routing agent** that:
 - Has no decision authority — purely navigational
 - Uses a fast, low-cost model
 
+> **Implementation**: See [05-Templates-Tools/04-SASE-Artifacts/souls/](../05-Templates-Tools/04-SASE-Artifacts/souls/) for concrete SOUL role templates implementing the 12-role SASE model.
+
 ### Model Tier Recommendations
 
 Use **abstract capability tiers** rather than version-pinned model identifiers:
@@ -611,7 +613,7 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 ## 17. References
 
 1. SASE Framework — arXiv:2509.06216v2 (SE4H, SE4A classification)
-2. SDLC 6.1.1 Quality Assurance System — Section 7
+2. SDLC 6.1.2 Quality Assurance System — Section 7
 3. SDLC Quality Gates — G0.1 through G4
 4. AI Governance Principles — Documents 01-11 (this section)
 5. Autonomous Codegen Patterns — Document 11 (two-agent pattern)
@@ -621,4 +623,4 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 **Document Status**: APPROVED
 **Owner**: CTO Office
 **Last Updated**: February 18, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2

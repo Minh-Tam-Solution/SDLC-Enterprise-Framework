@@ -1,17 +1,17 @@
 # Section 8: Unified Specification Standard
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Status**: ACTIVE - PRODUCTION READY
 **Date**: February 15, 2026
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 
 ---
 
 > **MORATORIUM (Sprint 173, Feb 2026)**: No new SPEC documents until Sprint 175.
 > CTO approval required to create new SPECs before moratorium lifts.
 
-> **CLEANUP (Sprint 173)**: 16 Orchestrator-specific SPECs archived to `10-Archive/03-Legacy/sprint-173-orchestrator-specs/`.
+> **CLEANUP (Sprint 173)**: 16 Orchestrator-specific SPECs archived to `10-archive/03-Legacy/sprint-173-orchestrator-specs/`.
 > Those SPECs describe platform implementation (codegen, AI engine, database models), not Framework methodology.
 > Only 5 methodology-level SPECs remain here: SPEC-0001, 0002, 0004, 0008, 0012.
 
@@ -42,7 +42,7 @@ This directory contains the **Section 8: Unified Specification Standard** — th
 ## Archived (Orchestrator-Specific)
 
 16 SPECs that describe SDLC Orchestrator platform implementation have been moved to
-`10-Archive/03-Legacy/sprint-173-orchestrator-specs/`. See [archive README](../../10-Archive/03-Legacy/sprint-173-orchestrator-specs/README.md) for details and migration path.
+`10-archive/03-Legacy/sprint-173-orchestrator-specs/`. See [archive README](../../10-archive/03-Legacy/sprint-173-orchestrator-specs/README.md) for details and migration path.
 
 ---
 
@@ -66,7 +66,7 @@ This directory contains the **Section 8: Unified Specification Standard** — th
     └── Example-Spec-PROFESSIONAL.md    # Full spec (10+ people)
 ```
 
-> **Note**: OpenSpec analysis and decision records have been archived to `10-Archive/05-Legacy/OpenSpec-Analysis-2026/`.
+> **Note**: OpenSpec analysis and decision records have been archived to `10-archive/05-Legacy/OpenSpec-Analysis-2026/`.
 
 ---
 
@@ -189,6 +189,6 @@ See [SDLC-Specification-Standard.md](./SDLC-Specification-Standard.md) Section 7
 **Document Status**: ACTIVE
 **Last Updated**: February 14, 2026
 **Owner**: CTO + CPO Office
-**Framework**: SDLC 6.1.1 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.1.2 (7-Pillar + 2-Section)
 
 ***"Consistent specifications enable consistent quality."***

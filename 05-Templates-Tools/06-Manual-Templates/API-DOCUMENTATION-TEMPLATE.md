@@ -1,15 +1,15 @@
 # Complete API Endpoint Reference Template
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.1.1
-**Stage**: 03-Integration-APIs
+**Framework**: SDLC 6.1.2
+**Stage**: 03-integrate
 **Last Updated**: February 2026
 
 ---
 
 ## Instructions
 
-This template defines the standard structure for API documentation in SDLC Framework projects. Copy this template to `docs/03-Integration-APIs/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`.
+This template defines the standard structure for API documentation in SDLC Framework projects. Copy this template to `docs/03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`.
 
 ---
 
@@ -31,7 +31,7 @@ This template defines the standard structure for API documentation in SDLC Frame
 | Users | {N} | {%} | {PASS/FAIL} | [Link](#) |
 | Projects | {N} | {%} | {PASS/FAIL} | [Link](#) |
 | Resources | {N} | {%} | {PASS/FAIL} | [Link](#) |
-| **Total** | **{TOTAL}** | **{AVG}%** | **{RATE}%** | [Latest Report](../../05-Testing-Quality/03-E2E-Testing/reports/) |
+| **Total** | **{TOTAL}** | **{AVG}%** | **{RATE}%** | [Latest Report](../../05-test/03-e2e-testing/reports/) |
 
 ---
 
@@ -146,7 +146,7 @@ curl -X POST "{BASE_URL}/api/v1/auth/login" \
 - Email: Valid email format, max 255 chars
 - Password: Min 8 chars, must contain uppercase, lowercase, number
 
-**Test Report**: [E2E Report - Authentication](../../05-Testing-Quality/03-E2E-Testing/reports/E2E-API-REPORT-{DATE}.md#authentication)
+**Test Report**: [E2E Report - Authentication](../../05-test/03-e2e-testing/reports/E2E-API-REPORT-{DATE}.md#authentication)
 
 **Test Status**: PASS | **Last Tested**: {DATE}
 
@@ -312,9 +312,9 @@ curl -X GET "{BASE_URL}/api/v1/projects?page=1&limit=20" \
 ## Cross-Reference Links
 
 ### Stage 05 - Testing & Quality
-- [E2E Test Reports](../../05-Testing-Quality/03-E2E-Testing/reports/)
-- [Security Testing Results](../../05-Testing-Quality/05-Security-Testing/)
-- [Integration Test Results](../../05-Testing-Quality/04-Integration-Testing/)
+- [E2E Test Reports](../../05-test/03-e2e-testing/reports/)
+- [Security Testing Results](../../05-test/05-Security-Testing/)
+- [Integration Test Results](../../05-test/04-integration-testing/)
 
 ### Stage 03 - Integration & APIs
 - [OpenAPI Specification](./openapi.json) (SSOT)

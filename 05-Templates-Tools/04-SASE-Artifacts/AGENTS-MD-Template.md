@@ -2,7 +2,7 @@
 
 **Version**: 2.0.0
 **Status**: RECOMMENDED
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Target**: <60 lines (per HumanLayer research)
 
 ---

@@ -308,7 +308,7 @@ Combined:
 - `/05-Deployment/` → Stage 06 (DEPLOY)
 - `/06-Operations/` → Stage 07 (OPERATE)
 - `/07-Integration/` → Stage 03 (INTEGRATE)
-- `/08-Team-Management/` → Stage 08 (COLLABORATE)
+- `/08-collaborate/` → Stage 08 (COLLABORATE)
 - `/09-Governance/` → Stage 09 (GOVERN)
 
 **Impact**: Systematic, AI-parseable, discoverable structure
@@ -813,12 +813,12 @@ Zero_Facade_Tolerance_Framework:
 ### Required File Headers
 ```yaml
 Code_Files:
-  - "DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md"
+  - "DESIGN: docs/02-design/[module]/[feature]-design.md"
   - "APPROVED: [YYYY-MM-DD] by [CPO/CTO/CEO]"
   - "SDLC: 4.4 Design-First & Document-First"
 
 Cultural_Context_Files:
-  - "CULTURAL-DESIGN: docs/02-Design-Architecture/Cultural/[feature]-cultural-design.md"
+  - "CULTURAL-DESIGN: docs/02-design/Cultural/[feature]-cultural-design.md"
   - "CULTURAL-APPROVED: [YYYY-MM-DD] by [CPO/Cultural-Advisor]"
   - "MARKET-VALIDATED: [YYYY-MM-DD] by [CPO]"
 ```

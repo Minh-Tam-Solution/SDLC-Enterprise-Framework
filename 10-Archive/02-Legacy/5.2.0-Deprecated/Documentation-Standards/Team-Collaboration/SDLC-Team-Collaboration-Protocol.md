@@ -341,7 +341,7 @@ Handoff: Team A (Design) → Team B (Implementation)
 
 Trigger:
   - Design marked "Ready for Review" in project board
-  - All design documents in /docs/02-Design-Architecture/
+  - All design documents in /docs/02-design/
 
 Acceptance Criteria (DoD):
   - [ ] ADR(s) documented for major decisions

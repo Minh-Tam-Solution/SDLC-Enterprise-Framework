@@ -8,9 +8,9 @@ Operational checklist to enforce Design-First + AI+Human orchestration. Updated 
 
 | Phase | Gate | Mandatory Artefacts | Pass Criteria | Evidence Location | Status | Notes |
 |-------|------|---------------------|---------------|-------------------|--------|-------|
-| Foundation | G0 Init | Project Charter, Vision, Risk Log | All approved | docs/00-Project-Foundation |  |  |
-| Planning | G1 Requirements Freeze | Req Spec, Use Case Set, Risk Update | ≥95% requirements ID'd; no critical TBD | docs/01-Planning-Analysis |  |  |
-| Design | G2 Design Approval | Architecture Briefs, API Contracts, Data Models | 100% high-risk features have design IDs | docs/02-Design-Architecture |  |  |
+| Foundation | G0 Init | Project Charter, Vision, Risk Log | All approved | docs/00-foundation |  |  |
+| Planning | G1 Requirements Freeze | Req Spec, Use Case Set, Risk Update | ≥95% requirements ID'd; no critical TBD | docs/01-planning |  |  |
+| Design | G2 Design Approval | Architecture Briefs, API Contracts, Data Models | 100% high-risk features have design IDs | docs/02-design |  |  |
 | Dev Prep | G3 Dev Readiness | Traceability Map v1, Test Strategy, Env Spec | Trace coverage ≥70% | docs/03-Development-Implementation |  |  |
 | Implementation | G4 Iteration Cycle | Updated Trace Map, Drift Report, Coverage Report | Drift <10%, Design coverage ≥90% | reports/ (to add) |  |  |
 | Verification | G5 Pre-UAT | Test Pass Report, Perf Baseline, Security Scan | No Sev1 open, Sev2<=3, p95 < target+15% | tests/reports |  |  |

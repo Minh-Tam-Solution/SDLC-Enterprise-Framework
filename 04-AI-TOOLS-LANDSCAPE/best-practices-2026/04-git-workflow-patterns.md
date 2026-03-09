@@ -1,9 +1,9 @@
 # Git Workflow Patterns for AI Development
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Ring**: 2 (Governance - Best Practices)
 **Source**: Consolidated from RFC-SDLC-604 (Boris Cherny Tactic #2)
 
@@ -86,7 +86,7 @@ Component Breakdown:
   4. Documentation (50 LOC)
      - API reference (OpenAPI)
      - User guide
-     - Files: docs/03-integrate/02-API-Specifications/
+     - Files: docs/03-integrate/01-api-specifications/
 
 Independence Check:
   ✅ Backend ↔ Frontend: API contract defined (OpenAPI spec)
@@ -321,7 +321,7 @@ Worktree 3 (Tests):
   - frontend/tests/Login.test.tsx
 
 Worktree 4 (Docs):
-  - docs/03-integrate/02-API-Specifications/auth.md
+  - docs/03-integrate/01-api-specifications/auth.md
 ```
 
 **No file should appear in multiple worktrees** (prevents conflicts).
@@ -567,7 +567,7 @@ Each worktree PR creates Evidence artifacts:
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Ring**: 2 (Governance - Best Practices)
 **Source**: Consolidated from RFC-SDLC-604 (Boris Cherny Tactic #2)
 **Owner**: Engineering + Tech Leads

@@ -4,7 +4,7 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define the dual workbench architecture for human-agent collaboration
-**Framework:** SDLC 6.1.1 (7-Pillar + Section 7 Quality Assurance System)
+**Framework:** SDLC 6.1.2 (7-Pillar + Section 7 Quality Assurance System)
 **Version:** 1.2.0
 **Created:** December 2025
 **Updated:** February 18, 2026
@@ -12,7 +12,7 @@
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 > **⚠️ Terminology Note (v1.2.0):** This document references legacy artifact names
-> (BRS, LPS, MentorScript) in API routes and architecture diagrams. As of SDLC 6.1.1:
+> (BRS, LPS, MentorScript) in API routes and architecture diagrams. As of SDLC 6.1.2:
 > - **BRS + MTS → AGENTS.md** (static context file, version-controlled)
 > - **LPS → deprecated** (agent-internal, not a deliverable)
 > - **Active SASE artifacts: AGENTS.md, CRP, MRP, VCR** (4 total)
@@ -1074,7 +1074,7 @@ SASE Kanban Board:
 | 13-AGENTIC-CORE-PRINCIPLES | 03-AI-GOVERNANCE/ | SE4H/SE4A framework |
 | BriefingScript Template | 05-Templates-Tools/SASE-Artifacts/ | BRS structure |
 | MRP Template | 05-Templates-Tools/SASE-Artifacts/ | MRP structure |
-| Security Baseline | docs/02-Design-Architecture/ | OWASP ASVS L2 |
+| Security Baseline | docs/02-design/ | OWASP ASVS L2 |
 | AI Provider Integration Pattern | (implementation-specific) | Multi-provider fallback architecture |
 
 ### External References
@@ -1098,4 +1098,4 @@ SASE Kanban Board:
 
 **Document Status:** Phase 1-Spec (SE 3.0 Track 1)
 **Next Review:** CTO Final Review (Q1 2026)
-**Framework Version:** SDLC 6.1.1 (7-Pillar Architecture + Section 7 Quality Assurance System)
+**Framework Version:** SDLC 6.1.2 (7-Pillar Architecture + Section 7 Quality Assurance System)

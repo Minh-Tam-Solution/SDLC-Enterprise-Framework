@@ -232,7 +232,7 @@ Stage 02 (DESIGN):
 **Gate Requirement**: G3 passed (same as Stage 04, validates test coverage)
 
 **Documentation Requirements**:
-- ✅ `docs/05-test/01-Test-Plans/` contains test strategy
+- ✅ `docs/05-test/01-test-plans/` contains test strategy
 - ✅ Test results documented (unit, integration, E2E)
 - ✅ Bug tracking log (if bugs found)
 - ✅ Performance test results (if applicable)

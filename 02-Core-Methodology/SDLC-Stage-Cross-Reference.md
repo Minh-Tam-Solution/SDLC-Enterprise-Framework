@@ -1,7 +1,7 @@
 # Stage 03 ↔ Stage 05 Cross-Reference Matrix
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Last Updated**: February 2026
 
@@ -18,11 +18,11 @@ This document defines the bidirectional cross-reference requirements between Sta
 ### Stage 03 → Stage 05 Links
 
 ```
-docs/03-Integration-APIs/
+docs/03-integrate/
 ├── 01-API-Contracts/
 │   └── README.md                              # Links to integration test results
 │
-├── 02-API-Specifications/
+├── 01-api-specifications/
 │   ├── COMPLETE-API-ENDPOINT-REFERENCE.md     # Links to E2E test reports
 │   │   └── Per endpoint: Test status, last tested, report link
 │   ├── openapi.json                           # SSOT (Single Source of Truth)
@@ -35,18 +35,18 @@ docs/03-Integration-APIs/
 ### Stage 05 → Stage 03 Links
 
 ```
-docs/05-Testing-Quality/
-├── 03-E2E-Testing/
+docs/05-test/
+├── 03-e2e-testing/
 │   ├── reports/
 │   │   └── E2E-API-REPORT-{DATE}.md           # Links to API Reference
 │   │       └── Cross-Reference section with Stage 03 links
 │   ├── scripts/
 │   │   └── test_all_endpoints.py              # Imports openapi.json from Stage 03
 │   ├── artifacts/                             # Symlink to Stage 03 spec (NOT duplicate)
-│   │   └── openapi.json -> ../../../03-Integration-APIs/02-API-Specifications/openapi.json
+│   │   └── openapi.json -> ../../../03-integrate/01-api-specifications/openapi.json
 │   └── README.md                              # Links to Stage 03 API Specifications
 │
-├── 04-Integration-Testing/
+├── 04-integration-testing/
 │   └── README.md                              # Links to Stage 03 API Contracts
 │
 └── 05-Security-Testing/
@@ -65,19 +65,19 @@ The **Single Source of Truth** principle ensures that critical artifacts exist i
 ```yaml
 SSOT Configuration:
   Primary Location:
-    Path: docs/03-Integration-APIs/02-API-Specifications/openapi.json
+    Path: docs/03-integrate/01-api-specifications/openapi.json
     Stage: 03 (Integration & APIs)
     Reason: API design is an integration concern
 
   Stage 05 Access Methods:
     Option 1 - Symlink (Recommended):
-      artifacts/openapi.json -> ../../../03-Integration-APIs/02-API-Specifications/openapi.json
+      artifacts/openapi.json -> ../../../03-integrate/01-api-specifications/openapi.json
 
     Option 2 - Relative Path in Scripts:
-      SPEC_PATH = "docs/03-Integration-APIs/02-API-Specifications/openapi.json"
+      SPEC_PATH = "docs/03-integrate/01-api-specifications/openapi.json"
 
     Option 3 - Environment Variable:
-      OPENAPI_SPEC_PATH=docs/03-Integration-APIs/02-API-Specifications/openapi.json
+      OPENAPI_SPEC_PATH=docs/03-integrate/01-api-specifications/openapi.json
 
   Prohibited:
     - Copying openapi.json to Stage 05
@@ -108,14 +108,14 @@ SSOT Configuration:
 ## Cross-Reference Links
 
 ### Stage 05 - Testing & Quality
-- [E2E Test Reports](../../05-Testing-Quality/03-E2E-Testing/reports/)
-- [Security Testing](../../05-Testing-Quality/05-Security-Testing/)
-- [Latest E2E Report](../../05-Testing-Quality/03-E2E-Testing/reports/E2E-API-REPORT-{LATEST}.md)
+- [E2E Test Reports](../../05-test/03-e2e-testing/reports/)
+- [Security Testing](../../05-test/05-Security-Testing/)
+- [Latest E2E Report](../../05-test/03-e2e-testing/reports/E2E-API-REPORT-{LATEST}.md)
 
 ### Per Endpoint
 | Endpoint | Test Status | Last Tested | Report Link |
 |----------|-------------|-------------|-------------|
-| POST /auth/login | PASS | 2026-02-15 | [Link](../../05-Testing-Quality/...) |
+| POST /auth/login | PASS | 2026-02-15 | [Link](../../05-test/...) |
 ```
 
 #### From Stage 05 (E2E Report)
@@ -126,9 +126,9 @@ SSOT Configuration:
 ## Cross-Reference
 
 ### Stage 03 - Integration & APIs
-- **API Documentation**: [Complete API Reference](../../../03-Integration-APIs/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
-- **OpenAPI Spec**: [openapi.json](../../../03-Integration-APIs/02-API-Specifications/openapi.json)
-- **API Design Decisions**: [ADRs](../../../03-Integration-APIs/01-API-Contracts/)
+- **API Documentation**: [Complete API Reference](../../../03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
+- **OpenAPI Spec**: [openapi.json](../../../03-integrate/01-api-specifications/openapi.json)
+- **API Design Decisions**: [ADRs](../../../03-integrate/01-API-Contracts/)
 ```
 
 ### README Cross-References
@@ -136,15 +136,15 @@ SSOT Configuration:
 #### Stage 03 README
 
 ```markdown
-# docs/03-Integration-APIs/README.md
+# docs/03-integrate/README.md
 
 ## Related Stages
 
 ### Stage 05 - Testing & Quality
 This stage's API specifications are tested in Stage 05:
-- [E2E Testing](../05-Testing-Quality/03-E2E-Testing/)
-- [Integration Testing](../05-Testing-Quality/04-Integration-Testing/)
-- [Security Testing](../05-Testing-Quality/05-Security-Testing/)
+- [E2E Testing](../05-test/03-e2e-testing/)
+- [Integration Testing](../05-test/04-integration-testing/)
+- [Security Testing](../05-test/05-Security-Testing/)
 
 **Note**: Test reports link back to this stage's API documentation for traceability.
 ```
@@ -152,14 +152,14 @@ This stage's API specifications are tested in Stage 05:
 #### Stage 05 README
 
 ```markdown
-# docs/05-Testing-Quality/03-E2E-Testing/README.md
+# docs/05-test/03-e2e-testing/README.md
 
 ## Related Stages
 
 ### Stage 03 - Integration & APIs
 Tests in this folder validate the APIs documented in Stage 03:
-- [API Specification](../../03-Integration-APIs/02-API-Specifications/) (SSOT for openapi.json)
-- [API Reference](../../03-Integration-APIs/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
+- [API Specification](../../03-integrate/01-api-specifications/) (SSOT for openapi.json)
+- [API Reference](../../03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md)
 
 **SSOT Note**: openapi.json is maintained in Stage 03. Use symlink or relative path to access.
 ```
@@ -195,8 +195,8 @@ Cross-Reference Validation:
 ```bash
 # Validate cross-references
 [SDLC CLI] validate-cross-reference \
-  --stage-03 docs/03-Integration-APIs \
-  --stage-05 docs/05-Testing-Quality
+  --stage-03 docs/03-integrate \
+  --stage-05 docs/05-test
 
 # Expected output
 Cross-Reference Validation Report
@@ -257,14 +257,14 @@ Stage 05 (Testing):
 ```yaml
 Setup Checklist:
   Stage 03:
-    - [ ] Create docs/03-Integration-APIs/02-API-Specifications/
+    - [ ] Create docs/03-integrate/01-api-specifications/
     - [ ] Add COMPLETE-API-ENDPOINT-REFERENCE.md (use template)
     - [ ] Export openapi.json from API
     - [ ] Add Cross-Reference Links section
     - [ ] Update README with Stage 05 links
 
   Stage 05:
-    - [ ] Create docs/05-Testing-Quality/03-E2E-Testing/
+    - [ ] Create docs/05-test/03-e2e-testing/
     - [ ] Create reports/, scripts/, artifacts/ subfolders
     - [ ] Add symlink to Stage 03 openapi.json
     - [ ] Add README with Stage 03 links

@@ -1,6 +1,6 @@
-# SDLC 6.1.1 Self-Contained Deployment Guide
+# SDLC 6.1.2 Self-Contained Deployment Guide
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 27, 2026
 **Status**: ACTIVE - CEO Requirement
 **Authority**: CEO + CTO Office
@@ -15,7 +15,7 @@
 
 **Translation**: Every team member (AI or Human) should only need to access ONE folder to understand SDLC compliance for any specific situation in the project.
 
-**Target Folder**: `docs/08-Team-Management/03-SDLC-Compliance/`  
+**Target Folder**: `docs/08-collaborate/03-sdlc-compliance/`  
 **Principle**: **Self-Contained** - No external dependencies, all guidance in one place
 
 ---
@@ -27,9 +27,9 @@
 **ONE FOLDER = COMPLETE SDLC KNOWLEDGE**
 
 ```
-docs/08-Team-Management/03-SDLC-Compliance/
+docs/08-collaborate/03-sdlc-compliance/
 ├── README.md                           ← Start here
-├── Core-Methodology/                   ← What is SDLC 6.1.1?
+├── Core-Methodology/                   ← What is SDLC 6.1.2?
 ├── SASE-Artifacts/                     ← How to work with AI agents?
 ├── Governance-Compliance/              ← What are the rules?
 ├── Documentation-Standards/            ← How to document?
@@ -45,7 +45,7 @@ Before deploying SDLC Compliance folder, ensure your project has the correct `/d
 
 **See**: [SDLC-Implementation-Guide.md - Project Folder Structure](SDLC-Implementation-Guide.md#-project-folder-structure-mandatory) for complete folder structure requirements by tier.
 
-> **Note**: The SDLC Self-Contained Compliance folder (`03-SDLC-Compliance/`) is typically placed in `08-collaborate/` for ENTERPRISE tier. For smaller tiers, adapt location appropriately (e.g., root `docs/` for STANDARD).
+> **Note**: The SDLC Self-Contained Compliance folder (`03-sdlc-compliance/`) is typically placed in `08-collaborate/` for ENTERPRISE tier. For smaller tiers, adapt location appropriately (e.g., root `docs/` for STANDARD).
 
 ---
 
@@ -55,7 +55,7 @@ Before deploying SDLC Compliance folder, ensure your project has the correct `/d
 
 **Create folder structure**:
 ```bash
-cd docs/08-Team-Management/03-SDLC-Compliance/
+cd docs/08-collaborate/03-sdlc-compliance/
 
 mkdir -p Core-Methodology
 mkdir -p SASE-Artifacts  
@@ -197,13 +197,13 @@ Quick-Reference/
 **Step 1: Copy from Framework**
 ```bash
 cp /path/to/SDLC-Framework/source.md \
-   docs/08-Team-Management/03-SDLC-Compliance/destination/
+   docs/08-collaborate/03-sdlc-compliance/destination/
 ```
 
 **Step 2: Add Project Header**
 ```markdown
 ---
-**SDLC Version**: 6.1.1
+**SDLC Version**: 6.1.2
 **Project**: [Your Project Name]
 **Team Tier**: PROFESSIONAL | STANDARD | LITE | ENTERPRISE
 **Adapted**: [Date]
@@ -272,7 +272,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Purpose**: Every team member starts here
 
 ```markdown
-# SDLC 6.1.1 Compliance - [Project Name]
+# SDLC 6.1.2 Compliance - [Project Name]
 
 ## 🚀 I want to...
 
@@ -300,7 +300,7 @@ cp /path/to/SDLC-Framework/source.md \
 
 ## 📚 Folders
 
-- **Core-Methodology/** - What is SDLC 6.1.1?
+- **Core-Methodology/** - What is SDLC 6.1.2?
 - **SASE-Artifacts/** - How to work with AI agents?
 - **Governance-Compliance/** - What are the rules?
 - **Documentation-Standards/** - How to document?
@@ -334,7 +334,7 @@ Projects must implement quality gates appropriate to their tier.
 **Our Team (11 members)** implements these gates:
 
 1. **G0.1 Problem Definition** ✅ Required
-   - ADR created in `docs/02-Design-Architecture/12-Architecture-Decisions/`
+   - ADR created in `docs/02-design/12-Architecture-Decisions/`
    - PM/PJM approval (Local Team)
    
 2. **G3 Ship Ready** ✅ Required
@@ -393,7 +393,7 @@ Projects must implement quality gates appropriate to their tier.
 ## 📞 Support Strategy
 
 ### Tier 1: Self-Service (80%)
-→ `docs/08-Team-Management/03-SDLC-Compliance/` folder
+→ `docs/08-collaborate/03-sdlc-compliance/` folder
 
 ### Tier 2: Quick Reference (15%)
 → `Quick-Reference/Common-Scenarios-FAQ.md`
@@ -439,11 +439,11 @@ Projects must implement quality gates appropriate to their tier.
 > 
 > No need to search GitHub, ask CTO, or read 319 files.
 > 
-> Just go to `docs/08-Team-Management/03-SDLC-Compliance/` and find your answer.
+> Just go to `docs/08-collaborate/03-sdlc-compliance/` and find your answer.
 
 ---
 
 **Document Owner**: CTO
 **Last Updated**: January 29, 2026
 **Next Review**: February 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2

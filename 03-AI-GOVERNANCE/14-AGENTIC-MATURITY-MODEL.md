@@ -1,5 +1,5 @@
 ---
-version: "6.1.1"
+version: "6.1.2"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -17,12 +17,12 @@ priority: "P1"
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define maturity levels for adopting agentic practices in software development
-**Framework:** SDLC 6.1.1 (7-Pillar + 2-Section Architecture)
-**Version:** 6.1.1
+**Framework:** SDLC 6.1.2 (7-Pillar + 2-Section Architecture)
+**Version:** 6.1.2
 **Date:** February 18, 2026
 **Status:** ACTIVE - PRODUCTION READY
 
-> **Terminology Note (6.1.1):** BRS (BriefingScript) and MTS (MentorScript) are
+> **Terminology Note (6.1.2):** BRS (BriefingScript) and MTS (MentorScript) are
 > **DEPRECATED** — both replaced by **AGENTS.md** (industry standard).
 > LPS (LoopScript) is **DEPRECATED** — agents generate execution plans internally.
 > Active SASE artifacts: **AGENTS.md + CRP + MRP + VCR** (4 active).
@@ -827,4 +827,4 @@ Level 3 Governance:
 
 **Document Status:** ACTIVE - PRODUCTION READY
 **Last Updated:** February 18, 2026
-**Framework Version:** SDLC 6.1.1
+**Framework Version:** SDLC 6.1.2

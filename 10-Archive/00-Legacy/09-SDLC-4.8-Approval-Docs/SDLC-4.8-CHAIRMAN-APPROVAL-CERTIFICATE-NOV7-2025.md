@@ -14,7 +14,7 @@
 
 **Scope**: Full organization-wide deployment of SDLC 4.8 Universal Framework
 
-**Implementation Start**: Immediate - BFlow Platform (`docs/08-Team-Management/03-SDLC-Compliance`)
+**Implementation Start**: Immediate - BFlow Platform (`docs/08-collaborate/03-SDLC-Compliance`)
 
 **CTO Authority**: Granted full implementation authority
 
@@ -194,7 +194,7 @@ Business Impact:
 ### Phase 1: Pilot Program (Week 1-2) - IMMEDIATE
 
 **Primary Target**: BFlow Platform
-- **Location**: `docs/08-Team-Management/03-SDLC-Compliance`
+- **Location**: `docs/08-collaborate/03-SDLC-Compliance`
 - **Team Size**: 10 developers
 - **Code Review Tier**: Tier 2 (Subscription-based)
 - **CTO Authority**: Full implementation control
@@ -525,7 +525,7 @@ This is an **EXTRAORDINARY ACHIEVEMENT**. In just 4 weeks, the team has:
 ### For CTO (Immediate):
 
 1. **Begin BFlow Implementation** ✅
-   - Location: `docs/08-Team-Management/03-SDLC-Compliance`
+   - Location: `docs/08-collaborate/03-SDLC-Compliance`
    - Deploy SDLC 4.8 documentation
    - Setup Tier 2 code review framework
    - Train BFlow development team
@@ -578,7 +578,7 @@ This is an **EXTRAORDINARY ACHIEVEMENT**. In just 4 weeks, the team has:
 ║   Date: November 7, 2025                                  ║
 ║                                                            ║
 ║   CTO Implementation: AUTHORIZED                          ║
-║   Pilot: BFlow Platform (docs/08-Team-Management/...)    ║
+║   Pilot: BFlow Platform (docs/08-collaborate/...)    ║
 ║   Timeline: 4 weeks to full adoption                      ║
 ║                                                            ║
 ║   Framework: 48 files, 701KB, 5-star quality             ║

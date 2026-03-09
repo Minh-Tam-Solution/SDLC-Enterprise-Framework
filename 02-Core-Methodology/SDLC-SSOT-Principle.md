@@ -1,9 +1,9 @@
-# SSOT Principle (Single Source of Truth) - SDLC 6.1.1
+# SSOT Principle (Single Source of Truth) - SDLC 6.1.2
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Purpose**: Define and enforce Single Source of Truth across all SDLC stages
 
 ---
@@ -46,7 +46,7 @@ project/
 
 ```
 project/
-├── docs/03-integrate/02-API-Specifications/
+├── docs/03-integrate/01-api-specifications/
 │   └── openapi.json              ← ✅ CANONICAL SOURCE (v1.2.0)
 │
 ├── backend/
@@ -70,12 +70,12 @@ project/
 
 ### 1. API Specification (OpenAPI/Swagger)
 
-**Canonical Location**: `docs/03-integrate/02-API-Specifications/openapi.json`
+**Canonical Location**: `docs/03-integrate/01-api-specifications/openapi.json`
 
 **Generation**:
 ```bash
 # Auto-generate from backend code (FastAPI, Express, Spring Boot)
-python3 scripts/generate_openapi.py > docs/03-integrate/02-API-Specifications/openapi.json
+python3 scripts/generate_openapi.py > docs/03-integrate/01-api-specifications/openapi.json
 ```
 
 **Consumers** (symlinks or imports):
@@ -142,7 +142,7 @@ diff <(sort .env.example) <(sort .env.development | grep -v "^#")
 
 ### 4. API Endpoint List (Human-Readable)
 
-**Canonical Location**: `docs/03-integrate/02-API-Specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`
+**Canonical Location**: `docs/03-integrate/01-api-specifications/COMPLETE-API-ENDPOINT-REFERENCE.md`
 
 **Generation**: Auto-generated from openapi.json (SSOT)
 ```bash
@@ -198,7 +198,7 @@ find . -name "tsconfig.json" ! -path "./node_modules/*" -exec grep -L "extends" 
 ```bash
 # Create symlink from frontend to canonical OpenAPI spec
 cd frontend/
-ln -sf ../docs/03-integrate/02-API-Specifications/openapi.json openapi.json
+ln -sf ../docs/03-integrate/01-api-specifications/openapi.json openapi.json
 
 # Verify symlink
 ls -la openapi.json
@@ -224,7 +224,7 @@ ls -la openapi.json
 # package.json script
 {
   "scripts": {
-    "copy-openapi": "cp docs/03-integrate/02-API-Specifications/openapi.json public/openapi.json"
+    "copy-openapi": "cp docs/03-integrate/01-api-specifications/openapi.json public/openapi.json"
   }
 }
 
@@ -251,7 +251,7 @@ ls -la openapi.json
 import json
 from pathlib import Path
 
-OPENAPI_PATH = Path(__file__).parent.parent / "docs/03-integrate/02-API-Specifications/openapi.json"
+OPENAPI_PATH = Path(__file__).parent.parent / "docs/03-integrate/01-api-specifications/openapi.json"
 spec = json.load(open(OPENAPI_PATH))
 ```
 
@@ -272,7 +272,7 @@ spec = json.load(open(OPENAPI_PATH))
 ```markdown
 ## API Specification
 
-**Canonical Source**: [openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
+**Canonical Source**: [openapi.json](../../03-integrate/01-api-specifications/openapi.json)
 
 **DO NOT COPY** - Always reference the Stage 03 canonical source.
 ```
@@ -299,7 +299,7 @@ During project setup, document SSOT locations:
 
 | Artifact Type | Canonical Location | Consumers |
 |---------------|-------------------|-----------|
-| OpenAPI Spec | docs/03-integrate/02-API-Specifications/openapi.json | Backend, Frontend, Tests |
+| OpenAPI Spec | docs/03-integrate/01-api-specifications/openapi.json | Backend, Frontend, Tests |
 | Database Schema | docs/01-planning/04-Data-Model/Data-Model-ERD.md | Alembic, ORM, Tests |
 | Environment Vars | .env.example | All environments |
 | API Endpoint List | docs/03-integrate/.../COMPLETE-API-ENDPOINT-REFERENCE.md | Docs, Developers |
@@ -370,7 +370,7 @@ jobs:
 **Detected**:
 ```bash
 $ find . -name "openapi.json" -type f
-./docs/03-integrate/02-API-Specifications/openapi.json  ← Canonical
+./docs/03-integrate/01-api-specifications/openapi.json  ← Canonical
 ./backend/openapi.json  ← DUPLICATE
 ```
 
@@ -380,7 +380,7 @@ $ find . -name "openapi.json" -type f
 cp backend/openapi.json backend/openapi.json.bak
 
 # Compare files
-diff docs/03-integrate/02-API-Specifications/openapi.json backend/openapi.json
+diff docs/03-integrate/01-api-specifications/openapi.json backend/openapi.json
 
 # If identical, delete duplicate
 rm backend/openapi.json
@@ -401,10 +401,10 @@ git commit -m "fix: Remove duplicate openapi.json, enforce SSOT"
 **Remediation**:
 ```bash
 # Regenerate canonical from code
-python3 scripts/generate_openapi.py > docs/03-integrate/02-API-Specifications/openapi.json
+python3 scripts/generate_openapi.py > docs/03-integrate/01-api-specifications/openapi.json
 
 # Commit update
-git add docs/03-integrate/02-API-Specifications/openapi.json
+git add docs/03-integrate/01-api-specifications/openapi.json
 git commit -m "docs: Update canonical OpenAPI spec from backend v1.3.0"
 ```
 
@@ -489,6 +489,6 @@ DATABASE_URL = getenv("DATABASE_URL")  # References .env.example structure
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Owner**: Architecture + Engineering Teams
 **Approval**: CTO @nqh ✅

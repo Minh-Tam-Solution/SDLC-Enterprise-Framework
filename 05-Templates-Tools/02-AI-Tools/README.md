@@ -1,8 +1,8 @@
 # AI Tools for SDLC — Stage-Aligned AI Automation
 
-> **ARCHIVED** (SDLC 6.1.1, February 2026)
+> **ARCHIVED** (SDLC 6.1.2, February 2026)
 >
-> 36 prompt templates moved to: [`10-Archive/05-Legacy/ai-tools-templates-sprint173/`](../../10-Archive/05-Legacy/ai-tools-templates-sprint173/)
+> 36 prompt templates moved to: [`10-archive/05-Legacy/ai-tools-templates-sprint173/`](../../10-archive/05-Legacy/ai-tools-templates-sprint173/)
 >
 > **Reason**: FROZEN since Sprint 173 (Feb 2026). Not integrated with Orchestrator code. Confirmed by Feb 2026 audit.
 >
@@ -26,4 +26,4 @@
 
 **Stub Created**: February 21, 2026
 **Removal Date**: August 2026
-**Archive Location**: `10-Archive/05-Legacy/ai-tools-templates-sprint173/`
+**Archive Location**: `10-archive/05-Legacy/ai-tools-templates-sprint173/`

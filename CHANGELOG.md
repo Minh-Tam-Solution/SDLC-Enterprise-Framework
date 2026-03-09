@@ -2,9 +2,41 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.1.1 Enterprise Framework - Post-Cleanup Patch
+**Framework**: SDLC 6.1.2 Enterprise Framework - SOULs + TEAMs Templates
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: February 21, 2026 (SDLC 6.1.1 Post-Cleanup Patch)
+**Last Updated**: March 9, 2026 (SDLC 6.1.2 SOULs + TEAMs)
+
+---
+
+## 🎭 Version 6.1.2 - March 9, 2026 (SOULs + TEAMs TEMPLATES)
+
+**Release Date**: March 9, 2026
+**Type**: MINOR RELEASE - SASE role templates and team charters added to Ring 2
+**Status**: PRODUCTION-READY
+**Breaking Changes**: No
+**Supersedes**: SDLC 6.1.1 Post-Cleanup Patch
+**Trigger**: CTO + PM + CPO approved plan v4.0 — battle-tested SOULs from EndiorBot + MTClaw
+**CTO Review**: APPROVED — all PM R1/R2/R3 recommendations addressed
+
+### Changes
+
+| Change | Description | Files |
+|--------|-------------|-------|
+| **17 SOUL role templates** | SASE 12-role model personas (8 SE4A + 3 SE4H + 1 Router + 1 SE4A support + 4 optional) | `05-Templates-Tools/04-SASE-Artifacts/souls/` |
+| **10 TEAM charters** | 7 SDLC function teams (EndiorBot) + 3 organizational teams (MTClaw) | `05-Templates-Tools/04-SASE-Artifacts/teams/` |
+| **Tier Availability Matrix** | LITE(3) → STANDARD(6) → PRO(10) → ENTERPRISE(13) → OPTIONAL(17) | `souls/README.md` |
+| **souls/README.md** | Index with SASE classification, tier matrix, usage guide, artifact relationships | New file |
+| **Cross-references** | 03-Agent-Templates → SOULs redirect, Multi-Agent Patterns → SOULs link | 3 docs updated |
+| **Vendor sanitization** | MTClaw-sourced templates cleaned: project refs → `{PROJECT_NAME}`, `{AI_PROVIDER}` | 5 files |
+| **Dual versioning (R2)** | Each SOUL/TEAM has `sdlc_framework: "6.1.2"` alongside own `version: 1.0.0` | 27 files |
+
+### Source Selection (Hybrid)
+
+| Source | SOULs | TEAMs | Rationale |
+|--------|-------|-------|-----------|
+| **EndiorBot** | 12 (coder, tester, pm, pjm, cto, cpo, ceo, fullstack, architect, devops, reviewer, researcher) | 7 (dev, qa, design, executive, fullstack, ops, planning) | More recent (Mar 9), Post-Sprint Doc Sync sections |
+| **MTClaw** | 5 (assistant, writer, sales, cs, itadmin) | 3 (advisory, business, engineering) | Assistant 2.6KB richer; 4 unique non-SDLC roles |
+| **Dropped** | SOUL-dev.md | — | Confusing with TEAM-dev, overlaps SOUL-coder, OTT chatbot not SDLC executor |
 
 ---
 
@@ -23,7 +55,7 @@
 | Change | Description | Files |
 |--------|-------------|-------|
 | **"AI Council" → "Senior Review Board"** | Tool-agnostic terminology after AI Council service deletion | 5 active docs |
-| **Archive 36 FROZEN templates** | Sprint 173 frozen AI prompt templates archived | 36 files → `10-Archive/05-Legacy/` |
+| **Archive 36 FROZEN templates** | Sprint 173 frozen AI prompt templates archived | 36 files → `10-archive/05-Legacy/` |
 | **Conversation-First Governance (#15)** | New methodology: governance-via-conversation patterns | `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` |
 | **Tool profile disclaimers** | All profiles marked REFERENCE PROFILE | 3 tool profiles |
 | **README #14 gap fixed** | Docs #12-#15 listed in AI Governance README | `03-AI-GOVERNANCE/README.md` |
@@ -126,7 +158,7 @@ All 3 documents sit in the **Core Ring** (timeless methodology):
 
 | Enhancement | Description | Key Benefit |
 |-------------|-------------|-------------|
-| **RFC-001 Legacy Document Organization** | Centralize 99-Legacy/ → 10-Archive/{NN}-Legacy/ | 57% size reduction, eliminates AI context pollution |
+| **RFC-001 Legacy Document Organization** | Centralize 99-Legacy/ → 10-archive/{NN}-Legacy/ | 57% size reduction, eliminates AI context pollution |
 | **SPEC-0001 Anti-Vibecoding Alignment** | 5 Vibecoding Index signals machine-readable | Progressive Routing: <20/20-40/40-60/>=60 |
 | **4 New Framework Templates** | Go-Live Checklist, Go-Live Assessment, Maturity Framework, Risk Register | ~80-85% time savings per template |
 | **Governance Loop Simplification** | Code review consolidation (3 guides → 1) | Reduced maintenance burden |
@@ -491,10 +523,10 @@ sdlcctl explain --timeline --from "2025-11-01" --to "2026-03-01" --format html
 **New sdlcctl Commands:**
 ```bash
 # Validate E2E testing compliance
-sdlcctl e2e validate --openapi docs/03-Integration-APIs/openapi.json
+sdlcctl e2e validate --openapi docs/03-integrate/openapi.json
 
 # Validate Stage 03 ↔ 05 cross-references
-sdlcctl e2e cross-reference --stage-03 docs/03-Integration-APIs --stage-05 docs/05-Testing-Quality
+sdlcctl e2e cross-reference --stage-03 docs/03-integrate --stage-05 docs/05-test
 
 # Generate E2E test report
 sdlcctl e2e generate-report --results test-results.json --output reports/
@@ -1921,7 +1953,7 @@ Django Migrations:
 /05-Deployment/        → Stage 06 (DEPLOY)    ⭐ NEW
 /06-Operations/        → Stage 07 (OPERATE)   ⭐ NEW
 /07-Integration/       → Stage 03 (INTEGRATE) ⭐ NEW
-/08-Team-Management/   → Stage 08 (COLLABORATE) ⭐ NEW
+/08-collaborate/   → Stage 08 (COLLABORATE) ⭐ NEW
 /09-Governance/        → Stage 09 (GOVERN)    ⭐ NEW
 
 ```
@@ -2488,13 +2520,13 @@ Enhanced SDLC 4.4 with **MANDATORY** file header validation requiring design doc
 Required_Headers:
   Code_Files:
 
-    - "DESIGN: docs/02-Design-Architecture/[module]/[feature]-design.md"
+    - "DESIGN: docs/02-design/[module]/[feature]-design.md"
     - "APPROVED: [YYYY-MM-DD] by [CPO/CTO/CEO]"
     - "SDLC: 4.4 Design-First & Document-First"
 
   Cultural_Context_Files:
 
-    - "CULTURAL-DESIGN: docs/02-Design-Architecture/Cultural/[feature]-cultural-design.md"
+    - "CULTURAL-DESIGN: docs/02-design/Cultural/[feature]-cultural-design.md"
     - "CULTURAL-APPROVED: [YYYY-MM-DD] by [CPO/Cultural-Advisor]"
     - "MARKET-VALIDATED: [YYYY-MM-DD] by [CPO]"
 

@@ -71,7 +71,7 @@ The BFlow 2.0 platform successfully upgraded from SDLC 4.2 (Design-First Enhance
 
 ## 🔗 Related Documents
 
-- Executive extraction report: `docs/09-Executive-Reports/CPO-UNIVERSAL-SDLC-4.3-FRAMEWORK-EXTRACTION.md`  
+- Executive extraction report: `docs/09-govern/CPO-UNIVERSAL-SDLC-4.3-FRAMEWORK-EXTRACTION.md`  
 - 4.3 framework summary: `docs/SDLC-Enterprise-Framework/06-Templates-Tools/SDLC-4.3-FRAMEWORK-SUMMARY.md`  
 - 4.3 role templates (Cursor/Claude/Copilot): `docs/SDLC-Enterprise-Framework/06-Templates-Tools/`  
 - 4.3 documentation standards: `docs/SDLC-Enterprise-Framework/09-Documentation-Standards/FRAMEWORK-CONTROLS-4.3.md`

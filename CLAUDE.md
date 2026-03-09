@@ -1,14 +1,21 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.1.1
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.1.2
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.1.1**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.1.2**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+
+**What's New in 6.1.2 (March 9, 2026) - SOULs + TEAMs TEMPLATES**:
+- ✅ **17 SOUL role templates** - SASE 12-role model personas added to Ring 2 (`04-SASE-Artifacts/souls/`)
+- ✅ **10 TEAM charters** - 7 SDLC function teams + 3 organizational teams (`04-SASE-Artifacts/teams/`)
+- ✅ **Tier Availability Matrix** - LITE(3) → STANDARD(6) → PRO(10) → ENTERPRISE(13) → OPTIONAL(17)
+- ✅ **Hybrid sourcing** - EndiorBot (12 SOULs + 7 TEAMs) + MTClaw (5 SOULs + 3 TEAMs), best-of-breed per role
+- ✅ **Vendor-neutral templates** - All project-specific references sanitized to `{PROJECT_NAME}`, `{AI_PROVIDER}`
 
 **What's New in 6.1.1 (February 21, 2026) - POST-CLEANUP PATCH**:
 - ✅ **"AI Council" → "Senior Review Board"** - Tool-agnostic terminology in 5 active docs
-- ✅ **36 FROZEN templates archived** - Sprint 173 AI prompt templates → `10-Archive/05-Legacy/`
+- ✅ **36 FROZEN templates archived** - Sprint 173 AI prompt templates → `10-archive/05-Legacy/`
 - ✅ **Conversation-First Governance (#15)** - New methodology doc for OTT/CLI-first governance
 - ✅ **Tool profile disclaimers** - All profiles marked REFERENCE PROFILE with independence note
 - ✅ **AI Governance README gap fixed** - Docs #12-#15 now listed in table
@@ -197,7 +204,7 @@ Documentation Files:
 - Complete lifecycle: WHY → GOVERN (Stages 00-09)
 - **Explicit Stage Dependencies** - Prerequisites, parallel rules, early start triggers
 - **Stage Exit Criteria** - Documentation, evidence, signoff per tier
-- Archive management (10-Archive/{NN}-Legacy per RFC-001)
+- Archive management (10-archive/{NN}-Legacy per RFC-001)
 
 **Pillar 2: Sprint Planning Governance (5.1.3)**
 - Sprint Planning Hierarchy: ROADMAP → PHASE → SPRINT → BACKLOG
@@ -227,7 +234,7 @@ Documentation Files:
 **Pillar 6: Documentation Permanence**
 - 919 files standardized (NQH-Bot)
 - Document naming standards (no sprint references)
-- Archive management (10-Archive/{NN}-Legacy)
+- Archive management (10-archive/{NN}-Legacy)
 
 **Section 7: Quality Assurance System (NEW in 5.3.0)**
 - **Vibecoding Index** (0-100) - 5 weighted signals:
@@ -438,6 +445,8 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 │   ├── 01-Specification-Standard/ # YAML + BDD specs
 │   ├── 02-AI-Tools/               # AI prompts by stage
 │   ├── 04-SASE-Artifacts/         # AGENTS.md, CRP, MRP, VCR
+│   │   ├── souls/                 # NEW 6.1.2: 17 SOUL role templates
+│   │   └── teams/                 # NEW 6.1.2: 10 TEAM charters
 │   ├── 05-Checklists/             # Stage transition checklists
 │   ├── 06-Manual-Templates/       # Design Thinking + MRP templates
 │   └── 08-Project-Templates/      # Planning hierarchy templates
@@ -450,7 +459,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ├── 08-Training-Materials/         # Training (Ring 3)
 ├── 09-Continuous-Improvement/     # RFCs + improvement (Ring 3)
 │
-└── 10-Archive/                    # Centralized legacy archive
+└── 10-archive/                    # Centralized legacy archive
     └── {NN}-Legacy/               # Stage-aligned archives
 ```
 
@@ -468,7 +477,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 1. **Review CHANGELOG.md**: Check version history
 2. **Check 02-Core-Methodology/**: Core principles and 7-Pillar Architecture
 3. **Update consistently**: Version 6.1.0, dates February 2026
-4. **Preserve legacy**: Use 10-Archive/{NN}-Legacy/ for superseded content (RFC-001)
+4. **Preserve legacy**: Use 10-archive/{NN}-Legacy/ for superseded content (RFC-001)
 5. **Apply code file naming**: All new files must follow naming standards
 6. **Respect documentation vs code separation**: Stage mapping only for `/docs`
 7. **Apply Sprint Governance**: Include sprint context in PRs and documentation
@@ -538,8 +547,12 @@ SDLC 6.0.5 (February 15, 2026)
   ↓ RFC-001 Legacy Organization + Anti-Vibecoding Alignment
 SDLC 6.0.6 (February 16, 2026)
   ↓ Anthropic Best Practices: CLAUDE.md Standard + Autonomous Codegen + MRP Template
-SDLC 6.1.0 (February 18, 2026) ← CURRENT
+SDLC 6.1.0 (February 18, 2026)
   ↓ Consolidation: Ring 1 slim, agentic→AI-GOV move, BRS/MTS/LPS→AGENTS.md, Multi-Agent Patterns
+SDLC 6.1.1 (February 21, 2026)
+  ↓ Post-Cleanup Patch: AI Council→Senior Review Board, 36 frozen templates archived, Conversation-First
+SDLC 6.1.2 (March 9, 2026) ← CURRENT
+  ↓ SOULs + TEAMs: 17 SASE role templates + 10 team charters added to Ring 2
 ```
 
 ## Proven ROI (SDLC 5.0.0)
@@ -558,6 +571,10 @@ SDLC 6.1.0 (February 18, 2026) ← CURRENT
 - Core Methodology: [02-Core-Methodology/SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md)
 - Implementation Guide: [07-Implementation-Guides/SDLC-Implementation-Guide.md](07-Implementation-Guides/SDLC-Implementation-Guide.md)
 - Naming Standards: [02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md](02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md)
+
+**NEW in 6.1.2**:
+- SOUL Role Templates: [05-Templates-Tools/04-SASE-Artifacts/souls/README.md](05-Templates-Tools/04-SASE-Artifacts/souls/README.md)
+- TEAM Charters: [05-Templates-Tools/04-SASE-Artifacts/teams/](05-Templates-Tools/04-SASE-Artifacts/teams/)
 
 **NEW in 6.1.0**:
 - Multi-Agent Patterns: [03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md](03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md)
@@ -587,8 +604,8 @@ SDLC 6.1.0 (February 18, 2026) ← CURRENT
 
 ---
 
-The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.0, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.2, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: February 16, 2026
-**Framework Version**: SDLC 6.1.0
-**Status**: PRODUCTION READY - 7-Pillar Architecture + Section 7 Quality Assurance System + AI Governance Principles
+**Last Updated**: March 9, 2026
+**Framework Version**: SDLC 6.1.2
+**Status**: PRODUCTION READY - 7-Pillar Architecture + Section 7 QA + SOULs/TEAMs Templates

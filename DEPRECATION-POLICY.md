@@ -52,10 +52,10 @@ When moving or deprecating a file, create a stub at the original location:
 
 ## Archive Naming Convention (RFC-001, SDLC 6.1.0)
 
-All legacy content is centralized into **`10-Archive/`** with stage-aligned subdirectories:
+All legacy content is centralized into **`10-archive/`** with stage-aligned subdirectories:
 
 ```
-10-Archive/
+10-archive/
 ├── README.md                   # Archive index with AI-NEVER-READ directive
 ├── 00-Legacy/                  # Foundation archive (version evolution)
 ├── 01-Legacy/                  # Planning archive (implementation scripts)
@@ -66,7 +66,7 @@ All legacy content is centralized into **`10-Archive/`** with stage-aligned subd
 └── 09-Legacy/                  # Govern archive (deprecated RFCs, scripts)
 ```
 
-**Why 10-Archive/{NN}-Legacy/**:
+**Why 10-archive/{NN}-Legacy/**:
 - Stage alignment: Archive subdirectory matches original stage (e.g., design specs → 02-Legacy)
 - No polluting active stages: Eliminates 99-Legacy/ from stages 00-09
 - AI-friendly: Centralized location with AI-NEVER-READ directive prevents context pollution
@@ -80,11 +80,11 @@ See [RFC-001 Legacy Document Organization](#legacy-document-organization-rfc-001
 
 | Scenario | Action | Destination | Example |
 |----------|--------|-------------|---------|
-| Content outdated but historically useful | Archive | `10-Archive/{NN}-Legacy/` | Old version guides |
-| Content replaced by better alternative | Deprecate + Redirect | `10-Archive/{NN}-Legacy/` | MTS → AGENTS.md |
+| Content outdated but historically useful | Archive | `10-archive/{NN}-Legacy/` | Old version guides |
+| Content replaced by better alternative | Deprecate + Redirect | `10-archive/{NN}-Legacy/` | MTS → AGENTS.md |
 | Content wrong or dangerous | Delete immediately | (none) | Security vulnerabilities |
-| Tool-specific content | Archive with date | `10-Archive/{NN}-Legacy/` | Claude Code templates |
-| Principle extracted to Core | Redirect stub | `10-Archive/{NN}-Legacy/` | planning-mode.md → Principle |
+| Tool-specific content | Archive with date | `10-archive/{NN}-Legacy/` | Claude Code templates |
+| Principle extracted to Core | Redirect stub | `10-archive/{NN}-Legacy/` | planning-mode.md → Principle |
 
 ---
 
@@ -134,7 +134,7 @@ jobs:
           # Should not find 99-Legacy in active stages
           if find . -maxdepth 3 -path './[0-9][0-9]-*/99-Legacy' -type d 2>/dev/null | grep -q .; then
             echo "❌ FAIL: RFC-001 violation - found 99-Legacy/ in active stage"
-            echo "Migrate to 10-Archive/{NN}-Legacy/ instead"
+            echo "Migrate to 10-archive/{NN}-Legacy/ instead"
             exit 1
           fi
           echo "✓ PASS: No 99-Legacy in active stages"
@@ -164,8 +164,8 @@ Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 
 | Original Location | New Location | Created | Expires |
 |------------------|--------------|---------|---------|
-| `2-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
-| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-Archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
+| `2-Agent-Templates/claude-code/` | `10-archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
 
 ---
 
@@ -188,8 +188,8 @@ See dedicated standard document: [SDLC-Legacy-Document-Organization.md](../02-Co
 
 Key rules:
 - **RULE-001 (MANDATORY)**: Stage folders (00-09) must contain zero `99-Legacy/` subfolders
-- **RULE-002 (MANDATORY)**: All archived content migrates to `10-Archive/{NN}-Legacy/` with stage alignment
-- **RULE-003 (RECOMMENDED)**: Create `10-Archive/README.md` with `AI-NEVER-READ` directive
+- **RULE-002 (MANDATORY)**: All archived content migrates to `10-archive/{NN}-Legacy/` with stage alignment
+- **RULE-003 (RECOMMENDED)**: Create `10-archive/README.md` with `AI-NEVER-READ` directive
 - **RULE-004 (RECOMMENDED)**: Use `migrate-legacy-to-archive.sh` script for migration
 
 Migration script available in: [05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh](../05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh)

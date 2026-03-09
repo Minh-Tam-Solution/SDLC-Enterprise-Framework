@@ -1,10 +1,10 @@
-# E2E API Testing Methodology (SDLC 6.1.1)
+# E2E API Testing Methodology (SDLC 6.1.2)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Stage**: 05-TEST
 **Purpose**: Standardized methodology for End-to-End API testing using OpenAPI specifications
 
@@ -39,7 +39,7 @@ Phase 3: Report → Phase 4: Update Docs → Phase 5: Cross-Ref
 **Tasks**:
 1. Verify OpenAPI spec exists in canonical location:
    ```
-   docs/03-integrate/02-API-Specifications/openapi.json
+   docs/03-integrate/01-api-specifications/openapi.json
    ```
 
 2. Validate SSOT compliance:
@@ -117,7 +117,7 @@ Phase 3: Report → Phase 4: Update Docs → Phase 5: Cross-Ref
 ```bash
 # Using SDLC CLI tool
 [SDLC CLI] e2e parse-openapi \
-  docs/03-integrate/02-API-Specifications/openapi.json \
+  docs/03-integrate/01-api-specifications/openapi.json \
   --generate-tests \
   --test-output tests/e2e/
 
@@ -161,7 +161,7 @@ newman run postman_collection.json -e test.env.json
 
 **Report Structure** (use template):
 ```
-docs/05-test/03-E2E-Testing/reports/E2E-API-REPORT-YYYY-MM-DD.md
+docs/05-test/03-e2e-testing/reports/E2E-API-REPORT-YYYY-MM-DD.md
 ```
 
 **Required Sections**:
@@ -189,7 +189,7 @@ docs/05-test/03-E2E-Testing/reports/E2E-API-REPORT-YYYY-MM-DD.md
 **Automated Report Generation**:
 ```bash
 # pytest HTML report
-pytest tests/e2e/ --html=docs/05-test/03-E2E-Testing/reports/report.html
+pytest tests/e2e/ --html=docs/05-test/03-e2e-testing/reports/report.html
 
 # Convert to markdown (optional)
 pandoc report.html -o E2E-API-REPORT-2026-02-02.md
@@ -214,13 +214,13 @@ pandoc report.html -o E2E-API-REPORT-2026-02-02.md
 **Update Process**:
 ```bash
 # 1. Regenerate openapi.json from backend
-python3 scripts/generate_openapi.py > docs/03-integrate/02-API-Specifications/openapi.json
+python3 scripts/generate_openapi.py > docs/03-integrate/01-api-specifications/openapi.json
 
 # 2. Regenerate human-readable reference
 python3 scripts/generate_api_reference.py
 
 # 3. Commit changes
-git add docs/03-integrate/02-API-Specifications/
+git add docs/03-integrate/01-api-specifications/
 git commit -m "docs(Stage 03): Update API spec based on E2E test findings"
 ```
 
@@ -241,16 +241,16 @@ git commit -m "docs(Stage 03): Update API spec based on E2E test findings"
 **Validation Tasks**:
 1. **Stage 03 → Stage 05 Link**:
    ```markdown
-   # In docs/03-integrate/02-API-Specifications/README.md
+   # In docs/03-integrate/01-api-specifications/README.md
    ## Test Reports
-   - [Latest E2E Test Report](../../05-test/03-E2E-Testing/reports/)
+   - [Latest E2E Test Report](../../05-test/03-e2e-testing/reports/)
    ```
 
 2. **Stage 05 → Stage 03 Link**:
    ```markdown
-   # In docs/05-test/03-E2E-Testing/README.md
+   # In docs/05-test/03-e2e-testing/README.md
    ## API Specification
-   **Canonical Source**: [openapi.json](../../03-integrate/02-API-Specifications/openapi.json)
+   **Canonical Source**: [openapi.json](../../03-integrate/01-api-specifications/openapi.json)
    ```
 
 3. **SSOT Compliance** (no duplicates):
@@ -304,8 +304,8 @@ THEN:
 ## Success Criteria
 
 **E2E API Testing = PASS** when:
-- ✅ **Pass Rate** ≥80% (for SDLC 6.1.1 LITE/STANDARD)
-- ✅ **Pass Rate** ≥90% (for SDLC 6.1.1 PROFESSIONAL/ENTERPRISE)
+- ✅ **Pass Rate** ≥80% (for SDLC 6.1.2 LITE/STANDARD)
+- ✅ **Pass Rate** ≥90% (for SDLC 6.1.2 PROFESSIONAL/ENTERPRISE)
 - ✅ **SSOT Compliance**: openapi.json is single source
 - ✅ **Cross-Reference**: Stage 03 ↔ Stage 05 bidirectional links validated
 - ✅ **Security**: No P0/P1 OWASP vulnerabilities
@@ -355,7 +355,7 @@ THEN:
 **Problem**:
 ```
 backend/openapi.json (auto-generated, not tracked)
-docs/03-integrate/02-API-Specifications/openapi.json (canonical)
+docs/03-integrate/01-api-specifications/openapi.json (canonical)
 frontend/openapi.json (copy for SDK generation)
 ```
 
@@ -370,7 +370,7 @@ echo "frontend/openapi.json" >> .gitignore
 
 # Use symlinks if needed
 cd frontend/
-ln -sf ../docs/03-integrate/02-API-Specifications/openapi.json openapi.json
+ln -sf ../docs/03-integrate/01-api-specifications/openapi.json openapi.json
 ```
 
 ### Pitfall 2: Outdated OpenAPI Spec
@@ -393,7 +393,7 @@ jobs:
         run: python3 scripts/generate_openapi.py > openapi-current.json
       - name: Compare with canonical
         run: |
-          diff openapi-current.json docs/03-integrate/02-API-Specifications/openapi.json
+          diff openapi-current.json docs/03-integrate/01-api-specifications/openapi.json
           if [ $? -ne 0 ]; then
             echo "⚠️ OpenAPI spec is out of sync. Run: python3 scripts/generate_openapi.py"
             exit 1
@@ -471,6 +471,6 @@ Before merging, ensure:
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 **Owner**: Engineering + QA Teams
 **Approval**: CTO @nqh ✅

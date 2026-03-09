@@ -513,10 +513,10 @@ Closes #123
 
 | Document | Purpose | Location |
 |----------|---------|----------|
-| ADR-001 | 4-Layer Architecture | `docs/02-Design-Architecture/03-ADRs/` |
-| ADR-007 | AI Context Engine | `docs/02-Design-Architecture/03-ADRs/` |
-| OpenAPI Spec | API Contracts | `docs/02-Design-Architecture/openapi.yml` |
-| Security Baseline | OWASP ASVS L2 | `docs/02-Design-Architecture/Security-Baseline.md` |
+| ADR-001 | 4-Layer Architecture | `docs/02-design/03-ADRs/` |
+| ADR-007 | AI Context Engine | `docs/02-design/03-ADRs/` |
+| OpenAPI Spec | API Contracts | `docs/02-design/openapi.yml` |
+| Security Baseline | OWASP ASVS L2 | `docs/02-design/Security-Baseline.md` |
 | SDLC-Agentic-Core-Principles | SE4H/SE4A Framework | `02-Core-Methodology/` |
 
 ---

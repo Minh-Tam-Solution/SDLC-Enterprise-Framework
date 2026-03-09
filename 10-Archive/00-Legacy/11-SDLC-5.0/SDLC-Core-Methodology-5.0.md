@@ -234,16 +234,16 @@ SDLC 4.9 (6 Pillars + 10 Stages) - November 13, 2025:
 ┌─────────────────────────────────────────────────────────────────┐
 │ Question → Stage → /docs Folder (BFlow Example)                │
 ├─────────────────────────────────────────────────────────────────┤
-│ WHY?        → Stage 00: Foundation    → 00-Project-Foundation/  │
-│ WHAT?       → Stage 01: Planning      → 01-Planning-Analysis/   │
+│ WHY?        → Stage 00: Foundation    → 00-foundation/  │
+│ WHAT?       → Stage 01: Planning      → 01-planning/   │
 │ HOW?        → Stage 02: Design        → 02-Architecture-Design/ │
 │ BUILD       → Stage 03: Development   → 03-Development/         │
 │ TEST        → Stage 04: Quality       → 04-Quality-Assurance/   │
 │ DEPLOY      → Stage 05: Deployment    → 05-Deployment/          │
 │ OPERATE     → Stage 06: Operations    → 06-Operations/          │
 │ INTEGRATE   → Stage 07: Integration   → 07-Integration/         │
-│ COLLABORATE → Stage 08: Team Mgmt     → 08-Team-Management/     │
-│ GOVERN      → Stage 09: Governance    → 09-Executive-Reports/   │
+│ COLLABORATE → Stage 08: Team Mgmt     → 08-collaborate/     │
+│ GOVERN      → Stage 09: Governance    → 09-govern/   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -890,10 +890,10 @@ Violation Management:
 **4.9 Enhancement**: Perfect alignment with 10-stage framework:
 ```
 10 SDLC Stages → 10 /docs Folders (00-09)
-- Stage 00 (WHY) → 00-Project-Foundation/
-- Stage 01 (WHAT) → 01-Planning-Analysis/
+- Stage 00 (WHY) → 00-foundation/
+- Stage 01 (WHAT) → 01-planning/
 - ... (perfect 1:1 mapping)
-- Stage 09 (GOVERN) → 09-Executive-Reports/
+- Stage 09 (GOVERN) → 09-govern/
 ```
 
 **Proven Results**:

@@ -1,6 +1,6 @@
 # Stage Transition Checklist
 
-**Framework**: SDLC 6.1.1  
+**Framework**: SDLC 6.1.2  
 **Last Updated**: January 28, 2026  
 **Status**: PRODUCTION-READY  
 **Related**: [Stage Dependency Matrix](../../02-Core-Methodology/SDLC-Stage-Dependencies.md), [Stage Exit Criteria](../../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md)
@@ -336,7 +336,7 @@ sdlcctl validate --stage-transition 04 05
 
 ### Stage 05 Exit Criteria
 - [ ] **G3 passed**: Tests validated (same gate as Stage 04)
-- [ ] `docs/05-test/01-Test-Plans/` contains test strategy
+- [ ] `docs/05-test/01-test-plans/` contains test strategy
 - [ ] Test results documented (unit, integration, E2E)
 - [ ] Bug tracking log (if bugs found)
 - [ ] Performance test results (if applicable)
@@ -703,5 +703,5 @@ tasks:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.1.1  
+**Framework Version**: SDLC 6.1.2  
 **Status**: PRODUCTION-READY

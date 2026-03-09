@@ -1,6 +1,6 @@
-# SDLC 6.1.1 Implementation Guide - From Zero to Production
+# SDLC 6.1.2 Implementation Guide - From Zero to Production
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 29, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Target**: Any team, any size, any experience level
@@ -11,7 +11,7 @@
 
 ## 🎯 30-Second Overview
 
-**What is SDLC 6.1.1?**
+**What is SDLC 6.1.2?**
 - A **10-stage lifecycle** framework (WHY → GOVERN)
 - With **7-Pillar Architecture** + **Section 7 Quality Assurance System**
 - With **SASE** for human-AI collaboration (AGENTS.md + 3 artifacts)
@@ -383,7 +383,7 @@ Stage 09: GOVERN - Compliance, audits, governance
 
 ### Standard `/docs` Structure (10-Stage Aligned)
 
-Every SDLC 6.1.1 compliant project **MUST** have this documentation structure using **shortened folder names**:
+Every SDLC 6.1.2 compliant project **MUST** have this documentation structure using **shortened folder names**:
 
 ```
 your-project/
@@ -456,20 +456,20 @@ your-project/
 
 ### Folder Naming Convention
 
-**SDLC 6.1.1 uses shortened folder names** (not long descriptive names):
+**SDLC 6.1.2 uses shortened folder names** (not long descriptive names):
 
 | Stage | Folder Name | NOT |
 |-------|-------------|-----|
-| 00 WHY | `00-foundation` | ~~00-Project-Foundation~~ |
-| 01 WHAT | `01-planning` | ~~01-Planning-Analysis~~ |
+| 00 WHY | `00-foundation` | ~~00-foundation~~ |
+| 01 WHAT | `01-planning` | ~~01-planning~~ |
 | 02 HOW | `02-design` | ~~02-Architecture-Design~~ |
 | 03 INTEGRATE | `03-integrate` | ~~03-Integration~~ |
 | 04 BUILD | `04-build` | ~~04-Development~~ |
 | 05 TEST | `05-test` | ~~05-Quality-Assurance~~ |
 | 06 DEPLOY | `06-deploy` | ~~06-Deployment~~ |
 | 07 OPERATE | `07-operate` | ~~07-Operations~~ |
-| 08 COLLABORATE | `08-collaborate` | ~~08-Team-Management~~ |
-| 09 GOVERN | `09-govern` | ~~09-Executive-Reports~~ |
+| 08 COLLABORATE | `08-collaborate` | ~~08-collaborate~~ |
+| 09 GOVERN | `09-govern` | ~~09-govern~~ |
 | 10 ARCHIVE | `10-archive` | Project-level archive (optional) |
 
 ### Archive Strategy (Important!)
@@ -628,7 +628,7 @@ docs/02-design/14-Technical-Specs/SPEC-0001-*.md
 
 ### Purpose
 
-Every project implementing SDLC 6.1.1 should have an **SDLC Compliance folder** containing:
+Every project implementing SDLC 6.1.2 should have an **SDLC Compliance folder** containing:
 - Project-specific summary of the Framework
 - AI context files (CLAUDE.md, AGENTS.md)
 - Quick reference for team members (human + AI)
@@ -644,7 +644,7 @@ docs/08-collaborate/
     ├── AGENTS.md                     # Agent guidelines & boundaries
     ├── PROJECT-CONTEXT.md            # Human-readable quick reference
     ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
-    └── FRAMEWORK-SUMMARY.md          # SDLC 6.1.1 summary (optional)
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.1.2 summary (optional)
 ```
 
 ### Why 08-collaborate (Not 09-govern)?
@@ -688,14 +688,14 @@ your-project/
 | `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
 | `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
 | `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
-| `FRAMEWORK-SUMMARY.md` | SDLC 6.1.1 quick reference | Optional |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.1.2 quick reference | Optional |
 
 ### Migration for Existing Projects
 
 If your project uses old location:
 ```bash
 # Old locations (migrate from)
-docs/08-Team-Management/01-SDLC-Compliance/    # Old naming
+docs/08-collaborate/01-SDLC-Compliance/    # Old naming
 docs/09-govern/SDLC-Compliance/                # Wrong stage
 
 # New standard location (migrate to)
@@ -713,7 +713,7 @@ python3 path/to/sdlc_validator.py /your/project
 
 ## 🤖 SASE Quick Reference (AI Teams)
 
-### SDLC 6.1.1 Simplified Artifacts
+### SDLC 6.1.2 Simplified Artifacts
 
 | # | Artifact | Created By | Purpose |
 |---|----------|------------|---------|
@@ -811,7 +811,7 @@ Agent: MRP → Human: VCR
 
 ## 🔄 Brownfield Implementation (Existing Projects)
 
-**For teams with existing codebases that want to adopt SDLC 6.1.1 incrementally.**
+**For teams with existing codebases that want to adopt SDLC 6.1.2 incrementally.**
 
 ### Philosophy: Don't Disrupt, Enhance
 
@@ -909,9 +909,9 @@ Phase 4 Adds:
 
 ---
 
-## ⬆️ Version Migration (5.x → 6.1.1)
+## ⬆️ Version Migration (5.x → 6.1.2)
 
-**For teams already using SDLC 5.x who want to upgrade to 6.1.1.**
+**For teams already using SDLC 5.x who want to upgrade to 6.1.2.**
 
 ### What Changed in 6.0.0?
 
@@ -1076,13 +1076,13 @@ Philosophy: "Validate before rollout"
 Week 1-4 (Sprint 122-123):
   - CTO creates all templates
   - CTO sets up validation tooling
-  - Team allocation: 0% SDLC 6.1.1 work
+  - Team allocation: 0% SDLC 6.1.2 work
 
 Week 5-8 (Sprint 124-125):
   - CTO converts 2 specs as "stealth pilots"
   - Validates templates work in practice
   - Measures actual conversion velocity
-  - Team allocation: Still 0% SDLC 6.1.1 work
+  - Team allocation: Still 0% SDLC 6.1.2 work
 
 Week 9-10 (Sprint 126):
   - Training materials finalized
@@ -1112,7 +1112,7 @@ Week 9-10 (Sprint 126):
    - Final confirmation (Apr 12): "Sprint 127 starts Apr 15"
 
 **Recommendation:**
-For teams new to SDLC 6.1.1, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
+For teams new to SDLC 6.1.2, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
 - Team has never migrated SDLC versions before
 - High-stakes production system (can't afford migration failures)
 - CTO/Tech Lead capacity available for preparation work
@@ -1175,7 +1175,7 @@ For teams new to SDLC 6.1.1, the BFlow "stealth pilot" approach reduces risk by 
 ## 🎯 One Page Summary
 
 ```
-SDLC 6.1.1 = 10 Stages + 7 Pillars + Section 7 (QA) + 4 Tiers
+SDLC 6.1.2 = 10 Stages + 7 Pillars + Section 7 (QA) + 4 Tiers
 
 Pick Your Path:
   Greenfield (new project)   → This guide's Quick Starts
@@ -1203,11 +1203,11 @@ ROI = 10-50x improvement (tier dependent)
 
 ---
 
-**Document Version**: 6.1.1
+**Document Version**: 6.1.2
 **Last Updated**: February 14, 2026
 **Owner**: CPO Office
 **Next Review**: March 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
 
 ---
 

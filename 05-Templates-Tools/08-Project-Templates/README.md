@@ -1,12 +1,12 @@
 # Project Templates
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Date**: January 22, 2026
 **Stage**: 05 - TEMPLATES & TOOLS
 **Pillar**: 2 - Sprint Planning Governance (Planning Templates)
 **Status**: ACTIVE - Production Templates
 **Authority**: CTO + CPO Office
-**Framework**: SDLC 6.1.1 (7-Pillar Architecture)
+**Framework**: SDLC 6.1.2 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
 
 ---
@@ -157,6 +157,6 @@ Before using templates, verify:
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 6.1.1 projects
+**Compliance**: Templates RECOMMENDED for all SDLC 6.1.2 projects
 **Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office

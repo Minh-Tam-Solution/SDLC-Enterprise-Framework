@@ -248,11 +248,11 @@ SDLC 5.1.3 - 7-Pillar AI+Human Excellence Framework
 **Sprint Management**:
 - [CURRENT-SPRINT.md](../03-Sprint-Management/CURRENT-SPRINT.md) - Real-time sprint status
 - [SPRINT-INDEX.md](../03-Sprint-Management/SPRINT-INDEX.md) - All sprints catalog
-- [SPRINT-86-CGF-V2.2-PREPARATION-PLAN.md](../../04-Development-Implementation/02-Sprint-Plans/Sprint-86-Future/SPRINT-86-CGF-V2.2-PREPARATION-PLAN.md)
+- [SPRINT-86-CGF-V2.2-PREPARATION-PLAN.md](../../04-build/02-Sprint-Plans/Sprint-86-Future/SPRINT-86-CGF-V2.2-PREPARATION-PLAN.md)
 
 **Roadmap**:
-- [BFLOW-PLATFORM-ROADMAP-2026-2028.md](../../00-Project-Foundation/03-Roadmap/BFLOW-PLATFORM-ROADMAP-2026-2028.md)
-- [PROJECT-IMPLEMENTATION-PLAN.md](../../01-Planning-Analysis/05-Project-Planning/PROJECT-IMPLEMENTATION-PLAN.md)
+- [BFLOW-PLATFORM-ROADMAP-2026-2028.md](../../00-foundation/03-roadmap/BFLOW-PLATFORM-ROADMAP-2026-2028.md)
+- [PROJECT-IMPLEMENTATION-PLAN.md](../../01-planning/05-Project-Planning/PROJECT-IMPLEMENTATION-PLAN.md)
 
 **Case Studies**:
 - [BFlow-Sprint-86-Direction-Confusion-Case-Study.md](BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - This incident

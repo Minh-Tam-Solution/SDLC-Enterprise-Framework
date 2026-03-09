@@ -1,7 +1,7 @@
 # Planning Mode Guide
 ## Pre-Implementation Pattern Extraction for AI Agents
 
-**Version:** 6.1.1
+**Version:** 6.1.2
 **Status:** ACTIVE
 **Date:** January 27, 2026
 **Core Principle:** [03-AI-GOVERNANCE/03-Planning-Mode-Principle.md](../../03-AI-GOVERNANCE/03-Planning-Mode-Principle.md)
@@ -13,7 +13,7 @@
 Planning Mode is a **RISK-BASED** workflow for AI agents. The key insight: **Planning is triggered by RISK, not just lines of code.**
 
 > "LOC is a heuristic. Risk factors are the real criteria."
-> — SDLC 6.1.1 Core Principle
+> — SDLC 6.1.2 Core Principle
 
 ---
 
@@ -29,7 +29,7 @@ When AI agents make risky changes, **architectural drift** becomes a significant
 
 > "Khi không dùng planning mode, codebase dễ bị architectural drift. Planning mode spawns explore sub-agents → extract patterns → build on them. This prevents drift."
 
-**Important (Added in 5.3.0, current as of 6.1.1)**: The old ">15 LOC" rule was **gameable** (split 100 LOC into 7 commits of 14 LOC each). Risk-based triggers are **intent-based** and cannot be gamed.
+**Important (Added in 5.3.0, current as of 6.1.2)**: The old ">15 LOC" rule was **gameable** (split 100 LOC into 7 commits of 14 LOC each). Risk-based triggers are **intent-based** and cannot be gamed.
 
 ---
 

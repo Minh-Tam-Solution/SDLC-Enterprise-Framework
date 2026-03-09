@@ -44,7 +44,7 @@ Before creating any new document, check if a canonical file already exists for t
 ├────────────────────────────────────────────────────────────────────┤
 │                                                                    │
 │  ARCHIVE LAYER (10) - Centralized Legacy (RFC-001)               │
-│  └── 10-Archive/{NN}-Legacy/ - Stage-aligned archive              │
+│  └── 10-archive/{NN}-Legacy/ - Stage-aligned archive              │
 │      (00-Legacy through 09-Legacy for production migration       │
 │       04-Historical-Documents, OpenCode-Evaluation, etc.)        │
 │                                                                    │
@@ -84,14 +84,14 @@ Before creating any new document, check if a canonical file already exists for t
 | **Multi-Agent Patterns** | `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` | — | **NEW 6.1.0** |
 | **Agentic Core Principles** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | **MOVED 6.1.0** |
 | **Agentic Maturity Model** | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | **MOVED 6.1.0** |
-| **Conversation-First Governance** | `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.1** |
+| **Conversation-First Governance** | `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.2** |
 
 ### Core Methodology (02-Core-Methodology/)
 
 | Topic | Canonical File | Redirects From | Status |
 |-------|---------------|----------------|--------|
-| 10-Stage Lifecycle | `02-Core-Methodology/SDLC-Core-Methodology.md` | Legacy versions in 10-Archive/02-Legacy/ | ACTIVE |
-| Design Thinking | `02-Core-Methodology/SDLC-Design-Thinking-Principles.md` | Multiple legacy versions in 10-Archive/02-Legacy/ | ACTIVE |
+| 10-Stage Lifecycle | `02-Core-Methodology/SDLC-Core-Methodology.md` | Legacy versions in 10-archive/02-Legacy/ | ACTIVE |
+| Design Thinking | `02-Core-Methodology/SDLC-Design-Thinking-Principles.md` | Multiple legacy versions in 10-archive/02-Legacy/ | ACTIVE |
 | Agentic Principles | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/` in 6.1.0 | ACTIVE |
 | Sprint Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md` | Consolidated from Sprint-Planning + Stage-Integration + Change-Management | ACTIVE |
 | Quality + Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md` | Consolidated from Quality-Gates + Security-Gates | ACTIVE |
@@ -115,6 +115,34 @@ Before creating any new document, check if a canonical file already exists for t
 | CRP (Consultation Request) | `05-Templates-Tools/04-SASE-Artifacts/01-CRP-Template.md` | Renamed from 04-CRP | ACTIVE |
 | MRP (Merge-Readiness Pack) | `05-Templates-Tools/04-SASE-Artifacts/02-MRP-Template.md` | Renamed from 05-MRP | ACTIVE |
 | VCR (Version Controlled Resolution) | `05-Templates-Tools/04-SASE-Artifacts/03-VCR-Template.md` | Renamed from 06-VCR | ACTIVE |
+| **SOULs Index** | `05-Templates-Tools/04-SASE-Artifacts/souls/README.md` | — | **NEW 6.1.2** |
+| SOUL-assistant (Router) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-assistant.md` | — | **NEW 6.1.2** |
+| SOUL-coder (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-coder.md` | — | **NEW 6.1.2** |
+| SOUL-tester (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-tester.md` | — | **NEW 6.1.2** |
+| SOUL-architect (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-architect.md` | — | **NEW 6.1.2** |
+| SOUL-pm (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-pm.md` | — | **NEW 6.1.2** |
+| SOUL-pjm (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-pjm.md` | — | **NEW 6.1.2** |
+| SOUL-devops (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-devops.md` | — | **NEW 6.1.2** |
+| SOUL-fullstack (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-fullstack.md` | — | **NEW 6.1.2** |
+| SOUL-reviewer (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-reviewer.md` | — | **NEW 6.1.2** |
+| SOUL-researcher (SE4A) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-researcher.md` | — | **NEW 6.1.2** |
+| SOUL-ceo (SE4H) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-ceo.md` | — | **NEW 6.1.2** |
+| SOUL-cto (SE4H) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-cto.md` | — | **NEW 6.1.2** |
+| SOUL-cpo (SE4H) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-cpo.md` | — | **NEW 6.1.2** |
+| SOUL-writer (Optional) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-writer.md` | — | **NEW 6.1.2** |
+| SOUL-sales (Optional) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-sales.md` | — | **NEW 6.1.2** |
+| SOUL-cs (Optional) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-cs.md` | — | **NEW 6.1.2** |
+| SOUL-itadmin (Optional) | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-itadmin.md` | — | **NEW 6.1.2** |
+| TEAM-dev | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-dev.md` | — | **NEW 6.1.2** |
+| TEAM-qa | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-qa.md` | — | **NEW 6.1.2** |
+| TEAM-design | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-design.md` | — | **NEW 6.1.2** |
+| TEAM-executive | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-executive.md` | — | **NEW 6.1.2** |
+| TEAM-fullstack | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-fullstack.md` | — | **NEW 6.1.2** |
+| TEAM-ops | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-ops.md` | — | **NEW 6.1.2** |
+| TEAM-planning | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-planning.md` | — | **NEW 6.1.2** |
+| TEAM-advisory | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-advisory.md` | — | **NEW 6.1.2** |
+| TEAM-business | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-business.md` | — | **NEW 6.1.2** |
+| TEAM-engineering | `05-Templates-Tools/04-SASE-Artifacts/teams/TEAM-engineering.md` | — | **NEW 6.1.2** |
 | BriefingScript (BRS) | — | `05-Templates-Tools/04-SASE-Artifacts/01-BriefingScript-Template.yaml` | DEPRECATED |
 | LoopScript (LPS) | — | `05-Templates-Tools/04-SASE-Artifacts/02-LoopScript-Template.yaml` | DEPRECATED |
 | MentorScript (MTS) | — | `05-Templates-Tools/04-SASE-Artifacts/03-MentorScript-Template.md` | DEPRECATED |
@@ -129,26 +157,26 @@ Before creating any new document, check if a canonical file already exists for t
 | **Context Authority Methodology** | `05-Templates-Tools/01-Specification-Standard/CONTEXT_AUTHORITY_METHODOLOGY.md` | Dynamic AGENTS.md (4 zones) | **NEW 6.0.2** |
 | **Stage Consistency Validation** | `07-Implementation-Guides/SDLC-Stage-Consistency-Validation-Guide.md` | 4-stage consistency validation (SPEC-0021 moved to Orchestrator) | **NEW 6.0.1** |
 
-### E2E API Testing Templates — ARCHIVED in 6.1.1
+### E2E API Testing Templates — ARCHIVED in 6.1.2
 
-> **ARCHIVED (6.1.1)**: 36 AI prompt templates from `05-Templates-Tools/02-AI-Tools/` moved to `10-Archive/05-Legacy/ai-tools-templates-sprint173/`. FROZEN since Sprint 173, not integrated. See redirect stub at `05-Templates-Tools/02-AI-Tools/README.md`.
+> **ARCHIVED (6.1.2)**: 36 AI prompt templates from `05-Templates-Tools/02-AI-Tools/` moved to `10-archive/05-Legacy/ai-tools-templates-sprint173/`. FROZEN since Sprint 173, not integrated. See redirect stub at `05-Templates-Tools/02-AI-Tools/README.md`.
 
 | Topic | Canonical File | Purpose | Status |
 |-------|---------------|---------|--------|
-| **E2E API Testing Workflow** | `10-Archive/05-Legacy/ai-tools-templates-sprint173/testing_e2e-api-testing-workflow.md` | 6-phase standardized E2E testing workflow | **ARCHIVED 6.1.1** |
+| **E2E API Testing Workflow** | `10-archive/05-Legacy/ai-tools-templates-sprint173/testing_e2e-api-testing-workflow.md` | 6-phase standardized E2E testing workflow | **ARCHIVED 6.1.2** |
 | **E2E Testing Quickstart** | `07-Implementation-Guides/E2E-TESTING-QUICKSTART.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
 | **E2E API Testing Methodology** | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
-| **Security Testing Checklist** | `10-Archive/05-Legacy/ai-tools-templates-sprint173/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **ARCHIVED 6.1.1** |
+| **Security Testing Checklist** | `10-archive/05-Legacy/ai-tools-templates-sprint173/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **ARCHIVED 6.1.2** |
 | **Stage Cross-Reference Matrix** | `02-Core-Methodology/SDLC-Stage-Cross-Reference.md` | Bidirectional Stage 03 ↔ 05 traceability | **NEW 6.0.2** |
 | **Testing Artifacts Structure** | `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | SDLC-compliant test folder layout | **NEW 6.0.2** |
 
-> **Note**: RFC-SDLC-602 templates archived in 6.1.1 (Sprint 173 freeze). Active testing guidance remains in `07-Implementation-Guides/`.
+> **Note**: RFC-SDLC-602 templates archived in 6.1.2 (Sprint 173 freeze). Active testing guidance remains in `07-Implementation-Guides/`.
 
-| OpenSpec Analysis | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
-| Migration Plan (20 Specs) | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
-| Conversion Layer Spec | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
-| Week 8 Gate Decision Brief | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
-| Week 8 Gate Comparison Matrix | `10-Archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
+| OpenSpec Analysis | `10-archive/05-Legacy/OpenSpec-Analysis-2026/OpenSpec-Analysis.md` | Week 8 Gate decision (EXTEND approved) | ARCHIVED |
+| Migration Plan (20 Specs) | `10-archive/05-Legacy/OpenSpec-Analysis-2026/MIGRATION-PLAN-20-SPECS.md` | Priority specs for conversion | ARCHIVED |
+| Conversion Layer Spec | `10-archive/05-Legacy/OpenSpec-Analysis-2026/CONVERSION-LAYER-SPECIFICATION.md` | `sdlcctl spec convert` command | ARCHIVED |
+| Week 8 Gate Decision Brief | `10-archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-CTO-DECISION-BRIEF.md` | CEO APPROVED (Jan 28) | ARCHIVED |
+| Week 8 Gate Comparison Matrix | `10-archive/05-Legacy/OpenSpec-Analysis-2026/WEEK-8-GATE-COMPARISON-MATRIX.md` | Executive summary | ARCHIVED |
 
 > **Note**: Framework 6.0.0+ introduces BREAKING CHANGES - new specs MUST use YAML frontmatter and BDD format.
 
@@ -192,39 +220,39 @@ Before creating any new document, check if a canonical file already exists for t
 > **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
 > Tool-specific knowledge enables Orchestrator to enforce Core principles.
 
-### AI Prompt Templates (10-Archive/05-Legacy/ai-tools-templates-sprint173/) — ARCHIVED 6.1.1
+### AI Prompt Templates (10-archive/05-Legacy/ai-tools-templates-sprint173/) — ARCHIVED 6.1.2
 
 | Topic | Archive Location | Original Location | Status |
 |-------|-----------------|-------------------|--------|
-| 36 AI Prompt Templates | `10-Archive/05-Legacy/ai-tools-templates-sprint173/` | `05-Templates-Tools/02-AI-Tools/` | **ARCHIVED 6.1.1** |
+| 36 AI Prompt Templates | `10-archive/05-Legacy/ai-tools-templates-sprint173/` | `05-Templates-Tools/02-AI-Tools/` | **ARCHIVED 6.1.2** |
 
 > **Reason**: FROZEN since Sprint 173 (Feb 2026). Not integrated with Orchestrator. 36 files, ~320 KB. Reactivation requires CPO approval.
 
-### Tool-Specific Content (10-Archive/05-Legacy/tool-guides-2026/)
+### Tool-Specific Content (10-archive/05-Legacy/tool-guides-2026/)
 
 | Topic | Archive Location | Original Location | Status |
 |-------|-----------------|-------------------|--------|
-| Claude Code Templates | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | `03-Agent-Templates/claude-code/` | ARCHIVED |
-| Cursor Templates | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | `03-Agent-Templates/cursor/` | ARCHIVED |
-| Copilot Templates | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | `03-Agent-Templates/copilot/` | ARCHIVED |
-| ChatGPT Templates | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` | `03-Agent-Templates/chatgpt/` | ARCHIVED |
-| Gemini Templates | `10-Archive/05-Legacy/tool-guides-2026/gemini/` | `03-Agent-Templates/gemini/` | ARCHIVED |
+| Claude Code Templates | `10-archive/05-Legacy/tool-guides-2026/claude-code/` | `03-Agent-Templates/claude-code/` | ARCHIVED |
+| Cursor Templates | `10-archive/05-Legacy/tool-guides-2026/cursor/` | `03-Agent-Templates/cursor/` | ARCHIVED |
+| Copilot Templates | `10-archive/05-Legacy/tool-guides-2026/copilot/` | `03-Agent-Templates/copilot/` | ARCHIVED |
+| ChatGPT Templates | `10-archive/05-Legacy/tool-guides-2026/chatgpt/` | `03-Agent-Templates/chatgpt/` | ARCHIVED |
+| Gemini Templates | `10-archive/05-Legacy/tool-guides-2026/gemini/` | `03-Agent-Templates/gemini/` | ARCHIVED |
 
-### Deployment Guides (10-Archive/06-Legacy/deployment-guides-5.1.3/)
+### Deployment Guides (10-archive/06-Legacy/deployment-guides-5.1.3/)
 
 | Topic | Archive Location | Purpose | Status |
 |-------|-----------------|---------|--------|
-| Team Compliance Docs | `10-Archive/06-Legacy/deployment-guides-5.1.3/08-Team-Management/` | BFlow 5.1.3 deployment | ARCHIVED |
-| AI Platform Deployment | `10-Archive/06-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
+| Team Compliance Docs | `10-archive/06-Legacy/deployment-guides-5.1.3/08-collaborate/` | BFlow 5.1.3 deployment | ARCHIVED |
+| AI Platform Deployment | `10-archive/06-Legacy/deployment-guides-5.1.3/AI-Platform/` | AI Platform 5.1.3 config | ARCHIVED |
 
 > **Note**: These deployment guides were specific to SDLC 5.1.3 projects.
 > For 6.1.0 deployments, adapt the governance docs from 02-Core-Methodology/.
 
-### Sprint 117 POC Documents (10-Archive/04-Legacy/Sprint-117-POC/)
+### Sprint 117 POC Documents (10-archive/04-Legacy/Sprint-117-POC/)
 
 | Topic | Archive Location | Purpose | Status |
 |-------|-----------------|---------|--------|
-| Spec-First POC Validation | `10-Archive/04-Legacy/Sprint-117-POC/SPEC-FIRST-POC-VALIDATION.md` | POC validation report (working doc) | ARCHIVED |
+| Spec-First POC Validation | `10-archive/04-Legacy/Sprint-117-POC/SPEC-FIRST-POC-VALIDATION.md` | POC validation report (working doc) | ARCHIVED |
 
 > **Note**: Working documents and drafts are archived here after sprint completion.
 
@@ -238,7 +266,7 @@ Before creating any new document, check if a canonical file already exists for t
 | `spec/gates/gates.yaml` | `02-Core-Methodology/Governance-Compliance/gates.yaml` | Jan 29, 2026 | Jul 2026 |
 | `spec/evidence/spec-frontmatter-schema.json` | `05-Templates-Tools/01-Specification-Standard/spec-frontmatter-schema.json` | Jan 29, 2026 | Jul 2026 |
 | `spec/VERSIONING.md` | `02-Core-Methodology/SDLC-Schema-Versioning.md` | Jan 29, 2026 | Jul 2026 |
-| `docs/SPEC-FIRST-POC-VALIDATION.md` | `10-Archive/04-Legacy/Sprint-117-POC/` | Jan 29, 2026 | Jul 2026 |
+| `docs/SPEC-FIRST-POC-VALIDATION.md` | `10-archive/04-Legacy/Sprint-117-POC/` | Jan 29, 2026 | Jul 2026 |
 | `docs/02-design/01-ADRs/SPEC-0011-*.md` | `05-Templates-Tools/01-Specification-Standard/SPEC-0011-*.md` | Jan 29, 2026 | Jul 2026 |
 | `05-Templates-Tools/02-AI-Tools/ai-agent-best-practices-2026/` | `04-AI-TOOLS-LANDSCAPE/best-practices-2026/` | Jan 2026 | Jul 2026 |
 | `07-Implementation-Guides/SDLC-Universal-Code-Review-Framework.md` | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Feb 2026 | Aug 2026 |
@@ -249,12 +277,12 @@ Before creating any new document, check if a canonical file already exists for t
 | `02-Core-Methodology/SDLC-MRP-Template.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Feb 2026 | Aug 2026 |
 | `05-Templates-Tools/02-AI-Tools/E2E-TESTING-QUICKSTART.md` | `07-Implementation-Guides/E2E-TESTING-QUICKSTART.md` | Feb 2026 | Aug 2026 |
 | `05-Templates-Tools/02-AI-Tools/SDLC-E2E-API-Testing-Methodology.md` | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Feb 2026 | Aug 2026 |
-| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-Archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
-| `03-Agent-Templates/claude-code/` | `10-Archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/cursor/` | `10-Archive/05-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/copilot/` | `10-Archive/05-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/chatgpt/` | `10-Archive/05-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
-| `03-Agent-Templates/gemini/` | `10-Archive/05-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
+| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
+| `03-Agent-Templates/claude-code/` | `10-archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/cursor/` | `10-archive/05-Legacy/tool-guides-2026/cursor/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/copilot/` | `10-archive/05-Legacy/tool-guides-2026/copilot/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/chatgpt/` | `10-archive/05-Legacy/tool-guides-2026/chatgpt/` | Jan 2026 | Jul 2026 |
+| `03-Agent-Templates/gemini/` | `10-archive/05-Legacy/tool-guides-2026/gemini/` | Jan 2026 | Jul 2026 |
 
 ---
 
@@ -327,11 +355,11 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 
 ### When Archiving (RFC-001, SDLC 6.1.0)
 
-1. Move file to `10-Archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
+1. Move file to `10-archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
 2. Create redirect stub at original location
 3. Update status to ARCHIVED in this map
 4. Stub expires after 6 months
-5. Example: Design doc from `02-Design/` → `10-Archive/02-Legacy/deprecation-2026/`
+5. Example: Design doc from `02-Design/` → `10-archive/02-Legacy/deprecation-2026/`
 
 ---
 

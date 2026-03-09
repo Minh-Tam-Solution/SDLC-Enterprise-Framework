@@ -1,6 +1,6 @@
 # Governance Decision Matrix
 
-**Version**: 6.1.1
+**Version**: 6.1.2
 **Status**: ACTIVE
 **Date**: February 15, 2026
 **Pillar**: Core AI Governance
@@ -197,4 +197,4 @@ def compute_gate_actions(gate, user, mode):
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 15, 2026
-**Framework**: SDLC 6.1.1
+**Framework**: SDLC 6.1.2
