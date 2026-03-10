@@ -493,7 +493,9 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.1.0** | **Feb 18, 2026** | **Consolidation Release**: Ring 1 monolith slim (Design Thinking 2K→364, Agentic Principles 1.3K→293), moved agentic docs to 03-AI-GOVERNANCE, new System Thinking + Crisis-to-Pattern + Multi-Agent Patterns docs, BRS/MTS/LPS→AGENTS.md terminology cleanup, version alignment (636 refs) |
+| **6.1.2** | **Mar 9, 2026** | **SOULs + TEAMs**: 17 SASE role templates + 10 team charters added to Ring 2 (`04-SASE-Artifacts/souls/` + `teams/`), hybrid sourcing (EndiorBot + MTClaw), tier availability matrix |
+| 6.1.1 | Feb 21, 2026 | Post-Cleanup Patch: AI Council→Senior Review Board, 36 frozen templates archived, Conversation-First Governance |
+| 6.1.0 | Feb 18, 2026 | Consolidation Release: Ring 1 monolith slim, agentic→AI-GOV move, Multi-Agent Patterns, BRS/MTS/LPS→AGENTS.md |
 | 6.0.6 | Feb 16, 2026 | Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
 | 6.0.5 | Feb 15, 2026 | RFC-001 Legacy Organization + Anti-Vibecoding alignment + Framework cleanup + Governance Loop |
 | 6.0.4 | Feb 8, 2026 | TDD Integration + Sprint 3-Phase Model + Spec Converter |
