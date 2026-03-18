@@ -94,13 +94,13 @@ Before creating any new document, check if a canonical file already exists for t
 | Design Thinking | `02-Core-Methodology/SDLC-Design-Thinking-Principles.md` | Multiple legacy versions in 10-archive/02-Legacy/ | ACTIVE |
 | Agentic Principles | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/` in 6.1.0 | ACTIVE |
 | Sprint Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md` | Consolidated from Sprint-Planning + Stage-Integration + Change-Management | ACTIVE |
-| Quality + Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md` | Consolidated from Quality-Gates + Security-Gates | ACTIVE |
+| Quality + Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` | Consolidated from Quality-Gates + Security-Gates | ACTIVE |
 | Observability Checklist | `02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md` | — | ACTIVE |
 | Naming Standards | `02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md` | Consolidated from Code-File-Naming + Document-Naming + Header-Templates | ACTIVE |
 | Team Collaboration | `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
 | **Visual Documentation Standards** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | RFC-SDLC-607 | **NEW 6.0.3** |
-| **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Dependencies.md` | Stage prerequisite matrix | **NEW 5.3.0** |
-| **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Assurance-System.md` | — | **NEW 5.3.0** |
+| **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md` | Stage prerequisite matrix | **NEW 5.3.0** |
+| **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md` | — | **NEW 5.3.0** |
 | **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
 | **System Thinking Foundation** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | — | **NEW 6.1.0** |
 | **Crisis-to-Pattern Methodology** | `02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |

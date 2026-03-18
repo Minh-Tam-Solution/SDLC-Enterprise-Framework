@@ -1,6 +1,6 @@
 # SDLC 6.1.2 Self-Contained Deployment Guide
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **Status**: ACTIVE - CEO Requirement
 **Authority**: CEO + CTO Office
@@ -429,7 +429,7 @@ Projects must implement quality gates appropriate to their tier.
 
 - **SDLC Framework**: https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework
 - **SDLC Deployment Guide**: `07-Implementation-Guides/SDLC-Deployment-Guide.md`
-- **Tier Classification**: `02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md`
+- **Tier Classification**: `02-Core-Methodology/Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md`
 
 ---
 
@@ -446,4 +446,4 @@ Projects must implement quality gates appropriate to their tier.
 **Document Owner**: CTO
 **Last Updated**: January 29, 2026
 **Next Review**: February 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0

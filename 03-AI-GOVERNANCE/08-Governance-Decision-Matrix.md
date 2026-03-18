@@ -1,6 +1,6 @@
 # Governance Decision Matrix
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Status**: ACTIVE
 **Date**: February 15, 2026
 **Pillar**: Core AI Governance
@@ -190,11 +190,11 @@ def compute_gate_actions(gate, user, mode):
 - [03-Planning-Mode-Principle.md](03-Planning-Mode-Principle.md) — Principle 3
 - [04-Verification-Principle.md](04-Verification-Principle.md) — Principle 4
 - [07-Anti-Patterns.md](07-Anti-Patterns.md) — Principle 7
-- [../../02-Core-Methodology/SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) — Vibecoding Index
+- [../../02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md](../02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md) — Vibecoding Index
 
 ---
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 15, 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0

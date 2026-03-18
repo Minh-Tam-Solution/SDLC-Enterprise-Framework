@@ -1,5 +1,5 @@
 ---
-sdlc_version: "6.1.2"
+sdlc_version: "6.2.0"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -15,7 +15,7 @@ sprint: "174"
 
 # Autonomous Codegen with Quality Gates
 
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (New Methodology — requires ADR)
 **Effective Date**: February 18, 2026
@@ -291,7 +291,7 @@ Platform implementations should map these states to their evidence storage syste
 
 ## 9. Comparison with Industry Approaches
 
-| Aspect | Devin | SWE-Agent | Anthropic Quickstart | SDLC 6.1.2 |
+| Aspect | Devin | SWE-Agent | Anthropic Quickstart | SDLC 6.2.0 |
 |--------|-------|-----------|---------------------|------------|
 | **Quality Gates** | None | None | Command allowlist | 4-Gate Pipeline |
 | **Security** | Black box | Sandboxed | Bash allowlist | Policy-as-Code + SAST + Evidence |

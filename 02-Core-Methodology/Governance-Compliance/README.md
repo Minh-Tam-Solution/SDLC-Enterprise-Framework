@@ -1,6 +1,6 @@
 # Governance & Compliance Standards
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: February 18, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
@@ -19,8 +19,8 @@ Define governance, quality, security, and compliance standards that form the **c
 | Pillar | Document | Focus |
 |--------|----------|-------|
 | **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + 3-Phase Lifecycle + TDD Integration (6.0.4) |
-| **Pillar 4+5** | [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) | Feature gates (G0-G4) + Security gates |
-| **Pillar 7** | [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) | Anti-Vibecoding governance + Tier-Aware TDD Coverage (6.0.4) |
+| **Pillar 4+5** | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | Feature gates (G0-G4) + Security gates |
+| **Pillar 7** | [SDLC-Quality-Gates-Assurance-Framework.md](../SDLC-Quality-Gates-Assurance-Framework.md) | Anti-Vibecoding governance + Tier-Aware TDD Coverage (6.0.4) |
 
 ---
 
@@ -29,7 +29,7 @@ Define governance, quality, security, and compliance standards that form the **c
 | Document | Pillar | Purpose | Tier Required |
 |----------|--------|---------|---------------|
 | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | **Pillar 2** | 10 Golden Rules, Sprint gates, Stage-Sprint integration, Change management | ALL tiers |
-| [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
+| [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
 | [SDLC-Observability-Checklist.md](./SDLC-Observability-Checklist.md) | Supporting | Metrics, logging, tracing, alerting | PROFESSIONAL+ |
 
 ### Consolidated Documents
@@ -39,7 +39,7 @@ The following documents were consolidated for clarity:
 | New Document | Merged From |
 |--------------|-------------|
 | **SDLC-Sprint-Governance.md** | SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md |
-| **SDLC-Quality-Security-Gates.md** | SDLC-Quality-Gates.md + SDLC-Security-Gates.md |
+| **SDLC-Quality-Gates-Assurance-Framework.md** | SDLC-Quality-Gates.md + SDLC-Security-Gates.md |
 
 Previous versions moved to `10-archive/02-Legacy/5.2.0-Deprecated/`
 
@@ -249,8 +249,8 @@ Security:
 ## Related Documents
 
 - [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture (incl. Pillar 7: Quality Assurance System)
-- [SDLC-Quality-Assurance-System.md](../SDLC-Quality-Assurance-System.md) - Pillar 7 (Anti-Vibecoding)
-- [SDLC-Stage-Exit-Criteria.md](../SDLC-Stage-Exit-Criteria.md) - Stage completion requirements
+- [SDLC-Quality-Gates-Assurance-Framework.md](../SDLC-Quality-Gates-Assurance-Framework.md) - Pillar 7 (Anti-Vibecoding)
+- [SDLC-Stage-Lifecycle-Framework.md](../SDLC-Stage-Lifecycle-Framework.md) - Stage completion requirements
 - [Documentation-Standards/](../Documentation-Standards/) - Pillar 6 standards
 - [SDLC-Sprint-Planning-Guide.md](../Documentation-Standards/SDLC-Sprint-Planning-Guide.md) - Sprint planning guide (flattened in 6.0.0)
 
@@ -273,7 +273,7 @@ Security:
 
 ### v5.3.0 (January 28, 2026)
 - **Document Consolidation**: Reduced from 7 → 4 documents
-  - SDLC-Quality-Gates.md + SDLC-Security-Gates.md → **SDLC-Quality-Security-Gates.md**
+  - SDLC-Quality-Gates.md + SDLC-Security-Gates.md → **SDLC-Quality-Gates-Assurance-Framework.md**
   - SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md → **SDLC-Sprint-Governance.md**
 - **Pillar 7: Quality Assurance System** - Anti-Vibecoding governance integration
 - Added Vibecoding Index, Progressive Routing references

@@ -7,8 +7,8 @@ last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "Section 7: Quality Assurance + Pillar 4: Quality Gates"
 consolidates:
-  - "SDLC-Quality-Assurance-System.md (v6.1.2)"
-  - "SDLC-Quality-Security-Gates.md (v6.1.2)"
+  - "SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)"
+  - "SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)"
 ---
 
 # SDLC Quality Gates & Assurance Framework
@@ -20,12 +20,12 @@ consolidates:
 
 # PART 1: Anti-Vibecoding Governance (Section 7)
 
-> Originally: SDLC-Quality-Assurance-System.md (v6.1.2)
+> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.1.2)
 
 ## Anti-Vibecoding Governance Framework
 
 **Version**: 1.0.0
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **Status**: APPROVED
 **Date**: January 27, 2026
 **Authority**: CTO + CPO + CEO Approved
@@ -554,7 +554,7 @@ for signal in signals:
 
 ### 10.1 Framework Implementation
 
-- [ ] Create this document (SDLC-Quality-Assurance-System.md)
+- [ ] Create this document (SDLC-Quality-Gates-Assurance-Framework.md)
 - [ ] Update CONTENT-MAP.md with new files
 - [ ] Update CHANGELOG.md for Framework 6.1.2
 - [ ] Create signal calibration templates
@@ -581,7 +581,7 @@ for signal in signals:
 
 # PART 2: Quality & Security Gate Requirements
 
-> Originally: SDLC-Quality-Security-Gates.md (v6.1.2)
+> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.1.2)
 
 ## Purpose
 

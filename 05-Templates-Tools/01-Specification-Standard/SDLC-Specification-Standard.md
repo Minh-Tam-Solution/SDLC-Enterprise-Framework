@@ -1,12 +1,12 @@
 # SDLC Specification Standard v1.1
 ## Framework 6.1.2 Unified Specification Template - Section 8
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Last Updated**: February 14, 2026
 **Author**: PM/PJM Team
-**Framework**: SDLC 6.1.2 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.2.0 (7-Pillar + 2-Section)
 **Inspiration**: OpenSpec best practices + SDLC 6.1.2 evolution
 **Architecture**: Section 8: Unified Specification Standard
 **NEW in 6.0.4**: Spec Converter Methodology (SpecIR, BDD↔OpenSpec conversion)

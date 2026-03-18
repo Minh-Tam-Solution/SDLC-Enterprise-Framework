@@ -61,7 +61,7 @@ cat > docs/05-test/03-e2e-testing/README.md << 'EOF'
 # E2E API Testing
 
 **Stage**: 05-TEST
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/01-api-specifications/)
 
 ## Contents

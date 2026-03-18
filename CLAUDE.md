@@ -1,12 +1,22 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.1.2
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.2.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.1.2**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **Sprint Planning Governance**, **Stage Dependency Matrix**, **Anti-Vibecoding Governance**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 8 months of real platform development (June 2025 - January 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework achieves **14,822% ROI** through proven patterns, crisis response protocols, and implementation profiles that deliver 10x-50x productivity gains.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.2.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - March 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
 
-**What's New in 6.1.2 (March 9, 2026) - SOULs + TEAMs TEMPLATES**:
+**What's New in 6.2.0 (March 18, 2026) - AGENTIC SDLC + LEAN RING 1**:
+- ✅ **Lean Ring 1** - 41→30 substantive files, 584→463KB (-21%). 5 docs merged into 2, 9 moved to Ring 2
+- ✅ **Mental Model #7** - "Agent Continuity" — agents maintain context across sessions
+- ✅ **Mental Model #8** - "More People Build, Under Guardrails" — domain experts build within boundaries
+- ✅ **Long-Running Agent Protocol** - Checkpoint, memory, handoff, human checkpoints, traceability (Ring 1)
+- ✅ **Citizen Developer Guide** - 30-min pathway for non-technical users (Ring 3)
+- ✅ **ROI Calculator** - Agent ROI formula, output volume metrics, productivity paradox (Ring 2)
+- ✅ **Tool-Agnostic** - 42 product-specific references sanitized. 0 tool-specific language in Ring 1
+- ✅ **Evidence base** - Anthropic 2026 Trends, NIST emerging, Singapore MGF, Context Engineering Guide
+
+**What's in 6.1.2 (March 9, 2026) - SOULs + TEAMs TEMPLATES**:
 - ✅ **17 SOUL role templates** - SASE 12-role model personas added to Ring 2 (`04-SASE-Artifacts/souls/`)
 - ✅ **10 TEAM charters** - 7 SDLC function teams + 3 organizational teams (`04-SASE-Artifacts/teams/`)
 - ✅ **Tier Availability Matrix** - LITE(3) → STANDARD(6) → PRO(10) → ENTERPRISE(13) → OPTIONAL(17)
@@ -409,32 +419,29 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ├── 01-Overview/                   # Strategic overview
 │   └── SDLC-Executive-Summary.md  # Complete 10-stage overview
 │
-├── 02-Core-Methodology/           # Core principles (Ring 1)
-│   ├── SDLC-Core-Methodology.md   # Complete 10-stage framework hub
-│   ├── SDLC-Design-Thinking-Principles.md  # Slim hub (364 lines)
-│   ├── SDLC-System-Thinking-Foundation.md  # NEW 6.1.0
-│   ├── SDLC-Crisis-To-Pattern-Methodology.md # NEW 6.1.0
-│   ├── SDLC-Stage-Dependencies.md
-│   ├── SDLC-Stage-Exit-Criteria.md
-│   ├── SDLC-Quality-Assurance-System.md
-│   ├── SDLC-Context-Authority-Methodology.md
+├── 02-Core-Methodology/           # Core principles (Ring 1 — Lean in 6.2.0)
+│   ├── SDLC-Core-Methodology.md           # Hub: 7-Pillar + 10-Stage
+│   ├── SDLC-Design-Thinking-Principles.md # Pillar 0 (slim, 364 lines)
+│   ├── SDLC-System-Thinking-Foundation.md # Pillar 0 (8 Mental Models, 6.2.0)
+│   ├── SDLC-Crisis-To-Pattern-Methodology.md # Pillar 0 (MM #5)
+│   ├── SDLC-Stage-Lifecycle-Framework.md  # CONSOLIDATED 6.2.0 (Deps+Exit+Tier)
+│   ├── SDLC-Context-Authority-Methodology.md # Section 8
+│   ├── SDLC-SSOT-Principle.md
 │   ├── Documentation-Standards/
-│   │   ├── SDLC-Design-Thinking-Templates.md # NEW 6.1.0
-│   │   ├── SDLC-Tier-Stage-Requirements.md
 │   │   ├── SDLC-Naming-Standards.md
-│   │   └── SDLC-Project-Structure-Standard.md
+│   │   ├── SDLC-Project-Structure-Standard.md
+│   │   ├── SDLC-Sprint-Planning-Guide.md
+│   │   └── SDLC-Legacy-Document-Organization.md
 │   └── Governance-Compliance/
-│       ├── SDLC-Sprint-Governance.md
-│       ├── SDLC-Quality-Security-Gates.md
-│       └── SDLC-Observability-Checklist.md
+│       ├── SDLC-Sprint-Governance.md      # Pillar 2
+│       └── SDLC-Quality-Gates-Assurance-Framework.md # CONSOLIDATED 6.2.0
 │
-├── 03-AI-GOVERNANCE/              # AI Governance (Ring 1)
-│   ├── 01 to 09: AI principles + governance
-│   ├── 10-CLAUDE-MD-STANDARD.md
-│   ├── 11-AUTONOMOUS-CODEGEN-PATTERNS.md
-│   ├── 12-MULTI-AGENT-PATTERNS.md       # NEW 6.1.0
-│   ├── 13-AGENTIC-CORE-PRINCIPLES.md    # MOVED 6.1.0
-│   └── 14-AGENTIC-MATURITY-MODEL.md     # MOVED 6.1.0
+├── 03-AI-GOVERNANCE/              # AI Governance Principles (Ring 1 — timeless)
+│   ├── 01 to 09: Core AI Governance Principles
+│   ├── 13-AGENTIC-CORE-PRINCIPLES.md    # SASE SE4H/SE4A
+│   ├── 14-AGENTIC-MATURITY-MODEL.md     # L0-L3
+│   ├── 16-LONG-RUNNING-AGENT-PROTOCOL.md # NEW 6.2.0
+│   └── 10/11/12/15: redirect stubs → Ring 2 (expire Sep 2026)
 │
 ├── 04-AI-TOOLS-LANDSCAPE/        # AI Tools (Ring 2)
 │   ├── tool-profiles/             # Claude, Cursor, Copilot
@@ -595,7 +602,7 @@ SDLC 6.1.2 (March 9, 2026) ← CURRENT
 - Stage Dependencies: Explicit stage prerequisites and exit criteria
 - Unified Specification Standard (Section 8): YAML frontmatter + BDD requirements
 - Sprint Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md)
-- Quality+Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md)
+- Quality+Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md)
 - Team Collaboration: [02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md](02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md)
 - Observability Checklist: [02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md](02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md)
 
@@ -606,6 +613,6 @@ SDLC 6.1.2 (March 9, 2026) ← CURRENT
 
 The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.2, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: March 9, 2026
-**Framework Version**: SDLC 6.1.2
-**Status**: PRODUCTION READY - 7-Pillar Architecture + Section 7 QA + SOULs/TEAMs Templates
+**Last Updated**: March 18, 2026
+**Framework Version**: SDLC 6.2.0
+**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 8 Mental Models + Long-Running Agent Protocol

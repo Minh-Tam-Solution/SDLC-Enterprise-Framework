@@ -1,6 +1,6 @@
 # SDLC Framework 6.1.2 Quick Reference Guide
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: February 21, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.1.2 concepts, navigation, and breaking changes
@@ -517,6 +517,6 @@ Legacy Organization (6.1.2 RFC-001):
 
 **Document Status**: ACTIVE
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.1.2 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
+**Framework**: SDLC 6.2.0 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
 *Quick reference for SDLC Framework 6.1.2 - Keep this handy!*

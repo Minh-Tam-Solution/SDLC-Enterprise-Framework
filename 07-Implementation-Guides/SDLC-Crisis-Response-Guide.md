@@ -1,5 +1,5 @@
 # SDLC Crisis Response Guide - 24-48 Hour Emergency Protocols
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **Status**: ACTIVE - BATTLE-TESTED EMERGENCY PROCEDURES
 **Authority**: CEO Crisis Management Proven
@@ -565,7 +565,7 @@ ENTERPRISE Tier Crisis Response:
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
+- [SDLC-Stage-Lifecycle-Framework.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Compliance-Enforcement-Guide.md](SDLC-Compliance-Enforcement-Guide.md) - Prevention first
@@ -593,14 +593,14 @@ ENTERPRISE Tier Crisis Response:
 ---
 
 **Document**: SDLC-Crisis-Response-Guide
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **SDLC Stage**: Stage 07 (OPERATE) - Operations & Maintenance
 **SDLC Tier**: ALL TIERS (Mandatory)
 **Status**: BATTLE-TESTED PROCEDURES
 **Foundation**: 4 Months, 3 Platforms, Multiple Crises
 **Promise**: 24-48 Hour Resolution Capability
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 
 ***"We've been through the fire. These procedures got us out."***
 

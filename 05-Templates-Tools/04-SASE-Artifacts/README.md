@@ -1,11 +1,11 @@
 # SASE Artifact Templates
 ## Streamlined Templates for Human-Agent Collaboration
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: February 14, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Pillar**: 5 - SASE Integration
-**Framework**: SDLC 6.1.2 + SASE/SE 3.0 Integration
+**Framework**: SDLC 6.2.0 + SASE/SE 3.0 Integration
 **Reference**: arXiv:2509.06216v2 (Software Agentic Software Engineering)
 
 ---
@@ -240,4 +240,4 @@ See [teams/](teams/) directory.
 
 **Document Status**: ACTIVE - PRODUCTION READY
 **Last Updated**: February 14, 2026
-**Framework Version**: 6.1.2
+**Framework Version**: 6.2.0

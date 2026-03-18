@@ -1,6 +1,6 @@
 # 05-Checklists - Actionable Stage Transition Checklists
 
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Last Updated**: January 28, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Provide ready-to-use checklists for stage transitions
@@ -26,8 +26,8 @@
 
 ## Related Documents
 
-- [Stage Dependency Matrix](../../02-Core-Methodology/SDLC-Stage-Dependencies.md) - Prerequisite rules
-- [Stage Exit Criteria](../../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Tier-specific exit requirements
+- [Stage Dependency Matrix](../../02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) - Prerequisite rules
+- [Stage Exit Criteria](../../02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) - Tier-specific exit requirements
 - [Sprint Governance](../../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Sprint-to-stage mapping
 
 ---

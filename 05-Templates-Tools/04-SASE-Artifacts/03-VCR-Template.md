@@ -8,7 +8,7 @@
 **Consumer:** SE4A (for revision) + Git History (permanent record)
 
 **Version:** 1.2.0
-**Framework:** SDLC 6.1.2 (7-Pillar Architecture)
+**Framework:** SDLC 6.2.0 (7-Pillar Architecture)
 **Created:** December 2025
 **Updated:** January 22, 2026
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles

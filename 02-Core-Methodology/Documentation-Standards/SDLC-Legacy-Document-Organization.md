@@ -13,7 +13,7 @@ author: "CTO Office"
 # SDLC Legacy Document Organization Standard
 
 **Effective Date**: February 13, 2026  
-**Framework Version**: SDLC 6.1.2+  
+**Framework Version**: SDLC 6.2.0+  
 **Status**: MANDATORY for all SDLC-compliant projects  
 **Deadline**: March 15, 2026 (adoption requirement)
 
@@ -334,6 +334,6 @@ A: No. Content in 10-archive/ is already archived. If you need to reference it f
 ---
 
 **Status**: MANDATORY Framework Standard  
-**Framework Version**: SDLC 6.1.2+  
+**Framework Version**: SDLC 6.2.0+  
 **Last Updated**: February 13, 2026  
 **Owner**: CTO Office

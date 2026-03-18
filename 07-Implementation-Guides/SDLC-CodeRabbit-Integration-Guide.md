@@ -1,6 +1,6 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Last Updated**: January 27, 2026
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
@@ -623,7 +623,7 @@ advanced:
 # VERSION & METADATA
 # ==============================================================================
 
-version: "6.1.2"
+version: "6.2.0"
 last_updated: "2025-12-06"
 owner: "CPO Office - taidt@mtsolution.com.vn"
 documentation: "docs/SDLC-6.1.2-CodeRabbit-Integration-Guide.md"
@@ -1238,7 +1238,7 @@ For complete tier comparison, see the SDLC Implementation Guide.
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Tier**: PROFESSIONAL / ENTERPRISE
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 
 ---
 

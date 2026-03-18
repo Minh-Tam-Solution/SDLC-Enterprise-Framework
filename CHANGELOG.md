@@ -754,10 +754,10 @@ Complete coverage for all 10 security items:
 
 **Archived to**: `99-Legacy/v5.3.0-Archive/`
 
-- SDLC-Stage-Dependencies.md
-- SDLC-Stage-Exit-Criteria.md
-- SDLC-Quality-Assurance-System.md
-- SDLC-Tier-Stage-Requirements.md
+- SDLC-Stage-Lifecycle-Framework.md
+- SDLC-Stage-Lifecycle-Framework.md
+- SDLC-Quality-Gates-Assurance-Framework.md
+- SDLC-Stage-Lifecycle-Framework.md
 
 **Note**: 5.3.0 features remain in 6.0.0, archive is for version history.
 
@@ -880,7 +880,7 @@ Sprint 106 (4 days):
 
 **Key Question Answered**: "When can I safely skip optional stages?"
 
-**SDLC-Tier-Stage-Requirements.md Provides**:
+**SDLC-Stage-Lifecycle-Framework.md Provides**:
 - **LITE Tier** (1-2 devs): Required stages 00, 01, 02, 04 | Optional 03, 05, 06, 07, 08, 09
 - **PRO Tier** (3-10 devs): Required stages 00-07 | Optional 08, 09
 - **ENTERPRISE Tier** (10+ devs): All 10 stages required
@@ -943,7 +943,7 @@ Stage 05 (TEST) - Can I skip?
 
 **Key Problem Solved**: AI-generated code ("vibecoding") lacks governance signals that human expertise provides.
 
-**SDLC-Quality-Assurance-System.md Provides**:
+**SDLC-Quality-Gates-Assurance-Framework.md Provides**:
 - **Vibecoding Index**: 0-100 composite score from 5 weighted signals
 - **Progressive Routing**: Auto-approve Green → Escalate Red to CEO
 - **Auto-Generation Layer**: 4 generators reduce compliance friction to <5 min
@@ -1012,14 +1012,14 @@ critical_paths:
 ### 📂 Files Added (6 New Documents)
 
 **02-Core-Methodology/**:
-1. **SDLC-Stage-Dependencies.md** (~1,200 LOC) *(renamed from ADR-041)*
+1. **SDLC-Stage-Lifecycle-Framework.md** (~1,200 LOC) *(renamed from ADR-041)*
    - Explicit stage dependencies (YAML format)
    - Mermaid dependency diagram
    - Gate-stage mapping
    - Parallel execution rules
    - Early start triggers (Stage 09 for regulated industries)
 
-2. **SDLC-Quality-Assurance-System.md** (~2,500 LOC) *(NEW - Section 7)*
+2. **SDLC-Quality-Gates-Assurance-Framework.md** (~2,500 LOC) *(NEW - Section 7)*
    - Vibecoding Index definition and 5 signals
    - Progressive routing (Green → Yellow → Orange → Red)
    - MAX CRITICALITY OVERRIDE logic
@@ -1029,7 +1029,7 @@ critical_paths:
    - Kill Switch criteria
    - Tier-specific requirements (LITE/PRO/ENTERPRISE)
 
-3. **SDLC-Stage-Exit-Criteria.md** (~1,500 LOC)
+3. **SDLC-Stage-Lifecycle-Framework.md** (~1,500 LOC)
    - Exit criteria for all 10 stages
    - Documentation requirements (tier-specific)
    - Evidence requirements (PRO/ENTERPRISE)
@@ -1047,7 +1047,7 @@ critical_paths:
    - Sprint planning template with stage tracking
 
 **02-Core-Methodology/Documentation-Standards/**:
-4. **SDLC-Tier-Stage-Requirements.md** (~1,300 LOC)
+4. **SDLC-Stage-Lifecycle-Framework.md** (~1,300 LOC)
    - LITE tier requirements (4/10 stages required)
    - PRO tier requirements (7/10 stages required)
    - ENTERPRISE tier requirements (10/10 stages required)
@@ -1118,11 +1118,11 @@ critical_paths:
 ### 🔍 Related Documents
 
 **New in 5.3.0**:
-- [SDLC-Stage-Dependencies.md](02-Core-Methodology/SDLC-Stage-Dependencies.md) - Explicit stage prerequisites *(renamed from ADR-041)*
-- [SDLC-Quality-Assurance-System.md](02-Core-Methodology/SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding Governance** *(NEW)*
-- [SDLC-Stage-Exit-Criteria.md](02-Core-Methodology/SDLC-Stage-Exit-Criteria.md)
+- [SDLC-Stage-Lifecycle-Framework.md](02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) - Explicit stage prerequisites *(renamed from ADR-041)*
+- [SDLC-Quality-Gates-Assurance-Framework.md](02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md) - **Section 7: Anti-Vibecoding Governance** *(NEW)*
+- [SDLC-Stage-Lifecycle-Framework.md](02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md)
 - [SDLC-Stage-Sprint-Integration.md](02-Core-Methodology/Governance-Compliance/SDLC-Stage-Sprint-Integration.md)
-- [SDLC-Tier-Stage-Requirements.md](02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md)
+- [SDLC-Stage-Lifecycle-Framework.md](02-Core-Methodology/Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md)
 - [Stage-Transition-Checklist.md](05-Templates-Tools/2-Checklists/Stage-Transition-Checklist.md)
 
 **Existing (Updated References)**:

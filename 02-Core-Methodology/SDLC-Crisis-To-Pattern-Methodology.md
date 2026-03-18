@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-CRISIS-TO-PATTERN"
 title: "Crisis-to-Pattern Methodology"
-version: "6.1.2"
+version: "6.2.0"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -269,11 +269,11 @@ Not every bug needs this process. Use these triggers:
 | [SDLC-System-Thinking-Foundation](./SDLC-System-Thinking-Foundation.md) | Core | The Iceberg Model (prerequisite) |
 | [SDLC-Design-Thinking-Principles](./SDLC-Design-Thinking-Principles.md) | Core | User-centered approach to solutions |
 | [SDLC-Core-Methodology](./SDLC-Core-Methodology.md) | Core | Hub document for 7 Pillars + Sections |
-| [SDLC-Quality-Assurance-System](./SDLC-Quality-Assurance-System.md) | Core | Section 7: Anti-Vibecoding (product of crises) |
+| [SDLC-Quality-Gates-Assurance-Framework](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) | Core | Section 7 + Pillar 4: Quality Gates + Anti-Vibecoding |
 | [Agentic Core Principles](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) | Governance | Agent-specific crisis patterns |
 
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **Last Updated**: February 18, 2026

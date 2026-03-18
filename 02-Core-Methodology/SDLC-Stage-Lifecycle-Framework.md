@@ -7,9 +7,9 @@ last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "Pillar 1: 10-Stage Lifecycle"
 consolidates:
-  - "SDLC-Stage-Dependencies.md (v6.1.2)"
-  - "SDLC-Stage-Exit-Criteria.md (v6.1.2)"
-  - "SDLC-Tier-Stage-Requirements.md (v6.1.2)"
+  - "SDLC-Stage-Lifecycle-Framework.md (v6.1.2)"
+  - "SDLC-Stage-Lifecycle-Framework.md (v6.1.2)"
+  - "SDLC-Stage-Lifecycle-Framework.md (v6.1.2)"
 ---
 
 # SDLC Stage Lifecycle Framework
@@ -45,7 +45,7 @@ consolidates:
 
 # PART 1: Stage Dependencies
 
-> Originally: SDLC-Stage-Dependencies.md (v6.1.2, CTO Approved Jan 28, 2026)
+> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.1.2, CTO Approved Jan 28, 2026)
 
 ## Context
 
@@ -422,7 +422,7 @@ flowchart TD
 
 # PART 2: Stage Exit Criteria
 
-> Originally: SDLC-Stage-Exit-Criteria.md (v6.1.2, Jan 28, 2026)
+> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.1.2, Jan 28, 2026)
 
 ## Purpose
 
@@ -445,7 +445,7 @@ Stage 02 (DESIGN):
     - Sprint closed in CURRENT-SPRINT.md ✅
 ```
 
-**Relationship to Dependencies**: See [Stage Dependency Matrix](./SDLC-Stage-Dependencies.md) for stage prerequisites and enables relationships.
+**Relationship to Dependencies**: See [Stage Dependency Matrix](./SDLC-Stage-Lifecycle-Framework.md) for stage prerequisites and enables relationships.
 
 ---
 
@@ -935,7 +935,7 @@ Stage 02 (DESIGN) - LITE:
 
 # PART 3: Tier-Specific Stage Requirements
 
-> Originally: SDLC-Tier-Stage-Requirements.md (v6.1.2, Jan 28, 2026)
+> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.1.2, Jan 28, 2026)
 
 ## LITE Tier (1-2 Developers)
 

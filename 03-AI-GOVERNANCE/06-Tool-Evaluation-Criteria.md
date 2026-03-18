@@ -1,6 +1,6 @@
 # Principle 6: Tool Evaluation Criteria
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Status**: ACTIVE
 **Date**: January 28, 2026
 

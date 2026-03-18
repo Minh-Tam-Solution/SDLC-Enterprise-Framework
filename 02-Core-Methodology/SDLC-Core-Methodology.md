@@ -1,6 +1,6 @@
 # SDLC 6.1.2 Core Methodology
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: February 18, 2026
 **Status**: ACTIVE - Consolidation Release (Ring 1 slimming, foundational docs, cross-reference cleanup)
 **Authority**: Chairman + CEO + CPO + CTO Approved
@@ -227,7 +227,7 @@ SDLC 6.1.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 - 04-05: Can overlap (continuous testing)
 - 07-08-09: Always parallel (operations, collaboration, governance)
 
-**Reference**: [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md)
+**Reference**: [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md)
 
 ---
 
@@ -688,7 +688,7 @@ Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FU
 | SOFT | Block critical violations only | Week 1-2 |
 | FULL | All rules enforced | Production |
 
-**Reference**: [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md)
+**Reference**: [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md)
 
 ---
 
@@ -742,14 +742,14 @@ Quality Assurance Standards (5.3.0):
 - [SDLC-Context-Authority-Methodology.md](./SDLC-Context-Authority-Methodology.md) - ⭐ **Dynamic AGENTS.md**
 
 ### 5.3.0 (Section 7 - Quality Assurance)
-- [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
-- [SDLC-Stage-Dependencies.md](./SDLC-Stage-Dependencies.md) - **Stage Dependency Matrix**
-- [SDLC-Stage-Exit-Criteria.md](./SDLC-Stage-Exit-Criteria.md) - **Tier-Specific Exit Criteria**
-- [SDLC-Tier-Stage-Requirements.md](./SDLC-Tier-Stage-Requirements.md) - **Decision Trees**
+- [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) - **Section 7: Anti-Vibecoding**
+- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) - **Stage Dependency Matrix**
+- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) - **Tier-Specific Exit Criteria**
+- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) - **Decision Trees**
 
 ### Governance & Compliance
 - [SDLC-Sprint-Governance.md](./Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 detail (Sprint + Stage + Change Management)
-- [SDLC-Quality-Security-Gates.md](./Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5 detail (Quality + Security)
+- [SDLC-Quality-Gates-Assurance-Framework.md](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - Pillar 4+5 detail (Quality + Security)
 - [SDLC-Observability-Checklist.md](./Governance-Compliance/SDLC-Observability-Checklist.md) - Operations readiness
 
 ### Documentation Standards
@@ -792,6 +792,6 @@ Quality Assurance Standards (5.3.0):
 **Maintained By**: Framework Team
 **Authority**: CTO Approved
 **Case Study**: [Sprint Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
-**Quality Assurance**: [SDLC-Quality-Assurance-System.md](./SDLC-Quality-Assurance-System.md) - Section 7
+**Quality Assurance**: [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) - Section 7
 **Unified Specs**: [Specification Standard](../05-Templates-Tools/01-Specification-Standard/) - Section 8
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

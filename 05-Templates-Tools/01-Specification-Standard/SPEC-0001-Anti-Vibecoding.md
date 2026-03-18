@@ -31,7 +31,7 @@ sprint: Sprint 114-116 (Jan 2026)
 **Owner**: CTO + Quality Lead
 **Created**: 2026-01-28
 **Last Updated**: 2026-01-29
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **Machine-Readable Spec**: [spec/controls/anti-vibecoding.yaml](../../spec/controls/anti-vibecoding.yaml)
 
 ## 1. Overview

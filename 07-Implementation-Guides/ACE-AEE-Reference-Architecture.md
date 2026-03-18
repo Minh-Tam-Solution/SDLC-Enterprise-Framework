@@ -4,7 +4,7 @@
 **Reference:** arXiv:2509.06216v2 - Software Agentic Software Engineering (SASE)
 
 **Purpose:** Define the dual workbench architecture for human-agent collaboration
-**Framework:** SDLC 6.1.2 (7-Pillar + Section 7 Quality Assurance System)
+**Framework:** SDLC 6.2.0 (7-Pillar + Section 7 Quality Assurance System)
 **Version:** 1.2.0
 **Created:** December 2025
 **Updated:** February 18, 2026

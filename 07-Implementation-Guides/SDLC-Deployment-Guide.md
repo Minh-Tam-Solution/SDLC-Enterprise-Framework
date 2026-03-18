@@ -1,6 +1,6 @@
 # SDLC 6.1.2 Deployment Guide - From Zero to Production
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **Status**: ACTIVE - BATTLE-TESTED DEPLOYMENT PATTERNS
 **Authority**: CEO + CPO + CTO Proven Methods
@@ -490,7 +490,7 @@ ENTERPRISE Tier Deployment:
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
+- [SDLC-Stage-Lifecycle-Framework.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Platform-Patterns.md](SDLC-Platform-Patterns.md) - Platform patterns
@@ -518,14 +518,14 @@ ENTERPRISE Tier Deployment:
 ---
 
 **Document**: SDLC-Deployment-Guide
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **SDLC Stage**: Stage 06 (DEPLOY) - Release & Deployment
 **SDLC Tier**: ALL TIERS (Scalable)
 **Status**: BATTLE-TESTED PATTERNS
 **Foundation**: Real deployments from 3 platforms
 **Promise**: Your deployment success in days, not months
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 
 ***"Deploy with confidence. We've done it before."*** 🚀
 

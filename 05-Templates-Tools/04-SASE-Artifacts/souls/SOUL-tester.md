@@ -438,7 +438,7 @@ pnpm test:coverage
 ### e2e-api-testing (v3.0.0)
 
 **Source:** `.claude/skills/e2e-api-testing/SKILL.md`
-**Framework:** SDLC 6.1.2
+**Framework:** SDLC 6.2.0
 **Stage:** 05-Test | **Gate:** G3 (co-owner)
 
 When generating test plans and compliance artifacts for stage 05-test, incorporate:

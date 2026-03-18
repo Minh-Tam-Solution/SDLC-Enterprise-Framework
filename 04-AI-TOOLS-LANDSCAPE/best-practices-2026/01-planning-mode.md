@@ -1,7 +1,7 @@
 # Planning Mode Guide
 ## Pre-Implementation Pattern Extraction for AI Agents
 
-**Version:** 6.1.2
+**Version:** 6.2.0
 **Status:** ACTIVE
 **Date:** January 27, 2026
 **Core Principle:** [03-AI-GOVERNANCE/03-Planning-Mode-Principle.md](../../03-AI-GOVERNANCE/03-Planning-Mode-Principle.md)

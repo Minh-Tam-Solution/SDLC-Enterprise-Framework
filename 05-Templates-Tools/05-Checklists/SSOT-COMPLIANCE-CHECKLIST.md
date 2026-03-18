@@ -4,7 +4,7 @@
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Purpose**: Validate Single Source of Truth principle compliance
 
 ---
@@ -307,6 +307,6 @@ echo "backend/openapi.json" >> .gitignore
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Owner**: Engineering + QA Teams

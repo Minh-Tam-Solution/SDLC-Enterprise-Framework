@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Purpose**: Define and enforce Single Source of Truth across all SDLC stages
 
 ---
@@ -475,7 +475,7 @@ DATABASE_URL = getenv("DATABASE_URL")  # References .env.example structure
 **Related Principles**:
 - [E2E API Testing Methodology](../07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md)
 - [Stage Cross-Reference](./SDLC-Stage-Cross-Reference.md)
-- [Stage Dependencies](./SDLC-Stage-Dependencies.md)
+- [Stage Dependencies](./SDLC-Stage-Lifecycle-Framework.md)
 
 **Checklists**:
 - [SSOT Compliance Checklist](../05-Templates-Tools/05-Checklists/SSOT-COMPLIANCE-CHECKLIST.md)
@@ -489,6 +489,6 @@ DATABASE_URL = getenv("DATABASE_URL")  # References .env.example structure
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Owner**: Architecture + Engineering Teams
 **Approval**: CTO @nqh ✅

@@ -1,5 +1,5 @@
 # SDLC 6.1.2 Pre-Commit Hooks - Battle-Tested Protection
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **Status**: ACTIVE - INTEGRATED WITH UNIVERSAL CODE REVIEW FRAMEWORK
 **Foundation**: Lessons from 679 mock crisis and 3 platforms
@@ -447,7 +447,7 @@ After Pre-Commit Hooks:
 
 ### Core Framework
 - [SDLC-Core-Methodology.md](../../02-Core-Methodology/SDLC-Core-Methodology.md) - 10-stage lifecycle
-- [SDLC-Tier-Stage-Requirements.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - 4-tier requirements
+- [SDLC-Stage-Lifecycle-Framework.md](../../02-Core-Methodology/Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md) - 4-tier requirements
 
 ### Implementation Guides
 - [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) - Complete 3-tier review
@@ -472,14 +472,14 @@ After Pre-Commit Hooks:
 ---
 
 **Document**: SDLC-6.1.2-PRE-COMMIT-HOOKS
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 27, 2026
 **SDLC Stage**: Stage 04 (BUILD) - Development & Implementation
 **SDLC Tier**: ALL TIERS (Mandatory)
 **Status**: ENHANCED WITH BFLOW BATTLE-TESTED PATTERNS
 **Coverage**: 6 Mandatory Hooks, 20+ Detection Patterns
 **Achievement**: 679 → 0 mocks, proven protection
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 
 ***"Every pattern here prevented a real crisis at BFlow"***
 ***"Install these hooks. Sleep better at night."***

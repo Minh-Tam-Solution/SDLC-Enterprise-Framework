@@ -1,6 +1,6 @@
 # 📝 SDLC Documentation Standards - Pillar 6: Documentation Permanence
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: February 18, 2026
 **Status**: ACTIVE - Production Standards
 **Authority**: CPO Office
@@ -54,7 +54,7 @@ SDLC 6.1.2 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enh
 | **SDLC-Naming-Standards.md** ⭐ | Code + Document + Header + Archival standards | MANDATORY |
 | **SDLC-Team-Collaboration.md** ⭐ | Communication + RACI + Escalation standards | MANDATORY (STANDARD+) |
 | **SDLC-Project-Structure-Standard.md** | Folder structure (10 stages) | MANDATORY |
-| **SDLC-Tier-Stage-Requirements.md** | Tier-specific stage requirements | MANDATORY |
+| **SDLC-Stage-Lifecycle-Framework.md** | Tier-specific stage requirements | MANDATORY |
 | **SDLC-Sprint-Planning-Guide.md** ⭐ | 3-Phase Sprint + TDD Workflow guide (6.0.4) | RECOMMENDED |
 
 ---
@@ -140,7 +140,7 @@ docs/
 
 ---
 
-### 4. SDLC-Tier-Stage-Requirements.md ⭐ MANDATORY
+### 4. SDLC-Stage-Lifecycle-Framework.md ⭐ MANDATORY
 
 **Purpose**: Tier-specific stage requirements with stage dependency enforcement
 
@@ -345,7 +345,7 @@ touch docs/04-build/02-Sprint-Plans/SPRINT-01-FOUNDATION.md
 
 ### Core Methodology
 - [SDLC-Core-Methodology.md](../SDLC-Core-Methodology.md) - 8-Pillar Architecture
-- [SDLC-Quality-Security-Gates.md](../Governance-Compliance/SDLC-Quality-Security-Gates.md) - Quality + Security gates
+- [SDLC-Quality-Gates-Assurance-Framework.md](../Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - Quality + Security gates
 
 ### Case Studies
 - [Sprint Direction Confusion Case Study](../../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Why Pillar 2 & 6 matter

@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-DESIGN-THINKING-PRINCIPLES"
 title: "Design Thinking Principles — Build the RIGHT Thing"
-version: "6.1.2"
+version: "6.2.0"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -340,7 +340,7 @@ Design Thinking integrates with the SDLC Quality Gate system through 5 gates tha
 - [SDLC-System-Thinking-Foundation.md](SDLC-System-Thinking-Foundation.md) — Iceberg Model, mental models for root-cause analysis
 - [SDLC-Crisis-To-Pattern-Methodology.md](SDLC-Crisis-To-Pattern-Methodology.md) — Converting DT-discovered issues into permanent policies
 - [SDLC-Core-Methodology.md](SDLC-Core-Methodology.md) — 7-Pillar hub (Design Thinking = Pillar 0)
-- [SDLC-Quality-Assurance-System.md](SDLC-Quality-Assurance-System.md) — Quality Assurance System (anti-vibecoding)
+- [SDLC-Quality-Gates-Assurance-Framework.md](SDLC-Quality-Gates-Assurance-Framework.md) — Quality Assurance System (anti-vibecoding)
 
 ### Templates & Case Studies
 - [SDLC-Design-Thinking-Templates.md](Documentation-Standards/SDLC-Design-Thinking-Templates.md) — All detailed templates, interview scripts, case study (AI Attendance System), workshop curriculum, AI tool integration guide
@@ -355,7 +355,7 @@ Design Thinking integrates with the SDLC Quality Gate system through 5 gates tha
 ---
 
 **Document**: SDLC Design Thinking Principles
-**Version**: SDLC 6.1.2
+**Version**: SDLC 6.2.0
 **Status**: ACTIVE — Ready for Implementation
 **Last Updated**: February 18, 2026
 

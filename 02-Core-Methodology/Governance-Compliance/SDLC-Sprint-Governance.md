@@ -1,13 +1,13 @@
 # SDLC Sprint Governance
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: January 28, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 2 - Sprint Planning Governance (Core Pillar)
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO Office
 **Industry Standards**: SAFe, Scrum Guide, ITIL 4
-**Related**: [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md), [SDLC-Stage-Exit-Criteria.md](../SDLC-Stage-Exit-Criteria.md)
+**Related**: [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md), [SDLC-Stage-Lifecycle-Framework.md](../SDLC-Stage-Lifecycle-Framework.md)
 
 ---
 
@@ -1034,9 +1034,9 @@ Weekly Escalation (in roadmap review):
 
 ## Related Documents
 
-- [SDLC-Quality-Security-Gates.md](./SDLC-Quality-Security-Gates.md) - Feature gates (G0-G3)
-- [SDLC-Stage-Exit-Criteria.md](../SDLC-Stage-Exit-Criteria.md) - Stage completion criteria
-- [SDLC-Tier-Stage-Requirements.md](../Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - Tier-specific guidance
+- [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) - Feature gates (G0-G3)
+- [SDLC-Stage-Lifecycle-Framework.md](../SDLC-Stage-Lifecycle-Framework.md) - Stage completion criteria
+- [SDLC-Stage-Lifecycle-Framework.md](../Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md) - Tier-specific guidance
 - [SDLC-Observability-Checklist.md](./SDLC-Observability-Checklist.md) - Monitoring requirements
 - [SPRINT-TEMPLATE.md](../../05-Templates-Tools/5-Project-Templates/PLANNING-HIERARCHY-TEMPLATE/SPRINT-TEMPLATE.md) - Sprint template
 
@@ -1055,6 +1055,6 @@ Weekly Escalation (in roadmap review):
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for PROFESSIONAL+ tiers
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Last Updated**: January 28, 2026
 **Owner**: CTO Office

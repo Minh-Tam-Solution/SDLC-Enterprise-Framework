@@ -1,6 +1,6 @@
 ---
 title: "Agentic Core Principles"
-version: "6.1.2"
+version: "6.2.0"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"
@@ -289,5 +289,5 @@ The SASE framework defines 6 engineering disciplines. Each maps to primary SDLC 
 ---
 
 **Document Status:** ACTIVE — PRODUCTION READY
-**Version:** 6.1.2 | **Last Updated:** February 18, 2026
+**Version:** 6.2.0 | **Last Updated:** February 18, 2026
 **Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.1.2

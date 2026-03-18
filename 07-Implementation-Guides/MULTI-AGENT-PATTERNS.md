@@ -1,5 +1,5 @@
 ---
-version: "6.1.2"
+version: "6.2.0"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -15,7 +15,7 @@ sprint: "176"
 
 # Multi-Agent Collaboration Patterns
 
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (New Methodology — requires ADR)
 **Effective Date**: February 18, 2026
@@ -623,4 +623,4 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 **Document Status**: APPROVED
 **Owner**: CTO Office
 **Last Updated**: February 18, 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0

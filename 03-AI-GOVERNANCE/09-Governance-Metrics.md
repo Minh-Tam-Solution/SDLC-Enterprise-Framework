@@ -1,6 +1,6 @@
 # Governance Metrics & KPIs
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Status**: ACTIVE
 **Date**: February 15, 2026
 **Pillar**: Core AI Governance
@@ -205,11 +205,11 @@ Data sources:
 - [08-Governance-Decision-Matrix.md](08-Governance-Decision-Matrix.md) — Principle → enforcement mapping
 - [01-AI-Human-Collaboration.md](01-AI-Human-Collaboration.md) — Principle 1
 - [07-Anti-Patterns.md](07-Anti-Patterns.md) — What NOT to do
-- [../../02-Core-Methodology/SDLC-Quality-Assurance-System.md](../02-Core-Methodology/SDLC-Quality-Assurance-System.md) — Vibecoding Index definition
+- [../../02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md](../02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md) — Vibecoding Index definition
 
 ---
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 15, 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0

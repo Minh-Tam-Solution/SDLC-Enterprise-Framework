@@ -1,5 +1,5 @@
 ---
-sdlc_version: "6.1.2"
+sdlc_version: "6.2.0"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -15,7 +15,7 @@ sprint: "174"
 
 # CLAUDE.md Standard for AI-Assisted Development
 
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (Methodology Standard — affects all adopters)
 **Effective Date**: February 17, 2026

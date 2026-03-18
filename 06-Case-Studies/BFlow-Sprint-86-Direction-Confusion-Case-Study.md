@@ -420,7 +420,7 @@ SDLC 5.1.3 (Jan 18, 2026)
 
 - [SDLC-Sprint-Governance.md](../02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 (Sprint + Stage + Change)
 - [When-Planning-Sprint.md](../02-Core-Methodology/Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md)
-- [SDLC-Quality-Security-Gates.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5
+- [SDLC-Quality-Gates-Assurance-Framework.md](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - Pillar 4+5
 - [SPRINT-74-PLANNING-HIERARCHY.md](../../../docs/04-build/02-Sprint-Plans/SPRINT-74-PLANNING-HIERARCHY.md)
 
 ---
@@ -436,5 +436,5 @@ The BFlow Sprint 86 Direction Confusion incident, while disruptive, led to a **s
 **Case Study Author**: SDLC Framework Team
 **Review Date**: January 29, 2026
 **CTO Approval**: ✅ Approved
-**Framework Version**: SDLC 6.1.2
+**Framework Version**: SDLC 6.2.0
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles

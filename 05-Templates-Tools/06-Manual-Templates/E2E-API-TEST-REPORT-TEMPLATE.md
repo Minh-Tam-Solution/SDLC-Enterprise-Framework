@@ -4,7 +4,7 @@
 **Date**: [YYYY-MM-DD]
 **Status**: [DRAFT | IN REVIEW | APPROVED]
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Location**: `docs/05-test/03-e2e-testing/reports/E2E-API-REPORT-YYYY-MM-DD.md`
 
 ---
@@ -246,5 +246,5 @@ Resolution: [Steps taken or ticket created]
 **Document Status**: [DRAFT | APPROVED]
 **Created**: [YYYY-MM-DD]
 **Updated**: [YYYY-MM-DD]
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Cross-Reference**: [Stage 03 API Specifications](../../03-integrate/01-api-specifications/)

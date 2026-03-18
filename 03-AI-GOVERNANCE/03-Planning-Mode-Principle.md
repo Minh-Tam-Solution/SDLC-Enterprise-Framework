@@ -1,6 +1,6 @@
 # Principle 3: Planning Mode (Risk-Based)
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Status**: ACTIVE
 **Date**: January 28, 2026
 

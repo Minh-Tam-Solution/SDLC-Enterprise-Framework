@@ -1,7 +1,7 @@
 # Complete API Endpoint Reference Template
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Stage**: 03-integrate
 **Last Updated**: February 2026
 

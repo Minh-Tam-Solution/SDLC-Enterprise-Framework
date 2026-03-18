@@ -1,7 +1,7 @@
 # Sub-agent Orchestration
 ## Session Management Patterns for AI Development
 
-**Version:** 6.1.2
+**Version:** 6.2.0
 **Status:** ACTIVE
 **Date:** January 27, 2026
 

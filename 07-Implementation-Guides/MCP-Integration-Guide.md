@@ -1,9 +1,9 @@
 # MCP Integration Implementation Guide
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Ring**: 3 (Outer - Implementation)
 **Source**: Consolidated from RFC-SDLC-603 (Boris Cherny Tactic #1)
 
@@ -541,8 +541,8 @@ Every MCP action creates an Evidence artifact:
 ### Framework Documents
 
 - [Context Management](../03-AI-Governance/05-Context-Management.md) - AGENTS.md and context files
-- [Stage Exit Criteria](../02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Stage completion criteria including Stage 07 (Operate)
-- [Quality Security Gates](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Audit trail and quality gate requirements
+- [Stage Exit Criteria](../02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) - Stage completion criteria including Stage 07 (Operate)
+- [Quality Security Gates](../02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - Audit trail and quality gate requirements
 
 ### External Resources
 
@@ -560,7 +560,7 @@ Every MCP action creates an Evidence artifact:
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.1.2
+**Framework**: SDLC 6.2.0
 **Ring**: 3 (Outer - Implementation)
 **Source**: Consolidated from RFC-SDLC-603 (Boris Cherny Tactic #1)
 **Owner**: Engineering + DevOps Teams

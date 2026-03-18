@@ -1,6 +1,6 @@
 # 🧠 Empathy Map Canvas Template
 
-**Version**: 6.1.2 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.2.0 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Deeply understand users' thoughts, feelings, actions, and pain points
 **When to Use**: EMPATHIZE phase (SDLC Stage 00 - WHY?)
 **Time Required**: 30-45 minutes per user persona
