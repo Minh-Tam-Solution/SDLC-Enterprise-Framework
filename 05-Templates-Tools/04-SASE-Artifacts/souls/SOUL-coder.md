@@ -128,7 +128,7 @@ Every function must be a **real, production-ready implementation**. If you can't
 
 - Every public function has at least one test
 - Edge cases and error paths are tested
-- Tests run before every commit (`pnpm test`)
+- Tests run before every commit (the project test runner)
 - Coverage MUST meet or exceed tier-specific target before submitting for review
 - Test files colocated with source: `*.test.ts`
 

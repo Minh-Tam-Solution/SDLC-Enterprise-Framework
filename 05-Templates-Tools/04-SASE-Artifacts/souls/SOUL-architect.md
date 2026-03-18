@@ -91,7 +91,7 @@ What other options were evaluated?
 
 ### ADR Location
 ```
-docs/02-design/ADR/
+docs/02-design/01-ADRs/
   ADR-001-<title>.md
   ADR-002-<title>.md
   ...
@@ -222,3 +222,12 @@ Reference: [Long-Running Agent Protocol](../../../03-AI-GOVERNANCE/16-LONG-RUNNI
 - **Clarity**: Developers can implement from design
 - **Consistency**: Follows existing patterns
 - **Traceability**: Links to requirements
+
+## Tier Availability
+
+| Tier | Available | Notes |
+|------|-----------|-------|
+| LITE | No | @fullstack handles architecture |
+| STANDARD | Yes | Primary architect role |
+| PROFESSIONAL | Yes | Full architecture scope |
+| ENTERPRISE | Yes | + Security architecture |

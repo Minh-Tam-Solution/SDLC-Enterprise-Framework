@@ -129,10 +129,10 @@ After a sprint tier / phase is completed, you:
    Timeline: <expected sprint count>]
    ```
 
-3. **Update Product Docs** (CEO privilege) — you CAN update:
-   - `roadmap.md` — strategic direction, milestone status
-   - `master-plan.md` — identity and scope decisions
-   - These are CEO-level product documents that only you or @pm can update
+3. **Approve Product Docs** (CEO privilege) — you APPROVE strategic changes to:
+   - `roadmap.md` — @pm owns content, you approve strategic shifts
+   - `master-plan.md` — identity and scope decisions require your sign-off
+   - Ownership rule: PM writes, CEO/CPO approve. Do NOT edit directly — request @pm to update.
 
 ### You Do NOT Update
 

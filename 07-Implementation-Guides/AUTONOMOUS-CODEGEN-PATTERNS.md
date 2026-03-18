@@ -9,7 +9,7 @@ last_updated: "2026-02-18"
 context_zone: "Core"
 update_frequency: "Per major version (quarterly)"
 priority: "P1"
-source: "Industry autonomous coding patterns + SDLC 6.1.2 Quality Gates"
+source: "Industry autonomous coding patterns + SDLC 6.2.0 Quality Gates"
 sprint: "174"
 ---
 
@@ -84,7 +84,7 @@ ALLOWED_COMMANDS = [
 
 ### 3.1 Improvement Over Anthropic Pattern
 
-SDLC 6.1.2 adds **Quality Gates** to catch issues BEFORE merge, transforming the autonomous coding loop from "generate and hope" to "generate, validate, and verify."
+SDLC 6.2.0 adds **Quality Gates** to catch issues BEFORE merge, transforming the autonomous coding loop from "generate and hope" to "generate, validate, and verify."
 
 | Stage | Anthropic Pattern | SDLC Enhancement |
 |-------|-------------------|------------------|
@@ -304,7 +304,7 @@ Platform implementations should map these states to their evidence storage syste
 
 ## 10. AI Governance Principles Alignment
 
-This methodology aligns with SDLC 6.1.2 AI Governance Principles:
+This methodology aligns with SDLC 6.2.0 AI Governance Principles:
 
 | Principle | How This Methodology Complies |
 |-----------|-------------------------------|
@@ -320,7 +320,7 @@ This methodology aligns with SDLC 6.1.2 AI Governance Principles:
 
 ## 11. References
 
-- **SDLC 6.1.2**: Section 7 (Quality Assurance System), AI Governance Principles
+- **SDLC 6.2.0**: Section 7 (Quality Assurance System), AI Governance Principles
 - **Industry**: Open-source autonomous coding agent patterns (two-agent, JSON persistence)
 - **Security**: OWASP Top 10, CWE Top 25 for AI-generated code validation
 

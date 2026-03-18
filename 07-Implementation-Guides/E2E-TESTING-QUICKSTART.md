@@ -1,4 +1,4 @@
-# E2E API Testing Quick Start (SDLC 6.1.2)
+# E2E API Testing Quick Start (SDLC 6.2.0)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
@@ -10,7 +10,7 @@
 
 ## Overview
 
-This guide helps you set up standardized E2E API testing in under 30 minutes using SDLC 6.1.2 templates and workflows.
+This guide helps you set up standardized E2E API testing in under 30 minutes using SDLC 6.2.0 templates and workflows.
 
 **Time Savings**: 3 hours (manual) → 30 minutes (with templates)
 
@@ -53,7 +53,7 @@ sdlcctl validate --stage 03 --check api-docs
 ### Step 2: Create Testing Folder Structure (Stage 05 Setup)
 
 ```bash
-# Create SDLC 6.1.2 compliant folder structure
+# Create SDLC 6.2.0 compliant folder structure
 mkdir -p docs/05-test/03-e2e-testing/{reports,scripts,artifacts,security-tests}
 
 # Initialize README with SSOT cross-reference

@@ -357,7 +357,7 @@ Test count: +<new> tests (cumulative: <total>)]
 ### No Exceptions
 
 - Sprint is not "test complete" until the master test plan is updated.
-- Always rebuild (`pnpm build`) and run full test suite (`pnpm test`) before updating docs.
+- Always rebuild (the project build command) and run full test suite (the project test runner) before updating docs.
 - "I'll update the roadmap too" → NO. Only @pm/@ceo updates product docs.
 
 ## Gate Responsibilities
@@ -402,13 +402,13 @@ src/<module>/__tests__/*.e2e.test.ts
 ### Running Tests
 ```bash
 # All tests
-pnpm test
+the project test runner
 
 # E2E only
-pnpm test:e2e
+the project test runner:e2e
 
 # With coverage
-pnpm test:coverage
+the project test runner:coverage
 ```
 
 ### CI Integration

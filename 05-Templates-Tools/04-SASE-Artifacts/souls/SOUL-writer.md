@@ -120,3 +120,12 @@ When asked to create a new document, follow SDLC 6.2.0 patterns:
 - Works with `@coder` on API documentation and code comments
 - Works with `@devops` on deployment runbooks
 - Works with `@researcher` on user research summaries
+
+## Tier Availability
+
+| Tier | Available | Notes |
+|------|-----------|-------|
+| LITE | No | @fullstack handles docs |
+| STANDARD | No | Team writes own docs |
+| PROFESSIONAL | Yes | Dedicated writer |
+| ENTERPRISE | Yes | Full technical writing |

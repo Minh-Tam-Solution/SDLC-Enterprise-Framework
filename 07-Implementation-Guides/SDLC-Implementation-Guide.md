@@ -1,4 +1,4 @@
-# SDLC 6.1.2 Implementation Guide - From Zero to Production
+# SDLC 6.2.0 Implementation Guide - From Zero to Production
 
 **Version**: 6.2.0
 **Date**: January 29, 2026
@@ -11,11 +11,12 @@
 
 ## 🎯 30-Second Overview
 
-**What is SDLC 6.1.2?**
-- A **10-stage lifecycle** framework (WHY → GOVERN)
-- With **7-Pillar Architecture** + **Section 7 Quality Assurance System**
-- With **SASE** for human-AI collaboration (AGENTS.md + 3 artifacts)
-- And **4-tier scaling** (LITE → ENTERPRISE)
+**What is SDLC 6.2.0?**
+- A **10-stage lifecycle** framework (WHY → GOVERN) grounded in **8 Mental Models**
+- With **7-Pillar Architecture** + **Section 7 Quality Assurance** + **Section 8 Specification Standard**
+- With **SASE** for human-AI collaboration (AGENTS.md + CRP/MRP/VCR + 17 SOUL role templates)
+- With **Long-Running Agent Protocol** for multi-session agent continuity
+- And **4-tier scaling** (LITE → ENTERPRISE) with fixed autonomy presets
 
 **Why use it?**
 - **14,822% ROI** validated across 4 production systems
@@ -383,7 +384,7 @@ Stage 09: GOVERN - Compliance, audits, governance
 
 ### Standard `/docs` Structure (10-Stage Aligned)
 
-Every SDLC 6.1.2 compliant project **MUST** have this documentation structure using **shortened folder names**:
+Every SDLC 6.2.0 compliant project **MUST** have this documentation structure using **shortened folder names**:
 
 ```
 your-project/
@@ -456,7 +457,7 @@ your-project/
 
 ### Folder Naming Convention
 
-**SDLC 6.1.2 uses shortened folder names** (not long descriptive names):
+**SDLC 6.2.0 uses shortened folder names** (not long descriptive names):
 
 | Stage | Folder Name | NOT |
 |-------|-------------|-----|
@@ -628,7 +629,7 @@ docs/02-design/14-Technical-Specs/SPEC-0001-*.md
 
 ### Purpose
 
-Every project implementing SDLC 6.1.2 should have an **SDLC Compliance folder** containing:
+Every project implementing SDLC 6.2.0 should have an **SDLC Compliance folder** containing:
 - Project-specific summary of the Framework
 - AI context files (CLAUDE.md, AGENTS.md)
 - Quick reference for team members (human + AI)
@@ -644,7 +645,7 @@ docs/08-collaborate/
     ├── AGENTS.md                     # Agent guidelines & boundaries
     ├── PROJECT-CONTEXT.md            # Human-readable quick reference
     ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
-    └── FRAMEWORK-SUMMARY.md          # SDLC 6.1.2 summary (optional)
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.2.0 summary (optional)
 ```
 
 ### Why 08-collaborate (Not 09-govern)?
@@ -688,7 +689,7 @@ your-project/
 | `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
 | `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
 | `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
-| `FRAMEWORK-SUMMARY.md` | SDLC 6.1.2 quick reference | Optional |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.2.0 quick reference | Optional |
 
 ### Migration for Existing Projects
 
@@ -713,7 +714,7 @@ python3 path/to/sdlc_validator.py /your/project
 
 ## 🤖 SASE Quick Reference (AI Teams)
 
-### SDLC 6.1.2 Simplified Artifacts
+### SDLC 6.2.0 Simplified Artifacts
 
 | # | Artifact | Created By | Purpose |
 |---|----------|------------|---------|
@@ -811,7 +812,7 @@ Agent: MRP → Human: VCR
 
 ## 🔄 Brownfield Implementation (Existing Projects)
 
-**For teams with existing codebases that want to adopt SDLC 6.1.2 incrementally.**
+**For teams with existing codebases that want to adopt SDLC 6.2.0 incrementally.**
 
 ### Philosophy: Don't Disrupt, Enhance
 
@@ -840,12 +841,12 @@ pip install pre-commit
 # Copy .pre-commit-config.yaml from SDLC-PRE-COMMIT-HOOKS.md
 
 # Day 2: Establish code review
-# Choose tier from SDLC-Universal-Code-Review-Framework.md
+# Choose tier from SDLC-Code-Review-Guide.md
 ```
 
 **Guides:**
 - [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Pre-commit setup
-- [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) - Review tier selection
+- [SDLC-Code-Review-Guide.md](SDLC-Code-Review-Guide.md) - Review tier selection
 
 ### Phase 2: Documentation Structure
 
@@ -909,9 +910,9 @@ Phase 4 Adds:
 
 ---
 
-## ⬆️ Version Migration (5.x → 6.1.2)
+## ⬆️ Version Migration (5.x → 6.2.0)
 
-**For teams already using SDLC 5.x who want to upgrade to 6.1.2.**
+**For teams already using SDLC 5.x who want to upgrade to 6.2.0.**
 
 ### What Changed in 6.0.0?
 
@@ -1076,13 +1077,13 @@ Philosophy: "Validate before rollout"
 Week 1-4 (Sprint 122-123):
   - CTO creates all templates
   - CTO sets up validation tooling
-  - Team allocation: 0% SDLC 6.1.2 work
+  - Team allocation: 0% SDLC 6.2.0 work
 
 Week 5-8 (Sprint 124-125):
   - CTO converts 2 specs as "stealth pilots"
   - Validates templates work in practice
   - Measures actual conversion velocity
-  - Team allocation: Still 0% SDLC 6.1.2 work
+  - Team allocation: Still 0% SDLC 6.2.0 work
 
 Week 9-10 (Sprint 126):
   - Training materials finalized
@@ -1112,7 +1113,7 @@ Week 9-10 (Sprint 126):
    - Final confirmation (Apr 12): "Sprint 127 starts Apr 15"
 
 **Recommendation:**
-For teams new to SDLC 6.1.2, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
+For teams new to SDLC 6.2.0, the BFlow "stealth pilot" approach reduces risk by validating templates before team-wide rollout. Consider this approach if:
 - Team has never migrated SDLC versions before
 - High-stakes production system (can't afford migration failures)
 - CTO/Tech Lead capacity available for preparation work
@@ -1130,24 +1131,35 @@ For teams new to SDLC 6.1.2, the BFlow "stealth pilot" approach reduces risk by 
 
 ---
 
-## 📚 Related Documents
+## Related Documents
 
 ### Core Reading (Start Here)
-- `SDLC-PRE-COMMIT-HOOKS.md` - Setup quality gates
-- `SDLC-Code-Review-Guide.md` - Code review (all tiers)
-- `../05-Templates-Tools/SASE-Artifacts/` - SASE templates
+- [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) — Setup quality gates (30 min)
+- [SDLC-Code-Review-Guide.md](SDLC-Code-Review-Guide.md) — Code review (all tiers)
+- [SASE Artifacts](../05-Templates-Tools/04-SASE-Artifacts/) — AGENTS.md, CRP, MRP, VCR, 17 SOULs
 
-### By Need
-- **Code Review**: `SDLC-Universal-Code-Review-Framework.md`
-- **Deployment**: `SDLC-Deployment-Guide.md`
-- **Crisis**: `SDLC-Crisis-Response-Guide.md`
-- **Compliance**: `SDLC-Compliance-Enforcement-Guide.md`
-- **Self-Contained Setup**: `SDLC-Self-Contained-Deployment-Guide.md`
+### AI Agents & Multi-Agent (6.2.0)
+- [MULTI-AGENT-PATTERNS.md](MULTI-AGENT-PATTERNS.md) — 13 collaboration patterns (lane queues, failover, snapshots)
+- [AUTONOMOUS-CODEGEN-PATTERNS.md](AUTONOMOUS-CODEGEN-PATTERNS.md) — Two-agent pattern + 4-Gate Quality Pipeline
+- [CONVERSATION-FIRST-GOVERNANCE.md](CONVERSATION-FIRST-GOVERNANCE.md) — OTT/CLI-first governance workflows
+- [Citizen-Developer-Guide.md](Citizen-Developer-Guide.md) — 30-min onboarding for non-technical users
+- [MCP-Integration-Guide.md](MCP-Integration-Guide.md) — Model Context Protocol server integration
+- [ACE-AEE-Reference-Architecture.md](ACE-AEE-Reference-Architecture.md) — Agent Command/Execution dual-workbench
 
-### Reference
-- `../02-Core-Methodology/SDLC-Core-Methodology.md` - Full 10-stage theory
-- `../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` - SASE details
-- `../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` - L0→L3 progression
+### Operations & Quality
+- [SDLC-Deployment-Guide.md](SDLC-Deployment-Guide.md) — Production deployment
+- [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) — Crisis response procedures
+- [SDLC-Compliance-Enforcement-Guide.md](SDLC-Compliance-Enforcement-Guide.md) — Compliance automation
+- [SDLC-Self-Contained-Deployment-Guide.md](SDLC-Self-Contained-Deployment-Guide.md) — Team folder deployment
+- [SDLC-Stage-Consistency-Validation-Guide.md](SDLC-Stage-Consistency-Validation-Guide.md) — 4-stage consistency checks
+- [E2E-TESTING-QUICKSTART.md](E2E-TESTING-QUICKSTART.md) — E2E API testing in 30 minutes
+
+### Framework Reference
+- [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md) — 7-Pillar + 10-Stage theory
+- [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md) — 8 Mental Models (Agent Continuity, Everyone Builds)
+- [Long-Running Agent Protocol](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) — Checkpoint, memory, handoff, traceability
+- [Agentic Core Principles](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE SE4H/SE4A
+- [Agentic Maturity Model](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
 
 ---
 
@@ -1175,27 +1187,32 @@ For teams new to SDLC 6.1.2, the BFlow "stealth pilot" approach reduces risk by 
 ## 🎯 One Page Summary
 
 ```
-SDLC 6.1.2 = 10 Stages + 7 Pillars + Section 7 (QA) + 4 Tiers
+SDLC 6.2.0 = 10 Stages + 7 Pillars + 8 Mental Models + Section 7 (QA) + Section 8 (Spec) + 4 Tiers
 
 Pick Your Path:
-  Greenfield (new project)   → This guide's Quick Starts
-  Brownfield (existing)      → Phase 1-4 incremental
-  Migration (5.x → 6.0)      → Version migration section
+  Greenfield (new project)    → This guide's Quick Starts
+  Brownfield (existing)       → Phase 1-4 incremental
+  Migration (5.x → 6.x)      → Version migration section
+  Non-technical user          → Citizen Developer Guide (30 min)
 
 Pick Your Tier:
-  LITE (1-2 people)       → 1 day setup
-  STANDARD (3-10)         → 1 week setup
-  PROFESSIONAL (10-50)    → 2 weeks setup
-  ENTERPRISE (50+)        → 4 weeks setup
+  LITE (1-2 people)       → 1 day setup,  assist_only autonomy
+  STANDARD (3-10)         → 1 week setup,  contribute_only autonomy
+  PROFESSIONAL (10-50)    → 2 weeks setup, member_guardrails autonomy
+  ENTERPRISE (50+)        → 4 weeks setup, autonomous_gated autonomy
 
 Essential Steps:
   1. Design Thinking (30 min minimum)
   2. Pre-commit hooks (30 min setup)
-  3. Code review process (choose your style)
-  4. Deploy first feature (celebrate!)
+  3. Code review process (choose your tier)
+  4. AGENTS.md + SOUL templates (for AI teams)
+  5. Deploy first feature (celebrate!)
 
-SASE for AI Teams (6.0.0 Simplified):
-  Human: AGENTS.md → Agent: [work] → MRP → Human: VCR
+SASE Workflow:
+  Human: AGENTS.md → Agent: SOUL persona + [work] → CRP (if stuck) → MRP → Human: VCR
+
+13 Multi-Agent Patterns available (see MULTI-AGENT-PATTERNS.md)
+Long-Running Agent Protocol for sessions spanning days (see 03-AI-GOVERNANCE/16)
 
 Success = Validated features with less waste
 ROI = 10-50x improvement (tier dependent)
@@ -1203,10 +1220,10 @@ ROI = 10-50x improvement (tier dependent)
 
 ---
 
-**Document Version**: 6.1.2
-**Last Updated**: February 14, 2026
+**Document Version**: 6.2.0
+**Last Updated**: March 18, 2026
 **Owner**: CPO Office
-**Next Review**: March 2026
+**Next Review**: June 2026
 **Framework**: SDLC 6.2.0
 
 ---

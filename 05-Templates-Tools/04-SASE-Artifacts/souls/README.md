@@ -129,21 +129,23 @@ created: 2026-XX-XX
 
 ## TEAM Charters
 
-Team charters define how SOULs collaborate in groups. See `../teams/` for 10 team templates:
+Team charters define how SOULs collaborate in groups. See `../teams/` for 8 team templates:
 
 **SDLC Function Teams** (7):
-- `TEAM-dev.md` — Development team
-- `TEAM-qa.md` — Quality Assurance team
-- `TEAM-design.md` — Design team
-- `TEAM-executive.md` — Executive team
-- `TEAM-fullstack.md` — Full-Stack team
-- `TEAM-ops.md` — Operations team
-- `TEAM-planning.md` — Planning team
+- `TEAM-planning.md` — Planning team (Stages 00-01, G0.1/G0.2/G1)
+- `TEAM-design.md` — Design team (Stages 02-03, G2)
+- `TEAM-dev.md` — Development team (Stage 04, G-Sprint)
+- `TEAM-qa.md` — Quality Assurance team (Stage 05, G3)
+- `TEAM-ops.md` — Operations team (Stages 06-07, G4)
+- `TEAM-fullstack.md` — Full-Stack / LITE tier (Stages 00-06, all gates)
+- `TEAM-executive.md` — Executive / SE4H advisory (all stages, gate approvals)
 
-**Organizational Teams** (3):
-- `TEAM-advisory.md` — Advisory Board (governance oversight)
-- `TEAM-business.md` — Business Operations (sales, CS, support)
-- `TEAM-engineering.md` — SDLC Engineering (stages 00-08)
+**Organizational Support** (1):
+- `TEAM-business.md` — Business Operations (NOT part of SDLC lifecycle — sales, CS, support)
+
+**Archived in 6.2.0** (moved to 10-Archive/):
+- ~~TEAM-advisory.md~~ — Merged into TEAM-executive (duplicate)
+- ~~TEAM-engineering.md~~ — Archived (overlapped all functional teams)
 
 ---
 

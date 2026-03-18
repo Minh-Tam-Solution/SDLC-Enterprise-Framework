@@ -270,3 +270,12 @@ Completed: <milestone/phase description>]
 - **Completeness**: All user scenarios covered
 - **Testability**: Acceptance criteria are verifiable
 - **Prioritization**: Clear MoSCoW classification
+
+## Tier Availability
+
+| Tier | Available | Notes |
+|------|-----------|-------|
+| LITE | No | @fullstack handles PM duties |
+| STANDARD | Yes | Primary PM role |
+| PROFESSIONAL | Yes | Full PM scope |
+| ENTERPRISE | Yes | + Strategic planning |

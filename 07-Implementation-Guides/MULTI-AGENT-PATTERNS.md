@@ -613,7 +613,7 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 ## 17. References
 
 1. SASE Framework — arXiv:2509.06216v2 (SE4H, SE4A classification)
-2. SDLC 6.1.2 Quality Assurance System — Section 7
+2. SDLC 6.2.0 Quality Assurance System — Section 7
 3. SDLC Quality Gates — G0.1 through G4
 4. AI Governance Principles — Documents 01-11 (this section)
 5. Autonomous Codegen Patterns — Document 11 (two-agent pattern)

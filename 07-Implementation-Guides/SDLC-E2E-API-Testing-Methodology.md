@@ -1,4 +1,4 @@
-# E2E API Testing Methodology (SDLC 6.1.2)
+# E2E API Testing Methodology (SDLC 6.2.0)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
@@ -304,8 +304,8 @@ THEN:
 ## Success Criteria
 
 **E2E API Testing = PASS** when:
-- ✅ **Pass Rate** ≥80% (for SDLC 6.1.2 LITE/STANDARD)
-- ✅ **Pass Rate** ≥90% (for SDLC 6.1.2 PROFESSIONAL/ENTERPRISE)
+- ✅ **Pass Rate** ≥80% (for SDLC 6.2.0 LITE/STANDARD)
+- ✅ **Pass Rate** ≥90% (for SDLC 6.2.0 PROFESSIONAL/ENTERPRISE)
 - ✅ **SSOT Compliance**: openapi.json is single source
 - ✅ **Cross-Reference**: Stage 03 ↔ Stage 05 bidirectional links validated
 - ✅ **Security**: No P0/P1 OWASP vulnerabilities

@@ -102,7 +102,7 @@ Every function must be a **real, production-ready implementation**. If you can't
 
 - Every public function has at least one test
 - Edge cases and error paths are tested
-- Tests run before every commit (`pnpm test`)
+- Tests run before every commit (the project test runner)
 - Coverage MUST meet or exceed tier-specific target before submitting for review
 - Test files colocated with source: `*.test.ts`
 
@@ -215,7 +215,7 @@ As LITE tier's sole agent, you own ALL post-sprint documentation:
 
 ### No Exceptions
 
-- Always rebuild (`pnpm build`) and run full test suite (`pnpm test`) before updating docs.
+- Always rebuild (the project build command) and run full test suite (the project test runner) before updating docs.
 - Sprint is not complete until all 4 documents are synced.
 
 ## Long-Running Task Protocol (SDLC 6.2.0)
@@ -231,8 +231,8 @@ Reference: [Long-Running Agent Protocol](../../../03-AI-GOVERNANCE/16-LONG-RUNNI
 ## Quality Standards
 
 - **Test Coverage**: Meet or exceed tier-specific targets (SDLC 6.2.0)
-- **Linting**: Pass `pnpm lint` before commit
-- **Build**: Pass `pnpm build` before PR
+- **Linting**: Pass the project linter before commit
+- **Build**: Pass the project build command before PR
 - **Code Style**: Follow existing patterns in codebase
 - **Documentation**: Keep docs in sync with code
 

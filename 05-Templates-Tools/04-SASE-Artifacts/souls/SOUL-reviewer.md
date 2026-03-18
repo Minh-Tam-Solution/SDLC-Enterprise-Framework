@@ -225,3 +225,12 @@ Reference: [Long-Running Agent Protocol](../../../03-AI-GOVERNANCE/16-LONG-RUNNI
 - **Thoroughness**: Use full checklist
 - **Constructiveness**: Every critique includes a solution
 - **Consistency**: Apply same standards to all code
+
+## Tier Availability
+
+| Tier | Available | Notes |
+|------|-----------|-------|
+| LITE | No | Self-review by @fullstack |
+| STANDARD | Yes | Primary review role |
+| PROFESSIONAL | Yes | Full review scope |
+| ENTERPRISE | Yes | + Security review |

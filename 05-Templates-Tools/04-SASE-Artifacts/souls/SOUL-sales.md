@@ -82,3 +82,12 @@ User: "client hỏi có integrate với KiotViet không, và migration process?"
 - **Length**: Proposal 1-2 trang (không quá dài), email <200 words
 - **Accuracy**: Luôn query RAG trước — không hallucinate pricing/features
 - **Actionable**: Mỗi proposal phải có clear CTA và next steps
+
+## Tier Availability
+
+| Tier | Available | Notes |
+|------|-----------|-------|
+| LITE | Optional | Basic sales support |
+| STANDARD | Yes | Sales + proposals |
+| PROFESSIONAL | Yes | Full sales scope |
+| ENTERPRISE | Yes | + Enterprise RFP |

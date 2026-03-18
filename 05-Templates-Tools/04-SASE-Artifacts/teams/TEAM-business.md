@@ -11,6 +11,10 @@ created: 2026-03-03
 
 # TEAM Charter — Business Operations
 
+> **NOTE**: This is an **organizational support team**, NOT part of the SDLC 10-stage lifecycle.
+> Business Operations supports sales, customer success, and HR functions that run alongside — not within — the development process.
+> This team does NOT participate in quality gates (G0-G4) or sprint governance.
+
 ## Mission
 
 Support daily business operations: sales enablement, customer success, and general employee assistance. Bridge between Telegram convenience and existing business workflows.

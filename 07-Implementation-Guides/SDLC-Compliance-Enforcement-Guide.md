@@ -44,7 +44,7 @@ FORBIDDEN:
   ❌ Sprint folders at root
 ```
 
-### Document Placement Rules (SDLC 6.1.2 Shortened Names)
+### Document Placement Rules (SDLC 6.2.0 Shortened Names)
 ```yaml
 Correct Placement:
   Sprint Documents: /docs/08-collaborate/sprint-logs/
@@ -167,7 +167,7 @@ First Violation:
 Second Violation (Same Type):
   Actions:
     - Mandatory code review required
-    - Additional SDLC 6.1.2 training assigned
+    - Additional SDLC 6.2.0 training assigned
     - Pair programming with senior developer
     - Meeting with team lead
 
@@ -197,7 +197,7 @@ Module: [module_name]
 Version: [Platform] 2.0
 Date: [current_date]
 Author: [team_member]
-SDLC: 6.1.2 Complete Lifecycle Compliant
+SDLC: 6.2.0 Complete Lifecycle Compliant
 SDLC Stage: Stage 04 (BUILD)
 SDLC Tier: [LITE|STANDARD|PROFESSIONAL|ENTERPRISE]
 Zero Mock: Verified ✓
@@ -211,7 +211,7 @@ Zero Mock: Verified ✓
  * Version: [Platform] 2.0
  * Date: [current_date]
  * Author: [team_member]
- * SDLC: 6.1.2 Complete Lifecycle Compliant
+ * SDLC: 6.2.0 Complete Lifecycle Compliant
  * SDLC Stage: Stage 04 (BUILD)
  * SDLC Tier: [LITE|STANDARD|PROFESSIONAL|ENTERPRISE]
  * Zero Mock: Verified ✓
@@ -252,7 +252,7 @@ python3 tools/mock_detection_agent_v3.py --strict
 python3 tools/performance_validator.py --target 100
 
 # 3. Header Compliance
-python3 tools/sdlc_header_check.py --version 6.1.2
+python3 tools/sdlc_header_check.py --version 6.2.0
 
 # 4. Folder Structure
 python3 tools/folder_validator.py --enforce
@@ -347,7 +347,7 @@ Level 5 - CEO:
 #!/bin/bash
 # install_enforcement.sh
 
-echo "Installing SDLC 6.1.2 Enforcement Tools..."
+echo "Installing SDLC 6.2.0 Enforcement Tools..."
 
 # 1. Install Python dependencies
 pip install -r tools/requirements.txt
@@ -371,7 +371,7 @@ chmod +x .git/hooks/*
 # 5. Initialize compliance database
 python3 tools/init_compliance_db.py
 
-echo "✅ SDLC 6.1.2 Enforcement Tools Installed"
+echo "✅ SDLC 6.2.0 Enforcement Tools Installed"
 ```
 
 ### Violation Scanner
@@ -460,7 +460,7 @@ Team Metrics:
 ```yaml
 # compliance-dashboard.yaml
 dashboard:
-  title: "SDLC 6.1.2 Compliance Dashboard"
+  title: "SDLC 6.2.0 Compliance Dashboard"
 
   panels:
     - title: "Overall Compliance"
@@ -515,7 +515,7 @@ dashboard:
 
 ## ⚠️ FINAL REMINDER
 
-**SDLC 6.1.2 compliance is NOT optional:**
+**SDLC 6.2.0 compliance is NOT optional:**
 
 Every rule in this guide exists because:
 - ✅ It prevented a crisis at BFlow
@@ -528,7 +528,7 @@ Every rule in this guide exists because:
 
 ---
 
-## 🎯 SDLC 6.1.2 Integration
+## 🎯 SDLC 6.2.0 Integration
 
 ### 10-Stage Lifecycle Mapping
 
@@ -586,7 +586,7 @@ ENTERPRISE Tier:
 
 ### Industry Standards Integration
 
-| Standard | SDLC 6.1.2 Coverage | Enforcement Tools |
+| Standard | SDLC 6.2.0 Coverage | Enforcement Tools |
 |----------|---------------------|-------------------|
 | **OWASP ASVS** | Security baseline | Semgrep, security gates |
 | **NIST SSDF** | Secure development | Pre-commit hooks, SBOM |
@@ -604,7 +604,7 @@ ENTERPRISE Tier:
 
 ### Implementation Guides
 - [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) - Automated enforcement
-- [SDLC-Universal-Code-Review-Framework.md](SDLC-Universal-Code-Review-Framework.md) - Review standards
+- [SDLC-Code-Review-Guide.md](SDLC-Code-Review-Guide.md) - Review standards
 - [SDLC-Crisis-Response-Guide.md](SDLC-Crisis-Response-Guide.md) - Incident response
 
 ### Templates & Tools
@@ -617,7 +617,7 @@ ENTERPRISE Tier:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 6.0.6 | Feb 2026 | SDLC 6.1.0 alignment, 7-Pillar + AI Governance Principles |
+| 6.0.6 | Feb 2026 | SDLC 6.2.0 alignment, 7-Pillar + AI Governance Principles |
 | 5.2.0 | Jan 22, 2026 | Planning Mode + AI Best Practices alignment |
 | 5.1.3 | Jan 2025 | 7-Pillar Architecture, Sprint Planning Governance |
 | 5.1.2 | Dec 24, 2025 | SDLC 5.1.2 alignment |
