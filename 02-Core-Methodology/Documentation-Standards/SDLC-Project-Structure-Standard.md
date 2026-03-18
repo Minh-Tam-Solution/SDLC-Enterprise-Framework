@@ -1,7 +1,7 @@
 # SDLC Project Structure Standard
 
 **Version**: 6.2.0
-**SDLC Framework Version**: 6.1.2
+**SDLC Framework Version**: 6.2.0
 **Date**: January 29, 2026
 **Status**: ACTIVE
 **Authority**: CTO Approved
@@ -353,7 +353,7 @@ docs/08-collaborate/
     ├── AGENTS.md                     # Agent guidelines & boundaries
     ├── PROJECT-CONTEXT.md            # Human-readable quick reference
     ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
-    └── FRAMEWORK-SUMMARY.md          # SDLC 6.1.2 summary (optional)
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.2.0 summary (optional)
 ```
 
 ### 8.3 Why 08-collaborate (Not 09-govern)?
@@ -399,7 +399,7 @@ your-project/
 | `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
 | `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
 | `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
-| `FRAMEWORK-SUMMARY.md` | SDLC 6.1.2 quick reference | Optional |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.2.0 quick reference | Optional |
 
 ### 8.6 Migration for Existing Projects
 

@@ -7,20 +7,18 @@
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
-**NEW in 6.1.2**: Agentic docs moved to 03-AI-GOVERNANCE (#13, #14) + Multi-Agent Patterns (#12) + BRS/MTS→AGENTS.md
-**NEW in 6.0.6**: Anthropic Best Practices Integration — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template
+**6.2.0**: Quality Assurance System + Quality-Security Gates consolidated into single framework. Observability moved to Ring 2.
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.1.2**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.2.0**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
-| **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + 3-Phase Lifecycle + TDD Integration (6.0.4) |
-| **Pillar 4+5** | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | Feature gates (G0-G4) + Security gates |
-| **Pillar 7** | [SDLC-Quality-Gates-Assurance-Framework.md](../SDLC-Quality-Gates-Assurance-Framework.md) | Anti-Vibecoding governance + Tier-Aware TDD Coverage (6.0.4) |
+| **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + 3-Phase Lifecycle + TDD Integration |
+| **Pillar 4+5+Section 7** | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | Quality gates (G0-G4) + Anti-Vibecoding + Security (consolidated 6.2.0) |
 
 ---
 
@@ -30,18 +28,19 @@ Define governance, quality, security, and compliance standards that form the **c
 |----------|--------|---------|---------------|
 | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | **Pillar 2** | 10 Golden Rules, Sprint gates, Stage-Sprint integration, Change management | ALL tiers |
 | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
-| [SDLC-Observability-Checklist.md](./SDLC-Observability-Checklist.md) | Supporting | Metrics, logging, tracing, alerting | PROFESSIONAL+ |
+### Consolidated Documents (6.2.0)
 
-### Consolidated Documents
+| New Document | Merged From | Version |
+|--------------|-------------|---------|
+| **SDLC-Quality-Gates-Assurance-Framework.md** | Quality-Assurance-System + Quality-Security-Gates | 6.2.0 |
+| **SDLC-Sprint-Governance.md** | Sprint-Planning-Governance + Stage-Sprint-Integration + Change-Management | 5.3.0 |
 
-The following documents were consolidated for clarity:
+### Moved to Ring 2 (6.2.0)
+| Document | New Location |
+|----------|-------------|
+| SDLC-Observability-Checklist.md | `05-Templates-Tools/05-Checklists/` (redirect stub at old location) |
 
-| New Document | Merged From |
-|--------------|-------------|
-| **SDLC-Sprint-Governance.md** | SDLC-Sprint-Planning-Governance.md + SDLC-Stage-Sprint-Integration.md + SDLC-Change-Management-Standard.md |
-| **SDLC-Quality-Gates-Assurance-Framework.md** | SDLC-Quality-Gates.md + SDLC-Security-Gates.md |
-
-Previous versions moved to `10-archive/02-Legacy/5.2.0-Deprecated/`
+Previous versions: `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` + `10-Archive/02-Legacy/5.2.0-Deprecated/`
 
 ---
 

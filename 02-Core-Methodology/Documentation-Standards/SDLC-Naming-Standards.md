@@ -27,7 +27,7 @@
 
 ### Purpose
 
-This document consolidates **all naming and header standards** for SDLC 6.1.2 Framework:
+This document consolidates **all naming and header standards** for SDLC 6.2.0 Framework:
 - Code file naming (Python, TypeScript, migrations)
 - Document naming (markdown, documentation)
 - Folder structure (10 stages, legacy handling)
@@ -656,7 +656,7 @@ def validate_document_name(filename):
 - [ ] Descriptive and permanent
 
 **For Document Headers:**
-- [ ] Version is 6.1.2 (or current)
+- [ ] Version is 6.2.0 (or current)
 - [ ] Date is current
 - [ ] Status clearly stated
 - [ ] Authority/ownership documented

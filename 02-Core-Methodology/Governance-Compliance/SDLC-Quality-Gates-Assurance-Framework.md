@@ -20,7 +20,7 @@ consolidates:
 
 # PART 1: Anti-Vibecoding Governance (Section 7)
 
-> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.1.2)
+> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)
 
 ## Anti-Vibecoding Governance Framework
 
@@ -556,7 +556,7 @@ for signal in signals:
 
 - [ ] Create this document (SDLC-Quality-Gates-Assurance-Framework.md)
 - [ ] Update CONTENT-MAP.md with new files
-- [ ] Update CHANGELOG.md for Framework 6.1.2
+- [ ] Update CHANGELOG.md for Framework 6.2.0
 - [ ] Create signal calibration templates
 
 ### 10.2 Automation Implementation
@@ -581,7 +581,7 @@ for signal in signals:
 
 # PART 2: Quality & Security Gate Requirements
 
-> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.1.2)
+> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)
 
 ## Purpose
 
