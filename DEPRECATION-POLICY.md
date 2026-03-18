@@ -1,10 +1,10 @@
 # SDLC Framework Deprecation Policy
 
-**Version**: 6.1.0
+**Version**: 6.2.0
 **Status**: ACTIVE
-**Date**: February 13, 2026
+**Date**: March 18, 2026
 **Purpose**: Define redirect rules and deprecation procedures
-**Framework**: SDLC 6.1.0 (7-Pillar + 2-Section + RFC-001)
+**Framework**: SDLC 6.2.0 (7-Pillar + 2-Section + RFC-001 + Lean Ring 1)
 
 ---
 
@@ -162,10 +162,51 @@ jobs:
 
 Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 
-| Original Location | New Location | Created | Expires |
-|------------------|--------------|---------|---------|
-| `2-Agent-Templates/claude-code/` | `10-archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 |
-| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 |
+| Original Location | New Location | Created | Expires | Reason |
+|------------------|--------------|---------|---------|--------|
+| `2-Agent-Templates/claude-code/` | `10-archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 | Tool-specific archive |
+| `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 | Frozen prompts |
+
+### 6.2.0 Consolidation Stubs (Lean Ring 1)
+
+**Ring 1 → Ring 2 Moves** (9 redirect stubs):
+
+| Original Location | New Location | Created | Expires | Reason |
+|------------------|--------------|---------|---------|--------|
+| `03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md` | `05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md` | Mar 2026 | Sep 2026 | Tool-specific → Ring 2 |
+| `03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md` | `07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md` | Mar 2026 | Sep 2026 | Implementation pattern → Ring 2 |
+| `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` | Mar 2026 | Sep 2026 | Implementation pattern → Ring 2 |
+| `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` | `07-Implementation-Guides/CONVERSATION-FIRST-GOVERNANCE.md` | Mar 2026 | Sep 2026 | Interface-specific → Ring 2 |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md` | Mar 2026 | Sep 2026 | Templates → Ring 2 |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | `05-Templates-Tools/05-Checklists/SDLC-Team-Collaboration.md` | Mar 2026 | Sep 2026 | Operational → Ring 2 |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-Visual-Documentation-Standards.md` | Mar 2026 | Sep 2026 | Tooling → Ring 2 |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | `05-Templates-Tools/05-Checklists/SDLC-Testing-Artifacts-Structure.md` | Mar 2026 | Sep 2026 | Operational → Ring 2 |
+| `02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md` | `05-Templates-Tools/05-Checklists/SDLC-Observability-Checklist.md` | Mar 2026 | Sep 2026 | Operational → Ring 2 |
+
+**Merged Documents** (5 source files → 2 consolidated, originals archived):
+
+| Source File | Consolidated Into | Archive Location |
+|------------|------------------|-----------------|
+| `SDLC-Stage-Dependencies.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 1) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
+| `SDLC-Stage-Exit-Criteria.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 2) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
+| `SDLC-Tier-Stage-Requirements.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 3) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
+| `SDLC-Quality-Assurance-System.md` | `SDLC-Quality-Gates-Assurance-Framework.md` (Part 1) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
+| `SDLC-Quality-Security-Gates.md` | `SDLC-Quality-Gates-Assurance-Framework.md` (Part 2) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
+
+**Archived TEAMs** (organizational cleanup):
+
+| File | Archive Location | Reason |
+|------|-----------------|--------|
+| `TEAM-advisory.md` | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` | Duplicate of TEAM-executive |
+| `TEAM-engineering.md` | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` | Overlapped all functional teams |
+
+**Deleted Stubs** (expired redirects, no archive needed):
+
+| File | Deleted | Reason |
+|------|---------|--------|
+| `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | Mar 2026 | Redirect expired, target: 03-AI-GOVERNANCE/13 |
+| `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | Mar 2026 | Redirect expired, target: 03-AI-GOVERNANCE/14 |
+| `02-Core-Methodology/SDLC-MRP-Template.md` | Mar 2026 | Redirect expired, target: 05-Templates-Tools |
 
 ---
 
@@ -203,4 +244,5 @@ Migration script available in: [05-Templates-Tools/07-Scripts/migrate-legacy-to-
 
 **Document Status**: ACTIVE
 **Owner**: CTO Office
-**Last Updated**: February 16, 2026
+**Last Updated**: March 18, 2026
+**Next Stub Review**: September 2026 (delete expired 6.2.0 stubs in 6.3.0)
