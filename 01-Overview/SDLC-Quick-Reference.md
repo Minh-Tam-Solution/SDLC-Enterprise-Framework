@@ -1,27 +1,50 @@
-# SDLC Framework 6.1.2 Quick Reference Guide
+# SDLC Framework 6.2.0 Quick Reference Guide
 
 **Version**: 6.2.0
-**Date**: February 21, 2026
+**Date**: March 18, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Purpose**: Fast lookup for key SDLC 6.1.2 concepts, navigation, and breaking changes
+**Purpose**: Fast lookup for key SDLC 6.2.0 concepts, navigation, and breaking changes
 
 ---
 
-## What's New in 6.1.2 (POST-CLEANUP PATCH)
+## What's New in 6.2.0 (AGENTIC SDLC + LEAN RING 1)
 
-### Stale Reference Cleanup + Conversation-First Governance
+### Lean Ring 1 Consolidation + Agentic SDLC Alignment
 
 ```yaml
-Key Changes (6.1.2 — Feb 21, 2026):
-  Terminology: "AI Council" → "Senior Review Board" in 5 active docs
-  Archive: 36 FROZEN AI prompt templates → 10-archive/05-Legacy/
-  New Doc: 03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md
-  Tool Profiles: All 3 marked REFERENCE PROFILE + disclaimer
-  Version Bump: 547 refs updated from 6.1.0 → 6.1.2
-  Breaking Changes: NONE
+Key Changes (6.2.0 — Mar 18, 2026):
+
+  Lean Ring 1 Consolidation:
+    - Ring 1 files: 41→30 substantive, 584→463KB (-21%)
+    - 3 stage docs merged → SDLC-Stage-Lifecycle-Framework.md
+    - 2 quality docs merged → SDLC-Quality-Gates-Assurance-Framework.md
+    - 9 implementation docs moved to Ring 2 (redirect stubs expire Sep 2026)
+    - 42 tool-specific references sanitized → 0 product refs in Ring 1
+
+  New Content:
+    - Mental Model #7: "Agent Continuity" (checkpoint/resume across sessions)
+    - Mental Model #8: "More People Build, Under Guardrails" (citizen developers)
+    - 03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md (Ring 1)
+    - 07-Implementation-Guides/Citizen-Developer-Guide.md (Ring 3)
+    - 05-Templates-Tools/Agentic-ROI-Calculator.md (Ring 2)
+
+  Evidence Base:
+    - Anthropic "2026 Agentic Coding Trends Report" (8 trends)
+    - NIST AI Agent Standards Initiative (emerging, 2027+)
+    - Singapore Model AI Governance Framework (Jan 2026)
+    - Anthropic Context Engineering Guide
+
+  Breaking Changes:
+    - 14 file paths changed (redirect stubs at old locations)
+    - Old originals archived: 10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/
 ```
 
-## What Was New in 6.1.0 (CONSOLIDATION)
+## What Was in 6.1.x (Previous Releases)
+
+### 6.1.2 (Mar 2026) — SOULs + TEAMs Templates
+17 SOUL role templates + 10 TEAM charters added to Ring 2.
+
+### 6.1.0 (Feb 2026) — Ring 1 Slim + Consolidation
 
 ### Ring 1 Monolith Slim + Dedicated Foundation Documents
 
