@@ -485,6 +485,37 @@ SDLC 6.2.0 (February 16, 2026): ⭐ CURRENT
 
 ---
 
+## ⚠️ Cautionary Case Study (SDLC 6.2.0)
+
+### 10. AI Code Governance Platform — 226 Sprints Without Shipping
+**File**: [SDLC-Orchestrator-V1-Case-Study.md](SDLC-Orchestrator-V1-Case-Study.md) ⭐ **NEW 6.2.0 — CAUTIONARY**
+
+**Challenge**: Build AI code governance platform (quality gates for AI-generated code) for Vietnamese SMEs
+
+**Investment**: 10 months, 226 sprints, 231K LOC, 614 endpoints, 81 tables
+
+**Outcome**: Zero external users. Zero revenue. Never launched commercially.
+
+**Root Causes**:
+- Built on assumed needs — no user interviews before development
+- Scope expanded every sprint without market feedback
+- Measured progress by feature count, not time-to-first-user
+- 78 test skip markers accumulated (test debt hidden by 94% coverage)
+- Interface choice (web-first) never validated with target users
+
+**Salvage Value**:
+- ~10.2K LOC battle-tested patterns ported to v2
+- 3 new SDLC mental models contributed to Framework 6.2.0
+- 8 technical + 4 process patterns preserved as industry knowledge
+
+**Key Lesson**: Engineering excellence is necessary but not sufficient. 14ms p95 latency and 98.4% OWASP compliance mean nothing if no one uses the product.
+
+**Mental Model Violated**: #6 "Start Ridiculously Small" — built 614 endpoints when 25-30 would serve MVP.
+
+**Status**: **v2 REBUILD IN PROGRESS** — proper Stage 00 (user interviews) before any code.
+
+---
+
 ## 🎯 Future Case Studies (Planned)
 
 **Q1 2026**:
@@ -507,8 +538,8 @@ SDLC 6.2.0 (February 16, 2026): ⭐ CURRENT
 
 ---
 
-**Last Updated**: February 18, 2026
-**Status**: ACTIVE - 10 Case Studies (5 Current + 5 Historical)
+**Last Updated**: March 18, 2026
+**Status**: ACTIVE - 11 Case Studies (5 Current + 1 Cautionary + 5 Historical)
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **Framework Version**: 6.2.0
 
