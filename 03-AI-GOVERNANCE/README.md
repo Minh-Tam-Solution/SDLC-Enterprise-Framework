@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.1.2
+**Version**: 6.2.0
 **Status**: ACTIVE
-**Date**: February 16, 2026
-**Pillar**: Core AI Governance (Enhanced in 6.1.2 with SPEC-0001 Anti-Vibecoding Alignment + Anthropic Patterns Integration)
+**Date**: March 18, 2026
+**Pillar**: Core AI Governance (6.2.0: Lean Ring 1 — implementation patterns moved to Ring 2)
 
 ---
 
@@ -37,43 +37,46 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
 | 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
 
-### Anthropic Patterns Integration (6.1.2)
+### SASE & Agentic Governance (Ring 1 — timeless principles)
 
 | # | Document | Purpose |
 |---|----------|---------|
-| 10 | [CLAUDE.md Standard (3-Tier)](10-CLAUDE-MD-STANDARD.md) | LITE/PRO/ENTERPRISE tiered AI context document standard |
-| 11 | [Autonomous Codegen Patterns](11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
-
-### Multi-Agent & Agentic Governance (6.1.2+)
-
-| # | Document | Purpose |
-|---|----------|---------|
-| 12 | [Multi-Agent Patterns](12-MULTI-AGENT-PATTERNS.md) | 10 collaboration patterns for multi-agent teams |
-| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, SASE artifact workflow |
+| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, 7 SASE principles, 6 disciplines |
 | 14 | [Agentic Maturity Model](14-AGENTIC-MATURITY-MODEL.md) | L0-L3 maturity levels, AGENTS.md standard |
-| 15 | [Conversation-First Governance](15-CONVERSATION-FIRST-GOVERNANCE.md) | Governance-via-conversation patterns (OTT/CLI primary) |
+| 16 | [Long-Running Agent Protocol](16-LONG-RUNNING-AGENT-PROTOCOL.md) | **NEW 6.2.0** — Checkpoint, memory, handoff, human checkpoints |
+
+### Moved to Ring 2 (6.2.0 — implementation patterns, not timeless principles)
+
+| # | Old Location | New Location | Reason |
+|---|-------------|-------------|--------|
+| 10 | ~~10-CLAUDE-MD-STANDARD.md~~ | `05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md` | Tool-specific (Claude) |
+| 11 | ~~11-AUTONOMOUS-CODEGEN-PATTERNS.md~~ | `07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md` | Implementation pattern |
+| 12 | ~~12-MULTI-AGENT-PATTERNS.md~~ | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` | Implementation pattern |
+| 15 | ~~15-CONVERSATION-FIRST-GOVERNANCE.md~~ | `07-Implementation-Guides/CONVERSATION-FIRST-GOVERNANCE.md` | Interface-specific |
+
+> Redirect stubs remain at old locations until September 2026.
 
 ---
 
-## Relationship to platforms implementing this framework
+## Relationship to Automation Tools
 
-These principles are **methodology** (Framework layer). The **Orchestrator** automates their enforcement:
+These principles are **methodology** (Framework layer). Automation tools MAY enforce them:
 
 ```
-Framework (this section)          Orchestrator (automation)
-═══════════════════════           ═══════════════════════
-Principle 1: Collaboration   →   Gate Engine (human review gates)
-Principle 2: Accountability  →   Evidence Vault (audit trail)
+Framework (this section)          Automation Tool (any implementation)
+═══════════════════════           ═══════════════════════════════════
+Principle 1: Collaboration   →   Human review gates
+Principle 2: Accountability  →   Immutable audit trail
 Principle 3: Planning Mode   →   Risk classifier + planning artifact check
 Principle 4: Verification    →   TDD evidence + test coverage delta
-Principle 5: Context Mgmt    →   Context Authority service (AGENTS.md)
-Principle 6: Tool Evaluation →   Tool evaluation scorecard API
-Principle 7: Anti-Patterns   →   OPA policies (anti-pattern detection)
-Decision Matrix (doc 08)     →   compute_gate_actions() function
-Metrics (doc 09)             →   /api/v1/governance/metrics/* endpoints
+Principle 5: Context Mgmt    →   Context file management (AGENTS.md)
+Principle 6: Tool Evaluation →   Tool evaluation scorecard
+Principle 7: Anti-Patterns   →   Policy-as-code detection rules
+Decision Matrix (doc 08)     →   Gate action computation
+Metrics (doc 09)             →   Governance metrics dashboard
 ```
 
-**Key invariant**: Teams can follow these principles manually WITHOUT the Orchestrator. The Orchestrator makes enforcement automatic and auditable.
+**Key invariant**: Teams can follow these principles **manually** without any automation tool. Automation makes enforcement automatic and auditable — but the principles stand on their own.
 
 ---
 
