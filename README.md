@@ -1,6 +1,6 @@
-# SDLC 6.1.2 Universal Framework
+# SDLC 6.2.0 Universal Framework
 
-**Version**: 6.1.2 | **Status**: ACTIVE | **Date**: March 9, 2026
+**Version**: 6.2.0 | **Status**: ACTIVE | **Date**: March 18, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -15,7 +15,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.1.2 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.2.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
@@ -106,7 +106,7 @@ Stage 09 (GOVERN) can start as early as Stage 01 if:
 
 ### Skip Decision Trees
 
-See [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) for:
+See [SDLC-Stage-Lifecycle-Framework.md](./02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) Part 3 for:
 - Skip risk levels (LOW → CRITICAL)
 - Consequence matrix (time saved vs time cost)
 - Decision trees for each optional stage
@@ -312,39 +312,30 @@ Framework content is organized by stability:
 ```
 SDLC-Enterprise-Framework/
 ├── 01-Overview/                  # Executive Summary + Quick Reference
-├── 02-Core-Methodology/          # CORE CONTENT (Ring 1)
-│   ├── SDLC-Core-Methodology.md
-│   ├── SDLC-Design-Thinking-Principles.md  # Slim hub (364 lines)
-│   ├── SDLC-System-Thinking-Foundation.md  # NEW 6.1.0
-│   ├── SDLC-Crisis-To-Pattern-Methodology.md # NEW 6.1.0
-│   ├── SDLC-Stage-Dependencies.md       # Stage prerequisite matrix
-│   ├── SDLC-Stage-Exit-Criteria.md      # Exit criteria per stage
-│   ├── SDLC-Quality-Assurance-System.md # Section 7 Anti-Vibecoding
-│   ├── SDLC-Context-Authority-Methodology.md
+├── 02-Core-Methodology/          # CORE CONTENT (Ring 1 — Lean in 6.2.0)
+│   ├── SDLC-Core-Methodology.md           # Hub: 7-Pillar + 10-Stage
+│   ├── SDLC-Design-Thinking-Principles.md # Pillar 0 (slim, 364 lines)
+│   ├── SDLC-System-Thinking-Foundation.md # Pillar 0 (8 Mental Models)
+│   ├── SDLC-Crisis-To-Pattern-Methodology.md # Pillar 0 (Mental Model #5)
+│   ├── SDLC-Stage-Lifecycle-Framework.md  # CONSOLIDATED 6.2.0 (Dependencies + Exit Criteria + Tier Reqs)
+│   ├── SDLC-Context-Authority-Methodology.md # Section 8
+│   ├── SDLC-SSOT-Principle.md
 │   ├── Documentation-Standards/
-│   │   ├── SDLC-Design-Thinking-Templates.md # NEW 6.1.0 (extracted)
-│   │   ├── SDLC-Tier-Stage-Requirements.md  # LITE/PRO/ENTERPRISE
 │   │   ├── SDLC-Naming-Standards.md
-│   │   └── SDLC-Project-Structure-Standard.md
+│   │   ├── SDLC-Project-Structure-Standard.md
+│   │   ├── SDLC-Sprint-Planning-Guide.md
+│   │   └── SDLC-Legacy-Document-Organization.md
 │   └── Governance-Compliance/
-│       ├── SDLC-Sprint-Governance.md    # Sprint-stage coordination
-│       ├── SDLC-Quality-Security-Gates.md
-│       └── SDLC-Observability-Checklist.md
-├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (Ring 1)
-│   ├── 01-AI-Human-Collaboration.md
-│   ├── 02-Agent-Accountability.md
-│   ├── 03-Planning-Mode-Principle.md
-│   ├── 04-Verification-Principle.md
-│   ├── 05-Context-Management.md
-│   ├── 06-Tool-Evaluation-Criteria.md
-│   ├── 07-Anti-Patterns.md
-│   ├── 08-Governance-Decision-Matrix.md # Sprint 173
-│   ├── 09-Governance-Metrics.md         # Sprint 173
-│   ├── 10-CLAUDE-MD-STANDARD.md         # Sprint 174 (6.0.6)
-│   ├── 11-AUTONOMOUS-CODEGEN-PATTERNS.md # Sprint 174 (6.0.6)
-│   ├── 12-MULTI-AGENT-PATTERNS.md       # NEW 6.1.0
-│   ├── 13-AGENTIC-CORE-PRINCIPLES.md    # MOVED 6.1.0 (from 02-Core)
-│   └── 14-AGENTIC-MATURITY-MODEL.md     # MOVED 6.1.0 (from 02-Core)
+│       ├── SDLC-Sprint-Governance.md      # Pillar 2
+│       ├── SDLC-Quality-Gates-Assurance-Framework.md # CONSOLIDATED 6.2.0 (QA + Gates)
+│       ├── gates.yaml
+│       └── anti-vibecoding.yaml
+├── 03-AI-GOVERNANCE/             # AI GOVERNANCE PRINCIPLES (Ring 1 — timeless)
+│   ├── 01 to 09: Core AI Governance Principles
+│   ├── 13-AGENTIC-CORE-PRINCIPLES.md    # SASE SE4H/SE4A + 7 principles
+│   ├── 14-AGENTIC-MATURITY-MODEL.md     # L0-L3 maturity levels
+│   ├── 16-LONG-RUNNING-AGENT-PROTOCOL.md # NEW 6.2.0 (checkpoint/resume/handoff)
+│   └── 10/11/12/15: redirect stubs → Ring 2 (expire Sep 2026)
 ├── 04-AI-TOOLS-LANDSCAPE/        # AI TOOLS TRACKING (Ring 2)
 │   ├── tool-profiles/            # Claude Code, Cursor, Copilot profiles
 │   ├── best-practices-2026/      # 8 best practice guides
@@ -411,17 +402,15 @@ SDLC-Enterprise-Framework/
 - [AI Governance Principles](./03-AI-GOVERNANCE/) - 7 timeless principles (5.2.0)
 
 **Stage Governance** (added 5.3.0, current as of 6.1.0):
-- [SDLC-Stage-Dependencies.md](./02-Core-Methodology/SDLC-Stage-Dependencies.md) - Explicit stage prerequisites
-- [SDLC-Stage-Exit-Criteria.md](./02-Core-Methodology/SDLC-Stage-Exit-Criteria.md) - Documentation, evidence, signoff requirements
+- [SDLC-Stage-Lifecycle-Framework.md](./02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) - Stage dependencies + exit criteria + tier requirements (consolidated 6.2.0)
 - [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Sprint-stage coordination
-- [SDLC-Tier-Stage-Requirements.md](./02-Core-Methodology/Documentation-Standards/SDLC-Tier-Stage-Requirements.md) - LITE/PRO/ENTERPRISE guidance
 - [Stage-Transition-Checklist.md](./05-Templates-Tools/05-Checklists/Stage-Transition-Checklist.md) - Actionable transition checklists
 
-**Quality Assurance** (added 5.3.0, current as of 6.1.0):
-- [SDLC-Quality-Assurance-System.md](./02-Core-Methodology/SDLC-Quality-Assurance-System.md) - **Section 7: Anti-Vibecoding**
+**Quality Assurance** (consolidated in 6.2.0):
+- [SDLC-Quality-Gates-Assurance-Framework.md](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - **Section 7 + Pillar 4: Anti-Vibecoding + Quality Gates**
   - Vibecoding Index (0-100 composite score)
-  - Progressive Routing (Auto-approve Green → CEO mandatory Red)
-  - Auto-Generation Layer (Intent, Ownership, Context, Attestation)
+  - Progressive Routing (Auto-approve Green → Senior Review Board Red)
+  - Quality Gate requirements (G0-G4, SBOM, SAST, OWASP)
   - Kill Switch Criteria (rejection >80%, latency >500ms, etc.)
 
 **Unified Specification Standard** (added 6.0.2, current as of 6.1.0):
@@ -444,8 +433,8 @@ SDLC-Enterprise-Framework/
 
 **Standards**:
 - [SDLC-Naming-Standards.md](./02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md) - Naming + Headers
-- [SDLC-Team-Collaboration.md](./02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md) - Team + Escalation
-- [SDLC-Quality-Security-Gates.md](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Security-Gates.md) - Pillar 4+5
+- [SDLC-Team-Collaboration.md](./05-Templates-Tools/05-Checklists/SDLC-Team-Collaboration.md) - Team + Escalation (Ring 2)
+- [SDLC-Quality-Gates-Assurance-Framework.md](./02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - Pillar 4+5 (consolidated 6.2.0)
 - [SDLC-Sprint-Governance.md](./02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2
 
 **Templates**:
@@ -493,7 +482,8 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.1.2** | **Mar 9, 2026** | **SOULs + TEAMs**: 17 SASE role templates + 10 team charters added to Ring 2 (`04-SASE-Artifacts/souls/` + `teams/`), hybrid sourcing (EndiorBot + MTClaw), tier availability matrix |
+| **6.2.0** | **Mar 18, 2026** | **Agentic SDLC + Lean Ring 1**: 8 Mental Models, Long-Running Agent Protocol, Citizen Developer Guide, ROI Calculator. Ring 1 consolidated (-21%). 42 tool-specific refs sanitized. |
+| 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 17 role templates + 10 team charters (Ring 2) |
 | 6.1.1 | Feb 21, 2026 | Post-Cleanup Patch: AI Council→Senior Review Board, 36 frozen templates archived, Conversation-First Governance |
 | 6.1.0 | Feb 18, 2026 | Consolidation Release: Ring 1 monolith slim, agentic→AI-GOV move, Multi-Agent Patterns, BRS/MTS/LPS→AGENTS.md |
 | 6.0.6 | Feb 16, 2026 | Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
