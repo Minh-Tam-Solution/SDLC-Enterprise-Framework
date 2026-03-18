@@ -1,21 +1,21 @@
-# SDLC 6.1.2 Core Methodology
+# SDLC 6.2.0 Core Methodology
 
 **Version**: 6.2.0
-**Date**: February 18, 2026
-**Status**: ACTIVE - Consolidation Release (Ring 1 slimming, foundational docs, cross-reference cleanup)
+**Date**: March 18, 2026
+**Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (8 Mental Models, Long-Running Agent Protocol, tool-agnostic)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
 ## Executive Summary
 
-SDLC 6.1.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with integrated quality assurance, unified specification standards, stage consistency validation, **TDD workflow integration**, and **3-Phase Sprint Lifecycle enhanced with tier-aware coverage requirements**.
+SDLC 6.2.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **8 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
 
 ### Architecture Overview
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.1.2 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.2.0 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║                                                                            ║
 ║  ═══════════════════════ CORE PILLARS (Stable) ════════════════════════   ║
@@ -145,8 +145,8 @@ SDLC 6.1.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 **Reference**: [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md)
 
-**Foundational Thinking Models**:
-- [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, 6 mental models for root-cause analysis
+**Foundational Thinking Models** (Pillar 0 Trilogy):
+- [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **8 mental models** for root-cause analysis (6.2.0: +Agent Continuity, +More People Build)
 - [Crisis-to-Pattern Methodology](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step pipeline: Diagnose → Policy → Automate → Enforce → Document
 
 ---
@@ -157,7 +157,7 @@ SDLC 6.1.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                    SDLC 6.1.2 - 10 STAGES                              │
+│                    SDLC 6.2.0 - 10 STAGES                              │
 ├────────────────────────────────────────────────────────────────────────┤
 │  Stage 00: FOUNDATION (WHY?)     → Strategic Discovery & Validation    │
 │  Stage 01: PLANNING (WHAT?)      → Requirements & User Stories         │
@@ -464,7 +464,7 @@ docs/
 
 ### Dual-Track Gate System
 
-SDLC 6.1.2 has TWO parallel gate tracks:
+SDLC 6.2.0 has TWO parallel gate tracks:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -528,7 +528,7 @@ Feature: User Authentication (G0 → G4)
     └── Completes G4
 ```
 
-**Reference**: [SDLC-Quality-Gates.md](./Governance-Compliance/SDLC-Quality-Gates.md)
+**Reference**: [SDLC-Quality-Gates-Assurance-Framework.md](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md)
 
 ---
 
@@ -617,7 +617,7 @@ Enforcement by Tier:
   ENTERPRISE: CI blocking + Slack alert
 ```
 
-**Reference**: [SDLC-Document-Naming-Standards.md](./Documentation-Standards/SDLC-Document-Naming-Standards.md)
+**Reference**: [SDLC-Naming-Standards.md](./Documentation-Standards/SDLC-Naming-Standards.md)
 
 ---
 
@@ -688,13 +688,13 @@ Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FU
 | SOFT | Block critical violations only | Week 1-2 |
 | FULL | All rules enforced | Production |
 
-**Reference**: [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md)
+**Reference**: [SDLC-Quality-Gates-Assurance-Framework.md](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md)
 
 ---
 
 ## Industry Standards Integration
 
-SDLC 6.1.2 maps to industry standards:
+SDLC 6.2.0 maps to industry standards:
 
 ```yaml
 Standards Mapped:
@@ -721,19 +721,20 @@ Quality Assurance Standards (5.3.0):
 
 ## Related Documents
 
-### Core Methodology
+### Core Methodology (Pillar 0 Trilogy)
 - [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) — User-centered approach (Pillar 0 hub)
-- [SDLC-Design-Thinking-Templates.md](./Documentation-Standards/SDLC-Design-Thinking-Templates.md) — Templates, case study, workshop (extracted from Pillar 0)
-- [SDLC-System-Thinking-Foundation.md](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, 6 mental models
+- [SDLC-System-Thinking-Foundation.md](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **8 mental models** (6.2.0)
 - [SDLC-Crisis-To-Pattern-Methodology.md](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step crisis-to-pattern pipeline
-- [SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) — Merge-Readiness Package (5-section template)
 
-### AI Governance (6.1.2)
-- [13-AGENTIC-CORE-PRINCIPLES.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE/SE 3.0 principles, 7 Agentic Principles
+### AI Governance (Ring 1 — timeless principles)
+- [13-AGENTIC-CORE-PRINCIPLES.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE/SE 3.0, 7 Agentic Principles
 - [14-AGENTIC-MATURITY-MODEL.md](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
-- [12-MULTI-AGENT-PATTERNS.md](../03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md) — Multi-agent team collaboration patterns
-- [11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) — Autonomous codegen with quality gates
-- [10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) — CLAUDE.md Standard for AI-assisted development
+- [16-LONG-RUNNING-AGENT-PROTOCOL.md](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) — Checkpoint/resume/handoff (NEW 6.2.0)
+
+### Implementation Patterns (Ring 2 — moved in 6.2.0)
+- [MULTI-AGENT-PATTERNS.md](../07-Implementation-Guides/MULTI-AGENT-PATTERNS.md) — 13 collaboration patterns
+- [AUTONOMOUS-CODEGEN-PATTERNS.md](../07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md) — Quality pipeline
+- [CLAUDE-MD-STANDARD.md](../05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md) — AI context doc standard
 
 ### Section 8 - Unified Specification Standard (6.0.0+)
 - [SDLC-Specification-Standard.md](../05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md) - ⭐ **YAML + BDD format**
@@ -741,22 +742,20 @@ Quality Assurance Standards (5.3.0):
 - [SPEC_DELTA.md](../05-Templates-Tools/01-Specification-Standard/SPEC_DELTA.md) - ⭐ **Version tracking**
 - [SDLC-Context-Authority-Methodology.md](./SDLC-Context-Authority-Methodology.md) - ⭐ **Dynamic AGENTS.md**
 
-### 5.3.0 (Section 7 - Quality Assurance)
-- [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) - **Section 7: Anti-Vibecoding**
-- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) - **Stage Dependency Matrix**
-- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) - **Tier-Specific Exit Criteria**
-- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) - **Decision Trees**
+### Consolidated Documents (6.2.0)
+- [SDLC-Stage-Lifecycle-Framework.md](./SDLC-Stage-Lifecycle-Framework.md) — Stage dependencies + exit criteria + tier requirements (3→1)
+- [SDLC-Quality-Gates-Assurance-Framework.md](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) — Anti-Vibecoding + Quality Gates (2→1)
 
 ### Governance & Compliance
-- [SDLC-Sprint-Governance.md](./Governance-Compliance/SDLC-Sprint-Governance.md) - Pillar 2 detail (Sprint + Stage + Change Management)
-- [SDLC-Quality-Gates-Assurance-Framework.md](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) - Pillar 4+5 detail (Quality + Security)
-- [SDLC-Observability-Checklist.md](./Governance-Compliance/SDLC-Observability-Checklist.md) - Operations readiness
+- [SDLC-Sprint-Governance.md](./Governance-Compliance/SDLC-Sprint-Governance.md) — Pillar 2 (Sprint + Stage + Change Management)
 
 ### Documentation Standards
-- [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) - Folder structure
-- [SDLC-Naming-Standards.md](./Documentation-Standards/SDLC-Naming-Standards.md) - Naming + Header conventions
-- [SDLC-Team-Collaboration.md](./Documentation-Standards/SDLC-Team-Collaboration.md) - Team communication + escalation
-- [When-Planning-Sprint.md](./Documentation-Standards/Situation-Specific-Guides/When-Planning-Sprint.md) - Sprint planning guide
+- [SDLC-Project-Structure-Standard.md](./Documentation-Standards/SDLC-Project-Structure-Standard.md) — Folder structure
+- [SDLC-Naming-Standards.md](./Documentation-Standards/SDLC-Naming-Standards.md) — Naming + Header conventions
+- [SDLC-Sprint-Planning-Guide.md](./Documentation-Standards/SDLC-Sprint-Planning-Guide.md) — Sprint planning guide
+
+### Ring 3 (Implementation Guides — NEW 6.2.0)
+- [Citizen-Developer-Guide.md](../07-Implementation-Guides/Citizen-Developer-Guide.md) — Non-technical user pathway
 
 ### Case Studies
 - [Sprint Direction Confusion Case Study](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md) - Incident that triggered Pillar 2
@@ -767,7 +766,9 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.1.2** | **Feb 21, 2026** | **PATCH: Post-Cleanup** — "AI Council" → "Senior Review Board" (5 docs), 36 FROZEN templates archived, Conversation-First Governance doc #15, tool profile disclaimers, version bump |
+| **6.2.0** | **Mar 18, 2026** | **Agentic SDLC + Lean Ring 1** — 8 Mental Models (+Agent Continuity, +More People Build), Long-Running Agent Protocol (Ring 1), Citizen Developer Guide (Ring 3), ROI Calculator (Ring 2). Ring 1 consolidated: 41→30 files, -21% size. 42 tool-specific refs → 0. 9 docs moved to Ring 2. |
+| 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 17 role templates + 10 team charters (Ring 2) |
+| 6.1.0 | Feb 18, 2026 | Consolidation: Ring 1 slim, System Thinking + Crisis-to-Pattern docs, Multi-Agent Patterns |
 | **6.1.0** | **Feb 18, 2026** | **MINOR: Consolidation Release** — Ring 1 slimming (Design Thinking 2K→364+572, Agentic Core 1.3K→293), new foundational docs (System Thinking, Crisis-to-Pattern), agentic files moved to 03-AI-GOV, BRS/MTS→AGENTS.md terminology cleanup, Multi-Agent Patterns (12) added |
 | **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
 | **6.0.5** | **Feb 15, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
@@ -788,9 +789,9 @@ Quality Assurance Standards (5.3.0):
 
 ---
 
-**Last Updated**: February 18, 2026
+**Last Updated**: March 18, 2026
 **Maintained By**: Framework Team
-**Authority**: CTO Approved
+**Authority**: CTO + CPO Approved
 **Case Study**: [Sprint Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
 **Quality Assurance**: [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) - Section 7
 **Unified Specs**: [Specification Standard](../05-Templates-Tools/01-Specification-Standard/) - Section 8
