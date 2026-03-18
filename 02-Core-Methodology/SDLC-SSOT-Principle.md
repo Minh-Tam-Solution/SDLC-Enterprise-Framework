@@ -74,7 +74,7 @@ project/
 
 **Generation**:
 ```bash
-# Auto-generate from backend code (FastAPI, Express, Spring Boot)
+# Auto-generate from backend code ({web_framework})
 python3 scripts/generate_openapi.py > docs/03-integrate/01-api-specifications/openapi.json
 ```
 
@@ -414,7 +414,7 @@ git commit -m "docs: Update canonical OpenAPI spec from backend v1.3.0"
 
 ```python
 # ❌ BAD: Hardcoded (not SSOT)
-DATABASE_URL = "postgresql://user:pass@localhost:5432/db"
+DATABASE_URL = "{database_url}"
 
 # ✅ GOOD: Load from canonical .env
 from os import getenv

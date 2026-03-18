@@ -55,7 +55,7 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 
 ---
 
-## Relationship to SDLC Orchestrator
+## Relationship to platforms implementing this framework
 
 These principles are **methodology** (Framework layer). The **Orchestrator** automates their enforcement:
 

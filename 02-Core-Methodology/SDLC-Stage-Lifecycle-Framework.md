@@ -402,7 +402,7 @@ flowchart TD
 3. Update CHANGELOG.md for SDLC 6.1.2 release
 4. Create Stage-Exit-Criteria.md (separate document, references this ADR)
 
-**Orchestrator (Automation Layer)**:
+**Automation Layer (Implementation-Specific)**:
 1. SDLC CLI validator: Add stage prerequisite validation
 2. Sprint planning templates: Include stage transition tracking
 3. Current sprint plan: Add stage tracking fields

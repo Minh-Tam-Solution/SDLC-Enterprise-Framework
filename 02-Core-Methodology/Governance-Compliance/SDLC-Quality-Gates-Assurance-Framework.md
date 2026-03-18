@@ -45,7 +45,7 @@ The SDLC Quality Assurance System provides **anti-vibecoding governance** to ens
 ### 1.2 Scope
 
 This document applies to:
-- All SDLC Orchestrator implementations
+- All platforms implementing this framework
 - Teams using AI coding assistants (Claude, Cursor, Copilot, etc.)
 - Projects with STANDARD tier or above (LITE tier: simplified rules)
 - Any codebase where AI-generated code exceeds 20% of changes
@@ -559,7 +559,7 @@ for signal in signals:
 - [ ] Update CHANGELOG.md for Framework 6.1.2
 - [ ] Create signal calibration templates
 
-### 10.2 Orchestrator Implementation
+### 10.2 Automation Implementation
 
 - [ ] Implement 5-signal Vibecoding Index
 - [ ] Create auto-generation layer (4 generators)
@@ -650,7 +650,7 @@ Code Quality:
 CI/CD:
   - Build: Automated with caching
   - Tests: Parallel execution
-  - Security: SAST scan (Semgrep)
+  - Security: SAST scan ({SAST_tool})
   - Deploy: Blue-green or canary
 
 Metrics (DORA - Weekly):
@@ -754,7 +754,7 @@ Software Bill of Materials (SBOM):
 
 SAST (Static Application Security Testing):
   Required: YES
-  Tools: Semgrep, SonarQube, CodeQL
+  Tools: {SAST_tool} (e.g., Semgrep, SonarQube, CodeQL)
   Rules: OWASP Top 10
   Enforcement: Block on Critical/High
 

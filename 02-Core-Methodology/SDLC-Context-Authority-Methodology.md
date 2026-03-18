@@ -39,8 +39,8 @@ Traditional AGENTS.md files are **static**:
 
 ## Architecture
 - React frontend
-- FastAPI backend
-- PostgreSQL database
+- {web_framework} backend
+- {database}
 ```
 
 **Problems with Static Context**:
@@ -75,8 +75,8 @@ Last Updated: 2026-01-28T10:30:00Z
 
 ## Architecture
 - React frontend
-- FastAPI backend
-- PostgreSQL database
+- {web_framework} backend
+- {database}
 ```
 
 ---
@@ -268,10 +268,10 @@ Developer Impact: High - all PRs need proper context
 ```markdown
 <!-- SECURITY-ALERT-START -->
 🔴 Security Alert: CVE-2026-XXXXX detected
-  - Package: fastapi-sessions@2.3.0
+  - Package: {session_package}@2.3.0
   - Severity: HIGH
   - Action: BLOCKED - Upgrade required before merge
-  - Fix: npm update fastapi-sessions@2.4.0
+  - Fix: npm update {session_package}@2.4.0
 <!-- SECURITY-ALERT-END -->
 ```
 
@@ -302,8 +302,8 @@ Developer Impact: High - all PRs need proper context
 
 ### Technology Stack
 - Frontend: React 18, TypeScript, Tailwind
-- Backend: FastAPI, Python 3.11+
-- Database: PostgreSQL 15.5
+- Backend: {web_framework}, {language}
+- Database: {database}
 - Cache: Redis 7.2
 
 ### Coding Standards
@@ -629,7 +629,7 @@ When working with Context Authority:
 │  "Static AGENTS.md is guidance.                                │
 │   Dynamic AGENTS.md is governance."                             │
 │                                                                 │
-│  Platforms implementing this: e.g., SDLC Orchestrator,          │
+│  Platforms implementing this: e.g., platforms implementing this framework,          │
 │  custom CI/CD pipelines, or any governance tooling.             │
 └─────────────────────────────────────────────────────────────────┘
 ```
