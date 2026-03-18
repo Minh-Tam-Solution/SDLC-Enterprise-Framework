@@ -450,7 +450,7 @@ Please help me:
 ---
 
 **Template**: Problem-Statement-Template
-**Part of**: SDLC 6.1.2 Design Thinking Framework
+**Part of**: SDLC 6.2.0 Design Thinking Framework
 **Phase**: DEFINE (Stage 00-01 transition - WHY? → WHAT?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

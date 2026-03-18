@@ -838,12 +838,12 @@ kill_switch_trigger_total = Counter(
 ---
 
 **Document Control**:
-- **Template**: Framework 6.1.2 Unified Specification Standard
+- **Template**: Framework 6.2.0 Unified Specification Standard
 - **Machine-Readable Spec**: `../../spec/controls/anti-vibecoding.yaml`
 - **Last Review**: 2026-01-29
 - **Next Review**: Q2 2026 (after ENTERPRISE tier pilot)
 
 ---
 
-*SPEC-0001: Anti-Vibecoding Quality Assurance System - Framework 6.1.2 Format*
+*SPEC-0001: Anti-Vibecoding Quality Assurance System - Framework 6.2.0 Format*
 *SDLC Enterprise Framework - Preventing Low-Quality AI-Generated Code*

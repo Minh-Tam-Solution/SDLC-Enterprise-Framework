@@ -1,8 +1,8 @@
-# SDLC Framework 6.1.0 Content Map
+# SDLC Framework 6.2.0 Content Map
 
-**Version**: 6.1.0
+**Version**: 6.2.0
 **Status**: ACTIVE
-**Date**: February 18, 2026
+**Date**: March 18, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
 
 ---
@@ -79,12 +79,12 @@ Before creating any new document, check if a canonical file already exists for t
 | Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `02-AI-Tools/ai-agent-best-practices-2026/06-memory-context-management.md` | ACTIVE |
 | Tool Evaluation Criteria | `03-AI-GOVERNANCE/06-Tool-Evaluation-Criteria.md` | — | ACTIVE |
 | AI Anti-Patterns | `03-AI-GOVERNANCE/07-Anti-Patterns.md` | — | ACTIVE |
-| **CLAUDE.md Standard (3-Tier)** | `03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md` | — | **NEW 6.0.6** |
-| **Autonomous Codegen Patterns** | `03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md` | — | **NEW 6.0.6** |
-| **Multi-Agent Patterns** | `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` | — | **NEW 6.1.0** |
+| **CLAUDE.md Standard (3-Tier)** | `05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md` (moved to Ring 2 in 6.2.0) | — | **NEW 6.0.6** |
+| **Autonomous Codegen Patterns** | `07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md` (moved to Ring 2 in 6.2.0) | — | **NEW 6.0.6** |
+| **Multi-Agent Patterns** | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` (moved to Ring 2 in 6.2.0) | — | **NEW 6.1.0** |
 | **Agentic Core Principles** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | **MOVED 6.1.0** |
 | **Agentic Maturity Model** | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | **MOVED 6.1.0** |
-| **Conversation-First Governance** | `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.2** |
+| **Conversation-First Governance** | `07-Implementation-Guides/CONVERSATION-FIRST-GOVERNANCE.md` (moved to Ring 2 in 6.2.0) | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.2** |
 
 ### Core Methodology (02-Core-Methodology/)
 
@@ -353,7 +353,7 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 3. Update all internal links
 4. Run CI link checker
 
-### When Archiving (RFC-001, SDLC 6.1.0)
+### When Archiving (RFC-001, SDLC 6.2.0)
 
 1. Move file to `10-archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
 2. Create redirect stub at original location

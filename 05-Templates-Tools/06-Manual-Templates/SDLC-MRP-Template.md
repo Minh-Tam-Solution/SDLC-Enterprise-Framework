@@ -37,7 +37,7 @@ MRP solves these by providing a **standardized, evidence-linked, auditable** mer
 
 ### 1.2 Industry Context
 
-Leading AI-native teams use AI assistants to summarize completed work sessions and update documentation automatically. SDLC 6.1.2 extends session summaries into comprehensive merge packages that:
+Leading AI-native teams use AI assistants to summarize completed work sessions and update documentation automatically. SDLC 6.2.0 extends session summaries into comprehensive merge packages that:
 - Link to Quality Gate evidence (not just git history)
 - Include rollback plans (not just "what changed")
 - Provide deployment instructions (not just "how to build")

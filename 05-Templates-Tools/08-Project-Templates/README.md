@@ -157,6 +157,6 @@ Before using templates, verify:
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 6.1.2 projects
+**Compliance**: Templates RECOMMENDED for all SDLC 6.2.0 projects
 **Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office

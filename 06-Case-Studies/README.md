@@ -12,7 +12,7 @@
 
 ## 🎯 What You'll Find Here
 
-This directory contains **real case studies** from three production platforms that shaped SDLC 6.1.2, plus **historical case studies** documenting framework evolution from 4.2 to 6.0.
+This directory contains **real case studies** from three production platforms that shaped SDLC 6.2.0, plus **historical case studies** documenting framework evolution from 4.2 to 6.0.
 
 ---
 
@@ -101,7 +101,7 @@ This directory contains **real case studies** from three production platforms th
 
 ---
 
-## Active Case Studies (SDLC 6.1.2)
+## Active Case Studies (SDLC 6.2.0)
 
 ### 2. Design Thinking Success - NQH-Bot Platform
 **File**: [SDLC-Design-Thinking-Case-Study-NQH-Bot.md](SDLC-Design-Thinking-Case-Study-NQH-Bot.md)
@@ -476,7 +476,7 @@ SDLC 6.0.5 (February 15, 2026):
   → sdlcctl v1.7.0: Fuzzy P0 detection for legacy stage names
   → Cross-document SPEC-0001 consistency enforcement
 
-SDLC 6.1.2 (February 16, 2026): ⭐ CURRENT
+SDLC 6.2.0 (February 16, 2026): ⭐ CURRENT
   → Sprint 174: Anthropic Best Practices Integration
   → 3-Tier CLAUDE.md Standard (LITE/PRO/ENTERPRISE) - doc 10
   → Two-Agent Autonomous Codegen Patterns - doc 11
@@ -489,7 +489,7 @@ SDLC 6.1.2 (February 16, 2026): ⭐ CURRENT
 
 **Q1 2026**:
 - Complete BFlow Platform transformation journey (V7 → V9)
-- Multi-platform SDLC 6.1.2 adoption case study
+- Multi-platform SDLC 6.2.0 adoption case study
 - Enterprise-scale implementation (50+ developers)
 - CodeRabbit integration success stories
 
@@ -500,7 +500,7 @@ SDLC 6.1.2 (February 16, 2026): ⭐ CURRENT
 - Revenue achievement case studies
 
 **Contribute Your Case Study**:
-- Document your SDLC 6.1.2 implementation
+- Document your SDLC 6.2.0 implementation
 - Measure and report success metrics
 - Share learnings with community
 - Contact: CPO Office (taidt@mtsolution.com.vn)
@@ -518,4 +518,4 @@ SDLC 6.1.2 (February 16, 2026): ⭐ CURRENT
 
 ***"From 4.2 to 5.0.0 - Every upgrade earned through battle."*** ⚔️
 
-***"SDLC 6.1.2: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯
+***"SDLC 6.2.0: Enterprise-grade. TDD-validated. Industry best practices."*** 🎯

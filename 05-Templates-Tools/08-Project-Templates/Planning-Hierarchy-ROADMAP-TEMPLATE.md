@@ -93,7 +93,7 @@ This template provides a standard structure for 12-month product roadmaps. Use t
 | Phase 3 | [Name] | [X weeks] | Q2 | [Status] |
 | Phase 4 | [Name] | [X weeks] | Q3 | [Status] |
 
-→ See [Phase Plans](../04-build/02-Sprint-Plans/) for details (SDLC 6.1.2 folder structure)
+→ See [Phase Plans](../04-build/02-Sprint-Plans/) for details (SDLC 6.2.0 folder structure)
 
 ---
 

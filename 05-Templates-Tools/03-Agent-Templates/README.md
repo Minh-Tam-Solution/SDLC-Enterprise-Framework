@@ -3,13 +3,13 @@
 **Version**: 6.2.0
 **Date**: January 29, 2026
 **Status**: ACTIVE - Placeholder for Sprint 120+
-**Structure**: SDLC 6.1.2 (2-level maximum)
+**Structure**: SDLC 6.2.0 (2-level maximum)
 
 ---
 
 ## Overview
 
-Cross-platform AI agent templates for SDLC 6.1.2 compliance. This folder serves as the primary location for AI assistant configuration templates.
+Cross-platform AI agent templates for SDLC 6.2.0 compliance. This folder serves as the primary location for AI assistant configuration templates.
 
 ---
 
@@ -47,7 +47,7 @@ Tool-specific templates have been archived to:
 | ChatGPT | `10-archive/05-Legacy/tool-guides-2026/chatgpt/` |
 | Gemini | `10-archive/05-Legacy/tool-guides-2026/gemini/` |
 
-> **Note**: Tool-specific templates archived per SDLC 6.1.2 principle - Framework provides universal patterns, not tool-specific configs.
+> **Note**: Tool-specific templates archived per SDLC 6.2.0 principle - Framework provides universal patterns, not tool-specific configs.
 
 > **Note**: For SASE role-specific persona templates (SOULs), see [../04-SASE-Artifacts/souls/](../04-SASE-Artifacts/souls/). CLAUDE.md templates (workspace context) and SOUL templates (role personas) serve different purposes and complement each other.
 

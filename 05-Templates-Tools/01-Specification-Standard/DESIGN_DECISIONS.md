@@ -1,5 +1,5 @@
 # DESIGN_DECISIONS.md Template
-## Framework 6.1.2 Lightweight Decision Records - Section 8
+## Framework 6.2.0 Lightweight Decision Records - Section 8
 
 **Version**: 6.2.0
 **Status**: ACTIVE - PRODUCTION READY
@@ -442,5 +442,5 @@ note: "HIGH impact - consider escalating to ADR"
 
 ---
 
-*SDLC Enterprise Framework 6.1.2 - Design Decisions Template*
+*SDLC Enterprise Framework 6.2.0 - Design Decisions Template*
 *"Document decisions while they're fresh. Lightweight by design."*

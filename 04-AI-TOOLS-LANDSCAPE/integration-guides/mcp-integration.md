@@ -113,7 +113,7 @@ Model Context Protocol (MCP) unlocks deep, governed integration between SDLC Orc
 
 | Date | Change |
 |------|--------|
-| Jan 2026 | Initial guide for SDLC Framework 6.1.2 |
+| Jan 2026 | Initial guide for SDLC Framework 6.2.0 |
 
 ---
 

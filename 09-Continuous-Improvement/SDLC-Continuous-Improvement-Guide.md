@@ -224,7 +224,7 @@ Strategy: 90% Preserve + 10% Enhance (Never rebuild)
 
 ```yaml
 1. Create Comprehensive Legacy Archive:
-   Structure (SDLC 6.1.2):
+   Structure (SDLC 6.2.0):
      10-archive/
        {NN}-Legacy/
          SDLC-[old-version]-Archive/
@@ -1337,7 +1337,7 @@ Potential Transformations:
 **Status**: ACTIVE - ENHANCED WITH LEGACY ORG STANDARD + SPEC-0001 + ANTHROPIC PATTERNS INTEGRATION
 **Validation**: Systematic upgrade process proven successful across 10+ upgrades (4.6 → 6.0.6)
 **Learning**: Follow this guide to prevent manual restoration work
-**Latest**: SDLC 6.1.2 adds Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template. SDLC 6.0.5 added Legacy Document Organization Standard, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
+**Latest**: SDLC 6.2.0 adds Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template. SDLC 6.0.5 added Legacy Document Organization Standard, SPEC-0001 Anti-Vibecoding alignment, 4 new templates, sdlcctl v1.7.0 fuzzy P0 detection
 **Framework**: SDLC 6.2.0
 
 ***"Evolution without losing revolution."*** 🔄

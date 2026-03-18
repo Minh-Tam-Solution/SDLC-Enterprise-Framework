@@ -1,4 +1,4 @@
-# E2E API Test Report Template (SDLC 6.1.2)
+# E2E API Test Report Template (SDLC 6.2.0)
 
 **Version**: 1.0.0
 **Date**: [YYYY-MM-DD]
@@ -28,7 +28,7 @@
 | Tests Skipped | [N] | [X]% | - |
 | Security Issues Found | [N] | - | [✅/⚠️/🔴] |
 
-**Pass Rate Target**: ≥80% (SDLC 6.1.2 minimum)
+**Pass Rate Target**: ≥80% (SDLC 6.2.0 minimum)
 **Pass Rate Actual**: [X]%
 **Status**: [✅ PASS | 🔴 FAIL]
 

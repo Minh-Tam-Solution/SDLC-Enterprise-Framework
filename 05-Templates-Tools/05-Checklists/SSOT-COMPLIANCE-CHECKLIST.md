@@ -1,4 +1,4 @@
-# SSOT Compliance Checklist (SDLC 6.1.2)
+# SSOT Compliance Checklist (SDLC 6.2.0)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
@@ -25,7 +25,7 @@
 
 ### Phase 0: Locate Canonical Source
 
-**Canonical Location** (SDLC 6.1.2):
+**Canonical Location** (SDLC 6.2.0):
 ```
 docs/03-integrate/01-api-specifications/openapi.json
 ```
