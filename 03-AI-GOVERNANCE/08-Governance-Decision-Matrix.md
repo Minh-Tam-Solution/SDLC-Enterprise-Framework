@@ -10,7 +10,7 @@
 
 ## Overview
 
-This decision matrix maps every governance scenario to a concrete enforcement action. When a gate evaluation occurs, the Orchestrator follows this matrix to determine the correct principle and action.
+This decision matrix maps every governance scenario to a concrete enforcement action. When a gate evaluation occurs, the governance engine follows this matrix to determine the correct principle and action.
 
 ---
 
@@ -154,9 +154,9 @@ The Vibecoding Index (0-100) measures AI contribution quality. Routing depends o
 
 ---
 
-## Implementation in Orchestrator
+## Implementation Reference
 
-The `compute_gate_actions()` function (Pre-Phase contract) implements this matrix:
+A governance engine implementing this matrix SHOULD follow this pseudocode:
 
 ```python
 def compute_gate_actions(gate, user, mode):

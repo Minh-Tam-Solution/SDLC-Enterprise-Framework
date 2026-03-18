@@ -6,14 +6,14 @@
 **Status**: ACTIVE
 **Authority**: CTO Office
 **AI Governance**: Aligns with Planning Mode Principle (Risk-Based triggers)
-**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.1.2 flattened)
+**Location**: 02-Core-Methodology/Documentation-Standards/ (SDLC 6.2.0 flattened)
 **NEW in 6.0.4**: 3-Phase Sprint Lifecycle Model + TDD Workflow Integration
 
 ---
 
 ## Overview
 
-This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.1.2 Sprint Planning Governance.
+This guide provides a step-by-step process for planning a new sprint in compliance with SDLC 6.2.0 Sprint Planning Governance.
 
 **When to use this guide**:
 - Starting a new sprint

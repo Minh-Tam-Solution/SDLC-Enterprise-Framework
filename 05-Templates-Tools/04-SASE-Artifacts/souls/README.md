@@ -1,6 +1,6 @@
 # SOUL Role Templates
 
-**Version**: 1.0.0 | **Framework**: SDLC 6.1.2 | **Ring**: 2 (Governance — Templates & Tools)
+**Version**: 1.0.0 | **Framework**: SDLC 6.2.0 | **Ring**: 2 (Governance — Templates & Tools)
 
 ---
 
@@ -98,7 +98,7 @@ Each SOUL file follows this structure:
 ---
 role: <role_name>
 category: executor | advisor | router
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 1.0.0
 sdlc_stages: ["04"]           # Which SDLC stages
 sdlc_gates: ["G-Sprint"]      # Which gates
@@ -148,3 +148,8 @@ Team charters define how SOULs collaborate in groups. See `../teams/` for 10 tea
 ---
 
 *Added in SDLC 6.1.2 — Ring 2 (Governance: Templates & Tools)*
+
+### 6.2.0 Updates
+- Key executor SOULs (coder, architect, reviewer, tester, fullstack) now include **Long-Running Task Protocol** section
+- All version references bumped to SDLC 6.2.0
+- Framework references updated to consolidated docs (Stage-Lifecycle-Framework, Quality-Gates-Assurance-Framework)

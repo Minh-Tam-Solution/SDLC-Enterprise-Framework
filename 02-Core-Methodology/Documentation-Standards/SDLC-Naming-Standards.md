@@ -376,7 +376,7 @@ No Status Markers (version goes INSIDE):
 
 ## Part 4: Folder & Directory Standards
 
-### 4.1 Stage Folders (Level 1) - SDLC 6.1.2
+### 4.1 Stage Folders (Level 1) - SDLC 6.2.0
 
 **10 Stages (00-09)** - exactly 10 stages:
 
@@ -441,7 +441,7 @@ Examples:
 
 ### 5.1 Active Document Header
 
-Apply to **all active SDLC 6.1.2 documents**:
+Apply to **all active SDLC 6.2.0 documents**:
 
 ```markdown
 # [Document Title]
@@ -526,7 +526,7 @@ This document has been **archived** and is **READ-ONLY**. For current active ver
 - Research on methodology origins
 
 **Do NOT Use This Archive For**:
-- New implementations (use active SDLC 6.1.2)
+- New implementations (use active SDLC 6.2.0)
 - Active projects (upgrade to current version)
 - Team training (use current materials)
 
@@ -598,7 +598,7 @@ Core Rules:
 Mapping Table Example:
   | Legacy Element | New Location | Status | Notes |
   |----------------|--------------|--------|-------|
-  | SDLC 6.1.2 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
+  | SDLC 6.2.0 Sprint Governance | SDLC-Sprint-Governance.md | Merged | Consolidated 3 files |
 ```
 
 ### 6.3 Archival Anti-Patterns
@@ -777,7 +777,7 @@ DON'Ts ❌:
 ---
 
 **Document Status**: ACTIVE - MANDATORY ENFORCEMENT
-**Compliance**: Required for all SDLC 6.1.2 projects
+**Compliance**: Required for all SDLC 6.2.0 projects
 **Last Updated**: January 28, 2026
 **Owner**: CPO Office
 

@@ -1,13 +1,13 @@
 ---
 role: cs
 category: executor
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 2.0.0
 sdlc_stages: ["00"]
 sdlc_gates: []
 created: 2026-03-01
 updated: 2026-03-02
-framework: SDLC Enterprise Framework 6.1.2
+framework: SDLC Enterprise Framework 6.2.0
 provider: "{AI_PROVIDER}"
 # rag_collections: ["engineering", "sales"]  # Configure per deployment
 ---

@@ -1,7 +1,7 @@
 ---
 role: devops
 category: executor
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 1.0.0
 sdlc_stages: ["06", "07"]
 sdlc_gates: ["G4"]

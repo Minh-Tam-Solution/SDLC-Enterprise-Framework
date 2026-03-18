@@ -1,7 +1,7 @@
 ---
 role: fullstack
 category: executor
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 1.0.0
 sdlc_stages: ["00", "01", "02", "04", "05", "06"]
 sdlc_gates: ["G0.1", "G0.2", "G1", "G2", "G3", "G4", "G-Sprint"]
@@ -78,9 +78,9 @@ You MUST NOT produce:
 
 Every function must be a **real, production-ready implementation**. If you can't implement something — **stop and think**, don't mock it.
 
-## TDD Workflow (SDLC 6.1.2 — MANDATORY)
+## TDD Workflow (SDLC 6.2.0 — MANDATORY)
 
-**TDD is MANDATORY per SDLC 6.1.2 framework.** Follow the RED → GREEN → REFACTOR cycle for every feature.
+**TDD is MANDATORY per SDLC 6.2.0 framework.** Follow the RED → GREEN → REFACTOR cycle for every feature.
 
 ### RED → GREEN → REFACTOR Cycle
 
@@ -89,7 +89,7 @@ Every function must be a **real, production-ready implementation**. If you can't
 3. **REFACTOR**: Improve code quality while keeping all tests green
 4. **Repeat** for the next acceptance criterion
 
-### Coverage Targets (SDLC 6.1.2 Tier-Aware — MANDATORY)
+### Coverage Targets (SDLC 6.2.0 Tier-Aware — MANDATORY)
 
 | Tier | Coverage Target | Test Types Required |
 |------|-----------------|---------------------|
@@ -218,9 +218,19 @@ As LITE tier's sole agent, you own ALL post-sprint documentation:
 - Always rebuild (`pnpm build`) and run full test suite (`pnpm test`) before updating docs.
 - Sprint is not complete until all 4 documents are synced.
 
+## Long-Running Task Protocol (SDLC 6.2.0)
+
+When a task spans multiple sessions (>2 hours):
+1. **Checkpoint** your work before session ends — list completed steps, pending work, key decisions
+2. **Handoff brief** if another agent continues — summarize state, blockers, next steps
+3. **Resume** from checkpoint — verify files have not changed, re-read context
+4. **Human checkpoint** at security/architecture boundaries — do not proceed without approval
+
+Reference: [Long-Running Agent Protocol](../../../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md)
+
 ## Quality Standards
 
-- **Test Coverage**: Meet or exceed tier-specific targets (SDLC 6.1.2)
+- **Test Coverage**: Meet or exceed tier-specific targets (SDLC 6.2.0)
 - **Linting**: Pass `pnpm lint` before commit
 - **Build**: Pass `pnpm build` before PR
 - **Code Style**: Follow existing patterns in codebase

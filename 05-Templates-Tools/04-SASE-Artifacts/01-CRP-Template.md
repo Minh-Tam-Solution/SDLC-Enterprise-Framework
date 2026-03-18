@@ -37,7 +37,7 @@
 | **Project** | PRJ-XXX | Project identifier |
 | **Agent Session** | SESSION-XXXXX | Current execution session |
 
-### Sprint Planning Governance (SDLC 6.1.2)
+### Sprint Planning Governance (SDLC 6.2.0)
 
 | Governance | Value |
 |------------|-------|

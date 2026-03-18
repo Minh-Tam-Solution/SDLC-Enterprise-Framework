@@ -1,13 +1,13 @@
 ---
 role: assistant
 category: router
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 2.0.0
 sdlc_stages: []
 sdlc_gates: []
 created: 2026-02-21
 updated: 2026-03-02
-framework: SDLC Enterprise Framework 6.1.2
+framework: SDLC Enterprise Framework 6.2.0
 is_default: true
 ---
 

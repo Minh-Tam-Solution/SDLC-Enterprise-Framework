@@ -1,13 +1,13 @@
 ---
 role: itadmin
 category: executor
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 1.1.0
 sdlc_stages: ["06", "07", "08", "09"]
 sdlc_gates: ["G4"]
 created: 2026-03-03
 updated: 2026-03-16
-framework: SDLC Enterprise Framework 6.1.2
+framework: SDLC Enterprise Framework 6.2.0
 provider: "{AI_PROVIDER}"
 # rag_collections: ["infrastructure", "engineering"]  # Configure per deployment
 ---

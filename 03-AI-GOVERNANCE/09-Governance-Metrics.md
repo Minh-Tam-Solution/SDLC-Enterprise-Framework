@@ -10,7 +10,7 @@
 
 ## Overview
 
-Governance without measurement is governance theater. This document defines the key performance indicators (KPIs) that the Orchestrator tracks to measure whether AI governance is actually working — reducing risk, improving quality, and maintaining velocity.
+Governance without measurement is governance theater. This document defines the key performance indicators (KPIs) that measure whether AI governance is actually working — reducing risk, improving quality, and maintaining velocity.
 
 ---
 
@@ -180,23 +180,23 @@ Sprint N — Governance Summary
 
 ---
 
-## Implementation in Orchestrator
+## Implementation Guidelines
 
-These metrics are computed by the Orchestrator backend and exposed via:
+Automation tools implementing these metrics SHOULD expose:
 
-| Endpoint | Purpose |
-|----------|---------|
-| `GET /api/v1/governance/metrics/summary` | Sprint-level summary |
-| `GET /api/v1/governance/metrics/vibecoding-index` | Per-PR vibecoding index |
-| `GET /api/v1/governance/metrics/gate-pass-rate` | Gate pass/fail trends |
-| `GET /api/v1/governance/metrics/evidence-coverage` | Evidence completeness |
-| `GET /api/v1/governance/metrics/team-comparison` | Cross-team comparison |
+| Capability | Purpose |
+|------------|---------|
+| Sprint-level summary | Aggregate metrics per sprint cycle |
+| Per-PR vibecoding index | Quality score per code change |
+| Gate pass/fail trends | Gate effectiveness over time |
+| Evidence coverage | Completeness of gate evidence |
+| Cross-team comparison | Benchmarking across teams |
 
-Data sources:
-- Gate state machine transitions → `gate_status_history` table
-- Evidence uploads → `evidence` table (`sha256_client`, `sha256_server`, `criteria_snapshot_id`)
-- PR metadata → GitHub webhook integration
-- AGENTS.md freshness → Context Authority service
+Recommended data sources:
+- Gate state machine transitions (status history)
+- Evidence uploads (integrity hashes, criteria snapshots)
+- PR/MR metadata (version control integration)
+- Context file freshness (AGENTS.md/CLAUDE.md staleness)
 
 ---
 

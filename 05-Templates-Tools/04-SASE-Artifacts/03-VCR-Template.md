@@ -37,7 +37,7 @@
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **SDLC Gate** | G0.1 \| G1 \| G2 \| G3 \| G4 \| G-Sprint \| G-Sprint-Close | Gate this work supports |
 
-### Sprint Planning Governance Verification (SDLC 6.1.2)
+### Sprint Planning Governance Verification (SDLC 6.2.0)
 
 | Criterion | Verified | Notes |
 |-----------|----------|-------|

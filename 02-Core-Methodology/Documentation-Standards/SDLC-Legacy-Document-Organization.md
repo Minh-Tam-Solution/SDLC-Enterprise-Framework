@@ -223,9 +223,9 @@ For SDLC-Enterprise-Framework self-application:
 - Create `10-archive/` directory structure
 - Execute migration: `migrate-legacy-to-archive.sh`
 - Fix stale references in all .md files
-- Commit: `feat(SDLC 6.1.2): Legacy Document Organization Standard`
+- Commit: `feat(SDLC 6.2.0): Legacy Document Organization Standard`
 
-### Phase 3: Orchestrator Migration (Feb 20-28)
+### Phase 3: Project Migration (Feb 20-28)
 - Migrate `docs/0[0-9]-*/99-Legacy/` → `docs/10-archive/{NN}-Legacy/`
 - Update ref stubs and cross-references
 - Run full validation suite
@@ -310,7 +310,7 @@ A: No. Content in 10-archive/ is already archived. If you need to reference it f
 |------|-------|-------------|
 | Feb 13, 2026 | Standard Approval | Approved as MANDATORY |
 | Feb 14-28, 2026 | Framework Adoption | Framework-First self-application (Phases 1-2) |
-| Feb 28 - Mar 7, 2026 | Cascade to Projects | SDLC-Orchestrator and team projects apply (Phases 3-4) |
+| Feb 28 - Mar 7, 2026 | Cascade to Projects | All team projects apply (Phases 3-4) |
 | Mar 8-15, 2026 | Enforcement | CI/CD blocks any new 99-Legacy/ in stages 00-09 |
 | Mar 15, 2026 | Deadline | All SDLC-compliant projects MUST comply |
 | After Mar 15 | Permanent Rule | Non-compliant PRs automatically rejected |

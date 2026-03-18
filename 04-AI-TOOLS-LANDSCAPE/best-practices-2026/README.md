@@ -1,5 +1,5 @@
 # AI Agent Best Practices 2026
-## SDLC 6.1.2 - Software Engineering 3.0
+## SDLC 6.2.0 - Software Engineering 3.0
 
 **Version:** 6.2.0
 **Status:** ACTIVE - PRODUCTION READY
@@ -155,7 +155,7 @@ Use the auth patterns from @src/auth/legacy.js"
 
 ---
 
-## Integration with SDLC 6.1.2
+## Integration with SDLC 6.2.0
 
 ### Sprint Planning Governance (Pillar 2)
 

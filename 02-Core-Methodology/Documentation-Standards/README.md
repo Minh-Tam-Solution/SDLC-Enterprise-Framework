@@ -37,7 +37,7 @@ This folder contains the **mandatory documentation standards** for all SDLC 6.2.
 
 ### Consolidation Summary
 
-SDLC 6.1.2 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enhancements:
+SDLC 6.2.0 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enhancements:
 
 | Previous Files | Merged Into | Lines |
 |----------------|-------------|-------|
@@ -47,7 +47,7 @@ SDLC 6.1.2 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enh
 | ARCHIVAL-HEADER-TEMPLATE.md | ↑ | |
 | Team-Collaboration/* (4 files) | **SDLC-Team-Collaboration.md** | ~700 |
 
-### Current Documents (6 files - SDLC 6.1.2 Enhanced)
+### Current Documents (6 files - SDLC 6.2.0 Enhanced)
 
 | Document | Purpose | Compliance |
 |----------|---------|------------|
@@ -173,7 +173,7 @@ docs/
 
 **Production Validation**: TDD workflow validated with 113 tests, 100% pass rate
 
-> **SDLC 6.1.2**: Enhanced with 3-Phase Sprint Lifecycle Model and TDD Workflow Integration. Originally in `Situation-Specific-Guides/When-Planning-Sprint.md`.
+> **SDLC 6.2.0**: Enhanced with 3-Phase Sprint Lifecycle Model and TDD Workflow Integration. Originally in `Situation-Specific-Guides/When-Planning-Sprint.md`.
 
 ---
 

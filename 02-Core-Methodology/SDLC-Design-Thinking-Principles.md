@@ -361,4 +361,4 @@ Design Thinking integrates with the SDLC Quality Gate system through 5 gates tha
 
 > *"Ask the RIGHT questions in the RIGHT order. That's more valuable than having the RIGHT tools."*
 >
-> — SDLC 6.1.2: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.
+> — SDLC 6.2.0: WHY grounds you. WHAT focuses you. HOW structures you. BUILD validates you. GOVERN sustains you.

@@ -22,7 +22,7 @@ priority: "P1"
 **Date:** February 18, 2026
 **Status:** ACTIVE - PRODUCTION READY
 
-> **Terminology Note (6.1.2):** BRS (BriefingScript) and MTS (MentorScript) are
+> **Terminology Note (6.2.0):** BRS (BriefingScript) and MTS (MentorScript) are
 > **DEPRECATED** — both replaced by **AGENTS.md** (industry standard).
 > LPS (LoopScript) is **DEPRECATED** — agents generate execution plans internally.
 > Active SASE artifacts: **AGENTS.md + CRP + MRP + VCR** (4 active).
@@ -827,4 +827,4 @@ Level 3 Governance:
 
 **Document Status:** ACTIVE - PRODUCTION READY
 **Last Updated:** February 18, 2026
-**Framework Version:** SDLC 6.1.2
+**Framework Version:** SDLC 6.2.0

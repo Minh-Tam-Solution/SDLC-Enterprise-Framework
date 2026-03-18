@@ -339,7 +339,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.1.2 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.2.0 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -504,7 +504,7 @@ SDLC-Enterprise-Framework/
 
 ---
 
-## Quick Checklist: Is This 6.1.2 Compliant?
+## Quick Checklist: Is This 6.2.0 Compliant?
 
 ```yaml
 Specification:
@@ -530,7 +530,7 @@ Sprint Governance (3-Phase):
   [ ] Execution: TDD cycle followed per feature?
   [ ] Post-Sprint: Documentation completed within 24h?
 
-Legacy Organization (6.1.2 RFC-001):
+Legacy Organization (6.2.0 RFC-001):
   [ ] No 99-Legacy/ folders in active stages (00-09)?
   [ ] Legacy content in 10-archive/{NN}-Legacy/?
   [ ] CI/CD blocks 99-Legacy/ reintroduction?
@@ -539,7 +539,7 @@ Legacy Organization (6.1.2 RFC-001):
 ---
 
 **Document Status**: ACTIVE
-**Last Updated**: February 16, 2026
+**Last Updated**: March 18, 2026
 **Framework**: SDLC 6.2.0 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
-*Quick reference for SDLC Framework 6.1.2 - Keep this handy!*
+*Quick reference for SDLC Framework 6.2.0 - Keep this handy!*

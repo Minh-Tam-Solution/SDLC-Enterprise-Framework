@@ -36,7 +36,7 @@
 
 ## What's in 6.1.x (Previous — Consolidation Releases)
 
-### 6.1.2 (March 2026) — SOULs + TEAMs Templates
+### 6.2.0 (March 2026) — SOULs + TEAMs Templates
 17 SOUL role templates + 10 TEAM charters added to Ring 2. Tier availability matrix: LITE(3) → ENTERPRISE(13).
 
 ### 6.1.0 (February 2026) — Ring 1 Slim
@@ -669,7 +669,7 @@ SDLC 6.0.4 (Feb 2026) → TDD Workflow + 3-Phase Sprint + Spec Converter (MINOR)
 SDLC 6.0.5 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Governance Loop (MINOR)
 SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP (MINOR)
 SDLC 6.1.0 (Feb 2026) → Consolidation: Ring 1 Slim + Multi-Agent Patterns + System Thinking
-SDLC 6.1.2 (Mar 2026) → SOULs + TEAMs Templates (17 roles + 10 charters)
+SDLC 6.2.0 (Mar 2026) → SOULs + TEAMs Templates (17 roles + 10 charters)
 SDLC 6.2.0 (Mar 2026) → Agentic SDLC: Lean Ring 1 + 8 Mental Models + Long-Running Protocol ⭐ CURRENT
 ```
 

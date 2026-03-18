@@ -1,7 +1,7 @@
 ---
 team: fullstack
 archetype: fullstack
-sdlc_framework: "6.1.2"
+sdlc_framework: "6.2.0"
 version: 1.0.0
 created: 2026-03-03
 ---

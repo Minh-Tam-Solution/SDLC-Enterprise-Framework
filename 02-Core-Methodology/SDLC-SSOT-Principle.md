@@ -1,4 +1,4 @@
-# SSOT Principle (Single Source of Truth) - SDLC 6.1.2
+# SSOT Principle (Single Source of Truth) - SDLC 6.2.0
 
 **Version**: 1.0.0
 **Date**: February 2, 2026

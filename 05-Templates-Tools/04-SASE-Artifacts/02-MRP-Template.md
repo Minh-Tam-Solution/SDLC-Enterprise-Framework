@@ -36,7 +36,7 @@
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **Branch** | feature/xxx | [Link to Branch] |
 
-### Sprint Planning Governance (SDLC 6.1.2)
+### Sprint Planning Governance (SDLC 6.2.0)
 
 | Reference | ID | Status |
 |-----------|------|--------|
@@ -47,7 +47,7 @@
 
 ---
 
-## ✅ DEFINITION OF DONE (DoD) VERIFICATION (SDLC 6.1.2)
+## ✅ DEFINITION OF DONE (DoD) VERIFICATION (SDLC 6.2.0)
 
 | Criterion | Status | Evidence |
 |-----------|--------|----------|

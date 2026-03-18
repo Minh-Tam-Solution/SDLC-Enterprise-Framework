@@ -768,8 +768,7 @@ Quality Assurance Standards (5.3.0):
 |---------|------|---------|
 | **6.2.0** | **Mar 18, 2026** | **Agentic SDLC + Lean Ring 1** — 8 Mental Models (+Agent Continuity, +More People Build), Long-Running Agent Protocol (Ring 1), Citizen Developer Guide (Ring 3), ROI Calculator (Ring 2). Ring 1 consolidated: 41→30 files, -21% size. 42 tool-specific refs → 0. 9 docs moved to Ring 2. |
 | 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 17 role templates + 10 team charters (Ring 2) |
-| 6.1.0 | Feb 18, 2026 | Consolidation: Ring 1 slim, System Thinking + Crisis-to-Pattern docs, Multi-Agent Patterns |
-| **6.1.0** | **Feb 18, 2026** | **MINOR: Consolidation Release** — Ring 1 slimming (Design Thinking 2K→364+572, Agentic Core 1.3K→293), new foundational docs (System Thinking, Crisis-to-Pattern), agentic files moved to 03-AI-GOV, BRS/MTS→AGENTS.md terminology cleanup, Multi-Agent Patterns (12) added |
+| 6.1.0 | Feb 18, 2026 | Consolidation: Ring 1 slim, System Thinking + Crisis-to-Pattern, Multi-Agent Patterns |
 | **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |
 | **6.0.5** | **Feb 15, 2026** | **MINOR: RFC-001 Legacy Organization + Anti-Vibecoding SPEC-0001 alignment + 4 new Framework templates** (Go-Live Checklist, Go-Live Assessment, Maturity Assessment, Risk Register) |
 | **6.0.4** | **Feb 8, 2026** | **MINOR: TDD Workflow Integration + 3-Phase Sprint Enhancement** - RED-GREEN-REFACTOR cycle, tier-aware coverage (LITE 70% → ENT 95%), Spec Converter (SpecIR) |

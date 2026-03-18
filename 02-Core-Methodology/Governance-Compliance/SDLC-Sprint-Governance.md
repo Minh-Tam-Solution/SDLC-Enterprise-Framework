@@ -591,11 +591,11 @@ tasks:
 ```bash
 #!/bin/bash
 # tools/validate-sprint-consistency.sh
-# SDLC 6.1.2 - Sprint Consistency Validator
+# SDLC 6.2.0 - Sprint Consistency Validator
 
 set -e
 
-echo "🔍 SDLC 6.1.2 Sprint Consistency Validator"
+echo "🔍 SDLC 6.2.0 Sprint Consistency Validator"
 echo "==========================================="
 
 # Configuration
