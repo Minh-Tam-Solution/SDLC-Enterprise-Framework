@@ -42,7 +42,7 @@ Key Changes (6.2.0 — Mar 18, 2026):
 ## What Was in 6.1.x (Previous Releases)
 
 ### 6.1.2 (Mar 2026) — SOULs + TEAMs Templates
-17 SOUL role templates + 10 TEAM charters added to Ring 2.
+18 SOUL role templates + 10 TEAM charters added to Ring 2.
 
 ### 6.1.0 (Feb 2026) — Ring 1 Slim + Consolidation
 

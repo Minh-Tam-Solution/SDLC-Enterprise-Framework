@@ -37,7 +37,7 @@
 ## What's in 6.1.x (Previous — Consolidation Releases)
 
 ### 6.2.0 (March 2026) — SOULs + TEAMs Templates
-17 SOUL role templates + 10 TEAM charters added to Ring 2. Tier availability matrix: LITE(3) → ENTERPRISE(13).
+18 SOUL role templates + 10 TEAM charters added to Ring 2. Tier availability matrix: LITE(3) → STANDARD(6) → PRO(11) → ENTERPRISE(14) → OPTIONAL(18).
 
 ### 6.1.0 (February 2026) — Ring 1 Slim
 Design Thinking 2,018→364 lines. System Thinking Foundation + Crisis-to-Pattern as dedicated docs. Multi-Agent Patterns (#12). BRS/MTS/LPS → AGENTS.md.
