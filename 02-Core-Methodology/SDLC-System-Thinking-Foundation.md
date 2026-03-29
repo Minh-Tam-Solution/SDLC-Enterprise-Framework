@@ -272,6 +272,70 @@ System Thinking applies across all 10 stages:
 
 ---
 
+## Effort Compression Table (NEW in 6.2.1)
+
+> **Source**: gstack "Boil the Lake" methodology (2026-03-29). Extracted as a calibration tool for gate evaluation and sprint planning.
+> **Principle**: AI-assisted development changes the economics of completeness. When the complete implementation costs minutes more than the shortcut — do the complete thing. Every time.
+
+### The Compression Ratios
+
+These are **baseline estimates — calibrate per project** (CTO condition: not universal constants).
+
+| Task Type | Human-Only | AI-Assisted | Compression | Implication |
+|-----------|-----------|-------------|-------------|-------------|
+| **Boilerplate** (CRUD, models, migrations) | 2 days | 15 min | ~100x | Never hand-write boilerplate |
+| **Tests** (unit, integration, E2E) | 1 day | 15 min | ~50x | No excuse for low coverage |
+| **Feature** (new functionality) | 1 week | 30 min | ~30x | Scope cuts less necessary |
+| **Bug fix** (identify + fix + test) | 4 hours | 15 min | ~20x | Fix immediately, don't defer |
+| **Refactor** (restructure, rename, split) | 2 days | 30 min | ~40x | Technical debt cleanup is cheap |
+| **Documentation** (API docs, README, ADRs) | 1 day | 20 min | ~30x | No excuse for missing docs |
+| **Research** (evaluate options, PoC) | 3 days | 4 hours | ~6x | Still invest time; AI accelerates, doesn't replace |
+| **Architecture** (design, ADR, threat model) | 1 week | 2 hours | ~15x | Still requires human judgment (SE4H) |
+
+### How to Apply
+
+**At Sprint Planning**:
+- Estimate tasks with compression ratios
+- If a "nice-to-have" would take 15 min with AI → include it (was "too expensive" without AI)
+- If a "shortcut" saves 10 min but skips completeness → don't take it
+
+**At Gate Evaluation**:
+- "Test coverage is only 60% because writing tests would take 2 weeks" → Invalid deferral. With AI: ~4 hours for 95% coverage.
+- "Documentation not updated because it would take a day" → Invalid. With AI: ~20 min.
+- "Security scan findings deferred to next sprint" → Apply Fix-First Protocol (Section 6.3). Most findings are AUTO-FIX (~15 min).
+
+**At Scope Decisions**:
+- **Lake** (completable with AI) → Do it all. 100% coverage, full docs, all edge cases.
+- **Ocean** (multi-quarter, requires organizational change) → Scope cut is valid. Use Start Ridiculously Small (MM#6).
+- **Heuristic**: If total AI-assisted effort < 1 day → it's a lake. Boil it.
+
+### Completeness as Metric
+
+When using Effort Compression for decisions, rate each option:
+
+```
+Completeness: X/10
+  10 = all edge cases, full test coverage, docs updated, security scanned
+   7 = happy path + some edges, coverage meets minimum, docs partially updated
+   5 = works for demo, minimal tests, no edge cases
+   3 = shortcut, will need rework later
+   1 = placeholder/mock (violates Zero Mock Policy)
+```
+
+**Rule**: If one option is ≤5 and the higher-completeness option costs <1 day of AI-assisted work → choose the complete option. Always.
+
+### Connection to Mental Models
+
+| Mental Model | How Effort Compression Applies |
+|-------------|-------------------------------|
+| **#1 Process-First** | Process isn't overhead when AI makes compliance near-zero-cost |
+| **#3 Data-From-Activities** | Measure actual compression ratios per project, not assumed ones |
+| **#5 Crisis → Pattern** | Most crises stem from deferred work; compression eliminates the deferral excuse |
+| **#6 Start Small** | "Small" no longer means "incomplete" — small AND complete is achievable |
+| **#8 More People Build** | Domain experts can achieve 10/10 completeness with AI assistance |
+
+---
+
 ## Related Documents
 
 | Document | Ring | Purpose |

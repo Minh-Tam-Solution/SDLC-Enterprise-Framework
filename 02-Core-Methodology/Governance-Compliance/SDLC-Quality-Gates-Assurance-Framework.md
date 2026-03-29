@@ -444,6 +444,93 @@ governance_checklist:
 
 ---
 
+## 6.3 Fix-First Review Protocol (NEW in 6.2.1)
+
+> **Source**: gstack methodology analysis (2026-03-29). Closes the gap between "detect issues" and "resolve issues."
+> **Principle**: Every finding gets ACTION, not just a report. No finding is "acknowledged and deferred" without explicit justification.
+
+### The Problem
+
+Traditional review produces a findings list. Then what? Teams triage, argue priorities, defer, and eventually forget. The gap between "issue found" and "issue fixed" is where quality dies.
+
+### The Protocol
+
+Every review finding (code review, gate evaluation, security scan, QA test) is classified into exactly one of two categories:
+
+| Category | Criteria | Action | Examples |
+|----------|----------|--------|----------|
+| **AUTO-FIX** | Deterministic, mechanical, single correct answer | Fix immediately, no human input needed | Unused imports, missing null checks, formatting violations, typo in variable name, missing type annotation |
+| **ASK** | Requires judgment, multiple valid options, or domain knowledge | Batch into single human decision point | Architecture change, business logic question, performance vs readability tradeoff, security approach choice |
+
+### Classification Heuristic
+
+```
+For each finding:
+  1. Is there exactly ONE correct fix? → AUTO-FIX
+  2. Does it require understanding business context? → ASK
+  3. Could a junior developer fix it without asking anyone? → AUTO-FIX
+  4. Does fixing it change behavior, not just form? → ASK
+  5. Is it a style/lint/format issue with a defined standard? → AUTO-FIX
+  6. When in doubt → ASK (safer to ask than to auto-fix wrong)
+```
+
+### Execution Flow
+
+```
+Step 1: CLASSIFY
+  Review produces N findings
+  Each finding tagged AUTO-FIX or ASK
+
+Step 2: AUTO-FIX (immediate)
+  Apply all AUTO-FIX items
+  Output per fix: [AUTO-FIXED] [file:line] Problem → What was done
+  No human approval needed
+
+Step 3: BATCH-ASK (single decision point)
+  Present all ASK items in ONE interaction (not one-by-one)
+  Per item: Finding, Options (Fix/Skip/Defer), Recommendation
+  Human decides once for entire batch
+
+Step 4: APPLY (approved fixes)
+  Apply human-approved fixes
+  Output: what was fixed, what was skipped (with reason)
+
+Step 5: VERIFY
+  Run tests after all fixes
+  If tests fail → retry fix (max 3 attempts per Dev↔QA loop)
+  If 3 attempts fail → escalate to human with root cause
+```
+
+### Gate Integration
+
+| Gate | Fix-First Application |
+|------|----------------------|
+| **G-Sprint** | Code review findings → Fix-First before merge |
+| **G3** | QA findings + SAST results → Fix-First before ship |
+| **G4** | Security scan + dependency audit → Fix-First before deploy |
+
+### Tier-Specific Rules
+
+| Tier | AUTO-FIX Scope | ASK Threshold |
+|------|---------------|---------------|
+| **LITE** | Style + obvious bugs only | Everything else → ASK |
+| **STANDARD** | + Security lint findings | Judgment calls → ASK |
+| **PROFESSIONAL** | + Performance improvements | Architecture changes → ASK |
+| **ENTERPRISE** | + Compliance fixes | Regulatory items → always ASK |
+
+### Anti-Pattern: "Acknowledged and Deferred"
+
+**Banned**: "Finding acknowledged, will fix in next sprint." This is how v1 accumulated 78 skip/xfail markers.
+
+**Required**: Every finding must result in one of:
+- **FIXED** (auto or human-approved)
+- **SKIPPED** (human decision with documented reason)
+- **DEFERRED** (logged to TODOS.md with deadline — max 1 sprint)
+
+No finding exits the protocol without a disposition.
+
+---
+
 ## 7. Metrics & Monitoring
 
 ### 7.1 Primary Metrics (CEO Dashboard)
@@ -1397,4 +1484,5 @@ E2E Tests:
 |---------|------|---------|--------|
 | 1.0 | 2026-01-28 | Original 2 documents (QA System, Quality-Security-Gates) | CTO (Tai) |
 | 2.0 | 2026-03-18 | Consolidated into Quality Gates & Assurance Framework (Framework 6.2.0) | CTO (Tai) |
+| 2.1 | 2026-03-29 | Added Fix-First Review Protocol (Section 6.3) — Framework 6.2.1 | PM + CTO |
 
