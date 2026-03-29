@@ -1,8 +1,8 @@
-# SDLC Framework 6.2.0 Content Map
+# SDLC Framework 6.2.1 Content Map
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Status**: ACTIVE
-**Date**: March 18, 2026
+**Date**: March 29, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
 
 ---
@@ -106,6 +106,13 @@ Before creating any new document, check if a canonical file already exists for t
 | **Crisis-to-Pattern Methodology** | `02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **Design Thinking Templates** | `02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **MRP Template** | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Moved from `02-Core-Methodology/` in 6.1.0 | **NEW 6.0.6** |
+| **Fix-First Review Protocol** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` §6.3 | AUTO-FIX vs ASK classification | **NEW 6.2.1** |
+| **Effort Compression Table** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | AI compression ratios for gate decisions | **NEW 6.2.1** |
+| **Scope Drift Detection** | `05-Templates-Tools/05-Checklists/SDLC-Scope-Drift-Detection.md` | CLEAN/SCOPE_CREEP/MISSING checklist | **NEW 6.2.1** |
+| **Three-Tier Testing** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` Part 13 | Static → Integration → AI Eval | **NEW 6.2.1** |
+| **Doc Staleness Detection** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` Part 14 | FRESH/STALE/UNRELATED | **NEW 6.2.1** |
+| **Terminal Status Taxonomy** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` §8 | DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT | **NEW 6.2.1** |
+| **SOUL-cso** | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-cso.md` | Chief Security Officer (SE4H, PRO+ tier) | **NEW 6.2.1** |
 
 ### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 

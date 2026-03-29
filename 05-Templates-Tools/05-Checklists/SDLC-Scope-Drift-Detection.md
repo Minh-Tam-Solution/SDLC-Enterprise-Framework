@@ -60,6 +60,17 @@ Detect whether **work done** matches **work planned**. Catches unauthorized addi
 
 > A single sprint can be both SCOPE_CREEP and MISSING_REQUIREMENTS simultaneously.
 
+### Gate Actions per Classification
+
+| Classification | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
+|---|---|---|---|---|
+| **CLEAN** | Advance | Advance | Advance | Advance |
+| **SCOPE_CREEP** | Log + advance | **Blocks G3** — resolve or waiver | **Blocks G3 + G-Sprint-Close** | Blocks + Senior Review Board waiver |
+| **MISSING_REQUIREMENTS** | Log + advance | **Blocks G3** — complete work or re-scope | **Blocks G3 + G-Sprint-Close** | Blocks + audit trail required |
+
+> **Connection to Terminal Status Taxonomy** (Section 8, [Agentic Core Principles](../../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)):
+> CLEAN → DONE (auto-advance). SCOPE_CREEP → DONE_WITH_CONCERNS (flag for review). MISSING_REQUIREMENTS → BLOCKED (work incomplete, gate paused).
+
 ---
 
 ## Tier-Specific Rules

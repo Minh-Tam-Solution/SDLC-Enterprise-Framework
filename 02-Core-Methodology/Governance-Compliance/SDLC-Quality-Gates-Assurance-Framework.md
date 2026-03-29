@@ -1468,7 +1468,7 @@ E2E Tests:
 |------|------|------|-------------|-----------------|
 | **Tier 1 — Static** | Lint, type check, format check, schema validation, Zero Mock scan | Free | Every commit, every PR | G-Sprint (mandatory) |
 | **Tier 2 — Integration** | Unit tests, integration tests, E2E tests, API contract validation | CI minutes (moderate) | Pre-merge, gated on diff | G3 (mandatory) |
-| **Tier 3 — AI Evaluation** | LLM-as-Judge quality eval, security scan (SAST/DAST), performance benchmark | $$$ (LLM API calls) | Pre-release, weekly scheduled | G4 (mandatory for PRO+) |
+| **Tier 3 — AI Evaluation** | LLM-as-Judge quality eval, security scan (SAST/DAST), performance benchmark | $$$ (LLM API calls) | Pre-release, weekly scheduled | G4 (mandatory for PROFESSIONAL+) |
 
 ### Diff-Based Test Selection
 
@@ -1497,8 +1497,8 @@ test_suites:
 
 ### Tier-Specific Gate Requirements
 
-| Gate | LITE | STANDARD | PRO | ENTERPRISE |
-|------|------|----------|-----|------------|
+| Gate | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
+|------|------|----------|--------------|------------|
 | **G-Sprint** | Tier 1 | Tier 1 | Tier 1 | Tier 1 |
 | **G3** | Tier 1 + basic Tier 2 | Tier 1 + Tier 2 | Tier 1 + Tier 2 | Tier 1 + Tier 2 |
 | **G4** | Tier 1 + Tier 2 | Tier 1 + Tier 2 | Tier 1 + Tier 2 + Tier 3 | All three tiers |
@@ -1506,7 +1506,7 @@ test_suites:
 ### Connection to Existing Standards
 
 - **Zero Skip Policy**: Applies to all tiers — no `skip` or `xfail` markers allowed
-- **Coverage targets**: Tier 2 enforces critical-path 95% (PRO+) / overall 80-85%
+- **Coverage targets**: Tier 2 enforces critical-path 95% (PROFESSIONAL+) / overall 80-85%
 - **Fix-First Protocol (Section 6.3)**: Tier 1/2 failures → Fix-First classification before merge
 
 ---
@@ -1544,7 +1544,7 @@ For each .md file in /docs:
 |------|----------------|
 | G-Sprint | Informational only (non-blocking) |
 | G3 | Warning — flag stale docs in review |
-| G4 | **BLOCKING for PRO+** — no stale docs in release |
+| G4 | **BLOCKING for PROFESSIONAL+** — no stale docs in release |
 
 ### Tier Rules
 

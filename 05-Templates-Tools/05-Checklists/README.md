@@ -12,6 +12,7 @@
 | Checklist | Purpose | Usage |
 |-----------|---------|-------|
 | `Stage-Transition-Checklist.md` | All 9 stage transitions (00→01, 01→02, ..., 08→09) | Copy into sprint planning docs |
+| `SDLC-Scope-Drift-Detection.md` | Detect scope creep / missing requirements at G3 and G-Sprint-Close | Run before shipping — compare diff vs stated intent (NEW 6.2.1) |
 
 ---
 

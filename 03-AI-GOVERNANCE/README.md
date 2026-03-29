@@ -41,7 +41,7 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 
 | # | Document | Purpose |
 |---|----------|---------|
-| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, 7 SASE principles, 6 disciplines |
+| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, 7 SASE principles, 6 disciplines. **Section 8 (NEW 6.2.1)**: Agent Task Terminal Status Taxonomy (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) |
 | 14 | [Agentic Maturity Model](14-AGENTIC-MATURITY-MODEL.md) | L0-L3 maturity levels, AGENTS.md standard |
 | 16 | [Long-Running Agent Protocol](16-LONG-RUNNING-AGENT-PROTOCOL.md) | **NEW 6.2.0** — Checkpoint, memory, handoff, human checkpoints |
 

@@ -225,6 +225,7 @@ Per Singapore MGF and NIST emerging direction:
 
 **Internal**:
 - Mental Model #7: "Agent Continuity" (02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
+- **Agent Task Terminal Status Taxonomy** (Section 8, [13-AGENTIC-CORE-PRINCIPLES.md](13-AGENTIC-CORE-PRINCIPLES.md)) — Defines the 4 terminal statuses (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) that are the **final checkpoint** in this protocol (NEW 6.2.1)
 
 ---
 

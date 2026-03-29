@@ -1,10 +1,21 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.2.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.2.1
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.2.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - March 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.2.1**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - March 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+
+**What's New in 6.2.1 (March 29, 2026) - METHODOLOGY UPGRADE + CSO**:
+- ✅ **Fix-First Review Protocol** - AUTO-FIX vs ASK classification for every review finding (Section 6.3, Quality Gates doc)
+- ✅ **Effort Compression Table** - AI vs human time ratios (100x→6x) for gate evaluation decisions (System Thinking doc)
+- ✅ **Scope Drift Detection** - CLEAN/SCOPE_CREEP/MISSING checklist at G3+G-Sprint-Close (new checklist)
+- ✅ **Three-Tier Testing** - Static (free) → Integration (CI) → AI Eval ($$$), diff-based selection (Part 13)
+- ✅ **Doc Staleness Detection** - Cross-ref diff vs .md files, FRESH/STALE/UNRELATED (Part 14)
+- ✅ **Terminal Status Taxonomy** - DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT with required metadata (Section 8, Agentic Principles)
+- ✅ **SOUL-cso** - Chief Security Officer role (SE4H advisor, PRO+ tier). OWASP ASVS L2, AGPL containment, threat modeling
+- ✅ **18 SOUL templates** - SASE 13-role model (was 12). 4 SE4H advisors (was 3). Tier matrix: PRO(11), ENTERPRISE(14)
+- ✅ **4 TEAM charter updates** - @cso integrated into Executive, Design, QA, Ops teams
 
 **What's New in 6.2.0 (March 18, 2026) - AGENTIC SDLC + LEAN RING 1**:
 - ✅ **Lean Ring 1** - 41→30 substantive files, 584→463KB (-21%). 5 docs merged into 2, 9 moved to Ring 2
@@ -613,6 +624,6 @@ SDLC 6.1.2 (March 9, 2026) ← CURRENT
 
 The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.2, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: March 18, 2026
-**Framework Version**: SDLC 6.2.0
-**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 8 Mental Models + Long-Running Agent Protocol
+**Last Updated**: March 29, 2026
+**Framework Version**: SDLC 6.2.1
+**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 8 Mental Models + Long-Running Agent Protocol + Fix-First + Effort Compression + Terminal Status Taxonomy
