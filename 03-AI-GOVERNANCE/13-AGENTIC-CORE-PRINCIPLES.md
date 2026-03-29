@@ -1,11 +1,11 @@
 ---
 title: "Agentic Core Principles"
-version: "6.2.0"
+version: "6.2.1"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"
 status: "ACTIVE"
-last_updated: "2026-02-18"
+last_updated: "2026-03-29"
 author: "SE 3.0 Track 1 — CTO Approved"
 origin: "arXiv:2509.06216v2 (SASE Framework)"
 ---
@@ -279,15 +279,135 @@ The SASE framework defines 6 engineering disciplines. Each maps to primary SDLC 
 - [MRP Template](../05-Templates-Tools/04-SASE-Artifacts/02-MRP-Template.md)
 - [VCR Template](../05-Templates-Tools/04-SASE-Artifacts/03-VCR-Template.md)
 
+---
+
+## 8. AGENT TASK TERMINAL STATUS TAXONOMY (NEW in 6.2.1)
+
+> **Source**: gstack methodology analysis (2026-03-29)
+>
+> Every agent task MUST end with exactly one of these 4 terminal statuses. No ambiguous endings.
+
+### 8.1 The Four Terminal Statuses
+
+| Status | Definition | Gate Action |
+|--------|------------|-------------|
+| **DONE** | Task completed successfully with all acceptance criteria met | Auto-advance to next gate |
+| **DONE_WITH_CONCERNS** | Task completed but with concerns that do not block progress | Flag for human review before advancing |
+| **BLOCKED** | Task cannot proceed due to an external dependency or unresolvable issue | Escalate immediately via CRP |
+| **NEEDS_CONTEXT** | Task cannot proceed due to missing information that only a human can provide | Pause session, await human input |
+
+### 8.2 Required Metadata per Status
+
+**DONE**
+- `summary`: concise description of what was accomplished
+- `artifacts`: list of produced artifacts (code, docs, evidence)
+- `evidence_hash`: SHA256 of the MRP evidence package
+
+**DONE_WITH_CONCERNS**
+- `summary`: description of what was accomplished
+- `concerns`: list of concern objects, each with `description` and `severity` (low | medium | high)
+- `recommendation`: suggested follow-up action for the reviewer
+
+**BLOCKED**
+- `blocker_description`: precise description of what is blocking progress
+- `suggested_next_step`: actionable recommendation to resolve the blocker
+- `who_can_unblock`: role or person who has authority to resolve (e.g., "CTO", "DevOps Lead")
+
+**NEEDS_CONTEXT**
+- `missing_information`: description of what information is absent
+- `questions`: list of specific questions for the human to answer
+- `partial_progress`: summary of work completed before the pause (if any)
+
+### 8.3 Connection to Quality Gates
+
+Terminal statuses feed directly into gate evaluation logic:
+
+```
+DONE               ──> Gate auto-advance (G0→G1→G2→G3→G4)
+DONE_WITH_CONCERNS ──> Flag for review — human must acknowledge concerns before gate passes
+BLOCKED            ──> Escalate via CRP — gate is paused until blocker is resolved
+NEEDS_CONTEXT      ──> Pause session — gate timer stops, human checkpoint triggered
+```
+
+This ensures that no task silently fails and no gate advances on incomplete work.
+
+### 8.4 Connection to Long-Running Agent Protocol (#16)
+
+Terminal statuses are the **FINAL checkpoint** in the [Long-Running Agent Protocol](./16-LONG-RUNNING-AGENT-PROTOCOL.md). The protocol defines intermediate checkpoints (memory snapshots, handoffs, human checkpoints) during execution. When execution concludes, the agent MUST emit exactly one terminal status:
+
+1. **Protocol checkpoint flow**: Start --> Intermediate checkpoints --> **Terminal status** --> Gate evaluation
+2. **Handoff compatibility**: When an agent hands off to another agent mid-protocol, the receiving agent inherits the task and is responsible for the terminal status
+3. **Session persistence**: The terminal status and its metadata are persisted in the evidence vault alongside the protocol's checkpoint history, forming a complete audit trail
+
+### 8.5 Examples
+
+**DONE example** (build task):
+```json
+{
+  "status": "DONE",
+  "summary": "Implemented user authentication endpoint with JWT token refresh",
+  "artifacts": ["backend/app/routes/auth.py", "backend/tests/unit/test_auth.py"],
+  "evidence_hash": "sha256:a3f2c8..."
+}
+```
+
+**DONE_WITH_CONCERNS example** (test task):
+```json
+{
+  "status": "DONE_WITH_CONCERNS",
+  "summary": "All 47 tests pass, coverage at 92%",
+  "concerns": [
+    {"description": "Flaky timeout on test_concurrent_sessions under load", "severity": "medium"},
+    {"description": "Missing edge case for expired refresh token + active session", "severity": "low"}
+  ],
+  "recommendation": "Add retry logic for concurrency test; edge case can be addressed in next sprint"
+}
+```
+
+**BLOCKED example** (integration task):
+```json
+{
+  "status": "BLOCKED",
+  "blocker_description": "Payment gateway sandbox credentials expired, API returns 401",
+  "suggested_next_step": "Renew sandbox API key in Stripe dashboard",
+  "who_can_unblock": "DevOps Lead or CTO"
+}
+```
+
+**NEEDS_CONTEXT example** (design task):
+```json
+{
+  "status": "NEEDS_CONTEXT",
+  "missing_information": "Multi-tenant isolation strategy not defined in AGENTS.md",
+  "questions": [
+    "Should tenants share a database with row-level security or use separate schemas?",
+    "What is the expected tenant count at launch (affects partitioning strategy)?"
+  ],
+  "partial_progress": "Drafted schema for single-tenant; awaiting isolation decision to finalize"
+}
+```
+
+---
+
 ### Related Documents
 - [Planning Mode Principle](./03-Planning-Mode-Principle.md) — when to engage planning mode
 - [Agentic Maturity Model](./14-AGENTIC-MATURITY-MODEL.md) — detailed L0-L3 assessment criteria
 - [Autonomous Codegen Patterns](./11-AUTONOMOUS-CODEGEN-PATTERNS.md) — quality gates for AI-generated code
 - [Multi-Agent Patterns](./12-MULTI-AGENT-PATTERNS.md) — team-based agent collaboration
 - [CLAUDE.md Standard](./10-CLAUDE-MD-STANDARD.md) — project context file standard
+- [Long-Running Agent Protocol](./16-LONG-RUNNING-AGENT-PROTOCOL.md) — checkpoint, memory, handoff protocol (terminal statuses are the final checkpoint)
+
+---
+
+## VERSION HISTORY
+
+| Version | Date | Change |
+|---------|------|--------|
+| 6.2.0 | 2026-02-18 | Initial Ring 1 slim version with 7 Agentic Principles + SE4H/SE4A |
+| 6.2.1 | 2026-03-29 | Added Section 8: Agent Task Terminal Status Taxonomy (F6) |
 
 ---
 
 **Document Status:** ACTIVE — PRODUCTION READY
-**Version:** 6.2.0 | **Last Updated:** February 18, 2026
-**Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.2.0
+**Version:** 6.2.1 | **Last Updated:** March 29, 2026
+**Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.2.1

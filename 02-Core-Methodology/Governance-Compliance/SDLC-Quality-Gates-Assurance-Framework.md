@@ -1458,6 +1458,105 @@ E2E Tests:
 
 ---
 
+## Part 13: Three-Tier Testing Methodology (NEW in 6.2.1)
+
+> **Source**: gstack three-tier testing system (2026-03-29). Addresses AI-specific testing costs (LLM eval runs cost money) and diff-based test selection.
+
+### The Three Tiers
+
+| Tier | What | Cost | When to Run | Gate Requirement |
+|------|------|------|-------------|-----------------|
+| **Tier 1 — Static** | Lint, type check, format check, schema validation, Zero Mock scan | Free | Every commit, every PR | G-Sprint (mandatory) |
+| **Tier 2 — Integration** | Unit tests, integration tests, E2E tests, API contract validation | CI minutes (moderate) | Pre-merge, gated on diff | G3 (mandatory) |
+| **Tier 3 — AI Evaluation** | LLM-as-Judge quality eval, security scan (SAST/DAST), performance benchmark | $$$ (LLM API calls) | Pre-release, weekly scheduled | G4 (mandatory for PRO+) |
+
+### Diff-Based Test Selection
+
+Not all tests run on every commit. Each test declares its file dependencies:
+
+```yaml
+# Test dependency declaration (conceptual)
+test_suites:
+  auth_tests:
+    triggers: ["backend/app/services/auth*", "backend/app/routes/auth*"]
+  gate_tests:
+    triggers: ["backend/app/services/gate*", "backend/app/models/gate*"]
+  global_tests:
+    triggers: ["*"]  # Always run (migrations, config, middleware)
+```
+
+**Rule**: Changes to global infrastructure (migrations, config, middleware, CI) trigger ALL tests. Feature-scoped changes trigger only affected suites.
+
+### Cost Management
+
+| Tier | Cost Control | Budget |
+|------|-------------|--------|
+| Tier 1 | Free — no cost control needed | Unlimited |
+| Tier 2 | Diff-based selection reduces CI minutes | Per-project CI budget |
+| Tier 3 | Gated by `EVALS=1` flag — never runs accidentally | Max $5/run (LLM eval), monthly cap per project |
+
+### Tier-Specific Gate Requirements
+
+| Gate | LITE | STANDARD | PRO | ENTERPRISE |
+|------|------|----------|-----|------------|
+| **G-Sprint** | Tier 1 | Tier 1 | Tier 1 | Tier 1 |
+| **G3** | Tier 1 + basic Tier 2 | Tier 1 + Tier 2 | Tier 1 + Tier 2 | Tier 1 + Tier 2 |
+| **G4** | Tier 1 + Tier 2 | Tier 1 + Tier 2 | Tier 1 + Tier 2 + Tier 3 | All three tiers |
+
+### Connection to Existing Standards
+
+- **Zero Skip Policy**: Applies to all tiers — no `skip` or `xfail` markers allowed
+- **Coverage targets**: Tier 2 enforces critical-path 95% (PRO+) / overall 80-85%
+- **Fix-First Protocol (Section 6.3)**: Tier 1/2 failures → Fix-First classification before merge
+
+---
+
+## Part 14: Documentation Staleness Detection (NEW in 6.2.1)
+
+> **Source**: gstack documentation staleness check (2026-03-29). Enforcement mechanism for Pillar 6 (Documentation Permanence).
+
+### The Problem
+
+Code changes but docs don't. Documentation drift is invisible until someone reads a stale doc and makes a wrong decision. The Framework emphasizes Documentation Permanence (Pillar 6) but lacked a detection mechanism.
+
+### The Protocol
+
+After every code change that passes G-Sprint or G3, cross-reference the diff against `.md` files:
+
+```
+For each .md file in /docs:
+  1. Does the code diff affect features/components described in this doc?
+  2. Was this doc updated in the same branch?
+  3. If code changed but doc wasn't → flag as STALE (informational)
+```
+
+### Classification
+
+| Result | Meaning | Action |
+|--------|---------|--------|
+| **FRESH** | Doc was updated alongside code | No action |
+| **STALE** | Code changed, related doc not updated | Informational flag — fix before G4 |
+| **UNRELATED** | Doc doesn't describe changed code | No action |
+
+### Gate Integration
+
+| Gate | Staleness Check |
+|------|----------------|
+| G-Sprint | Informational only (non-blocking) |
+| G3 | Warning — flag stale docs in review |
+| G4 | **BLOCKING for PRO+** — no stale docs in release |
+
+### Tier Rules
+
+| Tier | Enforcement |
+|------|-------------|
+| LITE | Not required |
+| STANDARD | Informational at G3 |
+| PROFESSIONAL | Warning at G3, blocking at G4 |
+| ENTERPRISE | Warning at G-Sprint, blocking at G3 and G4 |
+
+---
+
 ## Further Reading
 
 > The framework above is self-contained. References below are for deeper study.
@@ -1485,4 +1584,5 @@ E2E Tests:
 | 1.0 | 2026-01-28 | Original 2 documents (QA System, Quality-Security-Gates) | CTO (Tai) |
 | 2.0 | 2026-03-18 | Consolidated into Quality Gates & Assurance Framework (Framework 6.2.0) | CTO (Tai) |
 | 2.1 | 2026-03-29 | Added Fix-First Review Protocol (Section 6.3) — Framework 6.2.1 | PM + CTO |
+| 2.2 | 2026-03-29 | Added Three-Tier Testing (Part 13) + Doc Staleness Detection (Part 14) — Framework 6.2.1 | PM + CTO |
 
