@@ -30,6 +30,7 @@ created: 2026-03-03
 | @ceo | Strategic direction, G0.1 and G4 approval | Gate reviews |
 | @cpo | Product vision, G0.1 and G1 approval | Planning reviews |
 | @cto | Technical standards, G2 and G3 approval | Design and quality reviews |
+| @cso | Security posture, G2/G3/G4 security approval | Design, quality, deployment reviews (PRO+ tier) |
 
 ## Gates
 
@@ -37,9 +38,9 @@ created: 2026-03-03
 |------|-------|----------|----------|
 | G0.1 | 00 | @ceo, @cpo | Problem validated, aligned with strategy |
 | G1 | 01 | @cpo | Requirements complete, product-market fit |
-| G2 | 02 | @cto | Architecture sound, standards met |
-| G3 | 05 | @cto | Quality verified, production ready |
-| G4 | 06 | @ceo | Business approval for production release |
+| G2 | 02 | @cto + @cso | Architecture sound, standards met, security design reviewed |
+| G3 | 05 | @cto + @cso | Quality verified, security scan passed, production ready |
+| G4 | 06 | @ceo + @cso | Business approval + security sign-off for production release |
 
 ## Workflow
 

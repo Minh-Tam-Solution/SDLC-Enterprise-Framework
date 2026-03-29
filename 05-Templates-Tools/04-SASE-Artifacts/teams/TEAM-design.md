@@ -30,6 +30,7 @@ Own the **HOW** of the system. Transform requirements into architecture, technic
 | @architect | ADRs, technical specs, system design | Stage 02-03 |
 | @pm | Requirements clarification, acceptance criteria validation | Stage 02 (advisory) |
 | @coder | Implementation feasibility input, effort estimation | Stage 02 (advisory) |
+| @cso | Security architecture review, threat model, AGPL containment | Stage 02 (advisory, PRO+ tier) |
 
 ## Gates
 
@@ -55,7 +56,10 @@ Own the **HOW** of the system. Transform requirements into architecture, technic
 5. @coder provides effort estimation and feasibility input
    └── Format: [@coder: Can you estimate effort for <approach>?]
 
-6. Submit for G2 gate review
+6. @cso reviews security posture (PRO+ tier)
+   └── Verify: threat model, auth design, AGPL containment, API security
+
+7. Submit for G2 gate review
 ```
 
 ## Delegation Rules

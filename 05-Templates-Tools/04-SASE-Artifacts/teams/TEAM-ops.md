@@ -29,6 +29,7 @@ Own the **SHIP** and **RUN** — reliable deployments, infrastructure management
 |------|---------------|-------------|
 | @devops | Deployment pipelines, infrastructure, monitoring | Stage 06-07 |
 | @coder | Deployment scripts, infrastructure-as-code support | Stage 06 (advisory) |
+| @cso | Deployment security sign-off, SBOM verification, secrets rotation | Stage 06 (advisory, PRO+ tier) |
 
 ## Gates
 
@@ -45,6 +46,7 @@ Own the **SHIP** and **RUN** — reliable deployments, infrastructure management
 - [ ] Monitoring and alerting configured
 - [ ] Rollback procedure documented and tested
 - [ ] On-call schedule confirmed
+- [ ] Security sign-off from @cso (PRO+ tier): SBOM clean, 0 critical CVEs, AGPL verified
 
 ## Workflow
 

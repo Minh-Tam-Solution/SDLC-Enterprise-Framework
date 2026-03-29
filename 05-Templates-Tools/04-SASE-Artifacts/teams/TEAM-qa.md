@@ -28,6 +28,7 @@ Own the **VERIFY** — the final checkpoint before deployment. Ensure code meets
 |------|---------------|-------------|
 | @tester | Integration tests, E2E tests, coverage verification | Stage 05 |
 | @reviewer | Code quality review, standards compliance, doc sync | Stage 05 |
+| @cso | Security scan validation, OWASP ASVS L2 checklist, dependency audit | Stage 05 (advisory, PRO+ tier) |
 
 ## Gates
 
@@ -37,11 +38,12 @@ Own the **VERIFY** — the final checkpoint before deployment. Ensure code meets
 
 ### G3 Requires Both Sign-offs
 
-G3 is the **joint responsibility** of @tester and @reviewer:
+G3 is the **joint responsibility** of @tester, @reviewer, and @cso (PRO+ tier):
 - @tester verifies: functional correctness, test coverage, integration tests
-- @reviewer verifies: code quality, security, design doc consistency
+- @reviewer verifies: code quality, standards compliance, design doc consistency
+- @cso verifies: SAST passed, 0 critical CVEs, OWASP ASVS L2, secrets clean (PRO+ tier)
 
-Both must approve for G3 to pass.
+All active members must approve for G3 to pass.
 
 ## Workflow
 
