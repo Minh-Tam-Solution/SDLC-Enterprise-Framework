@@ -482,8 +482,9 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.2.0** | **Mar 18, 2026** | **Agentic SDLC + Lean Ring 1**: 8 Mental Models, Long-Running Agent Protocol, Citizen Developer Guide, ROI Calculator. Ring 1 consolidated (-21%). 42 tool-specific refs sanitized. |
-| 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 17 role templates + 10 team charters (Ring 2) |
+| **6.2.1** | **Mar 29, 2026** | **Methodology Upgrade**: Fix-First Review Protocol (F1), Effort Compression Table (F2), Scope Drift Detection (F3), Three-Tier Testing (F4), Doc Staleness Detection (F5), Terminal Status Taxonomy (F6). SOUL-cso added (18 roles). |
+| 6.2.0 | Mar 18, 2026 | Agentic SDLC + Lean Ring 1: 8 Mental Models, Long-Running Agent Protocol, Citizen Developer Guide, ROI Calculator. Ring 1 consolidated (-21%). 42 tool-specific refs sanitized. |
+| 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 18 role templates + 10 team charters (Ring 2) |
 | 6.1.1 | Feb 21, 2026 | Post-Cleanup Patch: AI Council→Senior Review Board, 36 frozen templates archived, Conversation-First Governance |
 | 6.1.0 | Feb 18, 2026 | Consolidation Release: Ring 1 monolith slim, agentic→AI-GOV move, Multi-Agent Patterns, BRS/MTS/LPS→AGENTS.md |
 | 6.0.6 | Feb 16, 2026 | Anthropic Best Practices Integration (Sprint 174): CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |

@@ -159,7 +159,7 @@ AI-Governance Principles (03-AI-GOVERNANCE/):
   02-MRP-Template.md         # Merge-Readiness Pack - 5-point evidence (SE4A creates)
   03-VCR-Template.md         # Version Controlled Resolution (SE4H approves)
   AGENTS-MD-Template.md      # Industry standard context file (60K+ repos)
-  souls/                     # NEW 6.1.2: 17 SOUL role templates (SASE 12-role model)
+  souls/                     # NEW 6.1.2: 18 SOUL role templates (SASE 13-role model)
   teams/                     # NEW 6.1.2: 10 TEAM charters (function + organizational)
 
 DEPRECATED (5.2.0):
@@ -369,7 +369,7 @@ All templates and tools are mapped to the complete 10-stage lifecycle:
 │   ├── 02-MRP-Template.md           # Merge-Readiness Pack
 │   ├── 03-VCR-Template.md           # Version Control Resolution
 │   ├── AGENTS-MD-Template.md        # Industry standard context
-│   ├── souls/                       # NEW 6.1.2: 17 SOUL role templates
+│   ├── souls/                       # NEW 6.1.2: 18 SOUL role templates
 │   └── teams/                       # NEW 6.1.2: 10 TEAM charters
 │
 ├── 02-AI-Tools/                      # PRIMARY (96% time savings)
