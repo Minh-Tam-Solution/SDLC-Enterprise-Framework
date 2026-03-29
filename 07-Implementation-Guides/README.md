@@ -181,7 +181,7 @@ Location: [05-Templates-Tools/04-SASE-Artifacts/](../05-Templates-Tools/04-SASE-
 | **CRP** (Consultation Request) | Agent (SE4A) | When uncertain, request human guidance |
 | **MRP** (Merge-Readiness Pack) | Agent (SE4A) | 5-point evidence before merge |
 | **VCR** (Version Controlled Resolution) | Human (SE4H) | Approval/rejection record |
-| **17 SOUL templates** | Framework | Role-specific personas (coder, tester, architect, etc.) |
+| **18 SOUL templates** | Framework | Role-specific personas (coder, tester, architect, cso, etc.) |
 | **10 TEAM charters** | Framework | Team composition templates |
 
 ### Automation Scripts

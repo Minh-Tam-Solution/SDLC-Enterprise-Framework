@@ -12,7 +12,7 @@
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
 - ✅ 7 Pillars + Section 7 (QA Anti-Vibecoding) + Section 8 (Spec Standard)
 - ✅ 4-Tier Classification with fixed autonomy presets (LITE=assist_only → ENTERPRISE=autonomous_gated)
-- ✅ **13 Multi-Agent Patterns** + 17 SOUL role templates + 10 TEAM charters
+- ✅ **13 Multi-Agent Patterns** + 18 SOUL role templates + 10 TEAM charters
 - ✅ **Long-Running Agent Protocol** — checkpoint, memory, handoff, traceability
 - ✅ **Citizen Developer Guide** — 30-min onboarding for non-technical users
 - ✅ SASE Simplified: AGENTS.md + CRP + MRP + VCR

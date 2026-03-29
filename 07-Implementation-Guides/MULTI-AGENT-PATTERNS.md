@@ -51,7 +51,7 @@ This document codifies **10 battle-tested patterns** extracted from 3 production
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐│
 │  │  Messaging   │  │  Lifecycle   │  │   Organization          ││
 │  │             │  │             │  │                         ││
-│  │ • Lane Queue │  │ • Snapshot  │  │ • 12-Role SASE         ││
+│  │ • Lane Queue │  │ • Snapshot  │  │ • 13-Role SASE         ││
 │  │ • Queue Mode │  │   Precedence│  │   Classification       ││
 │  │ • @Mention  │  │ • Parent-   │  │ • Session Scoping      ││
 │  │   Routing   │  │   Child     │  │ • Canonical Protocol   ││
@@ -73,7 +73,7 @@ This document codifies **10 battle-tested patterns** extracted from 3 production
 | 5 | Snapshot Precedence | Lifecycle | Medium | Agent configuration management |
 | 6 | Parent-Child Inheritance | Lifecycle | High | Delegation chains |
 | 7 | Provider Failover Chain | Lifecycle | High | Multi-provider AI usage |
-| 8 | 12-Role SASE Classification | Organization | Medium | Enterprise agent governance |
+| 8 | 13-Role SASE Classification | Organization | Medium | Enterprise agent governance |
 | 9 | Session Scoping | Organization | Low | Multi-user/multi-channel agents |
 | 10 | Canonical Protocol Owner | Organization | Low | Multi-platform ecosystems |
 
@@ -369,7 +369,7 @@ When a provider hits rate_limit:
 
 ---
 
-## 10. Pattern 8: 12-Role SASE Classification
+## 10. Pattern 8: 13-Role SASE Classification
 
 ### Problem
 
@@ -382,7 +382,7 @@ Define **12 agent roles** classified into **3 types** based on the SASE Framewor
 | Type | Roles | Authority | Environment |
 |------|-------|-----------|-------------|
 | **SE4A** (Agent Executor) | researcher, pm, pjm, architect, coder, reviewer, tester, devops | Delegated by SE4H | Execution environment |
-| **SE4H** (Human Advisor) | ceo, cpo, cto | VCR authority, final approval | Advisory environment |
+| **SE4H** (Human Advisor) | ceo, cpo, cto, cso | VCR authority, final approval | Advisory environment |
 | **Router** | assistant | No authority, guidance only | Both |
 
 ### SE4A Roles (8 Executors)
@@ -398,7 +398,7 @@ Define **12 agent roles** classified into **3 types** based on the SASE Framewor
 | `tester` | Testing, validation | Test generation, E2E testing |
 | `devops` | Operations, deployment | CI/CD setup, infrastructure config |
 
-### SE4H Roles (3 AI Advisors)
+### SE4H Roles (4 AI Advisors)
 
 **Critical distinction**: SE4H entries represent **AI advisors supporting human decision-makers**, NOT the humans themselves. The actual human retains:
 - Final decision authority (VCR — Verify, Correct, Ratify)
@@ -409,7 +409,8 @@ Define **12 agent roles** classified into **3 types** based on the SASE Framewor
 |------|---------------|-------------|
 | `ceo` | Strategic decisions, roadmap synthesis | Analysis, recommendations, summaries |
 | `cpo` | Product decisions, prioritization | Research summaries, draft proposals |
-| `cto` | Architecture decisions, security analysis | Technical assessments, risk analysis |
+| `cto` | Architecture decisions, technical standards | Technical assessments, risk analysis |
+| `cso` | Security architecture, OWASP ASVS, AGPL containment | Threat models, security gate approvals |
 
 ### SE4H Behavioral Constraints
 
@@ -431,7 +432,7 @@ The `assistant` role is a **routing agent** that:
 - Has no decision authority — purely navigational
 - Uses a fast, low-cost model
 
-> **Implementation**: See [05-Templates-Tools/04-SASE-Artifacts/souls/](../05-Templates-Tools/04-SASE-Artifacts/souls/) for concrete SOUL role templates implementing the 12-role SASE model.
+> **Implementation**: See [05-Templates-Tools/04-SASE-Artifacts/souls/](../05-Templates-Tools/04-SASE-Artifacts/souls/) for concrete SOUL role templates implementing the 13-role SASE model.
 
 ### Model Tier Recommendations
 
@@ -570,7 +571,7 @@ Every agent message generates traceable evidence:
 | Provider cascade failure | High (availability) | Abort matrix prevents futile retries |
 | Message loss | Medium (data) | Database-as-truth, dead-letter for failures |
 | Budget overrun | High (cost) | Circuit breaker on `max_budget_cents` |
-| Scope creep in agent roles | Medium (quality) | 12-role taxonomy with behavioral constraints |
+| Scope creep in agent roles | Medium (quality) | 13-role taxonomy with behavioral constraints |
 | Protocol drift between platforms | Medium (integration) | Canonical protocol owner pattern |
 
 ---

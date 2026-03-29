@@ -24,7 +24,7 @@
 
 **13 Multi-Agent Patterns** (was 10): Added long-running sessions (#11), cross-team coordination (#12 PREVIEW), agentic quality council (#13 PREVIEW). See [Multi-Agent Patterns](../07-Implementation-Guides/MULTI-AGENT-PATTERNS.md).
 
-**17 SOUL Role Templates + 10 TEAM Charters**: Battle-tested agent personas for the SASE 12-role model. See [SASE Artifacts](../05-Templates-Tools/04-SASE-Artifacts/).
+**18 SOUL Role Templates + 10 TEAM Charters**: Battle-tested agent personas for the SASE 13-role model. See [SASE Artifacts](../05-Templates-Tools/04-SASE-Artifacts/).
 
 **Tool-Agnostic**: 42 product-specific references removed from Ring 1. Framework works with ANY AI tool.
 

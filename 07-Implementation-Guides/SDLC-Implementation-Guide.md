@@ -14,7 +14,7 @@
 **What is SDLC 6.2.0?**
 - A **10-stage lifecycle** framework (WHY → GOVERN) grounded in **8 Mental Models**
 - With **7-Pillar Architecture** + **Section 7 Quality Assurance** + **Section 8 Specification Standard**
-- With **SASE** for human-AI collaboration (AGENTS.md + CRP/MRP/VCR + 17 SOUL role templates)
+- With **SASE** for human-AI collaboration (AGENTS.md + CRP/MRP/VCR + 18 SOUL role templates)
 - With **Long-Running Agent Protocol** for multi-session agent continuity
 - And **4-tier scaling** (LITE → ENTERPRISE) with fixed autonomy presets
 
@@ -1136,7 +1136,7 @@ For teams new to SDLC 6.2.0, the BFlow "stealth pilot" approach reduces risk by 
 ### Core Reading (Start Here)
 - [SDLC-PRE-COMMIT-HOOKS.md](SDLC-PRE-COMMIT-HOOKS.md) — Setup quality gates (30 min)
 - [SDLC-Code-Review-Guide.md](SDLC-Code-Review-Guide.md) — Code review (all tiers)
-- [SASE Artifacts](../05-Templates-Tools/04-SASE-Artifacts/) — AGENTS.md, CRP, MRP, VCR, 17 SOULs
+- [SASE Artifacts](../05-Templates-Tools/04-SASE-Artifacts/) — AGENTS.md, CRP, MRP, VCR, 18 SOULs
 
 ### AI Agents & Multi-Agent (6.2.0)
 - [MULTI-AGENT-PATTERNS.md](MULTI-AGENT-PATTERNS.md) — 13 collaboration patterns (lane queues, failover, snapshots)
