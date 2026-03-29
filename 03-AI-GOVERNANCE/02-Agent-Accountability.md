@@ -1,6 +1,6 @@
 # Principle 2: Agent Accountability
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Status**: ACTIVE
 **Date**: January 28, 2026
 

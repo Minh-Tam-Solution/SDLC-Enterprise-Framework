@@ -4,7 +4,7 @@
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Stage**: 05-TEST
 **Purpose**: Standardized methodology for End-to-End API testing using OpenAPI specifications
 
@@ -471,6 +471,6 @@ Before merging, ensure:
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Owner**: Engineering + QA Teams
 **Approval**: CTO @nqh ✅

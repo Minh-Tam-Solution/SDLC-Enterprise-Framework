@@ -1,6 +1,6 @@
 # SDLC Project Structure Standard
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **SDLC Framework Version**: 6.2.0
 **Date**: January 29, 2026
 **Status**: ACTIVE

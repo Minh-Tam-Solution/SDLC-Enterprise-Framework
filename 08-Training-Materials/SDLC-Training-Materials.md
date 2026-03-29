@@ -1,11 +1,11 @@
 # SDLC 6.2.0 Training Materials - Complete Learning Package
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: March 18, 2026
 **Audience**: All team members — developers, designers, product managers, QA, and non-technical staff (citizen developers)
 **Duration**: 8 hours total (can be split across multiple sessions)
 **Prerequisites**: SDLC fundamentals knowledge (or 2-hour SDLC fundamentals course)
-**Framework**: SDLC 6.2.0 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
+**Framework**: SDLC 6.2.1 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -1327,8 +1327,8 @@ Day 11: CPO 1-on-1
 **Audience**: All team members (developers, designers, PM, QA)
 **Duration**: 8 hours core + ongoing practice
 **Certification**: SDLC 6.2.0 Certified Practitioner
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: January 29, 2026
 **License**: MTS Internal Use
 **What's New**: 7-Pillar + Section 7 Quality Assurance System + AI Governance Principles
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1

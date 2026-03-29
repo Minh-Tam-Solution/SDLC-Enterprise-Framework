@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-DESIGN-THINKING-TEMPLATES"
 title: "Design Thinking Templates & Case Studies"
-version: "6.2.0"
+version: "6.2.1"
 status: "ACTIVE"
 section: "02-Core-Methodology/Documentation-Standards"
 ring: "Core"

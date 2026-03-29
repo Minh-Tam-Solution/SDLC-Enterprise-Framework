@@ -1,7 +1,7 @@
 ---
 role: sales
 category: executor
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.2.1"
 version: 2.0.0
 sdlc_stages: ["00", "01"]
 sdlc_gates: []

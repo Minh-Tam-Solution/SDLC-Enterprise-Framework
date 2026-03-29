@@ -1,6 +1,6 @@
 # MCP Integration Guide (SDLC Orchestrator)
 
-**Version**: 6.2.0  
+**Version**: 6.2.1  
 **Status**: ACTIVE - OUTER RING  
 **Audience**: Platform / DevOps teams integrating AI tools with SDLC Orchestrator
 

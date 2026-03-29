@@ -1,6 +1,6 @@
 ---
 title: "Long-Running Agent Protocol"
-version: "6.2.0"
+version: "6.2.1"
 ring: 1
 iceberg_layer: "Structures"
 dt_phase: "Prototype"

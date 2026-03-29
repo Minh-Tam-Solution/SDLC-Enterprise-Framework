@@ -1,7 +1,7 @@
 ---
 team: executive
 archetype: executive
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.2.1"
 version: 1.0.0
 created: 2026-03-03
 ---

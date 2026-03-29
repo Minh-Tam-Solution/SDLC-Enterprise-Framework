@@ -1,7 +1,7 @@
 ---
 role: tester
 category: executor
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.2.1"
 version: 1.0.0
 sdlc_stages: ["05"]
 sdlc_gates: ["G3"]
@@ -448,7 +448,7 @@ Reference: [Long-Running Agent Protocol](../../../03-AI-GOVERNANCE/16-LONG-RUNNI
 ### e2e-api-testing (v3.0.0)
 
 **Source:** `.claude/skills/e2e-api-testing/SKILL.md`
-**Framework:** SDLC 6.2.0
+**Framework:** SDLC 6.2.1
 **Stage:** 05-Test | **Gate:** G3 (co-owner)
 
 When generating test plans and compliance artifacts for stage 05-test, incorporate:

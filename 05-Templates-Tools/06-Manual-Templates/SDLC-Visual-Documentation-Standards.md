@@ -1,9 +1,9 @@
 # SDLC Visual Documentation Standards
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Ring**: 1 (Core - Timeless Standards)
 **Source**: Consolidated from RFC-SDLC-607 (Boris Cherny Tactic #5)
 
@@ -157,7 +157,7 @@ Every diagram should include:
 ## Authentication Flow
 
 **Format**: ASCII Sequence Diagram
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: 2026-02-02
 **Source**: Design specification (SPEC-042)
 **Evidence**: EVD-2026-02-042
@@ -329,7 +329,7 @@ All diagrams must reference Evidence artifacts:
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Ring**: 1 (Core - Timeless Standards)
 **Source**: Consolidated from RFC-SDLC-607 (Boris Cherny Tactic #5)
 **Owner**: Engineering + Documentation Team

@@ -1,6 +1,6 @@
 # SDLC Sprint Governance
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: January 28, 2026
 **Stage**: 02 - Core Methodology (Governance & Compliance)
 **Pillar**: 2 - Sprint Planning Governance (Core Pillar)
@@ -1055,6 +1055,6 @@ Weekly Escalation (in roadmap review):
 
 **Document Status**: ACTIVE
 **Compliance**: MANDATORY for PROFESSIONAL+ tiers
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Last Updated**: January 28, 2026
 **Owner**: CTO Office

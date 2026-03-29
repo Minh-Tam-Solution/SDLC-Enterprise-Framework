@@ -1,6 +1,6 @@
 # AI Governance Principles
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Status**: ACTIVE
 **Date**: March 18, 2026
 **Pillar**: Core AI Governance (6.2.0: Lean Ring 1 — implementation patterns moved to Ring 2)
@@ -153,4 +153,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1

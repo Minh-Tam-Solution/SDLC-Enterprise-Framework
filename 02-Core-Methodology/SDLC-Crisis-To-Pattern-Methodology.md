@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-CRISIS-TO-PATTERN"
 title: "Crisis-to-Pattern Methodology"
-version: "6.2.0"
+version: "6.2.1"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"

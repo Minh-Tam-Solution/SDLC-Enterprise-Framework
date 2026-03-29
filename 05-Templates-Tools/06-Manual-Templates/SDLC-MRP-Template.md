@@ -1,5 +1,5 @@
 ---
-version: "6.2.0"
+version: "6.2.1"
 document_type: "Framework Standard"
 section: "05-Templates-Tools/06-Manual-Templates"
 status: "APPROVED"

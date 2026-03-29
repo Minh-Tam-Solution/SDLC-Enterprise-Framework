@@ -1,6 +1,6 @@
 ---
 title: "SDLC Quality Gates & Assurance Framework"
-version: "6.2.0"
+version: "6.2.1"
 ring: 1
 sdlc_version: "6.2.0"
 last_updated: "2026-03-18"

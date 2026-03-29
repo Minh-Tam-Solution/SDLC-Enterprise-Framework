@@ -1,7 +1,7 @@
 ---
 role: ceo
 category: advisor
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.2.1"
 version: 1.0.0
 sdlc_stages: ["00", "06", "09"]
 sdlc_gates: ["G0.1", "G4"]

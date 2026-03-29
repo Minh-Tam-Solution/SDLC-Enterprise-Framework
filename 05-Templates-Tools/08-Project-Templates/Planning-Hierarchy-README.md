@@ -1,12 +1,12 @@
 # Planning Hierarchy Templates
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: January 22, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy)
 **Status**: ACTIVE - Production Templates
 **Authority**: CPO Office
-**Framework**: SDLC 6.2.0 (7-Pillar Architecture)
+**Framework**: SDLC 6.2.1 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
 
 ---

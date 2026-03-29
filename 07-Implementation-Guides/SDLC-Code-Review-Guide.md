@@ -1,6 +1,6 @@
 # SDLC Code Review Guide — Unified 3-Tier Framework
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Last Updated**: February 15, 2026
 **Status**: PRODUCTION READY (Consolidated SSOT — Feb 2026)
 **Stage**: 04 (BUILD) — Code Review Excellence
@@ -528,7 +528,7 @@ Team Health:
 
 **Document Status**: ACTIVE (SSOT)
 **Owner**: CPO Office
-**Framework**: SDLC 6.2.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.2.1 (7-Pillar + 2-Section)
 
 **Consolidation History (Feb 2026)**:
 - Merged from 3 guides (3,536 LOC) → 1 SSOT (~450 LOC)

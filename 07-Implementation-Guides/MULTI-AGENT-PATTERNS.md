@@ -1,5 +1,5 @@
 ---
-version: "6.2.0"
+version: "6.2.1"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -624,4 +624,4 @@ Level 4: Cross-platform with canonical protocol + OTT channels
 **Document Status**: APPROVED
 **Owner**: CTO Office
 **Last Updated**: February 18, 2026
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1

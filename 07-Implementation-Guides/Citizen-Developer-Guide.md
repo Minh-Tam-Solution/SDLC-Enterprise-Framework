@@ -1,6 +1,6 @@
 ---
 title: "Citizen Developer Guide"
-version: "6.2.0"
+version: "6.2.1"
 ring: 3
 iceberg_layer: "Events"
 dt_phase: "Empathize + Prototype"

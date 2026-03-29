@@ -99,7 +99,7 @@ Each SOUL file follows this structure:
 ---
 role: <role_name>
 category: executor | advisor | router
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.2.1"
 version: 1.0.0
 sdlc_stages: ["04"]           # Which SDLC stages
 sdlc_gates: ["G-Sprint"]      # Which gates

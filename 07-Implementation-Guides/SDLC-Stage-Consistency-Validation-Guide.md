@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Date**: February 1, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Specification**: SPEC-0021 Stage Consistency Validation (moved to Orchestrator `docs/05-test/`)
 **Target**: Developers, Tech Leads, QA Engineers implementing 4-stage consistency validation
 

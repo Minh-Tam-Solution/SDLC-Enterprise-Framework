@@ -3,7 +3,7 @@
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Purpose**: Define and enforce Single Source of Truth across all SDLC stages
 
 ---
@@ -489,6 +489,6 @@ DATABASE_URL = getenv("DATABASE_URL")  # References .env.example structure
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.2.0
+**Framework**: SDLC 6.2.1
 **Owner**: Architecture + Engineering Teams
 **Approval**: CTO @nqh ✅

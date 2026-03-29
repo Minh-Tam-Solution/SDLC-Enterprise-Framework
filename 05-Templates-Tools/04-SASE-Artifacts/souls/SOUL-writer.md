@@ -1,7 +1,7 @@
 ---
 role: writer
 category: executor
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.2.1"
 version: 1.0.0
 sdlc_stages: ["00", "01", "02", "04", "06"]
 sdlc_gates: ["G0.1", "G0.2", "G1", "G2", "G3"]

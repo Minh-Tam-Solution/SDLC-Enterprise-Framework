@@ -1,6 +1,6 @@
 # SDLC 6.2.0 Core Methodology
 
-**Version**: 6.2.0
+**Version**: 6.2.1
 **Date**: March 18, 2026
 **Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (8 Mental Models, Long-Running Agent Protocol, tool-agnostic)
 **Authority**: Chairman + CEO + CPO + CTO Approved
