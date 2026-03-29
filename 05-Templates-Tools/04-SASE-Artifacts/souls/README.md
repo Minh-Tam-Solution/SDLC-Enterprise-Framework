@@ -18,7 +18,7 @@ SOULs are the persona layer that sits above AGENTS.md (workspace context). While
 
 ---
 
-## SASE 12-Role Classification
+## SASE 13-Role Classification
 
 ### SE4A — Software Engineering for Agents (8 Executor Roles)
 
@@ -33,29 +33,30 @@ SOULs are the persona layer that sits above AGENTS.md (workspace context). While
 | 7 | **fullstack** | `SOUL-fullstack.md` | Full-Stack Developer — frontend + backend implementation | 04 (Build) |
 | 8 | **reviewer** | `SOUL-reviewer.md` | Code Reviewer — PR review, quality checks, best practices | 04-05 (Build-Test) |
 
-### SE4H — Software Engineering for Humans (3 Advisor Roles)
+### SE4H — Software Engineering for Humans (4 Advisor Roles)
 
 | # | SOUL | File | Purpose | SDLC Stages |
 |---|------|------|---------|-------------|
 | 9 | **ceo** | `SOUL-ceo.md` | CEO Advisor — business strategy, market positioning | 00-09 (All) |
 | 10 | **cto** | `SOUL-cto.md` | CTO Advisor — technical strategy, architecture governance | 00-09 (All) |
 | 11 | **cpo** | `SOUL-cpo.md` | CPO Advisor — product strategy, user experience | 00-09 (All) |
+| 12 | **cso** | `SOUL-cso.md` | CSO Advisor — security architecture, OWASP ASVS, AGPL, threat modeling | 02-06, 09 |
 
 ### Router (1 Role)
 
 | # | SOUL | File | Purpose | SDLC Stages |
 |---|------|------|---------|-------------|
-| 12 | **assistant** | `SOUL-assistant.md` | Router — routes requests to appropriate specialist roles | 00-09 (All) |
+| 13 | **assistant** | `SOUL-assistant.md` | Router — routes requests to appropriate specialist roles | 00-09 (All) |
 
 ### Support Roles (1 SE4A + 3 Non-SDLC)
 
 | # | SOUL | File | Purpose | Classification |
 |---|------|------|---------|----------------|
-| 13 | **researcher** | `SOUL-researcher.md` | Research — literature review, competitive analysis | SE4A (SDLC) |
-| 14 | **writer** | `SOUL-writer.md` | Documentation specialist | Nice-to-have |
-| 15 | **sales** | `SOUL-sales.md` | Sales engineer | Nice-to-have (non-SDLC) |
-| 16 | **cs** | `SOUL-cs.md` | Customer service | Nice-to-have (non-SDLC) |
-| 17 | **itadmin** | `SOUL-itadmin.md` | IT administrator | Nice-to-have (non-SDLC) |
+| 14 | **researcher** | `SOUL-researcher.md` | Research — literature review, competitive analysis | SE4A (SDLC) |
+| 15 | **writer** | `SOUL-writer.md` | Documentation specialist | Nice-to-have |
+| 16 | **sales** | `SOUL-sales.md` | Sales engineer | Nice-to-have (non-SDLC) |
+| 17 | **cs** | `SOUL-cs.md` | Customer service | Nice-to-have (non-SDLC) |
+| 18 | **itadmin** | `SOUL-itadmin.md` | IT administrator | Nice-to-have (non-SDLC) |
 
 ---
 
@@ -65,9 +66,9 @@ SOULs are the persona layer that sits above AGENTS.md (workspace context). While
 |------|----------------|-------|
 | **LITE** | assistant, coder, tester | 3 |
 | **STANDARD** | + pm, architect, reviewer | 6 |
-| **PROFESSIONAL** | + devops, fullstack, pjm, researcher | 10 |
-| **ENTERPRISE** | + ceo, cto, cpo | 13 |
-| **OPTIONAL** | + writer, sales, cs, itadmin | 17 |
+| **PROFESSIONAL** | + devops, fullstack, pjm, researcher, cso | 11 |
+| **ENTERPRISE** | + ceo, cto, cpo | 14 |
+| **OPTIONAL** | + writer, sales, cs, itadmin | 18 |
 
 > **Note**: OPTIONAL roles (writer, sales, cs, itadmin) are non-SDLC support roles. Include them when your team needs business operations support beyond software engineering.
 
@@ -155,3 +156,4 @@ Team charters define how SOULs collaborate in groups. See `../teams/` for 8 team
 - Key executor SOULs (coder, architect, reviewer, tester, fullstack) now include **Long-Running Task Protocol** section
 - All version references bumped to SDLC 6.2.0
 - Framework references updated to consolidated docs (Stage-Lifecycle-Framework, Quality-Gates-Assurance-Framework)
+- **NEW: SOUL-cso.md** — Chief Security Officer added as SE4H advisor role (PRO+ tier). Covers OWASP ASVS L2, AGPL containment, threat modeling, SBOM, supply chain security. SASE model updated from 12→13 core roles (17→18 total)
