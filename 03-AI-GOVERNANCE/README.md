@@ -45,6 +45,15 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 14 | [Agentic Maturity Model](14-AGENTIC-MATURITY-MODEL.md) | L0-L3 maturity levels, AGENTS.md standard |
 | 16 | [Long-Running Agent Protocol](16-LONG-RUNNING-AGENT-PROTOCOL.md) | **NEW 6.2.0** — Checkpoint, memory, handoff, human checkpoints |
 
+### New Pillars (6.3.0 Draft — validated by SDLC Orchestrator v2)
+
+| # | Document | Purpose |
+|---|----------|---------|
+| 17 | [Agentic OS Patterns](17-AGENTIC-OS-PATTERNS.md) | 12/18 production-verified patterns from 513K LOC Claude Code |
+| 18 | [LLM Model Strategy](18-LLM-MODEL-STRATEGY.md) | 3-tier cascade standard (Claude Code → OpenAI → Ollama) |
+| 19 | [Federated Platform Standard](19-FEDERATED-PLATFORM-STANDARD.md) | BRAIN/VOICE/HANDS/ADVISOR boundaries + V2 Independence |
+| 20 | [Evidence Integration Standard](20-EVIDENCE-INTEGRATION-STANDARD.md) | Multi-source ingestion, no source preference |
+
 ### Moved to Ring 2 (6.2.0 — implementation patterns, not timeless principles)
 
 | # | Old Location | New Location | Reason |
