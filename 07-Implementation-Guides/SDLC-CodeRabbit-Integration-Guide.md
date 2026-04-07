@@ -607,7 +607,7 @@ compliance:
 
 advanced:
   # AI Model Selection
-  model: "gpt-4"  # Options: gpt-4, gpt-3.5-turbo, claude-2
+  model: "gpt-4o"  # Options: gpt-4o, claude-sonnet-4, claude-opus-4 (updated 6.3.0)
 
   # Context Window
   max_context_lines: 500  # Lines of code context to send to AI
@@ -1032,14 +1032,14 @@ Result:
 ### Custom AI Model Selection
 
 ```yaml
-Options:
-  - GPT-4: Highest accuracy, slower (2-5 min)
-  - GPT-3.5 Turbo: Faster, good accuracy (1-2 min)
-  - Claude-2: Alternative, good for long context
+Options (updated 6.3.0):
+  - GPT-4o: Best accuracy + speed balance (1-3 min)
+  - Claude Sonnet 4: Strong reasoning, excellent for code review (1-3 min)
+  - Claude Opus 4: Highest accuracy, complex codebases (2-5 min)
 
 Recommendation:
-  - Use GPT-4 for production repos
-  - Use GPT-3.5 for rapid development repos
+  - Use GPT-4o or Claude Sonnet for production repos
+  - Use Claude Opus for complex architecture reviews
   - Test both and compare results
 ```
 

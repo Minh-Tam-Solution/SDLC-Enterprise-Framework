@@ -28,7 +28,7 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 - ✅ **Evidence base** - Anthropic 2026 Trends, NIST emerging, Singapore MGF, Context Engineering Guide
 
 **What's in 6.1.2 (March 9, 2026) - SOULs + TEAMs TEMPLATES**:
-- ✅ **17 SOUL role templates** - SASE 12-role model personas added to Ring 2 (`04-SASE-Artifacts/souls/`)
+- ✅ **17 SOUL role templates** (now 18 with SOUL-cso in 6.3.0) - SASE 12-role model personas added to Ring 2 (`04-SASE-Artifacts/souls/`)
 - ✅ **10 TEAM charters** - 7 SDLC function teams + 3 organizational teams (`04-SASE-Artifacts/teams/`)
 - ✅ **Tier Availability Matrix** - LITE(3) → STANDARD(6) → PRO(10) → ENTERPRISE(13) → OPTIONAL(17)
 - ✅ **Hybrid sourcing** - EndiorBot (12 SOULs + 7 TEAMs) + MTClaw (5 SOULs + 3 TEAMs), best-of-breed per role

@@ -1577,6 +1577,69 @@ For each .md file in /docs:
 
 ---
 
+## Part 15: Gate Lifecycle State Machine (NEW in 6.3.0)
+
+Every quality gate (G0-G4, G-Sprint, G-Sprint-Close) follows a **5-state lifecycle**. This state machine is the SSOT for gate progression — all platform implementations MUST enforce these transitions.
+
+### Gate States
+
+| State | Description | Allowed Transitions |
+|-------|-------------|---------------------|
+| **DRAFT** | Gate created, criteria defined. Evidence collection in progress. | → EVALUATED |
+| **EVALUATED** | Evidence collected, scoring completed (O1 Scope + O2 Accuracy + O3 Completeness). | → SUBMITTED, → DRAFT (if re-evaluation needed) |
+| **SUBMITTED** | Ready for approval, awaiting human reviewer. | → APPROVED, → REJECTED |
+| **APPROVED** | Gate passed. Proceed to next stage. Immutable after approval. | (terminal) |
+| **REJECTED** | Gate failed. Rework required. Max 3 rejections before escalation. | → DRAFT (rework), → ESCALATED (after 3 rejections) |
+
+### State Transition Diagram
+
+```
+                    ┌──────────────┐
+                    │    DRAFT     │ ← Gate created
+                    └──────┬───────┘
+                           │ evaluate()
+                    ┌──────▼───────┐
+              ┌─────│  EVALUATED   │
+              │     └──────┬───────┘
+              │            │ submit()
+  re-evaluate │     ┌──────▼───────┐
+              │     │  SUBMITTED   │ ← Awaiting human approval
+              │     └──┬───────┬───┘
+              │        │       │
+              │  approve()  reject()
+              │        │       │
+         ┌────▼──┐  ┌──▼───┐  ┌▼─────────┐
+         │ DRAFT │  │APPRVD│  │ REJECTED  │──→ DRAFT (rework)
+         └───────┘  └──────┘  └───────────┘    (max 3, then escalate)
+```
+
+### Invariants
+
+1. **Forward-only progression**: DRAFT → EVALUATED → SUBMITTED → terminal. No skipping states.
+2. **Human approval required for G3/G4**: G3_SHIP_READY and G4_PRODUCTION ALWAYS require SUBMITTED → human APPROVED. No auto-approve regardless of tier or autonomy level.
+3. **Max 3 rejections**: After 3 REJECTED → DRAFT cycles, gate escalates to senior review (NEXUS Dev↔QA loop pattern).
+4. **24-hour staleness**: If a gate stays in EVALUATED or SUBMITTED for >24 hours without action, Reaction Engine triggers a stale gate notification.
+5. **Immutability after approval**: APPROVED gates cannot be modified. Evidence is sealed with SHA256 hash chain.
+
+### Tier-Aware Auto-Advance (G0-G2 only)
+
+| Autonomy Level | G0 | G1 | G2 | G3 | G4 |
+|----------------|----|----|----|----|-----|
+| assist_only | Manual | Manual | Manual | Manual | Manual |
+| contribute_only | Auto | Auto | Manual | Manual | Manual |
+| member_guardrails | Auto | Auto | Auto | Manual | Manual |
+| autonomous_gated | Auto | Auto | Auto | Manual | Manual |
+
+Auto-advance means: DRAFT → EVALUATED → SUBMITTED → APPROVED happens without human intervention for that gate type at that autonomy level. G3 and G4 are always manual.
+
+### Implementation Reference
+
+- **SDLC Orchestrator v2**: `backend/app/models/gate.py` (Gate.status column) + `backend/app/services/gate_engine.py` (state transitions)
+- **OPA Policy**: `backend/app/services/agent_team/opa_adapter.py` (PolicyInput → PolicyResult)
+- **Reaction Engine**: `backend/app/services/reaction_engine.py` (stale gate detection, escalation after 3 rejections)
+
+---
+
 ## Version History
 
 | Version | Date | Changes | Author |
@@ -1585,4 +1648,5 @@ For each .md file in /docs:
 | 2.0 | 2026-03-18 | Consolidated into Quality Gates & Assurance Framework (Framework 6.3.0) | CTO (Tai) |
 | 2.1 | 2026-03-29 | Added Fix-First Review Protocol (Section 6.3) — Framework 6.3.0 | PM + CTO |
 | 2.2 | 2026-03-29 | Added Three-Tier Testing (Part 13) + Doc Staleness Detection (Part 14) — Framework 6.3.0 | PM + CTO |
+| 2.3 | 2026-04-07 | Added Gate Lifecycle State Machine (Part 15) — CTO deep review finding F4 | CTO |
 
