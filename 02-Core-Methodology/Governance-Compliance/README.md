@@ -1,24 +1,24 @@
 # Governance & Compliance Standards
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: February 18, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System
 **Status**: ACTIVE - Production Standard
 **Authority**: CTO + CPO Office
 **AI Governance**: Aligned with 03-AI-GOVERNANCE principles (Verification-First, Human Accountability)
-**6.2.0**: Quality Assurance System + Quality-Security Gates consolidated into single framework. Observability moved to Ring 2.
+**6.3.0**: Quality Assurance System + Quality-Security Gates consolidated into single framework. Observability moved to Ring 2.
 
 ---
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.2.0**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.3.0**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
 | **Pillar 2** | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | Sprint execution + 3-Phase Lifecycle + TDD Integration |
-| **Pillar 4+5+Section 7** | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | Quality gates (G0-G4) + Anti-Vibecoding + Security (consolidated 6.2.0) |
+| **Pillar 4+5+Section 7** | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | Quality gates (G0-G4) + Anti-Vibecoding + Security (consolidated 6.3.0) |
 
 ---
 
@@ -28,19 +28,19 @@ Define governance, quality, security, and compliance standards that form the **c
 |----------|--------|---------|---------------|
 | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | **Pillar 2** | 10 Golden Rules, Sprint gates, Stage-Sprint integration, Change management | ALL tiers |
 | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
-### Consolidated Documents (6.2.0)
+### Consolidated Documents (6.3.0)
 
 | New Document | Merged From | Version |
 |--------------|-------------|---------|
-| **SDLC-Quality-Gates-Assurance-Framework.md** | Quality-Assurance-System + Quality-Security-Gates | 6.2.0 |
+| **SDLC-Quality-Gates-Assurance-Framework.md** | Quality-Assurance-System + Quality-Security-Gates | 6.3.0 |
 | **SDLC-Sprint-Governance.md** | Sprint-Planning-Governance + Stage-Sprint-Integration + Change-Management | 5.3.0 |
 
-### Moved to Ring 2 (6.2.0)
+### Moved to Ring 2 (6.3.0)
 | Document | New Location |
 |----------|-------------|
 | SDLC-Observability-Checklist.md | `05-Templates-Tools/05-Checklists/` (redirect stub at old location) |
 
-Previous versions: `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` + `10-Archive/02-Legacy/5.2.0-Deprecated/`
+Previous versions: `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` + `10-Archive/02-Legacy/5.2.0-Deprecated/`
 
 ---
 

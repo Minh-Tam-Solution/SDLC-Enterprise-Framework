@@ -1,10 +1,10 @@
 # AI Tools Landscape
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Status**: ACTIVE - OUTER RING (STRATEGIC)
 **Date**: February 14, 2026
 **Purpose**: Track AI coding tools for Orchestrator governance
-**Framework**: SDLC 6.2.1 (7-Pillar + 2-Section + TDD Integration)
+**Framework**: SDLC 6.3.0 (7-Pillar + 2-Section + TDD Integration)
 
 ---
 
@@ -281,4 +281,4 @@ These patterns proved universal and were promoted to [03-AI-GOVERNANCE/](../03-A
 **Document Status**: ACTIVE - OUTER RING
 **Owner**: CTO Office
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0

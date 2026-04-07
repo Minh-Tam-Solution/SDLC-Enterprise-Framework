@@ -1,7 +1,7 @@
 # Testing Artifacts Folder Structure
 
 **Version**: 1.0.0
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
 **Last Updated**: February 2026
 

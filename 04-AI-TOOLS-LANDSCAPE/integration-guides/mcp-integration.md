@@ -1,6 +1,6 @@
 # MCP Integration Guide (SDLC Orchestrator)
 
-**Version**: 6.2.1  
+**Version**: 6.3.0  
 **Status**: ACTIVE - OUTER RING  
 **Audience**: Platform / DevOps teams integrating AI tools with SDLC Orchestrator
 
@@ -113,7 +113,7 @@ Model Context Protocol (MCP) unlocks deep, governed integration between SDLC Orc
 
 | Date | Change |
 |------|--------|
-| Jan 2026 | Initial guide for SDLC Framework 6.2.0 |
+| Jan 2026 | Initial guide for SDLC Framework 6.3.0 |
 
 ---
 

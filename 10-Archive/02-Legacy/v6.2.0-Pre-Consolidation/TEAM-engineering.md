@@ -4,7 +4,7 @@ full_name: SDLC Engineering
 lead: pm
 mention: "@engineering"
 sdlc_stage: "01-08"
-sdlc_framework: "6.2.0"
+sdlc_framework: "6.3.0"
 version: 1.0.0
 created: 2026-03-03
 ---
@@ -13,7 +13,7 @@ created: 2026-03-03
 
 ## Mission
 
-Governance-first software delivery: requirements → design → implementation → review. Every feature follows the SDLC 6.2.0 lifecycle with gate approvals before progression.
+Governance-first software delivery: requirements → design → implementation → review. Every feature follows the SDLC 6.3.0 lifecycle with gate approvals before progression.
 
 ## Coverage
 

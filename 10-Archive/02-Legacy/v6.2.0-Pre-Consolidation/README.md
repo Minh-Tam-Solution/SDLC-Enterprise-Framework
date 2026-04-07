@@ -1,7 +1,7 @@
-# v6.2.0 Pre-Consolidation Archive
+# v6.3.0 Pre-Consolidation Archive
 
 **Date Archived**: March 18, 2026
-**Reason**: Framework 6.2.0 "Lean Ring 1" consolidation
+**Reason**: Framework 6.3.0 "Lean Ring 1" consolidation
 
 These files were the v6.1.2 originals BEFORE being consolidated into unified documents:
 

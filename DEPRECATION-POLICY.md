@@ -1,10 +1,10 @@
 # SDLC Framework Deprecation Policy
 
-**Version**: 6.2.0
+**Version**: 6.3.0
 **Status**: ACTIVE
 **Date**: March 18, 2026
 **Purpose**: Define redirect rules and deprecation procedures
-**Framework**: SDLC 6.2.0 (7-Pillar + 2-Section + RFC-001 + Lean Ring 1)
+**Framework**: SDLC 6.3.0 (7-Pillar + 2-Section + RFC-001 + Lean Ring 1)
 
 ---
 
@@ -167,7 +167,7 @@ Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 | `2-Agent-Templates/claude-code/` | `10-archive/05-Legacy/tool-guides-2026/claude-code/` | Jan 2026 | Jul 2026 | Tool-specific archive |
 | `05-Templates-Tools/02-AI-Tools/*.md` (36 templates) | `10-archive/05-Legacy/ai-tools-templates-sprint173/` | Feb 2026 | Aug 2026 | Frozen prompts |
 
-### 6.2.0 Consolidation Stubs (Lean Ring 1)
+### 6.3.0 Consolidation Stubs (Lean Ring 1)
 
 **Ring 1 → Ring 2 Moves** (9 redirect stubs):
 
@@ -187,18 +187,18 @@ Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 
 | Source File | Consolidated Into | Archive Location |
 |------------|------------------|-----------------|
-| `SDLC-Stage-Dependencies.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 1) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
-| `SDLC-Stage-Exit-Criteria.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 2) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
-| `SDLC-Tier-Stage-Requirements.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 3) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
-| `SDLC-Quality-Assurance-System.md` | `SDLC-Quality-Gates-Assurance-Framework.md` (Part 1) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
-| `SDLC-Quality-Security-Gates.md` | `SDLC-Quality-Gates-Assurance-Framework.md` (Part 2) | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` |
+| `SDLC-Stage-Dependencies.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 1) | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` |
+| `SDLC-Stage-Exit-Criteria.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 2) | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` |
+| `SDLC-Tier-Stage-Requirements.md` | `SDLC-Stage-Lifecycle-Framework.md` (Part 3) | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` |
+| `SDLC-Quality-Assurance-System.md` | `SDLC-Quality-Gates-Assurance-Framework.md` (Part 1) | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` |
+| `SDLC-Quality-Security-Gates.md` | `SDLC-Quality-Gates-Assurance-Framework.md` (Part 2) | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` |
 
 **Archived TEAMs** (organizational cleanup):
 
 | File | Archive Location | Reason |
 |------|-----------------|--------|
-| `TEAM-advisory.md` | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` | Duplicate of TEAM-executive |
-| `TEAM-engineering.md` | `10-Archive/02-Legacy/v6.2.0-Pre-Consolidation/` | Overlapped all functional teams |
+| `TEAM-advisory.md` | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` | Duplicate of TEAM-executive |
+| `TEAM-engineering.md` | `10-Archive/02-Legacy/v6.3.0-Pre-Consolidation/` | Overlapped all functional teams |
 
 **Deleted Stubs** (expired redirects, no archive needed):
 
@@ -245,4 +245,4 @@ Migration script available in: [05-Templates-Tools/07-Scripts/migrate-legacy-to-
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: March 18, 2026
-**Next Stub Review**: September 2026 (delete expired 6.2.0 stubs in 6.3.0)
+**Next Stub Review**: September 2026 (delete expired 6.3.0 stubs in 6.3.0)

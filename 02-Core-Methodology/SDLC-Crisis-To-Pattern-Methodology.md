@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-CRISIS-TO-PATTERN"
 title: "Crisis-to-Pattern Methodology"
-version: "6.2.1"
+version: "6.3.0"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -275,5 +275,5 @@ Not every bug needs this process. Use these triggers:
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Last Updated**: February 18, 2026

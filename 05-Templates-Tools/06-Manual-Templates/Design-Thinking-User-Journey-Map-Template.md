@@ -1,6 +1,6 @@
 # 🗺️ User Journey Map Template
 
-**Version**: 6.2.1 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.3.0 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Visualize user's end-to-end experience, identify pain points and opportunities
 **When to Use**: EMPATHIZE phase (SDLC Stage 00 - WHY?)
 **Time Required**: 1-2 hours per journey
@@ -654,7 +654,7 @@ Please help me:
 ---
 
 **Template**: User-Journey-Map-Template
-**Part of**: SDLC 6.2.0 Design Thinking Framework
+**Part of**: SDLC 6.3.0 Design Thinking Framework
 **Phase**: EMPATHIZE (Stage 00 - WHY?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

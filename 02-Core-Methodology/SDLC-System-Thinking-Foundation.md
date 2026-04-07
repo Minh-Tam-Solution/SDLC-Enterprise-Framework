@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-SYSTEM-THINKING"
 title: "System Thinking Foundation"
-version: "6.2.1"
+version: "6.3.0"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -99,7 +99,7 @@ Agent Continuity      ──→ Pillar 5 (SASE), AI Governance (#16)
 More People Build     ──→ Pillar 3 (4-Tier), Pillar 0 (DT)
 ```
 
-### Mental Model #7: Agent Continuity (NEW in 6.2.0)
+### Mental Model #7: Agent Continuity (NEW in 6.3.0)
 
 **Core Belief**: Agents are persistent collaborators that maintain context across sessions. Like human team members, they checkpoint their work, hand off context, and resume where they left off.
 
@@ -121,7 +121,7 @@ More People Build     ──→ Pillar 3 (4-Tier), Pillar 0 (DT)
 
 **Evidence**: Anthropic Context Engineering Guide (Tier A) — compaction + note-taking strategies. Singapore MGF (Tier A) — "reconstruct the chain of reasoning."
 
-### Mental Model #8: More People Build, Under Guardrails (NEW in 6.2.0)
+### Mental Model #8: More People Build, Under Guardrails (NEW in 6.3.0)
 
 **Core Belief**: Domain experts — PMs, legal staff, finance teams — can use agents to solve their own problems, within defined safety boundaries. The barrier between "people who code" and "people who don't" becomes more permeable.
 
@@ -272,7 +272,7 @@ System Thinking applies across all 10 stages:
 
 ---
 
-## Effort Compression Table (NEW in 6.2.1)
+## Effort Compression Table (NEW in 6.3.0)
 
 > **Source**: gstack "Boil the Lake" methodology (2026-03-29). Extracted as a calibration tool for gate evaluation and sprint planning.
 > **Principle**: AI-assisted development changes the economics of completeness. When the complete implementation costs minutes more than the shortcut — do the complete thing. Every time.
@@ -345,8 +345,8 @@ Completeness: X/10
 | [SDLC-Core-Methodology](./SDLC-Core-Methodology.md) | Core | Hub document for 7 Pillars + Sections |
 | [SDLC-Quality-Gates-Assurance-Framework](./Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md) | Core | Section 7: structural fix for vibecoding |
 | [Agentic Core Principles](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) | Core | SE4H/SE4A mental model (Mental Model #2) |
-| [Long-Running Agent Protocol](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) | Core | Protocol for Mental Model #7 (NEW in 6.2.0) |
-| [Citizen Developer Guide](../07-Implementation-Guides/Citizen-Developer-Guide.md) | Outer | Implementation guide for Mental Model #8 (NEW in 6.2.0) |
+| [Long-Running Agent Protocol](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) | Core | Protocol for Mental Model #7 (NEW in 6.3.0) |
+| [Citizen Developer Guide](../07-Implementation-Guides/Citizen-Developer-Guide.md) | Outer | Implementation guide for Mental Model #8 (NEW in 6.3.0) |
 
 ---
 
@@ -371,5 +371,5 @@ Completeness: X/10
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.2.1
+**Framework Version**: SDLC 6.3.0
 **Last Updated**: March 29, 2026

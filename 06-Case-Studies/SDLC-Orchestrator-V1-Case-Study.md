@@ -2,7 +2,7 @@
 
 ## When Comprehensive Engineering Outpaces Market Validation
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: March 18, 2026
 **Category**: Cautionary Case Study — Engineering Excellence ≠ Product Success
 **Framework Applied**: SDLC 4.x → 6.1.2 (10 months)
@@ -298,7 +298,7 @@ Whether v2 succeeds is yet to be determined. But the team now validates before b
 
 **Document Status**: ACTIVE
 **Last Updated**: March 18, 2026
-**Framework Version**: 6.2.0
+**Framework Version**: 6.3.0
 
 ---
 

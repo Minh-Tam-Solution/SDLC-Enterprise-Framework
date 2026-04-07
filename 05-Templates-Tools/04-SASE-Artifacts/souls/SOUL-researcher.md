@@ -1,7 +1,7 @@
 ---
 role: researcher
 category: executor
-sdlc_framework: "6.2.1"
+sdlc_framework: "6.3.0"
 version: 1.0.0
 sdlc_stages: ["00"]
 sdlc_gates: ["G0.1"]

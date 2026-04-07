@@ -2,7 +2,7 @@
 doc_id: F3-SCOPE-DRIFT-DETECTION
 title: "Scope Drift Detection Checklist"
 version: "1.0.0"
-framework: "6.2.1"
+framework: "6.3.0"
 ring: 2
 created: 2026-03-29
 gate_trigger: [G3-Ship-Ready, G-Sprint-Close]
@@ -11,7 +11,7 @@ classification: governance-template
 
 # F3 — Scope Drift Detection Checklist
 
-**Framework**: SDLC 6.2.1 | **Ring**: 2 (Governance Template)
+**Framework**: SDLC 6.3.0 | **Ring**: 2 (Governance Template)
 **Run at**: G3 (Ship Ready) and G-Sprint-Close gates
 **Source**: gstack methodology analysis (2026-03-29)
 

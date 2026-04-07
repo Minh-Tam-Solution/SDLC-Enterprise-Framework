@@ -1,6 +1,6 @@
 # 🎯 Problem Statement Template
 
-**Version**: 6.2.1 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
+**Version**: 6.3.0 | **Date**: January 22, 2026 | **Pillar**: 0 (Design Thinking Foundation)
 **Purpose**: Frame the RIGHT problem to solve (not symptoms, not solutions)
 **When to Use**: DEFINE phase (SDLC Stage 00-01 transition - WHY? → WHAT?)
 **Time Required**: 30-60 minutes
@@ -450,7 +450,7 @@ Please help me:
 ---
 
 **Template**: Problem-Statement-Template
-**Part of**: SDLC 6.2.0 Design Thinking Framework
+**Part of**: SDLC 6.3.0 Design Thinking Framework
 **Phase**: DEFINE (Stage 00-01 transition - WHY? → WHAT?)
 **Version**: 1.0
 **Last Updated**: November 13, 2025

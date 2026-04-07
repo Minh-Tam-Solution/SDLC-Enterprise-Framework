@@ -1,6 +1,6 @@
-# SDLC Framework 6.2.1 Content Map
+# SDLC Framework 6.3.0 Content Map
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Status**: ACTIVE
 **Date**: March 29, 2026
 **Purpose**: Single source of truth for topic → canonical file mapping (RFC-001: Legacy Document Organization)
@@ -79,12 +79,12 @@ Before creating any new document, check if a canonical file already exists for t
 | Context Management | `03-AI-GOVERNANCE/05-Context-Management.md` | `02-AI-Tools/ai-agent-best-practices-2026/06-memory-context-management.md` | ACTIVE |
 | Tool Evaluation Criteria | `03-AI-GOVERNANCE/06-Tool-Evaluation-Criteria.md` | — | ACTIVE |
 | AI Anti-Patterns | `03-AI-GOVERNANCE/07-Anti-Patterns.md` | — | ACTIVE |
-| **CLAUDE.md Standard (3-Tier)** | `05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md` (moved to Ring 2 in 6.2.0) | — | **NEW 6.0.6** |
-| **Autonomous Codegen Patterns** | `07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md` (moved to Ring 2 in 6.2.0) | — | **NEW 6.0.6** |
-| **Multi-Agent Patterns** | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` (moved to Ring 2 in 6.2.0) | — | **NEW 6.1.0** |
+| **CLAUDE.md Standard (3-Tier)** | `05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md` (moved to Ring 2 in 6.3.0) | — | **NEW 6.0.6** |
+| **Autonomous Codegen Patterns** | `07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md` (moved to Ring 2 in 6.3.0) | — | **NEW 6.0.6** |
+| **Multi-Agent Patterns** | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` (moved to Ring 2 in 6.3.0) | — | **NEW 6.1.0** |
 | **Agentic Core Principles** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Core-Principles.md` | **MOVED 6.1.0** |
 | **Agentic Maturity Model** | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` | Moved from `02-Core-Methodology/SDLC-Agentic-Maturity-Model.md` | **MOVED 6.1.0** |
-| **Conversation-First Governance** | `07-Implementation-Guides/CONVERSATION-FIRST-GOVERNANCE.md` (moved to Ring 2 in 6.2.0) | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.2** |
+| **Conversation-First Governance** | `07-Implementation-Guides/CONVERSATION-FIRST-GOVERNANCE.md` (moved to Ring 2 in 6.3.0) | Governance-via-conversation patterns (OTT/CLI primary) | **NEW 6.1.2** |
 
 ### Core Methodology (02-Core-Methodology/)
 
@@ -106,13 +106,13 @@ Before creating any new document, check if a canonical file already exists for t
 | **Crisis-to-Pattern Methodology** | `02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **Design Thinking Templates** | `02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **MRP Template** | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Moved from `02-Core-Methodology/` in 6.1.0 | **NEW 6.0.6** |
-| **Fix-First Review Protocol** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` §6.3 | AUTO-FIX vs ASK classification | **NEW 6.2.1** |
-| **Effort Compression Table** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | AI compression ratios for gate decisions | **NEW 6.2.1** |
-| **Scope Drift Detection** | `05-Templates-Tools/05-Checklists/SDLC-Scope-Drift-Detection.md` | CLEAN/SCOPE_CREEP/MISSING checklist | **NEW 6.2.1** |
-| **Three-Tier Testing** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` Part 13 | Static → Integration → AI Eval | **NEW 6.2.1** |
-| **Doc Staleness Detection** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` Part 14 | FRESH/STALE/UNRELATED | **NEW 6.2.1** |
-| **Terminal Status Taxonomy** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` §8 | DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT | **NEW 6.2.1** |
-| **SOUL-cso** | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-cso.md` | Chief Security Officer (SE4H, PRO+ tier) | **NEW 6.2.1** |
+| **Fix-First Review Protocol** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` §6.3 | AUTO-FIX vs ASK classification | **NEW 6.3.0** |
+| **Effort Compression Table** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | AI compression ratios for gate decisions | **NEW 6.3.0** |
+| **Scope Drift Detection** | `05-Templates-Tools/05-Checklists/SDLC-Scope-Drift-Detection.md` | CLEAN/SCOPE_CREEP/MISSING checklist | **NEW 6.3.0** |
+| **Three-Tier Testing** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` Part 13 | Static → Integration → AI Eval | **NEW 6.3.0** |
+| **Doc Staleness Detection** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` Part 14 | FRESH/STALE/UNRELATED | **NEW 6.3.0** |
+| **Terminal Status Taxonomy** | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` §8 | DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT | **NEW 6.3.0** |
+| **SOUL-cso** | `05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-cso.md` | Chief Security Officer (SE4H, PRO+ tier) | **NEW 6.3.0** |
 
 ### Templates (05-Templates-Tools/04-SASE-Artifacts/)
 
@@ -360,7 +360,7 @@ See [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) for:
 3. Update all internal links
 4. Run CI link checker
 
-### When Archiving (RFC-001, SDLC 6.2.0)
+### When Archiving (RFC-001, SDLC 6.3.0)
 
 1. Move file to `10-archive/{NN}-Legacy/` with date/context subfolder ({NN} = original stage number)
 2. Create redirect stub at original location

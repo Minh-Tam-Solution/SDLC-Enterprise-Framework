@@ -1,9 +1,9 @@
 # AI Governance Principles
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Status**: ACTIVE
 **Date**: March 18, 2026
-**Pillar**: Core AI Governance (6.2.0: Lean Ring 1 — implementation patterns moved to Ring 2)
+**Pillar**: Core AI Governance (6.3.0: Lean Ring 1 — implementation patterns moved to Ring 2)
 
 ---
 
@@ -41,9 +41,9 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 
 | # | Document | Purpose |
 |---|----------|---------|
-| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, 7 SASE principles, 6 disciplines. **Section 8 (NEW 6.2.1)**: Agent Task Terminal Status Taxonomy (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) |
+| 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, 7 SASE principles, 6 disciplines. **Section 8 (NEW 6.3.0)**: Agent Task Terminal Status Taxonomy (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) |
 | 14 | [Agentic Maturity Model](14-AGENTIC-MATURITY-MODEL.md) | L0-L3 maturity levels, AGENTS.md standard |
-| 16 | [Long-Running Agent Protocol](16-LONG-RUNNING-AGENT-PROTOCOL.md) | **NEW 6.2.0** — Checkpoint, memory, handoff, human checkpoints |
+| 16 | [Long-Running Agent Protocol](16-LONG-RUNNING-AGENT-PROTOCOL.md) | **NEW 6.3.0** — Checkpoint, memory, handoff, human checkpoints |
 
 ### New Pillars (6.3.0 Draft — validated by SDLC Orchestrator v2)
 
@@ -54,7 +54,7 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 19 | [Federated Platform Standard](19-FEDERATED-PLATFORM-STANDARD.md) | BRAIN/VOICE/HANDS/ADVISOR boundaries + V2 Independence |
 | 20 | [Evidence Integration Standard](20-EVIDENCE-INTEGRATION-STANDARD.md) | Multi-source ingestion, no source preference |
 
-### Moved to Ring 2 (6.2.0 — implementation patterns, not timeless principles)
+### Moved to Ring 2 (6.3.0 — implementation patterns, not timeless principles)
 
 | # | Old Location | New Location | Reason |
 |---|-------------|-------------|--------|
@@ -162,4 +162,4 @@ A tool feature is promoted to Core when it meets ALL criteria:
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 16, 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0

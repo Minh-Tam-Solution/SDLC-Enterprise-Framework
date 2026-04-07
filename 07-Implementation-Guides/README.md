@@ -1,15 +1,15 @@
-# SDLC 6.2.0 Implementation Guides
+# SDLC 6.3.0 Implementation Guides
 
-**Version**: 6.2.1 | **Status**: PRODUCTION READY | **Date**: March 18, 2026
+**Version**: 6.3.0 | **Status**: PRODUCTION READY | **Date**: March 18, 2026
 
-Practical how-to guides for implementing SDLC 6.2.0 framework: **8 Mental Models**, **Lean Ring 1**, **Long-Running Agent Protocol**, **Citizen Developer Pathway**, **13 Multi-Agent Patterns**, and the full **7-Pillar + Section 7 + Section 8** architecture.
+Practical how-to guides for implementing SDLC 6.3.0 framework: **8 Mental Models**, **Lean Ring 1**, **Long-Running Agent Protocol**, **Citizen Developer Pathway**, **13 Multi-Agent Patterns**, and the full **7-Pillar + Section 7 + Section 8** architecture.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 **Ring**: 3 (Outer) — implementation guides, not methodology
 
 ---
 
-## What's New in 6.2.0
+## What's New in 6.3.0
 
 **Agentic SDLC — 8 Mental Models + Lean Ring 1 + Long-Running Agents + Citizen Developer**
 
@@ -33,7 +33,7 @@ Practical how-to guides for implementing SDLC 6.2.0 framework: **8 Mental Models
 ## Getting Started - Pick Your Path
 
 ### New Project (Greenfield)
-Start fresh with SDLC 6.2.0 from day one.
+Start fresh with SDLC 6.3.0 from day one.
 
 | Team Size | Time | Start Here |
 |-----------|------|------------|
@@ -43,7 +43,7 @@ Start fresh with SDLC 6.2.0 from day one.
 | 50+ people (ENTERPRISE) | 4 weeks | [Full Implementation](SDLC-Implementation-Guide.md) + [Self-Contained Deployment](SDLC-Self-Contained-Deployment-Guide.md) |
 
 ### Existing Project (Brownfield)
-Adopt SDLC 6.2.0 incrementally into running projects.
+Adopt SDLC 6.3.0 incrementally into running projects.
 
 | Phase | Focus | Time | Guide |
 |-------|-------|------|-------|
@@ -90,7 +90,7 @@ Domain experts (PM, Legal, Finance, Ops) who need workflow automation.
 
 | Guide | Purpose | Use When |
 |-------|---------|----------|
-| **SDLC-Implementation-Guide.md** | Complete SDLC 6.2.0 deployment | Starting from scratch (greenfield) |
+| **SDLC-Implementation-Guide.md** | Complete SDLC 6.3.0 deployment | Starting from scratch (greenfield) |
 | **SDLC-Stage-Consistency-Validation-Guide.md** | 4-stage consistency validation | Preventing spec drift |
 | **SDLC-Self-Contained-Deployment-Guide.md** | Team folder deployment | Deploying to specific team |
 | **SDLC-Compliance-Enforcement-Guide.md** | Adopt SDLC in existing project | Brownfield migration |
@@ -190,7 +190,7 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 | Script | Purpose |
 |--------|---------|
-| `compliance_sdlc_validator.py` | Validate SDLC 6.2.0 folder structure |
+| `compliance_sdlc_validator.py` | Validate SDLC 6.3.0 folder structure |
 | `compliance_sdlc_scanner.py` | Scan project for compliance |
 | `quickstart_solo_setup.py` | Setup for solo developer |
 
@@ -213,7 +213,7 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 6.2.0 | Mar 2026 | Agentic SDLC: +5 new guides (Multi-Agent, Citizen Dev, Conversation-First, Autonomous Codegen, MCP), Lean Ring 1 cross-ref updates, tool-agnostic sanitization |
+| 6.3.0 | Mar 2026 | Agentic SDLC: +5 new guides (Multi-Agent, Citizen Dev, Conversation-First, Autonomous Codegen, MCP), Lean Ring 1 cross-ref updates, tool-agnostic sanitization |
 | 6.0.6 | Feb 2026 | Anthropic Best Practices, CLAUDE.md Standard, MRP Template |
 | 6.0.4 | Feb 2026 | TDD Workflow Integration, 3-Phase Sprint Lifecycle |
 | 6.0.1 | Feb 2026 | SPEC-0021 Stage Consistency Validation |
@@ -222,4 +222,4 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 **Last Updated**: March 18, 2026
 **Authority**: CTO + CPO Office
-**Framework Version**: 6.2.0
+**Framework Version**: 6.3.0

@@ -1,6 +1,6 @@
 ---
 title: "Agentic Core Principles"
-version: "6.2.1"
+version: "6.3.0"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"
@@ -12,7 +12,7 @@ origin: "arXiv:2509.06216v2 (SASE Framework)"
 
 # AGENTIC CORE PRINCIPLES
 
-> **SDLC 6.2.0** — Software Agentic Software Engineering (SASE) Integration
+> **SDLC 6.3.0** — Software Agentic Software Engineering (SASE) Integration
 >
 > This document defines the **7 Agentic Principles** and the **SE4H/SE4A framework**
 > that govern how humans and AI agents collaborate within the SDLC lifecycle.
@@ -270,7 +270,7 @@ The SASE framework defines 6 engineering disciplines. Each maps to primary SDLC 
 
 ### Primary Sources
 1. **SASE Framework** — arXiv:2509.06216v2 ("Software Engineering for AI-Based Systems")
-2. **SDLC 6.2.0 Core Methodology** — [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md)
+2. **SDLC 6.3.0 Core Methodology** — [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md)
 3. **AGENTS.md Standard** — 60,000+ GitHub projects, native support in Cursor/Copilot/Claude Code
 
 ### SASE Artifact Templates
@@ -281,7 +281,7 @@ The SASE framework defines 6 engineering disciplines. Each maps to primary SDLC 
 
 ---
 
-## 8. AGENT TASK TERMINAL STATUS TAXONOMY (NEW in 6.2.1)
+## 8. AGENT TASK TERMINAL STATUS TAXONOMY (NEW in 6.3.0)
 
 > **Source**: gstack methodology analysis (2026-03-29)
 >
@@ -403,11 +403,11 @@ Terminal statuses are the **FINAL checkpoint** in the [Long-Running Agent Protoc
 
 | Version | Date | Change |
 |---------|------|--------|
-| 6.2.0 | 2026-02-18 | Initial Ring 1 slim version with 7 Agentic Principles + SE4H/SE4A |
-| 6.2.1 | 2026-03-29 | Added Section 8: Agent Task Terminal Status Taxonomy (F6) |
+| 6.3.0 | 2026-02-18 | Initial Ring 1 slim version with 7 Agentic Principles + SE4H/SE4A |
+| 6.3.0 | 2026-03-29 | Added Section 8: Agent Task Terminal Status Taxonomy (F6) |
 
 ---
 
 **Document Status:** ACTIVE — PRODUCTION READY
-**Version:** 6.2.1 | **Last Updated:** March 29, 2026
-**Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.2.1
+**Version:** 6.3.0 | **Last Updated:** March 29, 2026
+**Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.3.0

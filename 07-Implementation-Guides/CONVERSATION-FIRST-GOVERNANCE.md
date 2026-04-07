@@ -1,6 +1,6 @@
 # 15. Conversation-First Governance Patterns
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Status**: ACTIVE
 **Date**: February 21, 2026
 **Pillar**: Core AI Governance
@@ -125,4 +125,4 @@ Conversation channels introduce external input that requires specific safeguards
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 21, 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0

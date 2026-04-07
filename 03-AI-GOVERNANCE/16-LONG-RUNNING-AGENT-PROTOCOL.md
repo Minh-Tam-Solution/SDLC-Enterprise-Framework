@@ -1,10 +1,10 @@
 ---
 title: "Long-Running Agent Protocol"
-version: "6.2.1"
+version: "6.3.0"
 ring: 1
 iceberg_layer: "Structures"
 dt_phase: "Prototype"
-sdlc_version: "6.2.0"
+sdlc_version: "6.3.0"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "AI Governance"
@@ -225,10 +225,10 @@ Per Singapore MGF and NIST emerging direction:
 
 **Internal**:
 - Mental Model #7: "Agent Continuity" (02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
-- **Agent Task Terminal Status Taxonomy** (Section 8, [13-AGENTIC-CORE-PRINCIPLES.md](13-AGENTIC-CORE-PRINCIPLES.md)) — Defines the 4 terminal statuses (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) that are the **final checkpoint** in this protocol (NEW 6.2.1)
+- **Agent Task Terminal Status Taxonomy** (Section 8, [13-AGENTIC-CORE-PRINCIPLES.md](13-AGENTIC-CORE-PRINCIPLES.md)) — Defines the 4 terminal statuses (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) that are the **final checkpoint** in this protocol (NEW 6.3.0)
 
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Last Updated**: March 18, 2026

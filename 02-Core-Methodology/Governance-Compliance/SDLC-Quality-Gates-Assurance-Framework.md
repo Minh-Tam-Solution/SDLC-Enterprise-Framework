@@ -1,14 +1,14 @@
 ---
 title: "SDLC Quality Gates & Assurance Framework"
-version: "6.2.1"
+version: "6.3.0"
 ring: 1
-sdlc_version: "6.2.0"
+sdlc_version: "6.3.0"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "Section 7: Quality Assurance + Pillar 4: Quality Gates"
 consolidates:
-  - "SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)"
-  - "SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)"
+  - "SDLC-Quality-Gates-Assurance-Framework.md (v6.3.0)"
+  - "SDLC-Quality-Gates-Assurance-Framework.md (v6.3.0)"
 ---
 
 # SDLC Quality Gates & Assurance Framework
@@ -20,12 +20,12 @@ consolidates:
 
 # PART 1: Anti-Vibecoding Governance (Section 7)
 
-> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)
+> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.3.0)
 
 ## Anti-Vibecoding Governance Framework
 
 **Version**: 1.0.0
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Status**: APPROVED
 **Date**: January 27, 2026
 **Authority**: CTO + CPO + CEO Approved
@@ -444,7 +444,7 @@ governance_checklist:
 
 ---
 
-## 6.3 Fix-First Review Protocol (NEW in 6.2.1)
+## 6.3 Fix-First Review Protocol (NEW in 6.3.0)
 
 > **Source**: gstack methodology analysis (2026-03-29). Closes the gap between "detect issues" and "resolve issues."
 > **Principle**: Every finding gets ACTION, not just a report. No finding is "acknowledged and deferred" without explicit justification.
@@ -643,7 +643,7 @@ for signal in signals:
 
 - [ ] Create this document (SDLC-Quality-Gates-Assurance-Framework.md)
 - [ ] Update CONTENT-MAP.md with new files
-- [ ] Update CHANGELOG.md for Framework 6.2.0
+- [ ] Update CHANGELOG.md for Framework 6.3.0
 - [ ] Create signal calibration templates
 
 ### 10.2 Automation Implementation
@@ -668,7 +668,7 @@ for signal in signals:
 
 # PART 2: Quality & Security Gate Requirements
 
-> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.2.0)
+> Originally: SDLC-Quality-Gates-Assurance-Framework.md (v6.3.0)
 
 ## Purpose
 
@@ -1458,7 +1458,7 @@ E2E Tests:
 
 ---
 
-## Part 13: Three-Tier Testing Methodology (NEW in 6.2.1)
+## Part 13: Three-Tier Testing Methodology (NEW in 6.3.0)
 
 > **Source**: gstack three-tier testing system (2026-03-29). Addresses AI-specific testing costs (LLM eval runs cost money) and diff-based test selection.
 
@@ -1511,7 +1511,7 @@ test_suites:
 
 ---
 
-## Part 14: Documentation Staleness Detection (NEW in 6.2.1)
+## Part 14: Documentation Staleness Detection (NEW in 6.3.0)
 
 > **Source**: gstack documentation staleness check (2026-03-29). Enforcement mechanism for Pillar 6 (Documentation Permanence).
 
@@ -1582,7 +1582,7 @@ For each .md file in /docs:
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 1.0 | 2026-01-28 | Original 2 documents (QA System, Quality-Security-Gates) | CTO (Tai) |
-| 2.0 | 2026-03-18 | Consolidated into Quality Gates & Assurance Framework (Framework 6.2.0) | CTO (Tai) |
-| 2.1 | 2026-03-29 | Added Fix-First Review Protocol (Section 6.3) — Framework 6.2.1 | PM + CTO |
-| 2.2 | 2026-03-29 | Added Three-Tier Testing (Part 13) + Doc Staleness Detection (Part 14) — Framework 6.2.1 | PM + CTO |
+| 2.0 | 2026-03-18 | Consolidated into Quality Gates & Assurance Framework (Framework 6.3.0) | CTO (Tai) |
+| 2.1 | 2026-03-29 | Added Fix-First Review Protocol (Section 6.3) — Framework 6.3.0 | PM + CTO |
+| 2.2 | 2026-03-29 | Added Three-Tier Testing (Part 13) + Doc Staleness Detection (Part 14) — Framework 6.3.0 | PM + CTO |
 

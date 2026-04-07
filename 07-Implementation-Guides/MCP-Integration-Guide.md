@@ -1,9 +1,9 @@
 # MCP Integration Implementation Guide
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 **Ring**: 3 (Outer - Implementation)
 **Source**: Consolidated from RFC-SDLC-603 (Boris Cherny Tactic #1)
 
@@ -560,7 +560,7 @@ Every MCP action creates an Evidence artifact:
 
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 **Ring**: 3 (Outer - Implementation)
 **Source**: Consolidated from RFC-SDLC-603 (Boris Cherny Tactic #1)
 **Owner**: Engineering + DevOps Teams

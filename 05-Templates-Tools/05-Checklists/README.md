@@ -1,6 +1,6 @@
 # 05-Checklists - Actionable Stage Transition Checklists
 
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 **Last Updated**: January 28, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Provide ready-to-use checklists for stage transitions
@@ -12,7 +12,7 @@
 | Checklist | Purpose | Usage |
 |-----------|---------|-------|
 | `Stage-Transition-Checklist.md` | All 9 stage transitions (00→01, 01→02, ..., 08→09) | Copy into sprint planning docs |
-| `SDLC-Scope-Drift-Detection.md` | Detect scope creep / missing requirements at G3 and G-Sprint-Close | Run before shipping — compare diff vs stated intent (NEW 6.2.1) |
+| `SDLC-Scope-Drift-Detection.md` | Detect scope creep / missing requirements at G3 and G-Sprint-Close | Run before shipping — compare diff vs stated intent (NEW 6.3.0) |
 
 ---
 

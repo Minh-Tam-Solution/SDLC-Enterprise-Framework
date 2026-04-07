@@ -1,7 +1,7 @@
 ---
 team: qa
 archetype: qa
-sdlc_framework: "6.2.1"
+sdlc_framework: "6.3.0"
 version: 1.0.0
 created: 2026-03-03
 ---

@@ -1,21 +1,21 @@
 ---
 title: "SDLC Stage Lifecycle Framework"
-version: "6.2.1"
+version: "6.3.0"
 ring: 1
-sdlc_version: "6.2.0"
+sdlc_version: "6.3.0"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "Pillar 1: 10-Stage Lifecycle"
 consolidates:
-  - "SDLC-Stage-Lifecycle-Framework.md (v6.2.0)"
-  - "SDLC-Stage-Lifecycle-Framework.md (v6.2.0)"
-  - "SDLC-Stage-Lifecycle-Framework.md (v6.2.0)"
+  - "SDLC-Stage-Lifecycle-Framework.md (v6.3.0)"
+  - "SDLC-Stage-Lifecycle-Framework.md (v6.3.0)"
+  - "SDLC-Stage-Lifecycle-Framework.md (v6.3.0)"
 ---
 
 # SDLC Stage Lifecycle Framework
 
 > **Ring 1 (Core)** — Unified reference for stage dependencies, exit criteria, and tier requirements.
-> Consolidates three 6.2.0 documents into one source of truth.
+> Consolidates three 6.3.0 documents into one source of truth.
 
 ## Tier Definitions (Single Source — referenced throughout)
 
@@ -45,13 +45,13 @@ consolidates:
 
 # PART 1: Stage Dependencies
 
-> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.2.0, CTO Approved Jan 28, 2026)
+> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.3.0, CTO Approved Jan 28, 2026)
 
 ## Context
 
 ### Problem Statement
 
-SDLC Framework 6.2.0 defines a **10-stage lifecycle** (00-FOUNDATION through 09-GOVERN) with **quality gates** (G0.1, G0.2, G1, G2, G3, G4) but lacks **explicit documentation** of:
+SDLC Framework 6.3.0 defines a **10-stage lifecycle** (00-FOUNDATION through 09-GOVERN) with **quality gates** (G0.1, G0.2, G1, G2, G3, G4) but lacks **explicit documentation** of:
 
 1. **Stage dependencies** - Which stages must complete before others can start?
 2. **Parallel execution rules** - Which stages can run concurrently?
@@ -89,7 +89,7 @@ SDLC Framework 6.2.0 defines a **10-stage lifecycle** (00-FOUNDATION through 09-
 **Format**: Structured YAML for both human readability and tool parsing.
 
 ```yaml
-# SDLC 6.2.0 Stage Dependency Matrix
+# SDLC 6.3.0 Stage Dependency Matrix
 # Each stage defines: requires, enables, gates, parallel rules, triggers
 
 stages:
@@ -399,7 +399,7 @@ flowchart TD
 **Framework (SDLC-Enterprise-Framework)**:
 1. Create this document as canonical reference
 2. Update CONTENT-MAP.md with canonical entry
-3. Update CHANGELOG.md for SDLC 6.2.0 release
+3. Update CHANGELOG.md for SDLC 6.3.0 release
 4. Create Stage-Exit-Criteria.md (separate document, references this ADR)
 
 **Automation Layer (Implementation-Specific)**:
@@ -422,7 +422,7 @@ flowchart TD
 
 # PART 2: Stage Exit Criteria
 
-> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.2.0, Jan 28, 2026)
+> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.3.0, Jan 28, 2026)
 
 ## Purpose
 
@@ -935,7 +935,7 @@ Stage 02 (DESIGN) - LITE:
 
 # PART 3: Tier-Specific Stage Requirements
 
-> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.2.0, Jan 28, 2026)
+> Originally: SDLC-Stage-Lifecycle-Framework.md (v6.3.0, Jan 28, 2026)
 
 ## LITE Tier (1-2 Developers)
 
@@ -1265,7 +1265,7 @@ Is this an AI/ML system?
 - AI Governance Principles 1-6 must be followed
 - Legal/ethical implications of AI decisions
 
-**AI Governance Principles (from SDLC 6.2.0)**:
+**AI Governance Principles (from SDLC 6.3.0)**:
 1. **Transparency**: Model decisions must be explainable
 2. **Fairness**: Bias testing on protected classes (race, gender, age)
 3. **Privacy**: Data privacy validation (GDPR, CCPA compliance)
@@ -1411,5 +1411,5 @@ Project: Instagram Clone (LITE Tier)
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 1.0 | 2026-01-28 | Original 3 documents (Dependencies, Exit Criteria, Tier Requirements) | CTO (Tai) |
-| 2.0 | 2026-03-18 | Consolidated into single Stage Lifecycle Framework (Framework 6.2.0) | CTO (Tai) |
+| 2.0 | 2026-03-18 | Consolidated into single Stage Lifecycle Framework (Framework 6.3.0) | CTO (Tai) |
 

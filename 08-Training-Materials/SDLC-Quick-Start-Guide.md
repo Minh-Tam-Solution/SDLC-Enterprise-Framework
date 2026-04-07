@@ -1,12 +1,12 @@
-# SDLC 6.2.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
+# SDLC 6.3.0 Quick Start - Build RIGHT Things RIGHT in 2 Days
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: March 18, 2026
 **Time Required**: 2 days solo, 1 week for teams
 **Result**: 10x-50x productivity + 3x feature adoption + 14,822% ROI
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
-**SDLC 6.2.0 Features**:
+**SDLC 6.3.0 Features**:
 - ✅ **8 Mental Models** (Agent Continuity + Everyone Builds) — [System Thinking](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
 - ✅ **Lean Ring 1** — 41→30 core docs, -21% size, faster adoption
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
@@ -30,7 +30,7 @@
 3. [SDLC-Design-Thinking-Principles.md](../02-Core-Methodology/SDLC-Design-Thinking-Principles.md) - 25 min
 
 **Key Takeaways**:
-- ✅ SDLC 6.2.0 = Complete 10-Stage Lifecycle (WHY → GOVERN) + 7-Pillar + Section 7
+- ✅ SDLC 6.3.0 = Complete 10-Stage Lifecycle (WHY → GOVERN) + 7-Pillar + Section 7
 - ✅ 7 Pillars: Design Thinking + Sprint Planning Governance + 5 core pillars
 - ✅ Section 7: Quality Assurance System (Anti-Vibecoding measures)
 - ✅ 4-Tier Classification: LITE (1-2) → STANDARD (3-10) → PROFESSIONAL (10-50) → ENTERPRISE (50+)
@@ -58,7 +58,7 @@ pip install pre-commit
 # Install from VS Code/Cursor marketplace
 ```
 
-**Configure for SDLC 6.2.0** (30 min):
+**Configure for SDLC 6.3.0** (30 min):
 ```bash
 # Create project structure
 mkdir my-project && cd my-project
@@ -92,7 +92,7 @@ repos:
         args: [--line-length=100]
 
   - repo: https://github.com/PyCQA/flake8
-    rev: 6.2.0
+    rev: 6.3.0
     hooks:
       - id: flake8
         args: [--max-line-length=100]
@@ -214,7 +214,7 @@ Users validated: [feedback from Phase 5 TEST]
 Requirements:
 - Language: [Python/TypeScript/etc]
 - Framework: [FastAPI/React/etc]
-- SDLC 6.2.0 compliant:
+- SDLC 6.3.0 compliant:
   * Zero Mock Policy (real database only)
   * 80%+ test coverage
   * <50ms response time (p50)
@@ -256,7 +256,7 @@ Time: 20-30 min self-review
 **Tier 2 (Subscription - RECOMMENDED)**: AI-assisted review
 ```yaml
 1. Setup .cursorrules (10 min):
-   - Copy SDLC 6.2.0 rules from guide
+   - Copy SDLC 6.3.0 rules from guide
    - Cursor Pro analyzes in real-time
 
 2. Create PR and use Claude Max (5 min):
@@ -296,7 +296,7 @@ black . --check
 
 # Commit and deploy
 git add .
-git commit -m "feat: [feature name] - validated via Design Thinking (SDLC 6.2.0)"
+git commit -m "feat: [feature name] - validated via Design Thinking (SDLC 6.3.0)"
 git push
 
 # Deploy (your process)
@@ -326,7 +326,7 @@ Setup: Google Analytics, Mixpanel, or simple database query
 ```
 
 **Day 1 Checklist**:
-- [ ] Read SDLC 6.2.0 docs (3 key documents)
+- [ ] Read SDLC 6.3.0 docs (3 key documents)
 - [ ] AI tools installed and configured
 - [ ] Design Thinking completed (5 phases in 2 hours)
 - [ ] Feature concept validated by users
@@ -607,7 +607,7 @@ Prototype:
   "Build a working prototype in [language] that demonstrates [concept]"
 
 Code Review:
-  "Review this PR against SDLC 6.2.0 standards and provide detailed feedback"
+  "Review this PR against SDLC 6.3.0 standards and provide detailed feedback"
 
 File Naming Check:
   "Verify file naming: Python=snake_case, TypeScript=camelCase, React=PascalCase"
@@ -648,21 +648,21 @@ You can confidently:
 3. ✅ Review code in <5 minutes (Tier 2) or <30 minutes (Tier 1)
 4. ✅ Ship with confidence (zero critical bugs)
 5. ✅ Calculate and present ROI to stakeholders
-6. ✅ Train others on SDLC 6.2.0 framework
+6. ✅ Train others on SDLC 6.3.0 framework
 
-**Congratulations! You've mastered SDLC 6.2.0 Quick Start.** 🎉
+**Congratulations! You've mastered SDLC 6.3.0 Quick Start.** 🎉
 
 **Next**: Scale to team, prove ROI, share success, continuous improvement.
 
 ---
 
-**Document Version**: 6.2.0
+**Document Version**: 6.3.0
 **Last Updated**: February 15, 2026
 **Owner**: CPO Office (taidt@mtsolution.com.vn)
 **What's New**: 7-Pillar + Section 7 Quality Assurance System + AI Governance Principles
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 
 ---
 
-**🏆 SDLC 6.2.0 Quick Start**
+**🏆 SDLC 6.3.0 Quick Start**
 *From Zero to 10x in 2 Days - Build RIGHT Things RIGHT with 7-Pillar + AI Governance*

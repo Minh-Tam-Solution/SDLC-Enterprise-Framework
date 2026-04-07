@@ -31,7 +31,7 @@ sprint: Sprint 114-116 (Jan 2026)
 **Owner**: CTO + Quality Lead
 **Created**: 2026-01-28
 **Last Updated**: 2026-01-29
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Machine-Readable Spec**: [spec/controls/anti-vibecoding.yaml](../../spec/controls/anti-vibecoding.yaml)
 
 ## 1. Overview
@@ -838,12 +838,12 @@ kill_switch_trigger_total = Counter(
 ---
 
 **Document Control**:
-- **Template**: Framework 6.2.0 Unified Specification Standard
+- **Template**: Framework 6.3.0 Unified Specification Standard
 - **Machine-Readable Spec**: `../../spec/controls/anti-vibecoding.yaml`
 - **Last Review**: 2026-01-29
 - **Next Review**: Q2 2026 (after ENTERPRISE tier pilot)
 
 ---
 
-*SPEC-0001: Anti-Vibecoding Quality Assurance System - Framework 6.2.0 Format*
+*SPEC-0001: Anti-Vibecoding Quality Assurance System - Framework 6.3.0 Format*
 *SDLC Enterprise Framework - Preventing Low-Quality AI-Generated Code*

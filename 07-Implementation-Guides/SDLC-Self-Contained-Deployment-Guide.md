@@ -1,6 +1,6 @@
-# SDLC 6.2.0 Self-Contained Deployment Guide
+# SDLC 6.3.0 Self-Contained Deployment Guide
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: January 27, 2026
 **Status**: ACTIVE - CEO Requirement
 **Authority**: CEO + CTO Office
@@ -29,7 +29,7 @@
 ```
 docs/08-collaborate/03-sdlc-compliance/
 ├── README.md                           ← Start here
-├── Core-Methodology/                   ← What is SDLC 6.2.0?
+├── Core-Methodology/                   ← What is SDLC 6.3.0?
 ├── SASE-Artifacts/                     ← How to work with AI agents?
 ├── Governance-Compliance/              ← What are the rules?
 ├── Documentation-Standards/            ← How to document?
@@ -203,7 +203,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Step 2: Add Project Header**
 ```markdown
 ---
-**SDLC Version**: 6.2.0
+**SDLC Version**: 6.3.0
 **Project**: [Your Project Name]
 **Team Tier**: PROFESSIONAL | STANDARD | LITE | ENTERPRISE
 **Adapted**: [Date]
@@ -272,7 +272,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Purpose**: Every team member starts here
 
 ```markdown
-# SDLC 6.2.0 Compliance - [Project Name]
+# SDLC 6.3.0 Compliance - [Project Name]
 
 ## 🚀 I want to...
 
@@ -300,7 +300,7 @@ cp /path/to/SDLC-Framework/source.md \
 
 ## 📚 Folders
 
-- **Core-Methodology/** - What is SDLC 6.2.0?
+- **Core-Methodology/** - What is SDLC 6.3.0?
 - **SASE-Artifacts/** - How to work with AI agents?
 - **Governance-Compliance/** - What are the rules?
 - **Documentation-Standards/** - How to document?
@@ -446,4 +446,4 @@ Projects must implement quality gates appropriate to their tier.
 **Document Owner**: CTO
 **Last Updated**: January 29, 2026
 **Next Review**: February 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0

@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-DESIGN-THINKING-TEMPLATES"
 title: "Design Thinking Templates & Case Studies"
-version: "6.2.1"
+version: "6.3.0"
 status: "ACTIVE"
 section: "02-Core-Methodology/Documentation-Standards"
 ring: "Core"
@@ -568,5 +568,5 @@ Templates referenced in this document can be found at:
 ---
 
 **Document Status**: ACTIVE — Extracted from SDLC-Design-Thinking-Principles.md
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Last Updated**: February 18, 2026

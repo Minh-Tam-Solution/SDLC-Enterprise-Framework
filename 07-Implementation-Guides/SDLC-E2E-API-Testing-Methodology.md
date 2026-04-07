@@ -1,10 +1,10 @@
-# E2E API Testing Methodology (SDLC 6.2.0)
+# E2E API Testing Methodology (SDLC 6.3.0)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **RFC**: RFC-SDLC-602-E2E-API-TESTING
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 **Stage**: 05-TEST
 **Purpose**: Standardized methodology for End-to-End API testing using OpenAPI specifications
 
@@ -304,8 +304,8 @@ THEN:
 ## Success Criteria
 
 **E2E API Testing = PASS** when:
-- ✅ **Pass Rate** ≥80% (for SDLC 6.2.0 LITE/STANDARD)
-- ✅ **Pass Rate** ≥90% (for SDLC 6.2.0 PROFESSIONAL/ENTERPRISE)
+- ✅ **Pass Rate** ≥80% (for SDLC 6.3.0 LITE/STANDARD)
+- ✅ **Pass Rate** ≥90% (for SDLC 6.3.0 PROFESSIONAL/ENTERPRISE)
 - ✅ **SSOT Compliance**: openapi.json is single source
 - ✅ **Cross-Reference**: Stage 03 ↔ Stage 05 bidirectional links validated
 - ✅ **Security**: No P0/P1 OWASP vulnerabilities
@@ -471,6 +471,6 @@ Before merging, ensure:
 **Document Status**: ACTIVE
 **Created**: February 2, 2026
 **Updated**: February 2, 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0
 **Owner**: Engineering + QA Teams
 **Approval**: CTO @nqh ✅

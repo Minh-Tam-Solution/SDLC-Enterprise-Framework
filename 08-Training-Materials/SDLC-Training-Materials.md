@@ -1,16 +1,16 @@
-# SDLC 6.2.0 Training Materials - Complete Learning Package
+# SDLC 6.3.0 Training Materials - Complete Learning Package
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: March 18, 2026
 **Audience**: All team members — developers, designers, product managers, QA, and non-technical staff (citizen developers)
 **Duration**: 8 hours total (can be split across multiple sessions)
 **Prerequisites**: SDLC fundamentals knowledge (or 2-hour SDLC fundamentals course)
-**Framework**: SDLC 6.2.1 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
+**Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
 
-## What's New in SDLC 6.2.0 (March 2026)
+## What's New in SDLC 6.3.0 (March 2026)
 
 **Agentic SDLC — the biggest upgrade since 6.0.0:**
 
@@ -47,9 +47,9 @@ By completing this training, participants will be able to:
 1. ✅ **Explain** what Design Thinking is and why it matters (reduce 70% feature waste)
 2. ✅ **Apply** all 5 Design Thinking phases to real projects (Empathize → Test)
 3. ✅ **Use** 9 practical templates without assistance (15-30 min per template)
-4. ✅ **Map** Design Thinking to SDLC 6.2.0 10-Stage Framework (WHY → GOVERN)
+4. ✅ **Map** Design Thinking to SDLC 6.3.0 10-Stage Framework (WHY → GOVERN)
 5. ✅ **Validate** assumptions with real users before building (5-8 user tests)
-6. ✅ **Integrate** SDLC 6.2.0 into daily workflow (80%+ compliance within 2 weeks)
+6. ✅ **Integrate** SDLC 6.3.0 into daily workflow (80%+ compliance within 2 weeks)
 7. ✅ **Apply** code quality standards including file naming conventions
 8. ✅ **Understand** 4-Tier Classification and select appropriate tier for projects
 9. ✅ **Use** SASE artifacts for AI-human collaboration (6 templates)
@@ -57,7 +57,7 @@ By completing this training, participants will be able to:
 ### Training Structure
 
 ```yaml
-Session 1: SDLC 6.2.0 Overview & Design Thinking Fundamentals
+Session 1: SDLC 6.3.0 Overview & Design Thinking Fundamentals
   Duration: 2 hours
   Format: Lecture + Discussion
   Deliverable: Understanding quiz (80% pass rate)
@@ -77,14 +77,14 @@ Session 3: Templates, Code Quality & Code Review Excellence
 Session 4: Real Project Application
   Duration: 1 hour (ongoing)
   Format: Guided practice on actual project
-  Deliverable: Pilot project with SDLC 6.2.0 applied
+  Deliverable: Pilot project with SDLC 6.3.0 applied
 
 Total: 8 hours core + ongoing practice
 ```
 
 ---
 
-## 📚 SESSION 1: SDLC 6.2.0 Overview & Design Thinking Fundamentals
+## 📚 SESSION 1: SDLC 6.3.0 Overview & Design Thinking Fundamentals
 
 **Duration**: 2 hours
 **Format**: Lecture (60 min) + Discussion (30 min) + Quiz (30 min)
@@ -92,7 +92,7 @@ Total: 8 hours core + ongoing practice
 
 ---
 
-### Part 1: Why SDLC 6.2.0? (15 minutes)
+### Part 1: Why SDLC 6.3.0? (15 minutes)
 
 **Slide 1: The Problem We're Solving**
 
@@ -133,7 +133,7 @@ Focus: Sprint Planning Governance (7 Pillars)
   ✅ SASE Integration (4 active artifacts: AGENTS.md, CRP, MRP, VCR)
   ✅ 4-Tier Classification: LITE → ENTERPRISE
 
-SDLC 6.2.0 (January 2026):
+SDLC 6.3.0 (January 2026):
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Focus: AI Governance + Quality Assurance (7-Pillar + Section 7)
   ✅ Section 7: Quality Assurance System (Anti-Vibecoding)
@@ -1326,9 +1326,9 @@ Day 11: CPO 1-on-1
 **Purpose**: Complete learning package for team adoption
 **Audience**: All team members (developers, designers, PM, QA)
 **Duration**: 8 hours core + ongoing practice
-**Certification**: SDLC 6.2.0 Certified Practitioner
-**Version**: 6.2.1
+**Certification**: SDLC 6.3.0 Certified Practitioner
+**Version**: 6.3.0
 **Date**: January 29, 2026
 **License**: MTS Internal Use
 **What's New**: 7-Pillar + Section 7 Quality Assurance System + AI Governance Principles
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0

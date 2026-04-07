@@ -1,7 +1,7 @@
 # SDLC Project Structure Standard
 
-**Version**: 6.2.1
-**SDLC Framework Version**: 6.2.0
+**Version**: 6.3.0
+**SDLC Framework Version**: 6.3.0
 **Date**: January 29, 2026
 **Status**: ACTIVE
 **Authority**: CTO Approved
@@ -11,7 +11,7 @@
 
 ## 1. Overview
 
-This document defines the standard project folder structure for SDLC 6.2.0 compliant projects. It establishes clear separation between:
+This document defines the standard project folder structure for SDLC 6.3.0 compliant projects. It establishes clear separation between:
 
 1. **Documentation Stage Mapping** - `/docs` folders mapped to SDLC lifecycle stages (00-09)
 2. **Project Structure Validation** - Root-level code folders validated for presence (NOT stage-mapped)
@@ -337,7 +337,7 @@ docs/02-design/15-API-Specs/SPEC-0500-*.md
 
 ### 8.1 Purpose
 
-Every project implementing SDLC 6.2.0 should have an **SDLC Compliance folder** containing:
+Every project implementing SDLC 6.3.0 should have an **SDLC Compliance folder** containing:
 - Project-specific summary of the SDLC Framework
 - AI context files (CLAUDE.md, AGENTS.md)
 - Quick reference for team members (human + AI)
@@ -353,7 +353,7 @@ docs/08-collaborate/
     ├── AGENTS.md                     # Agent guidelines & boundaries
     ├── PROJECT-CONTEXT.md            # Human-readable quick reference
     ├── COMPLIANCE-CHECKLIST.md       # Progress tracking
-    └── FRAMEWORK-SUMMARY.md          # SDLC 6.2.0 summary (optional)
+    └── FRAMEWORK-SUMMARY.md          # SDLC 6.3.0 summary (optional)
 ```
 
 ### 8.3 Why 08-collaborate (Not 09-govern)?
@@ -399,7 +399,7 @@ your-project/
 | `AGENTS.md` | Agent boundaries, tools, permissions | PROFESSIONAL+ |
 | `PROJECT-CONTEXT.md` | Human-readable summary (non-technical) | LITE+ |
 | `COMPLIANCE-CHECKLIST.md` | SDLC stage completion tracking | STANDARD+ |
-| `FRAMEWORK-SUMMARY.md` | SDLC 6.2.0 quick reference | Optional |
+| `FRAMEWORK-SUMMARY.md` | SDLC 6.3.0 quick reference | Optional |
 
 ### 8.6 Migration for Existing Projects
 
@@ -474,7 +474,7 @@ my-project/
 
 ## 10. Migration Guide
 
-### 10.1 From SDLC 4.x/5.x to 6.2.0
+### 10.1 From SDLC 4.x/5.x to 6.3.0
 
 If your project uses old stage names (WHY, WHAT, HOW, BUILD, etc.):
 
@@ -499,10 +499,10 @@ Use the SDLC CLI migration tool:
 [SDLC CLI] validate --tier standard
 
 # Generate migration plan
-[SDLC CLI] migrate --from 5.x --to 6.2.0 --dry-run
+[SDLC CLI] migrate --from 5.x --to 6.3.0 --dry-run
 
 # Execute migration
-[SDLC CLI] migrate --from 5.x --to 6.2.0
+[SDLC CLI] migrate --from 5.x --to 6.3.0
 ```
 
 ---

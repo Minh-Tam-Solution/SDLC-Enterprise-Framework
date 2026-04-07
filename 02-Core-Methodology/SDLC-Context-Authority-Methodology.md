@@ -1,11 +1,11 @@
 # Context Authority Methodology
-## Framework 6.2.0 Dynamic AGENTS.md Patterns - Section 8
+## Framework 6.3.0 Dynamic AGENTS.md Patterns - Section 8
 
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Author**: PM/PJM Team
-**Framework**: SDLC 6.2.1 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.3.0 (7-Pillar + 2-Section)
 **Section**: Section 8: Unified Specification Standard
 
 ---

@@ -1,5 +1,5 @@
 ---
-version: "6.2.1"
+version: "6.3.0"
 document_type: "Framework Standard"
 section: "05-Templates-Tools/06-Manual-Templates"
 status: "APPROVED"
@@ -14,7 +14,7 @@ sprint: "176"
 
 # MRP: Merge-Readiness Package Template
 
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Pillar**: 02 — Core Methodology
 **Classification**: ORANGE (New Process Artifact — affects merge workflow)
 **Effective Date**: February 19, 2026
@@ -37,7 +37,7 @@ MRP solves these by providing a **standardized, evidence-linked, auditable** mer
 
 ### 1.2 Industry Context
 
-Leading AI-native teams use AI assistants to summarize completed work sessions and update documentation automatically. SDLC 6.2.0 extends session summaries into comprehensive merge packages that:
+Leading AI-native teams use AI assistants to summarize completed work sessions and update documentation automatically. SDLC 6.3.0 extends session summaries into comprehensive merge packages that:
 - Link to Quality Gate evidence (not just git history)
 - Include rollback plans (not just "what changed")
 - Provide deployment instructions (not just "how to build")

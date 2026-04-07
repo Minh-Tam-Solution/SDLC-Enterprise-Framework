@@ -1,10 +1,10 @@
 ---
 title: "Citizen Developer Guide"
-version: "6.2.1"
+version: "6.3.0"
 ring: 3
 iceberg_layer: "Events"
 dt_phase: "Empathize + Prototype"
-sdlc_version: "6.2.0"
+sdlc_version: "6.3.0"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 ---
@@ -141,5 +141,5 @@ If you need capabilities beyond citizen developer boundaries:
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.2.0
+**Framework Version**: SDLC 6.3.0
 **Last Updated**: March 18, 2026

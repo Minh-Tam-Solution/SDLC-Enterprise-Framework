@@ -1,12 +1,12 @@
 # 09 - Continuous Improvement
 
 **Stage**: 09 (Framework Folder, not Project Stage)
-**Version**: 6.2.1
+**Version**: 6.3.0
 **Date**: March 18, 2026
 **Status**: Active
-**Framework**: SDLC 6.2.1 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
+**Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.2.0**: Agentic SDLC — 8 Mental Models, Lean Ring 1 (41→30 files), Long-Running Agent Protocol, Citizen Developer Pathway, 13 Multi-Agent Patterns, tool-agnostic sanitization
+**NEW in 6.3.0**: Agentic SDLC — 8 Mental Models, Lean Ring 1 (41→30 files), Long-Running Agent Protocol, Citizen Developer Pathway, 13 Multi-Agent Patterns, tool-agnostic sanitization
 
 ---
 
@@ -43,4 +43,4 @@ Old continuous improvement documents are moved to `10-archive/09-Legacy/` (per L
 ---
 
 **Last Updated**: March 18, 2026
-**Framework**: SDLC 6.2.1
+**Framework**: SDLC 6.3.0

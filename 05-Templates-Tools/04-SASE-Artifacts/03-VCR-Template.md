@@ -8,7 +8,7 @@
 **Consumer:** SE4A (for revision) + Git History (permanent record)
 
 **Version:** 1.2.0
-**Framework:** SDLC 6.2.1 (7-Pillar Architecture)
+**Framework:** SDLC 6.3.0 (7-Pillar Architecture)
 **Created:** December 2025
 **Updated:** January 22, 2026
 **AI Governance:** Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
@@ -37,7 +37,7 @@
 | **Pull Request** | PR #NNN | [Link to GitHub PR] |
 | **SDLC Gate** | G0.1 \| G1 \| G2 \| G3 \| G4 \| G-Sprint \| G-Sprint-Close | Gate this work supports |
 
-### Sprint Planning Governance Verification (SDLC 6.2.0)
+### Sprint Planning Governance Verification (SDLC 6.3.0)
 
 | Criterion | Verified | Notes |
 |-----------|----------|-------|

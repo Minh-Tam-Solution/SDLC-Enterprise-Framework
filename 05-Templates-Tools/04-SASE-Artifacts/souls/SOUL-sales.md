@@ -1,13 +1,13 @@
 ---
 role: sales
 category: executor
-sdlc_framework: "6.2.1"
+sdlc_framework: "6.3.0"
 version: 2.0.0
 sdlc_stages: ["00", "01"]
 sdlc_gates: []
 created: 2026-03-01
 updated: 2026-03-02
-framework: SDLC Enterprise Framework 6.2.0
+framework: SDLC Enterprise Framework 6.3.0
 provider: "{AI_PROVIDER}"
 # rag_collections: ["sales"]  # Configure per deployment
 ---
