@@ -54,62 +54,24 @@ By completing this training, participants will be able to:
 8. ✅ **Understand** 4-Tier Classification and select appropriate tier for projects
 9. ✅ **Use** SASE artifacts for AI-human collaboration (6 templates)
 
-### Training Structure
+### Training Structure — 11 Modules (39 hours)
 
-```yaml
-Session 1: SDLC 6.3.0 Overview & Design Thinking Fundamentals
-  Duration: 2 hours
-  Format: Lecture + Discussion
-  Deliverable: Understanding quiz (80% pass rate)
-  Topics: 10-Stage Lifecycle, 7 Pillars, Section 7 Quality Assurance, AI Governance
+| Module | File | Duration | Topics |
+|--------|------|:--------:|--------|
+| **01** | [Module-01-SDLC-Overview.md](Module-01-SDLC-Overview.md) | 4h | 10-Stage Lifecycle, 7 Pillars, 4-Tier Classification |
+| **02** | [Module-02-Six-Pillars.md](Module-02-Six-Pillars.md) | 6h | Design Thinking, Zero Mock, Quality Governance, Doc Permanence |
+| **03** | [Module-03-Zero-Mock-Policy.md](Module-03-Zero-Mock-Policy.md) | 4h | 679 Mock Crisis, enforcement, testing without mocks |
+| **04** | [Module-04-Code-Quality.md](Module-04-Code-Quality.md) | 4h | Coverage targets, naming standards, OWASP, performance |
+| **05** | [Module-05-Development-Workflow.md](Module-05-Development-Workflow.md) | 4h | Git branching, conventional commits, 3-tier code review, CI/CD |
+| **06** | [Module-06-AI-Tools.md](Module-06-AI-Tools.md) | 4h | Claude Code, Ollama, design-to-code automation |
+| **07** | [Module-07-SASE-Agentic.md](Module-07-SASE-Agentic.md) | 4h | SE4H vs SE4A, 6 SASE Artifacts, L0-L3 maturity |
+| **08** | [Module-08-Authority-Decision.md](Module-08-Authority-Decision.md) | 2h | Authority boundaries, decision matrix, escalation protocol |
+| **09** | [Module-09-Quality-Gate-Workshop.md](Module-09-Quality-Gate-Workshop.md) | 2h | G0-G4 gates, sprint gates, hands-on evidence upload |
+| **10** | [Module-10-ADR-Sprint-Plan.md](Module-10-ADR-Sprint-Plan.md) | 2h | ADR criteria, sprint plan workflow, document-first culture |
+| **11** | [Module-11-Remote-Governance.md](Module-11-Remote-Governance.md) | 1h | Remote team rules, Collaborator vs Fork workflow |
+| | **Total** | **39h** | + ongoing practice + assessment |
 
-Session 2: Design Thinking Hands-On Workshop
-  Duration: 3 hours
-  Format: Workshop + Practice
-  Deliverable: Completed empathy map + problem statement
-
-Session 3: Templates, Code Quality & Code Review Excellence
-  Duration: 2 hours
-  Format: Walkthrough + Examples
-  Deliverable: Template usage + code quality confidence assessment
-  Topics: Templates, code standards, file naming conventions, code review tiers
-
-Session 4: Real Project Application
-  Duration: 1 hour (ongoing)
-  Format: Guided practice on actual project
-  Deliverable: Pilot project with SDLC 6.3.0 applied
-
-Session 5-7: SASE, AI Tools & Workflow (Modules 05-07)
-  Duration: ~6 hours total
-  Format: Mixed (lecture + hands-on)
-  Deliverable: AI tool proficiency + workflow compliance
-
-Session 8: Authority & Decision Governance (Module 08)
-  Duration: 2.5 hours
-  Format: Lecture + Case Study + Exercises
-  Deliverable: Decision matrix fluency, escalation protocol mastery
-  Topics: Authority boundaries, decision matrix, escalation protocol, governance violation case study
-
-Session 9: Quality Gate Workshop (Module 09)
-  Duration: 2 hours
-  Format: Hands-on Workshop (instructor-led + staging practice)
-  Deliverable: Full gate lifecycle completed on SDLC Orchestrator
-  Topics: 5 gates (G0-G4), sprint gates, evidence upload, Merkle audit trail
-
-Session 10: ADR & Sprint Plan Workflow (Module 10)
-  Duration: 2 hours
-  Format: Workshop (theory + writing exercises)
-  Deliverable: Written ADR + sprint plan evaluated by CTO
-  Topics: ADR criteria, ADR template, sprint plan enforcement rules, document-first culture
-
-Session 11: Remote Team Governance (Module 11)
-  Duration: 1 hour
-  Format: Workshop (theory + scenarios)
-  Deliverable: Remote workflow proficiency assessment
-  Topics: Remote challenges, 8 supplementary rules, collaborator vs fork workflow
-
-Total: ~39 hours core + ongoing practice
-```
+**Assessment**: 90-question quiz (70% passing) covering all 11 modules. See end of this document.
 
 ---
 
