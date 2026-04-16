@@ -290,7 +290,7 @@ Validation: TDD workflow proven effective for AI-assisted development
 
 **OpenSpec Alignment** (CEO APPROVED: EXTEND):
 - OpenSpec for fast planning (speed)
-- SDLC 6.0 for governance (quality)
+- SDLC 6.3.0 for governance (quality)
 - SDLC CLI spec convert bridges both workflows
 
 ### Breaking Changes in 6.0.0

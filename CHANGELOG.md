@@ -2,19 +2,19 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.2.1 Enterprise Framework - Methodology Upgrade + CSO Role
+**Framework**: SDLC 6.3.0 Enterprise Framework — Methodology Upgrade + CSO Role + Lean Ring 1
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: March 29, 2026 (SDLC 6.2.1 Methodology Upgrade)
+**Last Updated**: March 29, 2026 (SDLC 6.3.0 Methodology Upgrade)
 
 ---
 
-## 🔧 Version 6.2.1 - March 29, 2026 (METHODOLOGY UPGRADE)
+## 🔧 Version 6.3.0 - March 29, 2026 (METHODOLOGY UPGRADE + LEAN RING 1 + 8 MENTAL MODELS)
 
 **Release Date**: March 29, 2026
-**Type**: MINOR RELEASE - 6 methodology extensions + CSO role + 4 team charter updates
+**Type**: MAJOR RELEASE — 8 Mental Models, Lean Ring 1, Long-Running Agent Protocol, CSO Role, 6 methodology extensions
 **Status**: PRODUCTION-READY
-**Breaking Changes**: None
-**Supersedes**: SDLC 6.2.0 Agentic SDLC + Lean Ring 1
+**Breaking Changes**: None (file paths changed in 6.2.0, redirect stubs at old locations expire Sep 2026)
+**Supersedes**: SDLC 6.2.0 Agentic SDLC + Lean Ring 1 (note: 6.2.1 was interim designation, consolidated into 6.3.0)
 **Trigger**: gstack methodology analysis + SDLC Orchestrator v2 planning
 **CTO Review**: APPROVED — 9.5/10
 

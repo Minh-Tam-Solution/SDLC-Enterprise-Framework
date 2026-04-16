@@ -571,7 +571,7 @@ sdlcctl delta release-notes \
 | **Created** | January 28, 2026 |
 | **Author** | PM/PJM Team |
 | **Reviewers** | CTO, Tech Lead |
-| **Framework** | SDLC 6.0 |
+| **Framework** | SDLC 6.3.0 |
 
 ---
 

@@ -121,7 +121,7 @@ Domain experts (PM, Legal, Finance, Ops) who need workflow automation.
 | **SDLC-Compliance-Enforcement-Guide.md** | 09 GOVERN | Compliance automation |
 | **SDLC-Crisis-Response-Guide.md** | 07 OPERATE | Crisis response procedures |
 | **SDLC-Deployment-Guide.md** | 06 DEPLOY | Production deployment |
-| **SDLC-Platform-Patterns.md** | All | BFlow/NQH/MTEP battle-tested patterns |
+| **SDLC-Platform-Patterns.md** | All | Battle-tested platform patterns |
 | **E2E-TESTING-QUICKSTART.md** | 05 TEST | E2E API testing quick start |
 | **SDLC-E2E-API-Testing-Methodology.md** | 05 TEST | Full E2E testing methodology |
 
@@ -196,6 +196,26 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 
 ---
 
+## Training → Implementation Pathway
+
+> Completed the [11-module training program](../08-Training-Materials/SDLC-Training-Materials.md)? Here's how training modules map to implementation guides:
+
+| Training Module | Implementation Guide |
+|-----------------|---------------------|
+| Module 01 (SDLC Overview) | [Implementation Guide](SDLC-Implementation-Guide.md) — full lifecycle setup |
+| Module 02 (Six Pillars) | [Compliance Enforcement](SDLC-Compliance-Enforcement-Guide.md) — enforce all pillars |
+| Module 03 (Zero Mock) | [Pre-Commit Hooks](SDLC-PRE-COMMIT-HOOKS.md) — automated mock detection |
+| Module 04 (Code Quality) | [Code Review Guide](SDLC-Code-Review-Guide.md) — 3-tier review framework |
+| Module 05 (Dev Workflow) | [Pre-Commit Hooks](SDLC-PRE-COMMIT-HOOKS.md) + [Deployment Guide](SDLC-Deployment-Guide.md) |
+| Module 06 (AI Tools) | [MCP Integration](MCP-Integration-Guide.md) + [Autonomous Codegen](AUTONOMOUS-CODEGEN-PATTERNS.md) |
+| Module 07 (SASE Agentic) | [ACE-AEE Architecture](ACE-AEE-Reference-Architecture.md) + [Multi-Agent Patterns](MULTI-AGENT-PATTERNS.md) |
+| Module 08 (Authority) | [Stage Consistency Validation](SDLC-Stage-Consistency-Validation-Guide.md) — gate enforcement |
+| Module 09 (Gate Workshop) | [Implementation Guide](SDLC-Implementation-Guide.md) — gate setup section |
+| Module 10 (ADR & Sprint) | [Implementation Guide](SDLC-Implementation-Guide.md) — planning section |
+| Module 11 (Remote Teams) | [Conversation-First Governance](CONVERSATION-FIRST-GOVERNANCE.md) — async workflows |
+
+---
+
 ## Related Documentation
 
 | Folder | Purpose |
@@ -205,7 +225,8 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 | [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) | AI governance principles, Long-Running Agent Protocol |
 | [04-AI-TOOLS-LANDSCAPE/](../04-AI-TOOLS-LANDSCAPE/) | AI tool profiles, best practices 2026 |
 | [05-Templates-Tools/](../05-Templates-Tools/) | SASE artifacts, SOUL templates, ROI Calculator |
-| [06-Case-Studies/](../06-Case-Studies/) | BFlow, NQH-Bot, MTEP examples |
+| [06-Case-Studies/](../06-Case-Studies/) | Battle-tested platform examples |
+| [08-Training-Materials/](../08-Training-Materials/) | 11-module training program (39h) |
 
 ---
 

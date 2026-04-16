@@ -564,4 +564,4 @@ Every MCP action creates an Evidence artifact:
 **Ring**: 3 (Outer - Implementation)
 **Source**: Consolidated from RFC-SDLC-603 (Boris Cherny Tactic #1)
 **Owner**: Engineering + DevOps Teams
-**Approval**: CTO @nqh ✅
+**Approval**: CTO Office ✅

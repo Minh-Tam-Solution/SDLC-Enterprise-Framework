@@ -473,4 +473,4 @@ Before merging, ensure:
 **Updated**: February 2, 2026
 **Framework**: SDLC 6.3.0
 **Owner**: Engineering + QA Teams
-**Approval**: CTO @nqh ✅
+**Approval**: CTO Office ✅

@@ -275,7 +275,7 @@ Escalate a Design Decision to full ADR when:
 
 ---
 
-## 6. Integration with SDLC 6.0
+## 6. Integration with SDLC 6.3.0
 
 ### 6.1 Linking to Specifications
 

@@ -295,7 +295,7 @@ Developer Impact: High - all PRs need proper context
 
 **Name**: [Project Name]
 **Repository**: [repo-url]
-**Framework**: SDLC 6.0
+**Framework**: SDLC 6.3.0
 **Tier**: [LITE | STANDARD | PROFESSIONAL | ENTERPRISE]
 
 ## Static Guidelines (Zone 1)

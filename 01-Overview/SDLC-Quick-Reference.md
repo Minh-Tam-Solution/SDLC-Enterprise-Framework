@@ -367,7 +367,7 @@ New Templates:
 
 | I Want To... | Go To |
 |--------------|-------|
-| Understand SDLC 6.0 | [01-Overview/SDLC-Executive-Summary.md](SDLC-Executive-Summary.md) |
+| Understand SDLC 6.3.0 | [01-Overview/SDLC-Executive-Summary.md](SDLC-Executive-Summary.md) |
 | Write a specification | [05-Templates-Tools/Framework-6.0/](../05-Templates-Tools/Framework-6.0/) |
 | Use AI governance | [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) |
 | Find a topic | [CONTENT-MAP.md](../CONTENT-MAP.md) |
