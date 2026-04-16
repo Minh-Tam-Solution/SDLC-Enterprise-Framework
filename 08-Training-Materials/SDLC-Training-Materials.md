@@ -3,7 +3,7 @@
 **Version**: 6.3.0
 **Date**: March 18, 2026
 **Audience**: All team members — developers, designers, product managers, QA, and non-technical staff (citizen developers)
-**Duration**: 8 hours total (can be split across multiple sessions)
+**Duration**: ~39 hours total (can be split across multiple sessions)
 **Prerequisites**: SDLC fundamentals knowledge (or 2-hour SDLC fundamentals course)
 **Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
@@ -79,7 +79,36 @@ Session 4: Real Project Application
   Format: Guided practice on actual project
   Deliverable: Pilot project with SDLC 6.3.0 applied
 
-Total: 8 hours core + ongoing practice
+Session 5-7: SASE, AI Tools & Workflow (Modules 05-07)
+  Duration: ~6 hours total
+  Format: Mixed (lecture + hands-on)
+  Deliverable: AI tool proficiency + workflow compliance
+
+Session 8: Authority & Decision Governance (Module 08)
+  Duration: 2.5 hours
+  Format: Lecture + Case Study + Exercises
+  Deliverable: Decision matrix fluency, escalation protocol mastery
+  Topics: Authority boundaries, decision matrix, escalation protocol, governance violation case study
+
+Session 9: Quality Gate Workshop (Module 09)
+  Duration: 2 hours
+  Format: Hands-on Workshop (instructor-led + staging practice)
+  Deliverable: Full gate lifecycle completed on SDLC Orchestrator
+  Topics: 5 gates (G0-G4), sprint gates, evidence upload, Merkle audit trail
+
+Session 10: ADR & Sprint Plan Workflow (Module 10)
+  Duration: 2 hours
+  Format: Workshop (theory + writing exercises)
+  Deliverable: Written ADR + sprint plan evaluated by CTO
+  Topics: ADR criteria, ADR template, sprint plan enforcement rules, document-first culture
+
+Session 11: Remote Team Governance (Module 11)
+  Duration: 1 hour
+  Format: Workshop (theory + scenarios)
+  Deliverable: Remote workflow proficiency assessment
+  Topics: Remote challenges, 8 supplementary rules, collaborator vs fork workflow
+
+Total: ~39 hours core + ongoing practice
 ```
 
 ---
