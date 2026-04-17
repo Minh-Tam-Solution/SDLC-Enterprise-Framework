@@ -161,8 +161,7 @@ The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human develop
 **What's in SDLC 4.9 (November 13, 2025)**:
 - ✅ **Complete 10-Stage Lifecycle** - WHY → WHAT → HOW → BUILD → TEST → DEPLOY → OPERATE → INTEGRATE → COLLABORATE → GOVERN
 - ✅ **Perfect /docs Alignment** - 10 SDLC stages → 10 /docs folders (00-09)
-- ✅ **14,822% ROI** - 2x improvement over SDLC 4.8's 7,322%
-- ✅ **BFlow 52-Day Journey** - Flagship validation, 827:1 ROI
+- ✅ **BFlow 52-Day Journey** - Flagship validation (ROI metrics deferred to post-GA measurement)
 
 ## Key Framework Concepts
 
@@ -582,14 +581,12 @@ SDLC 6.1.2 (March 9, 2026) ← CURRENT
   ↓ SOULs + TEAMs: 17 SASE role templates + 10 team charters added to Ring 2
 ```
 
-## Proven ROI (SDLC 5.0.0)
-- **14,822% combined ROI** (2x improvement over 4.8)
-- **827:1 ROI** - BFlow 52-day journey
-- **96% time savings** with Design Thinking
-- **10x-50x productivity gains** across 3 platforms
-- **<2 minute code review** with CodeRabbit (Tier 3)
-- **24-48 hour crisis resolution** proven multiple times
-- **99.9%+ uptime** - BFlow production excellence
+## Proven Production Use
+
+Framework đã được công ty NQH/MTS sử dụng để phát triển các platform trong
+**NQH Technology Ecosystem** — 5-layer architecture, 14 platforms.
+
+Reference: `Bflow-Platform/docs/00-foundation/01-vision/nqh-technology-ecosystem-vision.md`
 
 ## Quick Reference Links
 
@@ -631,7 +628,7 @@ SDLC 6.1.2 (March 9, 2026) ← CURRENT
 
 ---
 
-The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.2, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 10 months of real platform development across the NQH Technology Ecosystem. With SDLC 6.3.1, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 11 training modules (39h), production-ready in 1-2 weeks.**
 
 **Last Updated**: April 17, 2026
 **Framework Version**: SDLC 6.3.1

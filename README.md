@@ -29,7 +29,7 @@ SDLC 6.3.0 is a **7-Pillar AI+Human Excellence Framework** with:
 
 **Key capabilities**: Tool-agnostic AI governance, 4-tier classification (LITE→ENTERPRISE), TDD integration, anti-vibecoding quality gates, evidence-based development.
 
-**Proven**: BFlow ($43M, 827:1 ROI), NQH-Bot (₫15B+), MTEP (<30 min PaaS)
+**Proven in production**: Framework đã được công ty NQH/MTS sử dụng để phát triển các platform trong **NQH Technology Ecosystem** (5-layer architecture, 14 platforms — see [vision doc](https://github.com/Minh-Tam-Solution/Bflow-Platform/blob/main/docs/00-foundation/01-vision/nqh-technology-ecosystem-vision.md))
 
 > For detailed version history, see [CHANGELOG.md](./CHANGELOG.md)
 

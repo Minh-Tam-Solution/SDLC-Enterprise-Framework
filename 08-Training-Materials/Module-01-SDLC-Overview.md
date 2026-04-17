@@ -30,7 +30,7 @@ format: "Lecture + Discussion + Quiz"
 | **SASE Integration** | Software Agentic Software Engineering (SE 3.0) |
 | **AI+Human Orchestration** | SE4H (Human Coach) + SE4A (AI Executor) |
 | **4-Tier Classification** | LITE / STANDARD / PROFESSIONAL / ENTERPRISE |
-| **Proven ROI** | 14,822% combined across production platforms |
+| **Production-Proven** | Battle-tested across multiple production platforms in NQH Technology Ecosystem |
 
 ### Why SDLC 6.3.0?
 
@@ -198,20 +198,22 @@ ENTERPRISE (50+ members):
 | Uptime | 99.9% | 99.95% |
 | Mock Instances | 0 | 0 |
 
-### Proven ROI
+### Production Validation
 
-| Platform | Duration | ROI |
-|----------|----------|-----|
-| Platform A | 52 days | 827:1 |
-| Platform B | 4 weeks | 1,350:1 |
-| Platform C | 6 weeks | 890:1 |
-| **Combined** | -- | **14,822%** |
+Framework đã được áp dụng để phát triển các platform trong NQH Technology Ecosystem.
+Quantified ROI metrics deferred to post-go-live measurement (BFlow GA pending).
+
+| Platform | Duration | Status |
+|----------|----------|--------|
+| Platform A | 52 days | In production |
+| Platform B | 4 weeks | In production |
+| Platform C | 6 weeks | In production |
 
 ### Productivity Gains
 
 ```
-Design Thinking:   96% time savings (4 weeks vs 6 months)
-Code Review:       <2 minutes with AI (Tier 3)
+Design Thinking:   Significant time savings vs traditional waterfall
+Code Review:       Fast turnaround with AI assistance (Tier 3)
 Crisis Resolution: 24-48 hours (proven multiple times)
 Test Coverage:     90%+ with real services only
 ```
@@ -318,5 +320,5 @@ Test Coverage:     90%+ with real services only
 **Q4.** What is the Zero Mock Policy?
 > **Answer**: NEVER use mock, fake, or dummy data or implementations. All code must use real databases, real API calls, and real data patterns. No exceptions.
 
-**Q5.** What is the combined ROI proven across Platform A, Platform B, and Platform C?
-> **Answer**: 14,822% combined ROI.
+**Q5.** Where has the SDLC Framework been validated in production?
+> **Answer**: Across multiple platforms in the NQH Technology Ecosystem (BFlow ERP, NQH-Bot WFM, MTEP PaaS, plus tech products SDLC Orchestrator and MTClaw). Quantified ROI metrics deferred to post-go-live measurement.
