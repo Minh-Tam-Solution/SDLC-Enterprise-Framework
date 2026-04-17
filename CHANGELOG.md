@@ -4,7 +4,35 @@
 
 **Framework**: SDLC 6.3.1 Enterprise Framework — Governance Training Expansion
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: April 17, 2026 (SDLC 6.3.1 Governance Training)
+**Last Updated**: April 17, 2026 (SDLC 6.3.1 + Agent Continuity Runtime Guidance addendum)
+
+---
+
+## 📚 Version 6.3.1 Amendment — April 17, 2026 (AGENT CONTINUITY RUNTIME GUIDANCE)
+
+**Amendment Date**: April 17, 2026
+**Type**: ADDENDUM (no version bump) — new SASE artifact as SHOULD recommendation
+**Status**: PRODUCTION-READY
+**Breaking Changes**: None
+**Trigger**: MTClaw field report 2026-04-17 (workspace-awareness-notice.md) — PM agent asked generic project-state questions despite having filesystem tools. Violates Mental Model #7 (Agent Continuity).
+**CPO Review (Method Steward)**: APPROVED with Condition 1 (implementation-plurality preservation note)
+**CTO Review**: APPROVED (Sprint 59, ADR-015)
+
+### What's New (6.3.1 Amendment)
+
+- ✅ **New SASE Artifact** — `05-Templates-Tools/04-SASE-Artifacts/Agent-Continuity-Runtime-Guidance.md`
+- ✅ **SHOULD recommendation** for runtime implementors (MTClaw + SDLC Orchestrator pattern)
+- ✅ **Closes Agent Continuity gap** — agents with filesystem access MUST read project state before querying user on planning/status topics
+- ✅ **Implementation-plurality preserved** — Layer 1.25 injection is ONE valid pattern; tool-use preamble and agent config flag are equally valid alternatives
+- ✅ **AGENTS-MD-Template.md updated** — references new guidance doc under Related section
+
+### Why an Addendum, Not 6.3.2
+
+The change is a new SHOULD recommendation (runtime guidance), not a methodology change. No Mental Model revision, no Pillar restructure, no protected-path edit. Category: incremental SASE artifact under existing 6.3.1 release. Rationale vetted and approved by CPO acting as Method Steward.
+
+### Rollback Safety
+
+The guidance document is standalone. Removing it does not break any other Framework content. Runtime implementations adopting the pattern own their own rollback (see SDLC Orchestrator Sprint 59 plan for Orchestrator-side rollback).
 
 ---
 

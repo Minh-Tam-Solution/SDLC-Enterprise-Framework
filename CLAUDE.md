@@ -6,7 +6,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.3.1**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
 
-**What's New in 6.3.1 (April 17, 2026) - GOVERNANCE TRAINING EXPANSION**:
+**What's New in 6.3.1 (April 17, 2026) — AGENT CONTINUITY RUNTIME GUIDANCE + GOVERNANCE TRAINING EXPANSION**:
+
+*Agent Continuity Runtime Guidance*:
+- ✅ **New SASE Artifact** - `05-Templates-Tools/04-SASE-Artifacts/Agent-Continuity-Runtime-Guidance.md`
+- ✅ **SHOULD recommendation** for runtime implementors closing the Agent Continuity gap (MM #7)
+- ✅ **Origin**: MTClaw field report 2026-04-17; SDLC Orchestrator Sprint 59 adopted the pattern
+- ✅ **Implementation-plurality** preserved per CPO Condition 1 — Layer 1.25 injection is ONE valid pattern
+- ✅ **AGENTS-MD-Template** now cross-references the new guidance doc
+
+*Governance Training Expansion*:
 - ✅ **4 New Training Modules (08-11)** - Total program: 11 modules, 39h instruction (was 7 modules, 32h)
 - ✅ **Module 08: Authority & Decision Governance** (2h) - Role boundaries, decision matrix, escalation protocol
 - ✅ **Module 09: Quality Gate Workshop** (2h) - Hands-on G0-G4 evaluation on SDLC Orchestrator

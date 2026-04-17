@@ -2,7 +2,7 @@
 
 **Version**: 2.0.0
 **Status**: RECOMMENDED
-**Framework**: SDLC 6.3.0
+**Framework**: SDLC 6.3.1
 **Target**: <60 lines (per HumanLayer research)
 
 ---
@@ -109,6 +109,7 @@ wc -l AGENTS.md  # Should be <60
 ## Related
 
 - [05-Context-Management.md](../../03-AI-GOVERNANCE/05-Context-Management.md) - Full principle
+- [Agent-Continuity-Runtime-Guidance.md](Agent-Continuity-Runtime-Guidance.md) - Runtime SHOULD recommendation for closing the Agent Continuity gap (MM #7). Added 6.3.1 addendum, 2026-04-17.
 - [DEPRECATION-POLICY.md](../../DEPRECATION-POLICY.md) - MTS/BRS/LPS deprecated
 
 ---
