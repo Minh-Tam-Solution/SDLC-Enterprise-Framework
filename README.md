@@ -1,6 +1,6 @@
-# SDLC 6.3.0 Universal Framework
+# SDLC 6.3.1 Universal Framework
 
-**Version**: 6.3.0 | **Status**: ACTIVE | **Date**: March 18, 2026
+**Version**: 6.3.1 | **Status**: ACTIVE | **Date**: April 17, 2026
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -356,7 +356,7 @@ SDLC-Enterprise-Framework/
 │   └── 08-Project-Templates/     # Planning hierarchy templates
 ├── 06-Case-Studies/              # BFlow, MTEP, NQH-Bot examples (Ring 2)
 ├── 07-Implementation-Guides/     # Rollout guides (Ring 3)
-├── 08-Training-Materials/        # Quick start + training (Ring 3)
+├── 08-Training-Materials/        # 11 modules, 39h (Modules 08-11 NEW 6.3.1)
 ├── 09-Continuous-Improvement/    # RFCs + improvement guide (Ring 3)
 ├── 10-archive/                   # Centralized legacy archive
 │   ├── 00-Legacy/               # Foundation archives (SDLC 1.x-5.0)
@@ -482,7 +482,8 @@ For detailed release notes, see [CHANGELOG.md](./CHANGELOG.md).
 
 | Version | Date | Summary |
 |---------|------|----------|
-| **6.3.0** | **Mar 29, 2026** | **Methodology Upgrade**: Fix-First Review Protocol (F1), Effort Compression Table (F2), Scope Drift Detection (F3), Three-Tier Testing (F4), Doc Staleness Detection (F5), Terminal Status Taxonomy (F6). SOUL-cso added (18 roles). |
+| **6.3.1** | **Apr 17, 2026** | **Governance Training Expansion**: 4 new training modules (08-11) — Authority & Decision (2h), Quality Gate Workshop (2h), ADR & Sprint Plan Workflow (2h), Remote Team Governance (1h). Total program: 11 modules, 39h, 80 quiz questions. Modules derived from real governance incidents. |
+| 6.3.0 | Mar 29, 2026 | **Methodology Upgrade**: Fix-First Review Protocol (F1), Effort Compression Table (F2), Scope Drift Detection (F3), Three-Tier Testing (F4), Doc Staleness Detection (F5), Terminal Status Taxonomy (F6). SOUL-cso added (18 roles). |
 | 6.3.0 | Mar 18, 2026 | Agentic SDLC + Lean Ring 1: 8 Mental Models, Long-Running Agent Protocol, Citizen Developer Guide, ROI Calculator. Ring 1 consolidated (-21%). 42 tool-specific refs sanitized. |
 | 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 18 role templates + 10 team charters (Ring 2) |
 | 6.1.1 | Feb 21, 2026 | Post-Cleanup Patch: AI Council→Senior Review Board, 36 frozen templates archived, Conversation-First Governance |

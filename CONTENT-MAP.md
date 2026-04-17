@@ -37,7 +37,7 @@ Before creating any new document, check if a canonical file already exists for t
 │  RING 3: OUTER (06-09) - Implementation & Training               │
 │  ├── 06-Case-Studies/ - Real-world examples                      │
 │  ├── 07-Implementation-Guides/ - How-to guides                   │
-│  ├── 08-Training-Materials/ - Onboarding, workshops              │
+│  ├── 08-Training-Materials/ - 11 modules, 39h (Modules 08-11 NEW 6.3.1) │
 │  └── 09-Continuous-Improvement/ - Feedback, iteration            │
 │                                                                    │
 └────────────────────────────────────────────────────────────────────┘
@@ -211,6 +211,21 @@ Before creating any new document, check if a canonical file already exists for t
 | Code Review Guide (SSOT) | `07-Implementation-Guides/SDLC-Code-Review-Guide.md` | Consolidated from 3 guides (Sprint 173) | ACTIVE |
 | Implementation Guide | `07-Implementation-Guides/SDLC-Implementation-Guide.md` | — | ACTIVE |
 | **MCP Integration Guide** | `07-Implementation-Guides/MCP-Integration-Guide.md` | RFC-SDLC-603 | **NEW 6.0.3** |
+
+### Training Materials (08-Training-Materials/) - EXPANDED 6.3.1
+
+| # | Topic | Canonical File | Hours | Status |
+|---|-------|---------------|:-----:|--------|
+| 01-07 | Foundation curriculum | `08-Training-Materials/SDLC-Training-Materials.md` | 32h | ACTIVE |
+| Quick start | Quick Start Guide | `08-Training-Materials/SDLC-Quick-Start-Guide.md` | 30min | ACTIVE |
+| **08** | **Authority & Decision Governance** | `08-Training-Materials/Module-08-Authority-Decision.md` | 2h | **NEW 6.3.1** |
+| **09** | **Quality Gate Workshop** | `08-Training-Materials/Module-09-Quality-Gate-Workshop.md` | 2h | **NEW 6.3.1** |
+| **10** | **ADR & Sprint Plan Workflow** | `08-Training-Materials/Module-10-ADR-Sprint-Plan.md` | 2h | **NEW 6.3.1** |
+| **11** | **Remote Team Governance** | `08-Training-Materials/Module-11-Remote-Governance.md` | 1h | **NEW 6.3.1** |
+
+> **Note**: Modules 08-11 added in 6.3.1 — governance training derived from real
+> incidents (e.g., codebase restructure without ADR). 20 quiz questions per module.
+> Total program: 11 modules, 39h instruction.
 
 ### AI Tools Landscape (04-AI-TOOLS-LANDSCAPE/) - NEW
 

@@ -1,10 +1,19 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.3.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.3.1
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.3.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - March 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.3.1**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+
+**What's New in 6.3.1 (April 17, 2026) - GOVERNANCE TRAINING EXPANSION**:
+- ✅ **4 New Training Modules (08-11)** - Total program: 11 modules, 39h instruction (was 7 modules, 32h)
+- ✅ **Module 08: Authority & Decision Governance** (2h) - Role boundaries, decision matrix, escalation protocol
+- ✅ **Module 09: Quality Gate Workshop** (2h) - Hands-on G0-G4 evaluation on SDLC Orchestrator
+- ✅ **Module 10: ADR & Sprint Plan Workflow** (2h) - When to write ADR, sprint enforcement rules
+- ✅ **Module 11: Remote Team Governance** (1h) - Async rules, Collaborator vs Fork workflow
+- ✅ **80 quiz questions** - 20 per module, multiple choice + scenario-based
+- ✅ **Real-world incidents** - Modules derived from actual governance violations (genericized)
 
 **What's New in 6.3.0 (March 29, 2026) - METHODOLOGY UPGRADE + CSO**:
 - ✅ **Fix-First Review Protocol** - AUTO-FIX vs ASK classification for every review finding (Section 6.3, Quality Gates doc)
@@ -624,6 +633,6 @@ SDLC 6.1.2 (March 9, 2026) ← CURRENT
 
 The framework represents not theory but battle-tested patterns from 9 months of real platform development. With SDLC 6.1.2, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 14,822% ROI, production-ready in 1-2 weeks.**
 
-**Last Updated**: March 29, 2026
-**Framework Version**: SDLC 6.3.0
-**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 8 Mental Models + Long-Running Agent Protocol + Fix-First + Effort Compression + Terminal Status Taxonomy
+**Last Updated**: April 17, 2026
+**Framework Version**: SDLC 6.3.1
+**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 8 Mental Models + Long-Running Agent Protocol + Fix-First + Effort Compression + Terminal Status Taxonomy + 11 Training Modules (39h)

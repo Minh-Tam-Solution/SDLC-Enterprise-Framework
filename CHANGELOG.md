@@ -2,9 +2,95 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.3.0 Enterprise Framework — Methodology Upgrade + CSO Role + Lean Ring 1
+**Framework**: SDLC 6.3.1 Enterprise Framework — Governance Training Expansion
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: March 29, 2026 (SDLC 6.3.0 Methodology Upgrade)
+**Last Updated**: April 17, 2026 (SDLC 6.3.1 Governance Training)
+
+---
+
+## 📚 Version 6.3.1 - April 17, 2026 (GOVERNANCE TRAINING EXPANSION)
+
+**Release Date**: April 17, 2026
+**Type**: MINOR RELEASE — 4 new training modules (08-11), 7h instruction, 80 quiz questions
+**Status**: PRODUCTION-READY
+**Breaking Changes**: None
+**Supersedes**: SDLC 6.3.0 Methodology Upgrade + Lean Ring 1
+**Trigger**: Real-world governance violation incident (codebase restructure without ADR) exposed training gaps
+**CTO Review**: APPROVED
+
+### What's New
+
+| Module | Topic | Hours | Format |
+|:------:|-------|:-----:|--------|
+| **08** | **Authority & Decision Governance** | 2h | Lecture + 10 exercises |
+| **09** | **Quality Gate Workshop** | 2h | Hands-on SDLC Orchestrator |
+| **10** | **ADR & Sprint Plan Workflow** | 2h | Lecture + 2 exercises |
+| **11** | **Remote Team Governance** | 1h | Lecture + 5 scenarios |
+
+### Module 08: Authority & Decision Governance
+
+- Role boundaries: CEO/CPO/CTO/Pod Lead/Developer (what each can/cannot decide)
+- Decision matrix: 13 decision types → ADR/gate requirements
+- Escalation protocol: 4 levels (Dev → Pod Lead → CTO/CPO → Joint)
+- Case study: Unauthorized codebase restructure (genericized real incident)
+- 10 exercises with answer key + 5 quiz questions
+
+### Module 09: Quality Gate Workshop
+
+- 5 gates explained (G0 Discovery → G4 Release) with evidence requirements
+- 7-step hands-on walkthrough: signup, project, gate, evidence, submit, reject, re-submit
+- Sprint gates: G-Sprint + G-Sprint-Close
+- 7 common gate failure reasons (no tests, no evidence, scope creep, false claims)
+- 4 practical exercises + 5 quiz questions
+
+### Module 10: ADR & Sprint Plan Workflow
+
+- When ADR is mandatory (architecture/schema/tech stack/restructure)
+- ADR template + 4 anti-patterns (post-hoc, no alternatives, too long, no review)
+- Sprint Enforcement Rules (6 mandatory: plan before code, tests with code, etc.)
+- Document-first culture
+- 2 practical exercises with evaluation rubric + 5 quiz questions
+
+### Module 11: Remote Team Governance
+
+- 5 remote team challenges (async, timezone, no hallway, context loss, trust)
+- 8 additional rules (72h review window, 500 LOC/PR, <4h SLA)
+- Collaborator vs Fork workflow with sequence diagram
+- 5 scenarios with answer key + 5 quiz questions
+
+### Total Training Program (after 6.3.1)
+
+- **Foundation (Modules 01-07)**: 32h — SDLC overview, pillars, code quality, dev workflow, AI tools, SASE
+- **Governance (Modules 08-11)**: 7h — authority, gates, ADR, remote team
+- **Total**: 11 modules, 39h instruction, 80+ quiz questions
+
+### Files Added
+
+```
+08-Training-Materials/Module-08-Authority-Decision.md       # 323 lines
+08-Training-Materials/Module-09-Quality-Gate-Workshop.md    # 304 lines
+08-Training-Materials/Module-10-ADR-Sprint-Plan.md          # 367 lines
+08-Training-Materials/Module-11-Remote-Governance.md        # 251 lines
+```
+
+### Files Modified
+
+```
+08-Training-Materials/SDLC-Training-Materials.md  # Updated total to 39h, 11 modules
+CONTENT-MAP.md                                     # Added Training Materials section
+CLAUDE.md                                          # Added 6.3.1 entry
+README.md                                          # Updated version + tree + history
+CHANGELOG.md                                       # This entry
+```
+
+### Why This Matters
+
+Real governance violation (CTO restructured codebase without CPO approval, no ADR, no gate) exposed that the team understood the rules in principle but not in practice. These hands-on modules make governance concrete:
+
+- **Module 08** prevents authority overreach (real incident → trained scenario)
+- **Module 09** ensures gates are used correctly (hands-on SDLC Orchestrator)
+- **Module 10** stops post-hoc ADRs (forward planning enforced)
+- **Module 11** addresses async team realities (sized for distributed work)
 
 ---
 
