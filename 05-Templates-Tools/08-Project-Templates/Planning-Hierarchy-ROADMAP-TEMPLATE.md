@@ -1,13 +1,15 @@
 # Roadmap Template
 
-**Version**: 6.3.0
-**Date**: January 22, 2026
+**Version**: 6.3.1
+**Date**: April 21, 2026
 **Stage**: 00 - FOUNDATION
 **Pillar**: 2 - Sprint Planning Governance (Planning Hierarchy - Level 1)
 **Status**: ACTIVE - Production Template
 **Authority**: CPO Office
-**Framework**: SDLC 6.3.0
+**Framework**: SDLC 6.3.1
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../../03-AI-GOVERNANCE/) principles
+
+**Documentation Standards**: Preserve the header block when instantiating this template. Follow [SDLC-Naming-Standards.md Part 5](../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md#part-5-document-header-templates).
 
 ---
 
@@ -93,7 +95,7 @@ This template provides a standard structure for 12-month product roadmaps. Use t
 | Phase 3 | [Name] | [X weeks] | Q2 | [Status] |
 | Phase 4 | [Name] | [X weeks] | Q3 | [Status] |
 
-→ See [Phase Plans](../04-build/02-Sprint-Plans/) for details (SDLC 6.3.0 folder structure)
+→ See [Phase Plans](../04-build/02-Sprint-Plans/) for details (SDLC 6.3.1 folder structure)
 
 ---
 

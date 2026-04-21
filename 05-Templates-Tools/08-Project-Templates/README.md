@@ -1,13 +1,15 @@
 # Project Templates
 
-**Version**: 6.3.0
-**Date**: January 22, 2026
+**Version**: 6.3.1
+**Date**: April 21, 2026
 **Stage**: 05 - TEMPLATES & TOOLS
 **Pillar**: 2 - Sprint Planning Governance (Planning Templates)
 **Status**: ACTIVE - Production Templates
 **Authority**: CTO + CPO Office
-**Framework**: SDLC 6.3.0 (7-Pillar Architecture)
+**Framework**: SDLC 6.3.1 (7-Pillar Architecture)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) principles
+
+**Documentation Standards**: Preserve the header block when instantiating this template. Follow [SDLC-Naming-Standards.md Part 5](../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md#part-5-document-header-templates).
 
 ---
 
@@ -157,6 +159,6 @@ Before using templates, verify:
 ---
 
 **Document Status**: ACTIVE
-**Compliance**: Templates RECOMMENDED for all SDLC 6.3.0 projects
+**Compliance**: Templates RECOMMENDED for all SDLC 6.3.1 projects
 **Last Updated**: January 22, 2026
 **Owner**: CTO + CPO Office

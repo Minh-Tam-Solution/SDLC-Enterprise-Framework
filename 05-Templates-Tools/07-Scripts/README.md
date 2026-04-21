@@ -1,24 +1,26 @@
-# SDLC 6.3.0 Framework Scripts & Automation Tools
+# SDLC 6.3.1 Framework Scripts & Automation Tools
 ## Battle-Tested Automation from Real Platform Experience
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE - PRODUCTION READY
-**Date**: February 16, 2026
+**Date**: April 21, 2026
+**Authority**: CTO + CPO Office
 **Architecture**: 7-Pillar + 2-Section (Core + Extensions)
+**Documentation Standards**: All scripts here carry Part 5.1 headers (Version/Date/Status/Authority) in module docstrings. Run [`check_doc_headers.py`](check_doc_headers.py) to audit any `/docs` tree against [SDLC-Naming-Standards.md Part 5](../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md#part-5-document-header-templates).
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../../03-AI-GOVERNANCE/) (7 Principles)
 **Foundation**: Tools proven on BFlow, NQH-Bot, MTEP platforms
 **Philosophy**: Build when needed + AI tools for flexibility
 
-**7 Pillars + 2 Sections (SDLC 6.3.0)**:
+**7 Pillars + 2 Sections (SDLC 6.3.1)**:
 - **Pillars 0-6**: Design Thinking → Documentation Permanence
 - **Section 7**: Quality Assurance System (Vibecoding Index, Kill Switch)
 - **Section 8**: Unified Specification Standard (YAML frontmatter, BDD)
 
-**Legacy/Archive Policy**: Content in 10-archive/{NN}-Legacy folders is never validated (RFC-001, SDLC 6.3.0).
+**Legacy/Archive Policy**: Content in 10-archive/{NN}-Legacy folders is never validated (RFC-001, SDLC 6.3.1).
 
 ---
 
-## What's New in SDLC 6.3.0
+## What's New in SDLC 6.3.1
 
 ### 7-Pillar + 2-Section Architecture Validation
 
@@ -84,7 +86,7 @@ Validation aligns with the 3-Ring Architecture:
 ### Essential Commands
 
 ```bash
-# 1. SDLC 6.3.0 Complete Validation (7 Pillars + 2 Sections)
+# 1. SDLC 6.3.1 Complete Validation (7 Pillars + 2 Sections)
 python3 compliance_sdlc_validator.py /path/to/project
 
 # 2. Design Thinking Compliance (Pillar 0)
@@ -101,7 +103,7 @@ python3 quickstart_solo_setup.py /path/to/project
 
 ## Key Scripts Explained
 
-### SDLC 6.3.0 Complete Validator
+### SDLC 6.3.1 Complete Validator
 
 **Validates complete 7-Pillar + 2-Section architecture**
 
@@ -128,7 +130,7 @@ python3 compliance_sdlc_validator.py /path/to/project
 ✅ CLAUDE.md: PRESENT
 ✅ MRP Template: AVAILABLE
 ✅ File Naming Standards: COMPLIANT
-🎉 SDLC 6.3.0 FULLY COMPLIANT
+🎉 SDLC 6.3.1 FULLY COMPLIANT
 ```
 
 ### Design Thinking Validator
@@ -166,7 +168,7 @@ python3 compliance_design_thinking_validator.py /path/to/project
 python3 quickstart_solo_setup.py /path/to/project
 
 # What it does:
-# 1. Creates SDLC 6.3.0 complete structure
+# 1. Creates SDLC 6.3.1 complete structure
 # 2. Installs compliance validators
 # 3. Sets up Design Thinking templates
 # 4. Configures Code Review Tier 1
@@ -225,7 +227,7 @@ Validation adapts based on project tier:
 ---
 
 **Status**: PRODUCTION READY
-**Framework**: SDLC 6.3.0 (7-Pillar + 2-Section)
+**Framework**: SDLC 6.3.1 (7-Pillar + 2-Section)
 **Philosophy**: Build when needed + AI for flexibility = Optimal balance
 
 ***"Validate with code, automate with AI."***

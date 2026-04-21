@@ -2,9 +2,13 @@
 
 ###############################################################################
 # RFC-001: Legacy Document Organization Standard - Migration Script
-# 
+#
+# Version: 6.3.1
+# Date: April 21, 2026
+# Status: ACTIVE - PRODUCTION VALIDATED (BFlow Platform, 3 live customers)
+# Authority: CTO + CPO Office
+#
 # Purpose: Safely migrate 99-Legacy/ content to 10-Archive/{NN}-Legacy/
-# Status: PRODUCTION VALIDATED (BFlow Platform, 3 live customers)
 # Usage: ./migrate-legacy-to-archive.sh <source_dir> [--dry-run]
 #
 # Example:
