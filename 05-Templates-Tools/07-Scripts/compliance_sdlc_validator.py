@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
-SDLC 6.1.1 Complete Validator
+SDLC 6.3.1 Complete Validator
 Validates complete 10-stage lifecycle + 7-pillar architecture + SASE Framework compliance
 
-Version: 6.1.1
+Version: 6.3.1
 Date: February 2026
 Status: ACTIVE - PRODUCTION READY
+Authority: CTO + CPO Office
 Foundation: Proven validation across BFlow, NQH-Bot, MTEP, SDLC Orchestrator platforms
 Enhancement: 7-Pillar Architecture (Pillar 2: Sprint Planning Governance) + SASE Framework (SE 3.0)
 New in 6.1.1: AI Governance Principles, Concentric Circles Model, best-practices-2026 in 04-AI-TOOLS-LANDSCAPE/
 
-DOCUMENTATION vs CODE SEPARATION (SDLC 6.1.1):
+DOCUMENTATION vs CODE SEPARATION (SDLC 6.3.1):
 - Stage mapping applies ONLY to /docs folders (stages 00-09)
 - Code folders (backend/, frontend/, tools/, tests/) are NOT stage-mapped
 - Code folders are validated for PRESENCE, not stage compliance
@@ -32,7 +33,7 @@ Project Structure Validation (NOT stage-mapped):
 - Code folders: backend/, frontend/, tools/, tests/
 - Required files by tier: README.md, CLAUDE.md, .env.example, etc.
 
-Legacy/Archive Structure (SDLC 6.1.1+):
+Legacy/Archive Structure (SDLC 6.3.1+):
 - 10-archive: ONLY at docs root (not a stage, holds unsorted legacy docs)
 - 99-legacy: within EACH stage (00-09) AND in backend, frontend, tools
 - Content in legacy/archive folders is never validated or upgraded
@@ -92,9 +93,9 @@ from typing import Dict, List, Tuple
 import re
 
 class SDLC60Validator:
-    """SDLC 6.1.1 Complete 7-Pillar + SASE Framework + Team Collaboration Validator
+    """SDLC 6.3.1 Complete 7-Pillar + SASE Framework + Team Collaboration Validator
 
-    7-Pillar Architecture (SDLC 6.1.1):
+    7-Pillar Architecture (SDLC 6.3.1):
     - Pillar 0: Design Thinking Foundation
     - Pillar 1: 10-Stage Lifecycle
     - Pillar 2: Sprint Planning Governance (NEW in 5.2.0)
@@ -161,8 +162,8 @@ class SDLC60Validator:
                 yield path
 
     def validate_all_pillars(self) -> Dict:
-        """Validate all 6 pillars of SDLC 6.1.1"""
-        print("🔍 SDLC 6.1.1 Complete Validation Starting...")
+        """Validate all 6 pillars of SDLC 6.3.1"""
+        print("🔍 SDLC 6.3.1 Complete Validation Starting...")
         print(f"📁 Project: {self.project_path}")
         print("=" * 80)
 
@@ -175,11 +176,11 @@ class SDLC60Validator:
         self.validate_pillar_5_sase_integration()
         self.validate_pillar_6_documentation()
 
-        # SDLC 6.1.1: Section 7 + Section 8 validation
+        # SDLC 6.3.1: Section 7 + Section 8 validation
         self.validate_section_7_quality_assurance()
         self.validate_section_8_spec_standard()
 
-        # SDLC 6.1.1: 3-Ring Architecture validation
+        # SDLC 6.3.1: 3-Ring Architecture validation
         self.validate_three_ring_architecture()
 
         # Calculate overall compliance
@@ -731,10 +732,10 @@ class SDLC60Validator:
 
     def check_sase_artifacts(self) -> int:
         """
-        Check for SASE Artifacts (SDLC 6.1.1 - Simplified)
+        Check for SASE Artifacts (SDLC 6.3.1 - Simplified)
         Returns score 0-30 based on presence of SASE artifacts
 
-        SASE 4 Artifacts (SDLC 6.1.1):
+        SASE 4 Artifacts (SDLC 6.3.1):
         - AGENTS.md: Dynamic context for AI collaboration (industry standard)
         - CRP (Consultation-Readiness Proof): Human-AI consultation evidence
         - MRP (Merge-Readiness Proof): Merge readiness documentation
@@ -805,7 +806,7 @@ class SDLC60Validator:
                 found_patterns.append(pattern)
                 score += 5
 
-        # Check for specific SDLC 6.1.1 documents
+        # Check for specific SDLC 6.3.1 documents
         specific_docs = [
             "SDLC-Team-Communication-Protocol.md",
             "SDLC-Team-Collaboration-Protocol.md",
@@ -873,11 +874,11 @@ class SDLC60Validator:
         return False
 
     # ──────────────────────────────────────────────────────────────────
-    # SDLC 6.1.1 NEW: CLAUDE.md Standard, 3-Ring, MRP, Codegen Checks
+    # SDLC 6.3.1 NEW: CLAUDE.md Standard, 3-Ring, MRP, Codegen Checks
     # ──────────────────────────────────────────────────────────────────
 
     def check_claude_md_standard(self) -> dict:
-        """Validate CLAUDE.md against the SDLC 6.1.1 3-tier standard.
+        """Validate CLAUDE.md against the SDLC 6.3.1 3-tier standard.
 
         Tiers:
         - LITE (1-2 people): 500-1K lines, basic sections
@@ -1442,7 +1443,7 @@ class SDLC60Validator:
         return result
 
     def validate_section_7_quality_assurance(self):
-        """Section 7: Quality Assurance System (SDLC 6.1.1)"""
+        """Section 7: Quality Assurance System (SDLC 6.3.1)"""
         print("\n🛡️  Validating Section 7: Quality Assurance System...")
 
         section = self.results["section_7"]
@@ -1456,7 +1457,7 @@ class SDLC60Validator:
         print(f"   {status} - Score: {section['score']}%")
 
     def validate_section_8_spec_standard(self):
-        """Section 8: Unified Specification Standard (SDLC 6.1.1)"""
+        """Section 8: Unified Specification Standard (SDLC 6.3.1)"""
         print("\n📋 Validating Section 8: Specification Standard...")
 
         section = self.results["section_8"]
@@ -1470,7 +1471,7 @@ class SDLC60Validator:
         print(f"   {status} - Score: {section['score']}%")
 
     def validate_three_ring_architecture(self):
-        """3-Ring Architecture Compliance (SDLC 6.1.1)"""
+        """3-Ring Architecture Compliance (SDLC 6.3.1)"""
         print("\n🔵 Validating 3-Ring Architecture...")
 
         section = self.results["three_ring"]
@@ -1510,7 +1511,7 @@ class SDLC60Validator:
         print(f"   CLAUDE.md: {claude_status} - Score: {claude_section['score']}%")
 
     def calculate_overall_compliance(self):
-        """Calculate overall SDLC 6.1.1 compliance (7 pillars + 2 sections + extras)"""
+        """Calculate overall SDLC 6.3.1 compliance (7 pillars + 2 sections + extras)"""
         # Core: 7 pillars
         pillar_keys = [f"pillar_{i}" for i in range(7)]
         pillar_passed = sum(1 for k in pillar_keys if self.results[k]["passed"])
@@ -1530,7 +1531,7 @@ class SDLC60Validator:
     def print_results(self):
         """Print detailed validation results"""
         print("\n" + "=" * 80)
-        print("📊 SDLC 6.1.1 VALIDATION RESULTS")
+        print("📊 SDLC 6.3.1 VALIDATION RESULTS")
         print("=" * 80)
 
         for pillar_key, pillar_data in self.results.items():
@@ -1543,7 +1544,7 @@ class SDLC60Validator:
         print(f"Overall Score: {self.overall_score:.1f}%")
 
         if self.overall_compliant:
-            print("🎉 PROJECT IS SDLC 6.1.1 COMPLIANT!")
+            print("🎉 PROJECT IS SDLC 6.3.1 COMPLIANT!")
             print("✅ Ready for production deployment")
             print("✅ 7-Pillar Architecture validated")
             print("✅ Section 7 Quality Assurance checked")

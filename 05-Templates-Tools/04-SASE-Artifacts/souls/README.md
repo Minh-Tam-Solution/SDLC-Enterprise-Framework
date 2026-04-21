@@ -1,6 +1,11 @@
 # SOUL Role Templates
 
-**Version**: 1.0.0 | **Framework**: SDLC 6.3.0 | **Ring**: 2 (Governance — Templates & Tools)
+**Version**: 6.3.1
+**Date**: April 21, 2026
+**Status**: ACTIVE - PRODUCTION READY
+**Authority**: CTO + CPO Office
+**Ring**: 2 (Governance — Templates & Tools)
+**Documentation Standards**: Every SOUL in this directory now carries a "Documentation Standards Compliance (MANDATORY)" section binding the role to [SDLC-Naming-Standards.md Part 5](../../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md#part-5-document-header-templates). Before any SOUL authors or updates an SDLC artifact it must validate the Part 5 header; run [`../../07-Scripts/check_doc_headers.py`](../../07-Scripts/check_doc_headers.py) to audit.
 
 ---
 
@@ -99,7 +104,7 @@ Each SOUL file follows this structure:
 ---
 role: <role_name>
 category: executor | advisor | router
-sdlc_framework: "6.3.0"
+sdlc_framework: "6.3.1"
 version: 1.0.0
 sdlc_stages: ["04"]           # Which SDLC stages
 sdlc_gates: ["G-Sprint"]      # Which gates
@@ -144,7 +149,7 @@ Team charters define how SOULs collaborate in groups. See `../teams/` for 8 team
 **Organizational Support** (1):
 - `TEAM-business.md` — Business Operations (NOT part of SDLC lifecycle — sales, CS, support)
 
-**Archived in 6.3.0** (moved to 10-Archive/):
+**Archived in 6.3.1** (moved to 10-Archive/):
 - ~~TEAM-advisory.md~~ — Merged into TEAM-executive (duplicate)
 - ~~TEAM-engineering.md~~ — Archived (overlapped all functional teams)
 
@@ -152,8 +157,8 @@ Team charters define how SOULs collaborate in groups. See `../teams/` for 8 team
 
 *Added in SDLC 6.1.2 — Ring 2 (Governance: Templates & Tools)*
 
-### 6.3.0 Updates
+### 6.3.1 Updates
 - Key executor SOULs (coder, architect, reviewer, tester, fullstack) now include **Long-Running Task Protocol** section
-- All version references bumped to SDLC 6.3.0
+- All version references bumped to SDLC 6.3.1
 - Framework references updated to consolidated docs (Stage-Lifecycle-Framework, Quality-Gates-Assurance-Framework)
 - **NEW: SOUL-cso.md** — Chief Security Officer added as SE4H advisor role (PRO+ tier). Covers OWASP ASVS L2, AGPL containment, threat modeling, SBOM, supply chain security. SASE model updated from 12→13 core roles (17→18 total)
