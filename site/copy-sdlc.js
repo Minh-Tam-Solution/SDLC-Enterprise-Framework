@@ -232,7 +232,7 @@ const sdlcCopy = {
         badge: "LIVE · OPEN SOURCE",
         title: "Endiorbot",
         body: "Personal AI orchestration for solo developers. 14 SOUL agents across 5 channels. The first reference implementation of SDLC 6.3.1 — battle-tested, MIT-licensed, free forever.",
-        stats: [["1.2k", "GitHub stars"], ["14", "SOUL agents"], ["5", "channels"], ["Sprint 144", "current"]],
+        stats: [["NEW", "just launched"], ["14", "SOUL agents"], ["5", "channels"], ["Sprint 145", "current"]],
         ctas: [["Visit endior.net", "https://endior.net"], ["GitHub →", "https://github.com/Minh-Tam-Solution/EndiorBot"]],
       },
       orch: {
@@ -240,7 +240,7 @@ const sdlcCopy = {
         title: "SDLC Orchestrator",
         body: "Enterprise platform that automates Framework enforcement. Dynamic AGENTS.md, gate automation, evidence collection, audit trails. Built for regulated teams that need governance at scale.",
         stats: [["Q3", "2026 launch"], ["Enterprise", "tier focus"], ["Auto", "gate enforcement"], ["Pilot", "joining now"]],
-        ctas: [["Visit sdlc.nhatquangholding.com", "#"], ["Read the architecture", "#"]],
+        ctas: [["Joining pilot — contact taidt@mtsolution.com.vn", "mailto:taidt@mtsolution.com.vn"]],
       }
     },
     adopt: {
@@ -295,10 +295,10 @@ const sdlcCopy = {
       tag: "SDLC Enterprise Framework v6.3.1",
       sub: "Built BY AI+Human teams. FOR AI+Human teams. MIT licensed.",
       cols: [
-        { t: "Framework", links: [["Executive Summary", "#"], ["Quick Reference", "#"], ["Core Methodology", "#"], ["Changelog", "#"]] },
-        { t: "Pillars", links: [["10-Stage Lifecycle", "#"], ["Quality Gates", "#"], ["SASE", "#"], ["Specifications", "#"]] },
-        { t: "Resources", links: [["18 SOUL templates", "#"], ["Case studies", "#"], ["Training (39h)", "#"], ["GitHub", "#"]] },
-        { t: "Family", links: [["Endiorbot (live)", "https://endior.net"], ["SDLC Orchestrator", "#"], ["NQH Ecosystem", "#"], ["MTS-SDLC-Lite", "https://github.com/Minh-Tam-Solution/MTS-SDLC-Lite"], ["TinySDLC", "https://github.com/Minh-Tam-Solution/tinysdlc"], ["AncestorTree", "https://github.com/Minh-Tam-Solution/AncestorTree"]] },
+        { t: "Framework", links: [["Executive Summary", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/01-Overview/SDLC-Executive-Summary.md"], ["Quick Reference", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/01-Overview/SDLC-Quick-Reference.md"], ["Core Methodology", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/02-Core-Methodology/SDLC-Core-Methodology.md"], ["Changelog", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/CHANGELOG.md"]] },
+        { t: "Pillars", links: [["10-Stage Lifecycle", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md"], ["Quality Gates", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md"], ["SASE", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md"], ["Specifications", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md"]] },
+        { t: "Resources", links: [["18 SOUL templates", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/tree/main/05-Templates-Tools/04-SASE-Artifacts/souls"], ["Case studies", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/tree/main/06-Case-Studies"], ["Training (39h)", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/tree/main/08-Training-Materials"], ["GitHub", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework"]] },
+        { t: "Family", links: [["Endiorbot (live)", "https://endior.net"], ["SDLC Orchestrator (Q3 2026)", "mailto:taidt@mtsolution.com.vn?subject=SDLC%20Orchestrator%20Pilot"], ["MTS-SDLC-Lite", "https://github.com/Minh-Tam-Solution/MTS-SDLC-Lite"], ["TinySDLC", "https://github.com/Minh-Tam-Solution/tinysdlc"], ["AncestorTree", "https://github.com/Minh-Tam-Solution/AncestorTree"]] },
       ],
       auth: "CPO Office · taidt@mtsolution.com.vn · CTO Approved",
     }
@@ -533,7 +533,7 @@ const sdlcCopy = {
         badge: "LIVE · MÃ NGUỒN MỞ",
         title: "Endiorbot",
         body: "AI orchestration cá nhân cho lập trình viên solo. 14 SOUL agents qua 5 kênh. Reference implementation đầu tiên của SDLC 6.3.1 — đã chinh chiến, MIT, miễn phí mãi mãi.",
-        stats: [["1.2k", "GitHub stars"], ["14", "SOUL agents"], ["5", "kênh"], ["Sprint 144", "hiện tại"]],
+        stats: [["MỚI", "vừa launched"], ["14", "SOUL agents"], ["5", "kênh"], ["Sprint 145", "hiện tại"]],
         ctas: [["Vào endior.net", "https://endior.net"], ["GitHub →", "https://github.com/Minh-Tam-Solution/EndiorBot"]],
       },
       orch: {
@@ -541,7 +541,7 @@ const sdlcCopy = {
         title: "SDLC Orchestrator",
         body: "Nền tảng enterprise tự động hoá Framework. Dynamic AGENTS.md, gate automation, thu thập bằng chứng, audit trails. Dành cho team quản lý chặt cần governance ở quy mô lớn.",
         stats: [["Q3", "ra mắt 2026"], ["Enterprise", "tier focus"], ["Auto", "gate enforcement"], ["Pilot", "đang mở"]],
-        ctas: [["Vào sdlc.nhatquangholding.com", "#"], ["Đọc kiến trúc", "#"]],
+        ctas: [["Tham gia pilot — liên hệ taidt@mtsolution.com.vn", "mailto:taidt@mtsolution.com.vn"]],
       }
     },
     adopt: {
@@ -596,10 +596,10 @@ const sdlcCopy = {
       tag: "SDLC Enterprise Framework v6.3.1",
       sub: "Xây BỞI đội AI+Người. CHO đội AI+Người. MIT licensed.",
       cols: [
-        { t: "Framework", links: [["Executive Summary", "#"], ["Quick Reference", "#"], ["Core Methodology", "#"], ["Changelog", "#"]] },
-        { t: "Pillars", links: [["10-Stage Lifecycle", "#"], ["Quality Gates", "#"], ["SASE", "#"], ["Specifications", "#"]] },
-        { t: "Resources", links: [["18 SOUL templates", "#"], ["Case studies", "#"], ["Training (39h)", "#"], ["GitHub", "#"]] },
-        { t: "Family", links: [["Endiorbot (live)", "https://endior.net"], ["SDLC Orchestrator", "#"], ["NQH Ecosystem", "#"], ["MTS-SDLC-Lite", "https://github.com/Minh-Tam-Solution/MTS-SDLC-Lite"], ["TinySDLC", "https://github.com/Minh-Tam-Solution/tinysdlc"], ["AncestorTree", "https://github.com/Minh-Tam-Solution/AncestorTree"]] },
+        { t: "Framework", links: [["Executive Summary", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/01-Overview/SDLC-Executive-Summary.md"], ["Quick Reference", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/01-Overview/SDLC-Quick-Reference.md"], ["Core Methodology", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/02-Core-Methodology/SDLC-Core-Methodology.md"], ["Changelog", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/CHANGELOG.md"]] },
+        { t: "Pillars", links: [["10-Stage Lifecycle", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md"], ["Quality Gates", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md"], ["SASE", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md"], ["Specifications", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/blob/main/05-Templates-Tools/01-Specification-Standard/SDLC-Specification-Standard.md"]] },
+        { t: "Resources", links: [["18 SOUL templates", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/tree/main/05-Templates-Tools/04-SASE-Artifacts/souls"], ["Case studies", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/tree/main/06-Case-Studies"], ["Training (39h)", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework/tree/main/08-Training-Materials"], ["GitHub", "https://github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework"]] },
+        { t: "Family", links: [["Endiorbot (live)", "https://endior.net"], ["SDLC Orchestrator (Q3 2026)", "mailto:taidt@mtsolution.com.vn?subject=SDLC%20Orchestrator%20Pilot"], ["MTS-SDLC-Lite", "https://github.com/Minh-Tam-Solution/MTS-SDLC-Lite"], ["TinySDLC", "https://github.com/Minh-Tam-Solution/tinysdlc"], ["AncestorTree", "https://github.com/Minh-Tam-Solution/AncestorTree"]] },
       ],
       auth: "CPO Office · taidt@mtsolution.com.vn · CTO Approved",
     }
