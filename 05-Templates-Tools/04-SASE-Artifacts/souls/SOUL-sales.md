@@ -50,7 +50,7 @@ Before saving or updating ANY SDLC artifact (ADR, sprint plan, RFC, design doc, 
 1. [`SDLC-Naming-Standards.md`](../../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md) — Parts 3-4 (document + folder naming), **Part 5 (header templates: Active / Archived / Migration)**, Part 6 (archival).
 2. [`SDLC-Project-Structure-Standard.md`](../../../02-Core-Methodology/Documentation-Standards/SDLC-Project-Structure-Standard.md) — Stage 00-09 folder mapping for `/docs`.
 3. [`SDLC-Legacy-Document-Organization.md`](../../../02-Core-Methodology/Documentation-Standards/SDLC-Legacy-Document-Organization.md) — when a doc is superseded.
-4. [`SDLC-Visual-Documentation-Standards.md`](../../../02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md) — diagram conventions for any visual artifact.
+4. [`SDLC-Visual-Documentation-Standards.md`](../../../05-Templates-Tools/06-Manual-Templates/SDLC-Visual-Documentation-Standards.md) — diagram conventions for any visual artifact.
 
 **Pre-save checklist** (run every write/update):
 

@@ -4,7 +4,59 @@
 
 **Framework**: SDLC 6.3.1 Enterprise Framework — Governance Training Expansion
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: April 17, 2026 (SDLC 6.3.1 + Agent Continuity Runtime Guidance addendum)
+**Last Updated**: April 28, 2026 (Pre-OSS-launch repository reorganization)
+
+---
+
+## 📚 Version 6.3.1 Amendment — April 28, 2026 (PRE-OSS-LAUNCH REPOSITORY REORGANIZATION)
+
+**Amendment Date**: April 28, 2026
+**Type**: REPOSITORY HOUSEKEEPING (no version bump) — content unchanged, organization improved
+**Status**: PRODUCTION-READY
+**Driver**: Pre-public-OSS-launch quality review — CEO directive "khi đưa SDLC Framework ra cộng đồng, nó phải là thứ có giá trị"
+
+### What Changed
+
+**Active dirs (01-Overview through 09-Continuous-Improvement)**:
+- ✅ Removed 9 redirect-stubs that had been previously pointing from Ring 1 to Ring 2 (their content has lived at the Ring 2 destination since SDLC 6.3.0; the stubs were scheduled to expire 2026-09-18 anyway, removed early as low-value placeholder noise)
+- ✅ Updated 26 cross-references in active dirs to point directly to the Ring 2 destinations (no more stub-hop)
+- ✅ Updated CONTENT-MAP.md, CLAUDE.md root meta-docs to reflect new canonical paths
+
+**Removed redirect stubs** (content preserved at destinations):
+
+| Removed stub | Live destination |
+|--------------|------------------|
+| `03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md` | `05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md` |
+| `03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md` | `07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md` |
+| `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` |
+| `03-AI-GOVERNANCE/15-CONVERSATION-FIRST-GOVERNANCE.md` | `07-Implementation-Guides/CONVERSATION-FIRST-GOVERNANCE.md` |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-Visual-Documentation-Standards.md` |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md` | `05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md` |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | `05-Templates-Tools/05-Checklists/SDLC-Team-Collaboration.md` |
+| `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | `05-Templates-Tools/05-Checklists/SDLC-Testing-Artifacts-Structure.md` |
+| `02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md` | `05-Templates-Tools/05-Checklists/SDLC-Observability-Checklist.md` |
+
+**10-Archive reorganization** (content preserved 100%, structure rationalized):
+
+The previous `0[0-9]-Legacy/` numbering scheme had become inconsistent — 7 differently-shaped subdirectories produced by separate cleanup batches that never got consolidated (gaps at 07/08, duplicate version subdirs across `01-Legacy/` and `02-Legacy/`, double-nested `09-Legacy/scripts/scripts/`).
+
+Replaced with **two-axis structure**:
+
+- **`10-Archive/by-version/`** — 18 per-version snapshots (`v1.x` through `v6.2.0`) for "what did this version actually ship" forensics. 246 files.
+- **`10-Archive/by-topic/`** — 14 per-topic consolidations for "what was the old approach to X" forensics. 176 files.
+
+Plus new top-level [`10-Archive/README.md`](10-Archive/README.md) and [`10-Archive/INDEX.md`](10-Archive/INDEX.md) — full file catalog with version-by-version era notes.
+
+**Files moved**: 422 (preserved with `git mv` — full history retained per file).
+
+**Reasoning**: For a public OSS launch, file location must indicate meaningful semantic. The previous scheme failed that test — files for the same SDLC version lived in different `0[0-9]-Legacy/` parents depending on which cleanup batch landed them. Adopters reading the public Framework repo deserve a single explainable mental model.
+
+### What Did NOT Change
+
+- All active normative content (Pillars 0-7, Sections 8-9) is unchanged — no methodology revision
+- All Ring 2 templates, SOULs, and tools are unchanged
+- All archived historical content is preserved 100% (just relocated within `10-Archive/`)
+- No version bump — this is repository housekeeping, not a methodology amendment
 
 ---
 
