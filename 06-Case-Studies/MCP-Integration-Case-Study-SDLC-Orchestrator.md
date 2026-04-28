@@ -1,14 +1,16 @@
-# MCP Integration Guide (SDLC Orchestrator)
+# MCP Integration — Case Study (SDLC Orchestrator)
 
-**Version**: 6.3.1  
-**Status**: ACTIVE - OUTER RING  
-**Audience**: Platform / DevOps teams integrating AI tools with SDLC Orchestrator
+**Version**: 6.3.1
+**Status**: ACTIVE — Case Study (vendor-specific implementation example)
+**Audience**: Platform / DevOps teams integrating AI tools with an SDLC governance platform
+
+> **Note on framing**: This document was originally authored as an integration guide inside `04-AI-TOOLS-LANDSCAPE/`. It has been relocated to `06-Case-Studies/` because its content is **specific to the SDLC Orchestrator implementation** of the Framework, not a tool-agnostic integration pattern. Adopters implementing MCP on other platforms should treat this as **one reference example**, not as the Framework's normative guidance. Generic MCP integration tactics live in [`07-Implementation-Guides/MCP-Integration-Guide.md`](../07-Implementation-Guides/MCP-Integration-Guide.md).
 
 ---
 
 ## Purpose
 
-Model Context Protocol (MCP) unlocks deep, governed integration between SDLC Orchestrator and AI development tools. This guide documents the reference architecture, security controls, and validation steps required to onboard MCP-capable tools (e.g., Claude Code) into the enterprise environment.
+Model Context Protocol (MCP) unlocks deep, governed integration between SDLC Orchestrator and AI development tools. This case study documents the reference architecture, security controls, and validation steps required to onboard MCP-capable tools (e.g., Claude Code) into the enterprise environment **as implemented in SDLC Orchestrator**.
 
 ---
 
