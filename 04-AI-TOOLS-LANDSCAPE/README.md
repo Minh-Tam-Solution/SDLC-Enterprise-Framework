@@ -50,7 +50,7 @@ To govern effectively, Orchestrator MUST:
 | Tool Profiles ([Claude Code](tool-profiles/claude-code-2026.md) · [Cursor](tool-profiles/cursor-2026.md) · [Copilot](tool-profiles/copilot-2026.md)) | Individual tool capabilities | As needed |
 | [Capability Matrix](capability-matrix.md) | Feature comparison & readiness score | Quarterly |
 | [Best Practices 2026](best-practices-2026/) | AI agent workflows, planning mode, model selection | As needed |
-| [Integration Notes](integration-guides/mcp-integration.md) | MCP onboarding playbook | As needed |
+| [Integration Notes](../06-Case-Studies/MCP-Integration-Case-Study-SDLC-Orchestrator.md) | MCP onboarding playbook | As needed |
 | Trend Watch ([Jan 2026](trend-watch/2026-01-trends.md)) | Emerging patterns and features | Monthly |
 
 ---
@@ -206,10 +206,11 @@ These patterns proved universal and were promoted to [03-AI-GOVERNANCE/](../03-A
 │   ├── 07-permissions-security.md # Safe AI execution
 │   └── 08-developer-role-evolution.md # SE 3.0 responsibilities
 ├── capability-matrix.md         # Detailed comparison
-├── integration-guides/          # Orchestrator integration
-│   └── mcp-integration.md
 └── trend-watch/                 # Monthly updates
     └── 2026-01-trends.md
+
+# Vendor-specific integration case studies live in 06-Case-Studies/
+# (e.g., MCP-Integration-Case-Study-SDLC-Orchestrator.md)
 ```
 
 ---

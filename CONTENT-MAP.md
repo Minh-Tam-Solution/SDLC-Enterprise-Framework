@@ -236,7 +236,7 @@ Before creating any new document, check if a canonical file already exists for t
 | Cursor Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/cursor-2026.md` | Reference profile (IDE-native) | ACTIVE |
 | Copilot Profile | `04-AI-TOOLS-LANDSCAPE/tool-profiles/copilot-2026.md` | Reference profile (inline assist) | ACTIVE |
 | Capability Matrix | `04-AI-TOOLS-LANDSCAPE/capability-matrix.md` | Tool comparison | ACTIVE |
-| MCP Integration Guide | `04-AI-TOOLS-LANDSCAPE/integration-guides/mcp-integration.md` | Protocol onboarding steps | ACTIVE |
+| MCP Integration Guide | `06-Case-Studies/MCP-Integration-Case-Study-SDLC-Orchestrator.md` | Protocol onboarding steps | ACTIVE |
 | Trend Watch | `04-AI-TOOLS-LANDSCAPE/trend-watch/` | Monthly updates (starting with 2026-01-trends.md) | ACTIVE |
 
 > **Note**: This is OUTER RING content but STRATEGIC for Orchestrator.
