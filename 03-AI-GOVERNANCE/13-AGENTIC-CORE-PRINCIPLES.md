@@ -1,6 +1,6 @@
 ---
 title: "Agentic Core Principles"
-version: "6.3.0"
+version: "6.3.1"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"
@@ -409,5 +409,5 @@ Terminal statuses are the **FINAL checkpoint** in the [Long-Running Agent Protoc
 ---
 
 **Document Status:** ACTIVE — PRODUCTION READY
-**Version:** 6.3.0 | **Last Updated:** March 29, 2026
+**Version:** 6.3.1 | **Last Updated:** March 29, 2026
 **Origin:** SASE Framework (arXiv:2509.06216v2) adapted for SDLC 6.3.0

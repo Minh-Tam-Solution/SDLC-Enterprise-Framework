@@ -1,7 +1,7 @@
 # Context Authority Methodology
-## Framework 6.3.0 Dynamic AGENTS.md Patterns - Section 8
+## Framework 6.3.1 Dynamic AGENTS.md Patterns - Section 8
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Author**: PM/PJM Team

@@ -1,8 +1,8 @@
 ---
 title: "Federated Platform Standard — BRAIN/VOICE/HANDS/ADVISOR"
-version: "6.3.0"
+version: "6.3.1"
 ring: 1
-sdlc_version: "6.3.0"
+sdlc_version: "6.3.1"
 last_updated: "2026-04-06"
 status: "ACTIVE"
 pillar: "NEW — Federated Platform"

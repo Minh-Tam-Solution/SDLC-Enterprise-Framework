@@ -1,7 +1,7 @@
 # SDLC Specification Standard v1.1
 ## Framework 6.3.0 Unified Specification Template - Section 8
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Last Updated**: February 14, 2026
@@ -866,7 +866,7 @@ Parsers extract structured data from source formats into SpecIR:
 **OpenSpec Parser Example**:
 
 ```python
-# Parses SDLC 6.3.0 specification format
+# Parses SDLC 6.3.1 specification format
 async def parse(content: str) -> SpecIR:
     # 1. Extract YAML frontmatter
     frontmatter = extract_frontmatter(content)
@@ -904,7 +904,7 @@ Renderers transform SpecIR back to target formats:
 **OpenSpec Renderer Example**:
 
 ```python
-# Renders to SDLC 6.3.0 specification format
+# Renders to SDLC 6.3.1 specification format
 async def render(ir: SpecIR) -> str:
     lines = []
 

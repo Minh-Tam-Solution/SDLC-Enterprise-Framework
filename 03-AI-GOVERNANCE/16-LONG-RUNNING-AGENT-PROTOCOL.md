@@ -1,10 +1,10 @@
 ---
 title: "Long-Running Agent Protocol"
-version: "6.3.0"
+version: "6.3.1"
 ring: 1
 iceberg_layer: "Structures"
 dt_phase: "Prototype"
-sdlc_version: "6.3.0"
+sdlc_version: "6.3.1"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "AI Governance"
@@ -230,5 +230,5 @@ Per Singapore MGF and NIST emerging direction:
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.3.0
+**Framework Version**: SDLC 6.3.1
 **Last Updated**: March 18, 2026

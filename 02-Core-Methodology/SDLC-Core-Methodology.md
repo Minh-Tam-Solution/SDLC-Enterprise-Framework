@@ -1,6 +1,6 @@
-# SDLC 6.3.0 Core Methodology
+# SDLC 6.3.1 Core Methodology
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: March 18, 2026
 **Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (8 Mental Models, Long-Running Agent Protocol, tool-agnostic)
 **Authority**: Chairman + CEO + CPO + CTO Approved
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-SDLC 6.3.0 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **8 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
+SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **8 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
 
 ### Architecture Overview
 

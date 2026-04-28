@@ -1,6 +1,6 @@
 # 03-Agent-Templates - AI Assistant Configurations
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: January 29, 2026
 **Status**: ACTIVE - Placeholder for Sprint 120+
 **Structure**: SDLC 6.3.0 (2-level maximum)

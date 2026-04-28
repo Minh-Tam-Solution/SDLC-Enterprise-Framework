@@ -1,5 +1,5 @@
 ---
-version: "6.3.0"
+version: "6.3.1"
 document_type: "Framework Standard"
 section: "05-Templates-Tools/06-Manual-Templates"
 status: "APPROVED"
@@ -14,7 +14,7 @@ sprint: "176"
 
 # MRP: Merge-Readiness Package Template
 
-**Framework Version**: SDLC 6.3.0
+**Framework Version**: SDLC 6.3.1
 **Pillar**: 02 — Core Methodology
 **Classification**: ORANGE (New Process Artifact — affects merge workflow)
 **Effective Date**: February 19, 2026

@@ -1,7 +1,7 @@
 # SPEC_DELTA.md Template
 ## Framework 6.3.0 Specification Change Tracking - Section 8
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Author**: PM/PJM Team

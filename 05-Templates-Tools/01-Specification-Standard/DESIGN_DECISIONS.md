@@ -1,7 +1,7 @@
 # DESIGN_DECISIONS.md Template
 ## Framework 6.3.0 Lightweight Decision Records - Section 8
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE - PRODUCTION READY
 **Created**: January 28, 2026
 **Author**: PM/PJM Team

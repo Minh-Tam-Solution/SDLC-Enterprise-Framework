@@ -1,6 +1,6 @@
-# SDLC 6.3.0 Self-Contained Deployment Guide
+# SDLC 6.3.1 Self-Contained Deployment Guide
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: January 27, 2026
 **Status**: ACTIVE - CEO Requirement
 **Authority**: CEO + CTO Office
@@ -203,7 +203,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Step 2: Add Project Header**
 ```markdown
 ---
-**SDLC Version**: 6.3.0
+**SDLC Version**: 6.3.1
 **Project**: [Your Project Name]
 **Team Tier**: PROFESSIONAL | STANDARD | LITE | ENTERPRISE
 **Adapted**: [Date]
@@ -272,7 +272,7 @@ cp /path/to/SDLC-Framework/source.md \
 **Purpose**: Every team member starts here
 
 ```markdown
-# SDLC 6.3.0 Compliance - [Project Name]
+# SDLC 6.3.1 Compliance - [Project Name]
 
 ## 🚀 I want to...
 

@@ -1,6 +1,6 @@
 # SDLC Visual Documentation Standards
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **Framework**: SDLC 6.3.0
@@ -157,7 +157,7 @@ Every diagram should include:
 ## Authentication Flow
 
 **Format**: ASCII Sequence Diagram
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: 2026-02-02
 **Source**: Design specification (SPEC-042)
 **Evidence**: EVD-2026-02-042

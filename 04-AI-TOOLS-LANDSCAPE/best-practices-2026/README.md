@@ -1,7 +1,7 @@
 # AI Agent Best Practices 2026
 ## SDLC 6.3.0 - Software Engineering 3.0
 
-**Version:** 6.3.0
+**Version:** 6.3.1
 **Status:** ACTIVE - PRODUCTION READY
 **Date:** February 2, 2026
 **Source:** Expert workflow analysis, Claude Code best practices, expert workflow learnings, Boris Cherny 10 Tactics

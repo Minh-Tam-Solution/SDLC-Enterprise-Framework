@@ -1,6 +1,6 @@
 # SDLC Code Review Guide — Unified 3-Tier Framework
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Last Updated**: February 15, 2026
 **Status**: PRODUCTION READY (Consolidated SSOT — Feb 2026)
 **Stage**: 04 (BUILD) — Code Review Excellence

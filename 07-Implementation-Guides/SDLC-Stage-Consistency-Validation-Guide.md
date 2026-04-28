@@ -1230,7 +1230,7 @@ Found a better validation pattern? Share it!
 **Document Status**: ACTIVE
 **Owner**: CTO Office
 **Last Updated**: February 1, 2026
-**Framework Version**: SDLC 6.3.0
+**Framework Version**: SDLC 6.3.1
 **Specification**: SPEC-0021 v1.0.0
 
 ---

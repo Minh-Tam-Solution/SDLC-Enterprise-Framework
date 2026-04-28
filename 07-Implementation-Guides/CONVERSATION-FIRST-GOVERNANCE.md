@@ -1,6 +1,6 @@
 # 15. Conversation-First Governance Patterns
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE
 **Date**: February 21, 2026
 **Pillar**: Core AI Governance

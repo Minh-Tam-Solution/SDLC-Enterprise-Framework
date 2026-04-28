@@ -1,8 +1,8 @@
 ---
 title: "SDLC Stage Lifecycle Framework"
-version: "6.3.0"
+version: "6.3.1"
 ring: 1
-sdlc_version: "6.3.0"
+sdlc_version: "6.3.1"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "Pillar 1: 10-Stage Lifecycle"
@@ -89,7 +89,7 @@ SDLC Framework 6.3.0 defines a **10-stage lifecycle** (00-FOUNDATION through 09-
 **Format**: Structured YAML for both human readability and tool parsing.
 
 ```yaml
-# SDLC 6.3.0 Stage Dependency Matrix
+# SDLC 6.3.1 Stage Dependency Matrix
 # Each stage defines: requires, enables, gates, parallel rules, triggers
 
 stages:
