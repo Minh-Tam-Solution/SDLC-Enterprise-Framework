@@ -610,12 +610,12 @@ Reference: `Bflow-Platform/docs/00-foundation/01-vision/nqh-technology-ecosystem
 - TEAM Charters: [05-Templates-Tools/04-SASE-Artifacts/teams/](05-Templates-Tools/04-SASE-Artifacts/teams/)
 
 **NEW in 6.1.0**:
-- Multi-Agent Patterns: [03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md](03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md)
+- Multi-Agent Patterns: [07-Implementation-Guides/MULTI-AGENT-PATTERNS.md](07-Implementation-Guides/MULTI-AGENT-PATTERNS.md)
 - Agentic Core Principles (moved): [03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md](03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
 - Agentic Maturity Model (moved): [03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md](03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md)
 - System Thinking: [02-Core-Methodology/SDLC-System-Thinking-Foundation.md](02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
 - Crisis-to-Pattern: [02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md](02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md)
-- Design Thinking Templates: [02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md](02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md)
+- Design Thinking Templates: [05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md](05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md)
 
 **NEW in 6.0.6**:
 - CLAUDE.md Standard: 3-tier (LITE/PRO/ENTERPRISE) with validation criteria
@@ -629,8 +629,8 @@ Reference: `Bflow-Platform/docs/00-foundation/01-vision/nqh-technology-ecosystem
 - Unified Specification Standard (Section 8): YAML frontmatter + BDD requirements
 - Sprint Governance: [02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md](02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md)
 - Quality+Security Gates: [02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md](02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md)
-- Team Collaboration: [02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md](02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md)
-- Observability Checklist: [02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md](02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md)
+- Team Collaboration: [05-Templates-Tools/05-Checklists/SDLC-Team-Collaboration.md](05-Templates-Tools/05-Checklists/SDLC-Team-Collaboration.md)
+- Observability Checklist: [05-Templates-Tools/05-Checklists/SDLC-Observability-Checklist.md](05-Templates-Tools/05-Checklists/SDLC-Observability-Checklist.md)
 
 **NEW in 4.9**:
 - BFlow 52-Day Journey: [06-Case-Studies/BFlow-52-Day-Journey-Case-Study.md](06-Case-Studies/BFlow-52-Day-Journey-Case-Study.md)

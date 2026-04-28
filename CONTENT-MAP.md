@@ -95,16 +95,16 @@ Before creating any new document, check if a canonical file already exists for t
 | Agentic Principles | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` | Moved from `02-Core-Methodology/` in 6.1.0 | ACTIVE |
 | Sprint Governance | `02-Core-Methodology/Governance-Compliance/SDLC-Sprint-Governance.md` | Consolidated from Sprint-Planning + Stage-Integration + Change-Management | ACTIVE |
 | Quality + Security Gates | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` | Consolidated from Quality-Gates + Security-Gates | ACTIVE |
-| Observability Checklist | `02-Core-Methodology/Governance-Compliance/SDLC-Observability-Checklist.md` | — | ACTIVE |
+| Observability Checklist | `05-Templates-Tools/05-Checklists/SDLC-Observability-Checklist.md` | — | ACTIVE |
 | Naming Standards | `02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md` | Consolidated from Code-File-Naming + Document-Naming + Header-Templates | ACTIVE |
-| Team Collaboration | `02-Core-Methodology/Documentation-Standards/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
-| **Visual Documentation Standards** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | RFC-SDLC-607 | **NEW 6.0.3** |
+| Team Collaboration | `05-Templates-Tools/05-Checklists/SDLC-Team-Collaboration.md` | Consolidated from Team-Collaboration/* folder | ACTIVE |
+| **Visual Documentation Standards** | `05-Templates-Tools/06-Manual-Templates/SDLC-Visual-Documentation-Standards.md` | RFC-SDLC-607 | **NEW 6.0.3** |
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md` | Stage prerequisite matrix | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md` | — | **NEW 5.3.0** |
 | **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
 | **System Thinking Foundation** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | — | **NEW 6.1.0** |
 | **Crisis-to-Pattern Methodology** | `02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
-| **Design Thinking Templates** | `02-Core-Methodology/Documentation-Standards/SDLC-Design-Thinking-Templates.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
+| **Design Thinking Templates** | `05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **MRP Template** | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Moved from `02-Core-Methodology/` in 6.1.0 | **NEW 6.0.6** |
 | **Fix-First Review Protocol** | `02-Core-Methodology/Governance-Compliance/SDLC-Quality-Gates-Assurance-Framework.md` §6.3 | AUTO-FIX vs ASK classification | **NEW 6.3.0** |
 | **Effort Compression Table** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | AI compression ratios for gate decisions | **NEW 6.3.0** |
@@ -175,7 +175,7 @@ Before creating any new document, check if a canonical file already exists for t
 | **E2E API Testing Methodology** | `07-Implementation-Guides/SDLC-E2E-API-Testing-Methodology.md` | Moved from `05-Templates-Tools/02-AI-Tools/` in 6.1.0 | **MOVED 6.1.0** |
 | **Security Testing Checklist** | `10-archive/05-Legacy/ai-tools-templates-sprint173/testing_security-testing-checklist.md` | OWASP API Top 10 (2023) checklist | **ARCHIVED 6.1.2** |
 | **Stage Cross-Reference Matrix** | `02-Core-Methodology/SDLC-Stage-Cross-Reference.md` | Bidirectional Stage 03 ↔ 05 traceability | **NEW 6.0.2** |
-| **Testing Artifacts Structure** | `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | SDLC-compliant test folder layout | **NEW 6.0.2** |
+| **Testing Artifacts Structure** | `05-Templates-Tools/05-Checklists/SDLC-Testing-Artifacts-Structure.md` | SDLC-compliant test folder layout | **NEW 6.0.2** |
 
 > **Note**: RFC-SDLC-602 templates archived in 6.1.2 (Sprint 173 freeze). Active testing guidance remains in `07-Implementation-Guides/`.
 
@@ -340,7 +340,7 @@ Before creating any new document, check if a canonical file already exists for t
 | **RFC-SDLC-604** | `04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md` | ✅ 100% complete | DELETED |
 | **RFC-SDLC-605** | `04-AI-Tools-Landscape/best-practices-2026/06-memory-context-management.md` (enhanced) | ✅ 100% methodology | DELETED |
 | **RFC-SDLC-606** | `04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md` (enhanced) | ✅ 100% methodology | DELETED |
-| **RFC-SDLC-607** | `02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md` | ✅ 100% methodology | DELETED |
+| **RFC-SDLC-607** | `05-Templates-Tools/06-Manual-Templates/SDLC-Visual-Documentation-Standards.md` | ✅ 100% methodology | DELETED |
 
 **Consolidation Metrics**:
 - Source: 2,307 lines (5 RFCs)

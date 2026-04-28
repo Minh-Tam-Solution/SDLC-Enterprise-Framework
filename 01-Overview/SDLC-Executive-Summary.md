@@ -54,8 +54,8 @@ Design Thinking 2,018→364 lines. System Thinking Foundation + Crisis-to-Patter
 
 | New Document | Location | Key Benefit |
 |-------------|----------|-------------|
-| **CLAUDE.md Standard (3-Tier)** | [03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md](../03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md) | Structured AI context docs: LITE (500-1K lines), PRO (1.5K-3K), ENTERPRISE (2K+) |
-| **Autonomous Codegen Patterns** | [03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md](../03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
+| **CLAUDE.md Standard (3-Tier)** | [05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md](../05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md) | Structured AI context docs: LITE (500-1K lines), PRO (1.5K-3K), ENTERPRISE (2K+) |
+| **Autonomous Codegen Patterns** | [07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md](../07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md) | Two-agent pattern + 4-Gate Quality Pipeline for governed AI code generation |
 | **MRP Template (5-Section)** | [02-Core-Methodology/SDLC-MRP-Template.md](../05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md) | Merge-Readiness Package: Change Summary, Evidence Refs, Rollback, Tests, Deploy |
 
 **3-Ring Compliance**: All 3 documents sit in the Core Ring (timeless, tool-agnostic, vendor-neutral).
@@ -168,7 +168,7 @@ Validation: TDD workflow proven effective for AI-assisted development
 | **Git Worktrees** | RFC-604 | [git-workflow-patterns.md](../04-AI-Tools-Landscape/best-practices-2026/04-git-workflow-patterns.md) (~575 lines) | **2.5x faster** (20h → 8h with 4 parallel AI sessions) |
 | **Continuous Learning** | RFC-605 | Enhanced [memory-context-management.md](../04-AI-TOOLS-LANDSCAPE/best-practices-2026/06-memory-context-management.md) (+130 lines) | **Zero repeated bugs** (AI learns from `.claude/learnings/`) |
 | **Research Delegation** | RFC-606 | Enhanced [sub-agent-orchestration.md](../04-AI-Tools-Landscape/best-practices-2026/03-sub-agent-orchestration.md) (+95 lines) | **3.3x faster** research (5h → 1.5h parallel subagents) |
-| **Visual Documentation** | RFC-607 | [SDLC-Visual-Documentation-Standards.md](../02-Core-Methodology/Documentation-Standards/SDLC-Visual-Documentation-Standards.md) (+280 lines) | **4x faster** onboarding (2h → 30min with ASCII diagrams) |
+| **Visual Documentation** | RFC-607 | [SDLC-Visual-Documentation-Standards.md](../05-Templates-Tools/06-Manual-Templates/SDLC-Visual-Documentation-Standards.md) (+280 lines) | **4x faster** onboarding (2h → 30min with ASCII diagrams) |
 
 **Key Features**:
 - **MCP Integration Pattern**: Model Context Protocol for automated bug triage from external sources (Slack, GitHub, Jira)

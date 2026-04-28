@@ -407,7 +407,7 @@ For each scenario, name the SASE artifact that should be created:
 | Agentic Core Principles | `03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md` |
 | Agentic Maturity Model | `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` |
 | Long-Running Agent Protocol | `03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md` |
-| Multi-Agent Patterns | `03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md` |
+| Multi-Agent Patterns | `07-Implementation-Guides/MULTI-AGENT-PATTERNS.md` |
 | SASE Artifact Templates | `05-Templates-Tools/04-SASE-Artifacts/` |
 | SOUL Role Templates | `05-Templates-Tools/04-SASE-Artifacts/souls/` |
 

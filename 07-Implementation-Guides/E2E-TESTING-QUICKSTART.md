@@ -155,7 +155,7 @@ After completing this guide:
 | **E2E Workflow** | `05-Templates-Tools/02-AI-Tools/testing_e2e-api-testing-workflow.md` | 6-phase testing process |
 | **Security Checklist** | `05-Templates-Tools/02-AI-Tools/testing_security-testing-checklist.md` | OWASP API Top 10 |
 | **Stage Cross-Reference** | `02-Core-Methodology/SDLC-Stage-Cross-Reference.md` | Stage 03 ↔ 05 traceability |
-| **Artifacts Structure** | `02-Core-Methodology/Documentation-Standards/SDLC-Testing-Artifacts-Structure.md` | Folder layout |
+| **Artifacts Structure** | `05-Templates-Tools/05-Checklists/SDLC-Testing-Artifacts-Structure.md` | Folder layout |
 
 ---
 

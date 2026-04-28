@@ -60,7 +60,7 @@ Key Changes (6.1.0 — Feb 18, 2026):
         Standalone doc for core concept (since SDLC 4.0): 4-Layer Iceberg Model, 6 Mental Models
     - 02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md
         Extracted from Design Thinking (formalizes Mental Model #5): 5-step pipeline
-    - 03-AI-GOVERNANCE/12-MULTI-AGENT-PATTERNS.md
+    - 07-Implementation-Guides/MULTI-AGENT-PATTERNS.md
         NEW: 10 multi-agent collaboration patterns (lane queues, failover, snapshots, @mention routing)
 
   Structural Reorganization:
@@ -81,12 +81,12 @@ Key Changes (6.1.0 — Feb 18, 2026):
 ```yaml
 Key Changes:
   3 New AI Governance Methodology Documents:
-    - 03-AI-GOVERNANCE/10-CLAUDE-MD-STANDARD.md
+    - 05-Templates-Tools/03-Agent-Templates/CLAUDE-MD-STANDARD.md
         CLAUDE.md 3-tier structure: LITE (500-1K lines), PRO (1.5K-3K), ENTERPRISE (2K+)
         Content principles: Constraints first, file paths > descriptions, commands > explanations
         Anti-patterns: Information dump, stale docs, abstract philosophy, copy-paste README
 
-    - 03-AI-GOVERNANCE/11-AUTONOMOUS-CODEGEN-PATTERNS.md
+    - 07-Implementation-Guides/AUTONOMOUS-CODEGEN-PATTERNS.md
         Two-agent pattern: Initializer Agent → Coding Agent loop → Quality Gates
         4-Gate Pipeline: G1 (Spec Review) → G2 (Security) → G3 (Tests) → G4 (Human Review)
         Retry logic: max_retries=3 with deterministic feedback, escalation path
