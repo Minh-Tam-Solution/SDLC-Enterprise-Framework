@@ -1,6 +1,6 @@
 # MCP Integration Implementation Guide
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: February 2, 2026
 **Status**: ACTIVE
 **Framework**: SDLC 6.3.0

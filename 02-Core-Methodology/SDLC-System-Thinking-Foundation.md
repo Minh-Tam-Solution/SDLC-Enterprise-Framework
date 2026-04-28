@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-SYSTEM-THINKING"
 title: "System Thinking Foundation"
-version: "6.3.0"
+version: "6.3.1"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -371,5 +371,5 @@ Completeness: X/10
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.3.0
+**Framework Version**: SDLC 6.3.1
 **Last Updated**: March 29, 2026

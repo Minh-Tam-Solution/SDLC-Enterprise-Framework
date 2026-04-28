@@ -3,7 +3,7 @@
 ```yaml
 document_id: "SDLC-DESIGN-THINKING-PRINCIPLES"
 title: "Design Thinking Principles — Build the RIGHT Thing"
-version: "6.3.0"
+version: "6.3.1"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"

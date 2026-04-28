@@ -1,6 +1,6 @@
 # SDLC CodeRabbit Integration Guide - Tier 3 Enterprise Code Review
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Last Updated**: January 27, 2026
 **Status**: Production Ready
 **Audience**: Engineering Teams (15-100+ developers, 50+ PRs/month)
@@ -623,7 +623,7 @@ advanced:
 # VERSION & METADATA
 # ==============================================================================
 
-version: "6.3.0"
+version: "6.3.1"
 last_updated: "2025-12-06"
 owner: "CPO Office - taidt@mtsolution.com.vn"
 documentation: "docs/SDLC-6.3.0-CodeRabbit-Integration-Guide.md"

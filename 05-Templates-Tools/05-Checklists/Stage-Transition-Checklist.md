@@ -703,5 +703,5 @@ tasks:
 ---
 
 **Last Updated**: January 28, 2026  
-**Framework Version**: SDLC 6.3.0  
+**Framework Version**: SDLC 6.3.1  
 **Status**: PRODUCTION-READY

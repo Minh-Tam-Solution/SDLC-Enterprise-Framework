@@ -1,6 +1,6 @@
-# SDLC Framework 6.3.0 Quick Reference Guide
+# SDLC Framework 6.3.1 Quick Reference Guide
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: March 18, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Purpose**: Fast lookup for key SDLC 6.3.0 concepts, navigation, and breaking changes

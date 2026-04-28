@@ -1,6 +1,6 @@
 # Governance & Compliance Standards
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: February 18, 2026
 **Stage**: 02 - Core Methodology
 **Pillar**: 2 - Sprint Planning × Pillar 4 - Quality Gates × Pillar 5 - SASE × Pillar 7 - Quality Assurance System

@@ -1,6 +1,6 @@
 # AI Governance Principles
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE
 **Date**: March 18, 2026
 **Pillar**: Core AI Governance (6.3.0: Lean Ring 1 — implementation patterns moved to Ring 2)

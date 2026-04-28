@@ -1,6 +1,6 @@
 # SDLC Team Collaboration Standards - Universal Framework
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: January 28, 2026
 **Status**: ACTIVE - Production Standard
 **Authority**: CPO Office

@@ -1,6 +1,6 @@
 # SDLC Case Studies - Battle-Tested Wisdom
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: February 18, 2026
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)

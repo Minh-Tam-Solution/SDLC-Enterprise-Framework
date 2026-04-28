@@ -1,6 +1,6 @@
 # SDLC Naming Standards - Universal Framework
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: January 28, 2026
 **Status**: MANDATORY ENFORCEMENT
 **Authority**: CPO Approved Standard
@@ -447,7 +447,7 @@ Apply to **all active SDLC 6.3.0 documents**:
 # [Document Title]
 ## [Subtitle - Purpose]
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Specific Status]
 **Authority**: [Who Approved]
@@ -706,7 +706,7 @@ Automation (Future):
 ```markdown
 # Document Title
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Date**: January 28, 2026
 **Status**: ACTIVE - [Context]
 **Authority**: [Owner]

@@ -1,4 +1,4 @@
-# SSOT Compliance Checklist (SDLC 6.3.0)
+# SSOT Compliance Checklist (SDLC 6.3.1)
 
 **Version**: 1.0.0
 **Date**: February 2, 2026

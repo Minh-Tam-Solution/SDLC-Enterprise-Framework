@@ -1,5 +1,5 @@
 ---
-version: "6.3.0"
+version: "6.3.1"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -18,7 +18,7 @@ priority: "P1"
 
 **Purpose:** Define maturity levels for adopting agentic practices in software development
 **Framework:** SDLC 6.3.0 (7-Pillar + 2-Section Architecture)
-**Version:** 6.3.0
+**Version:** 6.3.1
 **Date:** February 18, 2026
 **Status:** ACTIVE - PRODUCTION READY
 

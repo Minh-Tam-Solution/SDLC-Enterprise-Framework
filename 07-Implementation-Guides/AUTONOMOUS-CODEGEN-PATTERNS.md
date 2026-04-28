@@ -1,5 +1,5 @@
 ---
-sdlc_version: "6.3.0"
+sdlc_version: "6.3.1"
 document_type: "Framework Standard"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
@@ -15,7 +15,7 @@ sprint: "174"
 
 # Autonomous Codegen with Quality Gates
 
-**Framework Version**: SDLC 6.3.0
+**Framework Version**: SDLC 6.3.1
 **Pillar**: 03 — AI Governance
 **Classification**: ORANGE (New Methodology — requires ADR)
 **Effective Date**: February 18, 2026

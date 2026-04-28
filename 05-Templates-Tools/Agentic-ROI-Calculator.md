@@ -1,8 +1,8 @@
 ---
 title: "Agentic ROI Calculator"
-version: "6.3.0"
+version: "6.3.1"
 ring: 2
-sdlc_version: "6.3.0"
+sdlc_version: "6.3.1"
 last_updated: "2026-03-18"
 status: "ACTIVE"
 ---
@@ -84,4 +84,4 @@ Payback Period = $625 / $1,250 = 0.5 months
 
 ---
 
-**Framework Version**: SDLC 6.3.0 | **Last Updated**: March 18, 2026
+**Framework Version**: SDLC 6.3.1 | **Last Updated**: March 18, 2026

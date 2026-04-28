@@ -1,6 +1,6 @@
 # Governance Decision Matrix
 
-**Version**: 6.3.0
+**Version**: 6.3.1
 **Status**: ACTIVE
 **Date**: February 15, 2026
 **Pillar**: Core AI Governance
