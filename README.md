@@ -315,7 +315,8 @@ SDLC-Enterprise-Framework/
 ├── 02-Core-Methodology/          # CORE CONTENT (Ring 1 — Lean in 6.3.0)
 │   ├── SDLC-Core-Methodology.md           # Hub: 7-Pillar + 10-Stage
 │   ├── SDLC-Design-Thinking-Principles.md # Pillar 0 (slim, 364 lines)
-│   ├── SDLC-System-Thinking-Foundation.md # Pillar 0 (8 Mental Models)
+│   ├── SDLC-System-Thinking-Foundation.md # Pillar 0 (9 Mental Models — #9 added in 6.3.2 Amendment B)
+│   ├── SDLC-Ship-Useful-Principle.md      # Operating Principle [DT] (NEW 6.3.2 Amendment B)
 │   ├── SDLC-Crisis-To-Pattern-Methodology.md # Pillar 0 (Mental Model #5)
 │   ├── SDLC-Stage-Lifecycle-Framework.md  # CONSOLIDATED 6.3.0 (Dependencies + Exit Criteria + Tier Reqs)
 │   ├── SDLC-Context-Authority-Methodology.md # Section 8

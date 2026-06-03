@@ -145,6 +145,39 @@ More People Build     ──→ Pillar 3 (4-Tier), Pillar 0 (DT)
 
 **See**: [Citizen Developer Guide](../07-Implementation-Guides/Citizen-Developer-Guide.md) for implementation details (Ring 3).
 
+### Mental Model #9: Demand Before Surface (NEW in 6.3.2 — Amendment B, 2026-06-03) [DT]
+
+> **[DT] External-adopter mark**: This Mental Model is validated **inward** at NQH/MTS via the Amendment B inward-application catalog (see [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](../09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md)). **External-adopter value is NOT yet validated** — NQH dogfood-first per the first-customer principle. External adopters should evaluate fit against their own surface inventory.
+
+**Core Belief**: Every artifact, surface, template, gate, plugin, or pillar must be either **daily-touched** by a human OR **daily-invoked** by a system within 30 days of shipping. If it cannot name its daily user, it is **theater** — built to feel rigorous, not to be useful.
+
+**Why this matters**: SDLC frameworks (and the platforms that implement them) accrete surface area faster than demand grows. The 2026-06-02 NQH/MTS internal diagnosis surfaced the pattern at every level — ~30% of platform surface was load-bearing for daily use; ~70% was built-for-later or built-without-demand. The same pattern applies to the Framework itself: 18 SOUL templates, 10 TEAM charters, 4-tier classification, 5-signal Vibecoding Index, 7-Pillar + 2-Section architecture — most of it useful to *someone someday*, very little of it daily-load-bearing for *this team this month*.
+
+**Iceberg Analysis**:
+
+| Layer | Finding |
+|-------|---------|
+| Event | "We built X, but nobody uses it" |
+| Pattern | Artifacts ship without an explicit daily-user; review-process becomes the artifact |
+| Structure | No demand-validation gate before adding new pillars / sections / templates |
+| Mental Model | "More artifacts = more rigor" → **shift to** "Daily-used artifact = real rigor; unused artifact = theater" |
+
+**Three Mandatory Tests** (any new normative surface MUST pass before adoption):
+
+1. **Name the daily-user** — explicit human role (CEO, dev, auditor) OR explicit system caller (CI, agent, hook) that touches/invokes this surface ≥1×/day within 30 days. *"Future commercial adopters"* is NOT a daily-user.
+2. **Name the daily-job** — the concrete job-to-be-done that breaks if this surface disappears tomorrow. *"Compliance with §X"* is NOT a job; *"CEO sees pod blockers Monday morning"* is.
+3. **Name the re-eval trigger** — if the daily-user isn't named, the surface ships as **ON-DEMAND** with a dated trigger condition (e.g., *"re-eval 2026-09-30 if ≥3 pilot adopters request it"*). Default-WAIT, no drift.
+
+**Operating Mode**: Constraint-First / Kaizen (per [Ship-Useful Principle](./SDLC-Ship-Useful-Principle.md)). Ask weekly: *"What's the binding constraint slowing real delivery RIGHT NOW?"* — fix exactly one — repeat. Do NOT run multi-workstream transformation programs against a small team.
+
+**Anti-Pattern**: *Review-process theater*. When the review process itself accretes layers (n+1 reviewer classes, n+1 ADR cycles for the same decision, lock-refresh ceremonies that produce no new evidence), the review process IS the over-built surface — apply MM#9 to itself.
+
+**Status**: ACTIVE — applied retroactively to existing surfaces; pre-existing artifacts that cannot pass the 3 tests are marked ON-DEMAND in the inward-application catalog (see [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](../09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md)).
+
+**Acceptance test** (must be satisfied by 2026-09-03 self-eval): ≥1 **independent surface decision** — different sprint, different ADR, different product — citing MM#9 as the driving rationale within 90 days. **Self-cite by the authoring memo or by the birth-act review exchange does NOT count.** If unmet → MM#9 demotes to advisory note (default-WAIT). See [CHANGELOG Amendment B](../CHANGELOG.md#-version-632--amendment-b--june-3-2026-ship-useful--anti-theater-principle-dt) for the full acceptance criteria.
+
+**See**: [Ship-Useful Principle](./SDLC-Ship-Useful-Principle.md) for the operating discipline (Core Ring); CEO Directive 2026-06-02 "Capability Uplift v4 Reframe" for the originating decision context.
+
 ---
 
 ## Applying the Iceberg to Quality Gates
