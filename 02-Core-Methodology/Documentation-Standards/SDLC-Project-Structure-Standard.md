@@ -1,11 +1,17 @@
+---
+sdlc_framework: "6.3.0"
+---
+
 # SDLC Project Structure Standard
 
 **Version**: 6.3.1
-**SDLC Framework Version**: 6.3.0
-**Date**: January 29, 2026
+**Date**: 2026-06-03
+**Last Updated**: 2026-06-03
 **Status**: ACTIVE
 **Authority**: CTO Approved
 **Pillar**: 1 (10-Stage Lifecycle) + Pillar 6 (Documentation Permanence)
+
+> **Convention A Note** (formalized in [SDLC-Schema-Versioning.md](../SDLC-Schema-Versioning.md)): The per-doc `Version` (6.3.1) and `sdlc_framework` (6.3.0) markers are **independent**. This document was last substantively reviewed at Framework 6.3.0. It will be re-validated against the current Framework version when next substantively edited.
 
 ---
 

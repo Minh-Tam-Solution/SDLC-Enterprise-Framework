@@ -1,11 +1,12 @@
 ---
 title: "Agentic Core Principles"
-version: "6.3.1"
+version: "6.4.0"
+sdlc_framework: "6.3.2"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"
 status: "ACTIVE"
-last_updated: "2026-03-29"
+last_updated: "2026-06-03"
 author: "SE 3.0 Track 1 — CTO Approved"
 origin: "arXiv:2509.06216v2 (SASE Framework)"
 ---
@@ -190,6 +191,18 @@ Separation ensures: (1) agents can't modify their own instructions, (2) humans m
 | **L3** | Lifecycle Agentic | Low (exception-based) | 50+ approved MRPs, CRP rate <5%, 6+ months at L2 |
 
 **Key insight**: Trust is **earned** through evidence, not **granted** by declaration. Each level requires measurable proof of reliability before promotion.
+
+---
+
+## 3.5 Agent Application of MM#9 — Demand Before Surface Activation
+
+Agents implementing the SDLC Framework are also subject to **Mental Model #9: Demand Before Surface** (see [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md)). Specifically:
+
+- **Before adding a SOUL, skill, tool, or command surface**, the agent proposer MUST pass the 3-Question Demand Test: name the daily-user, name the daily-job, and name the re-eval trigger.
+- **Anti-pattern**: Agents that add surfaces "because they might be useful" without a named human or system caller within 30 days. This is **agentic theater** — accreting capability without demand.
+- **SDLC-Orch SOULs** (e.g., `/ship`, `/review`, `/test`) are valid applications because each has a named daily-user (`@coder` Kimi CLI), a named daily-job (stage-transition gate verification), and a re-eval trigger (quarterly SOUL audit per CEO directive).
+
+> See [Ship-Useful Principle](../02-Core-Methodology/SDLC-Ship-Useful-Principle.md) for the full operating discipline, and [Amendment B Inward Application Catalog](../09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md) for the NQH-specific surface inventory.
 
 ---
 

@@ -1,7 +1,11 @@
-# SDLC 6.3.1 Core Methodology
+---
+sdlc_framework: "6.3.2"
+---
 
-**Version**: 6.3.1
-**Date**: March 18, 2026
+# SDLC 6.3.2 Core Methodology
+
+**Version**: 6.3.2
+**Date**: 2026-06-03
 **Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (9 Mental Models, Long-Running Agent Protocol, tool-agnostic)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
@@ -9,7 +13,7 @@
 
 ## Executive Summary
 
-SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **9 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
+SDLC 6.3.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **9 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
 
 ### Architecture Overview
 
@@ -148,6 +152,9 @@ SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 **Foundational Thinking Models** (Pillar 0 Trilogy):
 - [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **9 mental models** for root-cause analysis (6.3.0: +Agent Continuity, +More People Build; 6.3.2: +Demand Before Surface [DT])
 - [Crisis-to-Pattern Methodology](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step pipeline: Diagnose → Policy → Automate → Enforce → Document
+- [Ship-Useful Principle](./SDLC-Ship-Useful-Principle.md) — Constraint-First operating discipline + Anti-Theater Catalog (NEW in 6.3.2 — Amendment B; Core Ring companion to System Thinking)
+
+> **Mental Model #9: Demand Before Surface** (NEW in 6.3.2 — Amendment B): Every artifact, surface, template, gate, or pillar must name its daily-user or ship as **ON-DEMAND**. Surfaces without named demand are theater — built to feel rigorous, not to be useful. See [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) for the full Iceberg Analysis, and [Ship-Useful Principle](./SDLC-Ship-Useful-Principle.md) for the 3-Question Demand Test and Anti-Theater Catalog.
 
 ---
 
@@ -789,7 +796,7 @@ Quality Assurance Standards (5.3.0):
 
 ---
 
-**Last Updated**: March 18, 2026
+**Last Updated**: 2026-06-03
 **Maintained By**: Framework Team
 **Authority**: CTO + CPO Approved
 **Case Study**: [Sprint Direction Confusion](../06-Case-Studies/BFlow-Sprint-86-Direction-Confusion-Case-Study.md)
