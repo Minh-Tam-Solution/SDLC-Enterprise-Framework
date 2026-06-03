@@ -1,9 +1,32 @@
+---
+sdlc_framework: "6.3.2"
+---
+
 # SDLC 6.3.1 Executive Summary
 
-**Version**: 6.3.1
+**Version**: 6.4.0
 **Release Date**: March 18, 2026 (AGENTIC SDLC + LEAN RING 1)
+**Last Updated**: 2026-06-03
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
+
+---
+
+## What's New in 6.3.2 (Amendment B — June 2026)
+
+### Ship-Useful Principle + Mental Model #9 (Demand Before Surface)
+
+**The Problem**: Framework surface accretion — templates, gates, tiers, sections — grows faster than real demand. Internal diagnosis surfaced ~30% of platform surface as daily-load-bearing; ~70% built-for-later or built-without-demand.
+
+**The Solution**: Explicit anti-theater operating discipline. Every new normative surface must pass the 3-Question Demand Test before shipping. Surfaces that cannot name a daily-user ship as **ON-DEMAND** with a dated re-eval trigger.
+
+| Addition | Location | Purpose |
+|----------|----------|---------|
+| **Mental Model #9** | [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md) | "Demand Before Surface" — every artifact must name daily-user or be theater |
+| **Ship-Useful Principle** | [Core Methodology companion](../02-Core-Methodology/SDLC-Ship-Useful-Principle.md) | Constraint-First / Kaizen weekly ritual + Anti-Theater Catalog (9 smells) |
+| **Convention A** | [Schema Versioning](../02-Core-Methodology/SDLC-Schema-Versioning.md) | Per-doc Version vs Framework Version independence — honest staleness over inflated freshness |
+
+**Breaking Changes**: None (additive only). Existing docs retain their authoring-era markers per Convention A.
 
 ---
 
