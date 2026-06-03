@@ -24,6 +24,7 @@
 |---------------|----------|---------|
 | **Mental Model #9 — Demand Before Surface** [DT] | [02-Core-Methodology/SDLC-System-Thinking-Foundation.md](02-Core-Methodology/SDLC-System-Thinking-Foundation.md#mental-model-9-demand-before-surface-new-in-632--amendment-b-2026-06-03-dt) | Every surface must name daily-user/daily-job OR be marked ON-DEMAND. Brings the Mental Model count from 8 → **9**. |
 | **Ship-Useful Principle (Constraint-First / Anti-Theater)** [DT] | [02-Core-Methodology/SDLC-Ship-Useful-Principle.md](02-Core-Methodology/SDLC-Ship-Useful-Principle.md) | NEW doc — codifies the operating discipline: 3-Question Demand Test, Constraint-First weekly ritual, Anti-Theater Catalog (9 smells), ON-DEMAND marker pattern. |
+| **Document Version Convention (Convention A)** | [02-Core-Methodology/SDLC-Schema-Versioning.md](02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03) | NEW section — formalizes per-doc `**Version**:` semver vs `sdlc_framework:` alignment-version as INDEPENDENT markers that may differ honestly. Rejects Convention B (blanket-bump on Framework patch) as self-violating MM#9. Resolves the "Version 6.3.1 + SDLC-Framework 6.3.0" mismatch pattern. **Implication**: Framework docs are NOT mass-bumped on each patch; only docs substantively edited get version markers updated. Honest staleness > inflated freshness. |
 
 **Inward reclassification catalog** — split out to its own file (was inline here; moved to keep CHANGELOG focused on normative additions and to make the NQH-inward boundary explicit for external adopters):
 
@@ -3099,7 +3100,7 @@ Residual optional enhancements (deferred to tooling wave): ledger hash computati
 
 ## 🎯 Version 4.2 - Design-First Enhanced Framework with AI+Human Orchestration (September 12, 2025)
 
-**Release Date**: [Current Date]
+**Release Date**: 2026-06-03
 **Status**: PRODUCTION READY
 **Type**: MAJOR ENHANCEMENT - AI+Human ORCHESTRATION + 6 CLAUDE CODE ROLES
 **Breaking Changes**: No - Enhanced with 6 Claude Code specialized roles + Cursor CPO + GitHub Copilot CTO
