@@ -670,7 +670,8 @@ SDLC 6.0.5 (Feb 2026) → RFC-001 Legacy Org + SPEC-0001 + Governance Loop (MINO
 SDLC 6.0.6 (Feb 2026) → Anthropic Patterns: CLAUDE.md Standard + Codegen + MRP (MINOR)
 SDLC 6.1.0 (Feb 2026) → Consolidation: Ring 1 Slim + Multi-Agent Patterns + System Thinking
 SDLC 6.3.0 (Mar 2026) → SOULs + TEAMs Templates (17 roles + 10 charters)
-SDLC 6.3.0 (Mar 2026) → Agentic SDLC: Lean Ring 1 + 8 Mental Models + Long-Running Protocol ⭐ CURRENT
+SDLC 6.3.0 (Mar 2026) → Agentic SDLC: Lean Ring 1 + 9 Mental Models + Long-Running Protocol
+SDLC 6.3.2 (Jun 2026) → Amendment B (PATCH): Ship-Useful Principle + Mental Model #9 (Demand Before Surface) [DT] ⭐ CURRENT
 ```
 
 ---

@@ -4,9 +4,9 @@
 **Version**: 6.3.1
 **Date**: March 18, 2026
 **Status**: Active
-**Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
+**Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 9 Mental Models + Lean Ring 1)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
-**NEW in 6.3.0**: Agentic SDLC — 8 Mental Models, Lean Ring 1 (41→30 files), Long-Running Agent Protocol, Citizen Developer Pathway, 13 Multi-Agent Patterns, tool-agnostic sanitization
+**NEW in 6.3.0**: Agentic SDLC — 9 Mental Models, Lean Ring 1 (41→30 files), Long-Running Agent Protocol, Citizen Developer Pathway, 13 Multi-Agent Patterns, tool-agnostic sanitization
 
 ---
 

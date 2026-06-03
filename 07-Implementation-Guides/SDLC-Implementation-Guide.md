@@ -12,7 +12,7 @@
 ## 🎯 30-Second Overview
 
 **What is SDLC 6.3.0?**
-- A **10-stage lifecycle** framework (WHY → GOVERN) grounded in **8 Mental Models**
+- A **10-stage lifecycle** framework (WHY → GOVERN) grounded in **9 Mental Models**
 - With **7-Pillar Architecture** + **Section 7 Quality Assurance** + **Section 8 Specification Standard**
 - With **SASE** for human-AI collaboration (AGENTS.md + CRP/MRP/VCR + 18 SOUL role templates)
 - With **Long-Running Agent Protocol** for multi-session agent continuity
@@ -1156,7 +1156,7 @@ For teams new to SDLC 6.3.0, the BFlow "stealth pilot" approach reduces risk by 
 
 ### Framework Reference
 - [SDLC-Core-Methodology.md](../02-Core-Methodology/SDLC-Core-Methodology.md) — 7-Pillar + 10-Stage theory
-- [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md) — 8 Mental Models (Agent Continuity, Everyone Builds)
+- [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md) — 9 Mental Models (Agent Continuity, Everyone Builds)
 - [Long-Running Agent Protocol](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) — Checkpoint, memory, handoff, traceability
 - [Agentic Core Principles](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE SE4H/SE4A
 - [Agentic Maturity Model](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
@@ -1187,7 +1187,7 @@ For teams new to SDLC 6.3.0, the BFlow "stealth pilot" approach reduces risk by 
 ## 🎯 One Page Summary
 
 ```
-SDLC 6.3.0 = 10 Stages + 7 Pillars + 8 Mental Models + Section 7 (QA) + Section 8 (Spec) + 4 Tiers
+SDLC 6.3.0 = 10 Stages + 7 Pillars + 9 Mental Models + Section 7 (QA) + Section 8 (Spec) + 4 Tiers
 
 Pick Your Path:
   Greenfield (new project)    → This guide's Quick Starts

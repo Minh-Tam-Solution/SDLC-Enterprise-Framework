@@ -1,10 +1,21 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.3.1
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.3.2
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.3.1**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **8 Mental Models**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.3.2**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **9 Mental Models** (including #9 Demand Before Surface [DT]), **Ship-Useful Principle (Constraint-First / Anti-Theater) [DT]**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+
+**What's New in 6.3.2 (June 3, 2026) — SHIP-USEFUL PRINCIPLE + MENTAL MODEL #9 (PATCH, Amendment B) [DT]**:
+
+*Demand-Before-Surface Discipline*:
+- ✅ **Mental Model #9 — Demand Before Surface** [DT] — every artifact/surface must name daily-user + daily-job + dated re-eval trigger; otherwise mark `ON-DEMAND`
+- ✅ **Ship-Useful Principle (Constraint-First / Anti-Theater)** [DT] — new Core Ring doc; 3-Question Demand Test + Constraint-First weekly ritual + Anti-Theater Catalog (9 smells)
+- ✅ **`ON-DEMAND` marker pattern** — replaces "DEFERRED" framing; reversible-by-default; on YAML frontmatter
+- ✅ **Self-evaluation 2026-09-03** — independent surface cite required within 90 days else MM#9 demotes to advisory
+- ✅ **[DT] external-adopter mark** — methodology validated inward at NQH; external-adopter value pending demand signal (first-customer principle)
+- ✅ **NQH Inward Application Catalog** — `09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md` (separate file; NQH-specific, NOT a normative downgrade for other adopters)
+- ✅ **Origin**: CEO Directive 2026-06-02 "Capability Uplift v4 Reframe" + CEO ship-discipline mandate 2026-06-03
 
 **What's New in 6.3.1 (April 17, 2026) — AGENT CONTINUITY RUNTIME GUIDANCE + GOVERNANCE TRAINING EXPANSION**:
 
@@ -450,7 +461,7 @@ SDLC-Orchestrator/SDLC-Enterprise-Framework/
 ├── 02-Core-Methodology/           # Core principles (Ring 1 — Lean in 6.3.0)
 │   ├── SDLC-Core-Methodology.md           # Hub: 7-Pillar + 10-Stage
 │   ├── SDLC-Design-Thinking-Principles.md # Pillar 0 (slim, 364 lines)
-│   ├── SDLC-System-Thinking-Foundation.md # Pillar 0 (8 Mental Models, 6.3.0)
+│   ├── SDLC-System-Thinking-Foundation.md # Pillar 0 (9 Mental Models, 6.3.0)
 │   ├── SDLC-Crisis-To-Pattern-Methodology.md # Pillar 0 (MM #5)
 │   ├── SDLC-Stage-Lifecycle-Framework.md  # CONSOLIDATED 6.3.0 (Deps+Exit+Tier)
 │   ├── SDLC-Context-Authority-Methodology.md # Section 8
@@ -637,8 +648,8 @@ Reference: `Bflow-Platform/docs/00-foundation/01-vision/nqh-technology-ecosystem
 
 ---
 
-The framework represents not theory but battle-tested patterns from 10 months of real platform development across the NQH Technology Ecosystem. With SDLC 6.3.1, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 11 training modules (39h), production-ready in 1-2 weeks.**
+The framework represents not theory but battle-tested patterns from 10 months of real platform development across the NQH Technology Ecosystem. With SDLC 6.3.2, we achieve excellence faster: **7-Pillar Architecture, Sprint Planning Governance, 10-stage complete lifecycle, Quality Assurance System (Anti-Vibecoding), Unified Specification Standard, CLAUDE.md Standard, Autonomous Codegen Patterns, SASE SOULs + TEAMs, 4-tier classification, 11 training modules (39h), Ship-Useful Principle (Demand Before Surface) [DT], production-ready in 1-2 weeks.**
 
-**Last Updated**: April 17, 2026
-**Framework Version**: SDLC 6.3.1
-**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 8 Mental Models + Long-Running Agent Protocol + Fix-First + Effort Compression + Terminal Status Taxonomy + 11 Training Modules (39h)
+**Last Updated**: June 3, 2026
+**Framework Version**: SDLC 6.3.2
+**Status**: PRODUCTION READY - 7-Pillar + Lean Ring 1 + 9 Mental Models + Ship-Useful Principle [DT] + Long-Running Agent Protocol + Fix-First + Effort Compression + Terminal Status Taxonomy + 11 Training Modules (39h)
