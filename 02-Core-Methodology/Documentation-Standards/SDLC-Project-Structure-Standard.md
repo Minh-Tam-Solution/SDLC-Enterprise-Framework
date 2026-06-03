@@ -4,7 +4,7 @@ sdlc_framework: "6.3.0"
 
 # SDLC Project Structure Standard
 
-**Version**: 6.3.1
+**Version**: 6.3.1 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](../SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 **Date**: 2026-06-03
 **Last Updated**: 2026-06-03
 **Status**: ACTIVE

@@ -1,6 +1,6 @@
 # SDLC Framework Versioning Rules
 
-**Version**: 1.1.0
+**Version**: 1.1.0 *(doc's own semver — independent of Framework version; see [§Document Version Convention](#document-version-convention-convention-a--formalized-amendment-b-2026-06-03) below)*
 **Effective Date**: 2026-01-28
 **Last Updated**: 2026-06-03 (added §"Document Version Convention (Convention A)" per Amendment B + MM#9 — see CHANGELOG v6.3.2)
 **SDLC Framework Version**: 6.3.2
