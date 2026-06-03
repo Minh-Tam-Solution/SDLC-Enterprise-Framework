@@ -2,7 +2,7 @@
 sdlc_framework: "6.3.2"
 ---
 
-# SDLC 6.3.1 Core Methodology
+# SDLC 6.3.2 Core Methodology
 
 **Version**: 6.3.2
 **Date**: 2026-06-03
@@ -13,7 +13,7 @@ sdlc_framework: "6.3.2"
 
 ## Executive Summary
 
-SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **9 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
+SDLC 6.3.2 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **9 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
 
 ### Architecture Overview
 

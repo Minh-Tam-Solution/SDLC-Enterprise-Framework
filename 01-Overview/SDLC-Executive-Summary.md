@@ -2,7 +2,7 @@
 sdlc_framework: "6.3.2"
 ---
 
-# SDLC 6.3.1 Executive Summary
+# SDLC 6.3.2 Executive Summary
 
 **Version**: 6.4.0
 **Release Date**: March 18, 2026 (AGENTIC SDLC + LEAN RING 1)

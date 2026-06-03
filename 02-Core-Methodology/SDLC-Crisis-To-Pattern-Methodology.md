@@ -287,5 +287,5 @@ The [Ship-Useful Principle](./SDLC-Ship-Useful-Principle.md) (Anti-Theater Catal
 ---
 
 **Document Status**: ACTIVE
-**Framework Version**: SDLC 6.3.1
+**Framework Version**: SDLC 6.3.2
 **Last Updated**: February 18, 2026
