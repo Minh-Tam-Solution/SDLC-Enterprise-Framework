@@ -2,7 +2,7 @@
 
 ## Scope
 
-The SDLC 6.3.1 Universal Framework is a **tool-agnostic methodology repository** — it ships documentation, templates, and governance patterns, not executable production code. The "security" surface here is therefore narrower than for a typical software project, but not zero.
+The SDLC 6.3.2 Universal Framework is a **tool-agnostic methodology repository** — it ships documentation, templates, and governance patterns, not executable production code. The "security" surface here is therefore narrower than for a typical software project, but not zero.
 
 This policy covers:
 

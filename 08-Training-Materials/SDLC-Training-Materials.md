@@ -5,7 +5,7 @@
 **Audience**: All team members — developers, designers, product managers, QA, and non-technical staff (citizen developers)
 **Duration**: ~39 hours total (can be split across multiple sessions)
 **Prerequisites**: SDLC fundamentals knowledge (or 2-hour SDLC fundamentals course)
-**Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 8 Mental Models + Lean Ring 1)
+**Framework**: SDLC 6.3.0 (7-Pillar + Section 7 + Section 8 + 9 Mental Models + Lean Ring 1)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---
@@ -14,7 +14,7 @@
 
 **Agentic SDLC — the biggest upgrade since 6.0.0:**
 
-**8 Mental Models** (was 6): Added **Agent Continuity** (#7 — agents maintain context across sessions) and **Everyone Builds** (#8 — domain experts build within guardrails). See [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md).
+**9 Mental Models** (was 6): Added **Agent Continuity** (#7 — agents maintain context across sessions), **Everyone Builds** (#8 — domain experts build within guardrails), and **Demand Before Surface** (#9 [DT] — no surface ships without named daily-user/daily-job/dated re-eval; Amendment B 2026-06-03). See [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md).
 
 **Lean Ring 1**: Core methodology consolidated from 41→30 files (-21% size). Stage Lifecycle merged (3→1), Quality Gates merged (2→1). Faster to read, easier to adopt.
 

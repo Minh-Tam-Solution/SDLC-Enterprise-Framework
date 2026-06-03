@@ -2,7 +2,7 @@
 
 **Version**: 6.3.1 | **Status**: PRODUCTION READY | **Date**: March 18, 2026
 
-Practical how-to guides for implementing SDLC 6.3.0 framework: **8 Mental Models**, **Lean Ring 1**, **Long-Running Agent Protocol**, **Citizen Developer Pathway**, **13 Multi-Agent Patterns**, and the full **7-Pillar + Section 7 + Section 8** architecture.
+Practical how-to guides for implementing SDLC 6.3.0 framework: **9 Mental Models**, **Lean Ring 1**, **Long-Running Agent Protocol**, **Citizen Developer Pathway**, **13 Multi-Agent Patterns**, and the full **7-Pillar + Section 7 + Section 8** architecture.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 **Ring**: 3 (Outer) — implementation guides, not methodology
@@ -11,7 +11,7 @@ Practical how-to guides for implementing SDLC 6.3.0 framework: **8 Mental Models
 
 ## What's New in 6.3.0
 
-**Agentic SDLC — 8 Mental Models + Lean Ring 1 + Long-Running Agents + Citizen Developer**
+**Agentic SDLC — 9 Mental Models + Lean Ring 1 + Long-Running Agents + Citizen Developer**
 
 | Feature | Guide | Description |
 |---------|-------|-------------|
@@ -26,7 +26,7 @@ Practical how-to guides for implementing SDLC 6.3.0 framework: **8 Mental Models
 - Stage Lifecycle is now ONE doc (was 3 separate: Dependencies + Exit Criteria + Tier Requirements)
 - Quality Gates Assurance is now ONE doc (was 2 separate: QA System + Security Gates)
 - Multi-Agent Patterns moved HERE from Ring 1 (implementation patterns, not timeless principles)
-- All guides reference 8 Mental Models (was 6) — added Agent Continuity (#7) + Everyone Builds (#8)
+- All guides reference 9 Mental Models (was 6) — added Agent Continuity (#7) + Everyone Builds (#8)
 
 ---
 
@@ -221,7 +221,7 @@ Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
 | Folder | Purpose |
 |--------|---------|
 | [01-Overview/](../01-Overview/) | Executive Summary |
-| [02-Core-Methodology/](../02-Core-Methodology/) | 10-stage lifecycle, 8 Mental Models, System Thinking |
+| [02-Core-Methodology/](../02-Core-Methodology/) | 10-stage lifecycle, 9 Mental Models, System Thinking |
 | [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) | AI governance principles, Long-Running Agent Protocol |
 | [04-AI-TOOLS-LANDSCAPE/](../04-AI-TOOLS-LANDSCAPE/) | AI tool profiles, best practices 2026 |
 | [05-Templates-Tools/](../05-Templates-Tools/) | SASE artifacts, SOUL templates, ROI Calculator |
