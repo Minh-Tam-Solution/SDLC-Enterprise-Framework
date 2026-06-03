@@ -2,7 +2,7 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.3.1 Enterprise Framework — Governance Training Expansion
+**Framework**: SDLC 6.3.2 Enterprise Framework — Governance Training Expansion
 **Maintained By**: CEO + CPO + CTO Leadership
 **Last Updated**: April 28, 2026 (Pre-OSS-launch repository reorganization)
 
