@@ -3,7 +3,8 @@
 ```yaml
 document_id: "SDLC-CRISIS-TO-PATTERN"
 title: "Crisis-to-Pattern Methodology"
-version: "6.3.1"
+version: "6.3.2"
+sdlc_framework: "6.3.2"
 status: "ACTIVE"
 section: "02-Core-Methodology"
 ring: "Core"
@@ -11,7 +12,7 @@ pillar: "0 (Foundation)"
 audience: ["Tech Leads", "CTOs", "Architects", "Senior Engineers"]
 prerequisites: ["SDLC-System-Thinking-Foundation"]
 created: "2026-02-18"
-last_updated: "2026-02-18"
+last_updated: "2026-06-03"
 ```
 
 ---
@@ -247,6 +248,17 @@ Not every bug needs this process. Use these triggers:
 | **SASE Integration** (Pillar 5) | Agent failures create new MRP evidence requirements |
 | **ADRs** | Each pattern may generate an Architecture Decision Record |
 | **Evidence Vault** | Crisis artifacts stored as evidence for governance |
+
+---
+
+### Complement: Ship-Useful Principle
+
+The [Ship-Useful Principle](./SDLC-Ship-Useful-Principle.md) (Anti-Theater Catalog) is a **complement** to Crisis-to-Pattern — both are response disciplines but operate at different layers:
+
+- **Crisis-to-Pattern** derives durable patterns from production incidents, team failures, and project crises.
+- **Ship-Useful** prevents surface accretion (templates, gates, ceremonies) that itself becomes a future incident — by requiring every new surface to name its daily-user before activation.
+
+> When a crisis reveals that "we built X but nobody uses it," the root cause is often a missing Demand Before Surface gate — not a missing Crisis-to-Pattern pipeline. Apply both disciplines: Ship-Useful to prevent theater, Crisis-to-Pattern to convert unavoidable incidents into reusable artifacts.
 
 ---
 
