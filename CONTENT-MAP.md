@@ -102,7 +102,9 @@ Before creating any new document, check if a canonical file already exists for t
 | **Stage Dependencies** | `02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md` | Stage prerequisite matrix | **NEW 5.3.0** |
 | **Quality Assurance System** | `02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md` | — | **NEW 5.3.0** |
 | **Context Authority** | `02-Core-Methodology/SDLC-Context-Authority-Methodology.md` | Moved from 05-Templates-Tools/01-Specification-Standard/ | **NEW 6.0.2** |
-| **System Thinking Foundation** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | — | **NEW 6.1.0** |
+| **System Thinking Foundation** | `02-Core-Methodology/SDLC-System-Thinking-Foundation.md` | — | **NEW 6.1.0** (Mental Model #9 added in **6.3.2** — Amendment B) |
+| **Ship-Useful Principle (Constraint-First / Anti-Theater)** [DT] | `02-Core-Methodology/SDLC-Ship-Useful-Principle.md` | — | **NEW 6.3.2** — Amendment B |
+| **Amendment B — NQH Inward Application Catalog** | `09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md` | Split out of CHANGELOG | **NEW 6.3.2** — NQH-inward only |
 | **Crisis-to-Pattern Methodology** | `02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **Design Thinking Templates** | `05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md` | Extracted from Design Thinking Principles | **NEW 6.1.0** |
 | **MRP Template** | `05-Templates-Tools/06-Manual-Templates/SDLC-MRP-Template.md` | Moved from `02-Core-Methodology/` in 6.1.0 | **NEW 6.0.6** |

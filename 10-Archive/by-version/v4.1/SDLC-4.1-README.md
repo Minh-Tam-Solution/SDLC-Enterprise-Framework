@@ -4,7 +4,7 @@
 **Version**: 4.1  
 **Status**: ARCHIVED  
 **Superseded By**: SDLC 4.2 Design-First Enhanced Framework  
-**Archive Date**: [Current Date]  
+**Archive Date**: 2026-04-28  
 **Reason**: Upgraded to SDLC 4.2 with AI+Human Orchestration  
 
 ---

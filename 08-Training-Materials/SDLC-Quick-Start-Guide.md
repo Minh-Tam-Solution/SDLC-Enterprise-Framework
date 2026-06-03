@@ -7,7 +7,7 @@
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 **SDLC 6.3.0 Features**:
-- ✅ **8 Mental Models** (Agent Continuity + Everyone Builds) — [System Thinking](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
+- ✅ **9 Mental Models** (Agent Continuity + Everyone Builds + Demand Before Surface [DT]) — [System Thinking](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
 - ✅ **Lean Ring 1** — 41→30 core docs, -21% size, faster adoption
 - ✅ 10 stages: WHY → GOVERN (complete lifecycle)
 - ✅ 7 Pillars + Section 7 (QA Anti-Vibecoding) + Section 8 (Spec Standard)

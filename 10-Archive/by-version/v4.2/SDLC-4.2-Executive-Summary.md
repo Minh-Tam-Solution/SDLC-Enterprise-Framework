@@ -2,7 +2,7 @@
 ## Design-First Enhanced Framework (DFT) + 6 Claude Code Specialized Roles + AI+Human Team Orchestration
 
 **Version**: 4.2  
-**Date**: [Current Date]  
+**Date**: 2026-04-28  
 **Status**: ACTIVE  
 **Framework**: SDLC 4.2 Design-First Enhanced Framework (DFT)  
 **Sponsor**: Minh Tam Solution (MTS)  
@@ -382,7 +382,7 @@ The **SDLC 4.2 Framework** has successfully established BFlow Platform as an ind
 
 **Document Control**:  
 **Version**: 4.2  
-**Last Updated**: [Current Date]  
+**Last Updated**: 2026-04-28  
 **Next Review**: [Next Review Date]  
 **Owner**: CPO Office  
 **Approver**: CEO  

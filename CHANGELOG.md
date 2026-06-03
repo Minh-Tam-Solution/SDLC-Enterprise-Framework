@@ -2,13 +2,77 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.3.1 Enterprise Framework — Governance Training Expansion
+**Framework**: SDLC 6.3.2 Enterprise Framework — Governance Training Expansion
 **Maintained By**: CEO + CPO + CTO Leadership
 **Last Updated**: April 28, 2026 (Pre-OSS-launch repository reorganization)
 
 ---
 
-## 📚 Version 6.3.1 Amendment — April 28, 2026 (PRE-OSS-LAUNCH REPOSITORY REORGANIZATION)
+## 📚 Version 6.3.2 — Amendment B — June 3, 2026 (SHIP-USEFUL / ANTI-THEATER PRINCIPLE) [DT]
+
+**Amendment Date**: June 3, 2026
+**Type**: PATCH version bump (6.3.1 → 6.3.2) — additive operating principle + inward reclassification (no breaking changes to existing pillars/sections)
+**Status**: ACTIVE
+**[DT] External-adopter mark**: Validated **inward** at NQH/MTS via the Amendment B inward-application catalog (see split-out file [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md)). **External-adopter value is NOT yet validated** — NQH dogfood-first per the first-customer principle. External adopters should evaluate fit against their own surface inventory before applying; the principle remains additive (no deletion of existing surfaces) so adoption is reversible.
+**Driver**: CEO Directive 2026-06-02 "Capability Uplift v4 Reframe" (kill 12-week capability program; adopt Constraint-First + Portfolio Prune; ship usable features frequently instead of accreting unused surface) + CTO honest reframe 2026-06-02 (SDLC-Orch internal role = 2 daily-use surfaces only) + CEO ship-discipline mandate 2026-06-03 (*"chúng ta phải rất kỷ luật, ship thường xuyên từng tính năng dùng được ngay, thay vì làm rất nhiều mà useless"*)
+
+### What Changed
+
+**New normative content** (added to Core Ring):
+
+| New / Updated | Location | Purpose |
+|---------------|----------|---------|
+| **Mental Model #9 — Demand Before Surface** [DT] | [02-Core-Methodology/SDLC-System-Thinking-Foundation.md](02-Core-Methodology/SDLC-System-Thinking-Foundation.md#mental-model-9-demand-before-surface-new-in-632--amendment-b-2026-06-03-dt) | Every surface must name daily-user/daily-job OR be marked ON-DEMAND. Brings the Mental Model count from 8 → **9**. |
+| **Ship-Useful Principle (Constraint-First / Anti-Theater)** [DT] | [02-Core-Methodology/SDLC-Ship-Useful-Principle.md](02-Core-Methodology/SDLC-Ship-Useful-Principle.md) | NEW doc — codifies the operating discipline: 3-Question Demand Test, Constraint-First weekly ritual, Anti-Theater Catalog (9 smells), ON-DEMAND marker pattern. |
+| **Document Version Convention (Convention A)** | [02-Core-Methodology/SDLC-Schema-Versioning.md](02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03) | NEW section — formalizes per-doc `**Version**:` semver vs `sdlc_framework:` alignment-version as INDEPENDENT markers that may differ honestly. Rejects Convention B (blanket-bump on Framework patch) as self-violating MM#9. Resolves the "Version 6.3.1 + SDLC-Framework 6.3.0" mismatch pattern. **Implication**: Framework docs are NOT mass-bumped on each patch; only docs substantively edited get version markers updated. Honest staleness > inflated freshness. |
+
+**Inward reclassification catalog** — split out to its own file (was inline here; moved to keep CHANGELOG focused on normative additions and to make the NQH-inward boundary explicit for external adopters):
+
+→ See [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md) for the full NQH/MTS inward catalog (Pillar 3 tiers, Section 7 Vibecoding Index, Pillar 7 plugin commercial surfaces, 18 SOULs, 10 TEAM charters, Module 14 compression). The catalog is **NQH-inward only** — it is NOT a normative downgrade for other 6.3.2 adopters. Other tenants apply MM#9 to their own surface inventory.
+
+The Vibecoding Index row in that catalog uses status **PENDING-EFFICACY-AUDIT** (renamed from prior "PENDING-EFFICACY-REVIEW" to make the audit obligation explicit and avoid drift with the generic "review" verb).
+
+**Surfaces explicitly REAFFIRMED as ACTIVE** (passed all 3 Demand Test questions):
+
+- All 10 SDLC stages (every active project invokes them)
+- Pillar 1, 2 (sprint governance + Rule 1 CI gate), 4 (G0-G4 with named deciders), 5 (SASE invoked per AI-assisted commit), 6 (doc permanence invoked by every AI tool read), Section 8 (YAML frontmatter validated continuously)
+- Mental Models #1-#8 (all daily-load-bearing)
+- 6 daily-invoked SOULs and the ~6 corresponding TEAM patterns
+- Long-Running Agent Protocol (S119 substrate)
+- Multi-Agent Patterns guide (referenced by every multi-agent design)
+- CLAUDE.md Standard (consumed by AI tools every session)
+- MRP Template (required at every merge)
+- Sprint Plan Workflow Rules 1-7 (CI-enforced)
+
+### What Did NOT Change
+
+- No file moved, no doc deleted — frozen surfaces remain at their canonical locations
+- No breaking change — PATCH bump (6.3.1 → 6.3.2) reflects additive operating-principle + inward reclassification; all existing pillars/sections continue to operate identically
+- All ACTIVE pillars/sections continue to operate identically
+- Existing adopter projects are unaffected unless they choose to apply MM#9 to their own surfaces
+- The Framework remains tool-agnostic; the principle applies whether you use Claude Code, Cursor, GitHub Copilot, or no AI tools at all
+
+### Why a Principle, Not a Pillar
+
+A new pillar would itself be a violation of the principle (adding surface without daily-user). The Ship-Useful Principle is a **cross-cutting operating discipline** that applies to every pillar — including itself: if after 90 days the principle has not changed at least one decision, it gets re-evaluated under its own test.
+
+**Acceptance test** (per CTO bar-tightening 2026-06-03, applies to MM#9 + Ship-Useful Principle as a unit):
+
+- A "decision change" requires **≥1 independent surface decision** — different sprint, different ADR, different product — citing MM#9 / Ship-Useful Principle as the **driving rationale** within 90 days of 2026-06-03.
+- **Self-cite does NOT count**: citation by the authoring memo (CPO proposal `docs/09-govern/decisions/2026-06-03-cpo-proposal-framework-6.3.2-amendment-b.md` in SDLC-Orchestrator) does not count. Citation by the birth-act review exchange that produced this amendment (CEO/CTO/CPO ratification thread, this CHANGELOG entry, this Framework PR) does not count.
+- An independent cite must originate from a surface that was **not part of producing this amendment**.
+
+**Self-application re-eval**: **2026-09-03** — has MM#9 / Ship-Useful Principle satisfied the acceptance test above (≥1 independent cite)? If not → demote to advisory note. Facilitator: dvhiep (APM). Co-deciders: CEO + CTO. (Default-WAIT, no drift.)
+
+### Cross-References
+
+- Originating decisions: CEO Directive 2026-06-02 "Capability Uplift v4 Reframe"; CTO honest reframe 2026-06-02 (SDLC-Orch 2-Role positioning); CEO ship-discipline mandate 2026-06-03
+- First concrete inward application: SDLC Orchestrator Sprints 70-73 reframe (see SDLC-Orchestrator/CLAUDE.md Sprint 70+ entries and `docs/04-build/02-Sprint-Plans/SPRINT-07[0-3]-*.md`)
+- Related prior amendment: ADR-024 Tier-Scope Decision 2026-05-29 (3-tier A/B/C decomposition — same operating logic at sprint-portfolio scope; MM#9 generalizes it to framework scope)
+
+---
+
+
 
 **Amendment Date**: April 28, 2026
 **Type**: REPOSITORY HOUSEKEEPING (no version bump) — content unchanged, organization improved
@@ -3036,7 +3100,7 @@ Residual optional enhancements (deferred to tooling wave): ledger hash computati
 
 ## 🎯 Version 4.2 - Design-First Enhanced Framework with AI+Human Orchestration (September 12, 2025)
 
-**Release Date**: [Current Date]
+**Release Date**: 2026-06-03
 **Status**: PRODUCTION READY
 **Type**: MAJOR ENHANCEMENT - AI+Human ORCHESTRATION + 6 CLAUDE CODE ROLES
 **Breaking Changes**: No - Enhanced with 6 Claude Code specialized roles + Cursor CPO + GitHub Copilot CTO

@@ -2,14 +2,14 @@
 
 **Version**: 6.3.1
 **Date**: March 18, 2026
-**Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (8 Mental Models, Long-Running Agent Protocol, tool-agnostic)
+**Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (9 Mental Models, Long-Running Agent Protocol, tool-agnostic)
 **Authority**: Chairman + CEO + CPO + CTO Approved
 
 ---
 
 ## Executive Summary
 
-SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **8 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
+SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that governs the complete software development lifecycle from strategic discovery to production operations, with **9 Mental Models** (System Thinking), **Long-Running Agent Protocol**, integrated quality assurance (consolidated), and **tool-agnostic methodology** (0 product-specific references in Ring 1).
 
 ### Architecture Overview
 
@@ -146,7 +146,7 @@ SDLC 6.3.1 is a **7-Pillar + 2-Section AI+Human Excellence Framework** that gove
 **Reference**: [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md)
 
 **Foundational Thinking Models** (Pillar 0 Trilogy):
-- [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **8 mental models** for root-cause analysis (6.3.0: +Agent Continuity, +More People Build)
+- [System Thinking Foundation](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **9 mental models** for root-cause analysis (6.3.0: +Agent Continuity, +More People Build; 6.3.2: +Demand Before Surface [DT])
 - [Crisis-to-Pattern Methodology](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step pipeline: Diagnose → Policy → Automate → Enforce → Document
 
 ---
@@ -723,7 +723,7 @@ Quality Assurance Standards (5.3.0):
 
 ### Core Methodology (Pillar 0 Trilogy)
 - [SDLC-Design-Thinking-Principles.md](./SDLC-Design-Thinking-Principles.md) — User-centered approach (Pillar 0 hub)
-- [SDLC-System-Thinking-Foundation.md](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **8 mental models** (6.3.0)
+- [SDLC-System-Thinking-Foundation.md](./SDLC-System-Thinking-Foundation.md) — Iceberg Model, **9 mental models** (6.3.0)
 - [SDLC-Crisis-To-Pattern-Methodology.md](./SDLC-Crisis-To-Pattern-Methodology.md) — 5-step crisis-to-pattern pipeline
 
 ### AI Governance (Ring 1 — timeless principles)
@@ -766,7 +766,8 @@ Quality Assurance Standards (5.3.0):
 
 | Version | Date | Changes |
 |---------|------|---------|
-| **6.3.0** | **Mar 18, 2026** | **Agentic SDLC + Lean Ring 1** — 8 Mental Models (+Agent Continuity, +More People Build), Long-Running Agent Protocol (Ring 1), Citizen Developer Guide (Ring 3), ROI Calculator (Ring 2). Ring 1 consolidated: 41→30 files, -21% size. 42 tool-specific refs → 0. 9 docs moved to Ring 2. |
+| **6.3.2** | **Jun 3, 2026** | **Amendment B (PATCH)** — Mental Model #9 (Demand Before Surface) [DT]; Ship-Useful Principle (Constraint-First / Anti-Theater) [DT]; ON-DEMAND marker pattern; Anti-Theater Catalog (9 smells); NQH Inward Application Catalog (separate file). Self-eval 2026-09-03 (dvhiep APM facilitator; CEO + CTO co-deciders). External-adopter value [DT] — NQH dogfood-first. |
+| **6.3.0** | **Mar 18, 2026** | **Agentic SDLC + Lean Ring 1** — 9 Mental Models (+Agent Continuity, +More People Build), Long-Running Agent Protocol (Ring 1), Citizen Developer Guide (Ring 3), ROI Calculator (Ring 2). Ring 1 consolidated: 41→30 files, -21% size. 42 tool-specific refs → 0. 9 docs moved to Ring 2. |
 | 6.1.2 | Mar 9, 2026 | SOULs + TEAMs: 18 role templates + 10 team charters (Ring 2) |
 | 6.1.0 | Feb 18, 2026 | Consolidation: Ring 1 slim, System Thinking + Crisis-to-Pattern, Multi-Agent Patterns |
 | **6.0.6** | **Feb 16, 2026** | **MINOR: Anthropic Best Practices Integration** — CLAUDE.md Standard, Autonomous Codegen Patterns, MRP Template |

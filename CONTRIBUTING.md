@@ -1,4 +1,4 @@
-# Contributing to the SDLC 6.3.1 Universal Framework
+# Contributing to the SDLC 6.3.2 Universal Framework
 
 Thanks for your interest in contributing.
 
