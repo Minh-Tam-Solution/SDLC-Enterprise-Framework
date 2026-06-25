@@ -339,7 +339,7 @@ New Templates:
 
 ```
 ╔════════════════════════════════════════════════════════════════════════════╗
-║                    SDLC 6.3.0 - 7 PILLARS + 2 SECTIONS                     ║
+║                    SDLC 6.4.0 - 7 PILLARS + 2 SECTIONS                     ║
 ╠════════════════════════════════════════════════════════════════════════════╣
 ║  CORE PILLARS (0-6): Stable Foundation                                     ║
 ║    P0: Design Thinking    P3: 4-Tier Classification                        ║
@@ -542,4 +542,4 @@ Legacy Organization (6.3.0 RFC-001):
 **Last Updated**: March 18, 2026
 **Framework**: SDLC 6.4.0 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
-*Quick reference for SDLC Framework 6.3.0 - Keep this handy!*
+*Quick reference for SDLC Framework 6.4.0 - Keep this handy!*
