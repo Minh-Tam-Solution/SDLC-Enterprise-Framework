@@ -764,4 +764,4 @@ SDLC 6.3.2 (Jun 2026) → Amendment B (PATCH): Ship-Useful Principle + Mental Mo
 **Last Updated**: March 18, 2026
 **Authority**: CTO + CPO Approved
 **Status**: ACTIVE
-**Version**: 6.3.1
+**Version**: 6.4.0
