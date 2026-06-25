@@ -1,6 +1,6 @@
 # SOUL Role Templates
 
-**Version**: 6.3.1
+**Version**: 6.3.1 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](../../02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 **Date**: April 21, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Authority**: CTO + CPO Office
@@ -104,7 +104,7 @@ Each SOUL file follows this structure:
 ---
 role: <role_name>
 category: executor | advisor | router
-sdlc_framework: "6.3.1"
+sdlc_framework: "6.4.0"
 version: 1.0.0
 sdlc_stages: ["04"]           # Which SDLC stages
 sdlc_gates: ["G-Sprint"]      # Which gates

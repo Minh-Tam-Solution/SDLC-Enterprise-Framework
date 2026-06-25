@@ -1,7 +1,7 @@
 ---
 role: fullstack
 category: executor
-sdlc_framework: "6.3.1"
+sdlc_framework: "6.4.0"
 version: 1.0.0
 sdlc_stages: ["00", "01", "02", "04", "05", "06"]
 sdlc_gates: ["G0.1", "G0.2", "G1", "G2", "G3", "G4", "G-Sprint"]

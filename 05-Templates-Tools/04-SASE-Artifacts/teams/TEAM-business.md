@@ -4,7 +4,7 @@ full_name: Business Operations
 lead: assistant
 mention: "@business"
 sdlc_stage: "cross-cutting"
-sdlc_framework: "6.3.0"
+sdlc_framework: "6.4.0"
 version: 1.0.0
 created: 2026-03-03
 ---

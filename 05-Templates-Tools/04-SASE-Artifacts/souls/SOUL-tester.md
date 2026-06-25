@@ -1,7 +1,7 @@
 ---
 role: tester
 category: executor
-sdlc_framework: "6.3.1"
+sdlc_framework: "6.4.0"
 version: 1.0.0
 sdlc_stages: ["05"]
 sdlc_gates: ["G3"]

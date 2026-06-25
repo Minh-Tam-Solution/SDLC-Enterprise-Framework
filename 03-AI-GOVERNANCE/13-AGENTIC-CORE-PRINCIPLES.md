@@ -1,7 +1,7 @@
 ---
 title: "Agentic Core Principles"
 version: "6.4.0"
-sdlc_framework: "6.3.2"
+sdlc_framework: "6.4.0"
 section: "03-AI-GOVERNANCE"
 ring: "Core"
 type: "Standard"

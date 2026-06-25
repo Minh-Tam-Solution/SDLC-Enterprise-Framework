@@ -1,7 +1,7 @@
 ---
 role: assistant
 category: router
-sdlc_framework: "6.3.1"
+sdlc_framework: "6.4.0"
 version: 2.0.0
 sdlc_stages: []
 sdlc_gates: []

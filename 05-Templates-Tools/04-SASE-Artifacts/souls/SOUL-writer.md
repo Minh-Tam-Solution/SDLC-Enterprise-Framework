@@ -1,7 +1,7 @@
 ---
 role: writer
 category: executor
-sdlc_framework: "6.3.1"
+sdlc_framework: "6.4.0"
 version: 1.0.0
 sdlc_stages: ["00", "01", "02", "04", "06"]
 sdlc_gates: ["G0.1", "G0.2", "G1", "G2", "G3"]
@@ -131,7 +131,7 @@ When asked to create a new document, follow SDLC 6.3.1 patterns:
 # {Document Title}
 
 **SDLC Stage**: {XX}-{Stage Name}
-**Version**: {semver}
+**Version**: {semver} *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](../../02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 **Date**: {YYYY-MM-DD}
 **Author**: {[@role]}
 
