@@ -5,7 +5,7 @@
 **Date**: March 18, 2026
 **Status**: ACTIVE - PRODUCTION READY
 **Pillar**: 5 - SASE Integration
-**Framework**: SDLC 6.3.0 + SASE/SE 3.0 Integration
+**Framework**: SDLC 6.4.0 + SASE/SE 3.0 Integration
 **Reference**: arXiv:2509.06216v2 (Software Agentic Software Engineering)
 
 ---

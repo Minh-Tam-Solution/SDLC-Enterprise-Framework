@@ -13,7 +13,7 @@
 
 ## Purpose
 
-Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.3.0**:
+Define governance, quality, security, and compliance standards that form the **core pillars of SDLC 6.4.0**:
 
 | Pillar | Document | Focus |
 |--------|----------|-------|
@@ -28,14 +28,14 @@ Define governance, quality, security, and compliance standards that form the **c
 |----------|--------|---------|---------------|
 | [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) | **Pillar 2** | 10 Golden Rules, Sprint gates, Stage-Sprint integration, Change management | ALL tiers |
 | [SDLC-Quality-Gates-Assurance-Framework.md](./SDLC-Quality-Gates-Assurance-Framework.md) | **Pillar 4 + 5** | Quality gates (G0-G4), Security gates, SBOM, SAST, OWASP ASVS | ALL tiers |
-### Consolidated Documents (6.3.0)
+### Consolidated Documents (6.4.0)
 
 | New Document | Merged From | Version |
 |--------------|-------------|---------|
 | **SDLC-Quality-Gates-Assurance-Framework.md** | Quality-Assurance-System + Quality-Security-Gates | 6.3.0 |
 | **SDLC-Sprint-Governance.md** | Sprint-Planning-Governance + Stage-Sprint-Integration + Change-Management | 5.3.0 |
 
-### Moved to Ring 2 (6.3.0)
+### Moved to Ring 2 (6.4.0)
 | Document | New Location |
 |----------|-------------|
 | SDLC-Observability-Checklist.md | `05-Templates-Tools/05-Checklists/` (redirect stub at old location) |

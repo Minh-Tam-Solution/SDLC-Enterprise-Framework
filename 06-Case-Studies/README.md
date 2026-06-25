@@ -5,7 +5,7 @@
 **Status**: ACTIVE - REAL PLATFORM LESSONS
 **Authority**: CPO Office (taidt@mtsolution.com.vn)
 **Foundation**: BFlow, NQH-Bot, MTEP battle-tested patterns
-**Framework**: SDLC 6.3.0 (7-Pillar + 2-Section + Multi-Agent Patterns + System Thinking)
+**Framework**: SDLC 6.4.0 (7-Pillar + 2-Section + Multi-Agent Patterns + System Thinking)
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 
 ---

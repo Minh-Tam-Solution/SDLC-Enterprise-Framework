@@ -1,4 +1,4 @@
-# SDLC 6.3.2 Universal Framework
+# SDLC 6.4.0 Universal Framework
 
 **Version**: 6.3.1 | **Status**: ACTIVE | **Date**: April 17, 2026
 
@@ -15,7 +15,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.3.2 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.4.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance

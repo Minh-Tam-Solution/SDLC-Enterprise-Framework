@@ -1,8 +1,8 @@
-# SDLC 6.3.0 Implementation Guides
+# SDLC 6.4.0 Implementation Guides
 
 **Version**: 6.3.1 | **Status**: PRODUCTION READY | **Date**: March 18, 2026
 
-Practical how-to guides for implementing SDLC 6.3.0 framework: **9 Mental Models**, **Lean Ring 1**, **Long-Running Agent Protocol**, **Citizen Developer Pathway**, **13 Multi-Agent Patterns**, and the full **7-Pillar + Section 7 + Section 8** architecture.
+Practical how-to guides for implementing SDLC 6.4.0 framework: **9 Mental Models**, **Lean Ring 1**, **Long-Running Agent Protocol**, **Citizen Developer Pathway**, **13 Multi-Agent Patterns**, and the full **7-Pillar + Section 7 + Section 8** architecture.
 
 **AI Governance**: Aligned with [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) principles
 **Ring**: 3 (Outer) — implementation guides, not methodology

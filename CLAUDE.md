@@ -1,10 +1,21 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.3.2
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.4.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.3.2**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **9 Mental Models** (including #9 Demand Before Surface [DT]), **Ship-Useful Principle (Constraint-First / Anti-Theater) [DT]**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.4.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **9 Mental Models** (including #9 Demand Before Surface [DT]), **Ship-Useful Principle (Constraint-First / Anti-Theater) [DT]**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+
+**What's New in 6.4.0 (June 25, 2026) — DRIFT-LESSONS ABSORB (MINOR, Amendment C) [AF-20]**:
+
+*5 proven-in-practice drift-lessons absorbed bottom-up from NQH/MTS operating ground*:
+- ✅ **L1 — Govern-Proportional + Complexity-Budget** — governance overhead scales with USE/RISK; complexity-budget per artifact-class
+- ✅ **L2 — Evidence-of-Need before BUILD/GOVERN** — MM#6 precondition + anti-pattern C10 (imagined need)
+- ✅ **L3 — Governance-Spiral Anti-Pattern** — gov:code ratio >50% signals spiral; trim-or-prove-value response
+- ✅ **L4 — Drift Circuit-Breaker** — outcome-not-volume metric; cite-proof detection scripts SDLC `c48dad8`, MTClaw `98025fd`, SDLC `b87c300`
+- ✅ **L5 — Standard #19: Dogfood as Adoption-Test** — owns-methodology ≠ owns-runtime; methodology-owner must self-apply before claiming adoption
+- ✅ **Amendment C inward catalog** — `09-Continuous-Improvement/AmendmentC-Drift-Lessons-Catalog.md`
+- ✅ **Origin**: CEO Tech-Ecos directive 2026-06-23 + @cto + @cpo joint ratify 2026-06-25
 
 **What's New in 6.3.2 (June 3, 2026) — SHIP-USEFUL PRINCIPLE + MENTAL MODEL #9 (PATCH, Amendment B) [DT]**:
 

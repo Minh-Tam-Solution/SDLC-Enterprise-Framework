@@ -13,7 +13,7 @@
 
 ## 🎯 Purpose
 
-This folder contains the **mandatory documentation standards** for all SDLC 6.3.0 projects. As **Pillar 6** of the 8-Pillar Architecture, Documentation Permanence ensures:
+This folder contains the **mandatory documentation standards** for all SDLC 6.4.0 projects. As **Pillar 6** of the 8-Pillar Architecture, Documentation Permanence ensures:
 
 - **Permanence**: Documentation doesn't become obsolete
 - **Discoverability**: Easy to find what you need
@@ -37,7 +37,7 @@ This folder contains the **mandatory documentation standards** for all SDLC 6.3.
 
 ### Consolidation Summary
 
-SDLC 6.3.0 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enhancements:
+SDLC 6.4.0 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enhancements:
 
 | Previous Files | Merged Into | Lines |
 |----------------|-------------|-------|
@@ -47,7 +47,7 @@ SDLC 6.3.0 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enh
 | ARCHIVAL-HEADER-TEMPLATE.md | ↑ | |
 | Team-Collaboration/* (4 files) | **SDLC-Team-Collaboration.md** | ~700 |
 
-### Current Documents (6 files - SDLC 6.3.0 Enhanced)
+### Current Documents (6 files - SDLC 6.4.0 Enhanced)
 
 | Document | Purpose | Compliance |
 |----------|---------|------------|
@@ -63,7 +63,7 @@ SDLC 6.3.0 maintains the 6.0.3 consolidation (13 files → 7 files) with TDD enh
 
 ### 1. SDLC-Naming-Standards.md ⭐ MANDATORY
 
-**Purpose**: Unified naming and header standards for all SDLC 6.3.0 projects
+**Purpose**: Unified naming and header standards for all SDLC 6.4.0 projects
 
 **Covers** (8 Parts):
 - Part 1: Overview & Principles
