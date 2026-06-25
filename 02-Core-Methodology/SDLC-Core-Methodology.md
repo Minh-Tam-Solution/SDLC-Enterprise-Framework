@@ -1,10 +1,10 @@
 ---
-sdlc_framework: "6.3.2"
+sdlc_framework: "6.4.0"
 ---
 
-# SDLC 6.3.2 Core Methodology
+# SDLC 6.4.0 Core Methodology
 
-**Version**: 6.3.2
+**Version**: 6.3.2 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](Documentation-Standards/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 **Date**: 2026-06-03
 **Status**: ACTIVE — Agentic SDLC + Lean Ring 1 (9 Mental Models, Long-Running Agent Protocol, tool-agnostic)
 **Authority**: Chairman + CEO + CPO + CTO Approved

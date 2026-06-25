@@ -1,5 +1,5 @@
 ---
-sdlc_framework: "6.3.0"
+sdlc_framework: "6.4.0"
 ---
 
 # SDLC Project Structure Standard
@@ -17,7 +17,7 @@ sdlc_framework: "6.3.0"
 
 ## 1. Overview
 
-This document defines the standard project folder structure for SDLC 6.3.0 compliant projects. It establishes clear separation between:
+This document defines the standard project folder structure for SDLC 6.4.0 compliant projects. It establishes clear separation between:
 
 1. **Documentation Stage Mapping** - `/docs` folders mapped to SDLC lifecycle stages (00-09)
 2. **Project Structure Validation** - Root-level code folders validated for presence (NOT stage-mapped)

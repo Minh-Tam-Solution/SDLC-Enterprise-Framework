@@ -591,7 +591,7 @@ tasks:
 ```bash
 #!/bin/bash
 # tools/validate-sprint-consistency.sh
-# SDLC 6.3.1 - Sprint Consistency Validator
+# SDLC 6.4.0 - Sprint Consistency Validator
 
 set -e
 

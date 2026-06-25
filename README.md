@@ -1,6 +1,6 @@
 # SDLC 6.4.0 Universal Framework
 
-**Version**: 6.3.1 | **Status**: ACTIVE | **Date**: April 17, 2026
+**Version**: 6.3.1 | **Status**: ACTIVE | **Date**: April 17, 2026 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 
 Built BY AI+Human Teams FOR AI+Human Teams
 

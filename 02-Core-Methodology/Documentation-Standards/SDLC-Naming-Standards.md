@@ -27,7 +27,7 @@
 
 ### Purpose
 
-This document consolidates **all naming and header standards** for SDLC 6.3.0 Framework:
+This document consolidates **all naming and header standards** for SDLC 6.4.0 Framework:
 - Code file naming (Python, TypeScript, migrations)
 - Document naming (markdown, documentation)
 - Folder structure (10 stages, legacy handling)
@@ -441,7 +441,7 @@ Examples:
 
 ### 5.1 Active Document Header
 
-Apply to **all active SDLC 6.3.0 documents**:
+Apply to **all active SDLC 6.4.0 documents**:
 
 ```markdown
 # [Document Title]
@@ -777,7 +777,7 @@ DON'Ts ❌:
 ---
 
 **Document Status**: ACTIVE - MANDATORY ENFORCEMENT
-**Compliance**: Required for all SDLC 6.3.0 projects
+**Compliance**: Required for all SDLC 6.4.0 projects
 **Last Updated**: January 28, 2026
 **Owner**: CPO Office
 

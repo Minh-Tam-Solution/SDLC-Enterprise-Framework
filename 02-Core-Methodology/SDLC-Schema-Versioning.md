@@ -63,7 +63,7 @@ Going forward, the canonical field is the YAML frontmatter:
 
 ```yaml
 ---
-sdlc_framework: "6.3.2"
+sdlc_framework: "6.4.0"
 ---
 ```
 

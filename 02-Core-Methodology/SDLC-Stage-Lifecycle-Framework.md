@@ -89,7 +89,7 @@ SDLC Framework 6.3.0 defines a **10-stage lifecycle** (00-FOUNDATION through 09-
 **Format**: Structured YAML for both human readability and tool parsing.
 
 ```yaml
-# SDLC 6.3.1 Stage Dependency Matrix
+# SDLC 6.4.0 Stage Dependency Matrix
 # Each stage defines: requires, enables, gates, parallel rules, triggers
 
 stages:

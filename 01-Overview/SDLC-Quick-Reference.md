@@ -1,9 +1,9 @@
-# SDLC Framework 6.3.1 Quick Reference Guide
+# SDLC Framework 6.4.0 Quick Reference Guide
 
 **Version**: 6.3.1
 **Date**: March 18, 2026
 **Status**: ACTIVE - PRODUCTION READY
-**Purpose**: Fast lookup for key SDLC 6.3.0 concepts, navigation, and breaking changes
+**Purpose**: Fast lookup for key SDLC 6.4.0 concepts, navigation, and breaking changes
 
 ---
 
@@ -367,7 +367,7 @@ New Templates:
 
 | I Want To... | Go To |
 |--------------|-------|
-| Understand SDLC 6.3.0 | [01-Overview/SDLC-Executive-Summary.md](SDLC-Executive-Summary.md) |
+| Understand SDLC 6.4.0 | [01-Overview/SDLC-Executive-Summary.md](SDLC-Executive-Summary.md) |
 | Write a specification | [05-Templates-Tools/Framework-6.0/](../05-Templates-Tools/Framework-6.0/) |
 | Use AI governance | [03-AI-GOVERNANCE/](../03-AI-GOVERNANCE/) |
 | Find a topic | [CONTENT-MAP.md](../CONTENT-MAP.md) |
@@ -540,6 +540,6 @@ Legacy Organization (6.3.0 RFC-001):
 
 **Document Status**: ACTIVE
 **Last Updated**: March 18, 2026
-**Framework**: SDLC 6.3.0 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
+**Framework**: SDLC 6.4.0 (7-Pillar + 2-Section + TDD + RFC-001 + Anthropic Patterns)
 
 *Quick reference for SDLC Framework 6.3.0 - Keep this handy!*

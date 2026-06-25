@@ -1,8 +1,8 @@
 ---
-sdlc_framework: "6.3.2"
+sdlc_framework: "6.4.0"
 ---
 
-# SDLC 6.3.2 Executive Summary
+# SDLC 6.4.0 Executive Summary
 
 **Version**: 6.4.0 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](../02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 **Release Date**: March 18, 2026 (AGENTIC SDLC + LEAN RING 1)
@@ -430,7 +430,7 @@ New comprehensive guide covering:
 
 ## Framework Overview
 
-**SDLC 6.3.0** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
+**SDLC 6.4.0** is a **7-Pillar AI+Human Excellence Framework** with 2 Sections:
 
 ### 7 Core Pillars
 - **Pillar 0**: Design Thinking Foundation
