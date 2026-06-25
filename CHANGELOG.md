@@ -20,7 +20,7 @@
 
 ### Net-LOC delta
 
-**+66 / -17 = +49 net** (under +60 ceiling).
+**+68 / -9 = +59 net** framework-side (under +60 ceiling).
 
 ---
 
