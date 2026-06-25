@@ -2,9 +2,25 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.3.2 Enterprise Framework — Governance Training Expansion
+**Framework**: SDLC 6.4.0 Enterprise Framework — Drift-Lessons Absorb
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: April 28, 2026 (Pre-OSS-launch repository reorganization)
+**Last Updated**: June 25, 2026 (Drift-lessons absorb; Framework 6.3.2 → 6.4.0)
+
+---
+
+## 📚 Version 6.4.0 — Amendment C — June 25, 2026 (DRIFT-LESSONS ABSORB) [AF-20]
+
+### Added
+
+- L1–L5 drift-lessons absorbed bottom-up; inward catalog in `09-Continuous-Improvement/`.
+
+### Trimmed (in-exchange)
+
+- Auto-Generation Layer; Kill Switch; MM#6; Ship-Useful Section 7 row; FEDERATED-PLATFORM policy.
+
+### Net-LOC delta
+
+**+66 / -17 = +49 net** (under +60 ceiling).
 
 ---
 

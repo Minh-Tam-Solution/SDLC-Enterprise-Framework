@@ -138,7 +138,7 @@ An **independent cite** must originate from a sprint or ADR or product surface t
 | Pillar 5 (SASE Integration) | Unchanged — load-bearing for every AI-assisted commit |
 | Pillar 6 (Doc Permanence) | Unchanged — invoked daily by AI tools |
 | Pillar 7 (Plugin Architecture) | ON-DEMAND on commercial surfaces; internal-use surfaces (mts-sdlc-lite reference plugin) remain ACTIVE |
-| Section 7 (Anti-Vibecoding / Vibecoding Index) | Re-eval pending — has the Index ever changed a decision? If not → demote to advisory |
+| Section 7 (Anti-Vibecoding / Vibecoding Index) | ACTIVE — paired with Governance-Spiral anti-pattern; code-side Index + gov-side `gov:code` ratio must both move decisions |
 | Section 8 (Unified Spec) | ACTIVE — invoked by every YAML-frontmatter-validated document |
 
 ---

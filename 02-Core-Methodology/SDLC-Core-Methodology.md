@@ -663,9 +663,28 @@ AI tools produce "vibecoded" output - quick but unmaintainable code that:
 | 40-60 | 🟠 Orange (High Risk) | Senior review required | Senior engineer + Security lead sign-off |
 | >= 60 | 🔴 Red (Critical Risk) | Block or Senior Review Board | CTO override required, mandatory human rewrite |
 
+### Governance-Spiral Anti-Pattern (L3)
+
+When GOVERN substrate grows faster than CODE/USE substrate, the system enters a **governance-spiral** that self-camouflages as quality progress. Signal: `gov:code ratio > 50%` (NQH-Bot 60%-gov-LOC / 37:1 ratio). Response: pause new GOVERN authorship; run trim-or-prove-value.
+
+### Complexity Budget — Govern Proportional to USE/RISK (L1)
+
+Governance overhead scales with **USE** (runtime traffic, dev consumption) and **RISK** (blast radius), not surface area. A complexity-budget caps doc/check/gate volume per artifact-class; exceeding it triggers **trim-in-exchange**.
+
+| Artifact Class | Budget Driver | Volume Cap Trigger |
+|---|---|---|
+| ADR | Cross-team blast radius | >1 per decision-point → re-evaluate |
+| Sprint Plan | Active sprint lanes | Beyond committed lanes needs evidence-of-need |
+| Gate Policy | Runtime paths exercised | Unexercised paths → ON-DEMAND |
+| Evidence Hook | Daily-invoked tools | No 30-day invocation → freeze |
+
+### Drift Circuit-Breaker — Outcome, Not Volume (L4)
+
+A standing metric pauses new governance authorship when governance health breaches a threshold. Measure `gov:code LOC` per repo per sprint and **outcome** signals (deploy-frequency, lead-time, runtime-adoption) — not docs-authored or checks-added. Threshold: YELLOW at 5 commits / 5h sprint-anchor drift (SDLC `c48dad8`; bilateral MTClaw `98025fd`); phantom citations audited by SDLC `b87c300`.
+
 ### Auto-Generation Layer
 
-**Goal**: Reduce compliance friction from 30 min → <5 min per PR.
+**Goal**: Reduce compliance friction proportional to actual USE — generators activate only where daily consumption justifies the automation.
 
 | Generator | Trigger | Output | Time Saved |
 |-----------|---------|--------|------------|
@@ -676,13 +695,17 @@ AI tools produce "vibecoded" output - quick but unmaintainable code that:
 
 ### Kill Switch Criteria
 
-Automatic AI code generation disable on quality degradation (ENTERPRISE tier, FULL enforcement):
+Code-side disable triggers (left) and governance-side drift circuit-breaker (right). Both measure **outcome, not volume**.
 
 | Criteria | Threshold | Duration | Action |
 |----------|-----------|----------|--------|
 | Rejection Rate | >80% | 30 consecutive minutes | Disable AI codegen for 24h |
 | Latency P95 | >500ms | 15 consecutive minutes | Fallback to rule-based |
 | Security Scan Failures | >5 critical CVEs | Any occurrence | Immediate disable + alert CTO |
+| Gov:Code ratio | >50% | any sprint | Pause new governance authorship; trim-or-prove-value |
+| Outcome stall | deploy-freq ↓19% or lead-time ↑ | 2 sprints | Audit gov burden per DORA; cite detection-script template |
+
+> **Detection-script template**: per-repo scripts that fire YELLOW at drift threshold and link evidence to a trim-or-prove-value ticket. See SDLC `c48dad8`, MTClaw `98025fd`, SDLC `b87c300`.
 
 **Recovery Conditions**: Manual CTO approval → Root cause analysis → Fix deployed → Gradual re-enable (10% → 50% → 100%)
 

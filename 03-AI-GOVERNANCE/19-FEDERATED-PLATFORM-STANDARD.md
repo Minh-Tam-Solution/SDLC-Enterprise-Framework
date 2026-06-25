@@ -79,5 +79,18 @@ Shared services that all platforms consume (NOT owned by any single platform):
 ```
 Company deliverables MUST flow through MTClaw + Orchestrator (evidence trail).
 EndiorBot output = advisory only, NOT executable artifact.
-Gates CANNOT be bypassed — Orchestrator is the only authority.
+Orchestrator owns methodology authority; MTClaw owns runtime execution. Gates CANNOT be bypassed.
 ```
+
+## Standard #19 — Dogfood as Adoption-Test
+
+Owning the methodology does **not** own the runtime. A methodology-owner must self-apply the methodology to its own work before claiming adoption.
+
+**Adoption-test criteria**:
+1. Methodology-owner uses its own gates, ADRs, sprint plans, and evidence contracts on real work.
+2. Adoption signal is voluntary continued use, not mandate.
+3. If external runtime consumers = 0, dogfood is the canonical adoption-test.
+
+**Cite-proof**: SDLC-Orch had 0 runtime service-calls before CEO 2026-06-22 directive; 30+ @cto `sdlcctl dogfood-gate` self-applications in <24h supplied the adoption-test substrate. MTClaw performed a bilateral loop.
+
+**Anti-pattern**: "We own the standard, so teams will adopt." Without dogfood, runtime-adoption hypothesis is unfalsified.

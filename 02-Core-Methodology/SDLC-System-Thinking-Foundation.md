@@ -338,9 +338,9 @@ These are **baseline estimates — calibrate per project** (CTO condition: not u
 - "Security scan findings deferred to next sprint" → Apply Fix-First Protocol (Section 6.3). Most findings are AUTO-FIX (~15 min).
 
 **At Scope Decisions**:
-- **Lake** (completable with AI) → Do it all. 100% coverage, full docs, all edge cases.
+- **Lake** (completable with AI) → Do it all **only if evidence-of-use exists**. 100% coverage without a daily caller is bloat.
 - **Ocean** (multi-quarter, requires organizational change) → Scope cut is valid. Use Start Ridiculously Small (MM#6).
-- **Heuristic**: If total AI-assisted effort < 1 day → it's a lake. Boil it.
+- **Heuristic**: If total AI-assisted effort < 1 day **and** evidence-of-need is cited → it's a lake. Boil it.
 
 ### Completeness as Metric
 
@@ -364,8 +364,12 @@ Completeness: X/10
 | **#1 Process-First** | Process isn't overhead when AI makes compliance near-zero-cost |
 | **#3 Data-From-Activities** | Measure actual compression ratios per project, not assumed ones |
 | **#5 Crisis → Pattern** | Most crises stem from deferred work; compression eliminates the deferral excuse |
-| **#6 Start Small** | "Small" no longer means "incomplete" — small AND complete is achievable |
+| **#6 Start Small** | "Small" no longer means "incomplete" — small AND complete is achievable **when evidence-of-need precedes BUILD and GOVERN** |
 | **#8 More People Build** | Domain experts can achieve 10/10 completeness with AI assistance |
+
+### Anti-Pattern C10 — Imagined Need
+
+Authoring BUILD or GOVERN artifacts without operational evidence-of-need (usage data, dependency, external traction, or runtime gap). Result: a 0-runtime BRAIN with full governance substrate. Evidence-of-need is a precondition, not post-launch research.
 
 ---
 
