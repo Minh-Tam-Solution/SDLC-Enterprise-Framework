@@ -250,7 +250,7 @@ Design Thinking spans primarily the WHY (Stage 00) and WHAT (Stage 01) stages, b
 
 ## Quality Gates 0.1 – 0.5
 
-Design Thinking integrates with the SDLC Quality Gate system through 5 gates that progressively validate user-centered decisions:
+The criteria tables below describe what ST/DT evidence should look like at each gate. Substrate-level enforcement of this evidence for G1/G2 is mandatory per [SDLC-Core-Methodology.md §7 — ST/DT Gate-Enforcement Requirement](SDLC-Core-Methodology.md#st-dt-gate-enforcement-requirement).
 
 ### Gate 0.1: Problem Definition (After EMPATHIZE + DEFINE)
 

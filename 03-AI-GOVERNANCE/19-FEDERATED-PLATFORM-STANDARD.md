@@ -94,3 +94,16 @@ Owning the methodology does **not** own the runtime. A methodology-owner must se
 **Cite-proof**: SDLC-Orch had 0 runtime service-calls before CEO 2026-06-22 directive; 30+ @cto `sdlcctl dogfood-gate` self-applications in <24h supplied the adoption-test substrate. MTClaw performed a bilateral loop.
 
 **Anti-pattern**: "We own the standard, so teams will adopt." Without dogfood, runtime-adoption hypothesis is unfalsified.
+
+## Standard #20 — ST/DT Gate-Enforcement Mandatory for Federated Tools
+
+Federated platform tools inheriting this Framework SPEC MUST implement ST/DT (Design Thinking + Systems Thinking) gate-enforcement in their own substrate for G1/G2 gates. Cascade is **standard-inheritance, not hard-dependency**: each tool owns its runtime, but the requirement is non-negotiable for conformance.
+
+**Cite-proof (proven reference implementations)**:
+- SDLC Orchestrator AF-31 validator wire (`9919e6d`) — score-gate mechanism in `gate_engine.evaluate()`.
+- SDLC Orchestrator AF-33 dogfood-CI (`14d5767`) — self-enforcement GREEN 90/100 EXCELLENT.
+- EndiorBot Sprint 158 (`86e6966`) — independent content-presence gate mechanism (`g2-iceberg` + `g2-alternatives` STANDARD+).
+
+**Anti-pattern**: Prose-mandate without proven-reference-implementation — a "hypocrisy cascade" where the framework requires ST/DT but no federated tool mechanically enforces it. Mitigated here because two independent tools shipped the pattern before the Standard was written.
+
+**Cross-reference**: Standard #19 (dogfood-as-adoption-test) proves *use*; Standard #20 proves *mechanism*. Both are required for federated conformance.

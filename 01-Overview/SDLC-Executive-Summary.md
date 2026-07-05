@@ -1,12 +1,12 @@
 ---
-sdlc_framework: "6.4.0"
+sdlc_framework: "6.5.0"
 ---
 
-# SDLC 6.4.0 Executive Summary
+# SDLC 6.5.0 Executive Summary
 
-**Version**: 6.4.0 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](../02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
-**Release Date**: March 18, 2026 (AGENTIC SDLC + LEAN RING 1)
-**Last Updated**: 2026-06-03
+**Version**: 6.5.0 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](../02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
+**Release Date**: July 5, 2026 (ST/DT GATE-ENFORCED, Amendment D)
+**Last Updated**: 2026-07-05
 **Status**: ACTIVE
 **Authority**: Chairman + CEO + CPO + CTO Approved
 

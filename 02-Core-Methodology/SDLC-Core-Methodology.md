@@ -667,6 +667,17 @@ AI tools produce "vibecoded" output - quick but unmaintainable code that:
 
 When GOVERN substrate grows faster than CODE/USE substrate, the system enters a **governance-spiral** that self-camouflages as quality progress. Signal: `gov:code ratio > 50%` (NQH-Bot 60%-gov-LOC / 37:1 ratio). Response: pause new GOVERN authorship; run trim-or-prove-value.
 
+### ST/DT Gate-Enforcement Requirement
+
+Tools implementing this Framework MUST gate-enforce Design Thinking and Systems Thinking (ST/DT) evidence for **G1 (Requirements)** and **G2 (Architecture)** gates — not merely prose-accept a criteria checklist. Design Thinking is upstream methodology; without substrate-level enforcement, the framework degrades into documentation theater.
+
+**Cite-proof (proven reference implementations)**:
+- SDLC Orchestrator AF-31 validator wire (`9919e6d`) — score-gate mechanism over `project.config.repo_path`, wired into `gate_engine.evaluate()` for G1/G2.
+- SDLC Orchestrator AF-33 dogfood-CI (`14d5767`) — self-enforcement GREEN 90/100 EXCELLENT on SDLC-Orch's own repository.
+- EndiorBot Sprint 158 (`86e6966`) — independent content-presence gate mechanism (`g2-iceberg` + `g2-alternatives` STANDARD+ gates requiring `## Iceberg Analysis` and `## Alternatives Considered`).
+
+**Anti-pattern**: "Own-methodology-but-not-own-enforcement" — claiming ST/DT adoption while the runtime gate path does not mechanically validate ST/DT evidence. This is the enforcement-mechanics counterpart to L5 (owns-methodology ≠ owns-runtime).
+
 ### Complexity Budget — Govern Proportional to USE/RISK (L1)
 
 Governance overhead scales with **USE** (runtime traffic, dev consumption) and **RISK** (blast radius), not surface area. A complexity-budget caps doc/check/gate volume per artifact-class; exceeding it triggers **trim-in-exchange**.

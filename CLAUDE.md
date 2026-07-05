@@ -1,11 +1,18 @@
-# CLAUDE.md - AI Assistant Guidelines for SDLC 6.4.0
+# CLAUDE.md - AI Assistant Guidelines for SDLC 6.5.0
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Repository Purpose
 
-The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.4.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **9 Mental Models** (including #9 Demand Before Surface [DT]), **Ship-Useful Principle (Constraint-First / Anti-Theater) [DT]**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
+The **SDLC-Enterprise-Framework** is a universal, battle-tested AI+Human development framework (**v6.5.0**) featuring the **7-Pillar Architecture + Section 7 (Quality Assurance) + Section 8 (Unified Specification Standard)** with complete 10-Stage lifecycle (WHY → GOVERN), **9 Mental Models** (including #9 Demand Before Surface [DT]), **Ship-Useful Principle (Constraint-First / Anti-Theater) [DT]**, **Lean Ring 1 Consolidation**, **Long-Running Agent Protocol**, SASE/SE 3.0 Integration, Agentic Maturity Model, and 4-Tier Classification system. Built through 10 months of real platform development (June 2025 - April 2026) across BFlow, NQH-Bot, and MTEP platforms, this framework is **tool-agnostic** — any platform can implement it.
 
+**What's New in 6.5.0 (July 5, 2026) — ST/DT GATE-ENFORCED (MINOR, Amendment D) [AF-36]**:
+
+*Proven substrate enforcement elevated to Framework SPEC — two independent reference implementations converged on the same requirement*:
+- ✅ **Section 7 ST/DT Gate-Enforcement Requirement** — tools MUST gate-enforce ST/DT evidence for G1/G2, not prose-accept it
+- ✅ **Standard #20 — ST/DT Gate-Enforcement Mandatory for Federated Tools** — standard-inheritance, not hard-dependency
+- ✅ **Cite-proof**: SDLC-Orch AF-31 (`9919e6d`) score-gate + AF-33 (`14d5767`) dogfood-CI GREEN 90/100; EndiorBot S158 (`86e6966`) content-presence gate
+- ✅ **Origin**: CEO Directive 2026-07-04 + CEO Gate-0 RATIFY 2026-07-05 + RFC-002 (`bd16000`)
 **What's New in 6.4.0 (June 25, 2026) — DRIFT-LESSONS ABSORB (MINOR, Amendment C) [AF-20]**:
 
 *5 proven-in-practice drift-lessons absorbed bottom-up from NQH/MTS operating ground*:

@@ -2,9 +2,38 @@
 
 ## Complete Version History and Upgrade Documentation
 
-**Framework**: SDLC 6.4.0 Enterprise Framework — Drift-Lessons Absorb
+**Framework**: SDLC 6.5.0 Enterprise Framework — ST/DT Gate-Enforced
 **Maintained By**: CEO + CPO + CTO Leadership
-**Last Updated**: June 25, 2026 (Drift-lessons absorb; Framework 6.3.2 → 6.4.0)
+**Last Updated**: July 5, 2026 (ST/DT gate-enforcement; Framework 6.4.0 → 6.5.0)
+
+---
+
+## 📚 Version 6.5.0 — Amendment D — July 5, 2026 (ST/DT GATE-ENFORCED) [AF-36]
+
+### Added (structural cascade)
+
+- Section 7 subsection "ST/DT Gate-Enforcement Requirement" (`02-Core-Methodology/SDLC-Core-Methodology.md`).
+- Standard #20 "ST/DT Gate-Enforcement Mandatory for Federated Tools" (`03-AI-GOVERNANCE/19-FEDERATED-PLATFORM-STANDARD.md`).
+
+### Trimmed (in-exchange)
+
+- `SDLC-Design-Thinking-Principles.md` Quality-Gates 0.1–0.5 preamble de-duplicated to point at the new Section 7 subsection (Option X per CEO 2026-07-05 weak-lean; cross-file trim preserves Convention A per-section independence).
+
+### Cite-proof (proven-reference implementations)
+
+- SDLC-Orch AF-31 validator wire (`9919e6d`) — score-gate mechanism.
+- SDLC-Orch AF-33 dogfood-CI GREEN 90/100 (`14d5767`) — self-enforcement proven.
+- EndiorBot Sprint 158 (`86e6966`) — content-presence gate mechanism (`g2-iceberg` + `g2-alternatives` STANDARD+).
+
+### Net-LOC delta
+
+Projected +31 per RFC-002 §3.3; actual verified post-edit.
+
+### Authority
+
+- CEO Directive 2026-07-04 SecondBrain "gate-core substance + ST/DT enforcement".
+- CEO Gate-0 RATIFY 2026-07-05 (RFC-002 substantively verified).
+- SDLC-Orch RFC-002 (AF-35 `bd16000`).
 
 ---
 

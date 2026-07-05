@@ -1,6 +1,6 @@
-# SDLC 6.4.0 Universal Framework
+# SDLC 6.5.0 Universal Framework
 
-**Version**: 6.4.0 | **Status**: ACTIVE | **Date**: 2026-06-25 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
+**Version**: 6.5.0 | **Status**: ACTIVE | **Date**: 2026-07-05 *(doc's own semver — independent of Framework version; see [Schema-Versioning §Convention A](02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03))*
 
 Built BY AI+Human Teams FOR AI+Human Teams
 
@@ -15,7 +15,7 @@ Built BY AI+Human Teams FOR AI+Human Teams
 
 ## Overview
 
-SDLC 6.4.0 is a **7-Pillar AI+Human Excellence Framework** with:
+SDLC 6.5.0 is a **7-Pillar AI+Human Excellence Framework** with:
 - **Pillar 0**: Design Thinking Foundation
 - **Pillar 1**: 10 Lifecycle Stages (00-09): Foundation → Govern
 - **Pillar 2**: Sprint Planning Governance
