@@ -41,8 +41,25 @@ if [ -z "$FW" ]; then blind "README.md declares no parseable **Version**"; else
     f=${hit%%:*}; rest=${hit#*:}; ln=${rest%%:*}
     v=$(echo "${rest#*:}" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
     [ -n "$v" ] || continue
+    # FALSE POSITIVE FOUND IN R22 ADJUDICATION — and the first fix for it was placed AFTER the
+    # `red` call, so it changed nothing and the finding survived. The guard has to run before the
+    # verdict, not after it. Same shape as a negative test that never reaches the code under test.
+    #
+    # anti-vibecoding.yaml's line-1 COMMENT reads "SDLC Framework 6.2.0", but its FIELD is
+    # metadata.version: "1.0.0" — a DOCUMENT semver. Under Convention A that comment is provenance,
+    # exactly like a prose `**Framework**: 6.3.0` stamp, and flagging it was wrong.
+    # gates.yaml is different: its field IS metadata.version: "6.2.0", inside the Framework's own
+    # 6.x series. A field in the Framework's version series is a claim about the rules encoded;
+    # a comment is a note about when they were written; a 1.x field is the document's own semver.
+    # anti-vibecoding.yaml's line-1 COMMENT says "SDLC Framework 6.2.0", but its actual field is
+    # metadata.version: "1.0.0" — a DOCUMENT semver. Under Convention A that comment is provenance,
+    # exactly like a prose `**Framework**: 6.3.0` stamp, and flagging it was wrong.
+    # gates.yaml is different: its field IS metadata.version: "6.2.0", in the Framework's own 6.x
+    # series. A field in the Framework's version series is a claim about the rules encoded; a
+    # comment is a note about when they were written.
+    case "$v" in 6.*) ;; *) continue;; esac
     [ "$v" = "$FW" ] || red "C1 framework-version-drift: $f:$ln asserts Framework $v while README.md asserts $FW"
-  done < <(grep -rnE 'SDLC Framework [0-9]+\.[0-9]+\.[0-9]+|framework_version:' --include='*.yaml' --include='*.json' . 2>/dev/null | grep -v '/10-Archive/')
+  done < <(grep -rnE '^\s*(version|framework_version):' --include='*.yaml' --include='*.json' . 2>/dev/null | grep -v '/10-Archive/')
   ok "C1 checked against Framework $FW"
 
   # ⚠️ C1 stays on MACHINE CONTRACTS ONLY — a trap walked into and backed out of.
@@ -186,6 +203,17 @@ if [ ! -f CONTENT-MAP.md ]; then blind "CONTENT-MAP.md absent"; else
     # refactor-history table ("Slim + Extract" / "Slim + Move" / "Rewrite") whose second column names
     # the file BEFORE the change. Requiring a directory separator removes that table cleanly.
     case "$path" in */*) ;; *) continue;; esac
+    # FALSE POSITIVE FOUND IN R22 ADJUDICATION, removed here.
+    # CONTENT-MAP.md:332 is a "Move" row: column 2 is the path BEFORE the move and column 3 is the
+    # destination directory. The file exists, at the destination. Requiring a directory separator
+    # caught rows 327-329 but not this one, because this source path has one.
+    # The clean discriminator is the LAST column: canonical rows carry a STATUS (ACTIVE / NEW x.y /
+    # MOVED / DEPRECATED / CONSOLIDATED). A refactor row carries a rationale like "Correct ring".
+    last=$(echo "$row" | awk -F'|' '{print $(NF-1)}')
+    case "$last" in
+      *ACTIVE*|*NEW*|*MOVED*|*DEPRECATED*|*CONSOLIDATED*|*RETIRED*) ;;
+      *) continue;;
+    esac
     [ -e "$path" ] || red "C7 map-points-nowhere: CONTENT-MAP.md:$ln names canonical '$path' — no such file"
   done < <(grep -n '^|' CONTENT-MAP.md 2>/dev/null)
   ok "C7 checked ($N checks run)"
