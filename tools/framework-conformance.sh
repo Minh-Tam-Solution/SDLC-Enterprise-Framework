@@ -44,6 +44,33 @@ if [ -z "$FW" ]; then blind "README.md declares no parseable **Version**"; else
     [ "$v" = "$FW" ] || red "C1 framework-version-drift: $f:$ln asserts Framework $v while README.md asserts $FW"
   done < <(grep -rnE 'SDLC Framework [0-9]+\.[0-9]+\.[0-9]+|framework_version:' --include='*.yaml' --include='*.json' . 2>/dev/null | grep -v '/10-Archive/')
   ok "C1 checked against Framework $FW"
+
+  # ⚠️ C1 stays on MACHINE CONTRACTS ONLY — a trap walked into and backed out of.
+  # A second-model audit (Kimi K3) correctly found ~99 markdown files stamping an older
+  # `**Framework**: SDLC X.Y.Z`. Widening C1 to markdown turned all 99 red. Then the Framework's
+  # own convention refuted it: 02-Core-Methodology/SDLC-Schema-Versioning.md:70 says those markdown
+  # patterns "remain valid for backward compatibility" and "mass-migration of field names alone is
+  # explicitly NOT required (per MM#9)"; line 49 says blanket-bumping on a Framework patch is
+  # EXPLICITLY REJECTED because it would make the Framework violate MM#9 — the principle Amendment B
+  # had just added. 98 of 99 were false red BY RATIFIED CONVENTION.
+  # Shipping them would have recreated the condition that got the cite-existence gate disarmed to
+  # `exit 0` in this estate: a phantom oracle produced 56% false red, and turning off a gate nobody
+  # can trust is the rational response. Precision is what decides whether a gate survives.
+  # Convention A's backward-compat clause covers PROSE stamps; it does not cover the version a
+  # CONTRACT file asserts about the rules it encodes.
+
+  # ── C1b. Verify the ruler before trusting it.
+  # C1 treats README.md as ground truth for "which Framework is this". Kimi found README.md:458
+  # asserting "SDLC 6.1.0 Framework (THIS REPO)" while README.md:3 asserts 6.5.0 — the authority
+  # disagreeing with itself by four minor versions, inside a diagram labelled THIS REPO. A check
+  # that trusts a source inherits that source's contradictions in silence.
+  N=$((N+1))
+  while IFS= read -r hit; do
+    ln=${hit%%:*}
+    v=$(echo "$hit" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -1)
+    [ "$v" = "$FW" ] || red "C1b ruler-self-contradiction: README.md:$ln asserts Framework $v while README.md:3 declares $FW — the source C1 trusts disagrees with itself"
+  done < <(grep -nE 'SDLC [0-9]+\.[0-9]+\.[0-9]+ Framework' README.md 2>/dev/null)
+  ok "C1b checked"
 fi
 
 # ── C2. A machine contract may not cite a document that does not exist.
