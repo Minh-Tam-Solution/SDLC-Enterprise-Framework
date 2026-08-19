@@ -107,7 +107,38 @@ while IFS= read -r hit; do
   f=${hit%%:*}; rest=${hit#*:}; ln=${rest%%:*}; txt=${rest#*:}
   red "C4 product-pinned-normative: $f:$ln makes a named product mandatory — $(echo "$txt" | cut -c1-80)"
 done < <(grep -rnE "($PRODUCTS)" --include='*.md' 03-AI-GOVERNANCE 2>/dev/null | grep -E '\| *(Mandatory|MUST|Required) *\|')
-ok "C4 checked ($N checks run)"
+ok "C4 checked"
+
+# ── C5. The Framework must agree with itself about its own architecture.
+# Found by the Kimi K3 audit and verified verbatim: the pillar count is stated three different
+# ways. README.md:18 "7-Pillar AI+Human Excellence Framework";
+# 02-Core-Methodology/Documentation-Standards/README.md:7 "Pillar: 6 of 8 ... (8-Pillar
+# Architecture with Pillar 7: Quality Assurance System)"; and 08-Training-Materials/
+# Module-02-Six-Pillars.md:20 "built on six universal pillars" — the training material, filename
+# included, teaches an architecture the normative core does not have.
+#
+# This is not a version stamp and Convention A does not cover it. A stale `**Framework**: 6.3.0`
+# header tells a reader when a document was written; a different PILLAR COUNT tells them a
+# different framework. What people are TAUGHT diverging from what is NORMATIVE is the worst
+# direction for this particular error to run.
+N=$((N+1))
+# ⚠️ --exclude-dir, NOT a path filter. The first version piped `grep -rhoE` into
+# `grep -v '/10-Archive/'`; -h suppresses filenames, so the path filter had nothing to match and
+# every archived version's pillar count came through. It reported five counts (3,5,6,7,8) where
+# the live tree has three. The filter was reading text that no longer contained what it filtered on.
+PIL=$(grep -rhoE '[0-9]+-Pillar|six universal pillars|seven universal pillars|eight universal pillars' \
+      --include='*.md' --exclude-dir=10-Archive . 2>/dev/null \
+      | sed 's/six universal pillars/6-Pillar/; s/seven universal pillars/7-Pillar/; s/eight universal pillars/8-Pillar/' \
+      | sort -u)
+COUNT=$(echo "$PIL" | grep -c .)
+if [ "$COUNT" -eq 0 ]; then
+  blind "no pillar-count claim found anywhere — the scanner is the suspect, not the estate"
+elif [ "$COUNT" -gt 1 ]; then
+  red "C5 architecture-count-divergence: the Framework states its pillar count $COUNT different ways — $(echo "$PIL" | tr '\n' ' ')"
+  grep -rnE '[0-9]+-Pillar|six universal pillars' --include='*.md' --exclude-dir=10-Archive . 2>/dev/null \
+    | awk -F: '{print "     " $1 ":" $2}' | sort -u | head -8
+fi
+ok "C5 checked ($N checks run)"
 
 echo
 if [ "$BLIND" = 1 ] && [ "$ERR" = 0 ]; then
