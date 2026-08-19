@@ -69,7 +69,7 @@ With System Thinking:
 
 ---
 
-## 8 Mental Models for Software Teams
+## 9 Mental Models for Software Teams
 
 These mental models form the foundation of SDLC thinking:
 
@@ -83,6 +83,7 @@ These mental models form the foundation of SDLC thinking:
 | 6 | **Start Ridiculously Small** | Validate with minimum viable scope, then scale | LITE tier first, 4-tier progression, MVP gates |
 | 7 | **Agent Continuity** | Agents are persistent collaborators that maintain context across sessions | Checkpoint/resume protocols, structured note-taking, handoff briefs |
 | 8 | **More People Build, Under Guardrails** | Domain experts use agents to solve their own problems, within defined boundaries | LITE tier citizen developers, template-only rule, escalation boundaries |
+| 9 | **Demand Before Surface** *(added 6.3.2, Amendment B)* | Every artifact, surface, template, gate, plugin or pillar must be **daily-touched** by a human or **daily-invoked** by a system within 30 days of shipping | Ship-Useful Principle, Anti-Theater Catalog, the 5-question Demand & Ownership Test — see [Mental Model #9](#mental-model-9-demand-before-surface-new-in-632--amendment-b-2026-06-03-dt) below |
 
 ### Mental Model × Pillar Mapping
 
