@@ -1,0 +1,28 @@
+name: framework-conformance
+
+# The Framework checks itself. Before this workflow existed .github/workflows contained only
+# pages.yml, so every "MUST" in this repo lived in prose with nothing to enforce it — the exact
+# condition Standard #20 names as a "hypocrisy cascade".
+#
+# ⚠️ THIS IS EXPECTED TO BE RED ON ARRIVAL, and that is the point. Seven findings are known and
+# recorded in the PR body before this was armed (baseline first, block second — never block and
+# then discover). Each red line is a 6.6.0 work item; the workflow goes green when 6.6 lands, not
+# by relaxing the check.
+#
+# It is deliberately BLOCKING. A non-blocking conformance gate that prints ::warning:: and lets the
+# job go green is the failure this estate has now found in four separate places, and it is how the
+# cite-existence gate ended up disarmed to `exit 0`.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Framework conforms to its own normative statements
+        run: ./tools/framework-conformance.sh
