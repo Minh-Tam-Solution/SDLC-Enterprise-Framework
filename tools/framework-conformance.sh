@@ -138,7 +138,58 @@ elif [ "$COUNT" -gt 1 ]; then
   grep -rnE '[0-9]+-Pillar|six universal pillars' --include='*.md' --exclude-dir=10-Archive . 2>/dev/null \
     | awk -F: '{print "     " $1 ":" $2}' | sort -u | head -8
 fi
-ok "C5 checked ($N checks run)"
+ok "C5 checked"
+
+# ── C6. A document may be STALE. It may not disagree with ITSELF.
+# Found by the qwen audit, verified verbatim. Convention A (SDLC-Schema-Versioning.md:70) permits a
+# document to carry an older Framework stamp — that is a provenance marker, and mass-migration is
+# explicitly rejected under MM#9. It cannot permit a document to carry TWO DIFFERENT stamps of
+# itself, because then neither is provenance; one of them is simply wrong and no reader can tell
+# which. Examples this catches:
+#   05-Templates-Tools/04-SASE-Artifacts/souls/SOUL-itadmin.md:4 sdlc_framework "6.4.0"
+#                                                          :10 framework "... 6.3.1"
+#     — six lines apart, in the same frontmatter block.
+#   03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md:3 version "6.4.0" vs :425 footer "6.3.1"
+# This is the one version check that stands on its own without adjudicating Convention A, which is
+# why it is gated while the ~99 stale-but-consistent stamps are not.
+N=$((N+1))
+while IFS= read -r f; do
+  vs=$(grep -oE '(sdlc_framework|framework_version|SDLC Enterprise Framework|Framework Version)[": ]*[0-9]+\.[0-9]+\.[0-9]+' "$f" 2>/dev/null \
+       | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | sort -u)
+  n=$(echo "$vs" | grep -c .)
+  [ "$n" -gt 1 ] || continue
+  red "C6 intra-file-version-contradiction: ${f#./} declares its own Framework version $n ways — $(echo "$vs" | tr '\n' ' ')"
+done < <(grep -rlE '(sdlc_framework|framework_version|SDLC Enterprise Framework|Framework Version)[": ]*[0-9]+\.[0-9]+\.[0-9]+' --include='*.md' --exclude-dir=10-Archive . 2>/dev/null | sort)
+ok "C6 checked"
+
+# ── C7. The repository map must point at files that exist — CANONICAL COLUMN ONLY.
+# CONTENT-MAP.md is where a reader is sent to find the canonical document for a topic, so a pointer
+# that does not resolve sends them nowhere. Unlike a stale version stamp there is no reading under
+# which that is acceptable.
+#
+# ⚠️ Narrowed after a precision check, the third time today that check stopped me shipping noise.
+# Scanning every path in the file produced 26 findings, most of them false: the table's THIRD column
+# is a "Moved from `old/path.md`" history field, and those old paths are deliberate provenance.
+# Only column 2 — the canonical location — is a claim about where something lives now.
+N=$((N+1))
+if [ ! -f CONTENT-MAP.md ]; then blind "CONTENT-MAP.md absent"; else
+  while IFS= read -r hit; do
+    ln=${hit%%:*}; row=${hit#*:}
+    path=$(echo "$row" | awk -F'|' '{print $3}' | grep -oE '`[^`]+\.md`' | tr -d '`' | head -1)
+    [ -n "$path" ] || continue
+    # A glob is a pattern, not a location — CONTENT-MAP.md:296 legitimately writes SPEC-0011-*.md.
+    case "$path" in *'*'*) continue;; esac
+    # Archive contents are allowed to have been pruned; the map naming them is history, not a
+    # promise. Only the live tree is being audited.
+    case "$path" in 10-[Aa]rchive/*) continue;; esac
+    # A bare filename with no directory is not a location claim. CONTENT-MAP.md:327-329 belong to a
+    # refactor-history table ("Slim + Extract" / "Slim + Move" / "Rewrite") whose second column names
+    # the file BEFORE the change. Requiring a directory separator removes that table cleanly.
+    case "$path" in */*) ;; *) continue;; esac
+    [ -e "$path" ] || red "C7 map-points-nowhere: CONTENT-MAP.md:$ln names canonical '$path' — no such file"
+  done < <(grep -n '^|' CONTENT-MAP.md 2>/dev/null)
+  ok "C7 checked ($N checks run)"
+fi
 
 echo
 if [ "$BLIND" = 1 ] && [ "$ERR" = 0 ]; then
