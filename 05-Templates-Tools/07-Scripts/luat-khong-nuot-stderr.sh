@@ -14,7 +14,7 @@ if [ "$DIR" = --selftest ]; then
   printf 'ban.sh\t2000-01-01\tthử\n' > "$t/.mien-nuot-stderr"; bash "$0" "$t" >/dev/null; d=$?
   bash "$0" "$t/khong-co" >/dev/null; e=$?
   rm -rf "$t"
-  [ "$a$b$c$d$e" = "02021" ] && { echo "selftest OK"; exit 0; }; echo "selftest HỎNG: $a$b$c$d$e (muốn 02021)"; exit 2
+  [ "$a$b$c$d$e" = "02021" ] && { echo "selftest OK"; exit 0; }; echo "selftest HỎNG: $a$b$c$d$e (muốn 02021)"; exit 1  # selftest hỏng = CỔNG hỏng ⇒ không đo được (1), không phải vi phạm (2)
 fi
 [ -d "$DIR" ] || { echo "KHÔNG ĐO ĐƯỢC: $DIR không tồn tại"; exit 1; }
 hom_nay=$(date +%F); vi_pham=0; mien=0; qua_han=0
