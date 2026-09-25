@@ -8,6 +8,17 @@
 
 ---
 
+## Version 7.0.0-alpha — 2026-09-25 (third generation: v6.x archived, core rewritten)
+
+| Change | Detail |
+|---|---|
+| v6.x archived | 189 live files move to `10-Archive/v6/` unmodified, with legacy notes; target ≤30 live docs |
+| Core rewritten | `v7/00`–`06` + new root README: four assets, three rule classes, tiers by risk of the artefact (not team size), gate contract (exit 0/1/2 + label + selftest), adoption, lessons-to-rules |
+| Doc-count gate | `scripts/check-doc-count.sh` — live docs >40 advisory, >60 blocks |
+| Naming | English only; kebab-case files; verb-first scripts (`check-*`, `rule-*`); each doc ≤150 lines ([CONTRIBUTING](CONTRIBUTING.md#naming--size)) |
+
+---
+
 ## 📚 Version 6.5.0 — Amendment D — July 5, 2026 (ST/DT GATE-ENFORCED) [AF-36]
 
 ### Added (structural cascade)

@@ -1,4 +1,4 @@
-# Contributing to the SDLC 6.3.2 Universal Framework
+# Contributing to the SDLC Enterprise Framework
 
 Thanks for your interest in contributing.
 
@@ -66,6 +66,21 @@ Scope examples: `pillar-4`, `soul-pm`, `template-sprint-plan`, `governance`, `g3
 - **Vendor neutrality** — do not name specific company products in normative content (Pillars 0-7, Sections 8-9). The Framework is implementation-neutral by design. Examples and case studies belong in `06-Case-Studies/` and may be specific
 - **Cite ADRs** — when adding or changing a pattern, link to the originating or governing ADR (in the implementing platform repo if no Framework-side ADR exists yet)
 - **Don't add a comment when a clearer name would do** — prefer self-explanatory section names and headings over explanatory prose
+
+## Naming & size
+
+Each rule below says what it shortens.
+
+| Rule | Shortens |
+|---|---|
+| **English only** in docs, scripts, commit messages | translation and two versions drifting apart |
+| **kebab-case** file names (`02-tiers.md`, `check-doc-count.sh`) | guessing paths |
+| **Verb-first scripts**: `check-*` for gates, `rule-*` for single-rule checks | finding the gate behind a rule |
+| **Each doc ≤150 lines** | docs nobody finishes reading |
+| **A new doc names its consumer** (who reads it, when) in its first two lines | docs written for nobody |
+| **The doc-count gate** ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): live docs outside `10-Archive/` and `templates/` >40 is flagged, >60 blocks | the framework growing back to hundreds of files |
+
+Prefer editing an existing doc over adding one. Prefer a table over prose. Prefer a gate over a paragraph.
 
 ## Review Criteria
 
