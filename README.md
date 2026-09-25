@@ -82,7 +82,7 @@ Tier follows the **risk of what is being built**, not the size of the team build
 
 **How the tier is set:** derived from evidence, not chosen — the **repository** (e.g. a migrations directory, payment or personal-data code paths), the **declared service metadata** (data class, who acts on the output, whether it can be rolled back) and **deployment traces** (production target, scheduled jobs, running services). The tier is the highest of the three. A project may always declare a **higher** tier; declaring a **lower** one requires a recorded decision with an ID.
 
-> *Legacy:* v6.x classified tiers by team size. Replaced 2026-09-25 — a headcount-based tier measures the input, not the consequences.
+> *Legacy:* earlier releases (up to v6.5.0 before 2026-09-25) classified tiers by team size. Replaced 2026-09-25 — a headcount-based tier measures the input, not the consequences.
 
 ---
 

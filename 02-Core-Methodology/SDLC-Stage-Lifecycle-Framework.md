@@ -30,7 +30,7 @@ Tier follows the **risk of what is being built**, not team size — same criteri
 
 Tier is derived from repository evidence, declared service metadata and deployment traces (highest of the three); it may only be declared **up** — lowering it requires a recorded decision with an ID.
 
-> *Legacy:* v6.x classified tiers by team size. Replaced 2026-09-25 — a headcount-based tier measures the input, not the consequences.
+> *Legacy:* earlier releases (up to v6.5.0 before 2026-09-25) classified tiers by team size. Replaced 2026-09-25 — a headcount-based tier measures the input, not the consequences.
 
 ## Stage Enumeration (Single Source — referenced throughout)
 
@@ -896,7 +896,7 @@ Stage 02 (DESIGN) - LITE:
   signoff: CTO approval via Slack (not formal review)
 ```
 
-### PRO Tier
+### PROFESSIONAL Tier
 
 **Required Stages**: 00, 01, 02, 03, 04, 05, 06, 07  
 **Optional Stages**: 08 (if team < 3), 09 (if no compliance)
