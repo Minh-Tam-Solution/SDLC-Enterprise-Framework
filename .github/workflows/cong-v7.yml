@@ -1,0 +1,19 @@
+name: Cổng v7 (đếm — nấc 1)
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  cong-v7:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Nghiệm thu phiên bản (Convention A) — ĐẾM, chưa chặn
+        run: bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh
+      - name: Ca DƯƠNG bắt buộc (G3) — cổng phải ĐỎ được
+        run: |
+          d=$(mktemp -d); cp -r . "$d/fw"; rm -f "$d/fw/README.md"
+          if bash "$d/fw/05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh"; then
+            echo "❌ G3: bỏ README (mất SSOT) mà cổng vẫn XANH — cổng không đo gì cả"; exit 1
+          fi
+          echo "✅ G3: cổng đỏ đúng khi mất SSOT"
