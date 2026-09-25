@@ -404,7 +404,6 @@ Terminal statuses are the **FINAL checkpoint** in the [Long-Running Agent Protoc
 
 ### Related Documents
 - [Planning Mode Principle](./03-Planning-Mode-Principle.md) — when to engage planning mode
-- [Agentic Maturity Model](./14-AGENTIC-MATURITY-MODEL.md) — detailed L0-L3 assessment criteria
 - [Autonomous Codegen Patterns](./11-AUTONOMOUS-CODEGEN-PATTERNS.md) — quality gates for AI-generated code
 - [Multi-Agent Patterns](./12-MULTI-AGENT-PATTERNS.md) — team-based agent collaboration
 - [CLAUDE.md Standard](./10-CLAUDE-MD-STANDARD.md) — project context file standard

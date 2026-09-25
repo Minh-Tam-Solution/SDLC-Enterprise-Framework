@@ -347,7 +347,6 @@ The criteria tables below describe what ST/DT evidence should look like at each 
 
 ### AI Governance (Ring 1)
 - [13-AGENTIC-CORE-PRINCIPLES.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — 7 Agentic Principles, SE4H/SE4A framework
-- [14-AGENTIC-MATURITY-MODEL.md](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0–L3 maturity progression
 
 ### Governance (Ring 2)
 - [04-Governance-Compliance/SDLC-Quality-Gates-Framework.md](../04-Governance-Compliance/SDLC-Quality-Gates-Framework.md) — Full gate framework (G0–G4)

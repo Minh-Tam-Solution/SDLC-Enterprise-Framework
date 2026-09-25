@@ -9,6 +9,12 @@ pillar: "NEW — Agentic OS Patterns"
 source: "Giải phẫu Agentic OS (Lâm Nguyễn, 18 patterns from 513K LOC Claude Code) + SDLC Orchestrator v2 production validation"
 ---
 
+> **⚠️ ARCHIVED (v7, 2026-09-25)**: this file is a validation record for patterns claimed
+> "production-verified" by SDLC Orchestrator v2, which has been retired (0 requests over the
+> last 33 days). No pattern here ships with a runnable check, and several (Context Defense,
+> Memory System, Fork Isolation, Escalating Recovery) are now provided natively by mainstream
+> AI coding CLIs. See `10-Archive/by-topic/ai-governance-v7-retired/`.
+
 # Agentic OS Patterns — Production-Verified Architecture Standards
 
 > NEW in Framework 6.3.0. 12 of 18 patterns validated in production by SDLC Orchestrator v2 (Sprint 9-16, 352 tests).

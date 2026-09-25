@@ -641,7 +641,6 @@ Reference: `Bflow-Platform/docs/00-foundation/01-vision/nqh-technology-ecosystem
 **NEW in 6.1.0**:
 - Multi-Agent Patterns: [07-Implementation-Guides/MULTI-AGENT-PATTERNS.md](07-Implementation-Guides/MULTI-AGENT-PATTERNS.md)
 - Agentic Core Principles (moved): [03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md](03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
-- Agentic Maturity Model (moved): [03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md](03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md)
 - System Thinking: [02-Core-Methodology/SDLC-System-Thinking-Foundation.md](02-Core-Methodology/SDLC-System-Thinking-Foundation.md)
 - Crisis-to-Pattern: [02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md](02-Core-Methodology/SDLC-Crisis-To-Pattern-Methodology.md)
 - Design Thinking Templates: [05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md](05-Templates-Tools/06-Manual-Templates/SDLC-Design-Thinking-Templates.md)

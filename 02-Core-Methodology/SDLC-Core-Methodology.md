@@ -769,7 +769,6 @@ Quality Assurance Standards (5.3.0):
 
 ### AI Governance (Ring 1 — timeless principles)
 - [13-AGENTIC-CORE-PRINCIPLES.md](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE/SE 3.0, 7 Agentic Principles
-- [14-AGENTIC-MATURITY-MODEL.md](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
 - [16-LONG-RUNNING-AGENT-PROTOCOL.md](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) — Checkpoint/resume/handoff (NEW 6.3.0)
 
 ### Implementation Patterns (Ring 2 — moved in 6.3.0)

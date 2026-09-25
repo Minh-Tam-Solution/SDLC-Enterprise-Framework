@@ -44,6 +44,7 @@ Two top-level axes — **by version** for time-bound snapshots, **by topic** for
 │   └── v6.2.0/          # Pre-consolidation snapshot
 │
 └── by-topic/            # Per-topic consolidations (atemporal)
+    ├── ai-governance-v7-retired/   # v7 (Sep 2026): retired AI-governance docs + dead gates.yaml/anti-vibecoding.yaml
     ├── ai-tools-templates/         # Sprint 173 AI prompt templates (frozen)
     ├── code-review-consolidation/  # Sprint 173 code-review framework rollup
     ├── coderabbit-pilot-2025/      # CodeRabbit Oct 2025 pilot artifacts
@@ -59,6 +60,10 @@ Two top-level axes — **by version** for time-bound snapshots, **by topic** for
     ├── sprint-117-poc/             # Sprint 117 spec-first POC
     └── tool-guides-2026/           # Per-tool guides (Claude Code, Cursor, Copilot, ChatGPT, Gemini)
 ```
+
+A third top-level location, **`scripts/`** (flat, not axis-organized), holds individually
+retired automation scripts that don't belong to a version snapshot or a topic body of work —
+see `scripts/` for the v7 (Sep 2026) additions.
 
 See [INDEX.md](INDEX.md) for the full file catalog.
 

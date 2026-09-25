@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# ARCHIVED (v7, 2026-09-25): this "backward-compatibility wrapper" fails on every execution
+# path — it crashes with no arguments (logger.info() called with no message, a real Python
+# bug) and, with arguments, calls a source file by the wrong name (sdlc_validator.py; the
+# actual file is compliance_sdlc_validator.py), always exiting silently with code 2. No CI or
+# script in this repo calls it; the repo's own README already recommends
+# compliance_sdlc_validator.py directly instead. See 10-Archive/scripts/.
 import logging
 logger = logging.getLogger(__name__)
 

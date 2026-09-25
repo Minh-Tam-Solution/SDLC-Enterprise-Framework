@@ -1,7 +1,9 @@
 # 10-Archive: Full File Catalog
 
-**Generated**: 2026-04-28 (post-reorganization)
-**Total files**: 425 (246 in `by-version/`, 176 in `by-topic/`, plus README + INDEX)
+**Generated**: 2026-04-28 (post-reorganization); `by-topic/ai-governance-v7-retired/` and
+`scripts/` added 2026-09-25 (v7 archive lot 1) — counts below updated for those, the rest of
+this file is otherwise unchanged from the 2026-04-28 generation.
+**Total files**: 436 (246 in `by-version/`, 185 in `by-topic/`, 2 in `scripts/`, plus README + INDEX)
 
 ---
 
@@ -42,6 +44,7 @@ Each subdirectory holds a body of work on a specific topic that has been depreca
 
 | Topic | Files | What it contains |
 |-------|------:|------------------|
+| `ai-governance-v7-retired/` | 9 | v7 (Sep 2026): 7 `03-AI-GOVERNANCE/` docs tied to the retired SDLC-Orchestrator/EndiorBot/Vibecoding-Index, plus `gates.yaml` + `anti-vibecoding.yaml` (never read by any script, 7 months stale) |
 | `ai-tools-templates/` | 36 | Sprint 173 AI prompt templates (frozen — superseded by Section 8 Unified Specification Standard) |
 | `code-review-consolidation/` | 4 | Sprint 173 code-review framework rollup (Universal + Manual + Subscription-Powered playbooks) |
 | `coderabbit-pilot-2025/` | 17 | CodeRabbit Oct 2025 pilot artifacts |
@@ -57,7 +60,12 @@ Each subdirectory holds a body of work on a specific topic that has been depreca
 | `sprint-117-poc/` | 1 | Sprint 117 spec-first POC validation report |
 | `tool-guides-2026/` | 15 | Per-tool guides (Claude Code, Cursor, Copilot, ChatGPT, Gemini) — superseded by 04-AI-TOOLS-LANDSCAPE/tool-profiles/ |
 
-**Total in by-topic/**: 176 files across 14 topic subdirectories.
+**Total in by-topic/**: 185 files across 15 topic subdirectories.
+
+A separate top-level `scripts/` location (flat, not axis-organized) holds 2 more files added in
+v7 (Sep 2026): `compliance_sdlc_scanner.py` (broken on every execution path) and
+`migrate-legacy-to-archive.sh` (targets a directory scheme this same README retired
+2026-04-28).
 
 ---
 

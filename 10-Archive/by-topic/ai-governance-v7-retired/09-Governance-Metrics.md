@@ -1,7 +1,13 @@
 # Governance Metrics & KPIs
 
+> **⚠️ ARCHIVED (v7, 2026-09-25)**: KPIs defined on the state machine of a governance engine
+> that has been retired, plus the now-dropped Vibecoding Index. None of the roughly 60 figures
+> in this file ship with a reproducible command or sample size. The current governance metric
+> set is the 6 indicators derived from v7's git/CI trail. See
+> `10-Archive/by-topic/ai-governance-v7-retired/`.
+
 **Version**: 6.3.1
-**Status**: ACTIVE
+**Status**: ARCHIVED (v7)
 **Date**: February 15, 2026
 **Pillar**: Core AI Governance
 **Purpose**: Measurable KPIs for governance effectiveness across all tiers
