@@ -236,12 +236,13 @@ Validation adapts based on project tier:
 
 ## Luật v7
 
-> Hợp đồng Luật v7 §1 — luật = `lop` + `lenh` + `ca_dot`. Mã thoát của `lenh` (plan §6.22 A): `0` đạt · `1` không đo được · `2` vi phạm · `≥3` dành riêng.
+> Hợp đồng Luật v7 §1 — luật = `lop` + `lenh` + `ca_dot` (+ `pham_vi_chay`, thiếu = `FRAMEWORK_REPO`). Mã thoát của `lenh` (plan §6.22 A): `0` đạt · `1` không đo được · `2` vi phạm · `≥3` dành riêng.
+> Dòng cuối stdout của `lenh` = nhãn `result=pass|insufficient_evidence|violation gate=<id> reason=<slug> [fix=…]`, khớp mã thoát; lệch ⇒ `khai_sai`, thiếu ⇒ đếm `thieu_nhan`.
 > `lenh` phải là script của ta (`bash`/`python3` + đường dẫn trong repo) — công cụ ngoài tự đặt nghĩa cho mã `1`. Cấm `exit $?`.
-> Cổng: `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` (lô 1: `--pham-vi 03-AI-GOVERNANCE`).
+> Cổng: `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` (lô 1: `--pham-vi 03-AI-GOVERNANCE`; lọc nơi chạy: `--pham-vi-chay FRAMEWORK_REPO|PRODUCT_CI|RUNTIME_PROBE`). `--chan`: `2` nếu vi phạm/khai sai · `1` nếu chỉ có không đo được · `0`.
 
-| id | lop | lenh | ca_dot |
-|---|---|---|---|
-| L2 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-khong-nuot-stderr.sh` | 24/09: `2>/dev/null` nuốt `ModuleNotFoundError`, cổng in "README lệch YAML" — sai nguyên nhân, hai người đi sửa nhầm thứ. Miễn trừ: `.mien-nuot-stderr` kèm hạn. |
-| L3 | MACHINE | `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh --l3` | 24/09: cổng chống trùng tài liệu so tên file, xanh 100% khi việc chưa xong — chưa ai từng làm nó đỏ. Mọi script trong cột `lenh` phải có `--selftest` (ca đỏ + ca xanh) và phải qua. |
-| L4 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-git-grep-khong-b.sh` | 25/09: `git grep -E '\bMUST\b'` khớp 0 và trả thành công — ra "không còn chỗ ghi 8" rồi "5 câu MUST" (thật hàng trăm). Dùng `-w`/`-P` kèm ca dương. |
+| id | lop | lenh | ca_dot | pham_vi_chay |
+|---|---|---|---|---|
+| L2 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-khong-nuot-stderr.sh` | 24/09: `2>/dev/null` nuốt `ModuleNotFoundError`, cổng in "README lệch YAML" — sai nguyên nhân, hai người đi sửa nhầm thứ. Miễn trừ: `.mien-nuot-stderr` kèm hạn. | FRAMEWORK_REPO |
+| L3 | MACHINE | `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh --l3` | 24/09: cổng chống trùng tài liệu so tên file, xanh 100% khi việc chưa xong — chưa ai từng làm nó đỏ. Mọi script trong cột `lenh` phải có `--selftest` (ca đỏ + ca xanh) và phải qua. | FRAMEWORK_REPO |
+| L4 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-git-grep-khong-b.sh` | 25/09: `git grep -E '\bMUST\b'` khớp 0 và trả thành công — ra "không còn chỗ ghi 8" rồi "5 câu MUST" (thật hàng trăm). Dùng `-w`/`-P` kèm ca dương. | FRAMEWORK_REPO |

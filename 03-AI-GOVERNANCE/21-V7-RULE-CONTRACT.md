@@ -32,6 +32,16 @@ Mọi luật trong khung phải khai **ba** thứ; thiếu một là tham khảo
 | `lenh` | lệnh chạy được, trả mã thoát |
 | `ca_dot` | ca thật đã trả giá — vì sao luật này tồn tại |
 
+**Cột thứ 5 `pham_vi_chay`** — `lenh` chạy được ở đâu: `FRAMEWORK_REPO` (gốc repo khung) · `PRODUCT_CI` (CI của repo áp dụng khung) · `RUNTIME_PROBE` (máy đang chạy dịch vụ). Runner chỉ chạy dòng khớp `--pham-vi-chay` (mặc định `FRAMEWORK_REPO`), **lọc trước khi chạy** — lệnh cần env của nơi khác chạy ở đây là đỏ oan. Cột/ô thiếu = `FRAMEWORK_REPO`, **chỉ đếm, không đỏ** (bảng 4 cột hiện có vẫn hợp lệ — §4 quỹ đạo). Giá trị ngoài ba giá trị trên ⇒ `khai_sai`. Header bảng phải là đúng tên cột theo thứ tự `id | lop | lenh | ca_dot [| pham_vi_chay]`; sai ⇒ `khai_sai`.
+
+**Dòng nhãn** — dòng cuối **stdout** của `lenh`:
+
+```
+result=pass|insufficient_evidence|violation gate=<id> reason=<slug> [fix=<phần còn lại dòng>]
+```
+
+Khớp mã thoát: `pass ↔ 0` · `insufficient_evidence ↔ 1` · `violation ↔ 2`. `reason` là slug không dấu cách; `fix=` nếu có là trường **cuối**, lấy hết phần còn lại của dòng (được chứa dấu cách). Nhãn không khớp mã hoặc sai cú pháp ⇒ runner đếm `khai_sai`. Thiếu nhãn ⇒ runner xếp theo mã thoát và đếm `thieu_nhan` (chỉ đếm). Lý do đọc từ dòng cuối **stderr**.
+
 Không có `lenh` ⇒ **xuống mục tham khảo**, không nằm trong danh sách luật. Đây không phải hạ cấp giá trị: tài liệu tham khảo vẫn hữu ích. Nó chỉ thôi được **giả vờ là cổng**.
 
 ---
