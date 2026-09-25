@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Luật 2 (G2): cấm nuốt stderr trong 07-Scripts/. Cần thật ⇒ khai .mien-nuot-stderr kèm HẠN.
+# Luật 2 (G2): cấm nuốt stderr trong scripts/. Cần thật ⇒ khai .mien-nuot-stderr kèm HẠN.
 #   Vì sao: `find … 2>/dev/null | wc -l` gặp lỗi quyền ⇒ ra 0 ⇒ script coi là "rỗng" và ra quyết định.
 #   Ca đốt 24/09: `2>/dev/null` nuốt ModuleNotFoundError, cổng in "README lệch YAML" — sai nguyên nhân.
 # .mien-nuot-stderr, mỗi dòng:  duong/dan<TAB>YYYY-MM-DD(hết hạn)<TAB>lý do
 # Mã thoát (plan §6.22 A): 0 đạt · 1 không đo được · 2 vi phạm (kể cả miễn trừ quá hạn).
 set -u
-DIR=${1:-05-Templates-Tools/07-Scripts}
+DIR=${1:-scripts}
 if [ "$DIR" = --selftest ]; then
   t=$(mktemp -d); s=$(basename "$0")
   printf '#!/bin/sh\nls x\n' > "$t/sach.sh"; bash "$0" "$t" >/dev/null; a=$?

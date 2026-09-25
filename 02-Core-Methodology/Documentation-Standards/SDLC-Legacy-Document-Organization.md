@@ -185,7 +185,7 @@ cd docs/
 ../../scripts/migrate-legacy-to-archive.sh .
 ```
 
-**Location**: `05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh`
+**Location**: `scripts/migrate-legacy-to-archive.sh` (moved from `05-Templates-Tools/07-Scripts/`, F4 2026-09-25)
 
 ---
 
@@ -298,7 +298,7 @@ A: No. Content in 10-archive/ is already archived. If you need to reference it f
 
 - **Policy**: [DEPRECATION-POLICY.md](../../../DEPRECATION-POLICY.md)
 - **Content Map**: [CONTENT-MAP.md](../../../CONTENT-MAP.md)
-- **Migration Script**: [migrate-legacy-to-archive.sh](../07-Scripts/migrate-legacy-to-archive.sh)
+- **Migration Script**: [migrate-legacy-to-archive.sh](../../scripts/migrate-legacy-to-archive.sh)
 - **CI Enforcement**: `rfc001-legacy-check.yml` (GitHub Actions)
 - **Command**: SDLC CLI validate --stage 10-archive
 

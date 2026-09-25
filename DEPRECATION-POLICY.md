@@ -233,7 +233,7 @@ Key rules:
 - **RULE-003 (RECOMMENDED)**: Create `10-archive/README.md` with `AI-NEVER-READ` directive
 - **RULE-004 (RECOMMENDED)**: Use `migrate-legacy-to-archive.sh` script for migration
 
-Migration script available in: [05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh](../05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh)
+Migration script available in: [scripts/migrate-legacy-to-archive.sh](scripts/migrate-legacy-to-archive.sh)
 
 **Validation**: BFlow Platform metrics (3 live customers):
 - Docs size: 211 MB → 91 MB (57% reduction)

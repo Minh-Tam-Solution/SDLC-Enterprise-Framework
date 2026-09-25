@@ -353,7 +353,7 @@ SDLC-Enterprise-Framework/
 │   ├── 04-SASE-Artifacts/        # CRP, MRP, VCR, AGENTS.md, souls/, teams/
 │   ├── 05-Checklists/            # Stage transition + compliance
 │   ├── 06-Manual-Templates/      # Design Thinking + API templates
-│   ├── 07-Scripts/               # Validation scripts
+├── scripts/                       # Validation scripts (moved from 05-Templates-Tools/07-Scripts/, F4 2026-09-25)
 │   └── 08-Project-Templates/     # Planning hierarchy templates
 ├── 06-Case-Studies/              # BFlow, MTEP, NQH-Bot examples (Ring 2)
 ├── 07-Implementation-Guides/     # Rollout guides (Ring 3)

@@ -548,7 +548,7 @@ Result: Team knows methodology + productivity tools
 ### Secondary
 
 - **Agent Templates**: [/03-Agent-Templates/](../03-Agent-Templates/)
-- **Scripts**: [/07-Scripts/](../07-Scripts/)
+- **Scripts**: [/scripts/](../../scripts/)
 
 ### Reference
 

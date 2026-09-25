@@ -186,7 +186,7 @@ Location: [05-Templates-Tools/04-SASE-Artifacts/](../05-Templates-Tools/04-SASE-
 
 ### Automation Scripts
 
-Location: [05-Templates-Tools/07-Scripts/](../05-Templates-Tools/07-Scripts/)
+Location: [scripts/](../scripts/) (moved from `05-Templates-Tools/07-Scripts/`, F4 2026-09-25)
 
 | Script | Purpose |
 |--------|---------|

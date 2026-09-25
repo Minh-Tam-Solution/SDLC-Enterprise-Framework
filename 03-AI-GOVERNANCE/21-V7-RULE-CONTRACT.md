@@ -28,21 +28,23 @@ Mọi luật trong khung phải khai **ba** thứ; thiếu một là tham khảo
 
 | Trường | Nội dung |
 |---|---|
-| `lop` | `MACHINE` · `REVIEW` · `ADVISORY` |
-| `lenh` | lệnh chạy được, trả mã thoát |
-| `ca_dot` | ca thật đã trả giá — vì sao luật này tồn tại |
+| `class` | `MACHINE` · `REVIEW` · `ADVISORY` |
+| `cmd` | lệnh chạy được, trả mã thoát |
+| `burn_case` | ca thật đã trả giá — vì sao luật này tồn tại |
 
-**Cột thứ 5 `pham_vi_chay`** — `lenh` chạy được ở đâu: `FRAMEWORK_REPO` (gốc repo khung) · `PRODUCT_CI` (CI của repo áp dụng khung) · `RUNTIME_PROBE` (máy đang chạy dịch vụ). Runner chỉ chạy dòng khớp `--pham-vi-chay` (mặc định `FRAMEWORK_REPO`), **lọc trước khi chạy** — lệnh cần env của nơi khác chạy ở đây là đỏ oan. Cột/ô thiếu = `FRAMEWORK_REPO`, **chỉ đếm, không đỏ** (bảng 4 cột hiện có vẫn hợp lệ — §4 quỹ đạo). Giá trị ngoài ba giá trị trên ⇒ `khai_sai`. Header bảng phải là đúng tên cột theo thứ tự `id | lop | lenh | ca_dot [| pham_vi_chay]`; sai ⇒ `khai_sai`.
+**Cột thứ 5 `run_scope`** — `cmd` chạy được ở đâu: `FRAMEWORK_REPO` (gốc repo khung) · `PRODUCT_CI` (CI của repo áp dụng khung) · `RUNTIME_PROBE` (máy đang chạy dịch vụ). Runner chỉ chạy dòng khớp `--run-scope` (mặc định `FRAMEWORK_REPO`), **lọc trước khi chạy** — lệnh cần env của nơi khác chạy ở đây là đỏ oan. Cột/ô thiếu = `FRAMEWORK_REPO`, **chỉ đếm, không đỏ** (bảng 4 cột hiện có vẫn hợp lệ — §4 quỹ đạo). Giá trị ngoài ba giá trị trên ⇒ `misdeclared`. Header bảng phải là đúng tên cột theo thứ tự `id | class | cmd | burn_case [| run_scope]`; sai ⇒ `misdeclared`.
 
-**Dòng nhãn** — dòng cuối **stdout** của `lenh`:
+> **Đổi tên cột (F4, 2026-09-25, CEO ratified)**: `lop→class` · `lenh→cmd` · `ca_dot→burn_case` · `pham_vi_chay→run_scope`; tiêu đề mục `## Luật v7` → `## Rules v7`. Header **cũ** (`id|lop|lenh|ca_dot[|pham_vi_chay]`, heading `## Luật v7`) vẫn được runner chấp nhận, kèm cảnh báo deprecation ra stderr, tới **2026-12-31**. Giá trị của `class` (MACHINE/REVIEW/ADVISORY) và `run_scope` (FRAMEWORK_REPO/PRODUCT_CI/RUNTIME_PROBE) **không đổi**. Bảng luật thật không còn nằm rải rác trong nhiều tài liệu — nó chuyển về **một** file: [`v7/01-rule-contract.md`](../v7/01-rule-contract.md) (F1). Script sống ở `scripts/` (trước đây `05-Templates-Tools/07-Scripts/`, 2 shim deprecated còn lại ở đường cũ tới 2026-12-31).
+
+**Dòng nhãn** — dòng cuối **stdout** của `cmd`:
 
 ```
 result=pass|insufficient_evidence|violation gate=<id> reason=<slug> [fix=<phần còn lại dòng>]
 ```
 
-Khớp mã thoát: `pass ↔ 0` · `insufficient_evidence ↔ 1` · `violation ↔ 2`. `reason` là slug không dấu cách; `fix=` nếu có là trường **cuối**, lấy hết phần còn lại của dòng (được chứa dấu cách). Nhãn không khớp mã hoặc sai cú pháp ⇒ runner đếm `khai_sai`. Thiếu nhãn ⇒ runner xếp theo mã thoát và đếm `thieu_nhan` (chỉ đếm). Lý do đọc từ dòng cuối **stderr**.
+Khớp mã thoát: `pass ↔ 0` · `insufficient_evidence ↔ 1` · `violation ↔ 2`. `reason` là slug không dấu cách; `fix=` nếu có là trường **cuối**, lấy hết phần còn lại của dòng (được chứa dấu cách). Nhãn không khớp mã hoặc sai cú pháp ⇒ runner đếm `misdeclared`. Thiếu nhãn ⇒ runner xếp theo mã thoát và đếm `missing_label` (chỉ đếm). Lý do đọc từ dòng cuối **stderr**. `cmd` chạy bằng cách tách argv (không qua `bash -c`) — chứa `;` `|` `&&` backtick hoặc `$(` ⇒ `misdeclared` (chặn chèn lệnh) thay vì được diễn giải lại.
 
-Không có `lenh` ⇒ **xuống mục tham khảo**, không nằm trong danh sách luật. Đây không phải hạ cấp giá trị: tài liệu tham khảo vẫn hữu ích. Nó chỉ thôi được **giả vờ là cổng**.
+Không có `cmd` ⇒ **xuống mục tham khảo**, không nằm trong danh sách luật. Đây không phải hạ cấp giá trị: tài liệu tham khảo vẫn hữu ích. Nó chỉ thôi được **giả vờ là cổng**.
 
 ---
 
@@ -100,7 +102,7 @@ Cổng bật lúc đang có nhiều vi phạm ⇒ CI đỏ ngày đầu ⇒ **b�
 
 Mỗi file sống đi **một trong ba** đường. **Không có đường thứ tư là "viết lại cho v7".**
 
-1. **Luật** — có `lop` + `lenh` + `ca_dot` ⇒ vào danh sách luật v7
+1. **Luật** — có `class` + `cmd` + `burn_case` ⇒ vào danh sách luật v7
 2. **Tham khảo** — nội dung đúng, không có lệnh ⇒ giữ, thôi giả vờ là cổng
 3. **`10-Archive/`** — hết hiệu lực
 
@@ -110,7 +112,7 @@ Mỗi file sống đi **một trong ba** đường. **Không có đường thứ
 
 ## §6 — Cổng `MACHINE` đầu tiên và con số khởi điểm
 
-`05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh` — *"tài liệu này đã được nghiệm với phiên bản khung nào?"*
+`scripts/check-version-declared.sh` — *"tài liệu này đã được nghiệm với phiên bản khung nào?"* *(trước đây `05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh` — F4, 2026-09-25, shim deprecated còn ở đường cũ tới 2026-12-31)*
 
 Nó kiểm trường `sdlc_framework` / `**SDLC Framework Version**` theo **Convention A**, **không** kiểm `**Version**` *(semver riêng của tài liệu — được phép và NÊN khác)*. Khai bản **cũ hơn** SSOT **không phải lỗi**; chỉ đếm.
 
@@ -118,7 +120,7 @@ Nó kiểm trường `sdlc_framework` / `**SDLC Framework Version**` theo **Conv
 
 ```
 ty_le = khong_khai / (tong − mien)
-bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh      # lấy số tại thời điểm đọc
+bash scripts/check-version-declared.sh      # lấy số tại thời điểm đọc
 ```
 
 > Lần đo đầu, 25/09/2026: **82%** file sống chưa từng ghi nhận được nghiệm với phiên bản khung nào. Đó là điểm khởi đầu thật của v7 — không phải "khung thiếu nội dung", mà **khung không biết phần nào của nó còn đúng**.
@@ -129,6 +131,6 @@ bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh      # lấy số t�
 |---|---|---|
 | 1 `ADVISORY` | — | **hiện tại**: đếm, không chặn |
 | 2 `REVIEW` | `ty_le < 20%` | gắn cờ, không chặn |
-| 3 `MACHINE` | `ty_le < 5%` trong **2 tuần liên tiếp** | chặn thật (`--chan` ⇒ mã `2`; mất SSOT / quét 0 file ⇒ `1`) |
+| 3 `MACHINE` | `ty_le < 5%` trong **2 tuần liên tiếp** | chặn thật (`--block` ⇒ mã `2`; mất SSOT / quét 0 file ⇒ `1`; cờ cũ `--chan` vẫn nhận, deprecated tới 2026-12-31) |
 
 *Ghi lại một lỗi trong lúc dựng chính cổng này, làm ca đốt cho G3: bản đầu đo trường `**Version**` và báo "89 file lệch". **Sai** — `**Version**` được phép khác theo Convention A. Cổng chỉ lộ ra là sai vì **đã chạy nó**, rồi đọc luật của khung trước khi tin kết quả. Bản đầu đã bỏ.*
