@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Rules v7 Contract gate (§1). Reads ONE canonical table: v7/01-rule-contract.md (owned by F1).
+# Rules v7 Contract gate (§1). Reads ONE canonical table: v7/01-rule-contract.md.
 #   FILE section = routing unit · LINE = enforcement unit. A "## Rules v7" section in that file
 #   holds the live rules table; anything else in the file is reference (no cmd column value).
 #   Table header MUST be |id|class|cmd|burn_case|[run_scope|] — wrong name/order ⇒ misdeclared.
@@ -9,7 +9,7 @@
 #   COUNT ONLY (missing_scope_column). Only rows whose run_scope = --run-scope run (default
 #   FRAMEWORK_REPO) — filtered BEFORE running, so a cmd needing another env doesn't fail here for
 #   the wrong reason; the rest count as other_scope.
-#   Run cmd at repo root. Exit code convention (plan §6.22 A):
+#   Run cmd at repo root. Exit code convention (v7/01 §1):
 #     0 PASS · 1 UNMEASURABLE · 2 VIOLATION · ≥3 reserved (⇒ unmeasurable)
 #   1 is the default exit of anything broken (exception, set -e, grep miss) ⇒ it must fall into the
 #   honest bucket; "violation" only when the script runs to completion and deliberately returns 2.

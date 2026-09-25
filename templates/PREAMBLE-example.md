@@ -1,7 +1,8 @@
 # PREAMBLE (example): shared by every hat
 
 <!-- Template. Loaded with every hat, so it costs tokens on every turn: keep it under 40 lines.
-     Project facts (stack, commands, owners) belong in AGENTS.md, not here. See v7/04-context-and-hats.md. -->
+     Project facts (stack, commands, owners) belong in AGENTS.md, not here. See v7/04-context-and-hats.md.
+     Written for sdlc_framework: 7.0.0 -->
 
 ## Roles
 A human owns every change that ships. Agents execute inside gates and hand back evidence. No agent approves its own work, and no hat approves a gate.

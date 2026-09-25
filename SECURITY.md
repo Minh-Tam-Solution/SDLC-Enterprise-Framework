@@ -13,7 +13,7 @@ This policy covers:
 
 This policy does **not** cover:
 
-- Security of platforms that *implement* the Framework (e.g., SDLC Orchestrator, third-party tools) — those have their own security policies
+- Security of platforms that *implement* the Framework (e.g., orchestration platforms, third-party tools) — those have their own security policies
 - Security of contributor tooling (Git, editors, CI providers)
 
 ## Supported Versions
@@ -54,7 +54,7 @@ The Framework applies the following controls to protect governance pattern integ
 
 - **Gate semantics protected** — Changes to G0-G4 gate definitions, Pillar 4 quality criteria, or Section 7 anti-vibecoding rules require ADR + maintainer review
 - **SOUL conventions protected** — Changes to SOUL frontmatter or scaffolding patterns require contributor sign-off + maintainer review
-- **Template provenance** — All templates in `05-Templates-Tools/` carry a header citing originating ADR or sprint
+- **Template provenance** — Templates in `templates/` point to the v7 doc they implement
 - **Cross-reference audit** — Internal links checked at release; broken links surfaced before tagging
 
 ## Document Supply Chain
@@ -65,7 +65,7 @@ The Framework applies the following controls to protect governance pattern integ
 
 ## Sensitive Data Hygiene
 
-The Framework is intentionally **vendor-neutral** — internal company names, tenant identifiers, or product brand names of any specific implementer must not appear in normative content (`01-Overview/` through `09-Continuous-Improvement/`). The `06-Case-Studies/` and `10-Archive/` directories may contain historical references for context.
+The Framework is intentionally **vendor-neutral** — internal company names, tenant identifiers, or product brand names of any specific implementer must not appear in normative content (`v7/`, `templates/`, `scripts/`). `10-Archive/` may contain historical references for context.
 
 If you find sensitive data leakage in normative content, please report via the email channel above — this is treated as a critical issue.
 

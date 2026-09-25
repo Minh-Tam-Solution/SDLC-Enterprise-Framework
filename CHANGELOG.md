@@ -90,7 +90,7 @@ Projected +31 per RFC-002 §3.3; actual verified post-edit.
 **Amendment Date**: June 3, 2026
 **Type**: PATCH version bump (6.3.1 → 6.3.2) — additive operating principle + inward reclassification (no breaking changes to existing pillars/sections)
 **Status**: ACTIVE
-**[DT] External-adopter mark**: Validated **inward** at NQH/MTS via the Amendment B inward-application catalog (see split-out file [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md)). **External-adopter value is NOT yet validated** — NQH dogfood-first per the first-customer principle. External adopters should evaluate fit against their own surface inventory before applying; the principle remains additive (no deletion of existing surfaces) so adoption is reversible.
+**[DT] External-adopter mark**: Validated **inward** at NQH/MTS via the Amendment B inward-application catalog (see split-out file 09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md). **External-adopter value is NOT yet validated** — NQH dogfood-first per the first-customer principle. External adopters should evaluate fit against their own surface inventory before applying; the principle remains additive (no deletion of existing surfaces) so adoption is reversible.
 **Driver**: CEO Directive 2026-06-02 "Capability Uplift v4 Reframe" (kill 12-week capability program; adopt Constraint-First + Portfolio Prune; ship usable features frequently instead of accreting unused surface) + CTO honest reframe 2026-06-02 (SDLC-Orch internal role = 2 daily-use surfaces only) + CEO ship-discipline mandate 2026-06-03 (*"we must be very disciplined: ship usable features often, instead of building a lot that is useless"*)
 
 ### What Changed
@@ -99,13 +99,13 @@ Projected +31 per RFC-002 §3.3; actual verified post-edit.
 
 | New / Updated | Location | Purpose |
 |---------------|----------|---------|
-| **Mental Model #9 — Demand Before Surface** [DT] | [02-Core-Methodology/SDLC-System-Thinking-Foundation.md](02-Core-Methodology/SDLC-System-Thinking-Foundation.md#mental-model-9-demand-before-surface-new-in-632--amendment-b-2026-06-03-dt) | Every surface must name daily-user/daily-job OR be marked ON-DEMAND. Brings the Mental Model count from 8 → **9**. |
-| **Ship-Useful Principle (Constraint-First / Anti-Theater)** [DT] | [02-Core-Methodology/SDLC-Ship-Useful-Principle.md](02-Core-Methodology/SDLC-Ship-Useful-Principle.md) | NEW doc — codifies the operating discipline: 3-Question Demand Test, Constraint-First weekly ritual, Anti-Theater Catalog (9 smells), ON-DEMAND marker pattern. |
-| **Document Version Convention (Convention A)** | [02-Core-Methodology/SDLC-Schema-Versioning.md](02-Core-Methodology/SDLC-Schema-Versioning.md#document-version-convention-convention-a--formalized-amendment-b-2026-06-03) | NEW section — formalizes per-doc `**Version**:` semver vs `sdlc_framework:` alignment-version as INDEPENDENT markers that may differ honestly. Rejects Convention B (blanket-bump on Framework patch) as self-violating MM#9. Resolves the "Version 6.3.1 + SDLC-Framework 6.3.0" mismatch pattern. **Implication**: Framework docs are NOT mass-bumped on each patch; only docs substantively edited get version markers updated. Honest staleness > inflated freshness. |
+| **Mental Model #9 — Demand Before Surface** [DT] | 02-Core-Methodology/SDLC-System-Thinking-Foundation.md | Every surface must name daily-user/daily-job OR be marked ON-DEMAND. Brings the Mental Model count from 8 → **9**. |
+| **Ship-Useful Principle (Constraint-First / Anti-Theater)** [DT] | 02-Core-Methodology/SDLC-Ship-Useful-Principle.md | NEW doc — codifies the operating discipline: 3-Question Demand Test, Constraint-First weekly ritual, Anti-Theater Catalog (9 smells), ON-DEMAND marker pattern. |
+| **Document Version Convention (Convention A)** | 02-Core-Methodology/SDLC-Schema-Versioning.md | NEW section — formalizes per-doc `**Version**:` semver vs `sdlc_framework:` alignment-version as INDEPENDENT markers that may differ honestly. Rejects Convention B (blanket-bump on Framework patch) as self-violating MM#9. Resolves the "Version 6.3.1 + SDLC-Framework 6.3.0" mismatch pattern. **Implication**: Framework docs are NOT mass-bumped on each patch; only docs substantively edited get version markers updated. Honest staleness > inflated freshness. |
 
 **Inward reclassification catalog** — split out to its own file (was inline here; moved to keep CHANGELOG focused on normative additions and to make the NQH-inward boundary explicit for external adopters):
 
-→ See [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md) for the full NQH/MTS inward catalog (Pillar 3 tiers, Section 7 Vibecoding Index, Pillar 7 plugin commercial surfaces, 18 SOULs, 10 TEAM charters, Module 14 compression). The catalog is **NQH-inward only** — it is NOT a normative downgrade for other 6.3.2 adopters. Other tenants apply MM#9 to their own surface inventory.
+→ See 09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md for the full NQH/MTS inward catalog (Pillar 3 tiers, Section 7 Vibecoding Index, Pillar 7 plugin commercial surfaces, 18 SOULs, 10 TEAM charters, Module 14 compression). The catalog is **NQH-inward only** — it is NOT a normative downgrade for other 6.3.2 adopters. Other tenants apply MM#9 to their own surface inventory.
 
 The Vibecoding Index row in that catalog uses status **PENDING-EFFICACY-AUDIT** (renamed from prior "PENDING-EFFICACY-REVIEW" to make the audit obligation explicit and avoid drift with the generic "review" verb).
 
@@ -186,7 +186,7 @@ Replaced with **two-axis structure**:
 - **`10-Archive/by-version/`** — 18 per-version snapshots (`v1.x` through `v6.2.0`) for "what did this version actually ship" forensics. 246 files.
 - **`10-Archive/by-topic/`** — 14 per-topic consolidations for "what was the old approach to X" forensics. 176 files.
 
-Plus new top-level [`10-Archive/README.md`](10-Archive/README.md) and [`10-Archive/INDEX.md`](10-Archive/INDEX.md) — full file catalog with version-by-version era notes.
+Plus new top-level `10-Archive/README.md` and `10-Archive/INDEX.md` — full file catalog with version-by-version era notes.
 
 **Files moved**: 422 (preserved with `git mv` — full history retained per file).
 
@@ -1452,16 +1452,16 @@ critical_paths:
 ### 🔍 Related Documents
 
 **New in 5.3.0**:
-- [SDLC-Stage-Lifecycle-Framework.md](02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md) - Explicit stage prerequisites *(renamed from ADR-041)*
-- [SDLC-Quality-Gates-Assurance-Framework.md](02-Core-Methodology/SDLC-Quality-Gates-Assurance-Framework.md) - **Section 7: Anti-Vibecoding Governance** *(NEW)*
-- [SDLC-Stage-Lifecycle-Framework.md](02-Core-Methodology/SDLC-Stage-Lifecycle-Framework.md)
-- [SDLC-Stage-Sprint-Integration.md](02-Core-Methodology/Governance-Compliance/SDLC-Stage-Sprint-Integration.md)
-- [SDLC-Stage-Lifecycle-Framework.md](02-Core-Methodology/Documentation-Standards/SDLC-Stage-Lifecycle-Framework.md)
-- [Stage-Transition-Checklist.md](05-Templates-Tools/2-Checklists/Stage-Transition-Checklist.md)
+- SDLC-Stage-Lifecycle-Framework.md - Explicit stage prerequisites *(renamed from ADR-041)*
+- SDLC-Quality-Gates-Assurance-Framework.md - **Section 7: Anti-Vibecoding Governance** *(NEW)*
+- SDLC-Stage-Lifecycle-Framework.md
+- SDLC-Stage-Sprint-Integration.md
+- SDLC-Stage-Lifecycle-Framework.md
+- Stage-Transition-Checklist.md
 
 **Existing (Updated References)**:
-- [SDLC-Core-Methodology.md](02-Core-Methodology/SDLC-Core-Methodology.md) - 10-Stage lifecycle
-- [Quality Gates Documentation](02-Core-Methodology/SDLC-Core-Methodology.md#quality-gates) - G0.1, G0.2, G1, G2, G3, G4
+- SDLC-Core-Methodology.md - 10-Stage lifecycle
+- Quality Gates Documentation - G0.1, G0.2, G1, G2, G3, G4
 
 ---
 
@@ -1834,7 +1834,7 @@ SE4A (Software Engineering for Agents) - Agent Executor:
   Decision Authority: NONE - agent proposes, human disposes
 ```
 
-**Documentation**: [02-Core-Methodology/SDLC-Agentic-Core-Principles.md](./02-Core-Methodology/SDLC-Agentic-Core-Principles.md)
+**Documentation**: 02-Core-Methodology/SDLC-Agentic-Core-Principles.md
 
 ---
 
@@ -1847,7 +1847,7 @@ SE4A (Software Engineering for Agents) - Agent Executor:
 | **2** | Structured Agentic | Full SASE artifact workflow | All 6 artifacts + ACE/AEE |
 | **3** | Lifecycle Agentic | Proactive agents with memory | Full + Memory + Proactive |
 
-**Documentation**: [02-Core-Methodology/SDLC-Agentic-Maturity-Model.md](./02-Core-Methodology/SDLC-Agentic-Maturity-Model.md)
+**Documentation**: 02-Core-Methodology/SDLC-Agentic-Maturity-Model.md
 
 ---
 
@@ -1862,7 +1862,7 @@ SE4A (Software Engineering for Agents) - Agent Executor:
 | MRP | Merge-Readiness Pack (5-point evidence) | SE4A |
 | VCR | Version Controlled Resolution | SE4H |
 
-**Documentation**: [05-Templates-Tools/SASE-Artifacts/](./05-Templates-Tools/SASE-Artifacts/)
+**Documentation**: 05-Templates-Tools/SASE-Artifacts/
 
 ---
 
@@ -1909,7 +1909,7 @@ AEE (Agent Execution Environment):
   Security: Sandboxed, no production access, audited
 ```
 
-**Documentation**: [07-Implementation-Guides/ACE-AEE-Reference-Architecture.md](./07-Implementation-Guides/ACE-AEE-Reference-Architecture.md)
+**Documentation**: 07-Implementation-Guides/ACE-AEE-Reference-Architecture.md
 
 ---
 
@@ -1970,7 +1970,7 @@ ENTERPRISE Tier (50+ people):
   Test Coverage: ≥95% coverage
 ```
 
-**Documentation**: [02-Core-Methodology/Governance-Compliance/README.md](./02-Core-Methodology/Governance-Compliance/README.md)
+**Documentation**: 02-Core-Methodology/Governance-Compliance/README.md
 
 **Impact**: Right-size governance for EVERY project
 
@@ -2181,7 +2181,7 @@ Django Migrations:
   Max Length: 50 characters
 ```
 
-**Documentation**: [08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md](./08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md)
+**Documentation**: 08-Documentation-Standards/SDLC-Code-File-Naming-Standards.md
 
 **Impact**: Consistent code file naming across all projects
 
@@ -3427,7 +3427,7 @@ Residual optional enhancements (deferred to tooling wave): ledger hash computati
 - **Quantified ROI**: 40% faster delivery, 70% bug reduction, 60% faster onboarding
 - **Claude Code Integration**: Central development orchestrator from the very first version
 
-For complete AI heritage documentation, see: [99-Legacy AI-Native Heritage](99-Legacy/README.md)
+For complete AI heritage documentation, see: 99-Legacy AI-Native Heritage
 
 ---
 

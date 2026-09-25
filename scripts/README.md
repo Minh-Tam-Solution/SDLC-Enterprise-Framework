@@ -1,5 +1,7 @@
 # Scripts
 
+**SDLC Framework Version**: 7.0.0
+
 English kebab-case, verb-first names (see [CONTRIBUTING.md](../CONTRIBUTING.md)). The Rules v7
 table (which script enforces what, and why) lives in [`v7/01-rule-contract.md`](../v7/01-rule-contract.md), not here.
 Gate scripts follow the exit-code contract there: `0` pass · `1` cannot measure · `2` violation, last stdout line is the label.

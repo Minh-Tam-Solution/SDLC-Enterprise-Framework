@@ -65,13 +65,13 @@ Scripts in `scripts/` use English, kebab-case, verb-first names: `check-*` for a
 `rule-*` for a Rules v7 Contract gate, `gen-*` for a generator. Existing English names
 (`compliance_sdlc_validator.py`, `quickstart_solo_setup.py`, …) predate this convention and are
 grandfathered — don't rename them opportunistically in an unrelated PR. New scripts and any script
-being touched for other reasons should follow it. (Ratified 2026-09-25, F4.)
+being touched for other reasons should follow it. (Adopted 2026-09-25.)
 
 ## Style Conventions
 
 - **Markdown** — GitHub-flavored Markdown; tables for structured comparisons; headings follow the existing hierarchy in each section
 - **Voice** — write in the active voice; prefer concrete examples to abstract claims; cite version numbers when referencing patterns that have evolved
-- **Vendor neutrality** — do not name specific company products in normative content (Pillars 0-7, Sections 8-9). The Framework is implementation-neutral by design. Examples and case studies belong in `06-Case-Studies/` and may be specific
+- **Vendor neutrality** — do not name specific company products in normative content (`v7/`, `templates/`). The Framework is implementation-neutral by design; a burn case describes the incident, not the company
 - **Cite ADRs** — when adding or changing a pattern, link to the originating or governing ADR (in the implementing platform repo if no Framework-side ADR exists yet)
 - **Don't add a comment when a clearer name would do** — prefer self-explanatory section names and headings over explanatory prose
 
