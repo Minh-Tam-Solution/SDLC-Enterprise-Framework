@@ -14,7 +14,8 @@
 #       PR author is marked `shared` in the approvers file (one account used by a human AND an agent:
 #       nobody can tell who wrote the change, so "reviewer != author" cannot be evaluated).
 #   2 = no approval satisfies all five conditions.
-# Last stdout line is the label: result=<pass|insufficient_evidence|violation> gate=pr-approver reason=<slug>
+# Last stdout line is the label: result=<pass|insufficient_evidence|violation> gate=pr-approver reason=<slug> [fix=<text>]
+#   (rule contract: fix= is optional and always the LAST field; it takes the rest of the line, spaces included)
 #
 # Approvers file: one GitHub login per line; `#` starts a comment; optional second word `shared`
 # marks an account that a human and an agent both operate. Example:
