@@ -119,6 +119,6 @@ bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh      # lấy số t�
 |---|---|---|
 | 1 `ADVISORY` | — | **hiện tại**: đếm, không chặn |
 | 2 `REVIEW` | `ty_le < 20%` | gắn cờ, không chặn |
-| 3 `MACHINE` | `ty_le < 5%` trong **2 tuần liên tiếp** | chặn thật (`--chan`) |
+| 3 `MACHINE` | `ty_le < 5%` trong **2 tuần liên tiếp** | chặn thật (`--chan` ⇒ mã `2`; mất SSOT / quét 0 file ⇒ `1`) |
 
 *Ghi lại một lỗi trong lúc dựng chính cổng này, làm ca đốt cho G3: bản đầu đo trường `**Version**` và báo "89 file lệch". **Sai** — `**Version**` được phép khác theo Convention A. Cổng chỉ lộ ra là sai vì **đã chạy nó**, rồi đọc luật của khung trước khi tin kết quả. Bản đầu đã bỏ.*
