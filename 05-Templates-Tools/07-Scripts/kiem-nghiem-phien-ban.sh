@@ -53,8 +53,10 @@ ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 # File META của repo — KHÔNG phải tài liệu luật ⇒ miễn. Danh sách KHAI TAY, không suy.
 META='^(README|CHANGELOG|CONTENT-MAP|CONTRIBUTING|CODE_OF_CONDUCT|SECURITY|DEPRECATION-POLICY|CLAUDE)\.md$'
 
+# Tách "không có README" khỏi "README không khai" — hai nguyên nhân, hai nhãn (G2).
+[ -f "$ROOT/README.md" ] || { echo "❌ CHƯA ĐO ĐƯỢC: không có $ROOT/README.md (SSOT)"; nhan insufficient_evidence thieu_ssot_readme; exit 1; }
 SSOT="$(grep -m1 -oE '^\*\*Version\*\*: [0-9]+\.[0-9]+\.[0-9]+' "$ROOT/README.md" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')"
-[ -n "$SSOT" ] || { echo "❌ CHƯA ĐO ĐƯỢC: README.md không khai '**Version**: x.y.z'"; nhan insufficient_evidence thieu_ssot_readme; exit 1; }
+[ -n "$SSOT" ] || { echo "❌ CHƯA ĐO ĐƯỢC: README.md không khai '**Version**: x.y.z'"; nhan insufficient_evidence readme_khong_khai_version; exit 1; }
 
 khai_moi=0; khai_cu=0; khong_khai=0; mien=0; DS=$(mktemp); trap 'rm -f "$DS"' EXIT  # mktemp: hai lần chạy song song không ghi đè nhau
 while IFS= read -r -d '' f; do
