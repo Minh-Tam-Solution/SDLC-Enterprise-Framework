@@ -40,10 +40,10 @@ The default exit code of a broken tool must land in the **honest** bucket. A gat
 **Label line** — the last line of `cmd`'s stdout:
 
 ```text
-result=pass|insufficient_evidence|violation gate=<id> reason=<slug> [fix=<rest of line>]
+result=pass|insufficient_evidence|violation gate=<gate-name> reason=<slug> [fix=<rest of line>]
 ```
 
-`pass ↔ 0` · `insufficient_evidence ↔ 1` · `violation ↔ 2`. A label that contradicts the exit code, or is malformed, is mis-declared. The cause of a failure is read from the last line of **stderr** — never discard it.
+`pass ↔ 0` · `insufficient_evidence ↔ 1` · `violation ↔ 2`. `gate=` names the script (e.g. `check-advisory-deadline`); the rule id lives in the table, not in the label. A label that contradicts the exit code, or is malformed, is mis-declared. The cause of a failure is read from the last line of **stderr** — never discard it.
 
 **Unit of routing = FILE; unit of enforcement = ROW.** A rule file has a `## Rules v7` table; each row is one command with one exit code. `ratio = rule_files / files_in_scope` is a **measurement, not a target**: adding a row whose `cmd` does not measure what the rule says raises the ratio and destroys the measurement.
 
