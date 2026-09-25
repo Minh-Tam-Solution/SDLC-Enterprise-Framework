@@ -10,6 +10,8 @@ context_zone: "Core"
 update_frequency: "Per major version (quarterly)"
 priority: "P1"
 ---
+> Status v7: scheduled for archive (PR (d))
+
 
 # SDLC Agentic Maturity Model
 ## 4-Level Progression Framework for Human-Agent Collaboration

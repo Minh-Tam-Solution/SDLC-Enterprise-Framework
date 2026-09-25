@@ -1,3 +1,5 @@
+> Status v7: scheduled for archive (PR (d))
+
 # Governance Decision Matrix
 
 **Version**: 6.3.1

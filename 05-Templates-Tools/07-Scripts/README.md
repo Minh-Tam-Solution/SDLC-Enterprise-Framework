@@ -234,15 +234,14 @@ Validation adapts based on project tier:
 
 ---
 
-## Luật v7
+## v7 gate scripts
 
-> Hợp đồng Luật v7 §1 — luật = `lop` + `lenh` + `ca_dot` (+ `pham_vi_chay`, thiếu = `FRAMEWORK_REPO`). Mã thoát của `lenh` (plan §6.22 A): `0` đạt · `1` không đo được · `2` vi phạm · `≥3` dành riêng.
-> Dòng cuối stdout của `lenh` = nhãn `result=pass|insufficient_evidence|violation gate=<id> reason=<slug> [fix=…]`, khớp mã thoát; lệch ⇒ `khai_sai`, thiếu ⇒ đếm `thieu_nhan`.
-> `lenh` phải là script của ta (`bash`/`python3` + đường dẫn trong repo) — công cụ ngoài tự đặt nghĩa cho mã `1`. Cấm `exit $?`.
-> Cổng: `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` (lô 1: `--pham-vi 03-AI-GOVERNANCE`; lọc nơi chạy: `--pham-vi-chay FRAMEWORK_REPO|PRODUCT_CI|RUNTIME_PROBE`). `--chan`: `2` nếu vi phạm/khai sai · `1` nếu chỉ có không đo được · `0`.
+> **The rule table lives in one place: [`21-V7-RULE-CONTRACT.md` → `## Luật v7`](../../03-AI-GOVERNANCE/21-V7-RULE-CONTRACT.md) (§3).** This section only describes the scripts. A rule in two tables runs twice and is counted twice.
 
-| id | lop | lenh | ca_dot | pham_vi_chay |
-|---|---|---|---|---|
-| L2 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-khong-nuot-stderr.sh` | 24/09: `2>/dev/null` nuốt `ModuleNotFoundError`, cổng in "README lệch YAML" — sai nguyên nhân, hai người đi sửa nhầm thứ. Miễn trừ: `.mien-nuot-stderr` kèm hạn. | FRAMEWORK_REPO |
-| L3 | MACHINE | `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh --l3` | 24/09: cổng chống trùng tài liệu so tên file, xanh 100% khi việc chưa xong — chưa ai từng làm nó đỏ. Mọi script trong cột `lenh` phải có `--selftest` (ca đỏ + ca xanh) và phải qua. | FRAMEWORK_REPO |
-| L4 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-git-grep-khong-b.sh` | 25/09: `git grep -E '\bMUST\b'` khớp 0 và trả thành công — ra "không còn chỗ ghi 8" rồi "5 câu MUST" (thật hàng trăm). Dùng `-w`/`-P` kèm ca dương. | FRAMEWORK_REPO |
+| Script | What it does | Exit codes |
+|---|---|---|
+| `kiem-luat-v7.sh` | Rule-contract runner: reads every `## Luật v7` table, runs each `lenh`, counts three buckets (pass · violation · cannot measure). `--pham-vi DIR` · `--pham-vi-chay FRAMEWORK_REPO\|PRODUCT_CI\|RUNTIME_PROBE` · `--chan` · `--l3` · `--selftest` | `--chan`: `2` violation/mis-declared · `1` only cannot-measure · `0` |
+| `luat-khong-nuot-stderr.sh` | Forbids `2>/dev/null` in `07-Scripts/`; exemptions via `.mien-nuot-stderr`, each with a deadline | 0 · 1 · 2 |
+| `luat-git-grep-khong-b.sh` | Forbids `\b` in `git grep -E` in runnable files | 0 · 1 · 2 |
+| `check-advisory-deadline.sh` | G4: every `ADVISORY` row declares `deadline=YYYY-MM-DD` in `ca_dot` and its `lenh` prints `count=<n>`; deadline passed with `count>0` ⇒ violation | 0 · 1 · 2 |
+| `kiem-nghiem-phien-ban.sh` | Framework-version attestation (Convention A, 21 §6) — counts only; no rule row yet | see 21 §6 |

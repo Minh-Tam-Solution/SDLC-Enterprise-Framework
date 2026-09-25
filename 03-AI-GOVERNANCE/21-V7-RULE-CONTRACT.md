@@ -80,6 +80,25 @@ Mỗi cổng phải kèm **một ca cố ý làm nó đỏ** và **một ca sạ
 ### G4 — `ADVISORY` phải có BỘ ĐẾM + HẠN
 Phát hiện tồn đọng trong cổng chỉ-báo ⇒ **cổng đã chết**; người ta đã học cách không đọc. Hết hạn mà đếm vẫn > 0 ⇒ hoặc lên `REVIEW`, hoặc **xoá luật**. Không có nấc thứ ba "để đó".
 
+**How to declare it (machine-readable, no extra column):** an `lop=ADVISORY` row puts a `deadline=YYYY-MM-DD` token in its `ca_dot` cell; the row's `lenh` prints `count=<n>` on stdout (before the label line). Missing `deadline=` ⇒ mis-declared (`2`) · deadline passed ∧ `count>0` ⇒ violation (`2`) · `lenh` prints no `count=` ⇒ cannot measure (`1`). Enforced by C21-4 in the table below. A `lenh` that prints a made-up count is a G1 defect of that `lenh`, not of C21-4.
+
+## Luật v7
+
+> **The framework's rule register — part of §3, lives in ONE place** (this table). Scripts are described in `05-Templates-Tools/07-Scripts/README.md`; the table is not repeated there.
+> Runner: `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` — reads every `## Luật v7` table in the repo (skipping `10-Archive/`) and runs each `lenh` from the repo root. Batch 1: `--pham-vi 03-AI-GOVERNANCE`.
+> `lenh` must be our own script (`bash`/`python3` + a path in the repo) — external tools give exit code `1` their own meaning. No `exit $?`. Exit codes and the label line follow §1.
+> 🔴 Never put `kiem-luat-v7.sh` **without** `--l3` in a row: the runner runs `lenh`, `lenh` is the runner ⇒ infinite recursion.
+> Column names stay as the runner parses them; English names (`id | class | cmd | burn_case | run_scope`) are proposed for a later rename PR.
+
+| id | lop | lenh | ca_dot | pham_vi_chay |
+|---|---|---|---|---|
+| L2 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-khong-nuot-stderr.sh` | A gate called a checker script with `2>/dev/null`, which swallowed a missing-module error; the gate reported "README out of sync with YAML" — the wrong cause, and two readers went off to fix the wrong thing. Exemptions: `.mien-nuot-stderr`, each with a deadline. | FRAMEWORK_REPO |
+| L3 | MACHINE | `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh --l3` | A duplicate-document gate compared file names across trees; real duplicates never share a name, so it was 100% green while the work was unfinished — nobody had ever made it go red. Every script in the `lenh` column must have `--selftest` (a red case + a green case) and pass it. | FRAMEWORK_REPO |
+| L4 | MACHINE | `bash 05-Templates-Tools/07-Scripts/luat-git-grep-khong-b.sh` | `git grep -E '\bMUST\b'` matched nothing and exited successfully — the same person got a count too low, then one wrong in the opposite direction (5 vs. hundreds), both silent; only a positive control exposed them. Use `-w`/`-P` with a positive control. | FRAMEWORK_REPO |
+| C21-4 | MACHINE | `bash 05-Templates-Tools/07-Scripts/check-advisory-deadline.sh` | G4: a "kill" gate for an internal tool ran 8 days past its deadline with its deciding metric still "NOT MEASURED"; nobody escalated it, nobody deleted it — an advisory gate that was dead yet stayed green. | FRAMEWORK_REPO |
+
+*Not in the table yet:* `kiem-nghiem-phien-ban.sh` (§6, `ADVISORY`) — it needs `--selftest`, `--chan` returning `2`, a `count=` line, and a deadline published in advance (§4); adding it earlier turns L3 red at once. G1 (does the positive control really plant a violation) and §2 (does a `lenh` call a model) are `REVIEW` with no `lenh`: the reviewer of the PR that adds a rule row judges them; they are not table rows.
+
 ---
 
 ## §4 — Bật cổng theo QUỸ ĐẠO, không bật thành vách

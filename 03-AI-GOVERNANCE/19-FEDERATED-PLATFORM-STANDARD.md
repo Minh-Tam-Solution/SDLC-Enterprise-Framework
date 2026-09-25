@@ -8,6 +8,8 @@ status: "ACTIVE"
 pillar: "NEW — Federated Platform"
 source: "CEO Federated AI OS Workflow v3 + ADR-083 + V2 Independence Principle"
 ---
+> Status v7: scheduled for archive (PR (d))
+
 
 # Federated Platform Standard — BRAIN/VOICE/HANDS/ADVISOR
 

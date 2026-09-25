@@ -9,6 +9,8 @@ last_updated: "2026-03-18"
 status: "ACTIVE"
 pillar: "AI Governance"
 ---
+> Status v7: reference (no machine rule) — see 21-V7 §3
+
 
 # Long-Running Agent Protocol
 

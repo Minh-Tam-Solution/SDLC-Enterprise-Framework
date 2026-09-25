@@ -8,6 +8,8 @@ status: "ACTIVE"
 pillar: "NEW — Agentic OS Patterns"
 source: "Giải phẫu Agentic OS (Lâm Nguyễn, 18 patterns from 513K LOC Claude Code) + SDLC Orchestrator v2 production validation"
 ---
+> Status v7: scheduled for archive (PR (d))
+
 
 # Agentic OS Patterns — Production-Verified Architecture Standards
 

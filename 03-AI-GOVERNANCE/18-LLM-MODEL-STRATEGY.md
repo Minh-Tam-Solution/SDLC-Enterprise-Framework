@@ -8,6 +8,8 @@ status: "ACTIVE"
 pillar: "NEW — LLM Model Strategy"
 source: "SDLC Orchestrator v2 Sprint 10 + MTClaw Sprint 94 + CEO Federated AI OS directive"
 ---
+> Status v7: scheduled for archive (PR (d))
+
 
 # LLM Model Strategy — 3-Tier Cascade Standard
 

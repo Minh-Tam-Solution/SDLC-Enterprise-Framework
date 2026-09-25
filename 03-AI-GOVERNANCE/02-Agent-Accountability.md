@@ -1,3 +1,5 @@
+> Status v7: reference (no machine rule) — see 21-V7 §3
+
 # Principle 2: Agent Accountability
 
 **Version**: 6.3.1

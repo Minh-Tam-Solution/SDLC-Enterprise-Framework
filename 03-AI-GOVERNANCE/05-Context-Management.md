@@ -1,3 +1,5 @@
+> Status v7: reference (no machine rule) — see 21-V7 §3
+
 # Principle 5: Context Management
 
 **Version**: 6.3.1

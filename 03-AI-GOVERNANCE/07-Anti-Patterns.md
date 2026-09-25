@@ -1,3 +1,5 @@
+> Status v7: reference (no machine rule) — see 21-V7 §3
+
 # Principle 7: AI Development Anti-Patterns
 
 **Version**: 6.3.1

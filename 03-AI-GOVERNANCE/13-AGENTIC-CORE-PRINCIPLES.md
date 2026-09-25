@@ -10,6 +10,8 @@ last_updated: "2026-06-03"
 author: "SE 3.0 Track 1 — CTO Approved"
 origin: "arXiv:2509.06216v2 (SASE Framework)"
 ---
+> Status v7: reference (no machine rule) — see 21-V7 §3
+
 
 # AGENTIC CORE PRINCIPLES
 

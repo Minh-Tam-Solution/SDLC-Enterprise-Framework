@@ -8,6 +8,8 @@ status: "ACTIVE"
 pillar: "NEW — Evidence Integration"
 source: "SDLC Orchestrator v2 Sprint 17 + V2 Independence Principle + CEO directive"
 ---
+> Status v7: scheduled for archive (PR (d))
+
 
 # Evidence Integration Standard — Multi-Source Ingestion
 
