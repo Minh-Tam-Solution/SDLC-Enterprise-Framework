@@ -15,11 +15,13 @@ jobs:
       # "đếm, không chặn" nên không biến việc chưa có bảng thành CI đỏ. Chỉ chặn thật khi mã 2.
       - name: L3 — mọi lệnh luật có --selftest và qua
         run: |
-          bash scripts/check-rules-v7.sh --l3; rc=$?
-          [ $rc = 2 ] && exit 1
+          rc=0
+          bash scripts/check-rules-v7.sh --l3 || rc=$?
+          [ "$rc" = 2 ] && exit 1
           exit 0
       - name: lô 1 — đếm (nấc 1, không chặn)
         run: |
-          bash scripts/check-rules-v7.sh; rc=$?
-          [ $rc = 2 ] && exit 1
+          rc=0
+          bash scripts/check-rules-v7.sh || rc=$?
+          [ "$rc" = 2 ] && exit 1
           exit 0
