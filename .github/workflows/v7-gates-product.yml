@@ -1,0 +1,162 @@
+name: v7-gates-product
+# Reusable workflow: v7 gates for a PRODUCT repo (a repo that adopts the framework), run_scope=PRODUCT_CI.
+# The framework's own CI (cong-v7*.yml) measures the framework repo; this one measures the caller.
+#
+# Caller example (pin BOTH `uses:` and `framework_ref` to the same full commit SHA):
+#   jobs:
+#     v7:
+#       uses: <owner>/SDLC-Enterprise-Framework/.github/workflows/v7-gates-product.yml@<sha>
+#       with: { framework_repo: <owner>/SDLC-Enterprise-Framework, framework_ref: <sha>, min_tier: STANDARD }
+#
+# Who can call it:
+#   - Framework repo PUBLIC: any repository can call it.
+#   - Framework repo (or a fork/instance) PRIVATE or INTERNAL: in that repo set
+#     Settings -> Actions -> General -> Access = "Accessible from repositories in the <org> organization"
+#     (API: actions/permissions/access, access_level=organization). Repos outside that org, including
+#     repos owned by a PERSONAL account, cannot call it. A private instance also cannot be checked out
+#     with the caller's GITHUB_TOKEN (step "Checkout framework"): give that step a token that can read it.
+#
+# Steps:
+#   1. rules    scripts/check-rules-v7.sh --run-scope PRODUCT_CI on the CALLER checkout: runs every row of
+#               the caller's own "## Rules v7" tables whose run_scope is PRODUCT_CI. The runner comes from
+#               the framework at framework_ref, so framework_ref must contain scripts/check-rules-v7.sh
+#               with --run-scope. Rows run at the caller root and must name a script IN the caller repo
+#               (the runner does not expand variables); to use a framework sample, copy it in.
+#   2. approver check-pr-approver.sh, pull_request events only. The approver list is read from the PR's
+#               BASE commit, so the PR under review cannot add names to its own approver list.
+#   3. verdict  every step above runs (if: always()); exit codes follow 21-V7-RULE-CONTRACT:
+#               0 pass · 1 insufficient evidence · 2 violation.
+#               GitHub Actions jobs have no "neutral" conclusion (only Checks-API check runs do), so:
+#               1 => job succeeds with a ::warning:: annotation · 2 => job fails.
+#
+# min_tier: the tier SHOULD NOT be self-declared by the caller as the source of truth. A repo that
+# picks its own tier through an input can always pick one its PR passes. Instances should read the
+# tier from a policy repo pinned by SHA and pass that value here. This workflow only validates it.
+# Tier effect: an approver violation fails the job only at ENTERPRISE. Below that a PR is a record,
+# not an approval gate, and the violation is annotated (approval is keyed to risk, not team size).
+# To gate only risk paths, call this workflow from a caller job filtered with on.pull_request.paths.
+on:
+  workflow_call:
+    inputs:
+      framework_repo:
+        description: "owner/name of the framework repo that holds the scripts"
+        required: true
+        type: string
+      framework_ref:
+        description: "full commit SHA of the framework (same SHA as in `uses:`)"
+        required: true
+        type: string
+      target_repo:
+        description: "owner/name to check (default: the calling repository)"
+        required: false
+        type: string
+        default: ""
+      min_tier:
+        description: "LITE | STANDARD | PROFESSIONAL | ENTERPRISE (read it from pinned policy, see header)"
+        required: true
+        type: string
+      approvers_file:
+        description: "path of the approvers file in the target repo (one login per line)"
+        required: false
+        type: string
+        default: ".approvers"
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  v7-gates:
+    runs-on: ubuntu-latest
+    env:
+      TARGET_REPO: ${{ inputs.target_repo || github.repository }}
+      MIN_TIER: ${{ inputs.min_tier }}
+    steps:
+      - name: Validate inputs
+        env:
+          FW_REF: ${{ inputs.framework_ref }}
+        run: |
+          case $MIN_TIER in LITE|STANDARD|PROFESSIONAL|ENTERPRISE) ;;
+            *) echo "::error::min_tier must be LITE|STANDARD|PROFESSIONAL|ENTERPRISE, got '$MIN_TIER'"; exit 1;; esac
+          [[ $FW_REF =~ ^[0-9a-f]{40}$ ]] || echo "::warning::framework_ref '$FW_REF' is not a full commit SHA; a moving ref changes the gate under you"
+
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.TARGET_REPO }}
+
+      - name: Checkout framework
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.framework_repo }}
+          ref: ${{ inputs.framework_ref }}
+          path: .v7-framework
+
+      # Out of the workspace: the runner scans every .md under --goc, and the framework's own
+      # rule tables must not be read as the product's rules.
+      - name: Move framework out of the product tree
+        run: mv .v7-framework "$RUNNER_TEMP/v7-framework"
+
+      - name: Rules (run_scope=PRODUCT_CI)
+        id: rules
+        if: always()
+        env:
+          SEF_DIR: ${{ runner.temp }}/v7-framework
+        run: |
+          rc=0
+          out=$(bash "$SEF_DIR/scripts/check-rules-v7.sh" \
+                  --root "$GITHUB_WORKSPACE" --scope . --run-scope PRODUCT_CI --block) || rc=$?
+          echo "$out"
+          case $rc in 0|1|2) ;; *) rc=1;; esac
+          # Zero rules executed is "nothing measured", not a pass (G1).
+          if [ $rc = 0 ] && ! grep -qE ' passed=[1-9]' <<<"$out"; then
+            echo "::warning::no PRODUCT_CI rule ran: add a '## Rules v7' table with run_scope=PRODUCT_CI rows"; rc=1
+          fi
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+
+      - name: PR approver (pull_request only)
+        id: approver
+        if: always() && github.event_name == 'pull_request'
+        env:
+          SEF_DIR: ${{ runner.temp }}/v7-framework
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          APPROVERS_FILE: ${{ inputs.approvers_file }}
+        run: |
+          rc=0
+          if [ "$TARGET_REPO" != "$GITHUB_REPOSITORY" ]; then
+            # The PR number comes from the caller's event; it means nothing in another repo.
+            echo "result=insufficient_evidence gate=pr-approver reason=target_repo_is_not_the_event_repo"; rc=1
+          else
+            a="$RUNNER_TEMP/approvers"; : > "$a"
+            git fetch -q --depth=1 origin "$BASE_SHA" && git show "$BASE_SHA:$APPROVERS_FILE" > "$a" \
+              || echo "approvers file '$APPROVERS_FILE' not found at base $BASE_SHA" >&2
+            bash "$SEF_DIR/scripts/check-pr-approver.sh" \
+              --repo "$TARGET_REPO" --pr "$PR" --approvers "$a" || rc=$?
+          fi
+          case $rc in 0|1|2) ;; *) rc=1;; esac
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+
+      - name: Verdict
+        if: always()
+        env:
+          R: ${{ steps.rules.outputs.rc }}
+          A: ${{ steps.approver.outputs.rc }}
+        run: |
+          final=0
+          R=${R:-1}   # rules step did not report => not measured
+          [ "$R" = 2 ] && final=2
+          if [ "$A" = 2 ]; then
+            if [ "$MIN_TIER" = ENTERPRISE ]; then final=2
+            else echo "::warning::pr-approver: no valid approval (tier $MIN_TIER: recorded, not enforced)"; fi
+          fi
+          [ $final = 0 ] && { [ "$R" = 1 ] || [ "$A" = 1 ]; } && final=1
+          echo "rules=$R approver=${A:-skipped} tier=$MIN_TIER final=$final"
+          case $final in
+            0) echo "result=pass gate=v7-gates-product reason=all_pass" ;;
+            1) echo "::warning::v7-gates-product: insufficient evidence (see steps above)"
+               echo "result=insufficient_evidence gate=v7-gates-product reason=rules_${R}_approver_${A:-skipped}" ;;
+            2) echo "::error::v7-gates-product: violation (see steps above)"
+               echo "result=violation gate=v7-gates-product reason=rules_${R}_approver_${A:-skipped}"; exit 1 ;;
+          esac
