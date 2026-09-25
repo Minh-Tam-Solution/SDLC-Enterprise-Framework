@@ -104,13 +104,21 @@ Mỗi file sống đi **một trong ba** đường. **Không có đường thứ
 
 Nó kiểm trường `sdlc_framework` / `**SDLC Framework Version**` theo **Convention A**, **không** kiểm `**Version**` *(semver riêng của tài liệu — được phép và NÊN khác)*. Khai bản **cũ hơn** SSOT **không phải lỗi**; chỉ đếm.
 
-**Chạy 25/09/2026:**
+**Tỉ lệ vi phạm** — công thức, không phải số *(số in cứng đã lệch `189→190` trước khi merge, vì chính file này cũng khai phiên bản)*:
+
 ```
-SSOT=6.5.0   khai_moi=1   khai_cu=31   khong_khai=149   mien=8   tong=189
+ty_le = khong_khai / (tong − mien)
+bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh      # lấy số tại thời điểm đọc
 ```
 
-> **149/181 file *(82%)* chưa từng ghi nhận được nghiệm với phiên bản khung nào.** Đó là điểm khởi đầu thật của v7 — không phải "khung thiếu nội dung", mà **khung không biết phần nào của nó còn đúng**.
+> Lần đo đầu, 25/09/2026: **82%** file sống chưa từng ghi nhận được nghiệm với phiên bản khung nào. Đó là điểm khởi đầu thật của v7 — không phải "khung thiếu nội dung", mà **khung không biết phần nào của nó còn đúng**.
 
-Cổng này vào **nấc 1** *(đếm)*. Nấc 3 khi `khong_khai < 5%` trong 2 tuần.
+**Quỹ đạo của cổng này** *(theo §4, ngưỡng công bố trước khi bật)*:
+
+| Nấc | Điều kiện lên nấc | Trạng thái |
+|---|---|---|
+| 1 `ADVISORY` | — | **hiện tại**: đếm, không chặn |
+| 2 `REVIEW` | `ty_le < 20%` | gắn cờ, không chặn |
+| 3 `MACHINE` | `ty_le < 5%` trong **2 tuần liên tiếp** | chặn thật (`--chan`) |
 
 *Ghi lại một lỗi trong lúc dựng chính cổng này, làm ca đốt cho G3: bản đầu đo trường `**Version**` và báo "89 file lệch". **Sai** — `**Version**` được phép khác theo Convention A. Cổng chỉ lộ ra là sai vì **đã chạy nó**, rồi đọc luật của khung trước khi tin kết quả. Bản đầu đã bỏ.*

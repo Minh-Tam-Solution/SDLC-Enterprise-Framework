@@ -17,3 +17,15 @@ jobs:
             echo "❌ G3: bỏ README (mất SSOT) mà cổng vẫn XANH — cổng không đo gì cả"; exit 1
           fi
           echo "✅ G3: cổng đỏ đúng khi mất SSOT"
+      - name: Ca DƯƠNG lõi đếm (G3) — cấy 1 file không khai + 1 file khai bản hiện hành
+        run: |
+          S=05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh
+          so() { bash "$S" | grep -oE "$1=[0-9]+" | cut -d= -f2; }
+          k0=$(so khong_khai); m0=$(so khai_moi)
+          ssot=$(grep -m1 -oE '\*\*Version\*\*: [0-9.]+' README.md | grep -oE '[0-9.]+$')
+          printf '# cay\n' > 02-Core-Methodology/ZZ-cay-khong-khai.md
+          printf '# cay\n**SDLC Framework Version**: %s\n' "$ssot" > 02-Core-Methodology/ZZ-cay-khai-moi.md
+          k1=$(so khong_khai); m1=$(so khai_moi)
+          echo "khong_khai $k0→$k1 · khai_moi $m0→$m1"
+          [ "$k1" = $((k0+1)) ] && [ "$m1" = $((m0+1)) ] || { echo "❌ G3: lõi đếm không thấy file cấy"; exit 1; }
+          echo "✅ G3: lõi đếm thấy đúng 2 file cấy"
