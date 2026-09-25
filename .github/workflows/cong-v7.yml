@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: selftest cổng (ca đỏ 2 · ca xanh 0 · mất SSOT 1 · quét 0 file 1 · khai_cu không lỗi)
+        run: bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh --selftest
       - name: Nghiệm thu phiên bản (Convention A) — ĐẾM, chưa chặn
         run: bash 05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh
       - name: Ca DƯƠNG bắt buộc (G3) — cổng phải ĐỎ được
