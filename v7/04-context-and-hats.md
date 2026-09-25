@@ -69,10 +69,10 @@ Every other role stays in a catalog. Promote one only when it has a named consum
 - **Typed verdict.** Free text is not a verdict:
 
 ```yaml
-verdict: approve | changes_requested | insufficient_evidence
-abstain_reason: <required when verdict is insufficient_evidence>
+verdict: changes_requested   # one of: approve | changes_requested | insufficient_evidence
+abstain_reason: ""           # required when verdict is insufficient_evidence
 findings:
-  - {severity: BLOCKER | MAJOR | MINOR, file: <path>, line: <n>, claim: <what is wrong>, evidence: <quote or command output>}
+  - {severity: MAJOR, file: <path>, line: <n>, claim: <what is wrong>, evidence: <quote or command output>}   # severity: BLOCKER | MAJOR | MINOR
 ```
 
 - `approve` with any `BLOCKER` finding counts as `changes_requested`.

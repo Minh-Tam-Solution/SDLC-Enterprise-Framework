@@ -29,11 +29,11 @@ Find what is wrong in this diff while it is still cheap to fix. Produce findings
 
 ## Output (typed. Free text is not a verdict.)
 ```yaml
-verdict: approve | changes_requested | insufficient_evidence
-abstain_reason: ""        # required when verdict is insufficient_evidence
+verdict: changes_requested   # one of: approve | changes_requested | insufficient_evidence
+abstain_reason: ""           # required when verdict is insufficient_evidence
 commit_sha: <head sha reviewed>
 findings:
-  - {severity: BLOCKER | MAJOR | MINOR, file: <path>, line: <n>, claim: <what is wrong>, evidence: <quote or output>}
+  - {severity: MAJOR, file: <path>, line: <n>, claim: <what is wrong>, evidence: <quote or output>}   # severity: BLOCKER | MAJOR | MINOR
 ```
 - Any `BLOCKER` ⇒ `changes_requested`, whatever else holds.
 - Use `insufficient_evidence` when you cannot see or run what the verdict needs (missing criteria, checks that did not run, a diff too large to read in full). Never approve by default.
