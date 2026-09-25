@@ -1159,7 +1159,6 @@ For teams new to SDLC 6.3.0, the BFlow "stealth pilot" approach reduces risk by 
 - [System Thinking Foundation](../02-Core-Methodology/SDLC-System-Thinking-Foundation.md) — 9 Mental Models (Agent Continuity, Everyone Builds)
 - [Long-Running Agent Protocol](../03-AI-GOVERNANCE/16-LONG-RUNNING-AGENT-PROTOCOL.md) — Checkpoint, memory, handoff, traceability
 - [Agentic Core Principles](../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md) — SASE SE4H/SE4A
-- [Agentic Maturity Model](../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md) — L0→L3 progression
 
 ---
 

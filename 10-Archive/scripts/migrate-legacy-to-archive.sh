@@ -1,5 +1,12 @@
 #!/bin/bash
-
+#
+# ARCHIVED (v7, 2026-09-25): this migration script targets the {stage}/99-Legacy/ ->
+# 10-Archive/{NN}-Legacy/ directory scheme, which 10-Archive/README.md itself declared
+# retired on 2026-04-28 (superseded by the current by-version/ and by-topic/ axes) — seven
+# days after this script was written. No 99-Legacy/ directories remain in this repo to
+# migrate, and running the script today would recreate a structure the archive's own README
+# calls inconsistent. No CI or script in this repo calls it. See 10-Archive/scripts/.
+#
 ###############################################################################
 # RFC-001: Legacy Document Organization Standard - Migration Script
 #

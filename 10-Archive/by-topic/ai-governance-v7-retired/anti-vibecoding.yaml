@@ -1,6 +1,12 @@
 # SDLC Framework 6.2.0 - Anti-Vibecoding Control Definitions
 # Machine-readable controls from SPEC-0001
 # Source: SDLC-Enterprise-Framework/05-Templates-Tools/01-Specification-Standard/SPEC-0001-Anti-Vibecoding.md
+#
+# ARCHIVED (v7, 2026-09-25): the original machine-readable gate of Pillar 4 (Quality Gates),
+# frozen at 6.2.0 / 2026-02-14 for 7 months — confirmed 0 scripts in this repo's git log
+# history ever read this file. The source document it points to was renamed back in 6.1.0.
+# Replaced by cong-v7.yml + kiem-luat-v7.sh (2026-09-25), which carry a mandatory positive
+# (red) test case in CI. See 10-Archive/by-topic/ai-governance-v7-retired/.
 
 metadata:
   spec_id: "SPEC-0001"

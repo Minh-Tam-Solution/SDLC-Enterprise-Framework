@@ -9,6 +9,13 @@ pillar: "NEW — LLM Model Strategy"
 source: "SDLC Orchestrator v2 Sprint 10 + MTClaw Sprint 94 + CEO Federated AI OS directive"
 ---
 
+> **⚠️ ARCHIVED (v7, 2026-09-25)**: the 3-tier provider cascade and model names in this file
+> are stale — 2 of the 3 listed fallback models do not exist on the current inference host, the
+> stated flat-rate cost claim no longer matches actual spend, and 2 of the 3 referenced
+> platforms (SDLC-Orchestrator, EndiorBot) have been retired. The routing cascade is now
+> implemented at the LLM gateway layer, not in this document. See
+> `10-Archive/by-topic/ai-governance-v7-retired/`.
+
 # LLM Model Strategy — 3-Tier Cascade Standard
 
 > NEW in Framework 6.3.0. Validated by SDLC Orchestrator v2 (Sprint 10, dogfooding confirmed) and MTClaw (Sprint 94).

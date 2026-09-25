@@ -231,9 +231,10 @@ Key rules:
 - **RULE-001 (MANDATORY)**: Stage folders (00-09) must contain zero `99-Legacy/` subfolders
 - **RULE-002 (MANDATORY)**: All archived content migrates to `10-archive/{NN}-Legacy/` with stage alignment
 - **RULE-003 (RECOMMENDED)**: Create `10-archive/README.md` with `AI-NEVER-READ` directive
-- **RULE-004 (RECOMMENDED)**: Use `migrate-legacy-to-archive.sh` script for migration
-
-Migration script available in: [05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh](../05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh)
+- **RULE-004 (RETIRED v7, 2026-09-25)**: `migrate-legacy-to-archive.sh` targeted the
+  `{stage}/99-Legacy/` scheme this policy's own Archive Naming Convention above superseded on
+  2026-04-28; no `99-Legacy/` directories remain to migrate. The script is archived at
+  `10-Archive/scripts/migrate-legacy-to-archive.sh` for historical reference only.
 
 **Validation**: BFlow Platform metrics (3 live customers):
 - Docs size: 211 MB → 91 MB (57% reduction)

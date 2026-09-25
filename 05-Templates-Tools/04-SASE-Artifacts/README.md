@@ -233,7 +233,6 @@ See [teams/](teams/) directory.
 ## Related Documents
 
 - [SDLC-Agentic-Core-Principles](../../03-AI-GOVERNANCE/13-AGENTIC-CORE-PRINCIPLES.md)
-- [SDLC-Agentic-Maturity-Model](../../03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md)
 - [AI Agent Best Practices 2026](../../04-AI-TOOLS-LANDSCAPE/best-practices-2026/README.md)
 
 ---
