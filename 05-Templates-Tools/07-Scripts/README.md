@@ -236,7 +236,8 @@ Validation adapts based on project tier:
 
 ## Luật v7
 
-> Hợp đồng Luật v7 §1 — luật = `lop` + `lenh` + `ca_dot`. Mã thoát của `lenh`: `0` đạt · `1` vi phạm · `≥2` không đo được.
+> Hợp đồng Luật v7 §1 — luật = `lop` + `lenh` + `ca_dot`. Mã thoát của `lenh` (plan §6.22 A): `0` đạt · `1` không đo được · `2` vi phạm · `≥3` dành riêng.
+> `lenh` phải là script của ta (`bash`/`python3` + đường dẫn trong repo) — công cụ ngoài tự đặt nghĩa cho mã `1`. Cấm `exit $?`.
 > Cổng: `bash 05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` (lô 1: `--pham-vi 03-AI-GOVERNANCE`).
 
 | id | lop | lenh | ca_dot |
