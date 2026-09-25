@@ -1,3 +1,5 @@
+> Archived 2026-09-25. Superseded by `v7/01-rule-contract.md` (the single rule register).
+
 # 21 — Hợp đồng Luật v7
 
 **Version**: 1.0.0
