@@ -17,6 +17,7 @@ jobs:
           rc=0
           bash scripts/check-rules-v7.sh --l3 || rc=$?
           [ "$rc" = 2 ] && exit 1
+          [ "$rc" = 0 ] || echo "::warning::check-rules-v7 --l3: cannot measure (exit $rc)"
           exit 0
       - name: Rules v7 — run every FRAMEWORK_REPO row (2 = violation fails · 1 = cannot measure warns)
         run: |

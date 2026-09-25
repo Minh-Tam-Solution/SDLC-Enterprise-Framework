@@ -43,5 +43,5 @@ echo "count=$n advisory_over=$ADVISORY machine_over=$MACHINE"
 if [ "$n" -gt "$MACHINE" ]; then
   label violation "count_${n}_over_${MACHINE}" "archive or merge docs; a new doc needs a named consumer (CONTRIBUTING.md)"; exit 2
 fi
-[ "$n" -gt "$ADVISORY" ] && { label pass "advisory_count_${n}_over_${ADVISORY}"; exit 0; }
+[ "$n" -gt "$ADVISORY" ] && { echo "WARNING: $n live docs, advisory threshold is $ADVISORY"; label pass "advisory_count_${n}_over_${ADVISORY}"; exit 0; }
 label pass "count_${n}_within_${ADVISORY}"; exit 0

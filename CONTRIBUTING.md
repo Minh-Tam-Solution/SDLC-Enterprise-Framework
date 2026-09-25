@@ -71,7 +71,7 @@ being touched for other reasons should follow it. (Adopted 2026-09-25.)
 
 - **Markdown** — GitHub-flavored Markdown; tables for structured comparisons; headings follow the existing hierarchy in each section
 - **Voice** — write in the active voice; prefer concrete examples to abstract claims; cite version numbers when referencing patterns that have evolved
-- **Vendor neutrality** — do not name specific company products in normative content (`v7/`, `templates/`). The Framework is implementation-neutral by design; a burn case describes the incident, not the company
+- **Vendor neutrality** — do not name specific company products in normative content (`v7/`, `templates/`, `scripts/`). The Framework is implementation-neutral by design; a burn case describes the incident, not the company
 - **Cite ADRs** — when adding or changing a pattern, link to the originating or governing ADR (in the implementing platform repo if no Framework-side ADR exists yet)
 - **Don't add a comment when a clearer name would do** — prefer self-explanatory section names and headings over explanatory prose
 
