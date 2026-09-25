@@ -4,7 +4,7 @@
 > (governance mode, gate-action enum) and routes by Vibecoding Index. That index was dropped in
 > v7, and this file's definition conflicted with SPEC-0001 (different signals and different RED
 > thresholds). The Risk Classification table was extracted and generalized to
-> [`03-AI-GOVERNANCE/risk-floor-paths.md`](../03-AI-GOVERNANCE/risk-floor-paths.md) before this
+> [`v7/risk-floor-paths.md`](../../../v7/risk-floor-paths.md) before this
 > file was archived. See `10-Archive/by-topic/ai-governance-v7-retired/`.
 
 **Version**: 6.3.1

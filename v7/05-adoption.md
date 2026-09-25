@@ -19,13 +19,13 @@ One repo holds the policy. Product repos consume it. Derivation runs one way: **
 
 | Path | Holds |
 |---|---|
-| `projects.yaml` | each product repo: tier scheme, declared metadata, risk-floor and residency paths |
+| `projects.yaml` | each product repo: tier scheme, declared metadata, [risk-floor](risk-floor-paths.md) and residency paths |
 | `tiers.yaml` | tier definitions and model/agent lanes allowed per tier |
 | `rules-v7.md` | the rule table for product scope (format: [`01`](01-rule-contract.md)) |
 | `souls/` | hats — role files a person or agent wears per product (see [`04`](04-context-and-hats.md)) |
 | `gates/` | gate scripts for `PRODUCT_CI` and `RUNTIME_PROBE` |
 | `adapters/gen.sh` | generates vendor files for each CLI you actually use; byte-identical on two runs |
-| `.approvers` | who may approve risk-floor deploys; pairs are checked as `reviewer ≠ author` |
+| `.approvers` | who may approve risk-floor deploys, and which person operates each agent identity; checked as `reviewer ≠ author` and `reviewer ≠ operator(author)` |
 | `CONTROL_SURFACE` | the list of paths above that can change enforcement |
 
 - **Pinning.** Products pin a release tag; generated files record the resolved SHA. Upgrades go by tag, not by bare SHA — bumping bare SHAs by hand across many repos gets abandoned.
@@ -45,6 +45,8 @@ Without this, every "human ≠ author" rule is satisfied by the agent itself.
 | **Four identity layers** | `accountable_member` (a person) · `execution_actor` (the authenticated code-host actor) · `agent_role` (e.g. `agent:reviewer` — never the same label as a person) · `agent_session` | commit without trailers ⇒ 2 |
 
 Authority comes from the **authenticated actor**, never from commit trailers. Trailers are for trace only. Count "two agents edited the same file within 24h"; above 0 ⇒ look.
+
+**Operator mapping.** An agent's `execution_actor` is a bot; its `accountable_member` is the person who runs it. Record that pair in the protected approvers file (`bot:<bot-login> operated_by=<human-login>`), so the approver gate refuses a person approving their own agent's PR ([`03`](03-gates.md)). List every agent identity, including machine users the code host reports as ordinary users: the gate can only map what the file lists. The file is in `CONTROL_SURFACE`; a PR cannot edit the file it is judged by.
 
 This is also the cheapest way to observe: identity fixed at the source beats any collector.
 

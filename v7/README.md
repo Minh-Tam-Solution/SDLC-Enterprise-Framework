@@ -14,6 +14,7 @@
 | 04 | [Context and hats](04-context-and-hats.md) | writing `AGENTS.md`, a PREAMBLE or a hat |
 | 05 | [Adoption](05-adoption.md) | bringing v7 to an organisation or repo |
 | 06 | [Lessons to rules](06-lessons-to-rules.md) | closing an incident; proposing a rule |
+| — | [Risk floor paths](risk-floor-paths.md) | declaring a repo's risk-floor paths; "does this diff need a human?" |
 
 Also: [`templates/`](../templates/) (PREAMBLE, SOUL examples) · [`scripts/`](../scripts/) (gates, each with `--selftest`).
 
