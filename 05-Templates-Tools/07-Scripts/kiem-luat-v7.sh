@@ -34,7 +34,7 @@ if [ $TU_THU = 1 ]; then
   bash "$0" --goc "$t" --pham-vi pv --l3 >/dev/null; rc_l3=$?
   rm -rf "$t"
   [ "$got" = "$want" ] && [ $rc = 0 ] && [ $rc_chan = 2 ] && [ $rc_mu = 1 ] && [ $rc_l3 = 2 ] && { echo "selftest OK"; exit 0; }
-  echo "selftest HỎNG: got=[$got] rc=$rc chan=$rc_chan mu=$rc_mu l3=$rc_l3"; exit 2
+  echo "selftest HỎNG: got=[$got] rc=$rc chan=$rc_chan mu=$rc_mu l3=$rc_l3"; exit 1  # selftest hỏng = CỔNG hỏng ⇒ không đo được (1), không phải vi phạm (2)
 fi
 
 cd "$GOC" || { echo "KHÔNG ĐO ĐƯỢC: không vào được $GOC"; exit 1; }

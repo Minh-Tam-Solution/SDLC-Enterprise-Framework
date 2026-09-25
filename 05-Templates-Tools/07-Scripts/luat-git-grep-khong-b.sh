@@ -12,7 +12,7 @@ if [ "$GOC" = --selftest ]; then
   printf 'git grep -E %s\n' "'\\bMUST\\b'" > "$t/ban.sh"; bash "$0" "$t" >/dev/null; b=$?
   bash "$0" "$t/khong-co" >/dev/null; c=$?
   rm -rf "$t"
-  [ "$a$b$c" = "021" ] && { echo "selftest OK"; exit 0; }; echo "selftest HỎNG: $a$b$c (muốn 021)"; exit 2
+  [ "$a$b$c" = "021" ] && { echo "selftest OK"; exit 0; }; echo "selftest HỎNG: $a$b$c (muốn 021)"; exit 1  # selftest hỏng = CỔNG hỏng ⇒ không đo được (1), không phải vi phạm (2)
 fi
 [ -d "$GOC" ] || { echo "KHÔNG ĐO ĐƯỢC: $GOC không tồn tại"; exit 1; }
 vi_pham=0
