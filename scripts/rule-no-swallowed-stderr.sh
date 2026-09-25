@@ -1,30 +1,34 @@
 #!/usr/bin/env bash
-# Luật 2 (G2): cấm nuốt stderr trong scripts/. Cần thật ⇒ khai .mien-nuot-stderr kèm HẠN.
-#   Vì sao: `find … 2>/dev/null | wc -l` gặp lỗi quyền ⇒ ra 0 ⇒ script coi là "rỗng" và ra quyết định.
-#   Ca đốt 24/09: `2>/dev/null` nuốt ModuleNotFoundError, cổng in "README lệch YAML" — sai nguyên nhân.
-# .mien-nuot-stderr, mỗi dòng:  duong/dan<TAB>YYYY-MM-DD(hết hạn)<TAB>lý do
-# Mã thoát (plan §6.22 A): 0 đạt · 1 không đo được · 2 vi phạm (kể cả miễn trừ quá hạn).
+# Rule L2 (G2): forbid swallowing stderr in scripts/. If truly needed, declare it in .stderr-exemptions with an EXPIRY.
+#   Why: `find … 2>/dev/null | wc -l` hits a permission error => prints 0 => the script decides "empty".
+#   Burn case: `2>/dev/null` swallowed a missing-module error and the gate printed "README out of sync with YAML" — the wrong cause.
+# .stderr-exemptions, one line each:  path<TAB>YYYY-MM-DD(expiry)<TAB>reason
+# Exit codes (v7/01): 0 pass · 1 cannot measure · 2 violation (including an expired exemption). Last stdout line is the label.
 set -u
 DIR=${1:-scripts}
+EXEMPT=.stderr-exemptions
+label() { echo "result=$1 gate=rule-no-swallowed-stderr reason=$2"; }
 if [ "$DIR" = --selftest ]; then
-  t=$(mktemp -d); s=$(basename "$0")
-  printf '#!/bin/sh\nls x\n' > "$t/sach.sh"; bash "$0" "$t" >/dev/null; a=$?
-  printf '#!/bin/sh\nls x 2>/dev/nul''l\n' > "$t/ban.sh"; bash "$0" "$t" >/dev/null; b=$?
-  printf 'ban.sh\t2999-01-01\tthử\n' > "$t/.mien-nuot-stderr"; bash "$0" "$t" >/dev/null; c=$?
-  printf 'ban.sh\t2000-01-01\tthử\n' > "$t/.mien-nuot-stderr"; bash "$0" "$t" >/dev/null; d=$?
-  bash "$0" "$t/khong-co" >/dev/null; e=$?
+  t=$(mktemp -d)
+  printf '#!/bin/sh\nls x\n' > "$t/clean.sh"; bash "$0" "$t" >/dev/null; a=$?
+  printf '#!/bin/sh\nls x 2>/dev/nul''l\n' > "$t/bad.sh"; bash "$0" "$t" >/dev/null; b=$?
+  printf 'bad.sh\t2999-01-01\ttest\n' > "$t/$EXEMPT"; bash "$0" "$t" >/dev/null; c=$?
+  printf 'bad.sh\t2000-01-01\ttest\n' > "$t/$EXEMPT"; bash "$0" "$t" >/dev/null; d=$?
+  bash "$0" "$t/missing" >/dev/null; e=$?
   rm -rf "$t"
-  [ "$a$b$c$d$e" = "02021" ] && { echo "selftest OK"; exit 0; }; echo "selftest HỎNG: $a$b$c$d$e (muốn 02021)"; exit 1  # selftest hỏng = CỔNG hỏng ⇒ không đo được (1), không phải vi phạm (2)
+  [ "$a$b$c$d$e" = "02021" ] && { echo "selftest OK"; label pass selftest_ok; exit 0; }
+  echo "selftest BROKEN: $a$b$c$d$e (want 02021)"; label insufficient_evidence selftest_broken; exit 1  # broken selftest = broken GATE => cannot measure (1), not violation (2)
 fi
-[ -d "$DIR" ] || { echo "KHÔNG ĐO ĐƯỢC: $DIR không tồn tại"; exit 1; }
-hom_nay=$(date +%F); vi_pham=0; mien=0; qua_han=0
+[ -d "$DIR" ] || { echo "CANNOT MEASURE: $DIR does not exist"; label insufficient_evidence dir_missing; exit 1; }
+today=$(date +%F); violations=0; exempt=0; expired=0
 while IFS= read -r -d '' f; do
   rel=${f#"$DIR"/}
   n=$(grep -c '2>/dev/nul[l]' "$f"); [ "$n" -gt 0 ] || continue
-  han=""; [ -f "$DIR/.mien-nuot-stderr" ] && han=$(awk -F'\t' -v r="$rel" '$1==r{print $2; exit}' "$DIR/.mien-nuot-stderr")
-  if [ -z "$han" ] || ! [[ $han =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then vi_pham=$((vi_pham+n)); echo "ĐỎ — vi phạm: $rel ($n chỗ)"
-  elif [[ $han < $hom_nay ]]; then qua_han=$((qua_han+n)); echo "ĐỎ — miễn trừ QUÁ HẠN $han: $rel ($n chỗ)"
-  else mien=$((mien+n)); fi
+  until=""; [ -f "$DIR/$EXEMPT" ] && until=$(awk -F'\t' -v r="$rel" '$1==r{print $2; exit}' "$DIR/$EXEMPT")
+  if [ -z "$until" ] || ! [[ $until =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then violations=$((violations+n)); echo "RED — violation: $rel ($n places)"
+  elif [[ $until < $today ]]; then expired=$((expired+n)); echo "RED — exemption EXPIRED $until: $rel ($n places)"
+  else exempt=$((exempt+n)); fi
 done < <(find "$DIR" -type f \( -name '*.sh' -o -name '*.py' \) -not -name "$(basename "$0")" -print0)
-echo "vi_pham=$vi_pham mien_con_han=$mien mien_qua_han=$qua_han"
-[ $((vi_pham+qua_han)) -gt 0 ] && exit 2; exit 0
+echo "violations=$violations exempt_active=$exempt exempt_expired=$expired"
+[ $((violations+expired)) -gt 0 ] && { label violation "violations_${violations}_expired_$expired"; exit 2; }
+label pass clean; exit 0

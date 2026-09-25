@@ -1,1 +1,0 @@
-migrate-legacy-to-archive.sh	2026-10-25	6 chỗ `find … | wc -l` quyết định "rỗng" — lỗi quyền đọc ra 0. Công cụ di trú một lần: sửa, hoặc đưa vào 10-Archive trước hạn.

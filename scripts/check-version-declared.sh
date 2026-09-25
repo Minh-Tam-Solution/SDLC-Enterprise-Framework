@@ -1,85 +1,85 @@
 #!/usr/bin/env bash
-# Cổng MACHINE đầu tiên của v7 — "tài liệu này đã được nghiệm với phiên bản khung nào?"
+# First v7 MACHINE gate — "which framework version was this document verified against?"
 #
-# CƠ SỞ: Convention A (Amendment B, CEO phê chuẩn 2026-06-03, Framework 6.3.2)
-#   **Version**: X.Y.Z              = semver RIÊNG của tài liệu — ĐƯỢC PHÉP và NÊN khác khung
-#   sdlc_framework / **SDLC Framework Version**  = đã nghiệm với phiên bản khung nào
-# ⇒ Cổng này KHÔNG kiểm `**Version**`. Kiểm trường thứ hai.
-# ⇒ Khai phiên bản CŨ HƠN SSOT **KHÔNG phải lỗi** — Convention B (bump đồng loạt)
-#   đã bị BÁC vì nó làm khung phạm MM#9 Demand Before Surface. Chỉ ĐẾM, không cờ.
+# BASIS: Convention A
+#   **Version**: X.Y.Z              = the document's OWN semver — allowed, and expected, to differ from the framework
+#   sdlc_framework / **SDLC Framework Version**  = which framework version it was verified against
+# => This gate does NOT check `**Version**`. It checks the second field.
+# => Declaring a version OLDER than the SSOT is NOT an error — bulk version bumps (Convention B)
+#    were rejected because they add surface nobody asked for. Counted only, never flagged.
 #
-# G2 — ba rổ, không gộp:
-#   khai_moi  : đã nghiệm với SSOT hiện tại
-#   khai_cu   : đã nghiệm với bản cũ hơn        → HỢP LUẬT, chỉ đếm
-#   khong_khai: không có trường nào             → CHƯA ĐO ĐƯỢC ⇒ đây là phát hiện
+# G2 — three buckets, never merged:
+#   declared_current : verified against the current SSOT
+#   declared_older   : verified against an older version   -> legal, counted only
+#   undeclared       : no field at all                     -> NOT MEASURED => this is the finding
 #
-# Dùng: check-version-declared.sh [--block] [--selftest]  (cờ cũ --chan vẫn nhận, deprecated)
-#   không cờ → đếm, exit 0 (nấc 1 ADVISORY) · --block → exit 2 nếu khong_khai>0 (nấc 3 MACHINE)
-# Mã thoát (21-V7): 0 ĐẠT · 1 KHÔNG ĐO ĐƯỢC (mất SSOT / quét 0 file / tham số lạ) · 2 VI PHẠM.
-# Dòng cuối stdout = nhãn: result=pass|insufficient_evidence|violation gate=check-version-declared reason=<slug>
+# Usage: check-version-declared.sh [--block] [--selftest]  (legacy --chan still accepted, deprecated)
+#   no flag -> count, exit 0 (step 1 ADVISORY) · --block -> exit 2 if undeclared>0 (step 3 MACHINE)
+# Exit codes (v7/01): 0 PASS · 1 CANNOT MEASURE (no SSOT / 0 files scanned / unknown argument) · 2 VIOLATION.
+# Last stdout line = label: result=pass|insufficient_evidence|violation gate=check-version-declared reason=<slug>
 set -uo pipefail
-CHAN=0; TU_THU=0
-nhan() { echo "result=$1 gate=check-version-declared reason=$2"; }
+BLOCK=0; SELFTEST=0
+label() { echo "result=$1 gate=check-version-declared reason=$2"; }
 for a in "$@"; do case $a in
-  --block) CHAN=1;;
-  --chan) echo "DEPRECATED: --chan, use --block (removal 2026-12-31)" >&2; CHAN=1;;
-  --selftest) TU_THU=1;;
-  *) echo "KHÔNG ĐO ĐƯỢC: tham số lạ $a"; nhan insufficient_evidence tham_so_la; exit 1;; esac; done
+  --block) BLOCK=1;;
+  --chan) echo "DEPRECATED: --chan, use --block (removal 2026-12-31)" >&2; BLOCK=1;;
+  --selftest) SELFTEST=1;;
+  *) echo "CANNOT MEASURE: unknown argument $a"; label insufficient_evidence unknown_argument; exit 1;; esac; done
 
-if [ $TU_THU = 1 ]; then
-  # Fixture cục bộ: chép chính script vào cây tạm (ROOT = .. của script, scripts/ ở gốc repo) — không đụng repo thật.
+if [ $SELFTEST = 1 ]; then
+  # Local fixture: copy this script into a temp tree (ROOT = .. of the script, scripts/ at repo root) — never touches the real repo.
   t=$(mktemp -d); S="$t/scripts/$(basename "$0")"
   mkdir -p "$(dirname "$S")" "$t/d"; cp "$0" "$S"
-  kq() { local o rc; o=$(bash "$S" "$@"); rc=$?; echo "$rc|$(echo "$o" | grep -oE 'khai_cu=[0-9]+  khong_khai=[0-9]+')|${o##*$'\n'}"; }
+  kq() { local o rc; o=$(bash "$S" "$@"); rc=$?; echo "$rc|$(echo "$o" | grep -oE 'declared_older=[0-9]+  undeclared=[0-9]+')|${o##*$'\n'}"; }
   printf '# r\n**Version**: 9.9.9\n' > "$t/README.md"
-  a=$(kq --block)                                                           # chỉ có file miễn ⇒ quét 0 ⇒ 1 (G1)
-  printf '# a\n**SDLC Framework Version**: 9.9.9\n' > "$t/d/moi.md";     b=$(kq --block)  # khai đúng SSOT ⇒ 0
-  printf -- '---\nsdlc_framework: "1.0.0"\n---\n' > "$t/d/cu.md";       c=$(kq --block)  # khai_cu KHÔNG phải lỗi ⇒ 0
-  printf '# khong khai\n' > "$t/d/khong.md";                             d=$(kq --block)  # thiếu trường ⇒ 2
-  e=$(kq)                                                                   # nấc 1: chỉ đếm ⇒ 0
-  g=$(kq --chan)                                                            # cờ cũ --chan vẫn hoạt động như --block (deprecated)
-  rm "$t/README.md";                                                        f=$(kq --block)  # mất SSOT ⇒ 1
+  a=$(kq --block)                                                           # only exempt files => 0 scanned => 1 (G1)
+  printf '# a\n**SDLC Framework Version**: 9.9.9\n' > "$t/d/current.md";  b=$(kq --block)  # declares the SSOT => 0
+  printf -- '---\nsdlc_framework: "1.0.0"\n---\n' > "$t/d/older.md";    c=$(kq --block)  # declared_older is NOT an error => 0
+  printf '# undeclared\n' > "$t/d/none.md";                              d=$(kq --block)  # field missing => 2
+  e=$(kq)                                                                   # step 1: count only => 0
+  g=$(kq --chan)                                                            # legacy --chan still behaves like --block (deprecated)
+  rm "$t/README.md";                                                        f=$(kq --block)  # SSOT missing => 1
   rm -rf "$t"
   G=gate=check-version-declared
-  want="1|khai_cu=0  khong_khai=0|result=insufficient_evidence $G reason=quet_0_file
-0|khai_cu=0  khong_khai=0|result=pass $G reason=khong_khai_0
-0|khai_cu=1  khong_khai=0|result=pass $G reason=khong_khai_0
-2|khai_cu=1  khong_khai=1|result=violation $G reason=khong_khai_1
-0|khai_cu=1  khong_khai=1|result=pass $G reason=nac1_chi_dem_khong_khai_1
-2|khai_cu=1  khong_khai=1|result=violation $G reason=khong_khai_1
-1||result=insufficient_evidence $G reason=thieu_ssot_readme"
+  want="1|declared_older=0  undeclared=0|result=insufficient_evidence $G reason=scanned_0_files
+0|declared_older=0  undeclared=0|result=pass $G reason=undeclared_0
+0|declared_older=1  undeclared=0|result=pass $G reason=undeclared_0
+2|declared_older=1  undeclared=1|result=violation $G reason=undeclared_1
+0|declared_older=1  undeclared=1|result=pass $G reason=step1_count_only_undeclared_1
+2|declared_older=1  undeclared=1|result=violation $G reason=undeclared_1
+1||result=insufficient_evidence $G reason=ssot_readme_missing"
   got=$(printf '%s\n' "$a" "$b" "$c" "$d" "$e" "$g" "$f")
-  [ "$got" = "$want" ] && { echo "selftest OK (7 ca)"; nhan pass selftest_ok; exit 0; }
-  echo "selftest HỎNG:"; diff <(echo "$want") <(echo "$got")
-  nhan insufficient_evidence selftest_hong; exit 1  # selftest hỏng = CỔNG hỏng ⇒ không đo được (1), không phải vi phạm (2)
+  [ "$got" = "$want" ] && { echo "selftest OK (7 cases)"; label pass selftest_ok; exit 0; }
+  echo "selftest BROKEN:"; diff <(echo "$want") <(echo "$got")
+  label insufficient_evidence selftest_broken; exit 1  # broken selftest = broken GATE => cannot measure (1), not violation (2)
 fi
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
-# File META của repo — KHÔNG phải tài liệu luật ⇒ miễn. Danh sách KHAI TAY, không suy.
+# Repo META files — not rule documents => exempt. The list is DECLARED by hand, never inferred.
 META='^(README|CHANGELOG|CONTENT-MAP|CONTRIBUTING|CODE_OF_CONDUCT|SECURITY|DEPRECATION-POLICY|CLAUDE)\.md$'
 
-# Tách "không có README" khỏi "README không khai" — hai nguyên nhân, hai nhãn (G2).
-[ -f "$ROOT/README.md" ] || { echo "❌ CHƯA ĐO ĐƯỢC: không có $ROOT/README.md (SSOT)"; nhan insufficient_evidence thieu_ssot_readme; exit 1; }
+# Keep "no README" apart from "README declares no version" — two causes, two labels (G2).
+[ -f "$ROOT/README.md" ] || { echo "CANNOT MEASURE: no $ROOT/README.md (SSOT)"; label insufficient_evidence ssot_readme_missing; exit 1; }
 SSOT="$(grep -m1 -oE '^\*\*Version\*\*: [0-9]+\.[0-9]+\.[0-9]+' "$ROOT/README.md" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')"
-[ -n "$SSOT" ] || { echo "❌ CHƯA ĐO ĐƯỢC: README.md không khai '**Version**: x.y.z'"; nhan insufficient_evidence readme_khong_khai_version; exit 1; }
+[ -n "$SSOT" ] || { echo "CANNOT MEASURE: README.md declares no '**Version**: x.y.z'"; label insufficient_evidence readme_version_missing; exit 1; }
 
-khai_moi=0; khai_cu=0; khong_khai=0; mien=0; DS=$(mktemp); trap 'rm -f "$DS"' EXIT  # mktemp: hai lần chạy song song không ghi đè nhau
+declared_current=0; declared_older=0; undeclared=0; exempt=0; DS=$(mktemp); trap 'rm -f "$DS"' EXIT  # mktemp: two parallel runs never overwrite each other
 while IFS= read -r -d '' f; do
   rel="${f#$ROOT/}"
   if [[ "$rel" =~ / ]]; then base="${rel##*/}"; else base="$rel"; fi
-  if [[ ! "$rel" =~ / ]] && [[ "$base" =~ $META ]]; then mien=$((mien+1)); continue; fi
+  if [[ ! "$rel" =~ / ]] && [[ "$base" =~ $META ]]; then exempt=$((exempt+1)); continue; fi
   v=$(head -20 "$f" | grep -m1 -oE 'sdlc_framework: *"?[0-9]+\.[0-9]+\.[0-9]+|^\*\*SDLC Framework Version\*\*: *[0-9]+\.[0-9]+\.[0-9]+' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
-  if   [ -z "$v" ];            then khong_khai=$((khong_khai+1)); echo "$rel" >> "$DS"
-  elif [ "$v" = "$SSOT" ];     then khai_moi=$((khai_moi+1))
-  else                              khai_cu=$((khai_cu+1)); fi
+  if   [ -z "$v" ];            then undeclared=$((undeclared+1)); echo "$rel" >> "$DS"
+  elif [ "$v" = "$SSOT" ];     then declared_current=$((declared_current+1))
+  else                              declared_older=$((declared_older+1)); fi
 done < <(find "$ROOT" -name '*.md' -not -path '*/.git/*' -not -path '*/10-Archive/*' -not -path '*/site/*' -print0)
 
-tong=$((khai_moi+khai_cu+khong_khai+mien))
-echo "SSOT=$SSOT  khai_moi=$khai_moi  khai_cu=$khai_cu  khong_khai=$khong_khai  mien=$mien  tong=$tong"
-echo "  khai_cu KHÔNG phải lỗi (Convention A) — chỉ là bản đồ nợ nghiệm thu."
-# G1: quét 0 file cần đo ⇒ "sạch" không có nghĩa ⇒ không đo được, không phải đạt.
-[ $((tong-mien)) -gt 0 ] || { echo "❌ CHƯA ĐO ĐƯỢC: không có file nào ngoài danh sách miễn"; nhan insufficient_evidence quet_0_file; exit 1; }
-[ "$khong_khai" -gt 0 ] && { echo "--- $khong_khai file CHƯA BAO GIỜ ghi nhận nghiệm với phiên bản nào (10 đầu) ---"; head -10 "$DS"; }
-[ "$khong_khai" = 0 ] && { nhan pass khong_khai_0; exit 0; }
-[ "$CHAN" = 1 ] && { nhan violation "khong_khai_$khong_khai"; exit 2; }
-nhan pass "nac1_chi_dem_khong_khai_$khong_khai"; exit 0
+total=$((declared_current+declared_older+undeclared+exempt))
+echo "SSOT=$SSOT  declared_current=$declared_current  declared_older=$declared_older  undeclared=$undeclared  exempt=$exempt  total=$total"
+echo "  declared_older is NOT an error (Convention A) — it only maps verification debt."
+# G1: 0 files to measure => "clean" means nothing => cannot measure, not pass.
+[ $((total-exempt)) -gt 0 ] || { echo "CANNOT MEASURE: no file outside the exempt list"; label insufficient_evidence scanned_0_files; exit 1; }
+[ "$undeclared" -gt 0 ] && { echo "--- $undeclared files have NEVER recorded which version they were verified against (first 10) ---"; head -10 "$DS"; }
+[ "$undeclared" = 0 ] && { label pass undeclared_0; exit 0; }
+[ "$BLOCK" = 1 ] && { label violation "undeclared_$undeclared"; exit 2; }
+label pass "step1_count_only_undeclared_$undeclared"; exit 0

@@ -1,4 +1,4 @@
-name: Cổng v7 (đếm — nấc 1)
+name: v7 version-declared gate (count, step 1)
 on:
   pull_request:
   push:
@@ -8,26 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: selftest cổng (ca đỏ 2 · ca xanh 0 · mất SSOT 1 · quét 0 file 1 · khai_cu không lỗi)
+      - name: selftest (red 2 · green 0 · no SSOT 1 · 0 files scanned 1 · declared_older is not an error)
         run: bash scripts/check-version-declared.sh --selftest
-      - name: Nghiệm thu phiên bản (Convention A) — ĐẾM, chưa chặn
+      - name: Version declared (Convention A) — COUNT, does not block yet
         run: bash scripts/check-version-declared.sh
-      - name: Ca DƯƠNG bắt buộc (G3) — cổng phải ĐỎ được
+      - name: Positive case (G3) — the gate must be able to go RED
         run: |
           d=$(mktemp -d); cp -r . "$d/fw"; rm -f "$d/fw/README.md"
           if bash "$d/fw/scripts/check-version-declared.sh"; then
-            echo "❌ G3: bỏ README (mất SSOT) mà cổng vẫn XANH — cổng không đo gì cả"; exit 1
+            echo "G3 FAILED: README removed (SSOT missing) and the gate is still GREEN — it measures nothing"; exit 1
           fi
-          echo "✅ G3: cổng đỏ đúng khi mất SSOT"
-      - name: Ca DƯƠNG lõi đếm (G3) — cấy 1 file không khai + 1 file khai bản hiện hành
+          echo "G3 OK: gate goes red when the SSOT is missing"
+      - name: Positive case (G3) for the counter — plant 1 undeclared file + 1 file declaring the current version
         run: |
           S=scripts/check-version-declared.sh
-          so() { bash "$S" | grep -oE "$1=[0-9]+" | cut -d= -f2; }
-          k0=$(so khong_khai); m0=$(so khai_moi)
+          num() { bash "$S" | grep -oE "$1=[0-9]+" | cut -d= -f2; }
+          u0=$(num undeclared); c0=$(num declared_current)
           ssot=$(grep -m1 -oE '\*\*Version\*\*: [0-9.]+' README.md | grep -oE '[0-9.]+$')
-          printf '# cay\n' > 02-Core-Methodology/ZZ-cay-khong-khai.md
-          printf '# cay\n**SDLC Framework Version**: %s\n' "$ssot" > 02-Core-Methodology/ZZ-cay-khai-moi.md
-          k1=$(so khong_khai); m1=$(so khai_moi)
-          echo "khong_khai $k0→$k1 · khai_moi $m0→$m1"
-          [ "$k1" = $((k0+1)) ] && [ "$m1" = $((m0+1)) ] || { echo "❌ G3: lõi đếm không thấy file cấy"; exit 1; }
-          echo "✅ G3: lõi đếm thấy đúng 2 file cấy"
+          printf '# plant\n' > v7/ZZ-plant-undeclared.md
+          printf '# plant\n**SDLC Framework Version**: %s\n' "$ssot" > v7/ZZ-plant-declared.md
+          u1=$(num undeclared); c1=$(num declared_current)
+          echo "undeclared $u0->$u1 · declared_current $c0->$c1"
+          [ "$u1" = $((u0+1)) ] && [ "$c1" = $((c0+1)) ] || { echo "G3 FAILED: the counter did not see the planted files"; exit 1; }
+          echo "G3 OK: the counter saw both planted files"

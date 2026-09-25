@@ -20,18 +20,17 @@
 ### Archived first (11 items — v7 archive lot 1, 2026-09-25)
 
 Each item below was tied to a governance engine, index, or config that has since been retired
-or gone stale with zero readers. Full reasoning: survey docs under
-`Tech-Ecos/09-govern/02-executive-decisions/khao-sat-v7-2026-09-25/`.
+or gone stale with zero readers.
 
 - `03-AI-GOVERNANCE/08-Governance-Decision-Matrix.md` → `10-Archive/by-topic/ai-governance-v7-retired/` — described a retired governance engine; routed on the now-dropped Vibecoding Index, which conflicted with SPEC-0001's own definition.
 - `03-AI-GOVERNANCE/09-Governance-Metrics.md` → same — KPIs on the same retired engine's state machine; none of its ~60 figures ship with a reproducible command.
 - `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` → same — L0–L3 ladder scores manual artifact creation that mainstream AI CLIs now provide natively, and its L1–L3 labels now collide with v7's own orchestration-tier naming.
-- `03-AI-GOVERNANCE/17-AGENTIC-OS-PATTERNS.md` → same — validation record for patterns "verified" by SDLC-Orchestrator v2, which is retired (0 requests/33 days).
+- `03-AI-GOVERNANCE/17-AGENTIC-OS-PATTERNS.md` → same — validation record for patterns "verified" by a reference platform that is now retired (0 requests in 33 days).
 - `03-AI-GOVERNANCE/18-LLM-MODEL-STRATEGY.md` → same — 2 of 3 listed fallback models don't exist on the current host; cascade is now implemented at the gateway layer, not in this doc.
-- `03-AI-GOVERNANCE/19-FEDERATED-PLATFORM-STANDARD.md` → same — 2 of the 4 named platforms (SDLC-Orchestrator, EndiorBot) are retired, a third (MTClaw) closed its SDLC lane.
+- `03-AI-GOVERNANCE/19-FEDERATED-PLATFORM-STANDARD.md` → same — 2 of the 4 named platforms are retired and a third closed its SDLC lane.
 - `03-AI-GOVERNANCE/20-EVIDENCE-INTEGRATION-STANDARD.md` → same — API contract of a retired product (no running container); v7 evidence is git + CI logs only.
 - `02-Core-Methodology/Governance-Compliance/gates.yaml` → same — frozen at 6.2.0 for 7 months, 0 scripts in this repo's `git log` history ever read it.
-- `02-Core-Methodology/Governance-Compliance/anti-vibecoding.yaml` → same — same staleness as `gates.yaml`; replaced by `cong-v7.yml` + `kiem-luat-v7.sh`.
+- `02-Core-Methodology/Governance-Compliance/anti-vibecoding.yaml` → same — same staleness as `gates.yaml`; replaced by `.github/workflows/v7-rules-gate.yml` + `scripts/check-rules-v7.sh`.
 - `05-Templates-Tools/07-Scripts/compliance_sdlc_scanner.py` → `10-Archive/scripts/` — fails on every execution path (crash with no arguments; wrong filename with arguments); no CI or script calls it.
 - `05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh` → same — targets the `{stage}/99-Legacy/` scheme this repo's own `10-Archive/README.md` retired 2026-04-28.
 
@@ -92,7 +91,7 @@ Projected +31 per RFC-002 §3.3; actual verified post-edit.
 **Type**: PATCH version bump (6.3.1 → 6.3.2) — additive operating principle + inward reclassification (no breaking changes to existing pillars/sections)
 **Status**: ACTIVE
 **[DT] External-adopter mark**: Validated **inward** at NQH/MTS via the Amendment B inward-application catalog (see split-out file [09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md](09-Continuous-Improvement/AmendmentB-NQH-Inward-Application-Catalog.md)). **External-adopter value is NOT yet validated** — NQH dogfood-first per the first-customer principle. External adopters should evaluate fit against their own surface inventory before applying; the principle remains additive (no deletion of existing surfaces) so adoption is reversible.
-**Driver**: CEO Directive 2026-06-02 "Capability Uplift v4 Reframe" (kill 12-week capability program; adopt Constraint-First + Portfolio Prune; ship usable features frequently instead of accreting unused surface) + CTO honest reframe 2026-06-02 (SDLC-Orch internal role = 2 daily-use surfaces only) + CEO ship-discipline mandate 2026-06-03 (*"chúng ta phải rất kỷ luật, ship thường xuyên từng tính năng dùng được ngay, thay vì làm rất nhiều mà useless"*)
+**Driver**: CEO Directive 2026-06-02 "Capability Uplift v4 Reframe" (kill 12-week capability program; adopt Constraint-First + Portfolio Prune; ship usable features frequently instead of accreting unused surface) + CTO honest reframe 2026-06-02 (SDLC-Orch internal role = 2 daily-use surfaces only) + CEO ship-discipline mandate 2026-06-03 (*"we must be very disciplined: ship usable features often, instead of building a lot that is useless"*)
 
 ### What Changed
 
@@ -155,7 +154,7 @@ A new pillar would itself be a violation of the principle (adding surface withou
 **Amendment Date**: April 28, 2026
 **Type**: REPOSITORY HOUSEKEEPING (no version bump) — content unchanged, organization improved
 **Status**: PRODUCTION-READY
-**Driver**: Pre-public-OSS-launch quality review — CEO directive "khi đưa SDLC Framework ra cộng đồng, nó phải là thứ có giá trị"
+**Driver**: Pre-public-OSS-launch quality review — CEO directive "when the SDLC Framework goes to the community, it must be something of value"
 
 ### What Changed
 
@@ -563,7 +562,7 @@ All 3 documents sit in the **Core Ring** (timeless methodology):
 2. **05-Templates-Tools/02-AI-Tools/deployment_go-live-readiness-checklist.md** - 100-item tactical checklist
 3. **05-Templates-Tools/02-AI-Tools/deployment_go-live-readiness-assessment.md** - Go/No-Go scoring
 4. **05-Templates-Tools/02-AI-Tools/governance_maturity-assessment-framework.md** - Per-stage 0-100%
-5. **05-Templates-Tools/02-AI-Tools/governance_risk-register-analyzer.md** - L×I scoring matrix
+5. **05-Templates-Tools/02-AI-Tools/governance_risk-register-analyzer.md** - LxI scoring matrix
 6. **07-Implementation-Guides/SDLC-Code-Review-Guide.md** - Unified (consolidated from 3 guides)
 
 ---
@@ -1879,7 +1878,7 @@ SE4A (Software Engineering for Agents) - Agent Executor:
 
 ---
 
-#### 5. SASE × SDLC Stage Mapping (NEW)
+#### 5. SASE x SDLC Stage Mapping (NEW)
 
 | Stage | SASE Discipline | Primary Activity |
 |-------|-----------------|------------------|

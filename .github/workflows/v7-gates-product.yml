@@ -1,6 +1,6 @@
 name: v7-gates-product
 # Reusable workflow: v7 gates for a PRODUCT repo (a repo that adopts the framework), run_scope=PRODUCT_CI.
-# The framework's own CI (cong-v7*.yml) measures the framework repo; this one measures the caller.
+# The framework's own CI (v7-gate.yml, v7-rules-gate.yml) measures the framework repo; this one measures the caller.
 #
 # Caller example (pin BOTH `uses:` and `framework_ref` to the same full commit SHA):
 #   jobs:
@@ -24,7 +24,7 @@ name: v7-gates-product
 #               (the runner does not expand variables); to use a framework sample, copy it in.
 #   2. approver check-pr-approver.sh, pull_request events only. The approver list is read from the PR's
 #               BASE commit, so the PR under review cannot add names to its own approver list.
-#   3. verdict  every step above runs (if: always()); exit codes follow 21-V7-RULE-CONTRACT:
+#   3. verdict  every step above runs (if: always()); exit codes follow v7/01-rule-contract.md:
 #               0 pass · 1 insufficient evidence · 2 violation.
 #               GitHub Actions jobs have no "neutral" conclusion (only Checks-API check runs do), so:
 #               1 => job succeeds with a ::warning:: annotation · 2 => job fails.

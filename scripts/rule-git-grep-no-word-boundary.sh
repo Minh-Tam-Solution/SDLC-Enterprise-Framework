@@ -1,24 +1,29 @@
 #!/usr/bin/env bash
-# Luật 4: cấm `\b` trong `git grep -E`. Nó khớp KHÔNG GÌ và trả về THÀNH CÔNG — im lặng.
-#   Ca đốt 25/09: `git grep -E '\bMUST\b'` ra 0 dòng (chuỗi có thật). Cùng buổi ra 0 "không còn chỗ ghi 8"
-#   rồi 5 "câu MUST" (thật là hàng trăm) — hai lần sai ngược hướng, chỉ lộ nhờ ca dương. Dùng `-w` hoặc `-P`.
-# Quét file CHẠY ĐƯỢC (*.sh *.py *.yml *.yaml Makefile), không quét văn xuôi — tài liệu kể ca đốt không phải lệnh.
-# Mã thoát (plan §6.22 A): 0 đạt · 1 không đo được · 2 vi phạm.
+# Rule L4: forbid `\b` in `git grep -E`. It matches NOTHING and still returns SUCCESS — silently.
+#   Burn case: `git grep -E '\bMUST\b'` returned 0 lines (the string was there). The same session then
+#   miscounted in the opposite direction (5 vs. hundreds) — both silent, both exposed only by a positive control.
+#   Use `-w` or `-P`.
+# Scans RUNNABLE files (*.sh *.py *.yml *.yaml Makefile), not prose — a doc that tells the burn case is not a command.
+# Exit codes (v7/01): 0 pass · 1 cannot measure · 2 violation. Last stdout line is the label.
 set -u
-GOC=${1:-.}
-if [ "$GOC" = --selftest ]; then
+ROOT=${1:-.}
+label() { echo "result=$1 gate=rule-git-grep-no-word-boundary reason=$2"; }
+if [ "$ROOT" = --selftest ]; then
   t=$(mktemp -d)
-  printf 'git grep -w MUST\n' > "$t/sach.sh"; bash "$0" "$t" >/dev/null; a=$?
-  printf 'git grep -E %s\n' "'\\bMUST\\b'" > "$t/ban.sh"; bash "$0" "$t" >/dev/null; b=$?
-  bash "$0" "$t/khong-co" >/dev/null; c=$?
+  printf 'git grep -w MUST\n' > "$t/clean.sh"; bash "$0" "$t" >/dev/null; a=$?
+  printf 'git grep -E %s\n' "'\\bMUST\\b'" > "$t/bad.sh"; bash "$0" "$t" >/dev/null; b=$?
+  bash "$0" "$t/missing" >/dev/null; c=$?
   rm -rf "$t"
-  [ "$a$b$c" = "021" ] && { echo "selftest OK"; exit 0; }; echo "selftest HỎNG: $a$b$c (muốn 021)"; exit 1  # selftest hỏng = CỔNG hỏng ⇒ không đo được (1), không phải vi phạm (2)
+  [ "$a$b$c" = "021" ] && { echo "selftest OK"; label pass selftest_ok; exit 0; }
+  echo "selftest BROKEN: $a$b$c (want 021)"; label insufficient_evidence selftest_broken; exit 1  # broken selftest = broken GATE => cannot measure (1), not violation (2)
 fi
-[ -d "$GOC" ] || { echo "KHÔNG ĐO ĐƯỢC: $GOC không tồn tại"; exit 1; }
-vi_pham=0
+[ -d "$ROOT" ] || { echo "CANNOT MEASURE: $ROOT does not exist"; label insufficient_evidence root_missing; exit 1; }
+violations=0
 while IFS= read -r -d '' f; do
-  while IFS= read -r l; do vi_pham=$((vi_pham+1)); echo "ĐỎ — vi phạm: ${f#"$GOC"/}: $l"; done \
+  while IFS= read -r l; do violations=$((violations+1)); echo "RED — violation: ${f#"$ROOT"/}: $l"; done \
     < <(grep -nE 'git grep' "$f" | grep -E -- '(-E|--extended-regexp)' | grep -F '\''b' )
-done < <(find "$GOC" -type f \( -name '*.sh' -o -name '*.py' -o -name '*.yml' -o -name '*.yaml' -o -name Makefile \) \
+done < <(find "$ROOT" -type f \( -name '*.sh' -o -name '*.py' -o -name '*.yml' -o -name '*.yaml' -o -name Makefile \) \
           -not -path '*/.git/*' -not -path '*/10-Archive/*' -not -name "$(basename "$0")" -print0)
-echo "vi_pham=$vi_pham"; [ $vi_pham -gt 0 ] && exit 2; exit 0
+echo "violations=$violations"
+[ $violations -gt 0 ] && { label violation "violations_$violations"; exit 2; }
+label pass clean; exit 0

@@ -3,8 +3,8 @@
 #   FILE section = routing unit · LINE = enforcement unit. A "## Rules v7" section in that file
 #   holds the live rules table; anything else in the file is reference (no cmd column value).
 #   Table header MUST be |id|class|cmd|burn_case|[run_scope|] — wrong name/order ⇒ misdeclared.
-#   Legacy header |id|lop|lenh|ca_dot|[pham_vi_chay|] (and heading "## Luật v7") still ACCEPTED,
-#   logs a deprecation notice to stderr, removal 2026-12-31 — see 21-V7-RULE-CONTRACT.md §1.
+#   Legacy header |id|lop|lenh|ca_dot|[pham_vi_chay|] (and the legacy Vietnamese heading "## Lu?t v7")
+#   still ACCEPTED, logs a deprecation notice to stderr, removal 2026-12-31.
 #   run_scope ∈ FRAMEWORK_REPO · PRODUCT_CI · RUNTIME_PROBE; missing cell/column = FRAMEWORK_REPO,
 #   COUNT ONLY (missing_scope_column). Only rows whose run_scope = --run-scope run (default
 #   FRAMEWORK_REPO) — filtered BEFORE running, so a cmd needing another env doesn't fail here for
@@ -58,10 +58,11 @@ case $RUN_SCOPE in FRAMEWORK_REPO|PRODUCT_CI|RUNTIME_PROBE) ;;
 scan_table() {
   awk -v f="$1" '
     /^## / {
-      legacy_h = ($0 ~ /^## Luật v7[[:space:]]*$/)
+      # ponytail: legacy heading matched without its Vietnamese letter so this file stays English-only; goes 2026-12-31.
+      legacy_h = ($0 ~ /^## Lu[^[:space:]]+t v7[[:space:]]*$/) && !($0 ~ /^## Rules v7/)
       new_h    = ($0 ~ /^## Rules v7[[:space:]]*$/)
       t = legacy_h || new_h
-      if (legacy_h) print "DEPRECATED heading \"## Luật v7\" in " f " — rename to \"## Rules v7\" (removal 2026-12-31)" > "/dev/stderr"
+      if (legacy_h) print "DEPRECATED legacy heading in " f " — rename to \"## Rules v7\" (removal 2026-12-31)" > "/dev/stderr"
       b = 0; next
     }
     !/^\|/ { b = 0; next }
@@ -155,7 +156,7 @@ if [ $SELFTEST = 1 ]; then
   bash "$0" --root "$t" --table v7/does-not-exist.md >/dev/null 2>&1; rc_missing=$?
   # Legacy flags/header must keep working, with a deprecation notice on stderr, same counts.
   legacy_err=$(bash "$0" --goc "$t" --pham-vi v7/01-rule-contract.md --chan 2>&1 >/dev/null); rc_legacy_flags=$?
-  printf '# a\n## Luật v7\n| id | lop | lenh | ca_dot |\n|---|---|---|---|\n| L1 | MACHINE | `bash s/pass.sh` | case |\n' > "$t/v7/01-rule-contract.md"
+  printf '# a\n## Lu\341\272\255t v7\n| id | lop | lenh | ca_dot |\n|---|---|---|---|\n| L1 | MACHINE | `bash s/pass.sh` | case |\n' > "$t/v7/01-rule-contract.md"
   legacy_out=$(bash "$0" --root "$t" 2>"$t/legacy.err"); legacy_hdr_err=$(cat "$t/legacy.err")
   legacy_got=$(echo "$legacy_out" | grep -oE 'passed=[0-9]+ violations=[0-9]+ unmeasurable=[0-9]+ reference=[0-9]+ misdeclared=[0-9]+')
   printf 'case $1 in --selftest) exit 0;; esac\nexit $?\n' > "$t/s/swallows.sh"

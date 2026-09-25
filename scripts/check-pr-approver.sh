@@ -9,7 +9,7 @@
 #   reviewer is not a bot               (user.type == Bot or login ends in [bot])
 #   review commit_id == current head SHA  (an approval on an older commit does not cover new commits)
 #
-# Exit codes (21-V7-RULE-CONTRACT): 0 pass · 1 insufficient evidence · 2 violation.
+# Exit codes (v7/01-rule-contract.md): 0 pass · 1 insufficient evidence · 2 violation.
 #   1 = approvers file missing/empty · gh/jq missing or unauthenticated · API error ·
 #       PR author is marked `shared` in the approvers file (one account used by a human AND an agent:
 #       nobody can tell who wrote the change, so "reviewer != author" cannot be evaluated).
@@ -48,7 +48,7 @@ if [ $SELFTEST = 1 ]; then
     d="$t/$1"; mkdir -p "$d"
     printf '{"user":{"login":"%s","type":"User"},"head":{"sha":"%s"}}' "$3" "$head" > "$d/pr.json"
     printf '%s' "$4" > "$d/reviews.json"
-    out=$(GH_FIXTURE_DIR="$d" bash "$0" --repo o/r --pr 1 --approvers "${5:-$t/approvers}" 2>/dev/null); rc=$?
+    out=$(GH_FIXTURE_DIR="$d" bash "$0" --repo o/r --pr 1 --approvers "${5:-$t/approvers}" 2>"$d/stderr"); rc=$?
     lab=${out##*$'\n'}
     case $2 in 0) w=pass;; 1) w=insufficient_evidence;; 2) w=violation;; esac
     if [ "$rc" = "$2" ] && [[ $lab == "result=$w gate=$gate "* ]]; then echo "ok   $1 (rc=$rc)"
