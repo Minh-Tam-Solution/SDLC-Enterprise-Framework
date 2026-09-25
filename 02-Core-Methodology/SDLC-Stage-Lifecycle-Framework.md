@@ -19,12 +19,18 @@ consolidates:
 
 ## Tier Definitions (Single Source — referenced throughout)
 
-| Tier | Team Size | Description | Required Stages | Skip Risk Tolerance |
-|------|-----------|-------------|----------------|-------------------|
-| **LITE** | 1-2 developers | Prototypes, MVPs, internal tools | 00, 01, 02, 04 | HIGH (speed > process) |
-| **STANDARD** | 3-5 developers | Small production apps | 00-06 | MEDIUM |
-| **PROFESSIONAL** | 3-10 developers | Production apps, moderate complexity | 00-07 | LOW |
-| **ENTERPRISE** | 10+ developers | Regulated industries, high complexity | All 10 (00-09) | ZERO |
+Tier follows the **risk of what is being built**, not team size — same criteria as the [README 4-Tier Classification](../README.md#4-tier-classification).
+
+| Tier | Criteria (any one) | Required Stages | Skip Risk Tolerance |
+|------|--------------------|----------------|-------------------|
+| **LITE** | Not deployed to production; the only user is the author; no real data | 00, 01, 02, 04 | HIGH (speed > process) |
+| **STANDARD** | Runs for internal users; rollback is a git revert; no money, no personal data | 00-06 | MEDIUM |
+| **PROFESSIONAL** | Output is used by other people to make decisions; **or** migrates operational data; **or** has users outside the team | 00-07 | LOW |
+| **ENTERPRISE** | Money path · personal data (PII) · accounting / contracts · effects that cannot be reversed | All 10 (00-09) | ZERO |
+
+Tier is derived from repository evidence, declared service metadata and deployment traces (highest of the three); it may only be declared **up** — lowering it requires a recorded decision with an ID.
+
+> *Legacy:* v6.x classified tiers by team size. Replaced 2026-09-25 — a headcount-based tier measures the input, not the consequences.
 
 ## Stage Enumeration (Single Source — referenced throughout)
 
@@ -868,7 +874,7 @@ Stage 02 (DESIGN):
 
 ## Tier-Specific Exit Criteria
 
-### LITE Tier (1-2 developers)
+### LITE Tier
 
 **Required Stages**: 00, 01, 02, 04  
 **Optional Stages**: 03, 05, 06, 07, 08, 09
@@ -890,14 +896,14 @@ Stage 02 (DESIGN) - LITE:
   signoff: CTO approval via Slack (not formal review)
 ```
 
-### PRO Tier (3-10 developers)
+### PRO Tier
 
 **Required Stages**: 00, 01, 02, 03, 04, 05, 06, 07  
 **Optional Stages**: 08 (if team < 3), 09 (if no compliance)
 
 **Standard Exit Criteria**: As documented above
 
-### ENTERPRISE Tier (10+ developers)
+### ENTERPRISE Tier
 
 **Required Stages**: All 10 stages (00-09)  
 **Optional Stages**: None (all mandatory)

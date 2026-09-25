@@ -71,12 +71,18 @@ SDLC 6.5.0 is a **7-Pillar AI+Human Excellence Framework** with:
 
 ## 4-Tier Classification
 
-| Tier | Team Size | Required Stages | Documentation |
-|------|-----------|-----------------|---------------|
-| **LITE** | 1-2 | 00, 01, 02, 04 | README + .env.example |
-| **STANDARD** | 3-10 | 00-02, 04-06 | + CLAUDE.md + /docs |
-| **PROFESSIONAL** | 10-50 | All 10 stages | + Full ADRs + Compliance |
-| **ENTERPRISE** | 50+ | All 10 stages | + Executive Reports + Audit |
+Tier follows the **risk of what is being built**, not the size of the team building it.
+
+| Tier | Criteria (any one) | Skip risk | Required Stages | Documentation |
+|------|--------------------|-----------|-----------------|---------------|
+| **LITE** | Not deployed to production; the only user is the author; no real data | HIGH — nobody downstream depends on it | 00, 01, 02, 04 | README + .env.example |
+| **STANDARD** | Runs for internal users; rollback is a git revert; no money, no personal data | MEDIUM — failures are visible and reversible | 00-02, 04-06 | + CLAUDE.md + /docs |
+| **PROFESSIONAL** | Output is used by other people to make decisions; **or** migrates operational data; **or** has users outside the team | LOW — wrong output gets acted on; data changes are hard to undo | All 10 stages | + Full ADRs + Compliance |
+| **ENTERPRISE** | Money path · personal data (PII) · accounting / contracts · effects that cannot be reversed | ZERO — harm cannot be rolled back | All 10 stages | + Executive Reports + Audit |
+
+**How the tier is set:** derived from evidence, not chosen — the **repository** (e.g. a migrations directory, payment or personal-data code paths), the **declared service metadata** (data class, who acts on the output, whether it can be rolled back) and **deployment traces** (production target, scheduled jobs, running services). The tier is the highest of the three. A project may always declare a **higher** tier; declaring a **lower** one requires a recorded decision with an ID.
+
+> *Legacy:* v6.x classified tiers by team size. Replaced 2026-09-25 — a headcount-based tier measures the input, not the consequences.
 
 ---
 
