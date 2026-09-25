@@ -325,14 +325,17 @@ All templates and tools are mapped to the complete 10-stage lifecycle:
 
 ---
 
-### **07-Scripts/** (Validators + Automation)
+### **scripts/** (Validators + Automation)
+
+> Moved from `07-Scripts/` to `scripts/` at the repo root (F4, 2026-09-25); a deprecated stub
+> remains at `07-Scripts/README.md` until 2026-12-31.
 
 **Core compliance validators + quick-start setup**
 - SDLC 6.3.0 validator (10-stage + 4-tier compliance)
 - Design Thinking validator (5-phase methodology)
 - Solo developer setup (2 days -> 10x productivity)
 
-**[Automation: 07-Scripts/README.md](07-Scripts/README.md)**
+**[Automation: ../scripts/README.md](../scripts/README.md)**
 
 ---
 
@@ -398,9 +401,7 @@ All templates and tools are mapped to the complete 10-stage lifecycle:
 │   ├── README.md                    # Tier-based usage guide
 │   └── Design-Thinking-*.md         # Stage 00-01 templates (FLATTENED 6.0.0)
 │
-├── 07-Scripts/                       # AUTOMATION
-│   ├── README.md                    # Scripts guide
-│   └── (validation scripts - all at level 2, FLATTENED 6.0.0)
+│   # scripts/ MOVED to repo root (F4, 2026-09-25) — see ../scripts/README.md
 │
 └── 08-Project-Templates/             # NEW PROJECT SETUP
     ├── README.md                    # Project templates guide
@@ -423,7 +424,7 @@ Step 2 (5 min): Configure basic AI
   - Copy template to your project
 
 Step 3 (5 min): Validate setup
-  - Go to: 07-Scripts/
+  - Go to: ../scripts/ (repo root)
   - Run validator on your project
 
 Result: 10x productivity unlocked

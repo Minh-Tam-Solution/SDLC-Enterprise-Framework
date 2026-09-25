@@ -1,0 +1,27 @@
+name: v7-rules-gate
+# Hợp đồng Luật v7 — lô 1. Nấc 1 (ADVISORY): tỉ lệ file luật chỉ ĐẾM, không chặn.
+# Chặn thật ngay: selftest của cổng + selftest mọi lệnh luật (L3) — cổng chưa từng đỏ thì "xanh" là chưa đo.
+on: [pull_request, push]
+jobs:
+  luat:
+    runs-on: ubuntu-latest
+    permissions: { contents: read }
+    steps:
+      - uses: actions/checkout@v4
+      - name: selftest cổng (ca đỏ + ca xanh + ca không đo được)
+        run: bash scripts/check-rules-v7.sh --selftest
+      # v7/01-rule-contract.md do PR F1 tạo (sau F4 theo thứ tự merge) — tới lúc đó cổng thật
+      # trả UNMEASURABLE (mã 1, "table not found"), KHÔNG phải lỗi của nhánh này; nấc 1 vốn dĩ
+      # "đếm, không chặn" nên không biến việc chưa có bảng thành CI đỏ. Chỉ chặn thật khi mã 2.
+      - name: L3 — mọi lệnh luật có --selftest và qua
+        run: |
+          rc=0
+          bash scripts/check-rules-v7.sh --l3 || rc=$?
+          [ "$rc" = 2 ] && exit 1
+          exit 0
+      - name: lô 1 — đếm (nấc 1, không chặn)
+        run: |
+          rc=0
+          bash scripts/check-rules-v7.sh || rc=$?
+          [ "$rc" = 2 ] && exit 1
+          exit 0

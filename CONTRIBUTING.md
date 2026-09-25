@@ -59,6 +59,14 @@ Use conventional commit prefixes for clarity:
 
 Scope examples: `pillar-4`, `soul-pm`, `template-sprint-plan`, `governance`, `g3-gate`.
 
+## Script naming
+
+Scripts in `scripts/` use English, kebab-case, verb-first names: `check-*` for a validator/report,
+`rule-*` for a Rules v7 Contract gate, `gen-*` for a generator. Existing English names
+(`compliance_sdlc_validator.py`, `quickstart_solo_setup.py`, …) predate this convention and are
+grandfathered — don't rename them opportunistically in an unrelated PR. New scripts and any script
+being touched for other reasons should follow it. (Ratified 2026-09-25, F4.)
+
 ## Style Conventions
 
 - **Markdown** — GitHub-flavored Markdown; tables for structured comparisons; headings follow the existing hierarchy in each section

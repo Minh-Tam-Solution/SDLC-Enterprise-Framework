@@ -5,7 +5,7 @@
 **Status**: ACTIVE - PRODUCTION READY
 **Authority**: CTO + CPO Office
 **Ring**: 2 (Governance — Templates & Tools)
-**Documentation Standards**: Every SOUL in this directory now carries a "Documentation Standards Compliance (MANDATORY)" section binding the role to [SDLC-Naming-Standards.md Part 5](../../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md#part-5-document-header-templates). Before any SOUL authors or updates an SDLC artifact it must validate the Part 5 header; run [`../../07-Scripts/check_doc_headers.py`](../../07-Scripts/check_doc_headers.py) to audit.
+**Documentation Standards**: Every SOUL in this directory now carries a "Documentation Standards Compliance (MANDATORY)" section binding the role to [SDLC-Naming-Standards.md Part 5](../../../02-Core-Methodology/Documentation-Standards/SDLC-Naming-Standards.md#part-5-document-header-templates). Before any SOUL authors or updates an SDLC artifact it must validate the Part 5 header; run [`../../../scripts/check_doc_headers.py`](../../../scripts/check_doc_headers.py) to audit.
 
 ---
 
