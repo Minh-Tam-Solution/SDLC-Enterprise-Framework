@@ -72,7 +72,7 @@ Two separate axes. **Model quality** says how capable a model is; the **data cla
 | `restricted` | personal data; payroll-like data (pay, evaluations, bank details); confidential business data such as accounts, contracts, investor material | an approved internal lane (a model inside the organisation's boundary) or a person — never an external model |
 | `no-ai` | secrets and credentials: `.env` files, keys, tokens, private certificates | no model sees their content; a person handles them |
 
-- **Classify by path in the policy repo,** next to the risk-floor and residency paths; unclassified means ask first, never "internal". A file or record that mixes classes takes the most restrictive one.
+- **Classify by path in the policy repo,** next to the risk-floor and residency paths. The policy repo declares the class that unlisted paths take; with no declaration a path is unclassified, and unclassified means ask first, never an assumed "internal". A file or record that mixes classes takes the most restrictive one.
 - **A cloud reviewer that meets a `restricted` or `no-ai` path returns `insufficient_evidence`** (`abstain_reason: restricted_data`) and hands over to a person — never a pretend review ([`controls/tiers.md`](../controls/tiers.md), model reviewer lane).
 - **Agent access is enforced by the tool, not the prompt:** deny reads of `no-ai` paths in the agent's permissions and hooks, and keep secrets out of the agent's environment ([§ Secrets](#secrets)).
 
