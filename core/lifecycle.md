@@ -12,7 +12,9 @@
 
 ## Ten stages, one question each
 
-Every piece of work passes through the same ten questions. A stage is a question you must be able to answer with a document or a check, not a phase on a calendar.
+A **product** covers all ten questions, in proportion to its risk. A **change** revisits only the questions it can materially affect: a styling fix in an ENTERPRISE repo re-opens 04 and 05, not the business case in 00. A stage is a question, not a phase on a calendar.
+
+**The lifecycle requires evidence, not necessarily documents.** Evidence is whatever answers the question and can be pointed at: a README section, an issue, an ADR, a PR, a CI run, a deploy record. Write a document when nothing else holds the answer.
 
 | # | Stage | Question | Docs folder | Stage gate |
 |---|---|---|---|---|
@@ -48,7 +50,7 @@ Every piece of work passes through the same ten questions. A stage is a question
 | 08 | skip when solo; otherwise sprint records and hand-over notes | review cadence · knowledge hand-over checked by the receiver |
 | 09 | skip for internal tools with no regulated data | audit trail · recurring recertification row in the deadline ledger |
 
-**Negative evidence is still evidence.** "No integrations" or "no regulated data" is written as a one-line document where that stage's documents live, with the date and the author. An empty place cannot be told apart from forgotten work.
+**Negative evidence is still evidence.** "No integrations" or "no regulated data" is stated once, where readers will look — one line in the README or `AGENTS.md` is enough — with the date. An absent answer cannot be told apart from forgotten work; a separate file per "no" is not required.
 
 ## Which stages each tier must cover
 

@@ -16,25 +16,25 @@ Different change types follow different review paths:
 |----------|----------|-------------|
 | **Editorial** | Typo fixes, broken-link repairs, grammar | 1 maintainer review |
 | **Clarifying** | Expanded examples for an existing principle, table reformatting, cross-reference improvements | 1 maintainer review |
-| **Pattern addition** | New SOUL, new template, new section under an existing pillar | ADR-lite proposal first → 2 maintainer review |
-| **Methodology change** | Gate semantic change, pillar revision, anti-vibecoding rule change | Full ADR + 2+ maintainer review + version bump |
-| **Removal / deprecation** | Sunsetting a pattern | Must follow [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) |
+| **Pattern addition** | New template, new standard or practice, new section in an existing document | issue first, naming the consumer → maintainer review |
+| **Methodology change** | Change to a core principle, a policy, a tier, a gate or a rule row | issue with the burn case first → maintainer review → CHANGELOG entry and a version bump |
+| **Removal / deprecation / move** | Retiring, renaming or moving an artifact | Must follow [`policies/artifact-lifecycle.md`](policies/artifact-lifecycle.md) |
 
 ## Before You Open a PR
 
-For **methodology changes** (anything beyond editorial or clarifying), please open an issue or RFC discussion first. The Framework's value depends on internal coherence across the 7 Pillars — uncoordinated changes risk fragmenting that coherence.
+For **methodology changes** (anything beyond editorial or clarifying), please open an issue or RFC discussion first. The Framework's value depends on each topic having one owning document — uncoordinated changes create two versions of the truth.
 
 For all changes:
 
-1. Read the [README.md](README.md) "Framework vs. Platform" section to confirm your change belongs in the Framework, not in an implementing platform's repo
+1. Read the [README.md](README.md) sections "What the framework is" and "Layout of this repo" to confirm your change belongs in the Framework — not in an adopting repo — and which folder owns it
 2. Check [CHANGELOG.md](CHANGELOG.md) — your change may already be in flight
-3. Check [DEPRECATION-POLICY.md](DEPRECATION-POLICY.md) if your change touches an existing pattern
+3. Check [`policies/artifact-lifecycle.md`](policies/artifact-lifecycle.md) if your change renames, moves or retires anything
 
 ## PR Process
 
-1. Fork the repo and create a feature branch (e.g. `feat/soul-data-engineer`, `fix/pillar-4-gate-table`, `docs/clarify-pillar-2`)
+1. Fork the repo and create a feature branch (e.g. `feat/standard-testing`, `fix/gates-catalog`, `docs/clarify-tiers`)
 2. Make your changes, keeping each PR focused on a single concern
-3. Update relevant cross-references and `CONTENT-MAP.md` if you add/move/rename files
+3. Update cross-references; a moved or renamed file gets a row in the `MIGRATION-MAP.md` path map; a new live doc carries `**Owner**`, `**Consumer**` and `**Review by**`
 4. Update `CHANGELOG.md` with a one-line entry under the next version's "Unreleased" section
 5. Open a PR with:
    - Clear description of what changes and why it generalizes
@@ -43,10 +43,10 @@ For all changes:
 
 ## Developer Certificate of Origin (DCO)
 
-All commits must include a `Signed-off-by` line:
+Contributions from outside the maintainers must include a `Signed-off-by` line on each commit (not yet checked by CI):
 
 ```bash
-git commit -s -m "feat(pillar-4): clarify G3 evidence requirements"
+git commit -s -m "fix(gates): clarify G3 evidence requirements"
 ```
 
 The DCO certifies that you wrote the contribution or otherwise have the right to submit it under the open source license used by the project. Full text: <https://developercertificate.org/>
@@ -61,7 +61,21 @@ Use conventional commit prefixes for clarity:
 - `refactor(scope): ...` — restructuring without semantic change
 - `chore(scope): ...` — repository housekeeping
 
-Scope examples: `pillar-4`, `soul-pm`, `template-sprint-plan`, `governance`, `g3-gate`.
+Scope examples: `core`, `controls`, `standards`, `gates`, `templates`, `scripts`.
+
+## Kinds of document
+
+Each folder holds one kind. Put a change where its kind lives; a topic has one owning document.
+
+| Folder | Kind | Test |
+|---|---|---|
+| `core/` | methodology that outlives tools | would it still be true with different agents and vendors? |
+| `policies/` | normative decisions for the framework itself | does it decide how this repository or its artifacts are governed? |
+| `standards/` | what every adopting repo follows | can a repo be checked against it? |
+| `controls/` | rules and gates a machine runs | does it name a command with an exit code? |
+| `ai-engineering/` | working with agents | would it change if the agent tooling changed? |
+| `practices/` | how to do it well, by choice | is it advice rather than a requirement? |
+| `adoption/` | bringing the framework to a team or repo | is it about the first weeks of use? |
 
 ## Script naming
 
@@ -98,7 +112,7 @@ Prefer editing an existing doc over adding one. Prefer a table over prose. Prefe
 Maintainers evaluate PRs against these questions:
 
 1. **Generalization** — does this pattern work across implementations, team sizes, tech stacks?
-2. **Coherence** — does this fit with the existing 7-Pillar structure and the relationships between pillars?
+2. **Coherence** — does one document own this topic, and is it in the folder for its kind (see "Kinds of document")?
 3. **Evidence** — for methodology changes, what real-world signal motivated this? (case study, retrospective, audit finding, cross-team feedback)
 4. **Reversibility** — can this change be rolled back without breaking adopters' existing implementations?
 5. **Tool-agnosticism** — is this free of assumptions about specific tools, platforms, or vendors?

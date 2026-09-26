@@ -88,13 +88,7 @@ Not required in generated files, migrations (the migration name carries the purp
 
 ## Archived documents
 
-A document moved to `10-archive/` (or `archive/` in this repository) keeps its content and gains, directly under the title:
-
-```markdown
-> **ARCHIVED** 2026-09-26 — superseded by [new-document.md](../path/new-document.md). Read-only.
-```
-
-Archived documents are never updated, only linked.
+A document moved to `archive/` (in a product repo: `docs/10-archive/`) is **not edited**: no header is added, nothing is reworded. The move itself is the record — a `git mv` commit — and where its content went is recorded outside it: in this repository in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md), in a product repo in the archive folder's README. Editing an archived file to add a notice would make it no longer the thing that was archived ([`policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md)).
 
 ## Checking
 

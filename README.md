@@ -77,6 +77,7 @@ Folders are named by what kind of document they hold. Nothing is named after a v
 | Folder | Kind | Files |
 |---|---|---|
 | `core/` | methodology that outlives tools | [`constitution`](core/constitution.md) · [`lifecycle`](core/lifecycle.md) (ten stages) |
+| `policies/` | how this repository's own artifacts are governed | [`artifact-lifecycle`](policies/artifact-lifecycle.md) |
 | `controls/` | rules and gates that a machine checks | [`rule-contract`](controls/rule-contract.md) · [`tiers`](controls/tiers.md) · [`gates`](controls/gates.md) · [`risk-floor-paths`](controls/risk-floor-paths.md) |
 | `standards/` | what every repo follows | [`project-structure`](standards/project-structure.md) · [`documentation`](standards/documentation.md) |
 | `ai-engineering/` | working with agents | [`context-and-hats`](ai-engineering/context-and-hats.md) |
@@ -93,6 +94,7 @@ Reading order:
 | deciding whether to adopt | constitution → tiers → adoption |
 | a developer starting a repo | lifecycle → project-structure → documentation |
 | writing or switching on a gate | rule-contract → gates → risk-floor-paths |
+| renaming, moving or retiring anything here | artifact-lifecycle |
 | writing `AGENTS.md` or a hat | context-and-hats |
 | closing an incident | lessons-to-rules |
 

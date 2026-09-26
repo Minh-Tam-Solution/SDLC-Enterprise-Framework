@@ -42,6 +42,7 @@ Where each live file of the 7.0.0 layout (`d363387`) went: the layout change of 
 | `scripts/check-rules-v7.sh` | `scripts/check-rules.sh` | renamed after 7.0.0-alpha; the table heading is now `## Rule register` (`## Rules v7` read until 2026-12-31) |
 | `.github/workflows/v7-gate.yml` | `.github/workflows/version-declared.yml` | renamed after 7.0.0-alpha |
 | `.github/workflows/v7-rules-gate.yml` | `.github/workflows/rules.yml` | renamed after 7.0.0-alpha |
+| `DEPRECATION-POLICY.md` | `policies/artifact-lifecycle.md` | archived to `archive/by-topic/historical-documents/DEPRECATION-POLICY.md` |
 | `.github/workflows/v7-gates-product.yml` | `.github/workflows/product-gates.yml` | renamed after 7.0.0-alpha; callers pinned to a SHA keep working, re-pins use the new file |
 
 Check — every file of the old layout that is gone is mapped (expected output: `0`):
@@ -66,6 +67,7 @@ comm -23 <(git ls-tree -r --name-only "$BASE" | sort) <(git ls-tree -r --name-on
 | `by-version/v4.5/09-Documentation-Standards/FILE-HEADER-STANDARDS-SDLC-4.5.md` | PARTIALLY_ADOPTED | [`standards/documentation.md`](standards/documentation.md#header-of-a-source-file) | framework version, approval, "authenticity" and business-value lines in code headers |
 | `v6/05-Templates-Tools/08-Project-Templates/Planning-Hierarchy-*.md` | PARTIALLY_ADOPTED | [`templates/project/`](templates/project/README.md) | separate phase and backlog templates (phase = roadmap section; backlog = issue tracker) |
 | `by-topic/ai-governance-v7-retired/08-Governance-Decision-Matrix.md` (risk classification table) | PARTIALLY_ADOPTED | [`controls/risk-floor-paths.md`](controls/risk-floor-paths.md) | the rest of the decision matrix |
+| `by-topic/historical-documents/DEPRECATION-POLICY.md` (v6.3, live until 2026-09-26) | PARTIALLY_ADOPTED | [`policies/artifact-lifecycle.md`](policies/artifact-lifecycle.md) | redirect stubs at old paths (replaced by the path map), 6-month stub grace period, `CONTENT-MAP.md`, `{NN}-Legacy/` archive layout, `99-Legacy` linter; kept: archive never delete, delete only harmful content, agents do not read the archive, broken links block (now a candidate rule) |
 | `v6/03-AI-GOVERNANCE/21-V7-RULE-CONTRACT.md` | SUPERSEDED | [`controls/rule-contract.md`](controls/rule-contract.md) | — |
 | `v6/CHANGELOG-v6.md` | HISTORICAL_ONLY | [`CHANGELOG.md`](CHANGELOG.md) (from 7.0.0) | — |
 
