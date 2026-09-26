@@ -1,0 +1,54 @@
+name: product-gates selftest
+# Calls the reusable product workflow on this repo with three planted rule tables and checks the
+# rules step's exit code: pass = 0, deliberate violation = 2, missing table = 1. Three distinct values
+# are the point: before 2026-09-26 the rules step always returned 1 ("cannot measure") because it
+# passed `--scope .` to the runner, and nothing noticed. A green job alone cannot tell 0 from 1.
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  planted-pass:
+    uses: ./.github/workflows/product-gates.yml
+    with:
+      framework_repo: ${{ github.repository }}
+      framework_ref: ${{ github.sha }}
+      min_tier: STANDARD
+      rules_table: scripts/fixtures/product-rules-pass.txt
+      enforce: false
+  planted-violation:
+    uses: ./.github/workflows/product-gates.yml
+    with:
+      framework_repo: ${{ github.repository }}
+      framework_ref: ${{ github.sha }}
+      min_tier: STANDARD
+      rules_table: scripts/fixtures/product-rules-violation.txt
+      enforce: false
+  planted-missing-table:
+    uses: ./.github/workflows/product-gates.yml
+    with:
+      framework_repo: ${{ github.repository }}
+      framework_ref: ${{ github.sha }}
+      min_tier: STANDARD
+      rules_table: scripts/fixtures/does-not-exist.txt
+      enforce: false
+  check:
+    needs: [planted-pass, planted-violation, planted-missing-table]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rules exit codes must be 0 / 2 / 1
+        env:
+          PASS: ${{ needs.planted-pass.outputs.rules_rc }}
+          VIOL: ${{ needs.planted-violation.outputs.rules_rc }}
+          MISS: ${{ needs.planted-missing-table.outputs.rules_rc }}
+          VIOL_FINAL: ${{ needs.planted-violation.outputs.final }}
+        run: |
+          echo "pass=$PASS violation=$VIOL missing=$MISS violation_final=$VIOL_FINAL"
+          [ "$PASS" = 0 ] && [ "$VIOL" = 2 ] && [ "$MISS" = 1 ] && [ "$VIOL_FINAL" = 2 ] && {
+            echo "result=pass gate=product-gates-selftest reason=0_2_1"; exit 0; }
+          echo "::error::product-gates rules step: want pass=0 violation=2 missing=1 (violation final=2)"
+          echo "result=violation gate=product-gates-selftest reason=got_${PASS:-empty}_${VIOL:-empty}_${MISS:-empty}"; exit 1

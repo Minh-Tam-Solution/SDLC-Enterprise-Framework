@@ -1,0 +1,7 @@
+# Fixture rule table (product scope) for product-gates-selftest.yml. Not a live document.
+
+## Rule register
+
+| id | class | cmd | burn_case | run_scope |
+|---|---|---|---|---|
+| FX-VIOLATION | MACHINE | `bash scripts/fixtures/rule-violation.sh` | fixture: the product workflow must report violation (2), never "cannot measure" | PRODUCT_CI |
