@@ -30,6 +30,11 @@ history remain readable.
 | CONTRIBUTING | 7-pillar review criteria, `CONTENT-MAP.md` and pillar scopes replaced by the folder-per-kind taxonomy; DCO stated as it is (external contributors; not checked by CI) |
 | SECURITY | supported versions 7.x; release tags stated as annotated, not GPG-signed (the earlier "signed" claim was not true); normative folders updated |
 | CHANGELOG header | company name and role titles removed (vendor-neutral public repo) |
+| Four engineering standards | `standards/testing.md`, `standards/security.md`, `standards/change-and-deployment.md`, `standards/observability.md` — harvested from 45 archived sources (one `MIGRATION-MAP.md` row each) plus current practice with public sources (NIST, OWASP, OpenSSF, SLSA, DORA, SRE literature, OpenTelemetry). Each lists candidate rules for the ladder |
+| Zero-mock replaced | "no test doubles, ever" becomes: prefer real code; fakes verified against the real thing; risk-floor behaviour always through real code; "temporary" doubles expire |
+| Stage 07 from STANDARD | operating a service with real users now requires the stage-07 minimum (uptime check, error logs someone reads); it was optional for STANDARD |
+| Auto-rollback signal | automatic rollback reads the new release's own liveness and readiness, not shared dependencies — a database blip no longer rolls back good code |
+| Delivery numbers | the deploy log feeds five numbers, adding deployment frequency, recovery time and rework rate (`planned` / `unplanned(<incident>)`) |
 
 ## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 
