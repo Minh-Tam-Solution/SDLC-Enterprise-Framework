@@ -7,7 +7,8 @@
 # Live documents = tracked *.md outside archive/ and templates/ (the same set check-doc-count.sh counts).
 # Fields are read from the first 30 lines outside fenced code blocks (an example header in a code block is
 #   not the document's header), as `**Owner**: <value>` (a value ends at " · ", " | " or end of line):
-#   Status     — DRAFT · ACTIVE · DEPRECATED · SUPERSEDED · ARCHIVED (policies/artifact-lifecycle.md)
+#   Status     — DRAFT · ACTIVE · DEPRECATED · SUPERSEDED (policies/artifact-lifecycle.md); ARCHIVED is not a
+#                live status — an archived document lives under archive/, which this gate does not scan
 #   Owner      — who answers questions and keeps it true (a role or handle; not empty, "<…>", TBD, TODO)
 #   Consumer   — who reads or runs it, named (same rule)
 #   Review by  — YYYY-MM-DD, a real date, not earlier than today
@@ -35,13 +36,14 @@ if [ $SELFTEST = 1 ]; then
   printf '# Bad date\n\n**Status**: ACTIVE\n**Owner**: @m\n**Consumer**: x\n**Review by**: 2026-02-30\n' > "$t/r/core/bad-date.md"
   printf '# Fenced only\n\n```\n**Status**: ACTIVE\n**Owner**: @m\n**Consumer**: x\n**Review by**: 2026-12-31\n```\n' > "$t/r/core/fenced.md"
   printf '# Bad status\n\n**Status**: ALPHA\n**Owner**: @m\n**Consumer**: x\n**Review by**: 2026-12-31\n' > "$t/r/core/bad-status.md"
+  printf '# Archived but live\n\n**Status**: ARCHIVED\n**Owner**: @m\n**Consumer**: x\n**Review by**: 2026-12-31\n' > "$t/r/core/archived-live.md"
   printf '# Archived\n' > "$t/r/archive/old.md"; printf '# Template\n' > "$t/r/templates/t.md"   # skipped
   git -C "$t/r" add -A
   bash "$0" --root "$t/r" > "$t/out"; b=$?; n=$(grep -oE 'count=[0-9]+' "$t/out")
   bash "$0" --root "$t/nope" > /dev/null 2>&1; c=$?                                   # no repo => 1
   got="$a $b $n $c"
-  [ "$got" = "0 2 count=9 1" ] && { echo "selftest OK"; label pass selftest_ok; exit 0; }
-  echo "selftest BROKEN: got=[$got] want=[0 2 count=9 1]"; cat "$t/out"; label insufficient_evidence selftest_broken; exit 1
+  [ "$got" = "0 2 count=10 1" ] && { echo "selftest OK"; label pass selftest_ok; exit 0; }
+  echo "selftest BROKEN: got=[$got] want=[0 2 count=10 1]"; cat "$t/out"; label insufficient_evidence selftest_broken; exit 1
 fi
 
 prefix=$(git -C "$ROOT" rev-parse --show-prefix 2>&1) || { label insufficient_evidence not_a_git_repo; exit 1; }
@@ -69,7 +71,7 @@ out=$(cd "$ROOT" && printf '%s\n' "$docs" | TODAY="$today" perl -e '
     }
     close $fh;
     my $st = $v{"Status"} // "";
-    unless ($st =~ /^(DRAFT|ACTIVE|DEPRECATED|SUPERSEDED|ARCHIVED)\b/) { print "RED $f: Status missing or not one of DRAFT, ACTIVE, DEPRECATED, SUPERSEDED, ARCHIVED\n"; $bad++; }
+    unless ($st =~ /^(DRAFT|ACTIVE|DEPRECATED|SUPERSEDED)\b/) { print "RED $f: Status missing or not a live status (DRAFT, ACTIVE, DEPRECATED, SUPERSEDED)\n"; $bad++; }
     for my $k ("Owner", "Consumer") {
       my $x = $v{$k} // "";
       if ($x eq "" || $x =~ /^<.*>$/ || $x =~ /^(TBD|TODO|tbd|todo)$/) { print "RED $f: $k missing or placeholder\n"; $bad++; }
