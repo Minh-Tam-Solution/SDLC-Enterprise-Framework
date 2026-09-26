@@ -5,18 +5,20 @@
 **Last Updated**: September 26, 2026 (v6.x and earlier history moved to archive)
 
 Full version history for v6.5.0 and earlier lives in
-[`10-Archive/v6/CHANGELOG-v6.md`](10-Archive/v6/CHANGELOG-v6.md), unmodified. This keeps the live
+[`archive/v6/CHANGELOG-v6.md`](archive/v6/CHANGELOG-v6.md), unmodified. This keeps the live
 tree small; it does not hide anything — the repository is public, so the archive folder and git
 history remain readable.
 
-## Unreleased — 2026-09-26 (version-neutral layout; stages, project structure, documentation standards restored)
+## Unreleased — 2026-09-26 (layout by kind of document; stages, project structure, documentation standards restored)
 
 | Change | Detail |
 |---|---|
-| No version in paths | `v7/` → `02-Core-Methodology/` (files and numbers unchanged); `templates/` → `05-Templates-Tools/03-Agent-Templates/`. The version lives in each file's `SDLC Framework Version` field and here, so paths survive the next major version. Consumers pinned to a commit SHA keep working; re-pins use the new path (`02-Core-Methodology/risk-floor-paths.md`) |
-| Restored, shortened | `07-stage-lifecycle.md` (ten stages, stage gates G0.1–G4, exit evidence per tier, who signs by tier), `08-project-structure.md` (`docs/00–09` layout, root files and planning files per tier), `09-documentation-standards.md` (file names, document header, two front-matter schemas for specs and ADRs — issue #17, source-file header — issue #18) — from v6.4 `SDLC-Stage-Lifecycle-Framework.md`, `SDLC-Project-Structure-Standard.md`, `SDLC-Naming-Standards.md`, `SDLC-Specification-Standard.md` and v4.5 `FILE-HEADER-STANDARDS` (all remain in `10-Archive/`) |
-| Project templates | `05-Templates-Tools/08-Project-Templates/`: docs tree command, current sprint, sprint index, roadmap, ADR, spec |
-| Doc-count gate | excludes `05-Templates-Tools/` (was `templates/`) |
+| No version and no numbers in top-level paths | `v7/` split by kind of document: `core/` (constitution, lifecycle), `controls/` (rule contract, tiers, gates, risk-floor paths), `standards/` (project structure, documentation), `ai-engineering/` (context and hats), `adoption/`, `practices/` (lessons to rules). File-name numbers dropped; reading order is in the README. `templates/` → `templates/agent/` + `templates/project/`; `10-Archive/` → `archive/`. The version lives in each file's field, git tags and here |
+| Restored, shortened | `core/lifecycle.md` (ten stages, stage gates G0.1–G4, exit evidence and signer by tier), `standards/project-structure.md` (`docs/00–09` as the **recommended** layout; root and planning files per tier), `standards/documentation.md` (file names, document header, separate spec and ADR front-matter schemas — issue #17, source-file header — issue #18) |
+| Project templates | `templates/project/`: docs tree command, current sprint, sprint index, roadmap, ADR, spec |
+| Archive rule | archived files are no longer edited; successors are recorded in `MIGRATION-MAP.md` (outcome per source: adopted, partially adopted, superseded, retired, historical only) |
+| Consumers | pinned SHAs keep working; re-pins use the new paths, e.g. `controls/risk-floor-paths.md` (was `v7/risk-floor-paths.md`) |
+| Kept until 2026-12-31 | the two deprecated shims in `05-Templates-Tools/07-Scripts/` |
 
 ## Version 7.0.0-alpha — 2026-09-25 (third generation: v6.x archived, core rewritten)
 

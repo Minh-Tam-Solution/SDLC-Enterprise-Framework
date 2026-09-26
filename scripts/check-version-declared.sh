@@ -15,7 +15,7 @@
 #
 # Usage: check-version-declared.sh [--block] [--selftest]  (legacy --chan still accepted, deprecated)
 #   no flag -> count, exit 0 (step 1 ADVISORY) · --block -> exit 2 if undeclared>0 (step 3 MACHINE)
-# Exit codes (02-Core-Methodology/01): 0 PASS · 1 CANNOT MEASURE (no SSOT / 0 files scanned / unknown argument) · 2 VIOLATION.
+# Exit codes (controls/rule-contract.md): 0 PASS · 1 CANNOT MEASURE (no SSOT / 0 files scanned / unknown argument) · 2 VIOLATION.
 # Last stdout line = label: result=pass|insufficient_evidence|violation gate=check-version-declared reason=<slug>
 # The line before the label is `count=<undeclared>` (G4 counter read by check-advisory-deadline.sh); printed only
 #   once files were actually measured — no count on a cannot-measure path.
@@ -74,7 +74,7 @@ while IFS= read -r -d '' f; do
   if   [ -z "$v" ];            then undeclared=$((undeclared+1)); echo "$rel" >> "$DS"
   elif [ "$v" = "$SSOT" ];     then declared_current=$((declared_current+1))
   else                              declared_older=$((declared_older+1)); fi
-done < <(find "$ROOT" -name '*.md' -not -path '*/.git/*' -not -path '*/10-Archive/*' -not -path '*/site/*' -print0)
+done < <(find "$ROOT" -name '*.md' -not -path '*/.git/*' -not -path '*/archive/*' -not -path '*/site/*' -print0)
 
 total=$((declared_current+declared_older+undeclared+exempt))
 echo "SSOT=$SSOT  declared_current=$declared_current  declared_older=$declared_older  undeclared=$undeclared  exempt=$exempt  total=$total"

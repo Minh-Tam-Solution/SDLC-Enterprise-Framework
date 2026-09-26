@@ -67,6 +67,6 @@ A closed list. Adding to it needs a recorded decision.
 - Coordination for large teams: RACI matrices, sprint governance, assignment software. Not even a thin version "for later".
 - Adapters for a tool without a named consumer.
 - A second ledger for anything that already has one (decisions, deadlines, incidents).
-- Collectors before identity is clean. Fix identity at the source first ([`05`](05-adoption.md)).
+- Collectors before identity is clean. Fix identity at the source first ([`adoption`](../adoption/adoption.md)).
 
 *Shortens:* the framework itself. v6.x grew to 189 live docs; nobody could say which were still true.

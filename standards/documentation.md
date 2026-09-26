@@ -81,7 +81,7 @@ Not required in generated files, migrations (the migration name carries the purp
 
 ## Archived documents
 
-A document moved to `10-archive/` (or `10-Archive/` in this repository) keeps its content and gains, directly under the title:
+A document moved to `10-archive/` (or `archive/` in this repository) keeps its content and gains, directly under the title:
 
 ```markdown
 > **ARCHIVED** 2026-09-26 — superseded by [new-document.md](../path/new-document.md). Read-only.
@@ -91,4 +91,4 @@ Archived documents are never updated, only linked.
 
 ## Checking
 
-These standards become gates through [`06-lessons-to-rules.md`](06-lessons-to-rules.md): a rule row with a burn case and a command, starting at `ADVISORY` with a counter and a deadline ([`03-gates.md`](03-gates.md)). A standard with no command behind it is a request, and it drifts. The candidates, each with its burn case, are listed in [`01-rule-contract.md`](01-rule-contract.md) once proposed.
+These standards become gates through [`lessons-to-rules.md`](../practices/lessons-to-rules.md): a rule row with a burn case and a command, starting at `ADVISORY` with a counter and a deadline ([`gates.md`](../controls/gates.md)). A standard with no command behind it is a request, and it drifts. The candidates, each with its burn case, are listed in [`rule-contract.md`](../controls/rule-contract.md) once proposed.

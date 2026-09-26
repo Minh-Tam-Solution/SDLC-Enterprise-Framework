@@ -1,5 +1,5 @@
 name: v7-rules-gate
-# Rules v7 runner over the single rule register, 02-Core-Methodology/01-rule-contract.md.
+# Rules v7 runner over the single rule register, controls/rule-contract.md.
 # Folds in the former v7-rule-contract.yml (C21-4 is a row of the table, so the runner already runs it
 # and L3 already runs its --selftest) and check-product-scripts.yml (selftest-all covers every script,
 # including PRODUCT_CI samples such as check-pr-approver.sh). One file, one place to look.

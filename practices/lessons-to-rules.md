@@ -16,9 +16,9 @@ burn case → rule row (burn_case mandatory) → ADVISORY, counter + deadline �
 | Step | Exit condition |
 |---|---|
 | **Burn case** | a real incident with a price paid: hours, bad records, who was affected |
-| **Rule row** | `id`, class, command, `burn_case` filled in ([`01`](01-rule-contract.md)); no burn case ⇒ no row |
+| **Rule row** | `id`, class, command, `burn_case` filled in ([`rule-contract`](../controls/rule-contract.md)); no burn case ⇒ no row |
 | **ADVISORY** | the command prints `count=`, the row carries `deadline=`; thresholds published |
-| **REVIEW** | violation rate < 20% (upper Wilson bound, [`03`](03-gates.md)) |
+| **REVIEW** | violation rate < 20% (upper Wilson bound, [`gates`](../controls/gates.md)) |
 | **MACHINE** | < 5% for 2 consecutive weeks |
 
 Each "fail" leaves a trace: burn case → `burn_case` → the red case in `--selftest`. That is how "fix" does not repeat.

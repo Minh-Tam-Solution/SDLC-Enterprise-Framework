@@ -32,7 +32,7 @@ The old criterion — team size — is gone. One person building ENTERPRISE gets
 - Declared < derived ⇒ exit `2`. Lowering a tier needs a recorded decision id in the commit.
 - A path heuristic alone is gamed by moving code. That is why there are three sources.
 - The metadata file declares `tier_scheme: v7-risk`, so old data is never read with the new meaning.
-- PROFESSIONAL and ENTERPRISE **recertify quarterly** — a recurring row in the deadline ledger ([`03`](03-gates.md)).
+- PROFESSIONAL and ENTERPRISE **recertify quarterly** — a recurring row in the deadline ledger ([`gates`](gates.md)).
 
 ## Two axes
 

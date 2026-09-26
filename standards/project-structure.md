@@ -7,15 +7,19 @@
 
 *Shortens:* the time a newcomer — person or agent — needs to find the current sprint, the last decision and the running state of a repo. Every repo answers those three questions in the same place.
 
+## Recommended, not mandatory
+
+The `docs/00–09` layout below is the **recommended** layout. Teams already know it, and tools that report on a repo read it without configuration. Existing repos keep it. A new repo may choose another layout, provided its `AGENTS.md` maps each of the ten stages to where that stage's documents live, so people and tools still find them. What is not optional is the evidence each stage requires by tier ([`lifecycle.md`](../core/lifecycle.md)) and the root and planning files below.
+
 ## Documentation is stage-mapped; code is not
 
 | Kind | Where | Mapped to a stage? |
 |---|---|---|
-| Documentation | `docs/00-foundation/` … `docs/09-govern/` | yes — one folder per stage ([`07-stage-lifecycle.md`](07-stage-lifecycle.md)) |
+| Documentation | `docs/00-foundation/` … `docs/09-govern/` | yes — one folder per stage ([`lifecycle.md`](../core/lifecycle.md)) |
 | Code | `backend/`, `frontend/`, `mobile/`, `tools/`, `tests/`, `infra/`, `migrations/` … | no — code is written across stages 02–07 |
 | Configuration | files at the repo root | no |
 
-Code folders are named by what they contain, in the language's own convention. A `migrations/` folder raises the tier floor ([`02-tiers.md`](02-tiers.md)), so do not hide migrations under another name.
+Code folders are named by what they contain, in the language's own convention. A `migrations/` folder raises the tier floor ([`tiers.md`](../controls/tiers.md)), so do not hide migrations under another name.
 
 ## The `docs/` tree
 
@@ -36,9 +40,9 @@ docs/
 
 Rules:
 
-- Folder names are `NN-stage-name/`, two digits, lower-case kebab-case. `foundation/` without the number is not recognised by tools.
+- Folder names are `NN-stage-name/`, two digits, lower-case kebab-case. Tools that read this layout look for the number; a repo with a different layout declares its stage mapping in `AGENTS.md` instead.
 - Subfolders inside a stage are numbered the same way when order matters (`02-design/01-ADRs/`), and plain kebab-case when it does not.
-- `10-archive/` is not a stage. A document moved there keeps its content unchanged and gains an archive header ([`09-documentation-standards.md`](09-documentation-standards.md#archived-documents)).
+- `10-archive/` is not a stage. A document moved there keeps its content unchanged and gains an archive header ([`documentation.md`](documentation.md#archived-documents)).
 - A stage folder may hold a `99-legacy/` subfolder for documents that are superseded but still referenced. Tools skip `99-legacy/`; nobody updates it.
 - One topic, one living document. Before creating a file, search the stage folder for the topic. A second file on the same topic is how two versions of the truth start.
 
@@ -47,18 +51,18 @@ Rules:
 | File | Purpose | LITE | STANDARD | PRO | ENT |
 |---|---|---|---|---|---|
 | `README.md` | what it is, how to run it — commands that work as written | required | required | required | required |
-| `AGENTS.md` (+ tool-specific file, [`04`](04-context-and-hats.md)) | always-loaded agent context: stack, commands, owners, current sprint pointer | optional | required | required | required |
+| `AGENTS.md` (+ tool-specific file, [`context-and-hats`](../ai-engineering/context-and-hats.md)) | always-loaded agent context: stack, commands, owners, current sprint pointer | optional | required | required | required |
 | `.gitignore` | keeps secrets and build output out of git | required | required | required | required |
 | `.env.example` | every environment variable, no values | if env is used | required | required | required |
 | build entry (`Makefile`, `package.json` scripts …) | one command each for build, test, run | optional | optional | required | required |
 | local dev environment (`docker-compose.yml` or equivalent) | the stack starts with one command | optional | optional | required | required |
-| risk-floor declaration | which paths need independent review ([`risk-floor-paths.md`](risk-floor-paths.md)) | — | optional | required | required |
+| risk-floor declaration | which paths need independent review ([`risk-floor-paths.md`](../controls/risk-floor-paths.md)) | — | optional | required | required |
 
 `AGENTS.md` points to documents; it does not copy them. A sprint number written into `AGENTS.md` is out of date by the next sprint — write the path of the sprint file instead.
 
 ## Planning files
 
-| Level | Horizon | File | LITE | STANDARD | PRO+ |
+| Level | Horizon | Recommended location | LITE | STANDARD | PRO+ |
 |---|---|---|---|---|---|
 | Roadmap | 6–12 months, by quarter | `docs/01-planning/roadmap.md` | — | optional | required |
 | Phase | 4–8 weeks, one theme | a section of the roadmap, or `docs/01-planning/phases/` | — | — | required |
@@ -66,10 +70,11 @@ Rules:
 | Sprint history | all closed sprints | `docs/04-build/sprint-index.md` | — | required | required |
 | Backlog | items of hours to days | the issue tracker, linked from the sprint file | optional | required | required |
 
+- The locations are recommendations; the files are what each tier requires. A repo that keeps them elsewhere names the path in `AGENTS.md`.
 - `current-sprint.md` has one owner and is updated when a stage gate is passed or re-opened, an ADR is accepted, or a release ships. Its `last_updated` older than the latest merged PR is drift.
 - At sprint close, the sprint section moves to `sprint-index.md` with its outcome, and `current-sprint.md` is rewritten for the next sprint.
-- Sprint records with numbers in their names (`SPRINT-12-retro.md`) live only in `docs/08-collaborate/sprint-logs/` ([`09`](09-documentation-standards.md#file-names)).
-- Templates: [`05-Templates-Tools/08-Project-Templates/`](../05-Templates-Tools/08-Project-Templates/).
+- Sprint records with numbers in their names (`SPRINT-12-retro.md`) live only in `docs/08-collaborate/sprint-logs/` ([`documentation`](documentation.md#file-names)).
+- Templates: [`templates/project/`](../templates/project/).
 
 ## Reading order for a newcomer
 
