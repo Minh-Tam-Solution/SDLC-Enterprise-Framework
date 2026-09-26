@@ -47,6 +47,7 @@ history remain readable.
 | Header schema | five required fields — SDLC Framework Version, Status, Owner, Consumer, Review by; `Version` optional; no `Last updated`. DOC-2 now checks Status, ignores example headers inside code blocks, and the live docs carry Status; `ARCHIVED` is not a live status |
 | Softened | testing: red-before-green evidence instead of commit order; deleting or weakening a test needs independent review and a reason (not a ban); the retry limit moved to agent policy (`ai-engineering/context-and-hats.md`). Change: no board / windows / freezes is the default with a written exception; "backup first" became "prove recoverability" |
 | README | "target ≤30 docs" and "gates start ADVISORY" corrected to match DOC-2 and the exception contract |
+| Core methodology | `core/systems-thinking.md` (four levels below an event, contributing factors not a root cause, leverage order, measures get gamed, Cynefin, the ironies of automation) and `core/design-thinking.md` (deciding what to build is the bottleneck, evidence by strength, riskiest assumptions, test with real users) — both lenses, ADVISORY. Ship-useful folded into `core/constitution.md` § Demand before surface. 13 new MIGRATION-MAP rows; 16 external sources re-opened and title-checked |
 
 ## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 
