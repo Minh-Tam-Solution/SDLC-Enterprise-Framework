@@ -1,4 +1,4 @@
-# 08 — Project structure
+# Project structure
 
 > Who reads this: whoever creates a repo, moves documents, or writes a tool that reads another repo's docs.
 > When: at repo setup, when adding a stage folder, and before archiving anything.

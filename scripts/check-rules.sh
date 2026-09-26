@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Rules v7 Contract gate (§1). Reads ONE canonical table: controls/rule-contract.md.
-#   FILE section = routing unit · LINE = enforcement unit. A "## Rules v7" section in that file
+# Rule contract gate (§1). Reads ONE canonical table: controls/rule-contract.md.
+#   FILE section = routing unit · LINE = enforcement unit. A "## Rule register" section in that file
 #   holds the live rules table; anything else in the file is reference (no cmd column value).
 #   Table header MUST be |id|class|cmd|burn_case|[run_scope|] — wrong name/order ⇒ misdeclared.
-#   Legacy header |id|lop|lenh|ca_dot|[pham_vi_chay|] (and the legacy Vietnamese heading "## Lu?t v7")
+#   Legacy header |id|lop|lenh|ca_dot|[pham_vi_chay|] (and the legacy headings "## Rules v7" and the Vietnamese "## Lu?t v7")
 #   still ACCEPTED, logs a deprecation notice to stderr, removal 2026-12-31.
 #   run_scope ∈ FRAMEWORK_REPO · PRODUCT_CI · RUNTIME_PROBE; missing cell/column = FRAMEWORK_REPO,
 #   COUNT ONLY (missing_scope_column). Only rows whose run_scope = --run-scope run (default
@@ -24,7 +24,7 @@
 #   `$(` is rejected as misdeclared (shell-injection guard) instead of silently reinterpreted.
 #   --l3: every script named in the cmd column must have --selftest, --selftest must pass, and
 #   must not contain `exit $?`.
-# Usage: check-rules-v7.sh [--root DIR] [--table FILE] [--run-scope X] [--block] [--l3] [--selftest]
+# Usage: check-rules.sh [--root DIR] [--table FILE] [--run-scope X] [--block] [--l3] [--selftest]
 #   default --table: controls/rule-contract.md (relative to --root).
 #   Legacy flags --goc/--pham-vi/--scope/--pham-vi-chay/--chan still accepted as deprecated
 #   aliases (log to stderr) until 2026-12-31. --pham-vi/--scope used to select a DIRECTORY to
@@ -32,11 +32,11 @@
 #   their value is taken as the --table path instead.
 # This gate's own exit code follows the same convention; --block: 2 if violations+misdeclared>0,
 # else 1 if unmeasurable>0, else 0.
-# Last stdout line of the gate itself is also a label (gate=check-rules-v7).
+# Last stdout line of the gate itself is also a label (gate=check-rules).
 # ponytail: no per-cmd timeout — add `timeout` when a rule runs long.
 set -u
 ROOT_DIR=.; TABLE=controls/rule-contract.md; RUN_SCOPE=FRAMEWORK_REPO; BLOCK=0; L3=0; SELFTEST=0
-label() { echo "result=$1 gate=check-rules-v7 reason=$2"; }
+label() { echo "result=$1 gate=check-rules reason=$2"; }
 deprecated() { echo "DEPRECATED: $1 (removal 2026-12-31)" >&2; }
 while [ $# -gt 0 ]; do case $1 in
   --root) ROOT_DIR=$2; shift;;
@@ -59,10 +59,10 @@ scan_table() {
   awk -v f="$1" '
     /^## / {
       # ponytail: legacy heading matched without its Vietnamese letter so this file stays English-only; goes 2026-12-31.
-      legacy_h = ($0 ~ /^## Lu[^[:space:]]+t v7[[:space:]]*$/) && !($0 ~ /^## Rules v7/)
-      new_h    = ($0 ~ /^## Rules v7[[:space:]]*$/)
+      legacy_h = ($0 ~ /^## Lu[^[:space:]]+t v7[[:space:]]*$/) || ($0 ~ /^## Rules v7[[:space:]]*$/)
+      new_h    = ($0 ~ /^## Rule register[[:space:]]*$/)
       t = legacy_h || new_h
-      if (legacy_h) print "DEPRECATED legacy heading in " f " — rename to \"## Rules v7\" (removal 2026-12-31)" > "/dev/stderr"
+      if (legacy_h) print "DEPRECATED legacy heading in " f " — rename to \"## Rule register\" (removal 2026-12-31)" > "/dev/stderr"
       b = 0; next
     }
     !/^\|/ { b = 0; next }
@@ -145,7 +145,7 @@ if [ $SELFTEST = 1 ]; then
   t=$(mktemp -d); mkdir -p "$t/controls" "$t/s"
   printf 'exit 0\n' > "$t/s/pass.sh"; printf 'exit 2\n' > "$t/s/violation.sh"
   printf 'import no_such_module_xyz\n' > "$t/s/broken.py"; printf 'exit 7\n' > "$t/s/weird-code.sh"
-  printf '# a\n## Rules v7\n| id | class | cmd | burn_case |\n|---|---|---|---|\n| X1 | MACHINE | `bash s/pass.sh` | case |\n| X2 | MACHINE | `bash s/violation.sh` | case |\n| X3 | MACHINE | `python3 s/broken.py` | case |\n| X4 | MACHINE | `bash s/does-not-exist.sh` | case |\n| X5 | MACHINE | `bash s/weird-code.sh` | case |\n| X6 | ADVISORY |  | case |\n| X7 | MACHINE | `bash s/pass.sh` |  |\n| X8 | MACHINE | `true` | case |\n| X9 | MACHINE | `bash s/pass.sh; echo pwned` | case |\n| X10 | MACHINE | `bash s/pass.sh` | case |\n## Other\n| Y | MACHINE | `bash s/violation.sh` | case |\n' > "$t/controls/rule-contract.md"
+  printf '# a\n## Rule register\n| id | class | cmd | burn_case |\n|---|---|---|---|\n| X1 | MACHINE | `bash s/pass.sh` | case |\n| X2 | MACHINE | `bash s/violation.sh` | case |\n| X3 | MACHINE | `python3 s/broken.py` | case |\n| X4 | MACHINE | `bash s/does-not-exist.sh` | case |\n| X5 | MACHINE | `bash s/weird-code.sh` | case |\n| X6 | ADVISORY |  | case |\n| X7 | MACHINE | `bash s/pass.sh` |  |\n| X8 | MACHINE | `true` | case |\n| X9 | MACHINE | `bash s/pass.sh; echo pwned` | case |\n| X10 | MACHINE | `bash s/pass.sh` | case |\n## Other\n| Y | MACHINE | `bash s/violation.sh` | case |\n' > "$t/controls/rule-contract.md"
   out=$(bash "$0" --root "$t"); rc=$?
   # X1,X10 pass · X2 violation · X3 (Python crash = 1) · X4 (127) · X5 (>=3) => unmeasurable · X6 reference
   # X7,X8 missing field / not-a-script => misdeclared · X9 (`;` in cmd) => misdeclared (injection guard)
@@ -160,11 +160,12 @@ if [ $SELFTEST = 1 ]; then
   legacy_out=$(bash "$0" --root "$t" 2>"$t/legacy.err"); legacy_hdr_err=$(cat "$t/legacy.err")
   legacy_got=$(echo "$legacy_out" | grep -oE 'passed=[0-9]+ violations=[0-9]+ unmeasurable=[0-9]+ reference=[0-9]+ misdeclared=[0-9]+')
   printf 'case $1 in --selftest) exit 0;; esac\nexit $?\n' > "$t/s/swallows.sh"
-  printf '## Rules v7\n| id | class | cmd | burn_case |\n|---|---|---|---|\n| Z | MACHINE | `bash s/swallows.sh` | case |\n' > "$t/controls/rule-contract.md"
+  printf '## Rule register\n| id | class | cmd | burn_case |\n|---|---|---|---|\n| Z | MACHINE | `bash s/swallows.sh` | case |\n' > "$t/controls/rule-contract.md"
   bash "$0" --root "$t" --l3 >/dev/null; rc_l3=$?
 
   # run_scope cases: 5th column · filter by --run-scope · label match/mismatch · block-with-only-unmeasurable · bad header.
   d() { grep -oE 'passed=[0-9]+ violations=.*missing_label=[0-9]+'; }
+  # legacy heading on purpose: the run_scope cases below also prove `## Rules v7` is still read
   B='## Rules v7\n| id | class | cmd | burn_case | run_scope |\n|---|---|---|---|---|\n'
   printf 'echo "result=pass gate=x reason=ok"; exit 0\n' > "$t/s/n-pass.sh"
   printf 'echo "result=pass gate=x reason=lied"; exit 2\n' > "$t/s/n-mismatch.sh"
@@ -176,12 +177,12 @@ if [ $SELFTEST = 1 ]; then
   v1=$(bash "$0" --root "$t" | d)
   v2=$(bash "$0" --root "$t" --run-scope PRODUCT_CI | d)   # only P3 runs => violation, fix= keeps its spaces
   bash "$0" --root "$t" --run-scope WRONG >/dev/null; rc_run_scope=$?
-  printf '## Rules v7\n| id | class | cmd | burn_case |\n|---|---|---|---|\n| Q | MACHINE | `bash s/n-pass.sh` | case |\n' > "$t/controls/rule-contract.md"
+  printf '## Rule register\n| id | class | cmd | burn_case |\n|---|---|---|---|\n| Q | MACHINE | `bash s/n-pass.sh` | case |\n' > "$t/controls/rule-contract.md"
   v3=$(bash "$0" --root "$t" --block | d)                  # 4-column table => count only, never red
   bash "$0" --root "$t" --block >/dev/null; rc_missing_col=$?
   printf "$B"'| K | MACHINE | `bash s/n-unmeasurable.sh` | case | FRAMEWORK_REPO |\n' > "$t/controls/rule-contract.md"
   bash "$0" --root "$t" --block >/dev/null; rc_only_unmeasurable=$?    # only "unmeasurable" => 1, not 2
-  printf '## Rules v7\n| id | cmd | class | burn_case |\n|---|---|---|---|\n| H | `bash s/n-pass.sh` | MACHINE | case |\n' > "$t/controls/rule-contract.md"
+  printf '## Rule register\n| id | cmd | class | burn_case |\n|---|---|---|---|\n| H | `bash s/n-pass.sh` | MACHINE | case |\n' > "$t/controls/rule-contract.md"
   v4=$(bash "$0" --root "$t" | d)
   bash "$0" --root "$t" --block >/dev/null; rc_bad_header=$?           # wrong header => misdeclared => 2
   rm -rf "$t"
@@ -190,7 +191,7 @@ if [ $SELFTEST = 1 ]; then
   w3='passed=1 violations=0 unmeasurable=0 reference=0 misdeclared=0 run_scope=FRAMEWORK_REPO missing_scope_column=1 other_scope=0 missing_label=0'
   w4='passed=0 violations=0 unmeasurable=0 reference=0 misdeclared=1 run_scope=FRAMEWORK_REPO missing_scope_column=0 other_scope=0 missing_label=0'
   [ "$got" = "$want" ] && [ $rc = 0 ] && [ $rc_block = 2 ] && [ $rc_missing = 1 ] && [ $rc_l3 = 2 ] \
-    && [ "$last_label" = "result=pass gate=check-rules-v7 reason=rung1_count_only" ] \
+    && [ "$last_label" = "result=pass gate=check-rules reason=rung1_count_only" ] \
     && [ $rc_legacy_flags = 2 ] && [ -n "$legacy_err" ] \
     && [ "$legacy_got" = "passed=1 violations=0 unmeasurable=0 reference=0 misdeclared=0" ] && [ -n "$legacy_hdr_err" ] \
     && [ "$v1" = "$w1" ] && [ "$v2" = "$w2" ] && [ "$v3" = "$w3" ] && [ "$v4" = "$w4" ] \
@@ -205,7 +206,7 @@ cd "$ROOT_DIR" || { echo "UNMEASURABLE: cannot cd into $ROOT_DIR"; label insuffi
 [ -f "$TABLE" ] || { echo "UNMEASURABLE: table $TABLE not found"; label insufficient_evidence table_not_found; exit 1; }
 
 # \037 (unit separator), NOT tab: tab is whitespace in IFS => an empty cell gets merged, columns shift.
-# The first | line of the "## Rules v7" section is the header, checked by column NAME (not
+# The first | line of the "## Rule register" section is the header, checked by column NAME (not
 # position) — wrong => one __BAD_HEADER__ record.
 bang=$(mktemp); trap 'rm -f "$bang"' EXIT
 scan_table "$TABLE" > "$bang"

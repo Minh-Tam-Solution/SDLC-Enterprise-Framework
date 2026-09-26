@@ -1,4 +1,4 @@
-# 03 — Gates
+# Gates
 
 > Who reads this: whoever writes, runs or switches on a gate — in this repo, in product CI, or on a server.
 > When: before adding a gate, before moving one up a step, and when a gate blocks you.
@@ -50,10 +50,11 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 
 | Gate | Scope | Checks | Where |
 |---|---|---|---|
-| rule table | FRAMEWORK_REPO | every rule row runs; with `--l3`, every command has a passing `--selftest` and no `exit $?` | `scripts/check-rules-v7.sh` |
+| rule table | FRAMEWORK_REPO | every rule row runs; with `--l3`, every command has a passing `--selftest` and no `exit $?` | `scripts/check-rules.sh` |
 | version declared | FRAMEWORK_REPO | which framework version each doc was checked against; counts, does not block | `scripts/check-version-declared.sh` |
 | advisory deadline | FRAMEWORK_REPO | every `ADVISORY` row has `deadline=` and a `count=`; past deadline with count > 0 ⇒ 2 | `scripts/check-advisory-deadline.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
+| no version in names | FRAMEWORK_REPO | no version number in a live file or folder name, or in a Markdown heading (anchor); counts, does not block | `scripts/rule-no-version-in-names.sh` |
 | doc count | FRAMEWORK_REPO | live docs outside `archive/` and `templates/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
 | PR approver | PRODUCT_CI | approver login ≠ author and ≠ the author's operator, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |
 | adapter drift | PRODUCT_CI | regenerating adapters at the pinned policy ref gives an empty diff | pattern |

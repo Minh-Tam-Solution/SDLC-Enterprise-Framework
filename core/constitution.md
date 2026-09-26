@@ -1,4 +1,4 @@
-# 00 — Constitution
+# Constitution
 
 > Who reads this: anyone proposing a rule, a gate, a tool or a new doc for v7.
 > When: before you write it. If your proposal breaks a line here, change this file first — by PR.
@@ -42,7 +42,7 @@ The methodology (this repo) sits under all six. Its thinking lenses — systems 
 | **L2** work coordination | who takes the next item, who reviews, what is blocked | a table + a 15-minute weekly ritual; AI proposes, people assign |
 | **L3** management | priorities, accepted risk, who works on what | people |
 
-## A control enters v7 only if it answers four questions
+## A control enters the framework only if it answers four questions
 
 1. Who runs it? 2. When? 3. What does it detect or block? 4. **If it is wrong, what does a false positive cost?**
 No enforcement, no evidence and no decision value ⇒ not in v7. Question 4 is mandatory for every `MACHINE` gate.
@@ -58,7 +58,7 @@ No enforcement, no evidence and no decision value ⇒ not in v7. Question 4 is m
 | **Proportional to risk** | the right process is sized to the risk of the artefact, not to the organisation | ritual on sandboxes |
 | **Docs follow traces** | documentation is generated from PRs, CI and evidence, not written ahead of the work | docs that nobody reads and nothing checks |
 
-## What v7 does NOT build
+## What the framework does NOT build
 
 A closed list. Adding to it needs a recorded decision.
 

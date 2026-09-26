@@ -1,11 +1,11 @@
-name: v7-gates-product
-# Reusable workflow: v7 gates for a PRODUCT repo (a repo that adopts the framework), run_scope=PRODUCT_CI.
-# The framework's own CI (v7-gate.yml, v7-rules-gate.yml) measures the framework repo; this one measures the caller.
+name: product-gates
+# Reusable workflow: framework gates for a PRODUCT repo (a repo that adopts the framework), run_scope=PRODUCT_CI.
+# The framework's own CI (version-declared.yml, rules.yml) measures the framework repo; this one measures the caller.
 #
 # Caller example (pin BOTH `uses:` and `framework_ref` to the same full commit SHA):
 #   jobs:
-#     v7:
-#       uses: <owner>/SDLC-Enterprise-Framework/.github/workflows/v7-gates-product.yml@<sha>
+#     framework-gates:
+#       uses: <owner>/SDLC-Enterprise-Framework/.github/workflows/product-gates.yml@<sha>
 #       with: { framework_repo: <owner>/SDLC-Enterprise-Framework, framework_ref: <sha>, min_tier: STANDARD }
 #
 # Who can call it:
@@ -17,9 +17,9 @@ name: v7-gates-product
 #     with the caller's GITHUB_TOKEN (step "Checkout framework"): give that step a token that can read it.
 #
 # Steps:
-#   1. rules    scripts/check-rules-v7.sh --run-scope PRODUCT_CI on the CALLER checkout: runs every row of
-#               the caller's own "## Rules v7" tables whose run_scope is PRODUCT_CI. The runner comes from
-#               the framework at framework_ref, so framework_ref must contain scripts/check-rules-v7.sh
+#   1. rules    scripts/check-rules.sh --run-scope PRODUCT_CI on the CALLER checkout: runs every row of
+#               the caller's own "## Rule register" tables (legacy "## Rules v7" still read) whose run_scope is PRODUCT_CI. The runner comes from
+#               the framework at framework_ref, so framework_ref must contain scripts/check-rules.sh
 #               with --run-scope. Rows run at the caller root and must name a script IN the caller repo
 #               (the runner does not expand variables); to use a framework sample, copy it in.
 #   2. approver check-pr-approver.sh, pull_request events only. The approver list is read from the PR's
@@ -66,7 +66,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  v7-gates:
+  product-gates:
     runs-on: ubuntu-latest
     env:
       TARGET_REPO: ${{ inputs.target_repo || github.repository }}
@@ -90,27 +90,27 @@ jobs:
         with:
           repository: ${{ inputs.framework_repo }}
           ref: ${{ inputs.framework_ref }}
-          path: .v7-framework
+          path: .sef-framework
 
       # Out of the workspace: the runner scans every .md under --goc, and the framework's own
       # rule tables must not be read as the product's rules.
       - name: Move framework out of the product tree
-        run: mv .v7-framework "$RUNNER_TEMP/v7-framework"
+        run: mv .sef-framework "$RUNNER_TEMP/sef-framework"
 
       - name: Rules (run_scope=PRODUCT_CI)
         id: rules
         if: always()
         env:
-          SEF_DIR: ${{ runner.temp }}/v7-framework
+          SEF_DIR: ${{ runner.temp }}/sef-framework
         run: |
           rc=0
-          out=$(bash "$SEF_DIR/scripts/check-rules-v7.sh" \
+          out=$(bash "$SEF_DIR/scripts/check-rules.sh" \
                   --root "$GITHUB_WORKSPACE" --scope . --run-scope PRODUCT_CI --block) || rc=$?
           echo "$out"
           case $rc in 0|1|2) ;; *) rc=1;; esac
           # Zero rules executed is "nothing measured", not a pass (G1).
           if [ $rc = 0 ] && ! grep -qE ' passed=[1-9]' <<<"$out"; then
-            echo "::warning::no PRODUCT_CI rule ran: add a '## Rules v7' table with run_scope=PRODUCT_CI rows"; rc=1
+            echo "::warning::no PRODUCT_CI rule ran: add a '## Rule register' table with run_scope=PRODUCT_CI rows"; rc=1
           fi
           echo "rc=$rc" >> "$GITHUB_OUTPUT"
 
@@ -118,7 +118,7 @@ jobs:
         id: approver
         if: always() && github.event_name == 'pull_request'
         env:
-          SEF_DIR: ${{ runner.temp }}/v7-framework
+          SEF_DIR: ${{ runner.temp }}/sef-framework
           GH_TOKEN: ${{ github.token }}
           PR: ${{ github.event.pull_request.number }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -154,9 +154,9 @@ jobs:
           [ $final = 0 ] && { [ "$R" = 1 ] || [ "$A" = 1 ]; } && final=1
           echo "rules=$R approver=${A:-skipped} tier=$MIN_TIER final=$final"
           case $final in
-            0) echo "result=pass gate=v7-gates-product reason=all_pass" ;;
-            1) echo "::warning::v7-gates-product: insufficient evidence (see steps above)"
-               echo "result=insufficient_evidence gate=v7-gates-product reason=rules_${R}_approver_${A:-skipped}" ;;
-            2) echo "::error::v7-gates-product: violation (see steps above)"
-               echo "result=violation gate=v7-gates-product reason=rules_${R}_approver_${A:-skipped}"; exit 1 ;;
+            0) echo "result=pass gate=product-gates reason=all_pass" ;;
+            1) echo "::warning::product-gates: insufficient evidence (see steps above)"
+               echo "result=insufficient_evidence gate=product-gates reason=rules_${R}_approver_${A:-skipped}" ;;
+            2) echo "::error::product-gates: violation (see steps above)"
+               echo "result=violation gate=product-gates reason=rules_${R}_approver_${A:-skipped}"; exit 1 ;;
           esac

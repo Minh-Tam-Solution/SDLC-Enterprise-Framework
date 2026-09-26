@@ -1,4 +1,4 @@
-# 06 — Lessons to rules
+# Lessons to rules
 
 > Who reads this: whoever closes an incident, writes a post-mortem, or wants a new rule.
 > When: at incident close, at the monthly vendor radar, and when a user reports a problem.

@@ -1,4 +1,4 @@
-# 05 — Adoption
+# Adoption
 
 > Who reads this: whoever brings v7 to an organisation or a product repo.
 > When: the first week, and when you add a second consuming repo.
@@ -21,7 +21,7 @@ One repo holds the policy. Product repos consume it. Derivation runs one way: **
 |---|---|
 | `projects.yaml` | each product repo: tier scheme, declared metadata, [risk-floor](../controls/risk-floor-paths.md) and residency paths |
 | `tiers.yaml` | tier definitions and model/agent lanes allowed per tier |
-| `rules-v7.md` | the rule table for product scope (format: [`rule-contract`](../controls/rule-contract.md)) |
+| `rules.md` | the rule table for product scope (heading `## Rule register`; `rules-v7.md` with `## Rules v7` is read until 2026-12-31) (format: [`rule-contract`](../controls/rule-contract.md)) |
 | `souls/` | hats — role files a person or agent wears per product (see [`context-and-hats`](../ai-engineering/context-and-hats.md)) |
 | `gates/` | gate scripts for `PRODUCT_CI` and `RUNTIME_PROBE` |
 | `adapters/gen.sh` | generates vendor files for each CLI you actually use; byte-identical on two runs |

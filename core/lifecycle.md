@@ -1,4 +1,4 @@
-# 07 — Stage lifecycle
+# Stage lifecycle
 
 > Who reads this: whoever starts a project, plans a sprint, or asks "are we ready to move on?"
 > When: at project start, at each stage exit, and when a reviewer asks where a document belongs.

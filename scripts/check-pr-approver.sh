@@ -29,7 +29,7 @@
 # Old files (logins and `shared` only) mean the same as before. Only LISTED bots are mapped: an agent
 # identity missing from the file is treated as an ordinary author, so list every agent identity.
 # Read the approvers file from the PR's BASE commit, not its head: otherwise the PR under review can
-# edit its own approver list (the reusable workflow v7-gates-product.yml does this).
+# edit its own approver list (the reusable workflow product-gates.yml does this).
 #
 # Usage: check-pr-approver.sh --repo owner/name --pr N [--approvers FILE]   (default FILE: .approvers)
 #        check-pr-approver.sh --selftest    # local JSON fixtures, no network

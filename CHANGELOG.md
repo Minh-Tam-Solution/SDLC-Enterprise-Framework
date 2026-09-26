@@ -9,7 +9,18 @@ Full version history for v6.5.0 and earlier lives in
 tree small; it does not hide anything — the repository is public, so the archive folder and git
 history remain readable.
 
-## Unreleased — 2026-09-26 (layout by kind of document; stages, project structure, documentation standards restored)
+## Unreleased — version-neutral controls
+
+| Change | Detail |
+|---|---|
+| Script | `scripts/check-rules-v7.sh` → `scripts/check-rules.sh`; label `gate=check-rules` |
+| Workflows | `v7-gate.yml` → `version-declared.yml` · `v7-rules-gate.yml` → `rules.yml` · `v7-gates-product.yml` → `product-gates.yml` (reusable; callers pinned to a SHA keep working, re-pins use the new file name) |
+| Rule-table heading | `## Rules v7` → `## Rule register`. The old heading, and the older Vietnamese one, are still read with a deprecation notice until 2026-12-31. Not `## Rules`: the deadline gate scans every `.md`, and `MIGRATION-MAP.md` already has a `## Rules` section |
+| Policy-repo file | `rules-v7.md` → `rules.md` (old name read until 2026-12-31) |
+| Titles | old file numbers and "v7" removed from H1 titles and from three headings (headings are link anchors) |
+| New rule NAME-1 (ADVISORY) | `scripts/rule-no-version-in-names.sh` counts version numbers in live file and folder names and in Markdown headings; first count 3, all in `DEPRECATION-POLICY.md` |
+
+## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 
 | Change | Detail |
 |---|---|

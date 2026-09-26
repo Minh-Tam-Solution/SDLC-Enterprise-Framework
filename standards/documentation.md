@@ -1,4 +1,4 @@
-# 09 — Documentation standards
+# Documentation standards
 
 > Who reads this: whoever writes a document, a spec, an ADR or a source file, and whoever writes a tool that reads them.
 > When: before creating a file, and when a checker reports a missing field.
@@ -11,7 +11,7 @@
 
 - Documents: kebab-case, `.md`. Words say what the document is about: `authentication-api-design.md`, `database-migration-guide.md`. Capitalised words are accepted (`Authentication-API-Design.md`); pick one style per repo.
 - IDs lead when the document has one: `ADR-004-event-bus-choice.md`, `SPEC-0012-payment-retry.md`.
-- **Never in a living document's name or folder:** version numbers (`v2`, `v7/`, `rev3`), sprint or phase numbers, status words (`draft`, `final`, `new`, `old`, `wip`, `temp`), team or person names. The name outlives all of them. Version and status belong in the header.
+- **Never in a living document's name, folder or heading:** version numbers (`v2`, `v7/`, `rev3`, `6.3.0`) — a heading is a link anchor, so it breaks links the same way a file name does, sprint or phase numbers, status words (`draft`, `final`, `new`, `old`, `wip`, `temp`), team or person names. The name outlives all of them. Version and status belong in the header.
 - **Dated records are the exception.** A record of something that happened on a day — a meeting, a directive, a review, a hand-over, an incident, a sprint log — carries the date in its name (`review-payment-service-2026-09-26.md`) and is never edited afterwards; a correction is a new record that links the old one. Records live in `08-collaborate/`, `09-govern/` or `07-operate/incidents/`, never in the stage folders that hold living documents.
 - Code files follow the language's own convention (`snake_case.py`, `kebab-case.ts` or `PascalCase.tsx` for components, `YYYYMMDDHHMM_description.sql` for migrations). Short, no version numbers, no person names.
 

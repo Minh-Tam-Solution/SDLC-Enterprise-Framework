@@ -1,4 +1,4 @@
-# 01 — v7 Rule Contract
+# Rule Contract
 
 **Version**: 1.0.0
 **SDLC Framework Version**: 7.0.0
@@ -45,7 +45,7 @@ result=pass|insufficient_evidence|violation gate=<gate-name> reason=<slug> [fix=
 
 `pass ↔ 0` · `insufficient_evidence ↔ 1` · `violation ↔ 2`. `gate=` names the script (e.g. `check-advisory-deadline`); the rule id lives in the table, not in the label. A label that contradicts the exit code, or is malformed, is mis-declared. The cause of a failure is read from the last line of **stderr** — never discard it.
 
-**Unit of routing = FILE; unit of enforcement = ROW.** A rule file has a `## Rules v7` table; each row is one command with one exit code. `ratio = rule_files / files_in_scope` is a **measurement, not a target**: adding a row whose `cmd` does not measure what the rule says raises the ratio and destroys the measurement.
+**Unit of routing = FILE; unit of enforcement = ROW.** A rule file has a `## Rule register` table; each row is one command with one exit code. `ratio = rule_files / files_in_scope` is a **measurement, not a target**: adding a row whose `cmd` does not measure what the rule says raises the ratio and destroys the measurement.
 
 ---
 
@@ -98,7 +98,7 @@ A gate switched on while violations are many turns CI red on day one ⇒ **it ge
 
 Every existing document takes **one of three** routes. There is **no fourth route called "rewrite it for v7"**.
 
-1. **Rule** — has `class` + `cmd` + `burn_case` ⇒ a row in `## Rules v7`
+1. **Rule** — has `class` + `cmd` + `burn_case` ⇒ a row in `## Rule register`
 2. **Reference** — content is right, no command ⇒ kept, stops pretending to be a gate
 3. **`archive/`** — no longer in force
 
@@ -106,7 +106,7 @@ Every existing document takes **one of three** routes. There is **no fourth rout
 
 ---
 
-## Rules v7
+## Rule register
 
 > **The framework's single rule register.** No other file holds a rule table; a rule in two tables runs twice and is counted twice.
 > 🔴 Never list the rules runner itself **without** `--l3` in a row: the runner runs `cmd`, `cmd` is the runner ⇒ infinite recursion.
@@ -114,11 +114,12 @@ Every existing document takes **one of three** routes. There is **no fourth rout
 | id | class | cmd | burn_case | run_scope |
 |---|---|---|---|---|
 | L2 | MACHINE | `bash scripts/rule-no-swallowed-stderr.sh` | G2: a gate called a checker with `2>/dev/null`, which swallowed a missing-module error; the gate reported "README out of sync with YAML" — the wrong cause, and two readers went to fix the wrong thing. Exemptions are declared in a file, each with a deadline. | FRAMEWORK_REPO |
-| L3 | MACHINE | `bash scripts/check-rules-v7.sh --l3` | G3: a duplicate-document gate compared file names across trees and stayed 100% green while the work was unfinished — nobody had ever made it red. Every script in the `cmd` column must have `--selftest` (a red case + a green case), pass it, and contain no `exit $?`. | FRAMEWORK_REPO |
+| L3 | MACHINE | `bash scripts/check-rules.sh --l3` | G3: a duplicate-document gate compared file names across trees and stayed 100% green while the work was unfinished — nobody had ever made it red. Every script in the `cmd` column must have `--selftest` (a red case + a green case), pass it, and contain no `exit $?`. | FRAMEWORK_REPO |
 | L4 | MACHINE | `bash scripts/rule-git-grep-no-word-boundary.sh` | G1: `git grep -E '\bMUST\b'` matched nothing and exited successfully; the same person then got a count wrong in the opposite direction (5 vs. hundreds), both silent, both exposed only by a positive control. Use `-w`/`-P` with a positive control. | FRAMEWORK_REPO |
 | C21-4 | MACHINE | `bash scripts/check-advisory-deadline.sh` | G4: a "kill" gate for an internal tool ran 8 days past its deadline with its deciding metric still "NOT MEASURED"; nobody promoted it, nobody deleted it — a report-only gate that was dead yet stayed green. | FRAMEWORK_REPO |
 | DOC-1 | ADVISORY | `bash scripts/check-doc-count.sh` | v6.x reached 189 live docs (502 with archive); nobody could say which were still true. deadline=2026-10-25 | FRAMEWORK_REPO |
 | C21-5 | ADVISORY | `bash scripts/check-version-declared.sh` | A document's own version was read as the framework version it had been checked against; hundreds of references were then bumped by hand and drifted back, and nobody could say which documents had really been verified against the current framework. Counts documents with no `sdlc_framework` / `**SDLC Framework Version**` field; an older declared version is legal and not counted. deadline=2026-10-09 | FRAMEWORK_REPO |
+| NAME-1 | ADVISORY | `bash scripts/rule-no-version-in-names.sh` | The core lived in `v7/`; moving it to version-neutral folders broke ~100 link lines in four consuming repos on 2026-09-26, and the next major version would have broken them again. A heading is a link anchor, so it counts too. deadline=2026-10-26 | FRAMEWORK_REPO |
 
 **Pending rows (not in the table, with the reason):**
 - G1 content (does the positive control really plant a violation) and §2 (does a `cmd` call a model on any branch) are `REVIEW` with no `cmd`: the reviewer of the PR that adds a row judges them. They are not rows.
