@@ -60,6 +60,22 @@ Coding agents read untrusted text all day while holding write credentials.
 - **Authorisation for an agent's actions lives in the system it acts on,** not in its instructions: a privileged call from an agent identity is refused unless that identity may make it ([`adoption/adoption.md`](../adoption/adoption.md), agent identity).
 - **High-impact actions wait for a person:** payments, deletion of data, permission changes, sending messages outside the team.
 
+## Data classes and model access
+
+Two separate axes. **Model quality** says how capable a model is; the **data class** says which data may be sent to a model at all. More risk never means "send it to a stronger cloud model".
+
+| Class | Holds | May reach |
+|---|---|---|
+| `public` | published, or meant to be | any model |
+| `internal` | ordinary working material with no data from the classes below | models the organisation has approved |
+| `confidential` | non-public work product whose disclosure harms the organisation: closed source code, designs, unreleased plans | only lanes the policy repo approves for that class |
+| `restricted` | personal data; payroll-like data (pay, evaluations, bank details); confidential business data such as accounts, contracts, investor material | an approved internal lane (a model inside the organisation's boundary) or a person — never an external model |
+| `no-ai` | secrets and credentials: `.env` files, keys, tokens, private certificates | no model sees their content; a person handles them |
+
+- **Classify by path in the policy repo,** next to the risk-floor and residency paths. The policy repo declares the class that unlisted paths take; with no declaration a path is unclassified, and unclassified means ask first, never an assumed "internal". A file or record that mixes classes takes the most restrictive one.
+- **A cloud reviewer that meets a `restricted` or `no-ai` path returns `insufficient_evidence`** (`abstain_reason: restricted_data`) and hands over to a person — never a pretend review ([`controls/tiers.md`](../controls/tiers.md), model reviewer lane).
+- **Agent access is enforced by the tool, not the prompt:** deny reads of `no-ai` paths in the agent's permissions and hooks, and keep secrets out of the agent's environment ([§ Secrets](#secrets)).
+
 ## Operating securely
 
 - **No personal data or secrets in logs or error responses;** always log security events ([`observability.md`](observability.md)).
@@ -79,6 +95,7 @@ Each enters through [`practices/lessons-to-rules.md`](../practices/lessons-to-ru
 | denial tests exist | a 403 test per route with an object id |
 | no mocks or skips in security tests | scan of auth test files, with a planted positive control |
 | threat model on risk-floor changes | a link in the PR when a risk-floor path changed |
+| data class declared | every path an agent may read maps to a class; a planted `no-ai` file read by a test agent must be denied |
 
 ## Sources
 
@@ -97,3 +114,5 @@ Current practice, each opened on the date shown:
 - OWASP Application Security Verification Standard (5.0) — <https://github.com/OWASP/ASVS> (accessed 2026-09-26)
 - OWASP Top 10:2025 — <https://top10.owasp.org/2025> (accessed 2026-09-26)
 - NIST SP 800-218 — Secure Software Development Framework (SSDF) Version 1.1 — <https://csrc.nist.gov/pubs/sp/800/218/final> (accessed 2026-09-26)
+- OWASP Top 10 for LLM Applications 2025 — LLM02 Sensitive Information Disclosure — <https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/> (accessed 2026-09-26)
+- Carnegie Mellon University — Data Classification (classify by impact of disclosure; a collection takes its most restrictive element) — <https://www.cmu.edu/iso/governance/guidelines/data-classification.html> (accessed 2026-09-26)
