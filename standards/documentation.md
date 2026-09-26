@@ -36,7 +36,7 @@ Directly under the title — five required fields, checked by gate DOC-2 ([`scri
 | Field | Meaning | Rule |
 |---|---|---|
 | `SDLC Framework Version` | the framework version this document was last checked against | counted by `scripts/check-version-declared.sh`; older than current is legal and counted, missing is the finding |
-| `Status` | `DRAFT` · `ACTIVE` · `DEPRECATED` · `SUPERSEDED` · `ARCHIVED` ([`policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md)) | `DEPRECATED` and `SUPERSEDED` name the successor on the next line |
+| `Status` | `DRAFT` · `ACTIVE` · `DEPRECATED` · `SUPERSEDED` ([`policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md)) | `DEPRECATED` and `SUPERSEDED` name the successor on the next line; `ARCHIVED` exists only under `archive/`, never on a live document |
 | `Owner` | who answers questions about it and keeps it true | a role or handle that exists today |
 | `Consumer` | who reads or runs it, and when | named; "everyone" is not a consumer |
 | `Review by` | ISO date by which the owner re-checks it | a passed date blocks (DOC-2); after review, move the date — do not bulk-bump it |

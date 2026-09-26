@@ -57,7 +57,7 @@ Vendors change how context loads, how hooks behave and which models exist — mo
 2. Give the burn case, the command that detects it, and the answer to "if it is wrong, what does a false positive cost?".
 3. A PR adds the row at `ADVISORY` with a deadline. Nobody adds a row straight at `MACHINE`.
 
-**Exceptions are a contract, not a claim.** A rule may enter at `MACHINE` directly only under the two cases in [`controls/rule-contract.md`](../controls/rule-contract.md#entering-at-machine-directly) — a replacement for a gate that already blocks, or irreversible harm meeting all six conditions — and the case is named in its `burn_case`. "Our case is special" is not one of them.
+**Exceptions are a contract, not a claim.** A rule may enter at `MACHINE` directly only under the two cases in [`controls/rule-contract.md`](../controls/rule-contract.md#entering-at-machine-directly) — a same-rule replacement for a gate that already blocks, or irreversible harm meeting all six conditions — and the case is named in its `burn_case`. "Our case is special" is not one of them.
 
 ## Never measure agent output as progress
 
