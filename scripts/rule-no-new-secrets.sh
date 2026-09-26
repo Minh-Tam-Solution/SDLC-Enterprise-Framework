@@ -13,8 +13,10 @@
 #   One entry per line:  <path>:<first 12 hex of sha256(line)> owner=<who> expires=YYYY-MM-DD reason=<why>
 #   * In a diff, the allow-list is read from the BASE commit, never from the change being checked:
 #     an entry added in the same change is not in force (no "add the secret and its exemption together").
-#   * owner, reason and expires are required, and expires is at most 90 days ahead; an entry missing any
-#     of them, or reaching further, is invalid and ignored. An expired entry blocks again.
+#   * owner, reason and expires are required, and expires is at most 90 days ahead. An entry missing any of
+#     them, reaching further, or already expired makes the gate RED — whether it sits on the base branch or
+#     arrives in the change. Ignoring it would leave a far-dated entry waiting on main until its date slid
+#     into the 90-day window, and then it would start exempting without anyone reviewing it again.
 #   * .secret-allowlist is on the risk floor (controls/risk-floor-paths.md): changing it needs an
 #     independent human approval.
 #   The finding id is printed with each hit.
@@ -36,36 +38,34 @@ if [ $SELFTEST = 1 ]; then
     || { label insufficient_evidence selftest_setup_failed; exit 1; }
   fake="AKIA""QWERTYUIOPASDFGH"                                   # built at run time: this file holds no key
   line="key = \"$fake\""
-  id="cfg.txt:$(printf '%s' "$line" | shasum -a 256 | cut -c1-12)"
-  mk() { # mk NAME ALLOW_AT_BASE ALLOW_IN_CHANGE  -> prints the base sha of a fresh repo NAME
+  id="cfg.txt:$(printf '%s' "$line" | perl -MDigest::SHA=sha256_hex -e 'local $/; print substr(sha256_hex(<STDIN>), 0, 12)')"
+  mk() { # mk NAME ALLOW_AT_BASE ALLOW_IN_CHANGE LEAK(1|0)
     local d="$t/$1"; mkdir -p "$d" && git -C "$d" init -q && git -C "$d" config user.email t@t && git -C "$d" config user.name t
     printf 'base\n' > "$d/a.txt"; [ -n "$2" ] && printf '%s\n' "$2" > "$d/.secret-allowlist"
     git -C "$d" add -A && git -C "$d" commit -qm base; git -C "$d" rev-parse HEAD > "$d/.base"
-    printf '%s\n' "$line" > "$d/cfg.txt"; [ -n "$3" ] && printf '%s\n' "$3" >> "$d/.secret-allowlist"
-    git -C "$d" add -A && git -C "$d" commit -qm leak
+    if [ "$4" = 1 ]; then printf '%s\n' "$line" > "$d/cfg.txt"; else printf 'harmless\n' > "$d/cfg.txt"; fi
+    [ -n "$3" ] && printf '%s\n' "$3" >> "$d/.secret-allowlist"
+    git -C "$d" add -A && git -C "$d" commit -qm change
   }
+  run() { bash "$0" --root "$t/$1" --base "$(cat "$t/$1/.base")" > "$t/o-$1"; echo $?; }
   soon=$(perl -MPOSIX -e 'print strftime("%F", gmtime(time + 30 * 86400))'); far=$(perl -MPOSIX -e 'print strftime("%F", gmtime(time + 200 * 86400))')
   ok="$id owner=@t expires=$soon reason=test-fixture"
-  mk clean "" ""; git -C "$t/clean" rm -q cfg.txt && git -C "$t/clean" commit -qm undo
-  bash "$0" --root "$t/clean" --base "$(cat "$t/clean/.base")" > /dev/null; a=$?          # clean diff => 0
-  mk leak "" ""
-  bash "$0" --root "$t/leak" --base "$(cat "$t/leak/.base")" > "$t/o2"; b=$?               # planted key => 2
-  mk same "" "$ok"
-  bash "$0" --root "$t/same" --base "$(cat "$t/same/.base")" > /dev/null; c=$?             # exemption added in the same change => 2
-  mk base "$ok" ""
-  bash "$0" --root "$t/base" --base "$(cat "$t/base/.base")" > /dev/null; d=$?             # valid exemption at base => 0
-  mk expired "$id owner=@t expires=2000-01-01 reason=test" ""
-  bash "$0" --root "$t/expired" --base "$(cat "$t/expired/.base")" > /dev/null; e=$?       # expired => 2
-  mk ttl "$id owner=@t expires=$far reason=test" ""
-  bash "$0" --root "$t/ttl" --base "$(cat "$t/ttl/.base")" > /dev/null; f=$?               # more than 90 days => invalid => 2
-  mk noreason "$id owner=@t expires=$soon" ""
-  bash "$0" --root "$t/noreason" --base "$(cat "$t/noreason/.base")" > /dev/null; g=$?     # missing reason => invalid => 2
+  mk clean "" "" 0;                                       a=$(run clean)      # nothing => 0
+  mk leak "" "" 1;                                        b=$(run leak)       # planted key => 2
+  mk same "" "$ok" 1;                                     c=$(run same)       # exemption added with the key => 2
+  mk base "$ok" "" 1;                                     d=$(run base)       # valid exemption on base => 0
+  mk expired "$id owner=@t expires=2000-01-01 reason=t" "" 1; e=$(run expired) # expired => 2
+  mk ttl "$id owner=@t expires=$far reason=t" "" 1;       f=$(run ttl)        # expiry beyond 90 days => 2
+  mk noreason "$id owner=@t expires=$soon" "" 1;          g=$(run noreason)   # missing reason => 2
+  mk bomb "$id owner=@t expires=$far reason=t" "" 0;      j=$(run bomb)       # far-dated entry waiting on base, no key => 2
+  mk badnew "" "$id owner=@t expires=$far reason=t" 0;    k=$(run badnew)     # invalid entry arriving in the change => 2
+  mk stale "$id owner=@t expires=2000-01-01 reason=t" "" 0; l=$(run stale)    # expired entry left on base => 2
   bash "$0" --root "$t/leak" --base no-such-ref > /dev/null 2>&1; h=$?                    # bad base => 1
   bash "$0" --root "$t/nope" > /dev/null 2>&1; i=$?                                       # no repo => 1
-  got="$a$b$c$d$e$f$g$h$i"
-  grep -q "id=$id" "$t/o2" || got="$got-id_mismatch"
-  [ "$got" = "022022211" ] && { echo "selftest OK"; label pass selftest_ok; exit 0; }
-  echo "selftest BROKEN: got=[$got] want=[022022211]"; cat "$t/o2"; label insufficient_evidence selftest_broken; exit 1
+  got="$a$b$c$d$e$f$g$j$k$l$h$i"
+  grep -q "id=$id" "$t/o-leak" || got="$got-id_mismatch"
+  [ "$got" = "022022222211" ] && { echo "selftest OK"; label pass selftest_ok; exit 0; }
+  echo "selftest BROKEN: got=[$got] want=[022022222211]"; cat "$t/o-leak"; label insufficient_evidence selftest_broken; exit 1
 fi
 
 git -C "$ROOT" rev-parse --git-dir > /dev/null || { label insufficient_evidence not_a_git_repo; exit 1; }
@@ -84,21 +84,31 @@ else
   input=$(git -C "$ROOT" diff --no-color --no-ext-diff --unified=0 "$BASE" HEAD) || { label insufficient_evidence diff_failed; exit 1; }
 fi
 
-allow=$(mktemp); trap 'rm -f "$allow"' EXIT
+allow=$(mktemp); allow_new=$(mktemp); trap 'rm -f "$allow" "$allow_new"' EXIT
 if [ $ALL = 1 ]; then [ -f "$ROOT/.secret-allowlist" ] && cat "$ROOT/.secret-allowlist" > "$allow"
-elif [ -n "$(git -C "$ROOT" ls-tree --name-only "$BASE" -- .secret-allowlist)" ]; then
-  git -C "$ROOT" show "$BASE:.secret-allowlist" > "$allow" || { label insufficient_evidence allowlist_read_failed; exit 1; }
+else
+  if [ -n "$(git -C "$ROOT" ls-tree --name-only "$BASE" -- .secret-allowlist)" ]; then
+    git -C "$ROOT" show "$BASE:.secret-allowlist" > "$allow" || { label insufficient_evidence allowlist_read_failed; exit 1; }
+  fi
+  if [ -n "$(git -C "$ROOT" ls-tree --name-only HEAD -- .secret-allowlist)" ]; then
+    git -C "$ROOT" show "HEAD:.secret-allowlist" > "$allow_new" || { label insufficient_evidence allowlist_read_failed; exit 1; }
+  fi
 fi
-out=$(printf '%s\n' "$input" | ALLOW="$allow" TODAY="$today" PATTERN="$PATTERN" perl -e '
+out=$(printf '%s\n' "$input" | ALLOW="$allow" ALLOW_NEW="$allow_new" TODAY="$today" PATTERN="$PATTERN" perl -e '
   use strict; use warnings; use Digest::SHA qw(sha256_hex); use Time::Local qw(timegm);
-  my (%exp, $f); open(my $a, "<", $ENV{ALLOW}) or exit 3;
+  my (%exp, %seen, $f); my $bad = 0;
   my ($ty, $tm, $td) = split /-/, $ENV{TODAY}; my $limit = timegm(0, 0, 0, $td, $tm - 1, $ty) + 90 * 86400;
-  while (<$a>) {
-    next if /^\s*(#|$)/; chomp; my ($id) = /^(\S+)/;
-    my ($e) = /\bexpires=(\d{4})-(\d{2})-(\d{2})\b/ ? ("$1-$2-$3") : (undef);
-    my $ok = defined $e && /\bowner=\S+/ && /\breason=\S+/ && eval { timegm(0, 0, 0, (split /-/, $e)[2], (split /-/, $e)[1] - 1, (split /-/, $e)[0]) <= $limit };
-    if (!$ok) { print "INVALID allow-list entry ignored (needs owner=, reason=, expires= within 90 days): $id\n"; next }
-    $exp{$id} = $e;
+  for my $src (["base", $ENV{ALLOW}], ["change", $ENV{ALLOW_NEW}]) {
+    my ($where, $path) = @$src; open(my $a, "<", $path) or exit 3;
+    while (<$a>) {
+      next if /^\s*(#|$)/; chomp; my ($id) = /^(\S+)/;
+      next if $seen{"$id|$_"}++;          # the same unchanged line on base and in the change is judged once
+      my ($e) = /\bexpires=(\d{4})-(\d{2})-(\d{2})\b/ ? ("$1-$2-$3") : (undef);
+      my $ok = defined $e && /\bowner=\S+/ && /\breason=\S+/ && eval { timegm(0, 0, 0, (split /-/, $e)[2], (split /-/, $e)[1] - 1, (split /-/, $e)[0]) <= $limit };
+      if (!$ok) { $bad++; print "RED — invalid allow-list entry ($where; needs owner=, reason=, expires= within 90 days): $id\n"; next }
+      if ($e lt $ENV{TODAY}) { $bad++; print "RED — expired allow-list entry ($where, $e): remove it: $id\n"; next }
+      $exp{$id} = $e if $where eq "base";
+    }
   }
   my $re = qr/$ENV{PATTERN}/; my ($hit, $allowed) = (0, 0);
   while (my $l = <STDIN>) {
@@ -110,7 +120,7 @@ out=$(printf '%s\n' "$input" | ALLOW="$allow" TODAY="$today" PATTERN="$PATTERN" 
     if (exists $exp{$id} && $exp{$id} ge $ENV{TODAY}) { $allowed++; print "ALLOWED id=$id (until $exp{$id})\n"; next }
     $hit++; print "RED — secret-shaped value id=$id match=$shown", (exists $exp{$id} ? " (allow-list entry expired $exp{$id})" : ""), "\n";
   }
-  print "count=$hit allowed=$allowed\n";
+  print "count=", $hit + $bad, " secrets=$hit allowlist_errors=$bad allowed=$allowed\n";
 ') || { echo "$out"; label insufficient_evidence scan_failed; exit 1; }
 echo "$out"
 n=$(grep -oE '^count=[0-9]+' <<<"$out" | cut -d= -f2)
