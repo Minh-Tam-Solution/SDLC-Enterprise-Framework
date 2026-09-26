@@ -17,11 +17,14 @@ name: product-gates
 #     with the caller's GITHUB_TOKEN (step "Checkout framework"): give that step a token that can read it.
 #
 # Steps:
-#   1. rules    scripts/check-rules.sh --run-scope PRODUCT_CI on the CALLER checkout: runs every row of
-#               the caller's own "## Rule register" tables (legacy "## Rules v7" still read) whose run_scope is PRODUCT_CI. The runner comes from
-#               the framework at framework_ref, so framework_ref must contain scripts/check-rules.sh
-#               with --run-scope. Rows run at the caller root and must name a script IN the caller repo
+#   1. rules    scripts/check-rules.sh --table <rules_table> --run-scope PRODUCT_CI on the CALLER checkout:
+#               runs every row of the caller's rule table (heading "## Rule register"; legacy "## Rules v7"
+#               still read) whose run_scope is PRODUCT_CI. The runner comes from the framework at
+#               framework_ref. Rows run at the caller root and must name a script IN the caller repo
 #               (the runner does not expand variables); to use a framework sample, copy it in.
+#               Before 2026-09-26 this step passed `--scope .`, which the runner read as the table path
+#               ".", so it always ended "table not found" = cannot measure: the step never ran a rule.
+#               product-gates-selftest.yml now proves pass = 0, violation = 2, missing table = 1.
 #   2. approver check-pr-approver.sh, pull_request events only. The approver list is read from the PR's
 #               BASE commit, so the PR under review cannot add names to its own approver list.
 #   3. verdict  every step above runs (if: always()); exit codes follow controls/rule-contract.md:
@@ -60,6 +63,26 @@ on:
         required: false
         type: string
         default: ".approvers"
+      rules_table:
+        description: "path of the rule table in the target repo (heading ## Rule register, rows with run_scope PRODUCT_CI)"
+        required: false
+        type: string
+        default: "rules.md"
+      enforce:
+        description: "false = report the verdict in outputs without failing the job (used by the framework's own selftest)"
+        required: false
+        type: boolean
+        default: true
+    outputs:
+      rules_rc:
+        description: "rules step: 0 pass · 1 cannot measure · 2 violation"
+        value: ${{ jobs.product-gates.outputs.rules_rc }}
+      approver_rc:
+        description: "approver step: 0 · 1 · 2, empty when not a pull_request"
+        value: ${{ jobs.product-gates.outputs.approver_rc }}
+      final:
+        description: "verdict: 0 pass · 1 insufficient evidence · 2 violation"
+        value: ${{ jobs.product-gates.outputs.final }}
 
 permissions:
   contents: read
@@ -68,6 +91,10 @@ permissions:
 jobs:
   product-gates:
     runs-on: ubuntu-latest
+    outputs:
+      rules_rc: ${{ steps.rules.outputs.rc }}
+      approver_rc: ${{ steps.approver.outputs.rc }}
+      final: ${{ steps.verdict.outputs.final }}
     env:
       TARGET_REPO: ${{ inputs.target_repo || github.repository }}
       MIN_TIER: ${{ inputs.min_tier }}
@@ -102,10 +129,11 @@ jobs:
         if: always()
         env:
           SEF_DIR: ${{ runner.temp }}/sef-framework
+          RULES_TABLE: ${{ inputs.rules_table }}
         run: |
           rc=0
           out=$(bash "$SEF_DIR/scripts/check-rules.sh" \
-                  --root "$GITHUB_WORKSPACE" --scope . --run-scope PRODUCT_CI --block) || rc=$?
+                  --root "$GITHUB_WORKSPACE" --table "$RULES_TABLE" --run-scope PRODUCT_CI --block) || rc=$?
           echo "$out"
           case $rc in 0|1|2) ;; *) rc=1;; esac
           # Zero rules executed is "nothing measured", not a pass (G1).
@@ -139,8 +167,10 @@ jobs:
           echo "rc=$rc" >> "$GITHUB_OUTPUT"
 
       - name: Verdict
+        id: verdict
         if: always()
         env:
+          ENFORCE: ${{ inputs.enforce }}
           R: ${{ steps.rules.outputs.rc }}
           A: ${{ steps.approver.outputs.rc }}
         run: |
@@ -153,10 +183,12 @@ jobs:
           fi
           [ $final = 0 ] && { [ "$R" = 1 ] || [ "$A" = 1 ]; } && final=1
           echo "rules=$R approver=${A:-skipped} tier=$MIN_TIER final=$final"
+          echo "final=$final" >> "$GITHUB_OUTPUT"
           case $final in
             0) echo "result=pass gate=product-gates reason=all_pass" ;;
             1) echo "::warning::product-gates: insufficient evidence (see steps above)"
                echo "result=insufficient_evidence gate=product-gates reason=rules_${R}_approver_${A:-skipped}" ;;
             2) echo "::error::product-gates: violation (see steps above)"
-               echo "result=violation gate=product-gates reason=rules_${R}_approver_${A:-skipped}"; exit 1 ;;
+               echo "result=violation gate=product-gates reason=rules_${R}_approver_${A:-skipped}"
+               [ "$ENFORCE" = false ] || exit 1 ;;
           esac

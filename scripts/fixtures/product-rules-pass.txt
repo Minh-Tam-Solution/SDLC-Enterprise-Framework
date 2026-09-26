@@ -1,0 +1,7 @@
+# Fixture rule table (product scope) for product-gates-selftest.yml. Not a live document.
+
+## Rule register
+
+| id | class | cmd | burn_case | run_scope |
+|---|---|---|---|---|
+| FX-PASS | MACHINE | `bash scripts/fixtures/rule-pass.sh` | fixture: the product workflow must report pass (0) | PRODUCT_CI |
