@@ -38,7 +38,7 @@ The old criterion — team size — is gone. One person building ENTERPRISE gets
 
 `effective_control = max(service_tier, change_harm)`
 
-- `service_tier` belongs to the repo. `change_harm` belongs to the diff: which risk-floor or residency paths it touches.
+- `service_tier` belongs to the repo. `change_harm` belongs to the diff: which [risk-floor](risk-floor-paths.md) or residency paths it touches.
 - A docs-only diff in an ENTERPRISE repo is still ENTERPRISE if it touches the approvers file.
 - **Non-compensable harm** (email sent, payment captured, invoice issued): mark `non_compensable: true`. Control goes **before** the side-effect — dry-run, idempotency key, reconciliation. Rollback after the fact does not undo it.
 

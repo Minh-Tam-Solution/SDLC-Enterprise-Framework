@@ -55,7 +55,7 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | advisory deadline | FRAMEWORK_REPO | every `ADVISORY` row has `deadline=` and a `count=`; past deadline with count > 0 ⇒ 2 | `scripts/check-advisory-deadline.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
 | doc count | FRAMEWORK_REPO | live docs outside `10-Archive/` and `templates/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
-| PR approver | PRODUCT_CI | approver login ≠ author, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |
+| PR approver | PRODUCT_CI | approver login ≠ author and ≠ the author's operator, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |
 | adapter drift | PRODUCT_CI | regenerating adapters at the pinned policy ref gives an empty diff | pattern |
 | tier floor | PRODUCT_CI | declared tier ≥ tier derived from evidence ([`02`](02-tiers.md)) | pattern |
 | provenance probe | RUNTIME_PROBE | the running code resolves to a deploy tree built from a merged SHA; no symlink, interpreter, cron entry, service unit, env var or config path points into a working tree; state dirs have the right owner and mode | pattern |
@@ -63,6 +63,10 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | deadline ledger | governance | every self-declared deadline closes as `done`, `dropped`, `superseded` or `extended→YYYY-MM-DD`, with a pointer to evidence that exists and is merged/closed/green; `extended` at most twice | pattern |
 
 Known debt goes into a skip file with `expiry` and `owner`. The gate blocks **new** failures; known ones turn red at expiry. Break-glass is not for old debt.
+
+## Approver independence
+
+An approval counts only if the reviewer is neither the PR author nor the person who operates the author. Agents open PRs under bot identities, so `reviewer ≠ author` alone lets a person approve their own agent's work. The approvers file maps each agent identity to its operator (`bot:<bot-login> operated_by=<human-login>`); a listed bot with no operator is `1` (cannot measure), never a pass. The four identity layers apply ([`05`](05-adoption.md)): authority comes from the authenticated actor the code host reports, and the operator mapping lives in the protected approvers file, read from the PR's base commit — never from commit trailers or from the PR under review.
 
 ## Break-glass
 

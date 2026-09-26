@@ -34,7 +34,7 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 
 | # | Document | Purpose |
 |---|----------|---------|
-| — | [Risk Floor Paths](risk-floor-paths.md) | Deterministic path-based risk floor (migrations/, auth/, tenant/, permissions/, billing/, payment/, infra/, secrets/) that always requires the highest verification tier |
+| — | [Risk Floor Paths](../../../v7/risk-floor-paths.md) (moved to v7, 2026-09-26) | Deterministic path-based risk floor (migrations/, auth/, tenant/, permissions/, billing/, payment/, infra/, secrets/) that always requires the highest verification tier |
 
 ### SASE & Agentic Governance (Ring 1 — timeless principles)
 

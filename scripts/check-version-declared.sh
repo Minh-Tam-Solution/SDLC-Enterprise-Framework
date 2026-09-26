@@ -17,6 +17,8 @@
 #   no flag -> count, exit 0 (step 1 ADVISORY) · --block -> exit 2 if undeclared>0 (step 3 MACHINE)
 # Exit codes (v7/01): 0 PASS · 1 CANNOT MEASURE (no SSOT / 0 files scanned / unknown argument) · 2 VIOLATION.
 # Last stdout line = label: result=pass|insufficient_evidence|violation gate=check-version-declared reason=<slug>
+# The line before the label is `count=<undeclared>` (G4 counter read by check-advisory-deadline.sh); printed only
+#   once files were actually measured — no count on a cannot-measure path.
 set -uo pipefail
 BLOCK=0; SELFTEST=0
 label() { echo "result=$1 gate=check-version-declared reason=$2"; }
@@ -30,7 +32,7 @@ if [ $SELFTEST = 1 ]; then
   # Local fixture: copy this script into a temp tree (ROOT = .. of the script, scripts/ at repo root) — never touches the real repo.
   t=$(mktemp -d); S="$t/scripts/$(basename "$0")"
   mkdir -p "$(dirname "$S")" "$t/d"; cp "$0" "$S"
-  kq() { local o rc; o=$(bash "$S" "$@"); rc=$?; echo "$rc|$(echo "$o" | grep -oE 'declared_older=[0-9]+  undeclared=[0-9]+')|${o##*$'\n'}"; }
+  kq() { local o rc; o=$(bash "$S" "$@"); rc=$?; echo "$rc|$(echo "$o" | grep -oE 'declared_older=[0-9]+  undeclared=[0-9]+')|$(echo "$o" | grep -E '^count=')|${o##*$'\n'}"; }
   printf '# r\n**Version**: 9.9.9\n' > "$t/README.md"
   a=$(kq --block)                                                           # only exempt files => 0 scanned => 1 (G1)
   printf '# a\n**SDLC Framework Version**: 9.9.9\n' > "$t/d/current.md";  b=$(kq --block)  # declares the SSOT => 0
@@ -41,13 +43,13 @@ if [ $SELFTEST = 1 ]; then
   rm "$t/README.md";                                                        f=$(kq --block)  # SSOT missing => 1
   rm -rf "$t"
   G=gate=check-version-declared
-  want="1|declared_older=0  undeclared=0|result=insufficient_evidence $G reason=scanned_0_files
-0|declared_older=0  undeclared=0|result=pass $G reason=undeclared_0
-0|declared_older=1  undeclared=0|result=pass $G reason=undeclared_0
-2|declared_older=1  undeclared=1|result=violation $G reason=undeclared_1
-0|declared_older=1  undeclared=1|result=pass $G reason=step1_count_only_undeclared_1
-2|declared_older=1  undeclared=1|result=violation $G reason=undeclared_1
-1||result=insufficient_evidence $G reason=ssot_readme_missing"
+  want="1|declared_older=0  undeclared=0||result=insufficient_evidence $G reason=scanned_0_files
+0|declared_older=0  undeclared=0|count=0|result=pass $G reason=undeclared_0
+0|declared_older=1  undeclared=0|count=0|result=pass $G reason=undeclared_0
+2|declared_older=1  undeclared=1|count=1|result=violation $G reason=undeclared_1
+0|declared_older=1  undeclared=1|count=1|result=pass $G reason=step1_count_only_undeclared_1
+2|declared_older=1  undeclared=1|count=1|result=violation $G reason=undeclared_1
+1|||result=insufficient_evidence $G reason=ssot_readme_missing"
   got=$(printf '%s\n' "$a" "$b" "$c" "$d" "$e" "$g" "$f")
   [ "$got" = "$want" ] && { echo "selftest OK (7 cases)"; label pass selftest_ok; exit 0; }
   echo "selftest BROKEN:"; diff <(echo "$want") <(echo "$got")
@@ -80,6 +82,7 @@ echo "  declared_older is NOT an error (Convention A) — it only maps verificat
 # G1: 0 files to measure => "clean" means nothing => cannot measure, not pass.
 [ $((total-exempt)) -gt 0 ] || { echo "CANNOT MEASURE: no file outside the exempt list"; label insufficient_evidence scanned_0_files; exit 1; }
 [ "$undeclared" -gt 0 ] && { echo "--- $undeclared files have NEVER recorded which version they were verified against (first 10) ---"; head -10 "$DS"; }
+echo "count=$undeclared"   # G4 counter, the line right before every label below
 [ "$undeclared" = 0 ] && { label pass undeclared_0; exit 0; }
 [ "$BLOCK" = 1 ] && { label violation "undeclared_$undeclared"; exit 2; }
 label pass "step1_count_only_undeclared_$undeclared"; exit 0

@@ -70,11 +70,13 @@ Day one for a developer: clone, open the agent CLI. Nothing to remember. Detail:
 
 | Path | Holds |
 |---|---|
-| `v7/` | the core, 00–06 — start at [`v7/README.md`](v7/README.md) |
+| `v7/` | the core, 00–06, and the risk-floor path list — start at [`v7/README.md`](v7/README.md) |
 | `templates/` | copy-and-edit examples (PREAMBLE, SOUL) |
 | `scripts/` | gate scripts, each with `--selftest` |
 | `.github/workflows/` | CI that gates this repo, and a reusable workflow for product repos |
 | `10-Archive/` | v6.x and earlier, read-only |
+
+Website: the v6 site remains at its last deployment; v7 has no site (no new components).
 
 ## Lineage
 

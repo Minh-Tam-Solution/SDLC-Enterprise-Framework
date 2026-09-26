@@ -38,6 +38,16 @@ or gone stale with zero readers.
 
 - `03-AI-GOVERNANCE/risk-floor-paths.md` — generic, tool-agnostic risk-floor path list (`migrations/`, `auth/`, `tenant/`, `permissions/`, `billing/`, `payment/`, `infra/`, `secrets/`), extracted from `08-Governance-Decision-Matrix.md`'s Risk Classification table before that file was archived.
 
+### v7 follow-ups (archive lot 2, 2026-09-26)
+
+| Change | Detail |
+|---|---|
+| Risk floor live again | `risk-floor-paths.md` → `v7/risk-floor-paths.md`, linked from `v7/02` and `v7/05` |
+| Archive lot 2 | the four v6.3.1 Python tools (`check_doc_headers.py`, `compliance_sdlc_validator.py`, `compliance_design_thinking_validator.py`, `quickstart_solo_setup.py`) → `10-Archive/v6/scripts/`; no v7 gate or CI ran them, two named internal products |
+| Rule C21-5 | `check-version-declared.sh` is a Rules v7 row, `ADVISORY`, `deadline=2026-10-09`; it prints `count=<undeclared>` before its label |
+| Approver independence | `check-pr-approver.sh` reads `bot:<login> operated_by=<human>` lines; an approval by the author's operator does not count; a listed bot with no operator ⇒ `1` |
+| Website | the v6 site stays at its last deployment; v7 adds no site |
+
 ---
 
 ## 📚 Version 6.5.0 — Amendment D — July 5, 2026 (ST/DT GATE-ENFORCED) [AF-36]

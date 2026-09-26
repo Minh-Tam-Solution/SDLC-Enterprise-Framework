@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ARCHIVED (v7 archive lot 2, 2026-09-26): v6.3.1 tool, unmaintained and not run by any v7 gate or CI; kept for history only.
 """
 =========================================================================
 SDLC 6.3.1 Design Thinking Validator
