@@ -1,4 +1,4 @@
-name: v7 version-declared gate (count, step 1)
+name: version-declared gate (count, step 1)
 on:
   pull_request:
   push:
