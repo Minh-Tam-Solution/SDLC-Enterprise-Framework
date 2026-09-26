@@ -1,4 +1,4 @@
-# 10-Archive: Full File Catalog
+# Archive: full file catalog
 
 **Generated**: 2026-04-28 (post-reorganization); `by-topic/ai-governance-v7-retired/` and
 `scripts/` added 2026-09-25 (v7 archive lot 1) — counts below updated for those, the rest of
@@ -79,7 +79,7 @@ v7 (Sep 2026): `compliance_sdlc_scanner.py` (broken on every execution path) and
 If a file you remember isn't where you expect, search the entire archive:
 
 ```bash
-find 10-Archive -name "FILENAME-PATTERN*"
+find archive -name "FILENAME-PATTERN*"
 ```
 
 ---

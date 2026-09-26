@@ -6,7 +6,7 @@
 
 ## Scope
 
-The SDLC 6.3.2 Universal Framework is a **tool-agnostic methodology repository** — it ships documentation, templates, and governance patterns, not executable production code. The "security" surface here is therefore narrower than for a typical software project, but not zero.
+The SDLC Enterprise Framework is a **tool-agnostic methodology repository** — it ships documentation, templates, governance patterns and small gate scripts, not production code. The "security" surface here is therefore narrower than for a typical software project, but not zero.
 
 This policy covers:
 
@@ -24,11 +24,10 @@ This policy does **not** cover:
 
 | Version | Supported |
 |---------|-----------|
-| 6.3.1   | Yes (current) |
-| 6.3.0   | Security advisories only |
-| < 6.3.0 | No |
+| 7.x (`main`, latest tag) | Yes (current) |
+| 6.x and earlier | No — archived in `archive/`, no maintenance |
 
-Earlier versions remain available in `archive/` for historical reference but receive no maintenance.
+Earlier versions remain readable in `archive/` and in git tags for historical reference.
 
 ## Reporting a Vulnerability
 
@@ -40,7 +39,7 @@ Include:
 
 - Description of the issue (methodology corruption, document tampering, sensitive data leak, etc.)
 - Affected file(s) or pattern(s)
-- Impact assessment (which adopters / gates / pillars affected)
+- Impact assessment (which adopters, gates or rules are affected)
 - Suggested remediation (if any)
 
 ## Response Timeline
@@ -56,20 +55,20 @@ Include:
 
 The Framework applies the following controls to protect governance pattern integrity:
 
-- **Gate semantics protected** — Changes to G0-G4 gate definitions, Pillar 4 quality criteria, or Section 7 anti-vibecoding rules require ADR + maintainer review
-- **SOUL conventions protected** — Changes to SOUL frontmatter or scaffolding patterns require contributor sign-off + maintainer review
-- **Template provenance** — Templates in `templates/` point to the v7 doc they implement
-- **Cross-reference audit** — Internal links checked at release; broken links surfaced before tagging
+- **Gate semantics protected** — Changes to stage gates (G0.1–G4), tiers, the rule register or a gate script go through a PR with CI green on its head commit and maintainer review; every gate keeps a selftest with a case that turns it red
+- **Agent templates protected** — Changes to the PREAMBLE and SOUL templates require maintainer review
+- **Template provenance** — Templates in `templates/` point to the document they implement
+- **Cross-reference audit** — Internal links checked by hand at every move; no link-checking gate yet (candidate rule in `policies/artifact-lifecycle.md`)
 
 ## Document Supply Chain
 
-- Releases are tagged signed commits (`git tag -s`)
+- Releases are annotated tags on a merge commit of `main`. They are **not GPG-signed** today
 - `CHANGELOG.md` is the authoritative record of methodology changes per version
-- `DEPRECATION-POLICY.md` governs how patterns are sunset (no silent removals)
+- [`policies/artifact-lifecycle.md`](policies/artifact-lifecycle.md) governs how artifacts are moved, deprecated and archived (no silent removals; every move is recorded in `MIGRATION-MAP.md`)
 
 ## Sensitive Data Hygiene
 
-The Framework is intentionally **vendor-neutral** — internal company names, tenant identifiers, or product brand names of any specific implementer must not appear in normative content (`02-Core-Methodology/`, `templates/`, `scripts/`). `archive/` may contain historical references for context.
+The Framework is intentionally **vendor-neutral** — internal company names, tenant identifiers, or product brand names of any specific implementer must not appear in normative content (`core/`, `policies/`, `standards/`, `controls/`, `ai-engineering/`, `adoption/`, `practices/`, `templates/`, `scripts/`). `archive/` may contain historical references for context.
 
 If you find sensitive data leakage in normative content, please report via the email channel above — this is treated as a critical issue.
 

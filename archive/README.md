@@ -1,34 +1,36 @@
-# 10-Archive: Centralized Legacy Content
+# Archive
 
-**Status**: AI-NEVER-READ
-**Last reorganized**: 2026-04-28
-**Standard**: RFC-001 Legacy Document Organization
+**Status**: AI-NEVER-READ (agents read it only when a person asks for history)
+**This file**: living navigation — kept current, unlike the archived files it describes ([`../policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md))
+**Where each archived document's content went**: [`../MIGRATION-MAP.md`](../MIGRATION-MAP.md)
+**Last updated**: 2026-09-26 (folder renamed from `10-Archive/`; `DEPRECATION-POLICY.md` archived)
 
 ---
 
 ## v6.x — archived 2026-09-25 (legacy)
 
 `v6/` holds the whole v6.x tree (Framework 6.5.0 and its amendments) exactly as it stood on
-2026-09-25: moved with `git mv`, content unchanged. Its live replacement is [`../v7/`](../v7/README.md).
+2026-09-25: moved with `git mv`, content unchanged. Its live successor is the rest of this repository —
+start at the [root README](../README.md); per-file successors are in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md).
 
 **Why it was archived, not revised:**
 - v6 tiered projects by **team size**; v7 tiers them by **the risk of what is being built**.
 - v6 reached **189 live docs** (502 with this archive). Nobody could say which were still true, and
   most "rules" had no runnable command behind them.
-- v7 replaces it with a core of **≤30 live docs**, each rule backed by a script with a selftest
-  (`scripts/check-doc-count.sh` keeps the count honest).
+- v7 replaced it with a small core, each rule backed by a script with a selftest. Knowledge from v6
+  that is still true is being harvested back into the live tree, one MIGRATION-MAP row per source.
 
-**Rules for this folder:** [`DEPRECATION-POLICY.md`](../DEPRECATION-POLICY.md) applies. Nothing in
-`v7/`, `templates/`, `scripts/` or the root docs links into `10-Archive/`; to reuse a v6 idea, copy
-the excerpt forward into a v7 doc and give it a command or mark it reference.
+**Rules for this folder:** [`policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md) applies.
+Archived files are never edited. Live documents do not link here for rules; to reuse a v6 idea, harvest
+the claim into the live document that owns the topic and add a MIGRATION-MAP row.
 
 | Path in `v6/` | Files | What it was |
 |---|---:|---|
 | `01-Overview/` | 2 | executive summary, quick reference |
 | `02-Core-Methodology/` | 18 | 7 pillars, 10 stages, tiers by team size, quality gates, spec standard |
-| `03-AI-GOVERNANCE/` | 12 | AI governance principles; `21-V7-RULE-CONTRACT.md` (superseded by `v7/01`) |
+| `03-AI-GOVERNANCE/` | 12 | AI governance principles; `21-V7-RULE-CONTRACT.md` (superseded by `controls/rule-contract.md`) |
 | `04-AI-TOOLS-LANDSCAPE/` | 15 | per-tool guides |
-| `05-Templates-Tools/` | 82 | spec templates, SASE artifacts, checklists, project templates (the two script shims in `07-Scripts/` stay live until 2026-12-31) |
+| `05-Templates-Tools/` | 82 | spec templates, SASE artifacts, checklists, project templates (the two script shims that stayed live in `07-Scripts/` were removed on 2026-09-26) |
 | `06-Case-Studies/` | 12 | case studies |
 | `07-Implementation-Guides/` | 19 | rollout guides |
 | `08-Training-Materials/` | 13 | training material |
@@ -57,7 +59,7 @@ exception: User explicitly requests historical information
 Two top-level axes — **by version** for time-bound snapshots, **by topic** for topic-bound consolidations. The previous `0[0-9]-Legacy/` numbering scheme was retired because it had become inconsistent (multiple cleanup batches landed without consolidation, producing 7 differently-shaped subdirectories).
 
 ```
-10-Archive/
+archive/
 ├── README.md            # This file
 ├── INDEX.md             # Full file catalog
 │
@@ -86,7 +88,7 @@ Two top-level axes — **by version** for time-bound snapshots, **by topic** for
     ├── coderabbit-pilot-2025/      # CodeRabbit Oct 2025 pilot artifacts
     ├── deprecated-best-practices/  # Old AI-tools coordination patterns
     ├── deprecated-rfcs/            # Sunset RFCs
-    ├── historical-documents/       # Legacy READMEs, version history, platform lessons
+    ├── historical-documents/       # Legacy READMEs, version history, platform lessons, DEPRECATION-POLICY.md (v6.3)
     ├── legacy-scripts/             # Old compliance + governance scripts
     ├── openspec-analysis-2026/     # OpenSpec compatibility analysis
     ├── orchestrator-specs/         # Sprint 173 Orchestrator specs
@@ -109,7 +111,8 @@ See [INDEX.md](INDEX.md) for the full file catalog.
 
 - **Move, don't delete** — Documents are archived, never deleted
 - **Two-axis organization** — Choose `by-version/` for "this is what v4.5 shipped" and `by-topic/` for "this is the now-deprecated approach to X"
-- **No active references** — Active docs (root docs, `v7/`, `templates/`, `scripts/`) do not link to archived content; if a citation is needed, copy the relevant excerpt forward and explain the historical context
+- **Never edited** — archived files stay byte-identical; `README.md` and `INDEX.md` are the only files here that change
+- **No active references** — live documents do not link to archived content for rules; harvest the claim forward and record it in `MIGRATION-MAP.md`
 - **Periodic review** — Quarterly cleanup cadence; at each major version, the prior version's normative content snapshots into `by-version/v{N.N}/`
 
 ---
@@ -133,4 +136,4 @@ See [INDEX.md](INDEX.md) for the full file catalog.
 
 ---
 
-**Owner**: CTO Office
+**Owner**: @dttai71

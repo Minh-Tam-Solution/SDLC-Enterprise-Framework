@@ -45,7 +45,7 @@ Rules:
 
 - Folder names are `NN-stage-name/`, two digits, lower-case kebab-case. Tools that read this layout look for the number; a repo with a different layout declares its stage mapping in `AGENTS.md` instead.
 - Subfolders inside a stage are numbered the same way when order matters (`02-design/01-ADRs/`), and plain kebab-case when it does not.
-- `10-archive/` is not a stage. A document moved there keeps its content unchanged and gains an archive header ([`documentation.md`](documentation.md#archived-documents)).
+- `10-archive/` is not a stage. A document moved there keeps its content unchanged — no header is added; the archive folder's README records what replaced it ([`documentation.md`](documentation.md#archived-documents)).
 - A stage folder may hold a `99-legacy/` subfolder for documents that are superseded but still referenced. Tools skip `99-legacy/`; nobody updates it.
 - One topic, one living document. Before creating a file, search the stage folder for the topic. A second file on the same topic is how two versions of the truth start.
 
