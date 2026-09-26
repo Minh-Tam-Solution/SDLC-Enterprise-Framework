@@ -79,4 +79,19 @@ Each enters at `ADVISORY` through [`practices/lessons-to-rules.md`](../practices
 
 ## Sources
 
-Harvested from `archive/` (rows in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md)). Current practice: monitoring distributed systems, service-level objectives, error-budget policy, alerting on SLOs, postmortem culture (sre.google — the public SRE book and workbook); the USE method (brendangregg.com/usemethod.html); OpenTelemetry logs data model and generative-AI semantic conventions (opentelemetry.io); OWASP Logging Cheat Sheet (cheatsheetseries.owasp.org); delivery metrics (dora.dev/guides/dora-metrics); liveness, readiness and startup probes (kubernetes.io documentation — the principle applies to any runtime).
+From the archive: the rows for this standard in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md).
+
+Current practice, each opened on the date shown:
+
+- Google SRE Book — Monitoring Distributed Systems — <https://sre.google/sre-book/monitoring-distributed-systems/> (accessed 2026-09-26)
+- Google SRE Book — Service Level Objectives — <https://sre.google/sre-book/service-level-objectives/> (accessed 2026-09-26)
+- Google SRE Workbook — Error Budget Policy — <https://sre.google/workbook/error-budget-policy/> (accessed 2026-09-26)
+- Google SRE Workbook — Alerting on SLOs — <https://sre.google/workbook/alerting-on-slos/> (accessed 2026-09-26)
+- Google SRE Book — Postmortem Culture — <https://sre.google/sre-book/postmortem-culture/> (accessed 2026-09-26)
+- Brendan Gregg — The USE Method — <https://www.brendangregg.com/usemethod.html> (accessed 2026-09-26)
+- OpenTelemetry — Logs Data Model — <https://opentelemetry.io/docs/specs/otel/logs/data-model/> (accessed 2026-09-26)
+- OpenTelemetry — Generative AI semantic conventions (page says they moved to the semantic-conventions repository; still under development) — <https://opentelemetry.io/docs/specs/semconv/gen-ai/> (accessed 2026-09-26)
+- OpenTelemetry blog — Inside the LLM Call (2026) — <https://opentelemetry.io/blog/2026/genai-observability/> (accessed 2026-09-26)
+- OWASP — Logging Cheat Sheet — <https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html> (accessed 2026-09-26)
+- DORA — Software delivery performance metrics — <https://dora.dev/guides/dora-metrics/> (accessed 2026-09-26)
+- Kubernetes docs — Liveness, readiness and startup probes (principle applies to any runtime) — <https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/> (accessed 2026-09-26)

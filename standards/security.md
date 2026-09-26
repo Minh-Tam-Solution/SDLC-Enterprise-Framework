@@ -80,4 +80,18 @@ Each enters through [`practices/lessons-to-rules.md`](../practices/lessons-to-ru
 
 ## Sources
 
-Harvested from `archive/` (rows in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md)). Current practice: NIST SP 800-63B-4 (pages.nist.gov/800-63-4); OWASP Top 10 for LLM Applications 2025, LLM01 prompt injection and LLM06 excessive agency (genai.owasp.org); OpenSSF security-focused guide for AI code assistant instructions (best.openssf.org); NIST SP 800-204D on software supply chain security in CI/CD (csrc.nist.gov); OWASP Secrets Management Cheat Sheet (cheatsheetseries.owasp.org); OpenSSF Scorecard checks (github.com/ossf/scorecard); SLSA v1.0 build levels (slsa.dev); OWASP ASVS (github.com/OWASP/ASVS) and Top 10:2025 (top10.owasp.org); NIST SSDF SP 800-218 (csrc.nist.gov).
+From the archive: the rows for this standard in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md).
+
+Current practice, each opened on the date shown:
+
+- NIST Special Publication 800-63B (revision 4) — <https://pages.nist.gov/800-63-4/sp800-63b.html> (accessed 2026-09-26)
+- OWASP Top 10 for LLM Applications 2025 — LLM01 Prompt Injection — <https://genai.owasp.org/llmrisk/llm01-prompt-injection/> (accessed 2026-09-26)
+- OWASP Top 10 for LLM Applications 2025 — LLM06 Excessive Agency — <https://genai.owasp.org/llmrisk/llm062025-excessive-agency/> (accessed 2026-09-26)
+- OpenSSF — Security-Focused Guide for AI Code Assistant Instructions — <https://best.openssf.org/Security-Focused-Guide-for-AI-Code-Assistant-Instructions.html> (accessed 2026-09-26)
+- NIST SP 800-204D — Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines — <https://csrc.nist.gov/pubs/sp/800/204/d/final> (accessed 2026-09-26)
+- OWASP — Secrets Management Cheat Sheet — <https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html> (accessed 2026-09-26)
+- OpenSSF Scorecard — Checks — <https://github.com/ossf/scorecard/blob/main/docs/checks.md> (accessed 2026-09-26)
+- SLSA v1.0 — Security levels — <https://slsa.dev/spec/v1.0/levels> (accessed 2026-09-26)
+- OWASP Application Security Verification Standard (5.0) — <https://github.com/OWASP/ASVS> (accessed 2026-09-26)
+- OWASP Top 10:2025 — <https://top10.owasp.org/2025> (accessed 2026-09-26)
+- NIST SP 800-218 — Secure Software Development Framework (SSDF) Version 1.1 — <https://csrc.nist.gov/pubs/sp/800/218/final> (accessed 2026-09-26)

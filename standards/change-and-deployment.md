@@ -85,4 +85,19 @@ Each enters at `ADVISORY` through [`practices/lessons-to-rules.md`](../practices
 
 ## Sources
 
-Harvested from `archive/` (rows in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md)). Current practice: DORA — small batches, trunk-based development, streamlining change approval, database change management, delivery metrics (dora.dev/capabilities, dora.dev/guides/dora-metrics); parallel change and feature toggles (martinfowler.com/bliki/ParallelChange.html, martinfowler.com/articles/feature-toggles.html); canarying releases (sre.google/workbook/canarying-releases); Semantic Versioning (semver.org); Twelve-Factor build, release, run (12factor.net/build-release-run); reproducible builds (reproducible-builds.org) and SLSA provenance (slsa.dev).
+From the archive: the rows for this standard in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md).
+
+Current practice, each opened on the date shown:
+
+- DORA — Working in small batches — <https://dora.dev/capabilities/working-in-small-batches/> (accessed 2026-09-26)
+- DORA — Trunk-based development — <https://dora.dev/capabilities/trunk-based-development/> (accessed 2026-09-26)
+- DORA — Streamlining change approval — <https://dora.dev/capabilities/streamlining-change-approval/> (accessed 2026-09-26)
+- DORA — Database change management — <https://dora.dev/capabilities/database-change-management/> (accessed 2026-09-26)
+- DORA — Software delivery performance metrics — <https://dora.dev/guides/dora-metrics/> (accessed 2026-09-26)
+- Martin Fowler — Parallel Change (expand/contract) — <https://martinfowler.com/bliki/ParallelChange.html> (accessed 2026-09-26)
+- Pete Hodgson — Feature Toggles — <https://martinfowler.com/articles/feature-toggles.html> (accessed 2026-09-26)
+- Google SRE Workbook — Canarying Releases — <https://sre.google/workbook/canarying-releases/> (accessed 2026-09-26)
+- Semantic Versioning 2.0.0 — <https://semver.org/> (accessed 2026-09-26)
+- The Twelve-Factor App — Build, release, run — <https://12factor.net/build-release-run> (accessed 2026-09-26)
+- Reproducible Builds — Definitions — <https://reproducible-builds.org/docs/definition/> (accessed 2026-09-26)
+- SLSA v1.0 — Provenance — <https://slsa.dev/spec/v1.0/provenance> (accessed 2026-09-26)

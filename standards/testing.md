@@ -70,4 +70,17 @@ Each enters at `ADVISORY` through [`practices/lessons-to-rules.md`](../practices
 
 ## Sources
 
-Harvested from `archive/` (rows in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md)). Current practice: test doubles and fakes (abseil.io/resources/swe-book, chapter 13); consumer-driven contracts, test shapes, test coverage and non-determinism in tests (martinfowler.com); mutation testing at scale (research.google/pubs/state-of-mutation-testing-at-google); property-based testing (hypothesis.works); reward hacking by AI models (metr.org, 2025-06-05); evals for model-driven features (hamel.dev/blog/posts/evals).
+From the archive: the rows for this standard in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md).
+
+Current practice, each opened on the date shown:
+
+- Software Engineering at Google, ch. 13 — Test Doubles — <https://abseil.io/resources/swe-book/html/ch13.html> (accessed 2026-09-26)
+- Ian Robinson — Consumer-Driven Contracts — <https://martinfowler.com/articles/consumerDrivenContracts.html> (accessed 2026-09-26)
+- Martin Fowler — On the Diverse and Fantastical Shapes of Testing — <https://martinfowler.com/articles/2021-test-shapes.html> (accessed 2026-09-26)
+- Martin Fowler — Test Coverage — <https://martinfowler.com/bliki/TestCoverage.html> (accessed 2026-09-26)
+- Google Research — State of Mutation Testing at Google — <https://research.google/pubs/state-of-mutation-testing-at-google/> (accessed 2026-09-26)
+- Hypothesis — What is property-based testing? — <https://hypothesis.works/articles/what-is-property-based-testing/> (accessed 2026-09-26)
+- Martin Fowler — Eradicating Non-Determinism in Tests — <https://martinfowler.com/articles/nonDeterminism.html> (accessed 2026-09-26)
+- METR — Recent frontier models are reward hacking (2025-06-05) — <https://metr.org/blog/2025-06-05-recent-reward-hacking/> (accessed 2026-09-26)
+- Kent Beck — Augmented Coding: Beyond the Vibes — <https://newsletter.kentbeck.com/p/augmented-coding-beyond-the-vibes> (accessed 2026-09-26)
+- Hamel Husain — Your AI Product Needs Evals — <https://hamel.dev/blog/posts/evals/> (accessed 2026-09-26)
