@@ -56,6 +56,8 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | rule table | FRAMEWORK_REPO | every rule row runs; with `--l3`, every command has a passing `--selftest` and no `exit $?` | `scripts/check-rules.sh` |
 | version declared | FRAMEWORK_REPO | which framework version each doc was checked against; counts, does not block | `scripts/check-version-declared.sh` |
 | advisory deadline | FRAMEWORK_REPO | every `ADVISORY` row has `deadline=` and a `count=`; past deadline with count > 0 ⇒ 2 | `scripts/check-advisory-deadline.sh` |
+| no new secrets | FRAMEWORK_REPO | no secret-shaped value in lines a change adds; old findings are dated debt in `.secret-allowlist`; blocks | `scripts/rule-no-new-secrets.sh` |
+| migration class | PRODUCT_CI | each migration classified expand or contract from its statements; a label that says expand on a contract is counted | `scripts/check-migration-class.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
 | no version in names | FRAMEWORK_REPO | no version number in a live file or folder name, or in a Markdown heading (anchor); counts, does not block | `scripts/rule-no-version-in-names.sh` |
 | doc ownership | FRAMEWORK_REPO | every live doc names an Owner, a Consumer and a Review-by date that has not passed; blocks | `scripts/check-doc-ownership.sh` |
@@ -93,7 +95,9 @@ Every deploy writes one line:
 {sha_before, sha_after, artifact_digest, migration, actor, approval_ref, result}
 ```
 
+`migration` is `none`, `expand` or `contract`, as classified by `scripts/check-migration-class.sh` from the migration's statements — not as declared by its author.
+
 - It feeds the delivery numbers — lead time, deployment frequency, change fail rate, recovery time and rework rate ([`standards/change-and-deployment.md`](../standards/change-and-deployment.md)) — without anyone reporting anything. Add `planned` or `unplanned(<incident>)` to get the rework rate.
-- Health red after restart ⇒ **automatic rollback only when `migration=false`**. Rolling code back onto a migrated schema breaks more than it fixes.
+- Health red after restart ⇒ **automatic rollback only when `migration` is `none` or `expand`**. Rolling code back onto a contracted schema — a dropped column, a changed type, a removed enum value — breaks more than it fixes.
 - "Health" here is the new release's own liveness and readiness, not the health of shared dependencies. A health check that calls the database would roll good code back during a database blip ([`standards/observability.md`](../standards/observability.md)).
-- `migration=true` and health red ⇒ stop, alert loudly, follow the human runbook.
+- `migration=contract` and health red ⇒ stop, alert loudly, follow the human runbook.

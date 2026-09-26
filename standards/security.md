@@ -33,7 +33,7 @@ Risk-floor paths and who must approve them are in [`controls/risk-floor-paths.md
 - **Block secrets at push time on the server, not only in a local hook,** and scan again in CI and before a deploy. A local hook runs on the machine the agent controls. A secret found in the repository is treated as leaked: revoke and rotate; rewriting history does not undo it.
 - **Prefer short-lived, narrowly scoped credentials** to long-lived keys; CI never holds the most sensitive ones if it can avoid it.
 - **Keep secrets out of what agents see and write:** not in the agent's environment, not in instruction files, not in its outputs. Scan agent output before it is stored as a log or evidence.
-- A secret scanner proves itself with a planted fake secret ([`controls/gates.md`](../controls/gates.md), G1), and a broken scanner reports "cannot measure", never "clean".
+- **Rule SECRET-1 blocks secret-shaped values in the lines a change adds** ([`scripts/rule-no-new-secrets.sh`](../scripts/rule-no-new-secrets.sh)); old findings go into `.secret-allowlist` with an owner and an expiry. A scanner proves itself with a planted fake secret ([`controls/gates.md`](../controls/gates.md), G1), and a broken scanner reports "cannot measure", never "clean".
 
 ## Dependencies and the supply chain
 
@@ -45,7 +45,7 @@ Risk-floor paths and who must approve them are in [`controls/risk-floor-paths.md
 
 ## CI is part of the product
 
-- **CI definitions, container build files and environment files are high-risk paths:** review changes to them as carefully as risk-floor changes.
+- **CI definitions are on the risk floor** (`.github/workflows/`, or your code host's equivalent — [`controls/risk-floor-paths.md`](../controls/risk-floor-paths.md)); review container build files and environment files as carefully.
 - **The CI token is read-only by default;** a job that must write gets write for that job only.
 - **Contributions from outside run without secrets** — sandboxed with no network and no credentials, or held until a maintainer approves.
 - **Never run untrusted code in a privileged workflow,** and never paste untrusted text (titles, branch names, comments) into a script: pass it through an environment variable.
@@ -71,6 +71,7 @@ Each enters through [`practices/lessons-to-rules.md`](../practices/lessons-to-ru
 
 | Candidate | Command idea |
 |---|---|
+| secrets in added lines (SECRET-1, now in the register) | `scripts/rule-no-new-secrets.sh` |
 | secret push protection on every repository | repository settings check |
 | new dependency exists and is allowed | diff of the dependency manifest against the registry and an allow-list |
 | pinned CI actions, read-only default token | workflow lint |
