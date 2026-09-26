@@ -20,6 +20,8 @@ Gate scripts follow the exit-code contract there: `0` pass · `1` cannot measure
 | `rule-no-swallowed-stderr.sh` | Rule L2 — forbids `2>/dev/null` in `scripts/` unless listed in `.stderr-exemptions` with an expiry. |
 | `rule-git-grep-no-word-boundary.sh` | Rule L4 — forbids `\b` in `git grep -E` (it silently matches nothing without `-P`). |
 | `rule-no-version-in-names.sh` | Rule NAME-1 (ADVISORY) — counts version numbers in live file and folder names and in Markdown headings (a heading is a link anchor). Skips `archive/` and `CHANGELOG.md`. |
+| `rule-no-new-secrets.sh` | Rule SECRET-1 (MACHINE) — no secret-shaped value in lines a change adds; `.secret-allowlist` holds dated debt; `--all` reports the whole tree. |
+| `check-migration-class.sh` | Rule MIG-1 (ADVISORY, `PRODUCT_CI`) — classifies migrations expand/contract from their statements; counts expand labels on contract migrations; prints `class=` for the deploy log. |
 | `selftest-all.sh` | Runs `--selftest` on every script here that supports it. |
 
 The v6 Python tools (`check_doc_headers.py`, `compliance_*_validator.py`, `quickstart_solo_setup.py`)

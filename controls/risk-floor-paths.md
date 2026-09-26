@@ -28,6 +28,7 @@ and a model's confidence in its own output is not evidence here. It feeds `chang
 | `billing/` · `payment/` | directly moves or represents money |
 | `infra/` | infrastructure and deployment config; a defect can take production down |
 | `secrets/` | credentials and keys; a leak is not reversible by a patch |
+| `.github/workflows/` | CI definitions hold the pipeline's credentials and run the gates themselves; one edit can switch a gate off without anyone noticing. On another code host, a repo adds its CI definition path in `projects.yaml` |
 
 Also on the floor wherever they appear (not path-bound): IAM configuration, production config,
 and destructive SQL (`DROP`, or `DELETE` / `TRUNCATE` without a scoping `WHERE`).

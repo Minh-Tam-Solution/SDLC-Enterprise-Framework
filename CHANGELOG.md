@@ -35,6 +35,11 @@ history remain readable.
 | Stage 07 from STANDARD | operating a service with real users now requires the stage-07 minimum (uptime check, error logs someone reads); it was optional for STANDARD |
 | Auto-rollback signal | automatic rollback reads the new release's own liveness and readiness, not shared dependencies — a database blip no longer rolls back good code |
 | Delivery numbers | the deploy log feeds five numbers, adding deployment frequency, recovery time and rework rate (`planned` / `unplanned(<incident>)`) |
+| Rule SECRET-1 (MACHINE) | `scripts/rule-no-new-secrets.sh`: blocks secret-shaped values in lines a change adds (private keys and issuer-prefixed credential formats); old findings are dated debt in `.secret-allowlist`; `--all` reports the tree. Tree count on landing: 0 (positive control planted). Second recorded exception to the ladder: irreversible harm, narrow scope |
+| Rule MIG-1 (ADVISORY, PRODUCT_CI) | `scripts/check-migration-class.sh`: classifies migrations expand/contract from their statements (SQL and migration-framework calls); an expand label on a contract migration is counted, `--enforce` turns it red. Tried on eight real migrations from an adopting repo: the three cited in the burn case are classified contract; five recent ones also contract (conservative) — the noise the ADVISORY step measures |
+| Rollback rule | deploy log `migration` is `none`, `expand` or `contract` as classified by the machine; automatic rollback after `none` or `expand` only |
+| Risk floor | `.github/workflows/` added: CI definitions hold the pipeline's credentials and run the gates themselves. A consumer that counts the floor names now reads 9 |
+| CI | the rules workflow fetches full history so SECRET-1 can diff against the merge-base |
 
 ## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 

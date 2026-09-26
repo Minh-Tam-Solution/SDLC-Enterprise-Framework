@@ -10,6 +10,8 @@ jobs:
     permissions: { contents: read }
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # SECRET-1 diffs against the merge-base with origin/main
       - name: selftest every script (a gate nobody has made red is unmeasured)
         run: bash scripts/selftest-all.sh
       - name: L3 — every rule cmd has --selftest and it passes

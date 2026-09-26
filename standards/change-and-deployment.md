@@ -44,7 +44,7 @@ No change approval board and no weekly change window: external approval of every
 
 - **Expand, migrate, contract.** Never change or drop what the running version uses in the same release that stops using it: add the new structure alongside the old, move the data and the code, remove the old in a later release. Then every deploy's schema also serves the previous code, and a code rollback stays safe.
 - **Migrations are scripts in version control**, and the model must match the migration history: regenerating migrations from the model gives an empty diff.
-- A diff under `migrations/` is on the risk floor. A deploy that ran a migration is not rolled back automatically ([`gates.md`](../controls/gates.md), deploy log and rollback).
+- **The machine classifies each migration** as *expand* (adds only) or *contract* (drops, renames, changes a type, adds an enum value, rewrites existing data) from its statements ([`scripts/check-migration-class.sh`](../scripts/check-migration-class.sh)). A deploy with no migration or an expand migration may roll back automatically; a contract migration follows the human runbook ([`gates.md`](../controls/gates.md), deploy log and rollback). A diff under `migrations/` is on the risk floor either way.
 
 ## Flags and releases
 
@@ -77,7 +77,7 @@ Each enters at `ADVISORY` through [`practices/lessons-to-rules.md`](../practices
 | Candidate | Command idea |
 |---|---|
 | diff size vs declared size; new dependency | `--shortstat` and manifest diff on the PR |
-| migration lint for expand/contract | flag drop, rename, type change or NOT NULL without default in a release that also changes the code using it |
+| migration class (MIG-1, now in the register) | `scripts/check-migration-class.sh` |
 | model ↔ migration history | regenerate migrations, expect an empty diff |
 | release tag never moves | compare each tag's target with the recorded one |
 | flag expiry | flag registry with dates, checked like any deadline |
