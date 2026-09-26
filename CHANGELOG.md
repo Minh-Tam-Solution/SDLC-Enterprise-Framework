@@ -18,7 +18,7 @@ history remain readable.
 | Project templates | `templates/project/`: docs tree command, current sprint, sprint index, roadmap, ADR, spec |
 | Archive rule | archived files are no longer edited; successors are recorded in `MIGRATION-MAP.md` (outcome per source: adopted, partially adopted, superseded, retired, historical only) |
 | Consumers | pinned SHAs keep working; re-pins use the new paths, e.g. `controls/risk-floor-paths.md` (was `v7/risk-floor-paths.md`) |
-| Kept until 2026-12-31 | the two deprecated shims in `05-Templates-Tools/07-Scripts/` |
+| Shims removed early | `05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` and `kiem-nghiem-phien-ban.sh` (announced for removal 2026-12-31) are removed: no CI, script or repo calls them; call `scripts/check-rules-v7.sh` and `scripts/check-version-declared.sh`. No file name outside `archive/` is in Vietnamese |
 
 ## Version 7.0.0-alpha — 2026-09-25 (third generation: v6.x archived, core rewritten)
 

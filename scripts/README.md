@@ -19,6 +19,3 @@ Gate scripts follow the exit-code contract there: `0` pass · `1` cannot measure
 
 The v6 Python tools (`check_doc_headers.py`, `compliance_*_validator.py`, `quickstart_solo_setup.py`)
 are archived in [`archive/v6/scripts/`](../archive/v6/scripts/).
-
-Two deprecated shims remain at the old path until 2026-12-31:
-`templates/07-Scripts/kiem-luat-v7.sh` and `kiem-nghiem-phien-ban.sh`.
