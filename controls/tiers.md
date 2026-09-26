@@ -1,4 +1,4 @@
-# 02 — Tiers by risk
+# Tiers by risk
 
 > Who reads this: whoever sets up a repo, and whoever asks "does this change need a human?"
 > When: at repo setup, when a repo starts touching new data or users, and at quarterly recertification.

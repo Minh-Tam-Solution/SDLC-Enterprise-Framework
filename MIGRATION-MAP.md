@@ -16,7 +16,7 @@
 
 ## Path map
 
-Where each live file of the 7.0.0 layout (`d363387`) went on 2026-09-26. Links in consuming repos are fixed with this table. A reference pinned to a commit SHA keeps working; the next re-pin uses the new path.
+Where each live file of the 7.0.0 layout (`d363387`) went: the layout change of 2026-09-26 (#35) and the version-neutral control names after `v7.0.0-alpha`. Links in consuming repos are fixed with this table. A reference pinned to a commit SHA keeps working; the next re-pin uses the new path.
 
 **Folder rule:** `10-Archive/<path>` → `archive/<path>`, every file, byte-identical.
 
@@ -34,8 +34,12 @@ Where each live file of the 7.0.0 layout (`d363387`) went on 2026-09-26. Links i
 | `templates/PREAMBLE-example.md` | `templates/agent/PREAMBLE-example.md` | |
 | `templates/SOUL-example.md` | `templates/agent/SOUL-example.md` | |
 | `05-Templates-Tools/07-Scripts/README.md` | `scripts/README.md` | removed; it only pointed to `scripts/` |
-| `05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` | `scripts/check-rules-v7.sh` | deprecated shim removed; call the successor |
+| `05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` | `scripts/check-rules.sh` | deprecated shim removed; call the successor |
 | `05-Templates-Tools/07-Scripts/kiem-nghiem-phien-ban.sh` | `scripts/check-version-declared.sh` | deprecated shim removed; call the successor |
+| `scripts/check-rules-v7.sh` | `scripts/check-rules.sh` | renamed after 7.0.0-alpha; the table heading is now `## Rule register` (`## Rules v7` read until 2026-12-31) |
+| `.github/workflows/v7-gate.yml` | `.github/workflows/version-declared.yml` | renamed after 7.0.0-alpha |
+| `.github/workflows/v7-rules-gate.yml` | `.github/workflows/rules.yml` | renamed after 7.0.0-alpha |
+| `.github/workflows/v7-gates-product.yml` | `.github/workflows/product-gates.yml` | renamed after 7.0.0-alpha; callers pinned to a SHA keep working, re-pins use the new file |
 
 Check — every file of the old layout that is gone is mapped (expected output: `0`):
 

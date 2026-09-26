@@ -5,7 +5,7 @@
 > Who reads this: anyone deciding whether to adopt the framework, or opening this repo for the first time.
 > When: before anything else. It takes ten minutes; the layout and reading order are at the end of this page.
 
-## What v7 is
+## What the framework is
 
 1. A methodology for building software with AI agents and a few people — often one.
 2. You own four assets. Vendors supply the rest: agents, models, runtimes, in-session orchestration.

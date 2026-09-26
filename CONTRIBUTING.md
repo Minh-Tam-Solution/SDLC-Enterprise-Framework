@@ -62,7 +62,7 @@ Scope examples: `pillar-4`, `soul-pm`, `template-sprint-plan`, `governance`, `g3
 ## Script naming
 
 Scripts in `scripts/` use English, kebab-case, verb-first names: `check-*` for a validator/report,
-`rule-*` for a Rules v7 Contract gate, `gen-*` for a generator. (Adopted 2026-09-25.) The v6
+`rule-*` for a rule-contract gate, `gen-*` for a generator. (Adopted 2026-09-25.) The v6
 Python tools that predated this convention were archived to `archive/v6/scripts/` on
 2026-09-26; no grandfathered names remain.
 
