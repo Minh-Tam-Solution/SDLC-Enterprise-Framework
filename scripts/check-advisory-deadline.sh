@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# C21-4 (G4): every class=ADVISORY row in a `## Rules v7` table (v7/01-rule-contract.md) must carry a COUNTER + a DEADLINE.
+# C21-4 (G4): every class=ADVISORY row in a `## Rules v7` table (02-Core-Methodology/01-rule-contract.md) must carry a COUNTER + a DEADLINE.
 #   Deadline: token `deadline=YYYY-MM-DD` inside the `burn_case` cell (no extra column).
 #   Counter:  the row's `cmd` prints `count=<n>` on stdout (last occurrence wins).
 #   Burn case: a "kill" gate for an internal tool ran 8 days past its deadline with its deciding metric still
 #   "NOT MEASURED"; nobody escalated it, nobody deleted it — an advisory gate that was dead yet stayed green.
-# Exit codes (v7/01-rule-contract.md §1): 0 pass · 1 cannot measure · 2 violation.
+# Exit codes (02-Core-Methodology/01-rule-contract.md §1): 0 pass · 1 cannot measure · 2 violation.
 #   missing/malformed `deadline=` ⇒ 2 (mis-declared, G4) · past deadline ∧ count>0 ⇒ 2 · `cmd` prints no `count=` ⇒ 1
 #   cmd exits other than 0/2 ⇒ 1 (a count from a failing cmd is not evidence) · a table header without
 #   class/cmd/burn_case ⇒ 1 (its rows are invisible here — G1, not "clean")

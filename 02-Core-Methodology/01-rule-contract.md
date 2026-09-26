@@ -96,7 +96,7 @@ A gate switched on while violations are many turns CI red on day one ⇒ **it ge
 
 ## §5 — Existing documents: a route, not a rewrite
 
-Every existing document takes **one of three** routes. There is **no fourth route called "rewrite it for v7"**.
+Every existing document takes **one of three** routes. There is **no fourth route called "rewrite it for 02-Core-Methodology"**.
 
 1. **Rule** — has `class` + `cmd` + `burn_case` ⇒ a row in `## Rules v7`
 2. **Reference** — content is right, no command ⇒ kept, stops pretending to be a gate

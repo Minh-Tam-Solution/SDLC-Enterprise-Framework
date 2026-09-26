@@ -46,7 +46,7 @@ Tools change how they load context. When either one ships a change to memory, im
   - blockers
   - next action
 - Put it where the **next executor can read it**, such as the shared repo. A personal agent folder on one machine does not count.
-- Protocol: `templates/PREAMBLE-example.md` § Long-running work.
+- Protocol: `05-Templates-Tools/03-Agent-Templates/PREAMBLE-example.md` § Long-running work.
 
 ## Hats
 
@@ -81,7 +81,7 @@ findings:
 - An AI review is **evidence** (review class). It is not a human approval, and it is never a machine gate by itself. The workflow records who reviewed (`reviewer_type`), not the authoring agent.
 - **Intent confirmation.** Before work, the agent states three lines: the problem, who uses the result, and what "done" means. It asks and waits only when the brief is ambiguous or the project tier is high. Keep the record in the PR template (three fields), not in chat.
 
-Templates: `templates/SOUL-example.md` (one hat) · `templates/PREAMBLE-example.md` (shared by all hats).
+Templates: `05-Templates-Tools/03-Agent-Templates/SOUL-example.md` (one hat) · `05-Templates-Tools/03-Agent-Templates/PREAMBLE-example.md` (shared by all hats).
 
 ## What this page does not claim
 

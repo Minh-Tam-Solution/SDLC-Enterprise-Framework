@@ -5,7 +5,7 @@
 > ⚠️ **MOVED** (2026-09-25)
 >
 > Scripts moved to: [scripts/](../../scripts/) — see [scripts/README.md](../../scripts/README.md).
-> The Rules v7 table moved to [v7/01-rule-contract.md](../../v7/01-rule-contract.md).
+> The Rules v7 table moved to [02-Core-Methodology/01-rule-contract.md](../../02-Core-Methodology/01-rule-contract.md).
 >
 > **Reason**: English kebab-case script names + a single canonical
 > rule-contract file instead of a table embedded in this README.
@@ -19,4 +19,4 @@
 
 **Stub Created**: 2026-09-25
 **Removal Date**: 2026-12-31
-**New Location**: `scripts/` (scripts) + `v7/01-rule-contract.md` (rule table)
+**New Location**: `scripts/` (scripts) + `02-Core-Methodology/01-rule-contract.md` (rule table)

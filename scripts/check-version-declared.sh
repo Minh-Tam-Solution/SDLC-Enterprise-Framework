@@ -15,7 +15,7 @@
 #
 # Usage: check-version-declared.sh [--block] [--selftest]  (legacy --chan still accepted, deprecated)
 #   no flag -> count, exit 0 (step 1 ADVISORY) · --block -> exit 2 if undeclared>0 (step 3 MACHINE)
-# Exit codes (v7/01): 0 PASS · 1 CANNOT MEASURE (no SSOT / 0 files scanned / unknown argument) · 2 VIOLATION.
+# Exit codes (02-Core-Methodology/01): 0 PASS · 1 CANNOT MEASURE (no SSOT / 0 files scanned / unknown argument) · 2 VIOLATION.
 # Last stdout line = label: result=pass|insufficient_evidence|violation gate=check-version-declared reason=<slug>
 # The line before the label is `count=<undeclared>` (G4 counter read by check-advisory-deadline.sh); printed only
 #   once files were actually measured — no count on a cannot-measure path.

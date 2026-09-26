@@ -54,7 +54,7 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | version declared | FRAMEWORK_REPO | which framework version each doc was checked against; counts, does not block | `scripts/check-version-declared.sh` |
 | advisory deadline | FRAMEWORK_REPO | every `ADVISORY` row has `deadline=` and a `count=`; past deadline with count > 0 ⇒ 2 | `scripts/check-advisory-deadline.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
-| doc count | FRAMEWORK_REPO | live docs outside `10-Archive/` and `templates/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
+| doc count | FRAMEWORK_REPO | live docs outside `10-Archive/` and `05-Templates-Tools/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
 | PR approver | PRODUCT_CI | approver login ≠ author and ≠ the author's operator, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |
 | adapter drift | PRODUCT_CI | regenerating adapters at the pinned policy ref gives an empty diff | pattern |
 | tier floor | PRODUCT_CI | declared tier ≥ tier derived from evidence ([`02`](02-tiers.md)) | pattern |

@@ -18,13 +18,13 @@ name: v7-gates-product
 #
 # Steps:
 #   1. rules    scripts/check-rules-v7.sh --run-scope PRODUCT_CI on the CALLER checkout: runs every row of
-#               the caller's own "## Rules v7" tables whose run_scope is PRODUCT_CI. The runner comes from
+#               the caller's own "## Rules 02-Core-Methodology" tables whose run_scope is PRODUCT_CI. The runner comes from
 #               the framework at framework_ref, so framework_ref must contain scripts/check-rules-v7.sh
 #               with --run-scope. Rows run at the caller root and must name a script IN the caller repo
 #               (the runner does not expand variables); to use a framework sample, copy it in.
 #   2. approver check-pr-approver.sh, pull_request events only. The approver list is read from the PR's
 #               BASE commit, so the PR under review cannot add names to its own approver list.
-#   3. verdict  every step above runs (if: always()); exit codes follow v7/01-rule-contract.md:
+#   3. verdict  every step above runs (if: always()); exit codes follow 02-Core-Methodology/01-rule-contract.md:
 #               0 pass · 1 insufficient evidence · 2 violation.
 #               GitHub Actions jobs have no "neutral" conclusion (only Checks-API check runs do), so:
 #               1 => job succeeds with a ::warning:: annotation · 2 => job fails.

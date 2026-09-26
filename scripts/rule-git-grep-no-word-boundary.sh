@@ -4,7 +4,7 @@
 #   miscounted in the opposite direction (5 vs. hundreds) — both silent, both exposed only by a positive control.
 #   Use `-w` or `-P`.
 # Scans RUNNABLE files (*.sh *.py *.yml *.yaml Makefile), not prose — a doc that tells the burn case is not a command.
-# Exit codes (v7/01): 0 pass · 1 cannot measure · 2 violation. Last stdout line is the label.
+# Exit codes (02-Core-Methodology/01): 0 pass · 1 cannot measure · 2 violation. Last stdout line is the label.
 set -u
 ROOT=${1:-.}
 label() { echo "result=$1 gate=rule-git-grep-no-word-boundary reason=$2"; }

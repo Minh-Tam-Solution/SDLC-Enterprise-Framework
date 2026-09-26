@@ -9,6 +9,15 @@ Full version history for v6.5.0 and earlier lives in
 tree small; it does not hide anything — the repository is public, so the archive folder and git
 history remain readable.
 
+## Unreleased — 2026-09-26 (version-neutral layout; stages, project structure, documentation standards restored)
+
+| Change | Detail |
+|---|---|
+| No version in paths | `v7/` → `02-Core-Methodology/` (files and numbers unchanged); `templates/` → `05-Templates-Tools/03-Agent-Templates/`. The version lives in each file's `SDLC Framework Version` field and here, so paths survive the next major version. Consumers pinned to a commit SHA keep working; re-pins use the new path (`02-Core-Methodology/risk-floor-paths.md`) |
+| Restored, shortened | `07-stage-lifecycle.md` (ten stages, stage gates G0.1–G4, exit evidence per tier, who signs by tier), `08-project-structure.md` (`docs/00–09` layout, root files and planning files per tier), `09-documentation-standards.md` (file names, document header, two front-matter schemas for specs and ADRs — issue #17, source-file header — issue #18) — from v6.4 `SDLC-Stage-Lifecycle-Framework.md`, `SDLC-Project-Structure-Standard.md`, `SDLC-Naming-Standards.md`, `SDLC-Specification-Standard.md` and v4.5 `FILE-HEADER-STANDARDS` (all remain in `10-Archive/`) |
+| Project templates | `05-Templates-Tools/08-Project-Templates/`: docs tree command, current sprint, sprint index, roadmap, ADR, spec |
+| Doc-count gate | excludes `05-Templates-Tools/` (was `templates/`) |
+
 ## Version 7.0.0-alpha — 2026-09-25 (third generation: v6.x archived, core rewritten)
 
 | Change | Detail |
