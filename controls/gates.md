@@ -4,6 +4,9 @@
 > When: before adding a gate, before moving one up a step, and when a gate blocks you.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: gate authors; this repo's CI; product CI
+**Review by**: 2026-12-26
 
 *Shortens:* the time between a bad change and someone noticing. And the gates people learn to ignore.
 
@@ -55,7 +58,8 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | advisory deadline | FRAMEWORK_REPO | every `ADVISORY` row has `deadline=` and a `count=`; past deadline with count > 0 ⇒ 2 | `scripts/check-advisory-deadline.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
 | no version in names | FRAMEWORK_REPO | no version number in a live file or folder name, or in a Markdown heading (anchor); counts, does not block | `scripts/rule-no-version-in-names.sh` |
-| doc count | FRAMEWORK_REPO | live docs outside `archive/` and `templates/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
+| doc ownership | FRAMEWORK_REPO | every live doc names an Owner, a Consumer and a Review-by date that has not passed; blocks | `scripts/check-doc-ownership.sh` |
+| doc count | FRAMEWORK_REPO | live docs outside `archive/` and `templates/`: >40 advisory; no hard ceiling (a count is a smell, ownership is the gate) | `scripts/check-doc-count.sh` |
 | PR approver | PRODUCT_CI | approver login ≠ author and ≠ the author's operator, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |
 | adapter drift | PRODUCT_CI | regenerating adapters at the pinned policy ref gives an empty diff | pattern |
 | tier floor | PRODUCT_CI | declared tier ≥ tier derived from evidence ([`tiers`](tiers.md)) | pattern |

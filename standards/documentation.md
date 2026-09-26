@@ -4,6 +4,9 @@
 > When: before creating a file, and when a checker reports a missing field.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: authors of documents, specs, ADRs and source files; tools that read them
+**Review by**: 2026-12-26
 
 *Shortens:* the time to tell whether a document is current, who owns it, and which design a piece of code implements.
 
@@ -26,6 +29,8 @@ Directly under the title:
 **SDLC Framework Version**: 7.0.0
 **Status**: ACTIVE
 **Owner**: <role or handle>
+**Consumer**: <who reads or runs it>
+**Review by**: 2026-12-26
 **Last updated**: 2026-09-26
 ```
 
@@ -34,7 +39,9 @@ Directly under the title:
 | `Version` | the document's own semver | bump when content changes meaning; independent of the framework version |
 | `SDLC Framework Version` | the framework version this document was last checked against | counted by `scripts/check-version-declared.sh`; older than current is legal and counted, missing is the finding |
 | `Status` | `DRAFT` · `ACTIVE` · `SUPERSEDED` · `ARCHIVED` | `SUPERSEDED` names its successor on the next line |
-| `Owner` | who answers questions about it | a role or handle that exists today |
+| `Owner` | who answers questions about it and keeps it true | a role or handle that exists today |
+| `Consumer` | who reads or runs it, and when | named; "everyone" is not a consumer |
+| `Review by` | ISO date by which the owner re-checks it | a passed date blocks (DOC-2); after review, move the date — do not bulk-bump it |
 | `Last updated` | ISO date of the last change of meaning | a typo fix does not change it |
 
 A status field is a claim, not a measurement. When a document says *what is running*, it names the command or probe that shows it; otherwise `Last updated` is the claim's expiry date.

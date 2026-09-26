@@ -1,5 +1,9 @@
 # Security Policy
 
+**Owner**: @dttai71
+**Consumer**: anyone reporting a vulnerability
+**Review by**: 2026-12-26
+
 ## Scope
 
 The SDLC 6.3.2 Universal Framework is a **tool-agnostic methodology repository** — it ships documentation, templates, and governance patterns, not executable production code. The "security" surface here is therefore narrower than for a typical software project, but not zero.

@@ -5,6 +5,9 @@
 **Date**: March 18, 2026
 **Purpose**: Define redirect rules and deprecation procedures
 **Framework**: SDLC 6.3.0 (7-Pillar + 2-Section + RFC-001 + Lean Ring 1)
+**Owner**: @dttai71
+**Consumer**: maintainers archiving a document (to be replaced by an artifact-lifecycle policy)
+**Review by**: 2026-10-10
 
 ---
 

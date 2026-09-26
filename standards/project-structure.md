@@ -4,6 +4,9 @@
 > When: at repo setup, when adding a stage folder, and before archiving anything.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: developers creating a repo; tools that read another repo's docs
+**Review by**: 2026-12-26
 
 *Shortens:* the time a newcomer — person or agent — needs to find the current sprint, the last decision and the running state of a repo. Every repo answers those three questions in the same place.
 

@@ -2,6 +2,9 @@
 
 **Version**: 1.0.0 · **Status**: DRAFT (v7) · **Date**: 2026-09-25
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: authors of `AGENTS.md`, PREAMBLE and hat files
+**Review by**: 2026-12-26
 **Verified against**: Claude Code docs as of 2026-09-25 (current to v2.1.281) · Qwen Code 0.22.x docs and source.
 Tools change how they load context. When either one ships a change to memory, imports, skills or subagents, check this page again.
 **Replaces**: `03-AI-GOVERNANCE/05-Context-Management.md` (v6.x), which taught the loading mechanism wrong:

@@ -2,6 +2,9 @@
 
 **Version**: 1.0.0
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: rule and gate authors; `scripts/check-rules.sh`
+**Review by**: 2026-12-26
 **Status**: DRAFT
 **Date**: 2026-09-25
 
@@ -118,6 +121,7 @@ Every existing document takes **one of three** routes. There is **no fourth rout
 | L4 | MACHINE | `bash scripts/rule-git-grep-no-word-boundary.sh` | G1: `git grep -E '\bMUST\b'` matched nothing and exited successfully; the same person then got a count wrong in the opposite direction (5 vs. hundreds), both silent, both exposed only by a positive control. Use `-w`/`-P` with a positive control. | FRAMEWORK_REPO |
 | C21-4 | MACHINE | `bash scripts/check-advisory-deadline.sh` | G4: a "kill" gate for an internal tool ran 8 days past its deadline with its deciding metric still "NOT MEASURED"; nobody promoted it, nobody deleted it — a report-only gate that was dead yet stayed green. | FRAMEWORK_REPO |
 | DOC-1 | ADVISORY | `bash scripts/check-doc-count.sh` | v6.x reached 189 live docs (502 with archive); nobody could say which were still true. deadline=2026-10-25 | FRAMEWORK_REPO |
+| DOC-2 | MACHINE | `bash scripts/check-doc-ownership.sh` | v6.x reached 189 live docs and nobody could say which were still true; `DEPRECATION-POLICY.md` still said ACTIVE for Framework 6.3.0 a major version later. A count ceiling limited the number, not whether a doc had an owner, a reader, or was still right. Entered at MACHINE by recorded exception (CEO, 2026-09-26): it replaces the blocking ceiling of DOC-1 and its count was 0 on the day it landed | FRAMEWORK_REPO |
 | C21-5 | ADVISORY | `bash scripts/check-version-declared.sh` | A document's own version was read as the framework version it had been checked against; hundreds of references were then bumped by hand and drifted back, and nobody could say which documents had really been verified against the current framework. Counts documents with no `sdlc_framework` / `**SDLC Framework Version**` field; an older declared version is legal and not counted. deadline=2026-10-09 | FRAMEWORK_REPO |
 | NAME-1 | ADVISORY | `bash scripts/rule-no-version-in-names.sh` | The core lived in `v7/`; moving it to version-neutral folders broke ~100 link lines in four consuming repos on 2026-09-26, and the next major version would have broken them again. A heading is a link anchor, so it counts too. deadline=2026-10-26 | FRAMEWORK_REPO |
 

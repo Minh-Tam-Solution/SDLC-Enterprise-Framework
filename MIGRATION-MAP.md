@@ -4,6 +4,9 @@
 > When: before rewriting anything from the archive, and after every change that moves content between the archive and the live tree.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: readers of `archive/`; consuming repos fixing links to moved files
+**Review by**: 2026-12-26
 
 *Shortens:* the search for where an old rule went, and the temptation to rewrite an old document instead of harvesting what is still true in it.
 

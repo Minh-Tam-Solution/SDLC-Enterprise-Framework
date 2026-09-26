@@ -4,6 +4,9 @@
 > When: at project start, at each stage exit, and when a reviewer asks where a document belongs.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: developers starting a project; whoever plans a sprint or closes a stage
+**Review by**: 2026-12-26
 
 *Shortens:* the argument about what "done" means for a stage, and the search for where a decision was written.
 

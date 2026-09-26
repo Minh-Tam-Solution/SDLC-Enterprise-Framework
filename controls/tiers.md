@@ -4,6 +4,9 @@
 > When: at repo setup, when a repo starts touching new data or users, and at quarterly recertification.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: repo owners setting a tier; reviewers deciding whether a change needs a human
+**Review by**: 2026-12-26
 
 *Shortens:* ritual on low-risk work, and arguments about who must approve what.
 
