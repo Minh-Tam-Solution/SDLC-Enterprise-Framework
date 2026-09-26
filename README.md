@@ -2,6 +2,10 @@
 
 **Version**: 7.0.0-alpha | **Status**: ALPHA | **Date**: 2026-09-25 | **License**: MIT
 
+**Owner**: @dttai71
+**Consumer**: first-time readers and teams deciding whether to adopt the framework
+**Review by**: 2026-12-26
+
 > Who reads this: anyone deciding whether to adopt the framework, or opening this repo for the first time.
 > When: before anything else. It takes ten minutes; the layout and reading order are at the end of this page.
 
@@ -107,4 +111,4 @@ v7 is the **third generation** of one methodology, not a new framework. The goal
 - **What generation 1 got right stays.** The ten stages, the `docs/00–09` project layout and the documentation standards are kept, shortened, in [`core/lifecycle.md`](core/lifecycle.md) and [`standards/`](standards/project-structure.md). Generation 3 adds gates that check them instead of relying on memory.
 - v6.x archived 2026-09-25: 189 live files → target ≤30. The history stays in [`CHANGELOG.md`](CHANGELOG.md).
 - **Archive rule.** Archive, never delete. From 2026-09-26 an archived file is not edited at all; where its content went is recorded in [`MIGRATION-MAP.md`](MIGRATION-MAP.md). (Files archived on 2026-09-25 carry a legacy note; those notes stay.) A file that changes meaning without a record breaks the past silently — no later gate catches that.
-- **Size rule.** Live docs >40 is flagged, >60 blocks ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)). Each doc ≤150 lines. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+- **Ownership rule.** Every live doc names an Owner, a Consumer and a Review-by date; a missing field or a passed date blocks ([`scripts/check-doc-ownership.sh`](scripts/check-doc-ownership.sh)). The doc count above 40 is only flagged ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): forty docs with owners and readers beat thirty that merge five topics to pass a number. Each doc ≤150 lines. See [`CONTRIBUTING.md`](CONTRIBUTING.md).

@@ -4,6 +4,9 @@
 > When: at incident close, at the monthly vendor radar, and when a user reports a problem.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: whoever closes an incident or proposes a rule
+**Review by**: 2026-12-26
 
 *Shortens:* the second time the same incident happens. A lesson that does not reach a rule is paid for twice.
 
@@ -52,6 +55,8 @@ Vendors change how context loads, how hooks behave and which models exist — mo
 1. Open an issue with the `rule-proposal` label.
 2. Give the burn case, the command that detects it, and the answer to "if it is wrong, what does a false positive cost?".
 3. A PR adds the row at `ADVISORY` with a deadline. Nobody adds a row straight at `MACHINE`.
+
+**One exception, recorded in the row.** A gate that *replaces* a gate that already blocks may enter at `MACHINE` when its count is 0 on the day it lands and the decision is named in its `burn_case`. The ladder exists so a gate is not switched on while violations are common; with none, starting lower would only open a gap where nothing blocks. First use: DOC-2 replacing the doc-count ceiling (2026-09-26).
 
 ## Never measure agent output as progress
 

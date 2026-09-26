@@ -1,6 +1,9 @@
 # Scripts
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: gate authors; maintainers of this repo's CI
+**Review by**: 2026-12-26
 
 English kebab-case, verb-first names (see [CONTRIBUTING.md](../CONTRIBUTING.md)). The rule
 table (which script enforces what, and why) lives in [`controls/rule-contract.md`](../controls/rule-contract.md), not here.
@@ -10,7 +13,8 @@ Gate scripts follow the exit-code contract there: `0` pass · `1` cannot measure
 |---|---|
 | `check-rules.sh` | Rule-contract runner — reads `controls/rule-contract.md`, runs each row's `cmd`, tallies pass/violation/unmeasurable. |
 | `check-advisory-deadline.sh` | Rule C21-4 — every `ADVISORY` row carries a counter (`count=`) and a `deadline=`; overdue with count > 0 is a violation. |
-| `check-doc-count.sh` | Rule DOC-1 — live docs outside `archive/` and `templates/`: >40 advisory, >60 blocks. |
+| `check-doc-count.sh` | Rule DOC-1 (ADVISORY) — live docs outside `archive/` and `templates/`: >40 prints a warning; no hard ceiling. |
+| `check-doc-ownership.sh` | Rule DOC-2 (MACHINE) — every live doc names an Owner, a Consumer and a Review-by date that has not passed. |
 | `check-version-declared.sh` | Rule C21-5 (ADVISORY) — checks whether each doc declares which framework version it was verified against (Convention A). |
 | `check-pr-approver.sh` | `PRODUCT_CI` sample — a PR has a valid approval from a login in the base commit's approvers file; used by `product-gates.yml`. |
 | `rule-no-swallowed-stderr.sh` | Rule L2 — forbids `2>/dev/null` in `scripts/` unless listed in `.stderr-exemptions` with an expiry. |

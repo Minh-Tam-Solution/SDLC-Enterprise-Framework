@@ -4,6 +4,9 @@
 > When: the first week, and when you add a second consuming repo.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: organisations and repos adopting the framework
+**Review by**: 2026-12-26
 
 *Shortens:* onboarding to "clone and open the CLI", and policy changes to one PR in one repo.
 

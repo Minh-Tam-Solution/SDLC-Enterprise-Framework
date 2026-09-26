@@ -4,6 +4,9 @@
 > When: at repo setup, and when a diff touches a path listed here.
 
 **SDLC Framework Version**: 7.0.0
+**Owner**: @dttai71
+**Consumer**: product repos declaring risk-floor paths; the risk-floor review gate
+**Review by**: 2026-12-26
 
 *Shortens:* the argument about whether a small-looking diff needs a human. The path answers it.
 

@@ -3,6 +3,9 @@
 **Framework**: SDLC 7.0.0-alpha Enterprise Framework
 **Maintained By**: CEO + CPO + CTO Leadership
 **Last Updated**: September 26, 2026 (v6.x and earlier history moved to archive)
+**Owner**: @dttai71
+**Consumer**: adopters choosing or pinning a release; maintainers writing release notes
+**Review by**: 2026-12-26
 
 Full version history for v6.5.0 and earlier lives in
 [`archive/v6/CHANGELOG-v6.md`](archive/v6/CHANGELOG-v6.md), unmodified. This keeps the live
@@ -19,6 +22,8 @@ history remain readable.
 | Policy-repo file | `rules-v7.md` → `rules.md` (old name read until 2026-12-31) |
 | Titles | old file numbers and "v7" removed from H1 titles and from three headings (headings are link anchors) |
 | New rule NAME-1 (ADVISORY) | `scripts/rule-no-version-in-names.sh` counts version numbers in live file and folder names and in Markdown headings; first count 3, all in `DEPRECATION-POLICY.md` |
+| New rule DOC-2 (MACHINE) | `scripts/check-doc-ownership.sh`: every live doc names an **Owner**, a **Consumer** and a **Review by** date that has not passed. All 19 live docs filled in; count 0 on landing. Entered at MACHINE by a recorded exception (CEO, 2026-09-26): it replaces a gate that already blocked, so there is no gap; the exception is written into `practices/lessons-to-rules.md` |
+| Doc count no longer blocks | DOC-1 keeps the >40 warning; the >60 hard ceiling is removed. `count=` now reports docs over the threshold (was the total, which the deadline gate would have read as 19 violations on 2026-10-25) |
 
 ## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 

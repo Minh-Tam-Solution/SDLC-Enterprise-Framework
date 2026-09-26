@@ -1,5 +1,9 @@
 # Contributing to the SDLC Enterprise Framework
 
+**Owner**: @dttai71
+**Consumer**: anyone proposing a change to this repository
+**Review by**: 2026-12-26
+
 Thanks for your interest in contributing.
 
 The SDLC Framework is a **tool-agnostic methodology repository** — it defines *what* AI+Human teams should do (principles, processes, gates), not *how* a specific tool implements it. Contributions therefore differ from typical software project PRs: the bar for adding a pattern is **why this generalizes across implementations**, not just "this works for my team."
@@ -84,8 +88,8 @@ Each rule below says what it shortens.
 | **kebab-case** file names (`tiers.md`, `check-doc-count.sh`) | guessing paths |
 | **Verb-first scripts**: `check-*` for gates, `rule-*` for single-rule checks | finding the gate behind a rule |
 | **Each doc ≤150 lines** | docs nobody finishes reading |
-| **A new doc names its consumer** (who reads it, when) in its first two lines | docs written for nobody |
-| **The doc-count gate** ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): live docs outside `archive/` and `templates/` >40 is flagged, >60 blocks | the framework growing back to hundreds of files |
+| **Every live doc carries `**Owner**`, `**Consumer**` and `**Review by**`** in its header; the ownership gate ([`scripts/check-doc-ownership.sh`](scripts/check-doc-ownership.sh)) blocks a missing field or a passed date | docs written for nobody, and docs nobody re-checks |
+| **The doc-count gate** ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): live docs outside `archive/` and `templates/` >40 is flagged, never blocked | the framework growing back to hundreds of files unnoticed |
 
 Prefer editing an existing doc over adding one. Prefer a table over prose. Prefer a gate over a paragraph.
 
