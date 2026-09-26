@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# C21-4 (G4): every class=ADVISORY row in a `## Rules v7` table (v7/01-rule-contract.md) must carry a COUNTER + a DEADLINE.
+# C21-4 (G4): every class=ADVISORY row in a `## Rules v7` table (controls/rule-contract.md) must carry a COUNTER + a DEADLINE.
 #   Deadline: token `deadline=YYYY-MM-DD` inside the `burn_case` cell (no extra column).
 #   Counter:  the row's `cmd` prints `count=<n>` on stdout (last occurrence wins).
 #   Burn case: a "kill" gate for an internal tool ran 8 days past its deadline with its deciding metric still
 #   "NOT MEASURED"; nobody escalated it, nobody deleted it — an advisory gate that was dead yet stayed green.
-# Exit codes (v7/01-rule-contract.md §1): 0 pass · 1 cannot measure · 2 violation.
+# Exit codes (controls/rule-contract.md §1): 0 pass · 1 cannot measure · 2 violation.
 #   missing/malformed `deadline=` ⇒ 2 (mis-declared, G4) · past deadline ∧ count>0 ⇒ 2 · `cmd` prints no `count=` ⇒ 1
 #   cmd exits other than 0/2 ⇒ 1 (a count from a failing cmd is not evidence) · a table header without
 #   class/cmd/burn_case ⇒ 1 (its rows are invisible here — G1, not "clean")
@@ -48,9 +48,9 @@ fi
 
 [ -n "$GOC" ] && cd "$GOC" || { echo "CANNOT MEASURE: cannot enter --goc '$GOC'"; label insufficient_evidence goc_missing; exit 1; }
 
-# Rows of every `## Rules v7` table in any .md (skip 10-Archive, .git). Columns located by header NAME —
+# Rows of every `## Rules v7` table in any .md (skip archive, .git). Columns located by header NAME —
 # a wrong header is the rules runner's job to flag. \037 instead of tab: tab is IFS whitespace ⇒ empty cells collapse.
-rows=$(find . -name '*.md' -not -path './10-Archive/*' -not -path './.git/*' -exec awk '
+rows=$(find . -name '*.md' -not -path './archive/*' -not -path './.git/*' -exec awk '
   FNR==1 {t=0; b=0}
   /^## / {t=($0 ~ /^## Rules v7[[:space:]]*$/); b=0; next}
   !/^\|/ {b=0; next}

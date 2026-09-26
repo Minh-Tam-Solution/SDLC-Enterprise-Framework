@@ -25,8 +25,8 @@ jobs:
           num() { bash "$S" | grep -oE "$1=[0-9]+" | cut -d= -f2; }
           u0=$(num undeclared); c0=$(num declared_current)
           ssot=$(grep -m1 -oE '\*\*Version\*\*: [0-9.]+' README.md | grep -oE '[0-9.]+$')
-          printf '# plant\n' > v7/ZZ-plant-undeclared.md
-          printf '# plant\n**SDLC Framework Version**: %s\n' "$ssot" > v7/ZZ-plant-declared.md
+          printf '# plant\n' > core/ZZ-plant-undeclared.md
+          printf '# plant\n**SDLC Framework Version**: %s\n' "$ssot" > core/ZZ-plant-declared.md
           u1=$(num undeclared); c1=$(num declared_current)
           echo "undeclared $u0->$u1 · declared_current $c0->$c1"
           [ "$u1" = $((u0+1)) ] && [ "$c1" = $((c0+1)) ] || { echo "G3 FAILED: the counter did not see the planted files"; exit 1; }

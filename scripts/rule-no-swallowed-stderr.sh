@@ -3,7 +3,7 @@
 #   Why: `find … 2>/dev/null | wc -l` hits a permission error => prints 0 => the script decides "empty".
 #   Burn case: `2>/dev/null` swallowed a missing-module error and the gate printed "README out of sync with YAML" — the wrong cause.
 # .stderr-exemptions, one line each:  path<TAB>YYYY-MM-DD(expiry)<TAB>reason
-# Exit codes (v7/01): 0 pass · 1 cannot measure · 2 violation (including an expired exemption). Last stdout line is the label.
+# Exit codes (controls/rule-contract.md): 0 pass · 1 cannot measure · 2 violation (including an expired exemption). Last stdout line is the label.
 set -u
 DIR=${1:-scripts}
 EXEMPT=.stderr-exemptions

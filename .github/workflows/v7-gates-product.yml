@@ -24,7 +24,7 @@ name: v7-gates-product
 #               (the runner does not expand variables); to use a framework sample, copy it in.
 #   2. approver check-pr-approver.sh, pull_request events only. The approver list is read from the PR's
 #               BASE commit, so the PR under review cannot add names to its own approver list.
-#   3. verdict  every step above runs (if: always()); exit codes follow v7/01-rule-contract.md:
+#   3. verdict  every step above runs (if: always()); exit codes follow controls/rule-contract.md:
 #               0 pass · 1 insufficient evidence · 2 violation.
 #               GitHub Actions jobs have no "neutral" conclusion (only Checks-API check runs do), so:
 #               1 => job succeeds with a ::warning:: annotation · 2 => job fails.

@@ -8,7 +8,7 @@ risk_tier: PROFESSIONAL # project tier this definition was written for: LITE | S
 <!-- Template: one hat, under 60 lines. Shared rules (honest ceiling, CRP, long-running work) live in
      PREAMBLE-example.md. Don't repeat them here. `name` and `description` are required: Claude Code skips a
      subagent without `description`. `kind`, `tools_class` and `risk_tier` are framework fields that a
-     generator maps to tool-specific settings. See v7/04-context-and-hats.md § Hats.
+     generator maps to tool-specific settings. See ai-engineering/context-and-hats.md § Hats.
      Written for sdlc_framework: 7.0.0 -->
 
 # Reviewer

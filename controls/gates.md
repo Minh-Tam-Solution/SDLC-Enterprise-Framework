@@ -9,7 +9,7 @@
 
 ## Contract
 
-Exit codes, the label line, `--selftest` and the rule table live in [`01-rule-contract.md`](01-rule-contract.md). In short: `0` pass · `1` cannot measure · `2` violation (deliberate) · last line `result=… gate=… reason=… [fix=…]`. This file does not repeat it.
+Exit codes, the label line, `--selftest` and the rule table live in [`rule-contract.md`](rule-contract.md). In short: `0` pass · `1` cannot measure · `2` violation (deliberate) · last line `result=… gate=… reason=… [fix=…]`. This file does not repeat it.
 
 ## Three run scopes
 
@@ -54,10 +54,10 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | version declared | FRAMEWORK_REPO | which framework version each doc was checked against; counts, does not block | `scripts/check-version-declared.sh` |
 | advisory deadline | FRAMEWORK_REPO | every `ADVISORY` row has `deadline=` and a `count=`; past deadline with count > 0 ⇒ 2 | `scripts/check-advisory-deadline.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
-| doc count | FRAMEWORK_REPO | live docs outside `10-Archive/` and `templates/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
+| doc count | FRAMEWORK_REPO | live docs outside `archive/` and `templates/`: >40 advisory, >60 blocks | `scripts/check-doc-count.sh` |
 | PR approver | PRODUCT_CI | approver login ≠ author and ≠ the author's operator, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |
 | adapter drift | PRODUCT_CI | regenerating adapters at the pinned policy ref gives an empty diff | pattern |
-| tier floor | PRODUCT_CI | declared tier ≥ tier derived from evidence ([`02`](02-tiers.md)) | pattern |
+| tier floor | PRODUCT_CI | declared tier ≥ tier derived from evidence ([`tiers`](tiers.md)) | pattern |
 | provenance probe | RUNTIME_PROBE | the running code resolves to a deploy tree built from a merged SHA; no symlink, interpreter, cron entry, service unit, env var or config path points into a working tree; state dirs have the right owner and mode | pattern |
 | deploy-tree harness | RUNTIME_PROBE | fast smoke checks (boot, import, config, DB, health) run **on the deploy tree** and block; the broad suite runs but does not block | pattern |
 | deadline ledger | governance | every self-declared deadline closes as `done`, `dropped`, `superseded` or `extended→YYYY-MM-DD`, with a pointer to evidence that exists and is merged/closed/green; `extended` at most twice | pattern |
@@ -66,7 +66,7 @@ Known debt goes into a skip file with `expiry` and `owner`. The gate blocks **ne
 
 ## Approver independence
 
-An approval counts only if the reviewer is neither the PR author nor the person who operates the author. Agents open PRs under bot identities, so `reviewer ≠ author` alone lets a person approve their own agent's work. The approvers file maps each agent identity to its operator (`bot:<bot-login> operated_by=<human-login>`); a listed bot with no operator is `1` (cannot measure), never a pass. The four identity layers apply ([`05`](05-adoption.md)): authority comes from the authenticated actor the code host reports, and the operator mapping lives in the protected approvers file, read from the PR's base commit — never from commit trailers or from the PR under review.
+An approval counts only if the reviewer is neither the PR author nor the person who operates the author. Agents open PRs under bot identities, so `reviewer ≠ author` alone lets a person approve their own agent's work. The approvers file maps each agent identity to its operator (`bot:<bot-login> operated_by=<human-login>`); a listed bot with no operator is `1` (cannot measure), never a pass. The four identity layers apply ([`adoption`](../adoption/adoption.md)): authority comes from the authenticated actor the code host reports, and the operator mapping lives in the protected approvers file, read from the PR's base commit — never from commit trailers or from the PR under review.
 
 ## Break-glass
 
@@ -74,7 +74,7 @@ An approval counts only if the reviewer is neither the PR author nor the person 
 - **A terminal prompt is only the UI to ask for an override. It is not authorization** — an agent with a shell can type "yes".
 - Authorization = an authenticated human from the approvers list, using a credential that does not exist on the agent's machine (e.g. a code-host approval with 2FA).
 - One override covers **one SHA, one artifact digest, one deploy**. It has an expiry, opens an issue and requires a post-review.
-- Rate-limited: >3 per repo per 14 days ⇒ review before the next deploy ([`02`](02-tiers.md)).
+- Rate-limited: >3 per repo per 14 days ⇒ review before the next deploy ([`tiers`](tiers.md)).
 
 ## Hooks nudge; CI enforces
 

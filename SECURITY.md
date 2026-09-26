@@ -24,7 +24,7 @@ This policy does **not** cover:
 | 6.3.0   | Security advisories only |
 | < 6.3.0 | No |
 
-Earlier versions remain available in `10-Archive/` for historical reference but receive no maintenance.
+Earlier versions remain available in `archive/` for historical reference but receive no maintenance.
 
 ## Reporting a Vulnerability
 
@@ -65,7 +65,7 @@ The Framework applies the following controls to protect governance pattern integ
 
 ## Sensitive Data Hygiene
 
-The Framework is intentionally **vendor-neutral** — internal company names, tenant identifiers, or product brand names of any specific implementer must not appear in normative content (`v7/`, `templates/`, `scripts/`). `10-Archive/` may contain historical references for context.
+The Framework is intentionally **vendor-neutral** — internal company names, tenant identifiers, or product brand names of any specific implementer must not appear in normative content (`02-Core-Methodology/`, `templates/`, `scripts/`). `archive/` may contain historical references for context.
 
 If you find sensitive data leakage in normative content, please report via the email channel above — this is treated as a critical issue.
 

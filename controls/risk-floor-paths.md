@@ -12,7 +12,7 @@
 A fixed list of path patterns that always get the highest verification, whichever person, model
 or agent wrote the change. It is a **path classification**, not a score: it computes no index,
 and a model's confidence in its own output is not evidence here. It feeds `change_harm` in
-[`02`](02-tiers.md): `effective_control = max(service_tier, change_harm)`.
+[`tiers`](tiers.md): `effective_control = max(service_tier, change_harm)`.
 
 ## Paths that are never downgraded
 
@@ -29,13 +29,13 @@ and a model's confidence in its own output is not evidence here. It feeds `chang
 Also on the floor wherever they appear (not path-bound): IAM configuration, production config,
 and destructive SQL (`DROP`, or `DELETE` / `TRUNCATE` without a scoping `WHERE`).
 
-A repo **adds** its own paths in the policy repo's `projects.yaml` ([`05`](05-adoption.md)).
+A repo **adds** its own paths in the policy repo's `projects.yaml` ([`adoption`](../adoption/adoption.md)).
 It does not remove any of the paths above.
 
 ## Rule
 
 A diff touching any path on the floor needs human review by an approver who is not the author
-or the author's operator ([`03`](03-gates.md)), plus independent re-derivation of any headline
+or the author's operator ([`gates`](gates.md)), plus independent re-derivation of any headline
 number in it. This floor sits **below** model routing: routing decides who does the work; the
 floor decides the minimum verification the work gets.
 

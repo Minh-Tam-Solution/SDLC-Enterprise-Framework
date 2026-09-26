@@ -100,7 +100,7 @@ Every existing document takes **one of three** routes. There is **no fourth rout
 
 1. **Rule** — has `class` + `cmd` + `burn_case` ⇒ a row in `## Rules v7`
 2. **Reference** — content is right, no command ⇒ kept, stops pretending to be a gate
-3. **`10-Archive/`** — no longer in force
+3. **`archive/`** — no longer in force
 
 ⛔ **No bulk version-label bumps.** Aligning references by hand has been done (hundreds of them) and they drifted back — one manual clean-up has nothing holding it in place. Aggregate numbers in documents carry the command that produces them, or they are removed.
 
