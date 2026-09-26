@@ -298,7 +298,7 @@ A: No. Content in 10-archive/ is already archived. If you need to reference it f
 
 - **Policy**: [DEPRECATION-POLICY.md](../../../DEPRECATION-POLICY.md)
 - **Content Map**: [CONTENT-MAP.md](../../../CONTENT-MAP.md)
-- **Migration Script**: [migrate-legacy-to-archive.sh](../07-Scripts/migrate-legacy-to-archive.sh)
+- **Migration Script**: retired v7 (2026-09-25) — archived at `10-Archive/scripts/migrate-legacy-to-archive.sh` (targeted a directory scheme this repo's `10-Archive/README.md` retired 2026-04-28)
 - **CI Enforcement**: `rfc001-legacy-check.yml` (GitHub Actions)
 - **Command**: SDLC CLI validate --stage 10-archive
 

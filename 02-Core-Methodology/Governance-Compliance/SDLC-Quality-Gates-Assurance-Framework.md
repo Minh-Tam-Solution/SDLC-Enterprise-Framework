@@ -1572,8 +1572,7 @@ For each .md file in /docs:
 
 **Internal References**:
 - [SDLC-Sprint-Governance.md](./SDLC-Sprint-Governance.md) — G-Sprint/G-Sprint-Close gates
-- [anti-vibecoding.yaml](./anti-vibecoding.yaml) — Machine-readable scoring rules
-- [gates.yaml](./gates.yaml) — Machine-readable gate definitions
+- `anti-vibecoding.yaml` / `gates.yaml` — archived v7 (2026-09-25): frozen at 6.2.0 for 7 months, never read by any script in this repo. Archived at `10-Archive/by-topic/ai-governance-v7-retired/`; replaced by `cong-v7.yml` + `kiem-luat-v7.sh`.
 
 ---
 

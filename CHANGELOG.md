@@ -8,6 +8,32 @@
 
 ---
 
+## Unreleased — v7 "Rule Contract"
+
+### Archived (11 items — v7 archive lot 1, 2026-09-25)
+
+Each item below was tied to a governance engine, index, or config that has since been retired
+or gone stale with zero readers. Full reasoning: survey docs under
+`Tech-Ecos/09-govern/02-executive-decisions/khao-sat-v7-2026-09-25/`.
+
+- `03-AI-GOVERNANCE/08-Governance-Decision-Matrix.md` → `10-Archive/by-topic/ai-governance-v7-retired/` — described a retired governance engine; routed on the now-dropped Vibecoding Index, which conflicted with SPEC-0001's own definition.
+- `03-AI-GOVERNANCE/09-Governance-Metrics.md` → same — KPIs on the same retired engine's state machine; none of its ~60 figures ship with a reproducible command.
+- `03-AI-GOVERNANCE/14-AGENTIC-MATURITY-MODEL.md` → same — L0–L3 ladder scores manual artifact creation that mainstream AI CLIs now provide natively, and its L1–L3 labels now collide with v7's own orchestration-tier naming.
+- `03-AI-GOVERNANCE/17-AGENTIC-OS-PATTERNS.md` → same — validation record for patterns "verified" by SDLC-Orchestrator v2, which is retired (0 requests/33 days).
+- `03-AI-GOVERNANCE/18-LLM-MODEL-STRATEGY.md` → same — 2 of 3 listed fallback models don't exist on the current host; cascade is now implemented at the gateway layer, not in this doc.
+- `03-AI-GOVERNANCE/19-FEDERATED-PLATFORM-STANDARD.md` → same — 2 of the 4 named platforms (SDLC-Orchestrator, EndiorBot) are retired, a third (MTClaw) closed its SDLC lane.
+- `03-AI-GOVERNANCE/20-EVIDENCE-INTEGRATION-STANDARD.md` → same — API contract of a retired product (no running container); v7 evidence is git + CI logs only.
+- `02-Core-Methodology/Governance-Compliance/gates.yaml` → same — frozen at 6.2.0 for 7 months, 0 scripts in this repo's `git log` history ever read it.
+- `02-Core-Methodology/Governance-Compliance/anti-vibecoding.yaml` → same — same staleness as `gates.yaml`; replaced by `cong-v7.yml` + `kiem-luat-v7.sh`.
+- `05-Templates-Tools/07-Scripts/compliance_sdlc_scanner.py` → `10-Archive/scripts/` — fails on every execution path (crash with no arguments; wrong filename with arguments); no CI or script calls it.
+- `05-Templates-Tools/07-Scripts/migrate-legacy-to-archive.sh` → same — targets the `{stage}/99-Legacy/` scheme this repo's own `10-Archive/README.md` retired 2026-04-28.
+
+### Added
+
+- `03-AI-GOVERNANCE/risk-floor-paths.md` — generic, tool-agnostic risk-floor path list (`migrations/`, `auth/`, `tenant/`, `permissions/`, `billing/`, `payment/`, `infra/`, `secrets/`), extracted from `08-Governance-Decision-Matrix.md`'s Risk Classification table before that file was archived.
+
+---
+
 ## 📚 Version 6.5.0 — Amendment D — July 5, 2026 (ST/DT GATE-ENFORCED) [AF-36]
 
 ### Added (structural cascade)

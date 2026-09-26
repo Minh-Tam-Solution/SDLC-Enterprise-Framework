@@ -30,29 +30,24 @@ These principles are **tool-agnostic** and apply regardless of which AI coding a
 | 6 | **Tool Evaluation** | Criteria to evaluate ANY new AI tool | [06-Tool-Evaluation-Criteria.md](06-Tool-Evaluation-Criteria.md) |
 | 7 | **Anti-Patterns** | What NOT to do with AI assistants | [07-Anti-Patterns.md](07-Anti-Patterns.md) |
 
-### Practical Enforcement Documents
+### Risk Floor
 
 | # | Document | Purpose |
 |---|----------|---------|
-| 8 | [Governance Decision Matrix](08-Governance-Decision-Matrix.md) | Flowchart: requirement → principle → enforcement action |
-| 9 | [Governance Metrics & KPIs](09-Governance-Metrics.md) | Measurable KPIs: vibecoding index, gate pass rate, evidence coverage |
+| — | [Risk Floor Paths](risk-floor-paths.md) | Deterministic path-based risk floor (migrations/, auth/, tenant/, permissions/, billing/, payment/, infra/, secrets/) that always requires the highest verification tier |
 
 ### SASE & Agentic Governance (Ring 1 — timeless principles)
 
 | # | Document | Purpose |
 |---|----------|---------|
 | 13 | [Agentic Core Principles](13-AGENTIC-CORE-PRINCIPLES.md) | SE4H/SE4A model, 7 SASE principles, 6 disciplines. **Section 8 (NEW 6.3.0)**: Agent Task Terminal Status Taxonomy (DONE/DONE_WITH_CONCERNS/BLOCKED/NEEDS_CONTEXT) |
-| 14 | [Agentic Maturity Model](14-AGENTIC-MATURITY-MODEL.md) | L0-L3 maturity levels, AGENTS.md standard |
 | 16 | [Long-Running Agent Protocol](16-LONG-RUNNING-AGENT-PROTOCOL.md) | **NEW 6.3.0** — Checkpoint, memory, handoff, human checkpoints |
 
-### New Pillars (6.3.0 Draft — validated by SDLC Orchestrator v2)
-
-| # | Document | Purpose |
-|---|----------|---------|
-| 17 | [Agentic OS Patterns](17-AGENTIC-OS-PATTERNS.md) | 12/18 production-verified patterns from 513K LOC Claude Code |
-| 18 | [LLM Model Strategy](18-LLM-MODEL-STRATEGY.md) | 3-tier cascade standard (Claude Code → OpenAI → Ollama) |
-| 19 | [Federated Platform Standard](19-FEDERATED-PLATFORM-STANDARD.md) | BRAIN/VOICE/HANDS/ADVISOR boundaries + V2 Independence |
-| 20 | [Evidence Integration Standard](20-EVIDENCE-INTEGRATION-STANDARD.md) | Multi-source ingestion, no source preference |
+> Docs 8, 9, 14, 17, 18, 19, 20 (Governance Decision Matrix, Governance Metrics, Agentic
+> Maturity Model, Agentic OS Patterns, LLM Model Strategy, Federated Platform Standard,
+> Evidence Integration Standard) were **archived in v7** (2026-09-25) — each was tied to a
+> governance engine, index, or platform that has since been retired. See
+> `10-Archive/by-topic/ai-governance-v7-retired/`.
 
 ### Moved to Ring 2 (6.3.0 — implementation patterns, not timeless principles)
 

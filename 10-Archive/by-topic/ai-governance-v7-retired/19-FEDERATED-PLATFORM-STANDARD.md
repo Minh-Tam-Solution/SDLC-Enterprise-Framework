@@ -9,6 +9,12 @@ pillar: "NEW — Federated Platform"
 source: "CEO Federated AI OS Workflow v3 + ADR-083 + V2 Independence Principle"
 ---
 
+> **⚠️ ARCHIVED (v7, 2026-09-25)**: this standard defines boundaries between a 4-tool ecosystem
+> (BRAIN/VOICE/HANDS/ADVISOR), of which 2 tools (BRAIN = SDLC-Orchestrator, ADVISOR = EndiorBot)
+> have been retired and a third (VOICE = MTClaw) has closed its SDLC lane. Its adoption-test
+> lesson (Standard #19, dogfooding) is worth keeping as a single line in the anti-patterns doc
+> rather than as a full standard. See `10-Archive/by-topic/ai-governance-v7-retired/`.
+
 # Federated Platform Standard — BRAIN/VOICE/HANDS/ADVISOR
 
 > NEW in Framework 6.3.0. Defines how multiple AI platforms collaborate without creating circular dependencies.

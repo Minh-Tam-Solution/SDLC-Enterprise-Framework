@@ -11,6 +11,12 @@ update_frequency: "Per major version (quarterly)"
 priority: "P1"
 ---
 
+> **⚠️ ARCHIVED (v7, 2026-09-25)**: this L0–L3 maturity ladder scored manual artifact creation
+> and agent-infrastructure buildout (sandbox, memory, multi-agent) that mainstream AI coding
+> tools now ship out of the box. v7 reuses the labels L1–L3 for a different axis (orchestration
+> tier: in-session / work / management), so this ladder's naming now collides with the current
+> one. See `10-Archive/by-topic/ai-governance-v7-retired/`.
+
 # SDLC Agentic Maturity Model
 ## 4-Level Progression Framework for Human-Agent Collaboration
 

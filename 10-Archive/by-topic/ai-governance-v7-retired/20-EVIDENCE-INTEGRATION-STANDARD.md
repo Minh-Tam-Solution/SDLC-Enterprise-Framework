@@ -9,6 +9,11 @@ pillar: "NEW — Evidence Integration"
 source: "SDLC Orchestrator v2 Sprint 17 + V2 Independence Principle + CEO directive"
 ---
 
+> **⚠️ ARCHIVED (v7, 2026-09-25)**: this is the API contract of a product (evidence-ingestion
+> service: MinIO, OPA, `POST /api/v1/evidence/ingest`) that has been retired — no running
+> container as of this archive date. Evidence handling for v7 is git + CI logs only: no DB, no
+> API, no queue, no dashboard. See `10-Archive/by-topic/ai-governance-v7-retired/`.
+
 # Evidence Integration Standard — Multi-Source Ingestion
 
 > NEW in Framework 6.3.0. Validated by SDLC Orchestrator v2 Sprint 17 (evidence ingestion API, 371 tests).
