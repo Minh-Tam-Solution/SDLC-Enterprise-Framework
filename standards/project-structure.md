@@ -4,6 +4,7 @@
 > When: at repo setup, when adding a stage folder, and before archiving anything.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: developers creating a repo; tools that read another repo's docs
 **Review by**: 2026-12-26
@@ -74,7 +75,7 @@ Rules:
 | Backlog | items of hours to days | the issue tracker, linked from the sprint file | optional | required | required |
 
 - The locations are recommendations; the files are what each tier requires. A repo that keeps them elsewhere names the path in `AGENTS.md`.
-- `current-sprint.md` has one owner and is updated when a stage gate is passed or re-opened, an ADR is accepted, or a release ships. Its `last_updated` older than the latest merged PR is drift.
+- `current-sprint.md` has one owner and is updated when a stage gate is passed or re-opened, an ADR is accepted, or a release ships. If git shows it unchanged since a later stage-gate change, ADR or release, it has drifted.
 - At sprint close, the sprint section moves to `sprint-index.md` with its outcome, and `current-sprint.md` is rewritten for the next sprint.
 - Sprint records with numbers in their names (`SPRINT-12-retro.md`) live only in `docs/08-collaborate/sprint-logs/` ([`documentation`](documentation.md#file-names)).
 - Templates: [`templates/project/`](../templates/project/).

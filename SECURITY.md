@@ -1,5 +1,6 @@
 # Security Policy
 
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: anyone reporting a vulnerability
 **Review by**: 2026-12-26

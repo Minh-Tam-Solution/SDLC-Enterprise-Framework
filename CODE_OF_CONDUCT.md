@@ -1,5 +1,6 @@
 # Contributor Covenant Code of Conduct
 
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: contributors and maintainers
 **Review by**: 2026-12-26
