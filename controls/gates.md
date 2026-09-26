@@ -93,6 +93,7 @@ Every deploy writes one line:
 {sha_before, sha_after, artifact_digest, migration, actor, approval_ref, result}
 ```
 
-- It feeds lead time and change-fail rate without anyone reporting anything.
+- It feeds the delivery numbers — lead time, deployment frequency, change fail rate, recovery time and rework rate ([`standards/change-and-deployment.md`](../standards/change-and-deployment.md)) — without anyone reporting anything. Add `planned` or `unplanned(<incident>)` to get the rework rate.
 - Health red after restart ⇒ **automatic rollback only when `migration=false`**. Rolling code back onto a migrated schema breaks more than it fixes.
+- "Health" here is the new release's own liveness and readiness, not the health of shared dependencies. A health check that calls the database would roll good code back during a database blip ([`standards/observability.md`](../standards/observability.md)).
 - `migration=true` and health red ⇒ stop, alert loudly, follow the human runbook.

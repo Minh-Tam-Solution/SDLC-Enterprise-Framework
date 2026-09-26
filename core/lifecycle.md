@@ -57,8 +57,8 @@ A **product** covers all ten questions, in proportion to its risk. A **change** 
 | Stage | LITE | STANDARD | PROFESSIONAL | ENTERPRISE |
 |---|---|---|---|---|
 | 00, 01, 02, 04 | required | required | required | required |
-| 05, 06 | optional | required | required | required |
-| 03, 07, 08, 09 | optional | optional | required | required |
+| 05, 06, 07 | optional | required | required | required |
+| 03, 08, 09 | optional | optional | required | required |
 
 "Required" means the stage's exit evidence must exist. Where it lives is the project's choice: the recommended place is the stage folder of the `docs/00–09` layout ([`project-structure.md`](../standards/project-structure.md)). "Optional" means the stage may be skipped; once its documents exist, they follow the same standards as required ones.
 

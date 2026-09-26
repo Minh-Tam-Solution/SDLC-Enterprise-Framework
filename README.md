@@ -79,7 +79,7 @@ Folders are named by what kind of document they hold. Nothing is named after a v
 | `core/` | methodology that outlives tools | [`constitution`](core/constitution.md) · [`lifecycle`](core/lifecycle.md) (ten stages) |
 | `policies/` | how this repository's own artifacts are governed | [`artifact-lifecycle`](policies/artifact-lifecycle.md) |
 | `controls/` | rules and gates that a machine checks | [`rule-contract`](controls/rule-contract.md) · [`tiers`](controls/tiers.md) · [`gates`](controls/gates.md) · [`risk-floor-paths`](controls/risk-floor-paths.md) |
-| `standards/` | what every repo follows | [`project-structure`](standards/project-structure.md) · [`documentation`](standards/documentation.md) |
+| `standards/` | what every repo follows | [`project-structure`](standards/project-structure.md) · [`documentation`](standards/documentation.md) · [`testing`](standards/testing.md) · [`security`](standards/security.md) · [`change-and-deployment`](standards/change-and-deployment.md) · [`observability`](standards/observability.md) |
 | `ai-engineering/` | working with agents | [`context-and-hats`](ai-engineering/context-and-hats.md) |
 | `adoption/` | bringing the framework to an organisation or repo | [`adoption`](adoption/adoption.md) |
 | `practices/` | how to do it well | [`lessons-to-rules`](practices/lessons-to-rules.md) |
@@ -92,7 +92,8 @@ Reading order:
 | You are | Read |
 |---|---|
 | deciding whether to adopt | constitution → tiers → adoption |
-| a developer starting a repo | lifecycle → project-structure → documentation |
+| a developer starting a repo | lifecycle → project-structure → documentation → testing → security |
+| shipping and running a service | change-and-deployment → observability |
 | writing or switching on a gate | rule-contract → gates → risk-floor-paths |
 | renaming, moving or retiring anything here | artifact-lifecycle |
 | writing `AGENTS.md` or a hat | context-and-hats |
