@@ -1,4 +1,4 @@
-# Contributing to the SDLC 6.3.2 Universal Framework
+# Contributing to the SDLC Enterprise Framework
 
 Thanks for your interest in contributing.
 
@@ -59,13 +59,35 @@ Use conventional commit prefixes for clarity:
 
 Scope examples: `pillar-4`, `soul-pm`, `template-sprint-plan`, `governance`, `g3-gate`.
 
+## Script naming
+
+Scripts in `scripts/` use English, kebab-case, verb-first names: `check-*` for a validator/report,
+`rule-*` for a Rules v7 Contract gate, `gen-*` for a generator. (Adopted 2026-09-25.) The v6
+Python tools that predated this convention were archived to `10-Archive/v6/scripts/` on
+2026-09-26; no grandfathered names remain.
+
 ## Style Conventions
 
 - **Markdown** — GitHub-flavored Markdown; tables for structured comparisons; headings follow the existing hierarchy in each section
 - **Voice** — write in the active voice; prefer concrete examples to abstract claims; cite version numbers when referencing patterns that have evolved
-- **Vendor neutrality** — do not name specific company products in normative content (Pillars 0-7, Sections 8-9). The Framework is implementation-neutral by design. Examples and case studies belong in `06-Case-Studies/` and may be specific
+- **Vendor neutrality** — do not name specific company products in normative content (`v7/`, `templates/`, `scripts/`). The Framework is implementation-neutral by design; a burn case describes the incident, not the company
 - **Cite ADRs** — when adding or changing a pattern, link to the originating or governing ADR (in the implementing platform repo if no Framework-side ADR exists yet)
 - **Don't add a comment when a clearer name would do** — prefer self-explanatory section names and headings over explanatory prose
+
+## Naming & size
+
+Each rule below says what it shortens.
+
+| Rule | Shortens |
+|---|---|
+| **English only** in docs, scripts, commit messages | translation and two versions drifting apart |
+| **kebab-case** file names (`02-tiers.md`, `check-doc-count.sh`) | guessing paths |
+| **Verb-first scripts**: `check-*` for gates, `rule-*` for single-rule checks | finding the gate behind a rule |
+| **Each doc ≤150 lines** | docs nobody finishes reading |
+| **A new doc names its consumer** (who reads it, when) in its first two lines | docs written for nobody |
+| **The doc-count gate** ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): live docs outside `10-Archive/` and `templates/` >40 is flagged, >60 blocks | the framework growing back to hundreds of files |
+
+Prefer editing an existing doc over adding one. Prefer a table over prose. Prefer a gate over a paragraph.
 
 ## Review Criteria
 

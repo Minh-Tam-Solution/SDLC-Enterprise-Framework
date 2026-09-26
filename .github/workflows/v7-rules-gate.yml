@@ -1,0 +1,28 @@
+name: v7-rules-gate
+# Rules v7 runner over the single rule register, v7/01-rule-contract.md.
+# Folds in the former v7-rule-contract.yml (C21-4 is a row of the table, so the runner already runs it
+# and L3 already runs its --selftest) and check-product-scripts.yml (selftest-all covers every script,
+# including PRODUCT_CI samples such as check-pr-approver.sh). One file, one place to look.
+on: [pull_request, push]
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    permissions: { contents: read }
+    steps:
+      - uses: actions/checkout@v4
+      - name: selftest every script (a gate nobody has made red is unmeasured)
+        run: bash scripts/selftest-all.sh
+      - name: L3 — every rule cmd has --selftest and it passes
+        run: |
+          rc=0
+          bash scripts/check-rules-v7.sh --l3 || rc=$?
+          [ "$rc" = 2 ] && exit 1
+          [ "$rc" = 0 ] || echo "::warning::check-rules-v7 --l3: cannot measure (exit $rc)"
+          exit 0
+      - name: Rules v7 — run every FRAMEWORK_REPO row (2 = violation fails · 1 = cannot measure warns)
+        run: |
+          rc=0
+          bash scripts/check-rules-v7.sh --block || rc=$?
+          [ "$rc" = 2 ] && exit 1
+          [ "$rc" = 0 ] || echo "::warning::check-rules-v7: cannot measure (exit $rc)"
+          exit 0

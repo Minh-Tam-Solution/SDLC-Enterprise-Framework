@@ -6,6 +6,40 @@
 
 ---
 
+## v6.x — archived 2026-09-25 (legacy)
+
+`v6/` holds the whole v6.x tree (Framework 6.5.0 and its amendments) exactly as it stood on
+2026-09-25: moved with `git mv`, content unchanged. Its live replacement is [`../v7/`](../v7/README.md).
+
+**Why it was archived, not revised:**
+- v6 tiered projects by **team size**; v7 tiers them by **the risk of what is being built**.
+- v6 reached **189 live docs** (502 with this archive). Nobody could say which were still true, and
+  most "rules" had no runnable command behind them.
+- v7 replaces it with a core of **≤30 live docs**, each rule backed by a script with a selftest
+  (`scripts/check-doc-count.sh` keeps the count honest).
+
+**Rules for this folder:** [`DEPRECATION-POLICY.md`](../DEPRECATION-POLICY.md) applies. Nothing in
+`v7/`, `templates/`, `scripts/` or the root docs links into `10-Archive/`; to reuse a v6 idea, copy
+the excerpt forward into a v7 doc and give it a command or mark it reference.
+
+| Path in `v6/` | Files | What it was |
+|---|---:|---|
+| `01-Overview/` | 2 | executive summary, quick reference |
+| `02-Core-Methodology/` | 18 | 7 pillars, 10 stages, tiers by team size, quality gates, spec standard |
+| `03-AI-GOVERNANCE/` | 12 | AI governance principles; `21-V7-RULE-CONTRACT.md` (superseded by `v7/01`) |
+| `04-AI-TOOLS-LANDSCAPE/` | 15 | per-tool guides |
+| `05-Templates-Tools/` | 82 | spec templates, SASE artifacts, checklists, project templates (the two script shims in `07-Scripts/` stay live until 2026-12-31) |
+| `06-Case-Studies/` | 12 | case studies |
+| `07-Implementation-Guides/` | 19 | rollout guides |
+| `08-Training-Materials/` | 13 | training material |
+| `09-Continuous-Improvement/` | 4 | amendment catalogs, improvement guide |
+| `site/` | 9 | the v6 website (static page; its deploy workflow is archived at `.github/workflows/pages.yml`) |
+| `CONTENT-MAP.md`, `CLAUDE.md`, `.claude/`, `.coverage` | 4 | v6 content map, v6 agent guide and settings, a stray coverage file |
+
+177 Markdown files in `v6/`.
+
+---
+
 ## AI-NEVER-READ Directive
 
 ```yaml
@@ -26,6 +60,8 @@ Two top-level axes — **by version** for time-bound snapshots, **by topic** for
 10-Archive/
 ├── README.md            # This file
 ├── INDEX.md             # Full file catalog
+│
+├── v6/                  # v6.x tree as of 2026-09-25 (see the section above)
 │
 ├── by-version/          # Per-version snapshots (chronological)
 │   ├── v1.x/            # June 2025 — initial Claude Code era
@@ -73,7 +109,7 @@ See [INDEX.md](INDEX.md) for the full file catalog.
 
 - **Move, don't delete** — Documents are archived, never deleted
 - **Two-axis organization** — Choose `by-version/` for "this is what v4.5 shipped" and `by-topic/` for "this is the now-deprecated approach to X"
-- **No active references** — Active docs (in `01-Overview/` through `09-Continuous-Improvement/`) should not link to archived content; if a citation is needed, copy the relevant excerpt forward and explain the historical context
+- **No active references** — Active docs (root docs, `v7/`, `templates/`, `scripts/`) do not link to archived content; if a citation is needed, copy the relevant excerpt forward and explain the historical context
 - **Periodic review** — Quarterly cleanup cadence; at each major version, the prior version's normative content snapshots into `by-version/v{N.N}/`
 
 ---

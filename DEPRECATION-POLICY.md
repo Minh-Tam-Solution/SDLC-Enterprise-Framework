@@ -70,7 +70,7 @@ All legacy content is centralized into **`10-archive/`** with stage-aligned subd
 - Stage alignment: Archive subdirectory matches original stage (e.g., design specs → 02-Legacy)
 - No polluting active stages: Eliminates 99-Legacy/ from stages 00-09
 - AI-friendly: Centralized location with AI-NEVER-READ directive prevents context pollution
-- Production-validated: Implemented on BFlow Platform (57% size reduction: 211MB→91MB)
+- Production-validated: Implemented on a production platform (57% size reduction: 211MB→91MB)
 
 See [RFC-001 Legacy Document Organization](#legacy-document-organization-rfc-001-sdlc-605) for details.
 
@@ -225,7 +225,7 @@ Maintain in CONTENT-MAP.md under "Active Redirect Stubs":
 
 ## Legacy Document Organization (RFC-001, SDLC 6.1.0)
 
-See dedicated standard document: [SDLC-Legacy-Document-Organization.md](../02-Core-Methodology/Documentation-Standards/SDLC-Legacy-Document-Organization.md)
+See the v6 standard SDLC-Legacy-Document-Organization.md (archived with v6.x).
 
 Key rules:
 - **RULE-001 (MANDATORY)**: Stage folders (00-09) must contain zero `99-Legacy/` subfolders
@@ -236,7 +236,7 @@ Key rules:
   2026-04-28; no `99-Legacy/` directories remain to migrate. The script is archived at
   `10-Archive/scripts/migrate-legacy-to-archive.sh` for historical reference only.
 
-**Validation**: BFlow Platform metrics (3 live customers):
+**Validation**: production platform metrics (3 live customers):
 - Docs size: 211 MB → 91 MB (57% reduction)
 - File count: 6,500 → 4,294 (34% reduction)
 - AI context pollution: 40% → <5%
