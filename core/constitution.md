@@ -38,7 +38,7 @@ Everything else is rented. Rent what a vendor ships; build only what nobody else
 | **OBSERVE** | traces work already leaves: PRs, CI runs, deploy log | L2 work |
 | **DECIDE** | people | L3 management |
 
-The methodology (this repo) sits under all six. Its thinking lenses — systems thinking, design thinking, mental models — stay `ADVISORY`.
+The methodology (this repo) sits under all six. Its thinking lenses — [systems thinking](systems-thinking.md) and [design thinking](design-thinking.md) — stay `ADVISORY`: they shape the questions a review asks and never block.
 
 | Layer | Example | Owner |
 |---|---|---|
@@ -61,6 +61,17 @@ No enforcement, no evidence and no decision value ⇒ not in v7. Question 4 is m
 | **Do, try, fail, fix** | start at the lowest step with a counter; let failure be cheap and leave a trace (burn case → selftest); kill criteria say "failed" in numbers | big design up front |
 | **Proportional to risk** | the right process is sized to the risk of the artefact, not to the organisation | ritual on sandboxes |
 | **Docs follow traces** | documentation is generated from PRs, CI and evidence, not written ahead of the work | docs that nobody reads and nothing checks |
+
+## Demand before surface
+
+Agents make producing code, documents, gates and tools almost free; that is exactly why each one must earn its place.
+
+- **Every artifact names its consumer and the job that breaks without it** — a document, gate, template, tool, role, ritual, or an agent's new skill or command. "Future adopters" is not a consumer; "compliance with §X" is not a job.
+- **No consumer yet: do not build it,** or keep it only with a dated trigger and a default outcome. No trigger: remove it.
+- **No template before its first real instance.** A gate with no named decider is a checklist. A number no decision moves on is dropped. A ceremony that produces no new evidence is dropped. A review of a review is removed: one responsible reviewer, one approver.
+- **Rigour is measured by use, not by artifact count,** and a principle proves itself when a decision it did not author cites it ([systems-thinking](systems-thinking.md#measures-get-gamed)).
+- **Build the smallest thing that is used,** then measure the outcome — not lines, files or tickets ([`practices/lessons-to-rules.md`](../practices/lessons-to-rules.md#never-measure-agent-output-as-progress)).
+- **A manual clean-up with nothing to hold it drifts back.** It is finished when a check keeps it clean.
 
 ## What the framework does NOT build
 
