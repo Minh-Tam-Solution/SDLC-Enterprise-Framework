@@ -4,6 +4,7 @@
 > When: before the change, not after a consumer reports a broken link.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: maintainers changing or retiring an artifact; consuming repos that follow links into this one
 **Review by**: 2026-12-26

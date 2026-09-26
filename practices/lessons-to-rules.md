@@ -4,6 +4,7 @@
 > When: at incident close, at the monthly vendor radar, and when a user reports a problem.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: whoever closes an incident or proposes a rule
 **Review by**: 2026-12-26
@@ -56,7 +57,7 @@ Vendors change how context loads, how hooks behave and which models exist — mo
 2. Give the burn case, the command that detects it, and the answer to "if it is wrong, what does a false positive cost?".
 3. A PR adds the row at `ADVISORY` with a deadline. Nobody adds a row straight at `MACHINE`.
 
-**Two exceptions, each recorded in the row.** A gate may enter at `MACHINE` when its count is 0 on the day it lands, the decision is named in its `burn_case`, and either (a) it *replaces* a gate that already blocks — starting lower would open a gap where nothing blocks — or (b) the harm it prevents cannot be undone, and its scope is narrow enough to stay quiet. The ladder exists so a gate is not switched on while violations are common; with none, it only delays protection. Uses: DOC-2 replacing the doc-count ceiling (a); SECRET-1, secrets in added lines (b) — both 2026-09-26.
+**Exceptions are a contract, not a claim.** A rule may enter at `MACHINE` directly only under the two cases in [`controls/rule-contract.md`](../controls/rule-contract.md#entering-at-machine-directly) — a replacement for a gate that already blocks, or irreversible harm meeting all six conditions — and the case is named in its `burn_case`. "Our case is special" is not one of them.
 
 ## Never measure agent output as progress
 

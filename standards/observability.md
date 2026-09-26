@@ -4,6 +4,7 @@
 > When: before the first real user, when an alert fires, and after every incident.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: developers and agents running services; whoever is on duty; incident reviewers
 **Review by**: 2026-12-26

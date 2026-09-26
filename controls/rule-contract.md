@@ -5,7 +5,7 @@
 **Owner**: @dttai71
 **Consumer**: rule and gate authors; `scripts/check-rules.sh`
 **Review by**: 2026-12-26
-**Status**: DRAFT
+**Status**: ACTIVE
 **Date**: 2026-09-25
 
 > v7 is the first time the framework can **measure itself**. It is not a writing campaign: more documents make a team slower and costlier, which is the opposite of the goal.
@@ -109,6 +109,23 @@ Every existing document takes **one of three** routes. There is **no fourth rout
 
 ---
 
+### Entering at MACHINE directly
+
+Every rule climbs the ladder from `ADVISORY` ([`practices/lessons-to-rules.md`](../practices/lessons-to-rules.md)). A rule may enter at `MACHINE` only under one of two named cases, stated in its `burn_case`:
+
+**(a) Replacement.** It replaces a gate that already blocks, its count is 0 on the day it lands, and a named person decided it. Starting lower would open a window where nothing blocks.
+
+**(b) Irreversible harm.** All six hold:
+
+1. the harm it prevents is irreversible or materially security-critical;
+2. the detector's scope is narrow and deterministic;
+3. baseline violations are 0, or known debt is bounded separately (owner, expiry);
+4. a red case and a green case both pass in `--selftest`;
+5. escaping a false positive needs more authority than the actor being checked (e.g. an exemption read from the base commit and on the risk floor);
+6. a named person's decision is recorded.
+
+Uses: DOC-2 (a); SECRET-1 (b), 2026-09-26.
+
 ## Rule register
 
 > **The framework's single rule register.** No other file holds a rule table; a rule in two tables runs twice and is counted twice.
@@ -122,8 +139,8 @@ Every existing document takes **one of three** routes. There is **no fourth rout
 | C21-4 | MACHINE | `bash scripts/check-advisory-deadline.sh` | G4: a "kill" gate for an internal tool ran 8 days past its deadline with its deciding metric still "NOT MEASURED"; nobody promoted it, nobody deleted it — a report-only gate that was dead yet stayed green. | FRAMEWORK_REPO |
 | DOC-1 | ADVISORY | `bash scripts/check-doc-count.sh` | v6.x reached 189 live docs (502 with archive); nobody could say which were still true. deadline=2026-10-25 | FRAMEWORK_REPO |
 | DOC-2 | MACHINE | `bash scripts/check-doc-ownership.sh` | v6.x reached 189 live docs and nobody could say which were still true; `DEPRECATION-POLICY.md` still said ACTIVE for Framework 6.3.0 a major version later. A count ceiling limited the number, not whether a doc had an owner, a reader, or was still right. Entered at MACHINE by recorded exception (CEO, 2026-09-26): it replaces the blocking ceiling of DOC-1 and its count was 0 on the day it landed | FRAMEWORK_REPO |
-| SECRET-1 | MACHINE | `bash scripts/rule-no-new-secrets.sh` | Secrets pushed to shared repositories had to be rotated after the fact; deleting them from the tree did not un-leak them. Scans only the lines a change adds, so old findings do not make it noisy; they are recorded as dated debt in `.secret-allowlist`. Entered at MACHINE by recorded exception (CEO, 2026-09-26, m141): the harm is irreversible and the count was 0 on landing | FRAMEWORK_REPO |
-| MIG-1 | ADVISORY | `bash scripts/check-migration-class.sh` | Migrations that could not be rolled back were found only while rolling back: an enum value that cannot be removed, two migrations that collided on the way down, a policy dropped on a live database. The machine classifies each migration expand or contract from its statements; a migration labelled expand that the machine classifies contract is counted. deadline=2026-10-26 | PRODUCT_CI |
+| SECRET-1 | MACHINE | `bash scripts/rule-no-new-secrets.sh` | Secrets pushed to shared repositories had to be rotated after the fact; deleting them from the tree did not un-leak them. Scans only the lines a change adds. Exemptions (false positives only) are read from the base commit, need owner, reason and an expiry within 90 days, and the exemption file is on the risk floor — an exemption added in the same change does not count. This row protects this repository; adopting repos register the same command at `PRODUCT_CI` in their policy repo. Entered at MACHINE under case (b) of "Entering at MACHINE directly" (CEO, 2026-09-26, m141) | FRAMEWORK_REPO |
+| MIG-1 | ADVISORY | `bash scripts/check-migration-class.sh` | Migrations that could not be rolled back were found only while rolling back: an enum value that cannot be removed, two migrations that collided on the way down, a policy dropped on a live database. The machine classifies each migration none, expand, unknown or contract; expand only when every statement is on a known-safe list, so an unrecognised statement is unknown, never expand. A migration labelled expand that the machine classifies contract is counted. Not promoted until a labelled corpus measures the unknown and false-expand rates. deadline=2026-10-26 | PRODUCT_CI |
 | C21-5 | ADVISORY | `bash scripts/check-version-declared.sh` | A document's own version was read as the framework version it had been checked against; hundreds of references were then bumped by hand and drifted back, and nobody could say which documents had really been verified against the current framework. Counts documents with no `sdlc_framework` / `**SDLC Framework Version**` field; an older declared version is legal and not counted. deadline=2026-10-09 | FRAMEWORK_REPO |
 | NAME-1 | ADVISORY | `bash scripts/rule-no-version-in-names.sh` | The core lived in `v7/`; moving it to version-neutral folders broke ~100 link lines in four consuming repos on 2026-09-26, and the next major version would have broken them again. A heading is a link anchor, so it counts too. deadline=2026-10-26 | FRAMEWORK_REPO |
 

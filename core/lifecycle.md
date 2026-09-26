@@ -4,6 +4,7 @@
 > When: at project start, at each stage exit, and when a reviewer asks where a document belongs.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: developers starting a project; whoever plans a sprint or closes a stage
 **Review by**: 2026-12-26

@@ -4,6 +4,7 @@
 > When: before a change that reaches users, and when a deploy goes wrong.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: developers and agents shipping changes; whoever is on duty when a deploy fails
 **Review by**: 2026-12-26
@@ -17,7 +18,7 @@ Approval, deploy log, timed rollback, provenance and break-glass are defined in 
 | Practice | Why |
 |---|---|
 | Work in units finishable in hours to a few days; split larger ones | agents produce large diffs cheaply; small ones keep review and rollback cheap |
-| Trunk-based: a branch lives hours to a day, merges to the main branch at least daily; no long-lived integration branch, no code freezes | parallel agent branches drift fast |
+| Trunk-based: a branch lives hours to a day, merges to the main branch at least daily; no long-lived integration branch; by default no code freezes | parallel agent branches drift fast |
 | A diff much larger than its ticket, or one that adds a dependency, is flagged for review | size is the cheapest signal that scope moved |
 | Before shipping, compare the diff with the intent that authorised it: clean, extra work, or missing requirements — both can be true at once; each drift item is kept, reverted or deferred | work an agent "helpfully" added is still unreviewed work |
 | Parallel sessions on one repo: disjoint files, a frozen shared contract, merge in dependency order, rebase on the latest main before each merge; check for unpushed work before deleting a branch | two agents editing one file silently overwrite each other |
@@ -30,12 +31,12 @@ Approval, deploy log, timed rollback, provenance and break-glass are defined in 
 | Normal | anything else: features, schema, infrastructure | the tier's gates and, on risk-floor paths, a human ([`risk-floor-paths.md`](../controls/risk-floor-paths.md)) |
 | Emergency | ships before the usual checks can finish | break-glass ([`gates.md`](../controls/gates.md)); an incident record and a review within 48 hours; the share of emergency changes is tracked |
 
-No change approval board and no weekly change window: external approval of every change slows delivery without making it safer. Peer or AI review, CI, tests and monitoring do that job; humans review the risk floor.
+**Default: continuous, small-batch delivery without a change approval board, blanket change windows or freezes.** External approval of every change slows delivery without making it safer; peer or AI review, CI, tests and monitoring do that job, and humans review the risk floor. **Exception:** an explicit regulatory or contractual constraint, or an active incident, may impose a window or a freeze — written down, with its end date.
 
 ## Before a deploy
 
 - **Declare rollback triggers with thresholds before the deploy** — e.g. error rate, p95 latency, a broken critical function, a security defect, a severe user report. A probe compares the post-deploy numbers with them.
-- **Stateful services: take a backup first**, and check it is recent. No backup record means "cannot measure", not "fine".
+- **Prove recoverability before a state-changing deploy.** A restore has been timed recently enough to trust ([`core/lifecycle.md`](../core/lifecycle.md), stage 06). A contract or unknown migration also needs a restorable checkpoint taken for it and a runbook. No restore record means "cannot measure", not "fine".
 - **A change to infrastructure or deploy behaviour updates the deploy guide and runbooks in the same change.**
 - **Changes to shared infrastructure run the full test suite** (migrations, configuration, middleware, CI); a feature-scoped change may run only the affected suites.
 - **Urgency waives nothing above.** A hotfix, a staging pass or pressure is not an exemption; "document after deploy" is refused.
@@ -44,7 +45,7 @@ No change approval board and no weekly change window: external approval of every
 
 - **Expand, migrate, contract.** Never change or drop what the running version uses in the same release that stops using it: add the new structure alongside the old, move the data and the code, remove the old in a later release. Then every deploy's schema also serves the previous code, and a code rollback stays safe.
 - **Migrations are scripts in version control**, and the model must match the migration history: regenerating migrations from the model gives an empty diff.
-- **The machine classifies each migration** as *expand* (adds only) or *contract* (drops, renames, changes a type, adds an enum value, rewrites existing data) from its statements ([`scripts/check-migration-class.sh`](../scripts/check-migration-class.sh)). A deploy with no migration or an expand migration may roll back automatically; a contract migration follows the human runbook ([`gates.md`](../controls/gates.md), deploy log and rollback). A diff under `migrations/` is on the risk floor either way.
+- **The machine classifies each migration** as *expand* (only statements on a known-safe list: new tables, indexes, nullable columns, inserts), *contract* (drops, renames, type changes, enum values, NOT NULL without default, rewrites of existing data) or *unknown* (anything it does not recognise) — [`scripts/check-migration-class.sh`](../scripts/check-migration-class.sh). Automatic rollback follows only a deploy with no migration, or an expand migration that also declares itself expand; contract and unknown follow the human runbook ([`gates.md`](../controls/gates.md), deploy log and rollback). A diff under `migrations/` is on the risk floor either way.
 
 ## Flags and releases
 

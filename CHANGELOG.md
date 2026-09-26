@@ -2,6 +2,7 @@
 
 **Framework**: SDLC Enterprise Framework 7.0.0-alpha
 **Last Updated**: September 26, 2026 (v6.x and earlier history moved to archive)
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: adopters choosing or pinning a release; maintainers writing release notes
 **Review by**: 2026-12-26
@@ -40,6 +41,12 @@ history remain readable.
 | Rollback rule | deploy log `migration` is `none`, `expand` or `contract` as classified by the machine; automatic rollback after `none` or `expand` only |
 | Risk floor | `.github/workflows/` added: CI definitions hold the pipeline's credentials and run the gates themselves. A consumer that counts the floor names now reads 9 |
 | CI | the rules workflow fetches full history so SECRET-1 can diff against the merge-base |
+| MIG-1: unknown is not expand | a statement the classifier does not recognise now makes a migration `unknown` (human runbook), never `expand`; expand needs every statement on a known-safe list. Automatic rollback after an expand migration also needs the migration's own `migration-class: expand` while MIG-1 is ADVISORY. Tried on 30 real migrations of an adopting repo: 28 contract, 2 unknown (fixed: `UPDATE` with a table alias is contract), 0 expand |
+| SECRET-1: exemptions harder than violations | `.secret-allowlist` is read from the base commit (an exemption added with the secret does not count), entries need owner, reason and an expiry within 90 days, the file is on the risk floor, false positives only. Scope stated: the row protects this repo; adopters register the command at PRODUCT_CI |
+| Exception contract | `controls/rule-contract.md` § Entering at MACHINE directly: (a) replacement of a blocking gate, or (b) irreversible harm with six conditions |
+| Header schema | five required fields — SDLC Framework Version, Status, Owner, Consumer, Review by; `Version` optional; no `Last updated`. DOC-2 now checks Status, ignores example headers inside code blocks, and the live docs carry Status |
+| Softened | testing: red-before-green evidence instead of commit order; deleting or weakening a test needs independent review and a reason (not a ban); the retry limit moved to agent policy (`ai-engineering/context-and-hats.md`). Change: no board / windows / freezes is the default with a written exception; "backup first" became "prove recoverability" |
+| README | "target ≤30 docs" and "gates start ADVISORY" corrected to match DOC-2 and the exception contract |
 
 ## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 
