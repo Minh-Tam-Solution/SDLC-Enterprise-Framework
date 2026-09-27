@@ -25,7 +25,7 @@
 | **Runnable gates** | only a command you own gives exit codes your meaning |
 | **Eval set** | without it, "better" is an opinion |
 
-Everything else is rented. Rent what a vendor ships; build only what nobody else can.
+Everything else is rented. Rent what a vendor ships; build only what nobody else can. An adapter that points a rented tool at the owned assets (a hat, a skill) is derived and disposable: delete it and only convenience is lost, never a rule.
 
 ## Six verbs on one methodology base
 
