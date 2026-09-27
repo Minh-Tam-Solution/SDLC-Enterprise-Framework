@@ -45,7 +45,7 @@ Every task — a person's or an agent's — ends in exactly one of four statuses
 
 - **A decision that is expensive to reverse is recorded before the work,** as an ADR: context, decision, consequences, alternatives rejected ([`documentation.md`](documentation.md)). Written after the code, it is a story, not a decision.
 - **What earns an ADR:** a choice that shapes the structure, a dependency between parts, an interface others consume, a quality such as security or availability, or how the system is built (framework, library, tool). A choice inside existing boundaries — an endpoint that follows the pattern, a bug fix, an internal refactor — does not. One decision per ADR, one or two pages; the technical detail goes in a spec that links it.
-- **An ADR written after the change says so** and carries the date it was written; it is still worth writing, but it approved nothing. **Review reads the diff against the accepted ADRs:** a change that breaks one is fixed, or a new ADR supersedes the old one first.
+- **An ADR written after the change says so** and carries the date it was written; it is still worth writing, but it approved nothing. **The reviewer reads the diff against the accepted ADRs:** a change that breaks one is fixed, or a new ADR supersedes the old one first.
 - **One decision log** (`docs/09-govern/`, or where `AGENTS.md` says). A chat message becomes a decision when it is copied there with a link; there is no second ledger.
 - **A decision names who decided, when, and where** (a link to the PR, issue or message). "The owner decided X", carried over from another session without that source, is a proposal.
 - **A replaced decision stays,** marked superseded with a link to its successor. It is never rewritten.
