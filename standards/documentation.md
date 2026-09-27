@@ -101,6 +101,13 @@ Every fact — a contract, a schema, a status, a setting, a number — has **one
 - *Burn case:* a duplicate-file hook excluded a folder name that did not match the real home, so it counted the one legitimate file as a duplicate and would have blocked every commit containing it. Nobody had run it red and green ([`gates.md`](../controls/gates.md), G3). A duplicate check needs a planted copy that must fail and the real home that must pass.
 - **Not kept from v6:** context "zones" ranked by authority, "higher authority wins" conflict rules, freshness timers and a context-refresh service, symlinks as the default, a fixed canonical path per artifact type, "never commit a generated copy". None enter the rule register; each candidate above climbs through [`lessons-to-rules.md`](../practices/lessons-to-rules.md).
 
+## Diagrams
+
+- **A diagram is text in the repository,** in a syntax the code host renders or a build step turns into an image (the rendered image is a derived file, [one home per fact](#one-home-per-fact)). It is reviewed in the PR that changes what it shows, and updated in that PR, not on a schedule.
+- **Pick the level for the reader:** system context (the system, its users and neighbours), containers (deployable units and data stores), components inside one container. Code-level diagrams are generated or skipped; they go stale first.
+- **Every diagram has** a title naming its type and scope, a key for its notation, and a label on every element (what it is, what it does) and every line (what flows, and between deployable units the protocol).
+- **Not kept from v6:** Unicode box drawing as the default format, HTML slide decks as documentation, a version, date, evidence id and approval block on each diagram (git holds those, as for a [source-file header](#header-of-a-source-file)), monthly refresh of timelines.
+
 ## Archived documents
 
 A document moved to `archive/` (in a product repo: `docs/10-archive/`) is **not edited**: no header is added, nothing is reworded. The move itself is the record — a `git mv` commit — and where its content went is recorded outside it: in this repository in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md), in a product repo in the archive folder's README. Editing an archived file to add a notice would make it no longer the thing that was archived ([`policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md)).
@@ -121,3 +128,6 @@ Current practice, each opened on the date shown:
 - Go command documentation — Generate Go files by processing source (generated-file marker) — <https://pkg.go.dev/cmd/go> (accessed 2026-09-26)
 - GitHub Docs — Customizing how changed files appear on GitHub (marking generated files) — <https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github> (accessed 2026-09-26)
 - GitHub Docs — About code owners (one owner per path, last match wins) — <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners> (accessed 2026-09-26)
+- The C4 model for visualising software architecture (levels; notation and tooling independent) — <https://c4model.com/> (accessed 2026-09-27)
+- C4 model — Notation (title, key, labelled elements and relationships, protocol on container relationships) — <https://c4model.com/diagrams/notation> (accessed 2026-09-27)
+- GitHub Docs — Creating diagrams (text diagram syntax rendered in Markdown files, issues and pull requests) — <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams> (accessed 2026-09-27)

@@ -52,6 +52,7 @@ Every task — a person's or an agent's — ends in exactly one of four statuses
 ## Roles for one to a few people
 
 - **Roles are hats, not headcount.** One person may wear several. What must hold: each change has one author, one responsible reviewer and — where the tier requires one — one approver who is neither the author nor the person operating the author's agent ([`gates.md`](../controls/gates.md#approver-independence)).
+- **The person who runs an agent answers for what it ships.** An agent is not accountable and never certifies for a person: it does not add a person's sign-off or approval. The commit records the agent as an assistant and the person as accountable ([`adoption`](../adoption/adoption.md#agent-identity-separate-the-agent-from-the-approver), identity layers). "The agent wrote it" is not a defense in a review, an incident or an audit. How deeply the person reviews follows the risk of the change ([`tiers`](../controls/tiers.md)); some projects require contributors to review every generated line, a stricter choice a project may make.
 - **Each open item has one owner** — the person who answers for it. Two owners is none.
 - **Technical authority is not change authority.** A structural change — moving folders, restructuring a codebase, replacing part of the stack — goes through its decision record first, whoever proposes it.
   *Burn case: a structural move of thousands of files, made without a record or a notice, left documents and code out of step and the rest of the team unable to find files; putting it right took longer than the decision would have.*
@@ -81,3 +82,4 @@ Current practice, each opened on the date shown:
 - Anthropic — Building Effective AI Agents (pause at checkpoints or blockers; stopping conditions) — <https://www.anthropic.com/engineering/building-effective-agents> (accessed 2026-09-26)
 - Anthropic — Effective harnesses for long-running agents (progress file, structured updates between sessions) — <https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents> (accessed 2026-09-26)
 - Team Topologies — Key Concepts (cognitive load) — <https://teamtopologies.com/key-concepts> (accessed 2026-09-26)
+- The Linux Kernel documentation — AI Coding Assistants (agents must not add a sign-off; the human submitter reviews and takes full responsibility; an `Assisted-by` trailer names the tool) — <https://docs.kernel.org/process/coding-assistants.html> (accessed 2026-09-27)

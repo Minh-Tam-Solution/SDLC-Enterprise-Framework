@@ -55,6 +55,17 @@ Tools change how they load context. When either one ships a change to memory, im
 
 An agent fixing and re-testing works in a bounded loop: after a configured number of attempts (three is a sensible default) it stops and hands over with what it found, instead of retrying until something passes. The limit is agent policy, set in the policy repo per tier, not a testing rule.
 
+## Plan before code
+
+Planning separates finding out from changing things: the agent reads and asks first, writes a plan, and changes nothing until the plan is settled. It costs a round trip, so **risk triggers it, not size**.
+
+- **Plan first when** the change touches a [risk-floor path](../controls/risk-floor-paths.md) or a contract others consume (API, event, schema), crosses a service boundary, or when the approach is uncertain, the code unfamiliar, or several files must change together. **Skip the plan** when the whole diff can be described in one sentence: a typo, a log line, a rename.
+- **Line and file counts are not the trigger.** A size threshold is met by splitting the change; the paths it touches are not.
+- **Explore before planning:** read the code that already does something similar, the decisions that bind it (ADRs, `AGENTS.md`) and its tests. The plan follows those patterns or says why it departs.
+- **A plan names** the files and interfaces it changes, what is out of scope, the check that proves it works end to end, and, on the risk floor, how it is rolled back. A plan that does not end in a runnable check is a wish.
+- **On the risk floor, a person settles the plan before code is written;** elsewhere the agent proceeds after intent confirmation (below).
+- **A plan is not evidence that the code follows it.** Agents drift from long plans and specs; the reviewer, in a fresh context, checks the diff against the plan, and change outside it is a finding. v6 had the generating agent validate its own output against the plan; that is self-grading.
+
 ## Hats
 
 A hat is a role an agent works in. **v1 has four hats:**
@@ -94,3 +105,12 @@ Templates: `templates/agent/SOUL-example.md` (one hat) · `templates/agent/PREAM
 
 - "Shorter context is cheaper or better" is a **hypothesis**. The framework has no measured case for it. The 60-line target is a convention, not a gate.
 - Claude Code facts here come from the current online docs. An installed version can differ. For example, v2.1.239 does not read `AGENTS.md`. Check with `claude --version` before you rely on a version-gated behavior.
+
+## Sources
+
+From the archive: the rows for this document in [`migration-map/ai-engineering.md`](../migration-map/ai-engineering.md).
+
+Current practice, each opened on the date shown:
+
+- Claude Code docs — Best practices: explore first, then plan, then code; skip the plan when the diff fits in one sentence — <https://code.claude.com/docs/en/best-practices> (accessed 2026-09-27)
+- Birgitta Böckeler — Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl (heavy specs overkill for small changes; agents do not follow every instruction) — <https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html> (accessed 2026-09-27)
