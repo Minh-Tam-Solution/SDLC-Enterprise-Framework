@@ -35,7 +35,7 @@ Version 7 is the framework's second generation: rebuilt, not upgraded. The first
 | **Eval set** | fixed cases with a published taxonomy, to compare agents and configs | the policy repo |
 
 Everything else is rented: agent CLIs, subagents, skills, hooks, models, CI runners.
-Adapters to them are generated and disposable. The policy is not.
+Adapters to them are generated and disposable. The policy is not. This repo's [`skills/`](skills/README.md) are such adapters: they route an agent to the files that hold the rules, and are not a fifth asset.
 *Shortens:* you build and maintain nothing a vendor already ships.
 
 ## Tier by risk of the artefact, not headcount
@@ -109,15 +109,15 @@ Website: the v6 site remains at its last deployment; v7 has no site (no new comp
 
 ## Lineage
 
-v7 is the **third generation** of one methodology, not a new framework. The goals never changed: know what each member (human or AI) is doing, know what they have done, coordinate them.
+v7 is the **second generation** of one methodology, not a new framework: the first generation (v1–v6.x) evolved release by release; the second was rebuilt. The goals never changed: know what each member (human or AI) is doing, know what they have done, coordinate them.
 
-| Generation | How it tried | What happened |
-|---|---|---|
-| 1 (v1–v5) | documents and stages describe the process | people had to remember it |
-| 2 (v6.x) | platforms routed work through custom software (orchestrator, agent gateway) | vendors shipped execution; the control plane left was friction, and usage went to zero |
-| 3 (v7) | read the traces work already leaves (PRs, CI, deploy logs); build only policy, gates, eval, repo knowledge | this repo |
+| Generation | Era | How it tried | What happened |
+|---|---|---|---|
+| First (v1–v6.x) | documents (v1–v5) | documents and stages describe the process | people had to remember it |
+| First (v1–v6.x) | platforms (v6.x) | platforms routed work through custom software (orchestrator, agent gateway) | vendors shipped execution; the control plane left was friction, and usage went to zero |
+| Second (v7) | — | read the traces work already leaves (PRs, CI, deploy logs); build only policy, gates, eval, repo knowledge | this repo |
 
-- **What generation 1 got right stays.** The ten stages, the `docs/00–09` project layout and the documentation standards are kept, shortened, in [`core/lifecycle.md`](core/lifecycle.md) and [`standards/`](standards/project-structure.md). Generation 3 adds gates that check them instead of relying on memory.
+- **What the first generation got right stays.** The ten stages, the `docs/00–09` project layout and the documentation standards are kept, shortened, in [`core/lifecycle.md`](core/lifecycle.md) and [`standards/`](standards/project-structure.md). The second generation adds gates that check them instead of relying on memory.
 - v6.x reached 189 live files and was archived on 2026-09-25. Today the framework governs its documents by owner, consumer and review date (DOC-2), not by a document ceiling. The history stays in [`CHANGELOG.md`](CHANGELOG.md).
 - **Archive rule.** Archive, never delete. From 2026-09-26 an archived file is not edited at all; where its content went is recorded in [`MIGRATION-MAP.md`](MIGRATION-MAP.md). (Files archived on 2026-09-25 carry a legacy note; those notes stay.) A file that changes meaning without a record breaks the past silently — no later gate catches that.
 - **Ownership rule.** Every live doc names an Owner, a Consumer and a Review-by date; a missing field or a passed date blocks ([`scripts/check-doc-ownership.sh`](scripts/check-doc-ownership.sh)). The doc count above 40 is only flagged ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): forty docs with owners and readers beat thirty that merge five topics to pass a number. Each doc ≤150 lines. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
