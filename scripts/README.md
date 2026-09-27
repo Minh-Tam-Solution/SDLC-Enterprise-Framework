@@ -1,6 +1,7 @@
 # Scripts
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: gate authors; maintainers of this repo's CI
 **Review by**: 2026-12-26

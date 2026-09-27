@@ -1,5 +1,6 @@
 # Contributing to the SDLC Enterprise Framework
 
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: anyone proposing a change to this repository
 **Review by**: 2026-12-26

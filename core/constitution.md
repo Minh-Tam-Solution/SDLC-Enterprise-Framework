@@ -4,6 +4,7 @@
 > When: before you write it. If your proposal breaks a line here, change this file first — by PR.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: anyone proposing a rule, gate, tool or document
 **Review by**: 2026-12-26

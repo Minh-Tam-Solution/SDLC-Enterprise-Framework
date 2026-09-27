@@ -1,10 +1,10 @@
 # Roadmap
 
-**Version**: 1.0.0
 **SDLC Framework Version**: 7.0.0
 **Status**: ACTIVE
 **Owner**: <role or handle>
-**Last updated**: YYYY-MM-DD
+**Consumer**: <who reads it, and when>
+**Review by**: YYYY-MM-DD
 
 ## Outcomes for the next 12 months
 

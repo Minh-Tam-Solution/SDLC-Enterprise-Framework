@@ -2,6 +2,7 @@
 
 **Framework**: SDLC Enterprise Framework 7.0.0-alpha
 **Last Updated**: September 26, 2026 (v6.x and earlier history moved to archive)
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: adopters choosing or pinning a release; maintainers writing release notes
 **Review by**: 2026-12-26
@@ -40,6 +41,12 @@ history remain readable.
 | Rollback rule | deploy log `migration` is `none`, `expand` or `contract` as classified by the machine; automatic rollback after `none` or `expand` only |
 | Risk floor | `.github/workflows/` added: CI definitions hold the pipeline's credentials and run the gates themselves. A consumer that counts the floor names now reads 9 |
 | CI | the rules workflow fetches full history so SECRET-1 can diff against the merge-base |
+| MIG-1: per operation, and decides nothing yet | classification is per operation **and its arguments** (Python migrations read with the Python parser, upgrade path only; SQL per statement and per `ALTER TABLE` action): a column added NOT NULL without a default, any added constraint, foreign key or unique index is contract; inserted rows are unknown; unrecognised is unknown, never expand. While MIG-1 is ADVISORY, **any deploy with a migration follows the human runbook**; automatic rollback only with no migration. Red cases for the two reproduced false-expands (a foreign key added in SQL; an Alembic file mixing a nullable and a required column) and for Django required fields and column-level foreign keys. On 60 real migrations from four adopting repos: 32 contract, 20 unknown, 8 expand — each of the 8 read by hand and correct after one fix (a column-level foreign key) |
+| SECRET-1: exemptions harder than violations | `.secret-allowlist` is read from the base commit (an exemption added with the secret does not count); an entry missing owner or reason, expiring beyond 90 days, or already expired makes the gate **red** — on base or in the change — so no far-dated entry waits to become valid; false positives only; the file is on the risk floor. Scope stated: the row protects this repo; adopters register the command at PRODUCT_CI |
+| Exception contract | `controls/rule-contract.md` § Entering at MACHINE directly: (a) a **same-rule** replacement (same invariant, equal or narrower scope, fail-closed no weaker), or (b) irreversible harm with six conditions. DOC-2 is recorded as a one-time exception, not a precedent |
+| Header schema | five required fields — SDLC Framework Version, Status, Owner, Consumer, Review by; `Version` optional; no `Last updated`. DOC-2 now checks Status, ignores example headers inside code blocks, and the live docs carry Status; `ARCHIVED` is not a live status |
+| Softened | testing: red-before-green evidence instead of commit order; deleting or weakening a test needs independent review and a reason (not a ban); the retry limit moved to agent policy (`ai-engineering/context-and-hats.md`). Change: no board / windows / freezes is the default with a written exception; "backup first" became "prove recoverability" |
+| README | "target ≤30 docs" and "gates start ADVISORY" corrected to match DOC-2 and the exception contract |
 
 ## Layout change — 2026-09-26 (in tag `v7.0.0-alpha`): layout by kind of document; stages, project structure, documentation standards restored
 

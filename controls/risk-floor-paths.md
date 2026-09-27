@@ -4,6 +4,7 @@
 > When: at repo setup, and when a diff touches a path listed here.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: product repos declaring risk-floor paths; the risk-floor review gate
 **Review by**: 2026-12-26
@@ -31,7 +32,9 @@ and a model's confidence in its own output is not evidence here. It feeds `chang
 | `.github/workflows/` | CI definitions hold the pipeline's credentials and run the gates themselves; one edit can switch a gate off without anyone noticing. On another code host, a repo adds its CI definition path in `projects.yaml` |
 
 Also on the floor wherever they appear (not path-bound): IAM configuration, production config,
-and destructive SQL (`DROP`, or `DELETE` / `TRUNCATE` without a scoping `WHERE`).
+destructive SQL (`DROP`, or `DELETE` / `TRUNCATE` without a scoping `WHERE`), and the files that grant
+exceptions to a gate — the approvers file and `.secret-allowlist`: whoever can edit an exception can
+switch the gate off.
 
 A repo **adds** its own paths in the policy repo's `projects.yaml` ([`adoption`](../adoption/adoption.md)).
 It does not remove any of the paths above.

@@ -4,6 +4,7 @@
 > When: the first week, and when you add a second consuming repo.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: organisations and repos adopting the framework
 **Review by**: 2026-12-26

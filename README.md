@@ -1,7 +1,8 @@
 # SDLC Enterprise Framework
 
-**Version**: 7.0.0-alpha | **Status**: ALPHA | **Date**: 2026-09-25 | **License**: MIT
+**Version**: 7.0.0-alpha | **Release status**: ALPHA | **Date**: 2026-09-25 | **License**: MIT
 
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: first-time readers and teams deciding whether to adopt the framework
 **Review by**: 2026-12-26
@@ -17,7 +18,7 @@
 4. Controls scale with the risk of the thing being built, not with team size.
 5. A rule names a runnable command and the real incident (burn case) that justifies it.
 6. A rule without a command is reference material, not a rule.
-7. Gates start ADVISORY with a counter and a deadline. They move up only on measured rates.
+7. Gates default to ADVISORY with a counter and a deadline, and climb only on measured rates. A narrow control against irreversible harm may enter MACHINE directly — only under the exception contract in [`controls/rule-contract.md`](controls/rule-contract.md#entering-at-machine-directly).
 8. Incidents flow back into rules through one path ([`lessons-to-rules`](practices/lessons-to-rules.md)).
 9. The framework gates itself in CI: doc count, rule tables, version declarations.
 10. Promise: fewer rules, more of them enforced. Every section says what it shortens.
@@ -112,6 +113,6 @@ v7 is the **third generation** of one methodology, not a new framework. The goal
 | 3 (v7) | read the traces work already leaves (PRs, CI, deploy logs); build only policy, gates, eval, repo knowledge | this repo |
 
 - **What generation 1 got right stays.** The ten stages, the `docs/00–09` project layout and the documentation standards are kept, shortened, in [`core/lifecycle.md`](core/lifecycle.md) and [`standards/`](standards/project-structure.md). Generation 3 adds gates that check them instead of relying on memory.
-- v6.x archived 2026-09-25: 189 live files → target ≤30. The history stays in [`CHANGELOG.md`](CHANGELOG.md).
+- v6.x reached 189 live files and was archived on 2026-09-25. Today the framework governs its documents by owner, consumer and review date (DOC-2), not by a document ceiling. The history stays in [`CHANGELOG.md`](CHANGELOG.md).
 - **Archive rule.** Archive, never delete. From 2026-09-26 an archived file is not edited at all; where its content went is recorded in [`MIGRATION-MAP.md`](MIGRATION-MAP.md). (Files archived on 2026-09-25 carry a legacy note; those notes stay.) A file that changes meaning without a record breaks the past silently — no later gate catches that.
 - **Ownership rule.** Every live doc names an Owner, a Consumer and a Review-by date; a missing field or a passed date blocks ([`scripts/check-doc-ownership.sh`](scripts/check-doc-ownership.sh)). The doc count above 40 is only flagged ([`scripts/check-doc-count.sh`](scripts/check-doc-count.sh)): forty docs with owners and readers beat thirty that merge five topics to pass a number. Each doc ≤150 lines. See [`CONTRIBUTING.md`](CONTRIBUTING.md).

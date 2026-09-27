@@ -4,6 +4,7 @@
 > When: at design, on every change that touches the risk floor, when adding a dependency, and when setting up CI.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: developers and agents building products; reviewers of risk-floor changes; whoever maintains CI
 **Review by**: 2026-12-26
@@ -33,7 +34,7 @@ Risk-floor paths and who must approve them are in [`controls/risk-floor-paths.md
 - **Block secrets at push time on the server, not only in a local hook,** and scan again in CI and before a deploy. A local hook runs on the machine the agent controls. A secret found in the repository is treated as leaked: revoke and rotate; rewriting history does not undo it.
 - **Prefer short-lived, narrowly scoped credentials** to long-lived keys; CI never holds the most sensitive ones if it can avoid it.
 - **Keep secrets out of what agents see and write:** not in the agent's environment, not in instruction files, not in its outputs. Scan agent output before it is stored as a log or evidence.
-- **Rule SECRET-1 blocks secret-shaped values in the lines a change adds** ([`scripts/rule-no-new-secrets.sh`](../scripts/rule-no-new-secrets.sh)); old findings go into `.secret-allowlist` with an owner and an expiry. A scanner proves itself with a planted fake secret ([`controls/gates.md`](../controls/gates.md), G1), and a broken scanner reports "cannot measure", never "clean".
+- **Rule SECRET-1 blocks secret-shaped values in the lines a change adds** ([`scripts/rule-no-new-secrets.sh`](../scripts/rule-no-new-secrets.sh)). In this repository it runs on itself; an adopting repo registers the same command at `PRODUCT_CI` in its policy repo. `.secret-allowlist` holds false positives only — a real credential is rotated, never exempted — and an exemption counts only if it was already on the base branch, with owner, reason and an expiry within 90 days; the file is on the risk floor. A scanner proves itself with a planted fake secret ([`controls/gates.md`](../controls/gates.md), G1), and a broken scanner reports "cannot measure", never "clean".
 
 ## Dependencies and the supply chain
 

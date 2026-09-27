@@ -1,6 +1,6 @@
 # Context and Hats
 
-**Version**: 1.0.0 · **Status**: DRAFT (v7) · **Date**: 2026-09-25
+**Version**: 1.0.0 · **Status**: ACTIVE · **Date**: 2026-09-25
 **SDLC Framework Version**: 7.0.0
 **Owner**: @dttai71
 **Consumer**: authors of `AGENTS.md`, PREAMBLE and hat files
@@ -50,6 +50,10 @@ Tools change how they load context. When either one ships a change to memory, im
   - next action
 - Put it where the **next executor can read it**, such as the shared repo. A personal agent folder on one machine does not count.
 - Protocol: `templates/agent/PREAMBLE-example.md` § Long-running work.
+
+## Bounded loops
+
+An agent fixing and re-testing works in a bounded loop: after a configured number of attempts (three is a sensible default) it stops and hands over with what it found, instead of retrying until something passes. The limit is agent policy, set in the policy repo per tier, not a testing rule.
 
 ## Hats
 

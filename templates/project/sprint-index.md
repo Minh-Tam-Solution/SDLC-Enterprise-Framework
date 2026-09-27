@@ -1,10 +1,10 @@
 # Sprint index
 
-**Version**: 1.0.0
 **SDLC Framework Version**: 7.0.0
 **Status**: ACTIVE
 **Owner**: <role or handle>
-**Last updated**: YYYY-MM-DD
+**Consumer**: <who reads it, and when>
+**Review by**: YYYY-MM-DD
 
 Newest first. One row per closed sprint; the detail stays in git history of `current-sprint.md`.
 

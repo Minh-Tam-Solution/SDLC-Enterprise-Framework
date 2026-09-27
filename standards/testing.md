@@ -4,6 +4,7 @@
 > When: while writing acceptance criteria, before merging, and when a test fails for no clear reason.
 
 **SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: developers and agents writing or fixing tests; reviewers deciding whether a change is proven
 **Review by**: 2026-12-26
@@ -41,10 +42,9 @@ What each stage must show is in [`core/lifecycle.md`](../core/lifecycle.md) (sta
 
 Agents optimise for a passing run, and asking them not to game it barely helps. The check lives outside the agent.
 
-- **An agent fixing a failure must not delete tests, add skip markers or weaken assertions.** CI flags any of these in a diff; a test-file change inside a "fix" gets its own look.
+- **Deleting a test, adding a skip marker or weakening an assertion needs an independent review and a written reason.** When a requirement really changed, the old test is changed or removed — but CI flags every such edit, and a test-file change inside a "fix" gets its own look.
 - **Protect test and scoring code.** Changes to eval sets, fixtures that define "correct", and test harness code are reviewed like production code.
-- **On risk-floor paths, commit the tests first and show them failing** before the implementation — the history then shows the tests were not fitted to the code.
-- **A fix-and-retest loop is bounded:** after three attempts the agent stops and hands over with the root cause it found.
+- **For risk-floor behaviour, show the test fails against the behaviour before the change and passes after it,** and keep that evidence in CI or the review. Commit order is one way to show it, not the requirement: squashing and rebasing are fine.
 - **Features whose behaviour comes from a model are evaluated in levels:** cheap assertions on every change; graded evals against the eval set ([`core/constitution.md`](../core/constitution.md)) on a set cadence; comparisons in production only after significant changes. Expensive evals run behind an explicit switch and a budget, not on every commit. Keep reading real traces.
 
 ## Test data and environments
