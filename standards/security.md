@@ -48,7 +48,7 @@ Risk-floor paths and who must approve them are in [`controls/risk-floor-paths.md
 
 - **CI definitions are on the risk floor** (`.github/workflows/`, or your code host's equivalent — [`controls/risk-floor-paths.md`](../controls/risk-floor-paths.md)); review container build files and environment files as carefully.
 - **The CI token is read-only by default;** a job that must write gets write for that job only.
-- **Contributions from outside run without secrets** — sandboxed with no network and no credentials, or held until a maintainer approves.
+- **Contributions from outside run without secrets** — they come from a fork or the host's equivalent, never with push access, and run sandboxed with no network and no credentials, or are held until a maintainer approves.
 - **Never run untrusted code in a privileged workflow,** and never paste untrusted text (titles, branch names, comments) into a script: pass it through an environment variable.
 
 ## Agents
@@ -59,6 +59,8 @@ Coding agents read untrusted text all day while holding write credentials.
 - **Give an agent the fewest tools and permissions that do the job;** prefer narrow tools to an open shell. An agent that has a shell can reach any network, whatever its network allow-list says.
 - **Authorisation for an agent's actions lives in the system it acts on,** not in its instructions: a privileged call from an agent identity is refused unless that identity may make it ([`adoption/adoption.md`](../adoption/adoption.md), agent identity).
 - **High-impact actions wait for a person:** payments, deletion of data, permission changes, sending messages outside the team.
+- **A tool server connected to an agent holds credentials of its own.** Give it a short-lived credential scoped to one project and revocable on its own. It accepts only tokens issued for it and never passes a caller's token through to the service behind it. Each tool call is traced ([`observability.md`](observability.md#agents-in-operation)).
+- **A tool server that runs locally runs with the user's privileges:** add one only from a known source, read the exact command it starts, and sandbox it where the tool allows.
 
 ## Data classes and model access
 
@@ -130,3 +132,5 @@ Current practice, each opened on the date shown:
 - OWASP CD-SEC-01 Blind Trust — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/content/2022/en/CD-SEC-01-Blind-Trust.md> (accessed 2026-09-27)
 - OWASP CD-SEC-02 Account Impersonation — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/content/2022/en/CD-SEC-02-Account-Impersonation.md> (accessed 2026-09-27)
 - OWASP CD-SEC-09 Asset Management Failures — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/content/2022/en/CD-SEC-09-Asset-Management-Failures.md> (accessed 2026-09-27)
+- Model Context Protocol — Security Best Practices (a server must not accept tokens not issued for it; token passthrough is forbidden; a local server runs with the client's privileges, so show the exact command, ask for approval and sandbox it; minimal scopes) — <https://modelcontextprotocol.io/specification/2025-11-25/basic/security_best_practices> (accessed 2026-09-27)
+- GitHub Docs — About collaborative development models (fork and pull for contributors without push access; shared repository with topic branches for small teams) — <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models> (accessed 2026-09-27)

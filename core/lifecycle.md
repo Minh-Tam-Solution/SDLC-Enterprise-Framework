@@ -80,6 +80,8 @@ The usual owner of each gate — product owner for G0–G1, technical lead for G
 
 A stage gate can be re-opened. A failed G3 sends the work to 02 or 04 with a note in the sprint file saying why. Record the move; do not rewrite the earlier exit.
 
+**Common reasons a gate is sent back:** a claim with nothing to point at, such as "tests pass" with no run behind it; work outside the planned scope ([`change-and-deployment.md`](../standards/change-and-deployment.md#small-changes-short-branches)); the author's own sign-off where the tier requires someone else's.
+
 ## Sprint closure
 
 At the end of every sprint the sprint file ([`project-structure.md`](../standards/project-structure.md#planning-files)) states, for each stage touched: what exited, what was re-opened, and what evidence is still missing. A sprint closes when the file is updated, not when the calendar says so.
