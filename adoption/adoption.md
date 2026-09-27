@@ -23,7 +23,7 @@ One repo holds the policy. Product repos consume it. Derivation runs one way: **
 
 | Path | Holds |
 |---|---|
-| `projects.yaml` | each product repo: tier scheme, declared metadata, [risk-floor](../controls/risk-floor-paths.md) and residency paths |
+| `projects.yaml` | each product repo: tier scheme, declared metadata, [risk-floor](../controls/risk-floor-paths.md) paths and data classes |
 | `tiers.yaml` | tier definitions and model/agent lanes allowed per tier |
 | `rules.md` | the rule table for product scope (heading `## Rule register`; `rules-v7.md` with `## Rules v7` is read until 2026-12-31) (format: [`rule-contract`](../controls/rule-contract.md)) |
 | `souls/` | hats — role files a person or agent wears per product (see [`context-and-hats`](../ai-engineering/context-and-hats.md)) |
