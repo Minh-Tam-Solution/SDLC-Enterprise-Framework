@@ -12,6 +12,8 @@
 
 ## What the framework is
 
+Version 7 is the framework's second generation: rebuilt, not upgraded. The first generation (v6 and earlier) is archived unmodified in [`archive/`](archive/); what still holds was harvested into this tree, one row per source in [`MIGRATION-MAP.md`](MIGRATION-MAP.md). Nothing from the first generation applies unless it has a row there.
+
 1. A methodology for building software with AI agents and a few people — often one.
 2. You own four assets. Vendors supply the rest: agents, models, runtimes, in-session orchestration.
 3. Rules sit in three classes. Only deterministic checks block.
