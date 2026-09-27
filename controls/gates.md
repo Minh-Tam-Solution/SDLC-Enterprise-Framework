@@ -38,6 +38,7 @@ A gate switched on while violations are common turns CI red on day one. It gets 
 - **Publish thresholds before step 1.** Setting them after seeing the numbers is grading yourself.
 - **Rates use the upper Wilson 95% bound, not the point estimate.** With small n the bound stays high: 0 violations in 10 runs gives ≈28%, which fails "< 20%". Reaching "< 5%" with 0 violations needs ≥73 runs. A gate with few runs therefore **stays `ADVISORY` — by design, not by neglect.**
 - A rate is a measurement, not a target. Adding rows whose command does not test what the rule says raises the rate and enforces nothing. Every command needs a red case that proves it catches the forbidden thing.
+- **v6 drew the opposite lesson.** A count of stand-ins in code grew under warnings that people ignored, and v6 concluded that advisory mode itself lets violations accumulate and only hard enforcement works. The ladder keeps advisory as the first step; what was missing is G4 below — a counter, a deadline, and a forced move up or out.
 
 ## G1–G4 — four rules about gates, including gates people run
 
