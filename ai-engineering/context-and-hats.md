@@ -23,10 +23,14 @@ Tools change how they load context. When either one ships a change to memory, im
 - **Small.** Keep the shared part under 60 lines. Claude Code docs say *"target under 200 lines per CLAUDE.md file"*, and longer files reduce adherence.
 - **Point to the source of truth. Don't copy it.** No copied tables, counts, directory trees, dependency lists or architecture overviews. Keep pitfalls, rationale and conventions.
   Burned case: an always-loaded file copied an architecture table from a decision record. The copy drifted from its source for 3.5 months and nothing reported it. The fix re-copied the table from a secondary report and drifted a second time.
+- **Only what the agent cannot work out.** A line earns its place if removing it would cause a mistake: commands the agent cannot guess, conventions that differ from the language default, pitfalls, where the decisions live. Cut what reading the code reveals, generic advice ("write clean code"), file-by-file tours, and style rules: a formatter or linter enforces those every time, faster.
+- **Specific, not general.** "Errors go through the error type in `<path>`" gets followed; "handle errors properly" does not. One instruction per bullet, grouped by topic.
+- **A subproject with its own rules gets its own file** in its folder. In the open format the nearest file wins; when each tool loads a nested file differs, so check before relying on it.
 - **Context is not enforcement.** Claude Code docs: CLAUDE.md is *"context, not enforced configuration. To block an action … use a PreToolUse hook"*.
   - Exit code `2` blocks the action, in both tools.
   - `permissionDecision: "ask"` prompts the user. In Qwen Code headless runs, "ask" falls back to deny.
   - Hooks run without a controlling terminal, so they cannot open `/dev/tty`. Never build an escape hatch on a TTY prompt inside a hook.
+- **A rule the agent keeps breaking is not fixed by repeating it louder.** First suspect length: the rule is lost among the others, so prune. If it must hold every time, move it into a hook, a linter or a CI check and delete the line; a repeated mistake with a price is a burn case for [lessons-to-rules](../practices/lessons-to-rules.md). v6 kept a dated lesson file per bug and folded them into the context file monthly, which grows the file the rule was getting lost in.
 - **Add one compaction line.** *"When compacting, preserve: the list of modified files, the check/test commands, and each decision with its source."* Claude Code docs recommend this pattern. A root `CLAUDE.md` survives compaction.
 
 ### Tier 2: loaded on demand
@@ -54,6 +58,17 @@ Tools change how they load context. When either one ships a change to memory, im
 ## Bounded loops
 
 An agent fixing and re-testing works in a bounded loop: after a configured number of attempts (three is a sensible default) it stops and hands over with what it found, instead of retrying until something passes. The limit is agent policy, set in the policy repo per tier, not a testing rule.
+
+## Briefing an agent
+
+The brief is the task handed to an agent. Intent confirmation (below) says why; the brief says what, where, and how to know it is done.
+
+- **Name the place and the case:** the file or area, the scenario, the constraints, including what not to use. "Add tests for the parser" leaves every choice open; "test the parser on an empty file; no test doubles" does not.
+- **Point to the thing, not a description of it:** the path of code that already does the same kind of work, the error output pasted as it is, the issue link.
+- **End with a check the agent can run:** a test to write and pass, a build, a script that diffs output against a fixture. Without one, "looks done" is the only stop signal and the person becomes the test loop. For a bug, the check is a failing test that reproduces it, written first.
+- **Ask for evidence, not a claim:** the command run and its output. Reading evidence is faster than re-running the work.
+- **Name it; do not lean on the conversation.** "Fix the other one" depends on history that compaction may have dropped.
+- **Vague on purpose is for exploring** ("what would you improve here?"), never for a change that will be merged.
 
 ## Plan before code
 
@@ -103,7 +118,8 @@ Templates: `templates/agent/SOUL-example.md` (one hat) · `templates/agent/PREAM
 
 ## What this page does not claim
 
-- "Shorter context is cheaper or better" is a **hypothesis**. The framework has no measured case for it. The 60-line target is a convention, not a gate.
+- "Shorter context is cheaper or better" is a **hypothesis** for this framework. A vendor reports that recall falls as the context grows ("context rot"); the framework has no measured case of its own. The 60-line target is a convention, not a gate.
+- v6 attributed the 60-line figure to research. The article it cited recommends under 300 lines and gives its own file of under sixty as an example, not a measurement.
 - Claude Code facts here come from the current online docs. An installed version can differ. For example, v2.1.239 does not read `AGENTS.md`. Check with `claude --version` before you rely on a version-gated behavior.
 
 ## Sources
@@ -112,5 +128,8 @@ From the archive: the rows for this document in [`migration-map/ai-engineering.m
 
 Current practice, each opened on the date shown:
 
-- Claude Code docs — Best practices: explore first, then plan, then code; skip the plan when the diff fits in one sentence — <https://code.claude.com/docs/en/best-practices> (accessed 2026-09-27)
+- Claude Code docs — Best practices: explore first, then plan, then code; skip the plan when the diff fits in one sentence; give the agent a check it can run; what to include in and exclude from the context file; a rule broken despite a line against it means the file is too long or the rule belongs in a hook — <https://code.claude.com/docs/en/best-practices> (accessed 2026-09-27)
+- Anthropic — Effective context engineering for AI agents (context rot; the smallest set of high-signal tokens; just-in-time retrieval; instructions between brittle and vague) — <https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents> (accessed 2026-09-27)
+- AGENTS.md — the open format (plain Markdown, no required fields; the nearest file in the tree takes precedence) — <https://agents.md/> (accessed 2026-09-27)
+- HumanLayer — Writing a good CLAUDE.md (about 150–200 instructions followed consistently; under 300 lines; never send an LLM to do a linter's job; pointers over copies) — <https://www.humanlayer.dev/blog/writing-a-good-claude-md> (accessed 2026-09-27)
 - Birgitta Böckeler — Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl (heavy specs overkill for small changes; agents do not follow every instruction) — <https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html> (accessed 2026-09-27)
