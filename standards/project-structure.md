@@ -77,6 +77,10 @@ Rules:
 - The locations are recommendations; the files are what each tier requires. A repo that keeps them elsewhere names the path in `AGENTS.md`.
 - `current-sprint.md` has one owner and is updated when a stage gate is passed or re-opened, an ADR is accepted, or a release ships. If git shows it unchanged since a later stage-gate change, ADR or release, it has drifted.
 - At sprint close, the sprint section moves to `sprint-index.md` with its outcome, and `current-sprint.md` is rewritten for the next sprint.
+- **Forecast from what was finished:** what the last few sprints actually completed, and the days people are actually there. Leave room for unplanned work.
+- **The goal is fixed; the list may move.** During the sprint, items may be clarified, swapped or cut with the sprint owner as long as the goal still holds. Work the goal does not need goes to the backlog.
+- **Every committed item ends in a state:** done, carried over with a reason, or dropped with a reason. Nothing disappears silently. An item carried over again and again is split, redesigned or dropped, not carried once more.
+- **A retrospective yields few actions, each with an owner;** the most important one enters the next sprint's plan. A repeated problem with a price paid goes to [`lessons-to-rules`](../practices/lessons-to-rules.md).
 - Sprint records with numbers in their names (`SPRINT-12-retro.md`) live only in `docs/08-collaborate/sprint-logs/` ([`documentation`](documentation.md#file-names)).
 - Templates: [`templates/project/`](../templates/project/).
 
@@ -91,3 +95,11 @@ A tool that reports on a repo reads in the same order and names the file and lin
 - Move with `git mv` so history follows the file. A move and a content change go in separate commits.
 - Before archiving a folder, list every file in it and say where each one went. A single-file folder leaves no visible gap when it disappears — a standard was lost that way for thirteen versions.
 - After a move, search the whole repo and the known consumers for the old path. A pinned reference (commit SHA) keeps working; the next re-pin must use the new path.
+
+## Sources
+
+From the archive: the rows for this standard in [`migration-map/standards.md`](../migration-map/standards.md).
+
+Current practice, each opened on the date shown:
+
+- The Scrum Guide 2020 (no change that endangers the Sprint Goal, scope renegotiated as more is learned; forecasts from past performance and upcoming capacity; the most impactful improvements may enter the next Sprint Backlog; no velocity or story points) — <https://scrumguides.org/scrum-guide.html> (accessed 2026-09-27)

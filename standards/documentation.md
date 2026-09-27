@@ -66,7 +66,17 @@ Classification: a file under a `01-ADRs/` folder, or with an `adr_id` field, is 
 | `related_adrs`, `related_specs` | optional | optional | lists of ids |
 | `supersedes` / `superseded_by` | optional | required when status is `superseded` | id |
 
-Spec body sections, in order: overview · context · requirements (with acceptance criteria) · design decisions (link ADRs, do not copy them) · technical specification · dependencies. ADR body: context · decision · consequences · alternatives rejected, with reasons.
+Spec body sections, in this order when present (a short spec omits some, see [Writing a spec](#writing-a-spec)): overview (with what is out of scope) · context · requirements (with acceptance criteria) · design decisions (link ADRs, do not copy them) · technical specification · dependencies · open questions. ADR body: context · decision · consequences · alternatives rejected, with reasons.
+
+## Writing a spec
+
+A spec says what a change must do, for whom and why, and the design choices it rests on. How the work is scheduled — phases, tasks, durations — lives in the sprint file and the agent's plan ([`context-and-hats`](../ai-engineering/context-and-hats.md#plan-before-code)), not in the spec.
+
+- **Size follows the decision, not the template.** A change that fits in one sentence and has no real trade-off needs no spec. A small one is a short spec: overview, requirements, acceptance criteria. A section kept only to fill the template is noise.
+- **Name the non-goals:** things a reader could reasonably expect this change to do and that it deliberately will not. Put each assumption and constraint in the context section; each one is something that would change the design if it were false.
+- **Requirements are testable.** A behaviour gets at least one Given / When / Then scenario ([`testing.md`](testing.md#tests-prove-requirements)). A requirement that is not a behaviour (latency, size, retention) is a number plus the way it is measured; putting it into Given / When / Then adds words, not testability. Where a spec uses MUST, SHOULD or MAY, they mean what RFC 2119 says, and only in capitals (RFC 8174).
+- **Open questions are written down, not guessed away.** A question only a person can settle is a `NEEDS_DECISION` ([`collaboration.md`](collaboration.md#how-a-task-ends)). When code shows the design was wrong before release, update the spec in the same PR.
+- **Not kept from v6:** Given / When / Then required for every requirement and the RFC 2119 words banned as ambiguous (the RFC defines MUST and SHALL as the same absolute requirement); at least five acceptance criteria; a readability-score gate; fifteen required front-matter fields; one section per tier inside a spec; a phased implementation plan inside the spec; priority and complexity on every requirement.
 
 ## Header of a source file
 
@@ -131,3 +141,7 @@ Current practice, each opened on the date shown:
 - The C4 model for visualising software architecture (levels; notation and tooling independent) — <https://c4model.com/> (accessed 2026-09-27)
 - C4 model — Notation (title, key, labelled elements and relationships, protocol on container relationships) — <https://c4model.com/diagrams/notation> (accessed 2026-09-27)
 - GitHub Docs — Creating diagrams (text diagram syntax rendered in Markdown files, issues and pull requests) — <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams> (accessed 2026-09-27)
+- Malte Ubl — Design Docs at Google (non-goals; trade-offs over an implementation manual; short docs for small changes; skip the doc when the solution is unambiguous; update it when reality differs before shipping) — <https://www.industrialempathy.com/posts/design-docs-at-google/> (accessed 2026-09-27)
+- GitHub Spec Kit — Spec-Driven Development (the spec states what and why; plan and tasks are separate artifacts; ambiguities are marked, not filled with plausible assumptions) — <https://github.com/github/spec-kit/blob/main/spec-driven.md> (accessed 2026-09-27)
+- RFC 2119 (MUST, SHALL and REQUIRED are the same absolute requirement; use the words sparingly) — <https://www.rfc-editor.org/rfc/rfc2119> (accessed 2026-09-27)
+- RFC 8174 (the key words carry that meaning only in capitals) — <https://www.rfc-editor.org/rfc/rfc8174> (accessed 2026-09-27)

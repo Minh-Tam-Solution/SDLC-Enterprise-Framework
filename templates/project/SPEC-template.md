@@ -20,6 +20,8 @@ related_specs: []
 
 <two or three paragraphs: what and for whom>
 
+**Out of scope:** <what a reader could reasonably expect that this change will not do>
+
 ## Context
 
 <the problem, with the evidence from stage 00>
@@ -28,7 +30,8 @@ related_specs: []
 
 | # | Requirement | Acceptance criterion |
 |---|---|---|
-| R1 | <requirement> | GIVEN … WHEN … THEN … |
+| R1 | <behaviour> | GIVEN … WHEN … THEN … |
+| R2 | <limit: latency, size, retention> | <number> measured by <how> |
 
 ## Design decisions
 
@@ -41,3 +44,7 @@ related_specs: []
 ## Dependencies
 
 <systems, teams, other specs>
+
+## Open questions
+
+<each with who can answer it; one that needs a person's choice is a NEEDS_DECISION>
