@@ -15,7 +15,7 @@
 
 | Item | Issue | Stage | Owner | State |
 |---|---|---|---|---|
-| <what> | #<n> | 04 | <handle> | todo · doing · done · dropped |
+| <what> | #<n> | 04 | <handle> | todo · doing · done · carried (reason) · dropped (reason) |
 
 ## Stage gates this sprint
 
