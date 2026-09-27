@@ -58,6 +58,7 @@ The framework is versioned with semantic versioning. A version number means some
 | PATCH | wording and fixes that change nothing a consumer reads by path or runs |
 
 - **Deprecate in a MINOR, remove in a later MAJOR.** A pre-release (`-alpha`, `-beta`) makes no compatibility promise; its changelog still says what moved.
+- **A rule promoted on its announced deadline is MINOR.** When an `ADVISORY` rule's counter and deadline (G4 in [`rule-contract`](../controls/rule-contract.md)) were already in a released version, promoting it to `REVIEW` or `MACHINE` on that deadline is the announced change, not a break. A rule that starts failing repos without that notice in a prior release is MAJOR.
 - **A released tag is never moved or rewritten.** A fix is a new version.
 - **"No breaking changes" is a claim the path-map check tests.** A live path removed or renamed without a working old name is breaking, however small the edit.
   *Burn case: a release note stated "Breaking changes: none" and, in the same release, renamed three top-level folders, with a step telling every consumer to update their references by hand.*
