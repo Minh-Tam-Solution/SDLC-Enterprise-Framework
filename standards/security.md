@@ -74,7 +74,7 @@ Two separate axes. **Model quality** says how capable a model is; the **data cla
 
 - **Classify by path in the policy repo,** next to the risk-floor and residency paths. The policy repo declares the class that unlisted paths take; with no declaration a path is unclassified, and unclassified means ask first, never an assumed "internal". A file or record that mixes classes takes the most restrictive one.
 - **A cloud reviewer that meets a `restricted` or `no-ai` path returns `insufficient_evidence`** (`abstain_reason: restricted_data`) and hands over to a person — never a pretend review ([`controls/tiers.md`](../controls/tiers.md), model reviewer lane).
-- **Agent access is enforced by the tool, not the prompt:** deny reads of `no-ai` paths in the agent's permissions and hooks, and keep secrets out of the agent's environment ([§ Secrets](#secrets)).
+- **Agent access is enforced at the operating-system boundary, not by the tool and not by the prompt:** the agent runs as a user that cannot read `restricted` or `no-ai` paths, or those files are not on the agent's machine at all; secrets stay out of the agent's environment ([§ Secrets](#secrets)). Denying reads in the agent's permissions and hooks is a second layer only: an agent with a shell reads the same file another way.
 
 ## Operating securely
 
@@ -95,7 +95,7 @@ Each enters through [`practices/lessons-to-rules.md`](../practices/lessons-to-ru
 | denial tests exist | a 403 test per route with an object id |
 | no mocks or skips in security tests | scan of auth test files, with a planted positive control |
 | threat model on risk-floor changes | a link in the PR when a risk-floor path changed |
-| data class declared | every path an agent may read maps to a class; a planted `no-ai` file read by a test agent must be denied |
+| data class enforced | every path an agent may read maps to a class; a planted `restricted` file and a planted `no-ai` file stay unreadable to a test agent through every route it has: the file-read tool **and** the shell |
 
 ## Sources
 
