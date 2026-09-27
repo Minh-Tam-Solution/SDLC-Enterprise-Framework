@@ -85,6 +85,22 @@ Every source file in a code folder, from STANDARD up, starts with a short header
 
 Not required in generated files, migrations (the migration name carries the purpose), or files under 20 lines. Version, author and date are not in the header: git holds them and never lets them drift.
 
+## One home per fact
+
+Every fact — a contract, a schema, a status, a setting, a number — has **one authoritative home**. Everywhere else links to it, imports it or is generated from it; nothing restates it by hand. "One topic, one living document" ([`project-structure.md`](project-structure.md#the-docs-tree)) is the same rule for topics; agent context files point instead of copying ([`context-and-hats`](../ai-engineering/context-and-hats.md)).
+
+| Rule | Means | Candidate rule (command idea) |
+|---|---|---|
+| **Name the home first** | before writing a fact, find or name its home; a second place that needs it links there | count files of a known kind (an API description, `.env.example`) outside their home |
+| **Derived is generated** | a file made from another — an endpoint list from the API description, a vendor adapter from the policy — is produced by a command, carries a line saying so (`Code generated … DO NOT EDIT.`), and CI regenerates it and expects an empty diff. A committed copy is fine; an unchecked one is drift | regenerate and diff |
+| **State is written once** | the current sprint, the release in production, a gate's status live in one file with one owner; other documents name that file, never the value | compare the state file's last change with the latest merge that should have moved it |
+| **One writer per section** | a file written by both a person and a tool is split into fenced sections; the tool regenerates only its fence, and people do not edit inside it | regenerate the fenced block and diff |
+| **Configuration inherits** | shared settings live at one root; lower levels extend it and override only what differs | list configuration files that do not extend the root |
+
+- *Burn case:* a team's "current sprint" read differently in four documents; three sprints closed without the documents moving (a 27-day lag), and untangling the direction took two weeks. The lesson recorded then still holds: one source is useless if nothing notices when the others diverge.
+- *Burn case:* a duplicate-file hook excluded a folder name that did not match the real home, so it counted the one legitimate file as a duplicate and would have blocked every commit containing it. Nobody had run it red and green ([`gates.md`](../controls/gates.md), G3). A duplicate check needs a planted copy that must fail and the real home that must pass.
+- **Not kept from v6:** context "zones" ranked by authority, "higher authority wins" conflict rules, freshness timers and a context-refresh service, symlinks as the default, a fixed canonical path per artifact type, "never commit a generated copy". None enter the rule register; each candidate above climbs through [`lessons-to-rules.md`](../practices/lessons-to-rules.md).
+
 ## Archived documents
 
 A document moved to `archive/` (in a product repo: `docs/10-archive/`) is **not edited**: no header is added, nothing is reworded. The move itself is the record — a `git mv` commit — and where its content went is recorded outside it: in this repository in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md), in a product repo in the archive folder's README. Editing an archived file to add a notice would make it no longer the thing that was archived ([`policies/artifact-lifecycle.md`](../policies/artifact-lifecycle.md)).
@@ -92,3 +108,16 @@ A document moved to `archive/` (in a product repo: `docs/10-archive/`) is **not 
 ## Checking
 
 These standards become gates through [`lessons-to-rules.md`](../practices/lessons-to-rules.md): a rule row with a burn case and a command, starting at `ADVISORY` with a counter and a deadline ([`gates.md`](../controls/gates.md)). A standard with no command behind it is a request, and it drifts. The candidates, each with its burn case, are listed in [`rule-contract.md`](../controls/rule-contract.md) once proposed.
+
+## Sources
+
+From the archive: the rows for this standard in [`MIGRATION-MAP.md`](../MIGRATION-MAP.md).
+
+Current practice, each opened on the date shown:
+
+- The Pragmatic Programmer — Pragmatic Programmer Tips (tip 15, DRY) — <https://pragprog.com/tips/> (accessed 2026-09-26)
+- Software Engineering at Google, ch. 10 — Documentation — <https://abseil.io/resources/swe-book/html/ch10.html> (accessed 2026-09-26)
+- Write the Docs — Docs as Code — <https://www.writethedocs.org/guide/docs-as-code/> (accessed 2026-09-26)
+- Go command documentation — Generate Go files by processing source (generated-file marker) — <https://pkg.go.dev/cmd/go> (accessed 2026-09-26)
+- GitHub Docs — Customizing how changed files appear on GitHub (marking generated files) — <https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github> (accessed 2026-09-26)
+- GitHub Docs — About code owners (one owner per path, last match wins) — <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners> (accessed 2026-09-26)
