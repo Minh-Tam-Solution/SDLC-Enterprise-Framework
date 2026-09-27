@@ -5,13 +5,19 @@ description: Use when planning the next sprint, rewriting docs/04-build/current-
 
 # Sprint plan
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents planning or closing a sprint; the sprint owner
+**Review by**: 2026-12-26
+
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). No SEF ⇒ stop with `insufficient_evidence`. This skill matches SEF version 7.
 
 A sprint is 5–10 working days of committed work, recorded in one file with one owner (`standards/project-structure.md` "Planning files"). Stages are questions, not phases: one sprint may touch several (`core/lifecycle.md`).
 
 ## Plan
 
-1. **Read the state**, in the newcomer order of `standards/project-structure.md` "Reading order": `README.md` → `AGENTS.md` → the current sprint file → the sprint index → the last five merged PRs → `docs/00-foundation/` and `docs/02-design/` when the item needs the why or the how; then the roadmap (`standards/project-structure.md` "Planning files"). Take paths from `AGENTS.md` if the repo uses another layout. Never guess the sprint number; read it.
+1. **Read the state**, in the newcomer order of `standards/project-structure.md` "Reading order for a newcomer": `README.md` → `AGENTS.md` → the current sprint file → the sprint index → the last five merged PRs → `docs/00-foundation/` and `docs/02-design/` when the item needs the why or the how; then the roadmap (`standards/project-structure.md` "Planning files"). Take paths from `AGENTS.md` if the repo uses another layout. Never guess the sprint number; read it.
 2. **Tier** of the repo (see `sdlc-gate-check` step 2). It decides which stages and which evidence the sprint must produce (`core/lifecycle.md`), and how much ritual is allowed (`controls/tiers.md` "Ritual budget").
 3. **Goal**: one sentence, stated as the user outcome. Progress is measured as time until a real user tries the real thing; fix the date and cut scope to meet it (`core/design-thinking.md` "Keep scope honest").
 4. **Each candidate item** must answer, or it does not enter the sprint:

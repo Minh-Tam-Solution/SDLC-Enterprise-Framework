@@ -5,6 +5,12 @@ description: Use when a change needs an independent review — acting as the rev
 
 # Independent review
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents reviewing a change in a fresh context, or preparing one for another reviewer
+**Review by**: 2026-12-26
+
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). No SEF ⇒ stop with `insufficient_evidence`. This skill matches SEF version 7.
 
 "Independent" depends on the tier (`controls/tiers.md` "Per-tier controls"): STANDARD — a fresh-context AI review, recorded, not counted · PROFESSIONAL — a fresh-context AI review artifact bound to `commit_sha` + `diff_hash` (presence and binding are machine-checked, content is `REVIEW`) · ENTERPRISE — plus a human who is not the author approving the deploy tag on the exact SHA. The production reviewer lane is a CI check-run with its own key and a budget cap; the author cannot edit a check-run (`controls/tiers.md` "Model reviewer lane"). A review run in a developer session is not that lane; say which lane produced it (`adoption/adoption.md`: test the reviewer in the CI lane it will run in).

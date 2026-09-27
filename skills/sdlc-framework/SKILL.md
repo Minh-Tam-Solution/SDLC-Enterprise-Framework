@@ -5,15 +5,22 @@ description: Use when someone asks what the SDLC Enterprise Framework (SEF) requ
 
 # SDLC Enterprise Framework — the model in one page
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents answering a question about SEF; the other sdlc-* skills, through "Find SEF"
+**Review by**: 2026-12-26
+
 This skill matches SEF version 7, the second generation: rebuilt, not upgraded. Older ideas apply only if `MIGRATION-MAP.md` gives them a row with a live successor.
 
 ## Find SEF
 
-SEF is the repository `github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework`. Every path in the sdlc-* skills is relative to its root.
+SEF is the repository `github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework`. The sdlc-* skills ship inside it, in `skills/`, and every path in them is relative to its root.
 
-1. Look for a local checkout: a submodule or folder named `SDLC-Enterprise-Framework/`, a symlink `.sdlc-framework/`, or a clone the user names. Read the SEF revision the repo pins: the release tag in its policy repo (`adoption/adoption.md` "Pinning"); `git show <tag>:<path>` reads it without moving anyone's checkout. No pin ⇒ read `main` after `git pull --ff-only` (a fetch alone does not change the files you read). Say which revision you read.
-2. None reachable ⇒ say so and stop with `insufficient_evidence`. Do not answer from memory: the rules below are pointers, the SEF file is the source.
-3. SEF is read-only for these skills. A change to SEF goes through its own `CONTRIBUTING.md`.
+1. Loaded from a SEF checkout: this file is `skills/sdlc-framework/SKILL.md` there, and the folder two levels up holds `controls/rule-contract.md`. That folder is SEF at the skill's own revision; read the cited files there, so the skill and the files it cites come from one commit. Say which revision you read.
+2. Copied or linked into another repo: look for a local checkout: a submodule or folder named `SDLC-Enterprise-Framework/`, a symlink `.sdlc-framework/`, or a clone the user names. Read the SEF revision the repo pins: the release tag in its policy repo (`adoption/adoption.md` "Pinning"); `git show <tag>:<path>` reads it without moving anyone's checkout. No pin ⇒ read `main` after `git pull --ff-only` (a fetch alone does not change the files you read). Say which revision you read.
+3. None reachable ⇒ say so and stop with `insufficient_evidence`. Do not answer from memory: the rules below are pointers, the SEF file is the source.
+4. SEF is read-only for these skills. A change to SEF, these skills included, goes through its own `CONTRIBUTING.md`.
 
 ## The model, each claim with its home
 

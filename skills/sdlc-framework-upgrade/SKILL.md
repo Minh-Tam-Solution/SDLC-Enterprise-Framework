@@ -5,6 +5,12 @@ description: Use when a repository should adopt the current SDLC Enterprise Fram
 
 # Adopt SEF in a repository
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents planning SEF adoption in a repository; the repo owner who approves the plan
+**Review by**: 2026-12-26
+
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). No SEF ⇒ stop with `insufficient_evidence`. This skill matches SEF version 7, which is rebuilt, not upgraded: nothing from v6 applies unless `MIGRATION-MAP.md` gives it a live successor (`README.md` "What the framework is").
 
 The folder keeps its old name because people invoke it by that name.
@@ -17,7 +23,7 @@ The folder keeps its old name because people invoke it by that name.
    - **rule** — it has a class, a runnable command and a burn case ⇒ a row in the rule register;
    - **reference** — still true, no command ⇒ keep, stop presenting it as a gate;
    - **archive** — no longer in force ⇒ `git mv` into the repo's archive folder unchanged, and record where its content went in that folder's README (`standards/documentation.md` "Archived documents").
-   Harvest claims, not files: look up each v6 concept in `MIGRATION-MAP.md` ("Retired concepts" and "Live successor") and point to the successor instead of copying it.
+   Harvest claims, not files: look up each v6 concept in the rows under `migration-map/` (columns "Retired concepts" and "Live successor"; `MIGRATION-MAP.md` "Map" names the file) and point to the successor instead of copying it.
 4. **Tier by evidence** (`controls/tiers.md`): derive it from repo, declared metadata and deploy evidence; declare it in the policy repo with `tier_scheme: v7-risk`. Team size is not an input.
 5. **Policy repo** (`adoption/adoption.md` "Policy repo pattern"): `projects.yaml` (tier, metadata, risk-floor paths, data classes), `tiers.yaml`, `rules.md` with `## Rule register`, hats, gates, `adapters/gen.sh`, `.approvers`, `CONTROL_SURFACE`. The product pins a release tag; CI regenerates adapters and expects an empty diff; the reusable workflow reads the tier from the policy, never from the product. A second consuming repo is what justifies a separate policy repo (`adoption/adoption.md` "Kill criteria").
 6. **Agent identity** (`adoption/adoption.md` "Agent identity"): agents act as a least-privilege bot, the owner credential is off the agent's machine, every agent identity is mapped to its operator in `.approvers`, and authority comes from the authenticated actor.

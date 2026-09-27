@@ -5,6 +5,12 @@ description: Use to audit a product repo or a policy repo against the SDLC Enter
 
 # SEF audit
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents auditing a product or policy repo against SEF; the person who asked for the audit
+**Review by**: 2026-12-26
+
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). No SEF ⇒ stop with `insufficient_evidence`. This skill matches SEF version 7. For a single stage gate use `sdlc-gate-check` instead.
 
 Each check below says what to look at and which SEF file defines "right". Record every result as `found` (with path, command or CI run), `missing`, or `not measured` (with why). A check that found nothing needs a positive control before it counts as clean (`controls/gates.md` G1).

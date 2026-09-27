@@ -5,6 +5,12 @@ description: Use when committing work in a repo that follows the SDLC Enterprise
 
 # Commit and PR conventions
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents committing or writing a PR description in a repo that follows SEF
+**Review by**: 2026-12-26
+
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). This skill matches SEF version 7. The repo's own `CONTRIBUTING.md`, `AGENTS.md` or hooks win where they are stricter.
 
 ## Steps

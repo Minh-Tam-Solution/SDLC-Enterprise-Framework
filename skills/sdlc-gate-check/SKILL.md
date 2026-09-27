@@ -5,6 +5,12 @@ description: Use before asking someone to pass a stage gate (G0.1, G0.2, G1, G2,
 
 # Stage gate readiness
 
+**SDLC Framework Version**: 7.0.0
+**Status**: ACTIVE
+**Owner**: @dttai71
+**Consumer**: agents checking stage-gate readiness; the person who signs the gate
+**Review by**: 2026-12-26
+
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). No SEF ⇒ stop with `insufficient_evidence`. This skill matches SEF version 7.
 
 A stage gate is a decision point: passed when its evidence exists and, where the tier requires it, the right person has signed (`core/lifecycle.md`). Gate scripts are a different thing (`controls/gates.md`); step 5 covers how to read them.
