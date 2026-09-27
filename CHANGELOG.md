@@ -61,7 +61,7 @@ history remain readable.
 | Consumers | pinned SHAs keep working; re-pins use the new paths, e.g. `controls/risk-floor-paths.md` (was `v7/risk-floor-paths.md`) |
 | Shims removed early | `05-Templates-Tools/07-Scripts/kiem-luat-v7.sh` and `kiem-nghiem-phien-ban.sh` (announced for removal 2026-12-31) are removed: no CI, script or repo calls them; call `scripts/check-rules-v7.sh` and `scripts/check-version-declared.sh`. No file name outside `archive/` is in Vietnamese |
 
-## Version 7.0.0-alpha — 2026-09-25 (third generation: v6.x archived, core rewritten)
+## Version 7.0.0-alpha — 2026-09-25 (second generation: v6.x archived, core rewritten)
 
 | Change | Detail |
 |---|---|
