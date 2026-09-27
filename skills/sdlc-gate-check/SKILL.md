@@ -37,7 +37,7 @@ Every value this check needs — gate ids, stages, evidence items, exit codes, s
    - a green or a "0 found" that fails the conditions of `controls/gates.md` "G1–G4" ⇒ "not measured";
    - read exit codes and CI check-runs, never an agent's text about whether something passed (`controls/gates.md` "Hooks nudge; CI enforces").
 6. **Who signs.** Read the row for the tier in `core/lifecycle.md` "Who signs a stage gate", and check anyone named against `controls/gates.md` "Approver independence".
-7. **Report** and stop. The person named in step 6 decides.
+7. **Report**, with the SEF revision you read (tag or SHA, from "Find SEF"), and stop. The person named in step 6 decides.
 
 ## Output
 

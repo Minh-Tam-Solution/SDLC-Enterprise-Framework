@@ -26,11 +26,11 @@ What a sprint is — its length, its file, its owner, where history and backlog 
    |---|---|
    | Who uses it, and what breaks without it? | `core/constitution.md` "Demand before surface" |
    | How strong is the demand evidence? Label it with that section's scale. | `core/design-thinking.md` "Weigh evidence by strength" |
-   | Which assumptions would kill it if false; the test and success criterion for each? | `core/design-thinking.md` "Test the riskiest assumptions" |
+   | New product or feature work only: which assumptions would kill it if false; the test and success criterion for each? | `core/design-thinking.md` "Test the riskiest assumptions" |
    | What are its kill criteria? | `core/design-thinking.md` "Write kill criteria in numbers before building" · `adoption/adoption.md` "Kill criteria" |
    | Is it small enough? Split it if not. | `standards/change-and-deployment.md` "Small changes, short branches" |
    | Which stage question does it answer; how are its acceptance criteria written? | `core/lifecycle.md` "Ten stages" · `standards/testing.md` "Tests prove requirements" |
-   | Which controls does it need? | `controls/tiers.md` "Two axes" · `controls/risk-floor-paths.md` |
+   | Which controls does it need? | `controls/tiers.md` "Two axes" · `controls/risk-floor-paths.md` "Rule" |
 
 5. **Governance vs product.** Count governance items (rules, gates, docs, rituals) against product items, and read `core/systems-thinking.md` "Measures get gamed". Name the consumer of each governance item or drop it.
 6. **Write the plan** with the sections of `templates/project/current-sprint.md`, as they are in the template. Backlog stays where `standards/project-structure.md` "Planning files" puts it, linked.

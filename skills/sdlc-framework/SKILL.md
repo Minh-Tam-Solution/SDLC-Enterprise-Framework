@@ -30,7 +30,7 @@ SEF is the repository `github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework`. 
 | What a rule is; the fields of a register row; rule vs reference | `controls/rule-contract.md` §1 · `controls/rule-contract.md` "Rule register" |
 | The rule classes, and which of them may block | `controls/rule-contract.md` §2 |
 | The tiers, and how a repo's tier is derived and declared | `controls/tiers.md` "Definitions" · `controls/tiers.md` "Derivation" |
-| How much control one change needs (repo tier vs the diff's harm) | `controls/tiers.md` "Two axes" · `controls/risk-floor-paths.md` |
+| How much control one change needs (repo tier vs the diff's harm) | `controls/tiers.md` "Two axes" · `controls/risk-floor-paths.md` "Rule" |
 | What each tier requires: gates, agent autonomy, independent review, ritual | `controls/tiers.md` "Per-tier controls" |
 | The stages, the question each answers, and the stage gates | `core/lifecycle.md` "Ten stages" |
 | What a stage must show to exit | `core/lifecycle.md` "Exit evidence per stage" |
@@ -49,15 +49,15 @@ SEF is the repository `github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework`. 
 | Agent context files, hats, the reviewer and its verdict | `ai-engineering/context-and-hats.md` |
 | Whether an older (first-generation) idea still applies | `README.md` "What the framework is" · `MIGRATION-MAP.md` "Map" |
 
-A row that does not answer the question means SEF is silent there or the table is out of date: search the live tree (`git grep -n -i '<term>' -- ':!archive'`) before saying SEF is silent.
+A row that does not answer the question means SEF is silent there or the table is out of date: search the live tree (`git grep -n -i '<term>' -- ':!archive' ':!skills'`) before saying SEF is silent.
 
 ## What SEF no longer has
 
 Whether a first-generation concept is current is decided by SEF at the revision you read, not by this skill. For each term:
 
-1. `git grep -n -i '<term>' -- migration-map/ ':!archive'` in SEF. A row that names it under "Retired concepts" ⇒ retired; take its successor from the same row's "Live successor".
-2. No row, and no hit in the live tree outside `archive/` ⇒ not current (`README.md` "What the framework is" says which ideas apply).
-3. Never teach it as current; name the successor, or say there is none.
+1. `git grep -n -i '<term>' -- migration-map/` in SEF. A row that names it under "Retired concepts" ⇒ retired; quote what that cell says about it (why, and what was kept). The row's "Live successor" is where the source's surviving claims went, not a replacement for this concept.
+2. No row, and no hit in the live tree (`git grep -n -i '<term>' -- ':!archive' ':!skills'`; the skills name these terms themselves) ⇒ not current (`README.md` "What the framework is" says which ideas apply).
+3. Never teach it as current. Point to the live section that now covers the topic only when the row or the live file says so; otherwise say there is none.
 
 Search terms that mark a first-generation repo (names used by the archived v6 framework; the list carries no status): Vibecoding Index · 7 pillars · Merge-Readiness Package (MRP) · G-Sprint · zero-mock · coverage quotas per tier · tiers by team size · 10 golden rules · nine mental models · 3-ring architecture · SASE artifacts.
 
