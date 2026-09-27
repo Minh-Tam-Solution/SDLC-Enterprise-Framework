@@ -47,6 +47,24 @@ Before any rename or move, search the known consuming repositories for the old p
 - Agents do not read `archive/` unless the person asks for history. Archived text in an agent's context competes with the live rules and loses nothing when absent.
 - Live documents do not link into `archive/` for rules. To reuse an archived idea, harvest the claim into the live document that owns the topic and record the row.
 
+## Releases
+
+The framework is versioned with semantic versioning. A version number means something only once the public interface is named. **The interface is what a consumer can break on:** live file paths; headings that skills or consumers cite (a heading is a link anchor); rule ids and the rule-register heading; script names, flags, exit codes and result labels; workflow file names; the header fields.
+
+| Bump | When |
+|---|---|
+| MAJOR | an interface item is removed, or renamed without the old name still working; a rule's meaning changes so that a repo which passed now fails |
+| MINOR | something is added; an item is deprecated while its old name still works (see [Transitions](#transitions)) |
+| PATCH | wording and fixes that change nothing a consumer reads by path or runs |
+
+- **Deprecate in a MINOR, remove in a later MAJOR.** A pre-release (`-alpha`, `-beta`) makes no compatibility promise; its changelog still says what moved.
+- **A rule promoted on its announced deadline is MINOR.** When an `ADVISORY` rule's counter and deadline (G4 in [`rule-contract`](../controls/rule-contract.md)) were already in a released version, promoting it to `REVIEW` or `MACHINE` on that deadline is the announced change, not a break. A rule that starts failing repos without that notice in a prior release is MAJOR.
+- **A released tag is never moved or rewritten.** A fix is a new version.
+- **"No breaking changes" is a claim the path-map check tests.** A live path removed or renamed without a working old name is breaking, however small the edit.
+  *Burn case: a release note stated "Breaking changes: none" and, in the same release, renamed three top-level folders, with a step telling every consumer to update their references by hand.*
+- **Knowledge is kept by harvesting claims, not by keeping files** ([`MIGRATION-MAP.md`](../MIGRATION-MAP.md) rules). v6 grew under "enhance, never replace; preserve all content" to 189 live documents nobody could vouch for, and the next major archived all of them. A new rule still needs a burn case ([`lessons-to-rules`](../practices/lessons-to-rules.md)).
+- **The changelog is written for people.** An `Unreleased` section is promoted at release; each entry says what changed and what a consumer must do. A deprecation, a removal or a security fix says so in its first words. A list of commits is not a changelog.
+
 ## Review
 
 `Review by` is a date, not a decoration. When it passes, gate DOC-2 turns the document red. The owner re-checks the content, then either moves the date (content still true), rewrites (content changed), or changes the status (content replaced). Never move every date at once: a bulk bump is a review that did not happen.
@@ -55,3 +73,12 @@ Before any rename or move, search the known consuming repositories for the old p
 
 - **Broken internal links.** Checked by hand at every move so far (2026-09-26: relative links resolved, two example placeholders excepted). Candidate rule: a link checker over live documents, entering at `ADVISORY` through [`practices/lessons-to-rules.md`](../practices/lessons-to-rules.md).
 - **Signed release tags.** Release tags are annotated tags on a merge commit; they are not GPG-signed today.
+
+## Sources
+
+From the archive: the rows for this policy in [`migration-map/controls-and-policies.md`](../migration-map/controls-and-policies.md).
+
+Current practice, each opened on the date shown:
+
+- Semantic Versioning 2.0.0 (declare a public API; deprecate in a minor release before removing in a major; a released version is never modified; a pre-release may not satisfy compatibility) — <https://semver.org/> (accessed 2026-09-27)
+- Keep a Changelog 1.1.0 (for humans, not machines; an `Unreleased` section; deprecated, removed and security changes named; commit-log diffs are noise) — <https://keepachangelog.com/en/1.1.0/> (accessed 2026-09-27)

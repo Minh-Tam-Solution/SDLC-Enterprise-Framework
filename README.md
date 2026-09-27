@@ -101,7 +101,7 @@ Reading order:
 | building or consuming an API, event or shared data | integration-and-data → testing → change-and-deployment |
 | handing work over, escalating, or recording a decision | collaboration → context-and-hats |
 | writing or switching on a gate | rule-contract → gates → risk-floor-paths |
-| renaming, moving or retiring anything here | artifact-lifecycle |
+| renaming, moving or retiring anything here, or cutting a release | artifact-lifecycle |
 | writing `AGENTS.md` or a hat | context-and-hats |
 | closing an incident | lessons-to-rules |
 
