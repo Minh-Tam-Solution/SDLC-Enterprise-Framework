@@ -16,7 +16,7 @@ Sized for a team of one to a few people, often with agents. What the framework d
 ## Hand-over
 
 - **State, not history:** done (with evidence — commit, PR, CI run), open, blockers, decisions each with its source, known concerns, next action. The list is the Tier 3 artifact; use it for people too.
-- **Written where the receiver reads it** — the repository, the PR or the issue. A private chat or one machine's agent folder is not a hand-over, and neither is work that exists only on one machine: unpushed commits, a local branch.
+- **Written where the receiver reads it** — the repository, the PR or the issue. A private chat or one machine's agent folder is not a hand-over, and neither is work that exists only on one machine: unpushed commits or a local-only branch.
 - **A hand-over is finished when the receiver confirms it,** not when the sender sends it. Until the receiver says "I have it", the sender still owns the work. A structured hand-over with the receiver reading back the essentials is one of the few collaboration practices with measured outcomes.
 - **The receiver re-checks before acting.** A hand-over is a claim, not evidence: re-read the files it names and re-run its check. If the branch moved since the checkpoint, diff the checkpoint against the current state first.
 - **After acceptance the receiver owns the ending** — one of the four statuses below.
