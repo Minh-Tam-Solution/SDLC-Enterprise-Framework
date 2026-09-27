@@ -51,7 +51,7 @@ Agents make building cheap: a working prototype costs hours. The scarce thing is
 ## Test with real users
 
 - **Real, representative users in their real context,** including the hard conditions: old devices, poor network, interruptions. Not the team, not friendly proxies.
-- **About five users per round finds most usability problems;** run several small rounds between iterations rather than one large study. Use three or four per group when users differ, and around twenty when you need numbers.
+- **For formative usability tests, about five comparable users per round finds most usability problems** — a heuristic for finding problems to fix between iterations, not a sampling rule for any study. Run several small rounds rather than one large study. Use three or four per group when users differ; measuring (success rates, times, comparisons) needs around twenty, and other methods have their own sizes.
 - **Facilitate, do not help:** give the task without explaining how, ask the user to think aloud, tolerate silence.
 - **Read feedback by what it means.** "I could not do it" outranks "I would like it different". One showstopper blocks shipping, however positive the rest.
 
@@ -75,5 +75,5 @@ Current practice, each opened on the date shown:
 - HBS Working Knowledge — Clay Christensen's Milkshake Marketing — <https://www.library.hbs.edu/working-knowledge/clay-christensens-milkshake-marketing> (accessed 2026-09-26)
 - Design Council — The Double Diamond — <https://www.designcouncil.org.uk/our-resources/the-double-diamond/> (accessed 2026-09-26)
 - Jakob Nielsen — First Rule of Usability? Don't Listen to Users — <https://www.nngroup.com/articles/first-rule-of-usability-dont-listen-to-users/> (accessed 2026-09-26)
-- Jakob Nielsen — Why You Only Need to Test with 5 Users — <https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/> (accessed 2026-09-26)
+- Jakob Nielsen — Why You Only Need to Test with 5 Users — <https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/> (accessed 2026-09-27)
 - Itamar Gilad — Product Discovery With ICE and The Confidence Meter — <https://itamargilad.com/the-tool-that-will-help-you-choose-better-product-ideas/> (accessed 2026-09-26)
