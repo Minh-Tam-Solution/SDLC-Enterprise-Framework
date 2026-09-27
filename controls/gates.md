@@ -61,6 +61,7 @@ One line each. Scripts are in [`scripts/`](../scripts/); a "pattern" row describ
 | migration class | PRODUCT_CI | each migration classified none, expand, unknown or contract from its statements (unrecognised ⇒ unknown); a label that says expand on a contract is counted | `scripts/check-migration-class.sh` |
 | no swallowed stderr | FRAMEWORK_REPO | no error redirect to null in gate scripts without a dated exemption | `scripts/rule-no-swallowed-stderr.sh` |
 | no version in names | FRAMEWORK_REPO | no version number in a live file or folder name, or in a Markdown heading (anchor); counts, does not block | `scripts/rule-no-version-in-names.sh` |
+| skill citations | FRAMEWORK_REPO | every SEF path, section and link cited under `skills/` exists in the same commit; each skill folder has a `SKILL.md` whose `name` is the folder name and whose `description` is not empty; counts, does not block | `scripts/check-skill-citations.sh` |
 | doc ownership | FRAMEWORK_REPO | every live doc names an Owner, a Consumer and a Review-by date that has not passed; blocks | `scripts/check-doc-ownership.sh` |
 | doc count | FRAMEWORK_REPO | live docs outside `archive/` and `templates/`: >40 advisory; no hard ceiling (a count is a smell, ownership is the gate) | `scripts/check-doc-count.sh` |
 | PR approver | PRODUCT_CI | approver login ≠ author and ≠ the author's operator, listed in `.approvers`, approval on the current head SHA | `scripts/check-pr-approver.sh` |

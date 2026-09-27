@@ -88,6 +88,7 @@ Folders are named by what kind of document they hold. Nothing is named after a v
 | `practices/` | how to do it well | [`lessons-to-rules`](practices/lessons-to-rules.md) |
 | `templates/` | copy-and-edit files: agent context, project docs | [`templates/`](templates/README.md) |
 | `scripts/` | gate scripts, each with `--selftest` | [`scripts/`](scripts/README.md) |
+| `skills/` | agent skills that point to the files here; non-normative, the cited file is the authority | [`skills/`](skills/README.md) |
 | `archive/` | v6.x and earlier, read-only; where each old document went: [`MIGRATION-MAP.md`](MIGRATION-MAP.md), rows in [`migration-map/`](migration-map/) by live area | — |
 
 Reading order:
