@@ -44,10 +44,13 @@ Every task — a person's or an agent's — ends in exactly one of four statuses
 ## Decisions
 
 - **A decision that is expensive to reverse is recorded before the work,** as an ADR: context, decision, consequences, alternatives rejected ([`documentation.md`](documentation.md)). Written after the code, it is a story, not a decision.
+- **What earns an ADR:** a choice that shapes the structure, a dependency between parts, an interface others consume, a quality such as security or availability, or how the system is built (framework, library, tool). A choice inside existing boundaries — an endpoint that follows the pattern, a bug fix, an internal refactor — does not. One decision per ADR, one or two pages; the technical detail goes in a spec that links it.
+- **An ADR written after the change says so** and carries the date it was written; it is still worth writing, but it approved nothing. **Review reads the diff against the accepted ADRs:** a change that breaks one is fixed, or a new ADR supersedes the old one first.
 - **One decision log** (`docs/09-govern/`, or where `AGENTS.md` says). A chat message becomes a decision when it is copied there with a link; there is no second ledger.
 - **A decision names who decided, when, and where** (a link to the PR, issue or message). "The owner decided X", carried over from another session without that source, is a proposal.
 - **A replaced decision stays,** marked superseded with a link to its successor. It is never rewritten.
 - **The answer to a `NEEDS_DECISION`** is a decision record when it binds future work, and a line in the PR or issue when it does not.
+- **Not kept from v6:** ADR review by two named job titles within 48 hours (signing follows the tier, [`lifecycle`](../core/lifecycle.md#who-signs-a-stage-gate)); the context file as the home of the version, sprint history and test count (state is written once, [`documentation.md`](documentation.md#one-home-per-fact)); "shipped" meaning pushed to the main branch with a passing build (merging is the stage 04 exit; shipped is a deploy, stage gate G4 in [`lifecycle`](../core/lifecycle.md#ten-stages-one-question-each)).
 
 ## Roles for one to a few people
 
@@ -78,7 +81,9 @@ Current practice, each opened on the date shown:
 
 - Google SRE Book — Managing Incidents (explicit hand-over of command, clear roles) — <https://sre.google/sre-book/managing-incidents/> (accessed 2026-09-26)
 - AHRQ PSNet — Changes in medical errors after implementation of a handoff program (structured hand-over; 23% relative reduction in preventable adverse events) — <https://psnet.ahrq.gov/issue/changes-medical-errors-after-implementation-handoff-program> (accessed 2026-09-26)
-- Michael Nygard — Documenting Architecture Decisions — <https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions> (accessed 2026-09-26)
+- Michael Nygard — Documenting Architecture Decisions (architecturally significant decisions affect structure, non-functional characteristics, dependencies, interfaces or construction techniques; one or two pages; a reversed decision is marked superseded) — <https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions> (accessed 2026-09-28)
+- AWS Prescriptive Guidance — Architectural decision record process (an ADR for every architecturally significant decision; accepted ADRs are immutable, a new ADR supersedes; code reviewers check changes against the ADRs and link the one a change violates) — <https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html> (accessed 2026-09-28)
+- Hassan et al. — Agentic Software Engineering: Foundational Pillars and a Research Roadmap, arXiv 2509.06216v2 (SASE is Structured Agentic Software Engineering; an agent that needs human input raises a Consultation Request Pack; work is submitted as a Merge-Readiness Pack; how much process the agent follows is set by the coach per task) — <https://arxiv.org/abs/2509.06216> (accessed 2026-09-28)
 - Anthropic — Building Effective AI Agents (pause at checkpoints or blockers; stopping conditions) — <https://www.anthropic.com/engineering/building-effective-agents> (accessed 2026-09-26)
 - Anthropic — Effective harnesses for long-running agents (progress file, structured updates between sessions) — <https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents> (accessed 2026-09-26)
 - Team Topologies — Key Concepts (cognitive load) — <https://teamtopologies.com/key-concepts> (accessed 2026-09-26)
