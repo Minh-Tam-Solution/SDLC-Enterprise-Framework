@@ -66,7 +66,7 @@ Classification: a file under a `01-ADRs/` folder, or with an `adr_id` field, is 
 | `related_adrs`, `related_specs` | optional | optional | lists of ids |
 | `supersedes` / `superseded_by` | optional | required when status is `superseded` | id |
 
-Spec body sections, in order: overview (with what is out of scope) · context · requirements (with acceptance criteria) · design decisions (link ADRs, do not copy them) · technical specification · dependencies · open questions. ADR body: context · decision · consequences · alternatives rejected, with reasons.
+Spec body sections, in this order when present (a short spec omits some, see [Writing a spec](#writing-a-spec)): overview (with what is out of scope) · context · requirements (with acceptance criteria) · design decisions (link ADRs, do not copy them) · technical specification · dependencies · open questions. ADR body: context · decision · consequences · alternatives rejected, with reasons.
 
 ## Writing a spec
 
