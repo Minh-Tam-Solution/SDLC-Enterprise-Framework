@@ -1,6 +1,6 @@
 ---
 name: sdlc-gate-check
-description: Use before asking someone to pass a stage gate (G0.1, G0.2, G1, G2, G3, G4), when asked "are we ready to move on?", or when a gate script's result needs reading. Finds the exit evidence the repo's tier requires for that gate, says who must sign, and reads gate script exit codes and result lines. It never signs or approves.
+description: Use before asking someone to pass a stage gate (a decision point of the SEF lifecycle), when asked "are we ready to move on?", or when a gate script's result needs reading. Finds the exit evidence the repo's tier requires for that gate, says who must sign, and reads gate script exit codes and result lines. It never signs or approves.
 ---
 
 # Stage gate readiness
@@ -13,31 +13,40 @@ description: Use before asking someone to pass a stage gate (G0.1, G0.2, G1, G2,
 
 Paths are relative to the SEF root; find it with the `sdlc-framework` skill ("Find SEF"). No SEF ⇒ stop with `insufficient_evidence`. This skill matches SEF version 7.
 
-A stage gate is a decision point: passed when its evidence exists and, where the tier requires it, the right person has signed (`core/lifecycle.md`). Gate scripts are a different thing (`controls/gates.md`); step 5 covers how to read them.
+Every value this check needs — gate ids, stages, evidence items, exit codes, signers — is read from SEF at run time, from these places:
+
+| The step needs | Read |
+|---|---|
+| which stages a gate covers; what a stage gate is | `core/lifecycle.md` "Ten stages" |
+| how evidence derives a tier | `controls/tiers.md` "Derivation" |
+| whether the tier must cover a stage | `core/lifecycle.md` "Which stages each tier must cover" |
+| the exit evidence per stage and tier | `core/lifecycle.md` "Exit evidence per stage" |
+| exit codes and the result line of a gate script | `controls/rule-contract.md` §1 |
+| when a script's green or "0 found" counts | `controls/gates.md` "G1–G4" |
+| who signs, and whose signature is independent | `core/lifecycle.md` "Who signs a stage gate" · `controls/gates.md` "Approver independence" |
 
 ## Steps
 
-1. **Gate.** Take it from the arguments; none ⇒ ask. Map it to its stages with the table in `core/lifecycle.md` "Ten stages": G0.1/G0.2 → 00 · G1 → 01 · G2 → 02 + 03 · G3 → 04 + 05 · G4 → 06 + 07 (and 09 from G4 on). There is no sprint gate.
-2. **Tier.** Read the repo's declared tier (policy repo `projects.yaml`, or the repo's own declaration) and check it against evidence per `controls/tiers.md` "Derivation" (a `migrations/` folder, a risk-floor path, money/payroll/PII path segments). Declared below derived ⇒ report it; use the derived tier. Evidence only gives a floor (declare up only). No declaration and no evidence ⇒ "tier not measured" and readiness `insufficient_evidence` — never assume the lowest tier.
-3. **Is the stage required?** `core/lifecycle.md` "Which stages each tier must cover". Optional and absent ⇒ note it, nothing to check.
-4. **Evidence.** For each stage of the gate, take the "Minimum to exit" row, plus "PROFESSIONAL+ adds" for PROFESSIONAL and ENTERPRISE (`core/lifecycle.md` "Exit evidence per stage"). For each item find the thing that answers it — a doc, README section, issue, ADR, PR, CI run or deploy record — and give its path or link. Evidence need not be a document. A stated negative ("no integrations", with a date, in README or `AGENTS.md`) counts; silence does not.
-5. **Machine evidence.** Where a script can check an item, run it (or read its CI run on the exact head SHA) and read it per the gate contract (`controls/rule-contract.md` §1):
-   - exit `0` pass · `1` cannot measure · `2` violation · `≥3` reserved, read as cannot measure;
-   - the last stdout line must be `result=… gate=… reason=… [fix=…]` and agree with the exit code, else the gate is mis-declared;
-   - the cause of a failure is the last line of stderr — keep it, never `2>/dev/null` a command whose result becomes evidence;
-   - a gate with no `--selftest` red case, or a "0 found" with no positive control, is "not measured", not green (`controls/gates.md` G1, G3);
+1. **Gate.** Take it from the arguments; none ⇒ ask. Find its stages in the "Stage gate" column of `core/lifecycle.md` "Ten stages". A gate id that column does not name does not exist in SEF: say so and stop.
+2. **Tier.** Read the repo's declared tier (policy repo `projects.yaml`, or the repo's own declaration). Look for each signal listed in `controls/tiers.md` "Derivation" and derive the tier as that section says. Declared below derived ⇒ report it and use the derived tier. No declaration and no evidence ⇒ "tier not measured" and readiness `insufficient_evidence` — never assume the lowest tier.
+3. **Is the stage required?** Look up tier × stage in `core/lifecycle.md` "Which stages each tier must cover". Not required and absent ⇒ note it, nothing to check.
+4. **Evidence.** For each stage of the gate, list every item `core/lifecycle.md` "Exit evidence per stage" requires at this tier (the section says which columns apply to which tier). For each item find what answers it and give its path or link. What counts as evidence, and when a stated negative counts, is in the same file: `core/lifecycle.md` "Negative evidence is still evidence".
+5. **Machine evidence.** Where a script can check an item, run it, or read its CI run on the exact head SHA. Read the result against `controls/rule-contract.md` §1 — take the exit-code meanings and the result-line format from there, not from memory:
+   - a result line that is missing or disagrees with the exit code ⇒ report the gate as mis-declared;
+   - keep the last line of stderr in the report; never discard stderr of a command whose result becomes evidence;
+   - a green or a "0 found" that fails the conditions of `controls/gates.md` "G1–G4" ⇒ "not measured";
    - read exit codes and CI check-runs, never an agent's text about whether something passed (`controls/gates.md` "Hooks nudge; CI enforces").
-6. **Who signs.** `core/lifecycle.md` "Who signs a stage gate": LITE — author records the exit in the sprint file · STANDARD — the author records the exit; the PR is the record · PROFESSIONAL — a fresh-context AI review artifact bound to the commit (`controls/tiers.md`), content reviewed by a human when flagged · ENTERPRISE — plus a named human who is not the author signs G2 and G4. Approver independence: not the author and not the person operating the author's agent (`controls/gates.md` "Approver independence").
-7. **Report** and stop. The person named in step 6 decides.
+6. **Who signs.** Read the row for the tier in `core/lifecycle.md` "Who signs a stage gate", and check anyone named against `controls/gates.md` "Approver independence".
+7. **Report**, with the SEF revision you read (tag or SHA, from "Find SEF"), and stop. The person named in step 6 decides.
 
 ## Output
 
 ```text
-Gate <id> — stages <nn[,nn]> — tier <TIER> (declared <x>, derived <y>)
+Gate <id> — stages <nn[,nn]> — tier <TIER> (declared <x>, derived <y>) — SEF <revision>
 [found]    <evidence item> — <path | PR | CI run>
 [missing]  <evidence item> — <what would answer it>
-[not measured] <item> — <why: no positive control / script exit 1 / tool missing>
-Signs: <who, per tier>
+[not measured] <item> — <why: no positive control / script could not measure / tool missing>
+Signs: <who, per the SEF row read in step 6>
 Readiness: ready | not_ready | insufficient_evidence
 ```
 
@@ -45,6 +54,6 @@ Readiness: ready | not_ready | insufficient_evidence
 
 ## Rules
 
-- Evidence depth follows the tier and the change, not habit: a change re-opens only the stages it can affect (`core/lifecycle.md` "Ten stages"); controls are proportional to risk (`core/constitution.md` principles).
-- A gate can be re-opened; record the move in the sprint file, do not rewrite the earlier exit (`core/lifecycle.md` "Moving back is normal").
+- Check only the stages the change can affect; which ones those are is in `core/lifecycle.md` "Ten stages".
+- A re-opened gate follows `core/lifecycle.md` "Moving back is normal"; do not rewrite the earlier exit.
 - Never approve, never sign, never mark a gate passed. Never lower a tier to make evidence fit.

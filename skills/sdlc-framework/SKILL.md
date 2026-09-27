@@ -1,9 +1,9 @@
 ---
 name: sdlc-framework
-description: Use when someone asks what the SDLC Enterprise Framework (SEF) requires, which tier a repo is, what a stage or stage gate needs, how a gate script must behave, or where a rule lives in SEF — and before answering any SDLC question from memory. Gives the SEF model in one page with the SEF file that holds each claim. The other sdlc-* skills rely on its "Find SEF" section.
+description: Use when someone asks what the SDLC Enterprise Framework (SEF) requires, which tier a repo is, what a stage or stage gate needs, how a gate script must behave, or where a rule lives in SEF — and before answering any SDLC question from memory. Routes each kind of question to the SEF file and section that answers it; the answer is read there, not here. The other sdlc-* skills rely on its "Find SEF" section.
 ---
 
-# SDLC Enterprise Framework — the model in one page
+# SDLC Enterprise Framework — where each answer lives
 
 **SDLC Framework Version**: 7.0.0
 **Status**: ACTIVE
@@ -11,7 +11,7 @@ description: Use when someone asks what the SDLC Enterprise Framework (SEF) requ
 **Consumer**: agents answering a question about SEF; the other sdlc-* skills, through "Find SEF"
 **Review by**: 2026-12-26
 
-This skill matches SEF version 7, the second generation: rebuilt, not upgraded. Older ideas apply only if `MIGRATION-MAP.md` gives them a row with a live successor.
+This skill matches SEF version 7. It holds pointers, not rules: every count, name, threshold and exit code is read from the SEF file at the time of the question ([`skills/README.md`](../README.md#what-these-are)).
 
 ## Find SEF
 
@@ -22,32 +22,47 @@ SEF is the repository `github.com/Minh-Tam-Solution/SDLC-Enterprise-Framework`. 
 3. None reachable ⇒ say so and stop with `insufficient_evidence`. Do not answer from memory: the rules below are pointers, the SEF file is the source.
 4. SEF is read-only for these skills. A change to SEF, these skills included, goes through its own `CONTRIBUTING.md`.
 
-## The model, each claim with its home
+## Where each answer lives
 
-| Claim | SEF file |
+| Question | Read |
 |---|---|
-| You own four assets: policy, repo knowledge, runnable gates, eval set. Everything else (agents, models, skills, hooks, CI runners) is rented. | `core/constitution.md` · `README.md` |
-| Rules sit in three classes: `MACHINE` (deterministic, blocks), `REVIEW` (named reviewer judges fixed evidence, flags), `ADVISORY` (counted, with a deadline). A model is never `MACHINE`. | `controls/rule-contract.md` §2 |
-| A rule is a register row with `class`, `cmd`, `burn_case`, `run_scope`. No runnable command ⇒ reference, not a rule. One register only. | `controls/rule-contract.md` §1, "Rule register" |
-| Tier comes from the risk of the artefact, not team size: LITE · STANDARD · PROFESSIONAL · ENTERPRISE, derived as max(repo evidence, declared metadata, deploy evidence); declare up only. | `controls/tiers.md` |
-| `effective_control = max(service_tier, change_harm)`; the diff's harm comes from risk-floor paths and data classes. | `controls/tiers.md` "Two axes" · `controls/risk-floor-paths.md` |
-| Ten stages 00–09, one question each; stage gates G0.1, G0.2, G1, G2, G3, G4 are decision points with evidence; who signs follows the tier. | `core/lifecycle.md` |
-| Gate contract: exit `0` pass · `1` cannot measure · `2` violation (on purpose) · `≥3` reserved (read as cannot measure); last stdout line `result=… gate=… reason=… [fix=…]`; every gate ships `--selftest` with a red and a green case. | `controls/rule-contract.md` §1 · `controls/gates.md` |
-| Gates climb ADVISORY → REVIEW → MACHINE on measured rates (upper Wilson bound); entering at MACHINE directly only under the two named cases. | `controls/gates.md` "The ladder" · `controls/rule-contract.md` "Entering at MACHINE directly" |
-| Four rules about gates, also named G1–G4 (not the stage gates): a negative needs a positive control; "cannot measure" has its own output; write from the definition and make it red; ADVISORY has a counter and a deadline. | `controls/gates.md` |
-| Systems thinking and design thinking are lenses: they shape questions, never block. | `core/systems-thinking.md` · `core/design-thinking.md` |
-| Demand before surface: every artifact names its consumer and the job that breaks without it. | `core/constitution.md` |
-| Incidents become rules through one path: burn case → row → ADVISORY → REVIEW → MACHINE. | `practices/lessons-to-rules.md` |
-| Adoption: one policy repo, generated adapters, reusable CI workflow; agent identity separated from the approver. | `adoption/adoption.md` |
-| What every repo follows: structure, documentation headers, testing, security and data classes, change and deployment, integration, observability, collaboration. | `standards/*.md` |
-| Agent context files, hats, fresh-context reviewer, typed verdict. | `ai-engineering/context-and-hats.md` |
+| What an adopter owns, and what is rented | `core/constitution.md` "Four assets you own" |
+| What a rule is; the fields of a register row; rule vs reference | `controls/rule-contract.md` §1 · `controls/rule-contract.md` "Rule register" |
+| The rule classes, and which of them may block | `controls/rule-contract.md` §2 |
+| The tiers, and how a repo's tier is derived and declared | `controls/tiers.md` "Definitions" · `controls/tiers.md` "Derivation" |
+| How much control one change needs (repo tier vs the diff's harm) | `controls/tiers.md` "Two axes" · `controls/risk-floor-paths.md` "Rule" |
+| What each tier requires: gates, agent autonomy, independent review, ritual | `controls/tiers.md` "Per-tier controls" |
+| The stages, the question each answers, and the stage gates | `core/lifecycle.md` "Ten stages" |
+| What a stage must show to exit | `core/lifecycle.md` "Exit evidence per stage" |
+| Which stages a tier must cover | `core/lifecycle.md` "Which stages each tier must cover" |
+| Who signs a stage gate | `core/lifecycle.md` "Who signs a stage gate" |
+| How a gate script must behave: exit codes, last line, self-test | `controls/rule-contract.md` §1 · `controls/gates.md` "Contract" |
+| When a gate may block, and on what measured rate it climbs | `controls/gates.md` "The ladder" · `controls/rule-contract.md` "Entering at MACHINE directly" |
+| What a gate needs before its result counts (these are not the stage gates) | `controls/gates.md` "G1–G4" |
+| Whose approval counts | `controls/gates.md` "Approver independence" · `adoption/adoption.md` "Agent identity" |
+| How a repo adopts SEF: policy repo, adapters, pinning, CI | `adoption/adoption.md` "Policy repo pattern" |
+| How an incident becomes a rule | `practices/lessons-to-rules.md` "The path" |
+| Whether an artifact should exist at all | `core/constitution.md` "Demand before surface" |
+| What SEF will not build | `core/constitution.md` "What the framework does NOT build" |
+| Whether systems or design thinking can block | `core/systems-thinking.md` · `core/design-thinking.md` |
+| An engineering standard on one topic (testing, security, data classes, deploys …) | the file named for it in `standards/` — list the folder, do not guess |
+| Agent context files, hats, the reviewer and its verdict | `ai-engineering/context-and-hats.md` |
+| Whether an older (first-generation) idea still applies | `README.md` "What the framework is" · `MIGRATION-MAP.md` "Map" |
+
+A row that does not answer the question means SEF is silent there or the table is out of date: search the live tree (`git grep -n -i '<term>' -- ':!archive' ':!skills'`) before saying SEF is silent.
 
 ## What SEF no longer has
 
-Do not teach these as current; each is retired in `MIGRATION-MAP.md` or absent from the live tree: Vibecoding Index · 7 pillars · Merge-Readiness Package (MRP) · sprint gates (G-Sprint) · absolute zero-mock · coverage quotas per tier · tiers by team size · "10 golden rules" of sprint planning · the nine mental models as a canon · 3-ring architecture. Their surviving ideas: gates + rule register + independent review (`controls/`), real-over-fake testing (`standards/testing.md`), demand before surface (`core/constitution.md`).
+Whether a first-generation concept is current is decided by SEF at the revision you read, not by this skill. For each term:
+
+1. `git grep -n -i '<term>' -- migration-map/` in SEF. A row that names it under "Retired concepts" ⇒ retired; quote what that cell says about it (why, and what was kept). The row's "Live successor" is where the source's surviving claims went, not a replacement for this concept.
+2. No row, and no hit in the live tree (`git grep -n -i '<term>' -- ':!archive' ':!skills'`; the skills name these terms themselves) ⇒ not current (`README.md` "What the framework is" says which ideas apply).
+3. Never teach it as current. Point to the live section that now covers the topic only when the row or the live file says so; otherwise say there is none.
+
+Search terms that mark a first-generation repo (names used by the archived v6 framework; the list carries no status): Vibecoding Index · 7 pillars · Merge-Readiness Package (MRP) · G-Sprint · zero-mock · coverage quotas per tier · tiers by team size · 10 golden rules · nine mental models · 3-ring architecture · SASE artifacts.
 
 ## How to answer
 
-1. Find SEF. Read the file named in the table for the question; quote the section, give the path.
+1. Find SEF. Read the file named in the table for the question; quote the section, give the path and the revision.
 2. If the question is about a repo, find its tier first (`sdlc-audit` step 2), because most answers depend on it.
-3. If SEF does not answer it, say so. Do not fill the gap with a v6 concept.
+3. If SEF does not answer it, say so. Do not fill the gap with a first-generation concept or with a value remembered from an earlier read.
