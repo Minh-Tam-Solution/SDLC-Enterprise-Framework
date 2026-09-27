@@ -76,6 +76,15 @@ Two separate axes. **Model quality** says how capable a model is; the **data cla
 - **A model lane reads a class only if the policy repo authorizes that lane for that class;** `no-ai` is authorized for no lane. A lane that meets a path it is not authorized for returns `insufficient_evidence` (`abstain_reason: restricted_data`) and hands over to a person — never a pretend review ([`controls/tiers.md`](../controls/tiers.md), model reviewer lane). Until the policy repo approves a lane for `confidential` or `restricted`, every model lane abstains on both.
 - **Agent access is enforced at the operating-system boundary, not by the tool and not by the prompt:** the agent runs as a user that cannot read `restricted` or `no-ai` paths, or those files are not on the agent's machine at all; secrets stay out of the agent's environment ([§ Secrets](#secrets)). Denying reads in the agent's permissions and hooks is a second layer only: an agent with a shell reads the same file another way.
 
+## Tools built by people who do not write code
+
+Domain experts now build working tools with low-code platforms and agents. The tool is software, and the same floor applies to it.
+
+- **The builder does not lower the control.** A tool is controlled by what it touches — risk-floor paths, data classes, money, messages leaving the team — not by who built it ([`controls/tiers.md`](../controls/tiers.md)). v6 put every such tool at the lowest tier and forbade some uses outright; here the uses are allowed and the control follows the risk.
+- **A tool runs under its own least-privilege identity,** never the builder's credentials or a shared account: otherwise every user acts as the builder and the log names the wrong person.
+- **Every tool has a named owner and a place in an inventory** with what it reads and writes. A tool whose owner left is disabled until someone takes it over; an unlisted tool is not allowed to hold production credentials.
+- **Generated output is checked, not trusted:** a tool that touches the risk floor or a `restricted` data class goes through the same review and gates as any change before it reaches production; it is tried first on data that is not production.
+
 ## Operating securely
 
 - **No personal data or secrets in logs or error responses;** always log security events ([`observability.md`](observability.md)).
@@ -96,6 +105,7 @@ Each enters through [`practices/lessons-to-rules.md`](../practices/lessons-to-ru
 | no mocks or skips in security tests | scan of auth test files, with a planted positive control |
 | threat model on risk-floor changes | a link in the PR when a risk-floor path changed |
 | data class enforced | every path an agent may read maps to a class; a planted `restricted` file and a planted `no-ai` file stay unreadable to a test agent through every route it has: the file-read tool **and** the shell |
+| tool inventory | every credential or connection that production systems grant lists a tool with a named, still-active owner |
 
 ## Sources
 
@@ -116,3 +126,7 @@ Current practice, each opened on the date shown:
 - NIST SP 800-218 — Secure Software Development Framework (SSDF) Version 1.1 — <https://csrc.nist.gov/pubs/sp/800/218/final> (accessed 2026-09-26)
 - OWASP Top 10 for LLM Applications 2025 — LLM02 Sensitive Information Disclosure — <https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/> (accessed 2026-09-26)
 - Carnegie Mellon University — Data Classification (classify by impact of disclosure; a collection takes its most restrictive element) — <https://www.cmu.edu/iso/governance/guidelines/data-classification.html> (accessed 2026-09-26)
+- OWASP Citizen Development Top 10 (formerly Low-Code/No-Code Top 10; now covers AI-assisted coding and agents built by business users) — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/index.md> (accessed 2026-09-27)
+- OWASP CD-SEC-01 Blind Trust — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/content/2022/en/CD-SEC-01-Blind-Trust.md> (accessed 2026-09-27)
+- OWASP CD-SEC-02 Account Impersonation — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/content/2022/en/CD-SEC-02-Account-Impersonation.md> (accessed 2026-09-27)
+- OWASP CD-SEC-09 Asset Management Failures — <https://github.com/OWASP/www-project-top-10-low-code-no-code-security-risks/blob/main/content/2022/en/CD-SEC-09-Asset-Management-Failures.md> (accessed 2026-09-27)

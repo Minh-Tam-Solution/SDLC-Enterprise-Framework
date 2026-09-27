@@ -66,11 +66,12 @@ One row per source, in the file for the live area the source feeds. A row goes i
 | `core/` — constitution, lifecycle, systems and design thinking | [`migration-map/core.md`](migration-map/core.md) |
 | `controls/` and `policies/` — rules, gates, artifact lifecycle; the v6 changelog | [`migration-map/controls-and-policies.md`](migration-map/controls-and-policies.md) |
 | `standards/` — every engineering standard | [`migration-map/standards.md`](migration-map/standards.md) |
+| `ai-engineering/` — working with agents | [`migration-map/ai-engineering.md`](migration-map/ai-engineering.md) |
 | `templates/` | [`migration-map/templates.md`](migration-map/templates.md) |
 
 A live document can be a later successor in a row filed elsewhere; all rows that name it: `grep -n 'standards/testing.md' migration-map/*.md` (any live path).
 
-A live area with no file yet (`ai-engineering/`, `adoption/`, `practices/`) gets one with its first row whose first successor is there; until then no source feeds it first.
+A live area with no file yet (`adoption/`, `practices/`) gets one with its first row whose first successor is there; until then no source feeds it first.
 
 Check — v6 sources that have no row yet (not reviewed):
 
@@ -84,4 +85,4 @@ A row that names its sources with a glob (`Planning-Hierarchy-*.md`) covers file
 
 ## Next to harvest
 
-Done 2026-09-26: security, testing, change and deployment, observability (four standards); systems thinking and design thinking (`core/`), ship-useful folded into the constitution. Batch 3: one home per fact (in `standards/documentation.md`), `standards/integration-and-data.md`, `standards/collaboration.md`, data classes in `standards/security.md`. Next: agent and multi-agent patterns not yet mapped (`v6/03-AI-GOVERNANCE/`), specification and planning templates, the remaining case studies.
+Done 2026-09-26: security, testing, change and deployment, observability (four standards); systems thinking and design thinking (`core/`), ship-useful folded into the constitution. Batch 3: one home per fact (in `standards/documentation.md`), `standards/integration-and-data.md`, `standards/collaboration.md`, data classes in `standards/security.md`. Batch 4 (2026-09-27): plan before code (`ai-engineering/context-and-hats.md`), who answers for an agent's work (`standards/collaboration.md`), tools built by people who do not write code (`standards/security.md`), diagrams (`standards/documentation.md`). Next: the rest of `v6/03-AI-GOVERNANCE/` (`05-Context-Management.md` is already named as replaced in `context-and-hats.md` but has no row), specification and planning templates, the continuous-improvement guide, the remaining case studies.
