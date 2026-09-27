@@ -13,9 +13,11 @@
 
 ## What these are
 
-Seven skills, one folder each: [`sdlc-framework`](sdlc-framework/SKILL.md) · [`sdlc-audit`](sdlc-audit/SKILL.md) · [`sdlc-commit`](sdlc-commit/SKILL.md) · [`sdlc-cross-review`](sdlc-cross-review/SKILL.md) · [`sdlc-framework-upgrade`](sdlc-framework-upgrade/SKILL.md) · [`sdlc-gate-check`](sdlc-gate-check/SKILL.md) · [`sdlc-sprint-plan`](sdlc-sprint-plan/SKILL.md). A skill is a `SKILL.md` with `name` and `description` front matter; an agent tool loads the description at startup and the body when the skill is used. What each one is for is in its `description`.
+One folder per skill: [`sdlc-framework`](sdlc-framework/SKILL.md) · [`sdlc-audit`](sdlc-audit/SKILL.md) · [`sdlc-commit`](sdlc-commit/SKILL.md) · [`sdlc-cross-review`](sdlc-cross-review/SKILL.md) · [`sdlc-framework-upgrade`](sdlc-framework-upgrade/SKILL.md) · [`sdlc-gate-check`](sdlc-gate-check/SKILL.md) · [`sdlc-sprint-plan`](sdlc-sprint-plan/SKILL.md). A skill is a `SKILL.md` with `name` and `description` front matter; an agent tool loads the description at startup and the body when the skill is used. What each one is for is in its `description`.
 
 They are **non-normative reference implementations** for agent tools. They may name tools (an agent CLI, `gh`); the normative folders stay vendor-neutral ([`CONTRIBUTING.md`](../CONTRIBUTING.md), "Vendor neutrality"). A skill states no rule of its own: it points to the SEF file that holds the rule, and **that file is the authority**. Where a skill and the file it cites disagree, the file wins and the skill is fixed.
+
+**Route, do not restate.** A skill owns when it is used, its procedure, what it reports and when it stops. For everything else it gives the question and the SEF file and section that answer it, and tells the agent to read the value there at run time. It does not copy values out of that file — counts, names of tiers, classes or stages, exit-code meanings, thresholds, lists of required evidence. A pointer is checked (below); a copied value is not: if SEF changes it, the copy stays green and wrong.
 
 ## Install
 
@@ -26,7 +28,7 @@ They are **non-normative reference implementations** for agent tools. They may n
 
 ## Checked
 
-[`scripts/check-skill-citations.sh`](../scripts/check-skill-citations.sh) (rule SKILL-1 in the [rule register](../controls/rule-contract.md#rule-register)): every SEF path, section and link a skill cites exists in the same commit, and every folder has a `SKILL.md` whose `name` is the folder name and whose `description` is not empty. A skill is a live document: it carries the five header fields ([`documentation`](../standards/documentation.md#header-of-a-living-document)).
+[`scripts/check-skill-citations.sh`](../scripts/check-skill-citations.sh) (rule SKILL-1 in the [rule register](../controls/rule-contract.md#rule-register)): every SEF path, section and link a skill cites exists in the same commit, and every folder has a `SKILL.md` whose `name` is the folder name and whose `description` is not empty. A skill is a live document: it carries the header fields of a living document ([`documentation`](../standards/documentation.md#header-of-a-living-document)).
 
 ## Changing a skill
 
