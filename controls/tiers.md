@@ -42,7 +42,7 @@ The old criterion — team size — is gone. One person building ENTERPRISE gets
 
 `effective_control = max(service_tier, change_harm)`
 
-- `service_tier` belongs to the repo. `change_harm` belongs to the diff: which [risk-floor](risk-floor-paths.md) or residency paths it touches.
+- `service_tier` belongs to the repo. `change_harm` belongs to the diff: which [risk-floor](risk-floor-paths.md) paths and [data classes](../standards/security.md#data-classes-and-model-access) it touches.
 - A docs-only diff in an ENTERPRISE repo is still ENTERPRISE if it touches the approvers file.
 - **Non-compensable harm** (email sent, payment captured, invoice issued): mark `non_compensable: true`. Control goes **before** the side-effect — dry-run, idempotency key, reconciliation. Rollback after the fact does not undo it.
 
@@ -53,7 +53,7 @@ The old criterion — team size — is gone. One person building ENTERPRISE gets
 | **Mandatory `MACHINE` gates** | repo tests | + generated-file drift · provenance if deployed | + tier floor · deploy-tree harness · provenance probe · deadline ledger | + timed rollback · deploy log · money-path probe (shadow first) |
 | **Agent autonomy** | build, merge, deploy | build, merge, deploy; the PR is a record, 0 approvals | merge any diff; auto-deploy when gates are green | as PRO outside the risk floor; a diff touching it merges freely but **deploys only from an approved tag** |
 | **"Independent" means** | — | a fresh-context AI review, recorded, not counted | a fresh-context AI review artifact bound to `commit_sha` + `diff_hash`; presence and binding are `MACHINE`, content is `REVIEW` | + a human ≠ author approves the deploy tag on the exact SHA, bound to the artifact digest |
-| **Bounded price** | nothing leaves the author's machine; residency paths still apply | ≤1 person-day of rework; with a database, one timed restore before the first deploy | internal numbers wrong ≤1 cycle — only if a probe measures it; no probe ⇒ write "ceiling not measured" | compensable: approved tag + rollback + probe; non-compensable: control before the side-effect |
+| **Bounded price** | nothing leaves the author's machine; data classes still apply | ≤1 person-day of rework; with a database, one timed restore before the first deploy | internal numbers wrong ≤1 cycle — only if a probe measures it; no probe ⇒ write "ceiling not measured" | compensable: approved tag + rollback + probe; non-compensable: control before the side-effect |
 | **Meter for the price** | — | incident record field `price_paid` (hours, bad records, reached customers?) | same | same, plus one line per incident: price paid vs ceiling |
 | **Ritual budget** | none | declared minutes per week; start at one 15-minute review | same | same; over budget ⇒ step a gate down or cut it (G4) |
 
