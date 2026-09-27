@@ -21,6 +21,7 @@ They are **non-normative reference implementations** for agent tools. They may n
 
 - Copy or link the folders from a **pinned** SEF checkout — a release tag, recorded with its resolved SHA ([`adoption`](../adoption/adoption.md#policy-repo-pattern)) — into the skills folder your agent tool reads.
 - A policy repo may distribute them to product repos the same way it distributes adapters. A copy is a derived file: re-copy from the pinned ref, never hand-edit it ([one home per fact](../standards/documentation.md#one-home-per-fact)).
+- **A distributing policy repo also writes `.sef-pin` at the product repo's root**, two lines: `repo=<owner>/<name>` of SEF and `ref=<full commit SHA>` it pinned. The copied skills carry no revision of their own; this file is how an agent in the product repo finds the exact SEF they match. It is a derived file like the skills: regenerated, never hand-edited.
 - Where the agent reads SEF from — this checkout, or the one a product repo pins — is in [`sdlc-framework`, "Find SEF"](sdlc-framework/SKILL.md#find-sef).
 
 ## Checked
