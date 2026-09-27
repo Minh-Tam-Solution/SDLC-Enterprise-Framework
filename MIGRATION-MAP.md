@@ -75,7 +75,7 @@ A live area with no file yet (`ai-engineering/`, `adoption/`, `practices/`) gets
 Check — v6 sources that have no row yet (not reviewed):
 
 ```bash
-git ls-files 'archive/v6/*' | sed 's|^archive/||' | while IFS= read -r f; do
+git ls-files archive/v6/ | sed 's|^archive/||' | while IFS= read -r f; do
   grep -qF "| \`$f\`" migration-map/*.md || echo "$f"
 done
 ```
