@@ -1,7 +1,7 @@
 # SDLC Enterprise Framework — CHANGELOG
 
-**Framework**: SDLC Enterprise Framework 7.0.0-alpha
-**Last Updated**: September 26, 2026 (v6.x and earlier history moved to archive)
+**Framework**: SDLC Enterprise Framework 7.1.0-alpha
+**Last Updated**: September 28, 2026 (v6.x and earlier history moved to archive)
 **Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: adopters choosing or pinning a release; maintainers writing release notes
@@ -13,6 +13,19 @@ tree small; it does not hide anything — the repository is public, so the archi
 history remain readable.
 
 ## Unreleased
+
+| Change | Detail |
+|---|---|
+
+## Version 7.1.0-alpha — 2026-09-28 (65 commits since `v7.0.0-alpha`: four engineering standards, agent-identity and vendor-radar guidance, spec/sprint/decision harvest, SECRET-1 and MIG-1)
+
+MINOR: every renamed script, workflow and file keeps the old name working with a deprecation
+notice until 2026-12-31 (`Deprecate in a MINOR, remove in a later MAJOR`,
+[`policies/artifact-lifecycle.md`](policies/artifact-lifecycle.md)). The two rules that entered
+directly at MACHINE (SECRET-1, DOC-2) both measured **0** on landing — nothing that passed before
+now fails — and each cites its `rule-contract.md` § Entering-at-MACHINE exception (irreversible
+harm; same-rule replacement). No item in this range meets the MAJOR bar ("a rule's meaning changes
+so that a repo which passed now fails").
 
 | Change | Detail |
 |---|---|
