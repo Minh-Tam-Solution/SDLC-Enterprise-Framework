@@ -1,7 +1,7 @@
 # Lessons to rules
 
 > Who reads this: whoever closes an incident, writes a post-mortem, or wants a new rule.
-> When: at incident close, at the monthly vendor radar, and when a user reports a problem.
+> When: at incident close, when a vendor radar reports, and when a user reports a problem.
 
 **SDLC Framework Version**: 7.0.0
 **Status**: ACTIVE
@@ -42,13 +42,13 @@ rule_ref: <rule id> | reference | none(<reason>)
 
 Vendors change how context loads, how hooks behave and which models exist — monthly.
 
-- The radar is a **recurring dated row in the deadline ledger**, one owner, monthly. Missing it turns the ledger red; no separate tracker.
+- The radar's cadence, its owner and its review records live in the adoption kit, not here.
 - Output: a research note → a trial with numbers before/after, named consumer → a policy release → regenerated adapters → one line to the team.
 - Its test: the count of "the vendor already ships this and we do not use it" falls between two radars. Do not count docs rewritten.
 
 **Tools that shape the workflow change under you** — the agent CLI, the code host, CI, a review bot, a model gateway.
 
-- **Keeping up with them is the adoption kit's job, not the framework's:** the radar above ends in a release of the policy repo, not in a change to this framework. The policy repo and its adapters ([`adoption`](../adoption/adoption.md#policy-repo-pattern)) say how today's tools do a practice; this framework says what the practice must achieve, and changes slowly. The kit treats such a tool like a dependency: a pinned version, moved after reading what the release changed ([Sources](#sources)). v6 kept tool profiles, a capability matrix and a monthly trend watch inside the framework; the archive holds one issue of the trend watch, its next one marked "queued".
+- **Keeping up with them is the adoption kit's job, not the framework's:** the radar ends in a release of the policy repo, not in a change to this framework. The policy repo and its adapters ([`adoption`](../adoption/adoption.md#policy-repo-pattern)) say how today's tools do a practice; this framework says what the practice must achieve, and changes slowly. The kit treats such a tool like a dependency: a pinned version, moved after reading what the release changed ([Sources](#sources)). v6 kept tool profiles, a capability matrix and a monthly trend watch inside the framework; the archive holds one issue of the trend watch, its next one marked "queued".
 - **A tool feature enters the framework only once it is a de-facto standard:** several independent vendors implement it, or an open specification exists — as for the `AGENTS.md` context file ([`context-and-hats`](../ai-engineering/context-and-hats.md#sources)). The harvest row or PR cites that evidence; until then the feature lives in the kit.
 - **A claim that depends on tool behaviour names the version it was verified on and how**, as the loading table in [`context-and-hats`](../ai-engineering/context-and-hats.md) does. A version-free claim is about no version in particular. *Burn case:* a team lesson said an environment variable overrides every sub-agent's model setting. It had been true in older versions of the agent CLI, was false in the current one, and was taught as current until someone measured again. In another case a branch was read through one of the code host's two protection mechanisms and reported "unprotected"; the host enforces both side by side.
 
