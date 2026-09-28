@@ -46,6 +46,12 @@ Vendors change how context loads, how hooks behave and which models exist — mo
 - Output: a research note → a trial with numbers before/after, named consumer → a policy release → regenerated adapters → one line to the team.
 - Its test: the count of "the vendor already ships this and we do not use it" falls between two radars. Do not count docs rewritten.
 
+**Tools that shape the workflow change under you** — the agent CLI, the code host, CI, a review bot, a model gateway.
+
+- **Keeping up with them is the adoption kit's job, not the framework's.** The policy repo and its adapters ([`adoption`](../adoption/adoption.md#policy-repo-pattern)) say how today's tools do a practice; this framework says what the practice must achieve, and changes slowly. The kit treats such a tool like a dependency: a pinned version, moved after reading what the release changed ([Sources](#sources)). v6 kept tool profiles, a capability matrix and a monthly trend watch inside the framework; the archive holds one issue of the trend watch, its next one marked "queued".
+- **A tool feature enters the framework only once it is a de-facto standard:** several independent vendors implement it, or an open specification exists — as for the `AGENTS.md` context file ([`context-and-hats`](../ai-engineering/context-and-hats.md#sources)). The harvest row or PR cites that evidence; until then the feature lives in the kit.
+- **A claim that depends on tool behaviour names the version it was verified on and how**, as the loading table in [`context-and-hats`](../ai-engineering/context-and-hats.md) does. A version-free claim is about no version in particular. *Burn case:* a team lesson said an environment variable overrides every sub-agent's model setting. It had been true in older versions of the agent CLI, was false in the current one, and was taught as current until someone measured again. In another case a branch was read through one of the code host's two protection mechanisms and reported "unprotected"; the host enforces both side by side.
+
 ## User feedback
 
 - One issue label for user feedback. No process beyond that.
@@ -62,3 +68,14 @@ Vendors change how context loads, how hooks behave and which models exist — mo
 ## Never measure agent output as progress
 
 Lines written, files created, PRs opened, tokens spent: these measure activity. Count outcomes — lead time to deploy, change-fail rate, rework within 48h, feedback issues closed by the reporter. A framework that rewards agent output grows back to 189 docs.
+
+## Sources
+
+Current practice, each opened on the date shown:
+
+- Semantic Versioning 2.0.0 (a project must declare its public API; a backward-incompatible change to that API increments the major version, so the number says nothing about behaviour outside it) — <https://semver.org/> (accessed 2026-09-28)
+- Keep a Changelog 1.1.0 (a curated list of notable changes per version, grouped as added, changed, deprecated, removed, fixed, security) — <https://keepachangelog.com/en/1.1.0/> (accessed 2026-09-28)
+- GitHub Docs — About Dependabot version updates (update PRs on a schedule, carrying the changelog and release notes to review before merging; a cooldown after a release) — <https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates> (accessed 2026-09-28)
+- Renovate Docs — Dependency Dashboard (one issue with the status of all updates; can require approval before a major update is proposed) — <https://docs.renovatebot.com/key-concepts/dashboard/> (accessed 2026-09-28)
+- GitHub Docs — About rulesets (rulesets and branch protection rules work alongside each other and all applicable rules are enforced) — <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets> (accessed 2026-09-28); REST API — Rules for a branch (returns active ruleset rules; the page does not mention branch protection rules) — <https://docs.github.com/en/rest/repos/rules> (accessed 2026-09-28)
+- Model Context Protocol — Specification 2025-06-18 (an open protocol with dated specification revisions; an example of a tool feature that became an open specification) — <https://modelcontextprotocol.io/specification/2025-06-18> (accessed 2026-09-28)
