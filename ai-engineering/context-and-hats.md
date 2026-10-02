@@ -1,6 +1,6 @@
 # Context and Hats
 
-**Version**: 1.0.0 · **Status**: ACTIVE · **Date**: 2026-09-25
+**Version**: 1.1.0 · **Status**: ACTIVE · **Date**: 2026-10-02
 **SDLC Framework Version**: 7.0.0
 **Owner**: @dttai71
 **Consumer**: authors of `AGENTS.md`, PREAMBLE and hat files
@@ -115,6 +115,18 @@ findings:
 - **Intent confirmation.** Before work, the agent states three lines: the problem, who uses the result, and what "done" means. It asks and waits only when the brief is ambiguous or the project tier is high. Keep the record in the PR template (three fields), not in chat.
 
 Templates: `templates/agent/SOUL-example.md` (one hat) · `templates/agent/PREAMBLE-example.md` (shared by all hats).
+
+## Decisions code consumes
+
+The model understands and writes; a **typed decision function** decides; code executes. When code branches on a model's judgment (routing, gating, classification), rule DEC-1 ([`scripts/check-decision-contract.py`](../scripts/check-decision-contract.py)) holds:
+
+- **Closed enum with an abstain the model can choose.** `insufficient_evidence` is one of the options. Never parse prose; never infer abstention from a low score; never gate on a yes/no question, which has no abstain slot and so returns "safe" on missing input (rule-contract G2).
+- **Layer.** REVIEW or ADVISORY, never MACHINE ([rule-contract §2](../controls/rule-contract.md)). It may only **raise** scrutiny (a second reviewer, a path proposed for the risk floor), never **lower** what a deterministic gate decided.
+- **Acceptance case, mandatory for every new decision function:** empty state ⇒ `insufficient_evidence`, plus one positive control that must still return its expected option. Declare both in a `*.decision.json`; DEC-1 checks the declaration, and `--run <cmd>` runs the cases against the function in the repo's own tests. Sample: [`scripts/fixtures/pr-risk.decision.json`](../scripts/fixtures/pr-risk.decision.json).
+- **Burn case (2026-09-24).** A hosted typed-decision service given an **empty** state chose a class at confidence 0.70. With `insufficient_evidence` added it abstained at 1.0 on empty and on nonsense input; the positive control stayed correct. Its yes/no form returned 0.08 ("not sensitive") on empty input: fail-open. The vendor's own guidance (hand off near 0.5) misses this — the failure was high confidence. Its speed and cost claims (up to 200× faster, 400× cheaper) are unverified here.
+- **Where it applies (candidates, not adopted):** a PR risk classification as a second, differently-blind check beside the path-based [risk floor](../controls/risk-floor-paths.md) (REVIEW/ADVISORY: model says risky and the paths do not ⇒ second reviewer and a proposed path; it never downgrades); model-tier routing `{cheap, standard, frontier, insufficient_evidence}` (ADVISORY, only after ≥200 human-labelled cases).
+
+Sources: an adopter's research note of 2026-09-24 (§2 table, §2.1 the empty-state case, §2.2 the yes/no fail-open, ruling §3 on layers, 2026-10-02 addendum row J3) and its ecosystem decision record "Machine decision with human fallback", rule R1 ("closed enum … must contain `insufficient_evidence` … never inferred from a low score"; status: proposed).
 
 ## What this page does not claim
 
