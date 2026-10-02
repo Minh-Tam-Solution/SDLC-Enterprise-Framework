@@ -1,0 +1,18 @@
+{
+  "decision_class": "pr-risk-second-check",
+  "type": "choice",
+  "layer": "REVIEW",
+  "options": {
+    "auth": "the change touches authentication, authorization or sessions",
+    "pii": "the change reads, writes or moves personal data",
+    "money": "the change computes, stores or moves money",
+    "migration": "the change alters a database schema or its data",
+    "deploy": "the change alters how the service is built, configured or released",
+    "none": "none of the above",
+    "insufficient_evidence": "the diff is empty, unreadable, truncated, or does not show enough to choose"
+  },
+  "cases": [
+    {"name": "empty-state", "state": "", "expect": "insufficient_evidence"},
+    {"name": "positive-control", "state": "diff --git a/db/migrations/0042_drop_note.sql b/db/migrations/0042_drop_note.sql\n+ALTER TABLE orders DROP COLUMN note;\n", "expect": "migration"}
+  ]
+}

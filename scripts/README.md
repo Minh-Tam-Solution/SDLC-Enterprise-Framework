@@ -24,6 +24,7 @@ Gate scripts follow the exit-code contract there: `0` pass · `1` cannot measure
 | `check-skill-citations.sh` | Rule SKILL-1 (ADVISORY) — every SEF path, section and link cited under `skills/` resolves in the same commit; each skill folder has a loadable `SKILL.md`; `--block` turns the count red. |
 | `rule-no-new-secrets.sh` | Rule SECRET-1 (MACHINE) — no secret-shaped value in lines a change adds; `.secret-allowlist` holds dated debt; `--all` reports the whole tree. |
 | `check-migration-class.sh` | Rule MIG-1 (ADVISORY, `PRODUCT_CI`) — classifies migrations expand/contract from their statements; counts expand labels on contract migrations; prints `class=` for the deploy log. |
+| `check-decision-contract.py` | Rule DEC-1 (ADVISORY, `PRODUCT_CI`) — a decision function that code consumes is declared as a closed `choice` with `insufficient_evidence`, at REVIEW or ADVISORY, with the empty-state acceptance case and a positive control; `--run <cmd>` runs the cases. Sample in `fixtures/`. |
 | `selftest-all.sh` | Runs `--selftest` on every script here that supports it. |
 
 The v6 Python tools (`check_doc_headers.py`, `compliance_*_validator.py`, `quickstart_solo_setup.py`)
