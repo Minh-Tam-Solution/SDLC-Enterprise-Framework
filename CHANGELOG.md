@@ -16,6 +16,7 @@ history remain readable.
 
 | Change | Detail |
 |---|---|
+| Pinning sentence made canonical | `adoption/adoption.md` § Policy repo pattern: "Humans select a reviewed release tag; automation records and enforces the resolved full commit SHA." Policy-repo files reference it instead of writing a second pinning rule. Wording only; no rule or gate changed |
 | New rule DEC-1 (ADVISORY, PRODUCT_CI) | `ai-engineering/context-and-hats.md` § Decisions code consumes: a model judgment that code consumes is a closed enum with `insufficient_evidence` as a choosable option, never prose, never a yes/no gate, never MACHINE, and may only raise scrutiny. `scripts/check-decision-contract.py` checks `*.decision.json` declarations for the mandatory empty-state acceptance case and a positive control; `--run` runs them. Sample `scripts/fixtures/pr-risk.decision.json`. Nothing passed before fails: the row counts, it does not block |
 
 ## Version 7.1.0-alpha — 2026-09-28 (65 commits since `v7.0.0-alpha`: four engineering standards, agent-identity and vendor-radar guidance, spec/sprint/decision harvest, SECRET-1 and MIG-1)

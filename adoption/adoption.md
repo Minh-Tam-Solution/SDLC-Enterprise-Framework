@@ -32,7 +32,7 @@ One repo holds the policy. Product repos consume it. Derivation runs one way: **
 | `.approvers` | who may approve risk-floor deploys, and which person operates each agent identity; checked as `reviewer ≠ author` and `reviewer ≠ operator(author)` |
 | `CONTROL_SURFACE` | the list of paths above that can change enforcement |
 
-- **Pinning.** Products pin a release tag; generated files record the resolved SHA. Upgrades go by tag, not by bare SHA — bumping bare SHAs by hand across many repos gets abandoned.
+- **Pinning.** Humans select a reviewed release tag; automation records and enforces the resolved full commit SHA. This is the one statement of the pinning rule; policy-repo files point here instead of restating it. Upgrades go by tag, not by bare SHA — bumping bare SHAs by hand across many repos gets abandoned.
 - **Drift check.** Product CI regenerates adapters at the pinned ref; any diff is drift. Count hand edits of generated files — it measures use, not ceremony.
 - **Control surface.** Changes to `CONTROL_SURFACE` need independent review. `.approvers` is not a trust anchor if a PR can edit it; authority comes from a protected team or ruleset. The policy repo inherits the governance tier of its highest consumer.
 - **Tier comes from the policy.** The reusable workflow reads it from the policy repo at the pinned ref. It takes no tier input from the product.
