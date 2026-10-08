@@ -81,9 +81,9 @@ Folders are named by what kind of document they hold. Nothing is named after a v
 |---|---|---|
 | `core/` | methodology that outlives tools | [`constitution`](core/constitution.md) · [`lifecycle`](core/lifecycle.md) (ten stages) |
 | `policies/` | how this repository's own artifacts are governed | [`artifact-lifecycle`](policies/artifact-lifecycle.md) |
-| `controls/` | rules and gates that a machine checks | [`rule-contract`](controls/rule-contract.md) · [`tiers`](controls/tiers.md) · [`gates`](controls/gates.md) · [`risk-floor-paths`](controls/risk-floor-paths.md) |
+| `controls/` | rules and gates that a machine checks | [`rule-contract`](controls/rule-contract.md) · [`tiers`](controls/tiers.md) · [`gates`](controls/gates.md) · [`risk-floor-paths`](controls/risk-floor-paths.md) · [`review-and-ci-evidence`](controls/review-and-ci-evidence.md) |
 | `standards/` | what every repo follows | [`project-structure`](standards/project-structure.md) · [`documentation`](standards/documentation.md) · [`testing`](standards/testing.md) · [`security`](standards/security.md) · [`change-and-deployment`](standards/change-and-deployment.md) · [`observability`](standards/observability.md) · [`integration-and-data`](standards/integration-and-data.md) · [`collaboration`](standards/collaboration.md) |
-| `ai-engineering/` | working with agents | [`context-and-hats`](ai-engineering/context-and-hats.md) |
+| `ai-engineering/` | working with agents | [`context-and-hats`](ai-engineering/context-and-hats.md) · [`agent-operations`](ai-engineering/agent-operations.md) |
 | `adoption/` | bringing the framework to an organisation or repo | [`adoption`](adoption/adoption.md) |
 | `practices/` | how to do it well | [`lessons-to-rules`](practices/lessons-to-rules.md) |
 | `templates/` | copy-and-edit files: agent context, project docs | [`templates/`](templates/README.md) |
@@ -103,6 +103,7 @@ Reading order:
 | writing or switching on a gate | rule-contract → gates → risk-floor-paths |
 | renaming, moving or retiring anything here, or cutting a release | artifact-lifecycle |
 | writing `AGENTS.md` or a hat | context-and-hats |
+| running agents on shared repos, or approving their changes | agent-operations → review-and-ci-evidence |
 | closing an incident | lessons-to-rules |
 
 Website: the v6 site remains at its last deployment; v7 has no site (no new components).
