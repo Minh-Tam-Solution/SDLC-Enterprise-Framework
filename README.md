@@ -1,6 +1,8 @@
 # SDLC Enterprise Framework
 
-**Version**: 7.0.0-alpha | **Release status**: ALPHA | **Date**: 2026-09-25 | **License**: MIT
+Latest release: v7.1.1-alpha · Main: Unreleased · Release status: ALPHA
+
+**Version**: 7.0.0 (the framework version live docs are verified against, read by `scripts/check-version-declared.sh`) | **License**: MIT
 
 **Status**: ACTIVE
 **Owner**: @dttai71
