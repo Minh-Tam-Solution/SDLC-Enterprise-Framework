@@ -1,7 +1,7 @@
 # SDLC Enterprise Framework — CHANGELOG
 
-**Framework**: SDLC Enterprise Framework 7.1.0-alpha
-**Last Updated**: September 28, 2026 (v6.x and earlier history moved to archive)
+**Framework**: SDLC Enterprise Framework 7.1.1-alpha
+**Last Updated**: October 8, 2026 (v6.x and earlier history moved to archive)
 **Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: adopters choosing or pinning a release; maintainers writing release notes
@@ -13,6 +13,8 @@ tree small; it does not hide anything — the repository is public, so the archi
 history remain readable.
 
 ## Unreleased
+
+## v7.1.1-alpha — 2026-10-08
 
 | Change | Detail |
 |---|---|
