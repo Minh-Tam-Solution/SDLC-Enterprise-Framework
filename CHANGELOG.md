@@ -14,6 +14,10 @@ history remain readable.
 
 ## Unreleased
 
+| Change | Detail |
+|---|---|
+| Review method | `controls/review-and-ci-evidence.md` gains: review goal (minimise human time per change without raising reverts or incidents) and its metrics; human approvals by change level (Low 0 / Medium 1 / High 2, mapped onto the existing reversible/irreversible tiers, set by the change not the author, start strict and loosen only on evidence, agent approval never counts as human, approval carries over only for a byte-identical diff with a clean merge tree); convergence (Important / Nit / Pre-existing, only Important blocks, every thread closed with a reason, no repeated findings, at most 3 rounds); reverts and incidents as the AI reviewer's evaluation set; a circuit breaker that raises the level when revert or incident rates rise (an extension). Source: "Solving code review at Anthropic", claude.dev, 2026-10-15. Guidance and candidate rules only; nothing enters the register |
+
 ## v7.1.1-alpha — 2026-10-08
 
 | Change | Detail |
