@@ -1,7 +1,7 @@
 # SDLC Enterprise Framework — CHANGELOG
 
-**Framework**: SDLC Enterprise Framework 7.1.1-alpha
-**Last Updated**: October 8, 2026 (v6.x and earlier history moved to archive)
+**Framework**: SDLC Enterprise Framework 7.1.2-alpha
+**Last Updated**: October 21, 2026 (v6.x and earlier history moved to archive)
 **Status**: ACTIVE
 **Owner**: @dttai71
 **Consumer**: adopters choosing or pinning a release; maintainers writing release notes
@@ -14,9 +14,20 @@ history remain readable.
 
 ## Unreleased
 
+## v7.1.2-alpha — 2026-10-21
+
+v7.1.1-alpha was released in-tree on 2026-10-08 (#64, `fdb4f28`) but never tagged. v7.1.2-alpha
+supersedes it as the first tag after `v7.1.0-alpha`; the v7.1.1-alpha section below stays as
+written. Adopters pinning from `v7.1.0-alpha` get everything in both sections.
+
+- #64 — release of v7.1.1-alpha in-tree (README release line, CHANGELOG section). Adopter impact: none beyond the v7.1.1-alpha entries below.
+- #65 — review goal, approvals by change level, convergence, AI-reviewer evaluation, circuit breaker in `controls/review-and-ci-evidence.md`. Adopter impact: guidance and candidate rules only; nothing enters the register, no gate changes.
+- #66 — stable AC ids `AC-<spec>-<n>` in the SPEC template, tests cite the AC id, advisory G1 missed-flows list in `sdlc-gate-check`. Adopter impact: new SPECs get an AC id column; no mandatory RTM, no minimum AC count, no new gate.
+
 | Change | Detail |
 |---|---|
 | Review method | `controls/review-and-ci-evidence.md` gains: review goal (minimise human time per change without raising reverts or incidents) and its metrics; human approvals by change level (Low 0 / Medium 1 / High 2, mapped onto the existing reversible/irreversible tiers, set by the change not the author, start strict and loosen only on evidence, agent approval never counts as human, approval carries over only for a byte-identical diff with a clean merge tree); convergence (Important / Nit / Pre-existing, only Important blocks, every thread closed with a reason, no repeated findings, at most 3 rounds); reverts and incidents as the AI reviewer's evaluation set; a circuit breaker that raises the level when revert or incident rates rise (an extension). Source: "Solving code review at Anthropic", claude.dev, 2026-10-15. Guidance and candidate rules only; nothing enters the register |
+| Acceptance-criteria ids | `templates/project/SPEC-template.md` gains an AC id column (`AC-<spec>-<n>`, never renumbered, retired ids kept); `standards/testing.md`: a test cites the AC id it covers; `skills/sdlc-gate-check/SKILL.md`: an advisory list of commonly missed flows for stage gate G1. No mandatory RTM, no minimum AC count, no new ID scheme. Pattern adapted from OpenBA-Kit (MIT), own text |
 
 ## v7.1.1-alpha — 2026-10-08
 
