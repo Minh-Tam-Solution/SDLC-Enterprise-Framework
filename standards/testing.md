@@ -16,7 +16,7 @@ What each stage must show is in [`core/lifecycle.md`](../core/lifecycle.md) (sta
 ## Tests prove requirements
 
 - **Write each requirement as a testable scenario** (Given / When / Then) and name the test level that proves it: unit, integration or end-to-end.
-- **Every acceptance criterion traces to at least one test**, and every test file names what it covers (`Covers:` in its header, [`documentation.md`](documentation.md#header-of-a-source-file)). A criterion no test references is untested, whatever the coverage number says.
+- **Every acceptance criterion traces to at least one test**, and every test file names what it covers (`Covers:` in its header, [`documentation.md`](documentation.md#header-of-a-source-file)). A criterion no test references is untested, whatever the coverage number says. A test that covers an acceptance criterion cites its id (`AC-0012-3`, from the spec's requirements table) in the test name or a comment, so a search for the id finds its tests. *(Pattern adapted from OpenBA-Kit, MIT, dea3e3a8.)*
 - **Test the edges, not only the happy path:** boundaries, caps, invalid and negative input, and exact decimal arithmetic for money.
 - **Each API endpoint is tested for:** success, duplicate, invalid input, unauthenticated (401), forbidden (403), and one user reaching another user's object. An undocumented endpoint, or a response that differs from the contract, is a finding: fix the contract or the code.
 

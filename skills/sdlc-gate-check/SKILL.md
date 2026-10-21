@@ -52,6 +52,19 @@ Readiness: ready | not_ready | insufficient_evidence
 
 `ready` only when every required item is `found`. Any `missing` ⇒ `not_ready`. Tier or SEF unknown, or a required item `not measured` ⇒ `insufficient_evidence`.
 
+## Stage gate G1: commonly missed flows (advisory)
+
+At stage gate G1 (requirements agreed), ask of each requirement whether the spec says what happens on these paths. An answer may be "out of scope"; silence is a finding to raise, not a gate failure.
+
+- cancel or abort midway, and timeout;
+- third-party failure: retry, and idempotency of the retried call;
+- duplicate data and double submit;
+- permission and role boundaries: who must not be able to do this;
+- invalid or hostile input;
+- two people editing the same record at once.
+
+Pattern adapted from OpenBA-Kit (MIT, dea3e3a8).
+
 ## Rules
 
 - Check only the stages the change can affect; which ones those are is in `core/lifecycle.md` "Ten stages".
