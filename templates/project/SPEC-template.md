@@ -28,10 +28,12 @@ related_specs: []
 
 ## Requirements
 
-| # | Requirement | Acceptance criterion |
-|---|---|---|
-| R1 | <behaviour> | GIVEN … WHEN … THEN … |
-| R2 | <limit: latency, size, retention> | <number> measured by <how> |
+| # | Requirement | AC id | Acceptance criterion |
+|---|---|---|---|
+| R1 | <behaviour> | AC-NNNN-1 | GIVEN … WHEN … THEN … |
+| R2 | <limit: latency, size, retention> | AC-NNNN-2 | <number> measured by <how> |
+
+<AC id = `AC-<spec number>-<n>`. An id is never renumbered or reused; a dropped criterion stays in the table marked `retired`. Tests cite the id ([`testing.md`](../../standards/testing.md#tests-prove-requirements)). Pattern adapted from OpenBA-Kit (MIT, dea3e3a8).>
 
 ## Design decisions
 
