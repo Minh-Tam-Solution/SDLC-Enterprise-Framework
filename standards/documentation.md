@@ -124,7 +124,7 @@ A document moved to `archive/` (in a product repo: `docs/10-archive/`) is **not 
 
 ## Checking
 
-These standards become gates through [`lessons-to-rules.md`](../practices/lessons-to-rules.md): a rule row with a burn case and a command, starting at `ADVISORY` with a counter and a deadline ([`gates.md`](../controls/gates.md)). A standard with no command behind it is a request, and it drifts. The candidates, each with its burn case, are listed in [`rule-contract.md`](../controls/rule-contract.md) once proposed.
+These standards become gates through [`lessons-to-rules.md`](../practices/lessons-to-rules.md): a rule row with a burn case and a command, starting at `ADVISORY` with a counter and a deadline ([`gates.md`](../controls/gates.md)). A standard with no command behind it is a request, and it drifts. The candidates, each with its burn case, are listed in [`rule-contract.md`](../controls/rule-contract.md) once proposed; the first built is DOC-3 (stale `file:line` citations), an experiment.
 
 ## Sources
 
