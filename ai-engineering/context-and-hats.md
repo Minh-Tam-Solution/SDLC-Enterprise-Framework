@@ -80,6 +80,7 @@ Planning separates finding out from changing things: the agent reads and asks fi
 - **A plan names** the files and interfaces it changes, what is out of scope, the check that proves it works end to end, and, on the risk floor, how it is rolled back. A plan that does not end in a runnable check is a wish.
 - **On the risk floor, a person settles the plan before code is written;** elsewhere the agent proceeds after intent confirmation (below).
 - **A plan is not evidence that the code follows it.** Agents drift from long plans and specs; the reviewer, in a fresh context, checks the diff against the plan, and change outside it is a finding. v6 had the generating agent validate its own output against the plan; that is self-grading.
+- **Experiment:** a plan that met the first bullet may be read by a fresh-context reviewer before code (`skills/sdlc-cross-review/SKILL.md` "Spec review mode").
 
 ## Hats
 
