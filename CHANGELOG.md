@@ -14,6 +14,8 @@ history remain readable.
 
 ## Unreleased
 
+- Rule DOC-1 (doc count, ADVISORY, deadline 2026-10-25) removed from the rule register. It was past its deadline with a count above zero, so `check-rules.sh --block` (C21-4) was red on main. Since 2026-09-26 it has had no hard ceiling: the count was a smell nobody acted on. `check-doc-count.sh` stays as a tool. Source: the CEO, 03/11/2026, choice box in the @ceo SCB session (the options were written by @ceo SCB): «B: xoá dòng DOC-1».
+
 ## v7.1.2-alpha — 2026-10-21
 
 v7.1.1-alpha was released in-tree on 2026-10-08 (#64, `fdb4f28`) but never tagged. v7.1.2-alpha
