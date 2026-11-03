@@ -1,6 +1,6 @@
 ---
 name: sdlc-cross-review
-description: Use when a change needs an independent review — acting as the reviewer in a fresh context, or preparing the diff and criteria for a reviewer in another session, model or tool. Enforces reviewer independence (not the author's context, not the author's operator), checks data classes before any content leaves for a model, and returns a typed verdict. The review is evidence, never an approval.
+description: Use when a change, or a spec or plan before code, needs an independent review — acting as the reviewer in a fresh context, or preparing the diff and criteria for a reviewer in another session, model or tool. Enforces reviewer independence (not the author's context, not the author's operator), checks data classes before any content leaves for a model, and returns a typed verdict. The review is evidence, never an approval.
 ---
 
 # Independent review
@@ -36,6 +36,15 @@ Say which lane produced the review. A review run in a developer session is not t
    - **Preparing for another reviewer:** write the inputs to one file (diff, criteria, commit binding, a pointer to the verdict schema), with no secrets, and tell the user where it is. The user chooses the reviewer and sends it; do not call external APIs yourself. Whether another vendor's review counts as cross-vendor: `controls/tiers.md` "Cross-vendor review".
 5. **Review.** Check the diff against the criteria. Every finding carries file, line, the claim and its evidence (a quote or a command you ran with its output). On risk-floor paths, also do what `controls/risk-floor-paths.md` "Rule" asks of the review.
 6. **Verdict.** Read `ai-engineering/context-and-hats.md` "Typed verdict" and return exactly that schema — field names, allowed values, severities and the rules that combine them — plus the lane and the commit binding from step 4. Cannot run or see what is needed ⇒ `insufficient_evidence`, never a silent approve.
+
+## Spec review mode (EXPERIMENT, `controls/experiment-egm-spec-review-and-drift.md`)
+
+Review the plan itself before code is written; the steps above check a diff against a plan, and nobody otherwise reads the plan. Triggered by risk as `ai-engineering/context-and-hats.md` "Plan before code" says (risk-floor path, consumed contract, service boundary, uncertain approach) — never by size.
+
+- Steps 1-3 apply unchanged, with the spec or plan as "the change": its author, the author's operator, and the data class of every path it names and every linked decision.
+- **Inputs (step 4):** the spec or plan, and the decisions it links (ADRs, register rows), bound to the exact commit or blob. Not the author's chat or reasoning, not code. A decision the spec relies on but does not link is a finding, not something to look up from memory.
+- **Check (step 5):** unstated assumptions and non-goals; requirements without a runnable check; contradiction with a linked decision; on the risk floor, a missing rollback (`ai-engineering/context-and-hats.md` "Plan before code"). One finding = spec path, line, claim, quote.
+- **Verdict (step 6):** the same typed schema. `approve` is evidence, not the person's settlement of a risk-floor plan.
 
 ## Rules
 

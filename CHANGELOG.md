@@ -14,6 +14,8 @@ history remain readable.
 
 ## Unreleased
 
+- EXPERIMENT (`controls/experiment-egm-spec-review-and-drift.md`): spec review mode in `sdlc-cross-review` (S1) and advisory rule DOC-3 `scripts/check-doc-cites.sh` (S2), from a study of google/elephant-goldfish-model. Adopter impact: none unless a repo registers DOC-3; nothing blocks.
+
 ## v7.1.2-alpha — 2026-10-21
 
 v7.1.1-alpha was released in-tree on 2026-10-08 (#64, `fdb4f28`) but never tagged. v7.1.2-alpha
