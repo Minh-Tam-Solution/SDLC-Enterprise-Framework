@@ -43,7 +43,8 @@ It does not remove any of the paths above.
 
 A diff touching any path on the floor needs human review by an approver who is not the author
 or the author's operator ([`gates`](gates.md)), plus independent re-derivation of any headline
-number in it. This floor sits **below** model routing: routing decides who does the work; the
+number in it. A model review may add evidence, never replace that human: the change-level
+contract is in [`review-and-ci-evidence.md`](review-and-ci-evidence.md#engineering-authorization-contract). This floor sits **below** model routing: routing decides who does the work; the
 floor decides the minimum verification the work gets.
 
 ## Not in scope

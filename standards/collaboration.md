@@ -41,6 +41,12 @@ Every task — a person's or an agent's — ends in exactly one of four statuses
 - **The ask is specific:** "I need a decision on X by Y because Z", with the evidence (file and line, or the command run). "I need help" is not an ask.
 - **Urgent does not mean undocumented.** An emergency fix may act first; its record follows within 48 hours ([`change-and-deployment.md`](change-and-deployment.md#change-classes)).
 
+## Escalation
+
+- **Decide at the lowest tier that holds the authority.** Escalate one tier up only when the question is outside the granted scope, the evidence cannot settle it, or the lower tier cannot be independent of the change. The tiers and who sits in each are declared by the active governance decision, not here.
+- **A question already answered by a decision record or this framework is not escalated;** point to the source. An escalation names what was tried, the options and the cost of waiting (see `NEEDS_DECISION`, above).
+- **The authority to merge is set by the change level** ([`controls/review-and-ci-evidence.md`](../controls/review-and-ci-evidence.md#engineering-authorization-contract)); escalating does not raise a change's level, and a person above does not re-approve what a lower tier already authorized for the same SHA and scope.
+
 ## Decisions
 
 - **A decision that is expensive to reverse is recorded before the work,** as an ADR: context, decision, consequences, alternatives rejected ([`documentation.md`](documentation.md)). Written after the code, it is a story, not a decision.
