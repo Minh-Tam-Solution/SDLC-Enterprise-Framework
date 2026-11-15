@@ -67,6 +67,8 @@ The goal of review is to **minimise the human time spent per change without rais
 
 The level belongs to the **change**, never to its author: an agent's change and a senior engineer's change on the same paths get the same level. The levels refine the two review tiers above; they are not a second taxonomy. Map them onto whatever classification the repo already uses, and never below what its service tier requires ([`tiers.md`](tiers.md)).
 
+These approvals are **merge authorization** only. Production authorization is a separate control point with its own checks, and a merge approval does not grant it ([`tiers.md`](tiers.md#merge-and-production-authorization)).
+
 | Level | Review tier | The change is | Human approvals at merge |
 |---|---|---|---|
 | **Low** | reversible | docs; internal-only code; additive code behind a flag whose flip is itself a reviewed change | 0, once required automated checks and the security review are green on the head SHA |
