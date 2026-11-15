@@ -13,6 +13,15 @@
 
 Tiers and `change_harm` live in [`tiers.md`](tiers.md); the paths in [`risk-floor-paths.md`](risk-floor-paths.md); approver independence in [`gates.md`](gates.md#approver-independence); what a good test is in [`standards/testing.md`](../standards/testing.md). This page says how a review tier is assigned and what CI evidence an approval may rely on. MUST / SHOULD carry their RFC 2119 meaning.
 
+## Engineering authorization contract
+
+This is the one place SEF states what authorizes a change. Other pages and adopting repos point here instead of restating it.
+
+> SEF defines the minimum verification and independent-review requirements for each change risk level. Organization-specific approval authority is declared through the active governance decision and enforced by the code host and execution systems. A cross-vendor AI review is engineering judgment, not deterministic proof. Trusted CI validates the evidence and execution conditions. A change must not be declared merge-ready unless the effective policy and all applicable required controls have passed.
+
+- Who may approve is not decided here; SEF fixes what must be proven and how independent the review must be. The change levels are in [Human approvals by change level](#human-approvals-by-change-level); the claim states and minimum evidence in [`standards/testing.md`](../standards/testing.md#prove-before-claim); who decides at which level in [`standards/collaboration.md`](../standards/collaboration.md#escalation).
+- Merge authorization is not production authorization ([`tiers.md`](tiers.md#merge-and-production-authorization)).
+
 ## Review tiers by reversibility
 
 Two review tiers per change, decided by what a mistake would cost to undo:
@@ -72,9 +81,11 @@ These approvals are **merge authorization** only. Production authorization is a 
 | Level | Review tier | The change is | Human approvals at merge |
 |---|---|---|---|
 | **Low** | reversible | docs; internal-only code; additive code behind a flag whose flip is itself a reviewed change | 0, once required automated checks and the security review are green on the head SHA |
-| **Medium** | reversible | any other reversible change, including additive code behind a flag that can be flipped without review | 1 |
+| **Medium** | reversible | any other reversible change, including additive code behind a flag that can be flipped without review | 0 humans + a cross-vendor review bound to the head SHA, produced by trusted CI (`REVIEW` class under the [Rule Contract](rule-contract.md), never `MACHINE`); 1 human until activated, see below |
 | **High** | irreversible | anything in the irreversible tier | 2; where the organisation has only one eligible approver: 1 human + a blocking security review + a review by a model from a different vendor, recorded as an exception on the change |
 
+- **Activation condition for Medium = 0 humans.** It applies in a repository only after the code host enforces it and its negative tests have passed: the review cannot be produced or spoofed by the change; a skipped, neutral or errored review does not satisfy it; a risk-floor change still needs a human code owner. Until then Medium keeps 1 human approval. Low, and High with the risk floor (a human code owner), are unchanged.
+  *Why:* a review is only a control if the change cannot write it and its absence blocks the merge; a model's verdict is judgment, so it never stands alone on the risk floor.
 - **MUST** start strict and loosen a level only with measured evidence from the metrics above (a period of baseline numbers, the guardrails flat). Loosening is a recorded decision.
 - **MUST NOT** count an agent's approval as a human approval, whatever account it uses ([`gates.md`](gates.md#approver-independence)).
 - **MUST** bind every approval to a specific commit. A new commit needs re-approval, unless the change's diff (base..head) is byte-identical to the approved one and the merge tree is clean; then the approval may carry over, recorded by machine.

@@ -47,6 +47,22 @@ Agents optimise for a passing run, and asking them not to game it barely helps. 
 - **For risk-floor behaviour, show the test fails against the behaviour before the change and passes after it,** and keep that evidence in CI or the review. Commit order is one way to show it, not the requirement: squashing and rebasing are fine.
 - **Features whose behaviour comes from a model are evaluated in levels:** cheap assertions on every change; graded evals against the eval set ([`core/constitution.md`](../core/constitution.md)) on a set cadence; comparisons in production only after significant changes. Expensive evals run behind an explicit switch and a budget, not on every commit. Keep reading real traces.
 
+## Prove Before Claim
+
+A claim about a change names the state it has reached, and no state implies a later one. The authorization contract is in [`controls/review-and-ci-evidence.md`](../controls/review-and-ci-evidence.md#engineering-authorization-contract).
+
+| State | Means, shown by |
+|---|---|
+| `IMPLEMENTED` | the change is written; the diff |
+| `VERIFIED` | the checks the change type requires ran on the real implementation and passed; CI evidence on the exact head SHA |
+| `READY_FOR_REVIEW` | `VERIFIED`, and the evidence record is attached to the change |
+| `MERGED` | the change landed on the main branch, after merge authorization ([`controls/tiers.md`](../controls/tiers.md#merge-and-production-authorization)) |
+| `DEPLOYED` | this artifact runs in this environment, after production authorization |
+
+- **Minimum evidence follows the change type and its consequence.** A focused test on the real implementation can be enough for a small change; a change to authorization needs negative authorization and tenant-isolation tests ([Real over fake](#real-over-fake)). No full smoke test for every change.
+- **A check that cannot run is `INSUFFICIENT_EVIDENCE`,** never a pass: not "tests pass" with the check skipped, masked or missing.
+- **An evidence record holds no secrets and no production data:** the command, the commit, the result and a link to the CI run.
+
 ## Test data and environments
 
 - **One canonical seed data set** for the team, built by factories — not ad-hoc data per developer.
