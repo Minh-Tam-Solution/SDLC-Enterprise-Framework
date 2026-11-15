@@ -14,6 +14,8 @@ history remain readable.
 
 ## Unreleased
 
+- Merge authorization and production authorization are two control points, stated once in `controls/tiers.md` ("Merge and production authorization"); `controls/review-and-ci-evidence.md` points to it. This removes a disagreement: the ENTERPRISE row said a risk-floor diff "merges freely", while the change-level table asks for High approvals at merge. Adopter impact: a risk-floor diff in an ENTERPRISE repo now needs its change-level approvals at merge as well as the approved tag at deploy; a merge approval never counts as production authorization, and the same human is not asked twice for the same SHA and scope. No script or rule row changes.
+
 - Rule DOC-1 (doc count, ADVISORY, deadline 2026-10-25) removed from the rule register. It was past its deadline with a count above zero, so `check-rules.sh --block` (C21-4) was red on main. Since 2026-09-26 it has had no hard ceiling: the count was a smell nobody acted on. `check-doc-count.sh` stays as a tool. Source: the CEO, 03/11/2026, choice box in the @ceo SCB session (the options were written by @ceo SCB): «B: xoá dòng DOC-1».
 - EXPERIMENT (`controls/experiment-egm-spec-review-and-drift.md`): spec review mode in `sdlc-cross-review` (S1) and advisory rule DOC-3 `scripts/check-doc-cites.sh` (S2), from a study of google/elephant-goldfish-model. Adopter impact: none unless a repo registers DOC-3; nothing blocks.
 
