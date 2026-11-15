@@ -60,7 +60,7 @@ A claim about a change names the state it has reached, and no state implies a la
 | `DEPLOYED` | this artifact runs in this environment, after production authorization |
 
 - **Minimum evidence follows the change type and its consequence.** A focused test on the real implementation can be enough for a small change; a change to authorization needs negative authorization and tenant-isolation tests ([Real over fake](#real-over-fake)). No full smoke test for every change.
-- **A check that cannot run is `INSUFFICIENT_EVIDENCE`,** never a pass: not "tests pass" with the check skipped, masked or missing.
+- **A check that cannot run is `insufficient_evidence`,** never a pass: not "tests pass" with the check skipped, masked or missing.
 - **An evidence record holds no secrets and no production data:** the command, the commit, the result and a link to the CI run.
 
 ## Test data and environments

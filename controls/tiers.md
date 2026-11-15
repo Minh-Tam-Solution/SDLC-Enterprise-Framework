@@ -59,7 +59,7 @@ The old criterion — team size — is gone. One person building ENTERPRISE gets
 
 Details that make the table hold:
 
-- **Cross-vendor review** is self-declared and `ADVISORY` until CI records the provider in the check-run. Otherwise it is theatre. Once a repository activates it as the Medium-level review, it is a `REVIEW`-class control, never `MACHINE`, under the conditions in the [engineering authorization contract](review-and-ci-evidence.md#engineering-authorization-contract).
+- **Cross-vendor review** is self-declared and `ADVISORY` until CI records the provider in the check-run. Otherwise it is theatre. Once a repository activates it as the Medium-level review, the presence of its check-run and its binding to the head SHA are `MACHINE` (absent or skipped blocks the merge) and its verdict is `REVIEW`, never `MACHINE`, under the conditions in the [engineering authorization contract](review-and-ci-evidence.md#engineering-authorization-contract).
 - **Model reviewer lane:** CI check-run, its own API key, a budget cap. The author cannot edit a check-run. Paths that must not leave your network get `insufficient_evidence` + a human, never a pretend review.
 - **PROFESSIONAL and up:** merge with the approvals the change level requires ([engineering authorization contract](review-and-ci-evidence.md#engineering-authorization-contract)), no more → a post-merge review issue opens automatically → the next self-merge is locked when the AI review artifact is missing, stale (`diff_hash` mismatch) or empty for >48h. More than 3 break-glass uses per repo in 14 days ⇒ review before the next deploy. This applies to owner accounts too.
 - **ENTERPRISE approval** is bound to the head SHA and the artifact digest. A new commit after approval voids it: otherwise you approve diff A and deploy diff B.
@@ -71,7 +71,7 @@ Two control points, each granting one right. This section is the one contract; o
 
 | Control point | Grants | Checks | Approvals |
 |---|---|---|---|
-| **Merge authorization** | the change may land on the main branch | code quality, risk floor and `change_harm`, author ≠ reviewer ≠ the author's operator ([`gates.md`](gates.md#approver-independence)), CI evidence on the head SHA | by change level ([`review-and-ci-evidence.md`](review-and-ci-evidence.md#human-approvals-by-change-level)), human or, for an activated Medium level, a cross-vendor review; never below the tier row above |
+| **Merge authorization** | the change may land on the main branch | code quality, risk floor and `change_harm`, author ≠ reviewer ≠ the author's operator ([`gates.md`](gates.md#approver-independence)), CI evidence on the head SHA | by change level ([`review-and-ci-evidence.md`](review-and-ci-evidence.md#human-approvals-by-change-level)), under the [engineering authorization contract](review-and-ci-evidence.md#engineering-authorization-contract); never below the tier row above |
 | **Production authorization** | this artifact may run in this production environment | artifact provenance (built in CI from the merged SHA, digest recorded), target environment, migration class, blast radius, recovery proved ([`standards/change-and-deployment.md`](../standards/change-and-deployment.md#before-a-deploy)) | by tier: the approved tag above for ENTERPRISE; the deploy gate's green checks below it |
 | **Irreversible business action** (`non_compensable`, [two axes](#two-axes)) | one side-effect may happen once | authorization immediately before the action, an idempotency key, reconciliation afterwards | per action, not per deploy |
 

@@ -81,7 +81,7 @@ These approvals are **merge authorization** only. Production authorization is a 
 | Level | Review tier | The change is | Human approvals at merge |
 |---|---|---|---|
 | **Low** | reversible | docs; internal-only code; additive code behind a flag whose flip is itself a reviewed change | 0, once required automated checks and the security review are green on the head SHA |
-| **Medium** | reversible | any other reversible change, including additive code behind a flag that can be flipped without review | 0 humans + a cross-vendor review bound to the head SHA, produced by trusted CI (`REVIEW` class under the [Rule Contract](rule-contract.md), never `MACHINE`); 1 human until activated, see below |
+| **Medium** | reversible | any other reversible change, including additive code behind a flag that can be flipped without review | 0 humans + a cross-vendor review bound to the head SHA, produced by trusted CI (check presence and SHA binding `MACHINE`, absent or skipped blocks; verdict `REVIEW` under the [Rule Contract](rule-contract.md), never `MACHINE`); 1 human until activated, see below |
 | **High** | irreversible | anything in the irreversible tier | 2; where the organisation has only one eligible approver: 1 human + a blocking security review + a review by a model from a different vendor, recorded as an exception on the change |
 
 - **Activation condition for Medium = 0 humans.** It applies in a repository only after the code host enforces it and its negative tests have passed: the review cannot be produced or spoofed by the change; a skipped, neutral or errored review does not satisfy it; a risk-floor change still needs a human code owner. Until then Medium keeps 1 human approval. Low, and High with the risk floor (a human code owner), are unchanged.
