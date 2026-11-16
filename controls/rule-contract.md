@@ -60,6 +60,8 @@ result=pass|insufficient_evidence|violation gate=<gate-name> reason=<slug> [fix=
 | **REVIEW** | needs a human, but **who judges and what they judge** is fixed | flags, does not block |
 | **ADVISORY** | a suggestion with no pass/fail criterion | **counted**, with a deadline (G4) |
 
+A `REVIEW` check flags by default. Where the engineering authorization contract (`controls/review-and-ci-evidence.md`) binds a `REVIEW` check to merge (the activated Medium-level cross-vendor review), a non-pass verdict blocks, and only a new head with a new review or a human approval at that head clears it; the check's presence and SHA binding are `MACHINE`.
+
 🔴 **A probabilistic model is NEVER `MACHINE`**, whatever its accuracy — that is a category error that breaks the axis v7 stands on. Models sit in `REVIEW`/`ADVISORY` and **add** a differently-blind instrument; they never **replace** a deterministic one.
 *Burn case: a classifier tested on Vietnamese text scored 0.26 with calibration error 0.52 — wrong and confident, with no warning signal.*
 
