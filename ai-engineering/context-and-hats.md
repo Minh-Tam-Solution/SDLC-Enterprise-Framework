@@ -112,7 +112,7 @@ findings:
 
 - `approve` with any `BLOCKER` finding counts as `changes_requested`.
 - `insufficient_evidence` is a valid outcome. Use it when the reviewer cannot run or see what it needs. It is never a silent approve.
-- An AI review is **evidence** (review class). It is not a human approval, and it is never a machine gate by itself. The workflow records who reviewed (`reviewer_type`), not the authoring agent.
+- An AI review is **evidence** (review class). It is not a human approval, and it is never a machine gate by itself (what it may authorize: [engineering authorization contract](../controls/review-and-ci-evidence.md#engineering-authorization-contract)). The workflow records who reviewed (`reviewer_type`), not the authoring agent.
 - **Intent confirmation.** Before work, the agent states three lines: the problem, who uses the result, and what "done" means. It asks and waits only when the brief is ambiguous or the project tier is high. Keep the record in the PR template (three fields), not in chat.
 
 Templates: `templates/agent/SOUL-example.md` (one hat) · `templates/agent/PREAMBLE-example.md` (shared by all hats).
